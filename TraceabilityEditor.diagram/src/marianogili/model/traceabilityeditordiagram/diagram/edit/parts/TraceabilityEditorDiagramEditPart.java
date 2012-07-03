@@ -384,7 +384,7 @@ public class TraceabilityEditorDiagramEditPart extends ShapeNodeEditPart {
 			layoutFFigureTEDCompartmentLeftFigure
 					.setMinorAlignment(ToolbarLayout.ALIGN_CENTER);
 
-			layoutFFigureTEDCompartmentLeftFigure.setSpacing(20);
+			layoutFFigureTEDCompartmentLeftFigure.setSpacing(0);
 			layoutFFigureTEDCompartmentLeftFigure.setVertical(true);
 
 			fFigureTEDCompartmentLeftFigure

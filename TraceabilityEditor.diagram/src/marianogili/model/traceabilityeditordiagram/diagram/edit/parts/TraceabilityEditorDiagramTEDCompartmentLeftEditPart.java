@@ -38,6 +38,16 @@ public class TraceabilityEditorDiagramTEDCompartmentLeftEditPart extends
 		return false;
 	}
 
+	@Override
+	protected void handleNotificationEvent(Notification event) {
+		// TODO Auto-generated method stub
+		
+		if (event.getEventType() == Notification.ADD) {
+			this.getFigure().getParent().getPreferredSize().height += 50;
+		}
+		super.handleNotificationEvent(event);
+	}
+
 	/**
 	 * @generated
 	 */

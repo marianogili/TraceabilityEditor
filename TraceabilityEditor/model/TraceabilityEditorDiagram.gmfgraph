@@ -24,10 +24,9 @@
               xsi:type="gmfgraph:FlowLayout"
               vertical="true"
               forceSingleLine="true"
-              majorAlignment="CENTER"
               minorAlignment="CENTER"
-              majorSpacing="20"
-              minorSpacing="20"/>
+              majorSpacing="0"
+              minorSpacing="0"/>
           <preferredSize
               dx="200"
               dy="500"/>
