@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="marianogili.model.traceabilityeditordiagram.presentation.TraceabilityeditordiagramModelWizardID"
+            name="%_UI_TraceabilityeditordiagramModelWizard_label"
+            class="marianogili.model.traceabilityeditordiagram.presentation.TraceabilityeditordiagramModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TraceabilityeditordiagramModelFile.gif">
+         <description>%_UI_TraceabilityeditordiagramModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="marianogili.model.traceabilityeditordiagram.presentation.TraceabilityeditordiagramEditorID"
+            name="%_UI_TraceabilityeditordiagramEditor_label"
+            icon="icons/full/obj16/TraceabilityeditordiagramModelFile.gif"
+            extensions="traceabilityeditordiagram"
+            class="marianogili.model.traceabilityeditordiagram.presentation.TraceabilityeditordiagramEditor"
+            contributorClass="marianogili.model.traceabilityeditordiagram.presentation.TraceabilityeditordiagramActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
