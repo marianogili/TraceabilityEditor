@@ -1,7 +1,0 @@
-# Tracing options for the TraceabilityEditor.diagram plug-in
-
-# Common issues
-TraceabilityEditor.diagram/debug=false
-
-# Visual IDs
-TraceabilityEditor.diagram/debug/visualID=false
