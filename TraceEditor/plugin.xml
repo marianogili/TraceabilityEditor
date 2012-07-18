@@ -5,9 +5,17 @@
          point="org.eclipse.ui.perspectives">
       <perspective
             class="traceeditor.PerspectiveTraceEditorFactory"
-            id="TraceEditor.perspectiveTraceEditor"
+            fixed="true"
+            id="com.marianogili.TraceEditorPerspective"
             name="TraceEditor">
       </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="com.marianogili.TraceEditor"
+            name="TraceEditor">
+      </category>
    </extension>
 
 </plugin>

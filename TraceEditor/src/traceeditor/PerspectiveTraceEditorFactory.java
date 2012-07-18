@@ -16,9 +16,14 @@ public class PerspectiveTraceEditorFactory implements IPerspectiveFactory {
         // Place navigator and outline to left of
         // editor area.
         IFolderLayout left =
-                layout.createFolder("left", IPageLayout.LEFT, (float) 0.5, editorArea);
+                layout.createFolder("left", IPageLayout.LEFT, (float) 0.20, editorArea);
         left.addView(IPageLayout.ID_PROJECT_EXPLORER);
-        left.addView(IPageLayout.ID_OUTLINE);
+        IFolderLayout bottom =
+            layout.createFolder("bottom", IPageLayout.BOTTOM, (float) 0.20, editorArea);
+        bottom.addView(IPageLayout.ID_OUTLINE);
+        IFolderLayout leftbottom =
+            layout.createFolder("leftbottom", IPageLayout.BOTTOM, (float) 0.20, editorArea);
+        leftbottom.addView(IPageLayout.ID_PROBLEM_VIEW);
 	}
 
 }
