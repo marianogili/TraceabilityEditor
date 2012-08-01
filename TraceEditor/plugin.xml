@@ -17,5 +17,15 @@
             name="TraceEditor">
       </category>
    </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="traceeditor.TraceEditor"
+            default="false"
+            extensions="traceabilityeditordiagram"
+            id="com.marianogili.TraceEditor.editor"
+            name="TraceEditor">
+      </editor>
+   </extension>
 
 </plugin>
