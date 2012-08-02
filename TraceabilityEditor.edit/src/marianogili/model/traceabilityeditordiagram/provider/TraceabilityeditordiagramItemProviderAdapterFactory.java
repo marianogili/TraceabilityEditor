@@ -14,7 +14,6 @@ import marianogili.model.traceabilityeditordiagram.util.Traceabilityeditordiagra
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -25,6 +24,7 @@ import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITableItemLabelProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 /**
@@ -65,7 +65,7 @@ public class TraceabilityeditordiagramItemProviderAdapterFactory extends Traceab
 	 * This constructs an instance.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public TraceabilityeditordiagramItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
@@ -73,6 +73,7 @@ public class TraceabilityeditordiagramItemProviderAdapterFactory extends Traceab
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
+		supportedTypes.add(ITableItemLabelProvider.class);
 	}
 
 	/**

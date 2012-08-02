@@ -10,20 +10,20 @@ package marianogili.model.traceabilityeditordiagram.provider;
 import java.util.Collection;
 import java.util.List;
 
+import marianogili.model.traceabilityeditordiagram.TraceLink;
 import marianogili.model.traceabilityeditordiagram.TraceabilityeditordiagramFactory;
 import marianogili.model.traceabilityeditordiagram.TraceabilityeditordiagramPackage;
 import marianogili.model.traceabilityeditordiagram.Transformation;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITableItemLabelProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -31,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * This is the item provider adapter for a {@link marianogili.model.traceabilityeditordiagram.Transformation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * @generated
+ * @generated NOT
  */
 public class TransformationItemProvider
 	extends DiagramElementItemProvider
@@ -40,7 +40,26 @@ public class TransformationItemProvider
 		IStructuredItemContentProvider,
 		ITreeItemContentProvider,
 		IItemLabelProvider,
+		ITableItemLabelProvider,
 		IItemPropertySource {
+	
+	@Override
+	public Object getColumnImage(Object object, int columnIndex) {
+		// TODO Auto-generated method stub
+		return super.getColumnImage(object, columnIndex);
+	}
+
+	@Override
+	public String getColumnText(Object object, int columnIndex) {
+		if (columnIndex == 0) return getText(object);
+		TraceLink customer = ((Transformation)object).getTraceLinks().get(0);
+		if (customer == null) return "";
+		IItemLabelProvider itemLabelProvider =
+		(IItemLabelProvider)adapterFactory.adapt(
+		customer, IItemLabelProvider.class);
+		return itemLabelProvider.getText(customer);
+	}
+
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
