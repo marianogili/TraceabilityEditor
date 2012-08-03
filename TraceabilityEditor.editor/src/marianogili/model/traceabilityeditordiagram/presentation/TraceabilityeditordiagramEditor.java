@@ -1112,7 +1112,7 @@ public class TraceabilityeditordiagramEditor
 				TableColumn selfColumn = new TableColumn(table, SWT.NONE);
 				layout.addColumnData(new ColumnWeightData(2, 100, true));
 //				selfColumn.setText(getString("_UI_SelfColumn_label"));
-				objectColumn.setText("Enlace");
+				selfColumn.setText("Enlace");
 				selfColumn.setResizable(true);
 
 				tableViewer.setColumnProperties(new String [] {"a", "b"});
