@@ -10,6 +10,7 @@ package marianogili.model.traceabilityeditordiagram.provider;
 import java.util.Collection;
 import java.util.List;
 
+import marianogili.model.traceabilityeditordiagram.Artefact;
 import marianogili.model.traceabilityeditordiagram.TraceLink;
 import marianogili.model.traceabilityeditordiagram.TraceabilityeditordiagramFactory;
 import marianogili.model.traceabilityeditordiagram.TraceabilityeditordiagramPackage;
@@ -52,12 +53,29 @@ public class TransformationItemProvider
 	@Override
 	public String getColumnText(Object object, int columnIndex) {
 		if (columnIndex == 0) return getText(object);
-		TraceLink customer = ((Transformation)object).getTraceLinks().get(0);
-		if (customer == null) return "";
-		IItemLabelProvider itemLabelProvider =
-		(IItemLabelProvider)adapterFactory.adapt(
-		customer, IItemLabelProvider.class);
-		return itemLabelProvider.getText(customer);
+		IItemLabelProvider itemLabelProvider;
+		TraceLink traceLink = ((Transformation)object).getTraceLinks().get(0);
+		if (traceLink == null) return "";
+		if (columnIndex == 1) {
+			itemLabelProvider =
+				(IItemLabelProvider)adapterFactory.adapt(
+						traceLink, IItemLabelProvider.class);
+			return itemLabelProvider.getText(traceLink);
+		}
+		Artefact artefact = traceLink.getSources().get(0);
+		if (artefact == null) return "";
+		if (columnIndex == 2) {
+			itemLabelProvider =
+				(IItemLabelProvider)adapterFactory.adapt(
+						artefact, IItemLabelProvider.class);
+			return itemLabelProvider.getText(artefact);
+		}
+		artefact = traceLink.getTargets().get(0);
+		if (artefact == null) return "";
+		itemLabelProvider =
+			(IItemLabelProvider)adapterFactory.adapt(
+					artefact, IItemLabelProvider.class);
+		return itemLabelProvider.getText(artefact);
 	}
 
 	/**

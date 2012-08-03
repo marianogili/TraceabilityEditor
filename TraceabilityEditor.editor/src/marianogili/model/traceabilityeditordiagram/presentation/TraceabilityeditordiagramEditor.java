@@ -1114,6 +1114,18 @@ public class TraceabilityeditordiagramEditor
 //				selfColumn.setText(getString("_UI_SelfColumn_label"));
 				selfColumn.setText("Enlace");
 				selfColumn.setResizable(true);
+				
+				TableColumn thirdColumn = new TableColumn(table, SWT.NONE);
+				layout.addColumnData(new ColumnWeightData(2, 100, true));
+//				selfColumn.setText(getString("_UI_SelfColumn_label"));
+				thirdColumn.setText("Origen");
+				thirdColumn.setResizable(true);
+				
+				TableColumn fourColumn = new TableColumn(table, SWT.NONE);
+				layout.addColumnData(new ColumnWeightData(2, 100, true));
+//				selfColumn.setText(getString("_UI_SelfColumn_label"));
+				fourColumn.setText("Destino");
+				fourColumn.setResizable(true);
 
 				tableViewer.setColumnProperties(new String [] {"a", "b"});
 				tableViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory)
