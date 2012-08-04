@@ -21,6 +21,7 @@ import java.util.Map;
 
 import marianogili.model.traceabilityeditordiagram.TraceabilityEditorDiagram;
 import marianogili.model.traceabilityeditordiagram.TraceabilityeditordiagramPackage;
+import marianogili.model.traceabilityeditordiagram.Transformation;
 import marianogili.model.traceabilityeditordiagram.provider.TraceabilityeditordiagramItemProviderAdapterFactory;
 
 import org.eclipse.core.resources.IFile;
@@ -54,6 +55,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
@@ -79,7 +81,8 @@ import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
-import org.eclipse.jface.viewers.ColumnWeightData;
+import org.eclipse.jface.viewers.CellEditor;
+import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
@@ -89,6 +92,8 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.StructuredViewer;
 import org.eclipse.jface.viewers.TableLayout;
 import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.viewers.TableViewerColumn;
+import org.eclipse.jface.viewers.TextCellEditor;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.SWT;
@@ -948,6 +953,19 @@ public class TraceabilityeditordiagramEditor
 			return Diagnostic.OK_INSTANCE;
 		}
 	}
+	
+	private TableViewerColumn createTableViewerColumn(String title, int bound,
+			final int colNumber) {
+		final TableViewerColumn viewerColumn = new TableViewerColumn(tableViewer,
+				SWT.NONE);
+		final TableColumn column = viewerColumn.getColumn();
+		column.setText(title);
+		column.setWidth(bound);
+		column.setResizable(true);
+		column.setMoveable(true);
+//		column.addSelectionListener(getSelectionAdapter(column, colNumber));
+		return viewerColumn;
+	}
 
 	/**
 	 * This is the method used by the framework to install your own controls.
@@ -964,121 +982,6 @@ public class TraceabilityeditordiagramEditor
 		// Only creates the other pages if there is something that can be edited
 		//
 		if (!getEditingDomain().getResourceSet().getResources().isEmpty()) {
-//			// Create a page for the selection tree view.
-//			//
-//			{
-//				ViewerPane viewerPane =
-//					new ViewerPane(getSite().getPage(), TraceabilityeditordiagramEditor.this) {
-//						@Override
-//						public Viewer createViewer(Composite composite) {
-//							Tree tree = new Tree(composite, SWT.MULTI);
-//							TreeViewer newTreeViewer = new TreeViewer(tree);
-//							return newTreeViewer;
-//						}
-//						@Override
-//						public void requestActivation() {
-//							super.requestActivation();
-//							setCurrentViewerPane(this);
-//						}
-//					};
-//				viewerPane.createControl(getContainer());
-//
-//				selectionViewer = (TreeViewer)viewerPane.getViewer();
-//				selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
-//
-//				selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
-//				selectionViewer.setInput(editingDomain.getResourceSet());
-//				selectionViewer.setSelection(new StructuredSelection(editingDomain.getResourceSet().getResources().get(0)), true);
-//				viewerPane.setTitle(editingDomain.getResourceSet());
-//
-//				new AdapterFactoryTreeEditor(selectionViewer.getTree(), adapterFactory);
-//
-//				createContextMenuFor(selectionViewer);
-//				int pageIndex = addPage(viewerPane.getControl());
-//				setPageText(pageIndex, getString("_UI_SelectionPage_label"));
-//			}
-
-//			// Create a page for the parent tree view.
-//			//
-//			{
-//				ViewerPane viewerPane =
-//					new ViewerPane(getSite().getPage(), TraceabilityeditordiagramEditor.this) {
-//						@Override
-//						public Viewer createViewer(Composite composite) {
-//							Tree tree = new Tree(composite, SWT.MULTI);
-//							TreeViewer newTreeViewer = new TreeViewer(tree);
-//							return newTreeViewer;
-//						}
-//						@Override
-//						public void requestActivation() {
-//							super.requestActivation();
-//							setCurrentViewerPane(this);
-//						}
-//					};
-//				viewerPane.createControl(getContainer());
-//
-//				parentViewer = (TreeViewer)viewerPane.getViewer();
-//				parentViewer.setAutoExpandLevel(30);
-//				parentViewer.setContentProvider(new ReverseAdapterFactoryContentProvider(adapterFactory));
-//				parentViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
-//
-//				createContextMenuFor(parentViewer);
-//				int pageIndex = addPage(viewerPane.getControl());
-//				setPageText(pageIndex, getString("_UI_ParentPage_label"));
-//			}
-//
-//			// This is the page for the list viewer
-//			//
-//			{
-//				ViewerPane viewerPane =
-//					new ViewerPane(getSite().getPage(), TraceabilityeditordiagramEditor.this) {
-//						@Override
-//						public Viewer createViewer(Composite composite) {
-//							return new ListViewer(composite);
-//						}
-//						@Override
-//						public void requestActivation() {
-//							super.requestActivation();
-//							setCurrentViewerPane(this);
-//						}
-//					};
-//				viewerPane.createControl(getContainer());
-//				listViewer = (ListViewer)viewerPane.getViewer();
-//				listViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
-//				listViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
-//
-//				createContextMenuFor(listViewer);
-//				int pageIndex = addPage(viewerPane.getControl());
-//				setPageText(pageIndex, getString("_UI_ListPage_label"));
-//			}
-//
-//			// This is the page for the tree viewer
-//			//
-//			{
-//				ViewerPane viewerPane =
-//					new ViewerPane(getSite().getPage(), TraceabilityeditordiagramEditor.this) {
-//						@Override
-//						public Viewer createViewer(Composite composite) {
-//							return new TreeViewer(composite);
-//						}
-//						@Override
-//						public void requestActivation() {
-//							super.requestActivation();
-//							setCurrentViewerPane(this);
-//						}
-//					};
-//				viewerPane.createControl(getContainer());
-//				treeViewer = (TreeViewer)viewerPane.getViewer();
-//				treeViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
-//				treeViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
-//
-//				new AdapterFactoryTreeEditor(treeViewer.getTree(), adapterFactory);
-//
-//				createContextMenuFor(treeViewer);
-//				int pageIndex = addPage(viewerPane.getControl());
-//				setPageText(pageIndex, getString("_UI_TreePage_label"));
-//			}
-//
 			// This is the page for the table viewer.
 			//
 			{
@@ -1102,30 +1005,46 @@ public class TraceabilityeditordiagramEditor
 				table.setLayout(layout);
 				table.setHeaderVisible(true);
 				table.setLinesVisible(true);
-
-				TableColumn objectColumn = new TableColumn(table, SWT.NONE);
-				layout.addColumnData(new ColumnWeightData(3, 100, true));
-//				objectColumn.setText(getString("_UI_ObjectColumn_label"));
-				objectColumn.setText("Transformación");
-				objectColumn.setResizable(true);
-
-				TableColumn selfColumn = new TableColumn(table, SWT.NONE);
-				layout.addColumnData(new ColumnWeightData(2, 100, true));
-//				selfColumn.setText(getString("_UI_SelfColumn_label"));
-				selfColumn.setText("Enlace");
-				selfColumn.setResizable(true);
 				
-				TableColumn thirdColumn = new TableColumn(table, SWT.NONE);
-				layout.addColumnData(new ColumnWeightData(2, 100, true));
-//				selfColumn.setText(getString("_UI_SelfColumn_label"));
-				thirdColumn.setText("Origen");
-				thirdColumn.setResizable(true);
+				TableViewerColumn col = createTableViewerColumn("Transformación", 100, 0);
+				col.setEditingSupport(new EditingSupport(tableViewer) {
+					
+					@Override
+					protected void setValue(Object element, Object value) {
+//						((Transformation) element).setName(String.valueOf(value));
+//						tableViewer.update(element, null);
+//						CommandParameter commandParameter = new CommandParameter(element, 
+//								TraceabilityeditordiagramPackage.eINSTANCE.getName(), String.valueOf(value));
+//						Command cmd = getEditingDomain().createCommand(SetCommand.class, commandParameter);
+						Command cmd = SetCommand.create(editingDomain, element, 
+								TraceabilityeditordiagramPackage.Literals.DIAGRAM_ELEMENT__NAME, value);
+						editingDomain.getCommandStack().execute(cmd);
+						tableViewer.refresh();
+					}
+					
+					@Override
+					protected Object getValue(Object element) {
+						return ((Transformation) element).getName();
+					}
+					
+					@Override
+					protected CellEditor getCellEditor(Object element) {
+						return new TextCellEditor(tableViewer.getTable());
+					}
+					
+					@Override
+					protected boolean canEdit(Object element) {
+						return true;
+					}
+				});
 				
-				TableColumn fourColumn = new TableColumn(table, SWT.NONE);
-				layout.addColumnData(new ColumnWeightData(2, 100, true));
-//				selfColumn.setText(getString("_UI_SelfColumn_label"));
-				fourColumn.setText("Destino");
-				fourColumn.setResizable(true);
+				col = createTableViewerColumn("Enlace", 100, 1);
+				
+				
+				col = createTableViewerColumn("Origen", 100, 2);
+				
+				
+				col = createTableViewerColumn("Destino", 100, 3);
 
 				tableViewer.setColumnProperties(new String [] {"a", "b"});
 				tableViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory)
@@ -1162,49 +1081,6 @@ public class TraceabilityeditordiagramEditor
 				int pageIndex = addPage(viewerPane.getControl());
 				setPageText(pageIndex, getString("_UI_TablePage_label"));
 			}
-
-			// This is the page for the table tree viewer.
-			
-//			{
-//				ViewerPane viewerPane =
-//					new ViewerPane(getSite().getPage(), TraceabilityeditordiagramEditor.this) {
-//						@Override
-//						public Viewer createViewer(Composite composite) {
-//							return new TreeViewer(composite);
-//						}
-//						@Override
-//						public void requestActivation() {
-//							super.requestActivation();
-//							setCurrentViewerPane(this);
-//						}
-//					};
-//				viewerPane.createControl(getContainer());
-//
-//				treeViewerWithColumns = (TreeViewer)viewerPane.getViewer();
-//
-//				Tree tree = treeViewerWithColumns.getTree();
-//				tree.setLayoutData(new FillLayout());
-//				tree.setHeaderVisible(true);
-//				tree.setLinesVisible(true);
-//
-//				TreeColumn objectColumn = new TreeColumn(tree, SWT.NONE);
-//				objectColumn.setText(getString("_UI_ObjectColumn_label"));
-//				objectColumn.setResizable(true);
-//				objectColumn.setWidth(250);
-//
-//				TreeColumn selfColumn = new TreeColumn(tree, SWT.NONE);
-//				selfColumn.setText(getString("_UI_SelfColumn_label"));
-//				selfColumn.setResizable(true);
-//				selfColumn.setWidth(200);
-//
-//				treeViewerWithColumns.setColumnProperties(new String [] {"a", "b"});
-//				treeViewerWithColumns.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
-//				treeViewerWithColumns.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
-//
-//				createContextMenuFor(treeViewerWithColumns);
-//				int pageIndex = addPage(viewerPane.getControl());
-//				setPageText(pageIndex, getString("_UI_TreeWithColumnsPage_label"));
-//			}
 
 			getSite().getShell().getDisplay().asyncExec
 				(new Runnable() {
