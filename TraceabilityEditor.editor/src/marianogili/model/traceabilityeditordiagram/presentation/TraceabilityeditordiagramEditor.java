@@ -84,6 +84,7 @@ import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.viewers.CellEditor;
+import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -978,6 +979,22 @@ public class TraceabilityeditordiagramEditor
 //		});
 		return viewerColumn;
 	}
+	
+	private class TransformationBuffer {
+		public Transformation transformation;
+		public TraceLink traceLink;
+		public Artefact source;
+		public Artefact target;
+		
+		public TransformationBuffer(Transformation transformation,
+				TraceLink traceLink, Artefact source, Artefact target) {
+			super();
+			this.transformation = transformation;
+			this.traceLink = traceLink;
+			this.source = source;
+			this.target = target;
+		}
+	}
 
 	/**
 	 * This is the method used by the framework to install your own controls.
@@ -1019,11 +1036,18 @@ public class TraceabilityeditordiagramEditor
 				table.setLinesVisible(true);
 				
 				TableViewerColumn col = createTableViewerColumn("Transformación", 100, 0);
+				col.setLabelProvider(new ColumnLabelProvider(){
+					@Override
+					public String getText(Object element) {
+						return ((TransformationBuffer) element).transformation.getName();
+					}
+				});
 				col.setEditingSupport(new EditingSupport(tableViewer) {
 					
 					@Override
 					protected void setValue(Object element, Object value) {
-						Command cmd = SetCommand.create(editingDomain, element, 
+						TransformationBuffer buffer = (TransformationBuffer) element;
+						Command cmd = SetCommand.create(editingDomain, buffer.transformation, 
 								TraceabilityeditordiagramPackage.Literals.DIAGRAM_ELEMENT__NAME, value);
 						editingDomain.getCommandStack().execute(cmd);
 						tableViewer.refresh();
@@ -1031,7 +1055,7 @@ public class TraceabilityeditordiagramEditor
 					
 					@Override
 					protected Object getValue(Object element) {
-						return ((Transformation) element).getName();
+						return ((TransformationBuffer) element).transformation.getName();
 					}
 					
 					@Override
@@ -1046,11 +1070,18 @@ public class TraceabilityeditordiagramEditor
 				});
 				
 				col = createTableViewerColumn("Enlace", 100, 1);
+				col.setLabelProvider(new ColumnLabelProvider(){
+					@Override
+					public String getText(Object element) {
+						return ((TransformationBuffer) element).traceLink.getName();
+					}
+				});
 				col.setEditingSupport(new EditingSupport(tableViewer) {
 
 					@Override
 					protected void setValue(Object element, Object value) {
-						TraceLink traceElement = ((Transformation)element).getTraceLinks().get(0);
+						TransformationBuffer buffer = (TransformationBuffer) element;
+						TraceLink traceElement = (TraceLink)buffer.traceLink;
 						Command cmd = SetCommand.create(editingDomain, traceElement, 
 								TraceabilityeditordiagramPackage.Literals.DIAGRAM_ELEMENT__NAME, value);
 						editingDomain.getCommandStack().execute(cmd);
@@ -1059,7 +1090,7 @@ public class TraceabilityeditordiagramEditor
 
 					@Override
 					protected Object getValue(Object element) {
-						return ((Transformation) element).getTraceLinks().get(0).getName();
+						return ((TransformationBuffer) element).traceLink.getName();
 					}
 
 					@Override
@@ -1075,11 +1106,17 @@ public class TraceabilityeditordiagramEditor
 
 
 				col = createTableViewerColumn("Origen", 100, 2);
+				col.setLabelProvider(new ColumnLabelProvider(){
+					@Override
+					public String getText(Object element) {
+						return ((TransformationBuffer) element).source.getName();
+					}
+				});
 				col.setEditingSupport(new EditingSupport(tableViewer) {
 
 					@Override
 					protected void setValue(Object element, Object value) {
-						Artefact artefactElement = ((Transformation)element).getTraceLinks().get(0).getSources().get(0);
+						Artefact artefactElement = ((TransformationBuffer) element).source;
 						Command cmd = SetCommand.create(editingDomain, artefactElement, 
 								TraceabilityeditordiagramPackage.Literals.DIAGRAM_ELEMENT__NAME, value);
 						editingDomain.getCommandStack().execute(cmd);
@@ -1088,7 +1125,7 @@ public class TraceabilityeditordiagramEditor
 
 					@Override
 					protected Object getValue(Object element) {
-						return ((Transformation) element).getTraceLinks().get(0).getSources().get(0).getName();
+						return ((TransformationBuffer) element).source.getName();
 					}
 
 					@Override
@@ -1104,11 +1141,17 @@ public class TraceabilityeditordiagramEditor
 
 
 				col = createTableViewerColumn("Destino", 100, 3);
+				col.setLabelProvider(new ColumnLabelProvider(){
+					@Override
+					public String getText(Object element) {
+						return ((TransformationBuffer) element).target.getName();
+					}
+				});
 				col.setEditingSupport(new EditingSupport(tableViewer) {
 
 					@Override
 					protected void setValue(Object element, Object value) {
-						Artefact artefactElement = ((Transformation)element).getTraceLinks().get(0).getTargets().get(0);
+						Artefact artefactElement = ((TransformationBuffer) element).target;
 						Command cmd = SetCommand.create(editingDomain, artefactElement, 
 								TraceabilityeditordiagramPackage.Literals.DIAGRAM_ELEMENT__NAME, value);
 						editingDomain.getCommandStack().execute(cmd);
@@ -1117,7 +1160,7 @@ public class TraceabilityeditordiagramEditor
 
 					@Override
 					protected Object getValue(Object element) {
-						return ((Transformation) element).getTraceLinks().get(0).getTargets().get(0).getName();
+						return ((TransformationBuffer) element).target.getName();
 					}
 
 					@Override
@@ -1136,7 +1179,22 @@ public class TraceabilityeditordiagramEditor
 				{
 					public Object [] getElements(Object object) 
 					{
-						return ((TraceabilityEditorDiagram)object).getTransformations().toArray();
+//						return ((TraceabilityEditorDiagram)object).getTransformations().toArray();
+						List<Transformation> transformations = ((TraceabilityEditorDiagram)object).getTransformations();
+						ArrayList<Object> elements = new ArrayList<Object>(transformations.size());
+						TransformationBuffer element;
+						
+						for (Transformation aTransformation : transformations) {
+							for (TraceLink aTrace : aTransformation.getTraceLinks()) {
+								for (Artefact aSource : aTrace.getSources()) {
+									for (Artefact aTarget : aTrace.getTargets()) {
+										element = new TransformationBuffer(aTransformation, aTrace, aSource, aTarget);
+										elements.add(element);
+									}
+								}
+							}
+						}
+						return elements.toArray();
 					}
 					
 					public void notifyChanged(Notification notification)
@@ -1152,7 +1210,7 @@ public class TraceabilityeditordiagramEditor
 					}
 				});
 				
-				tableViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
+//				tableViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 				
 				Resource resource = (Resource)editingDomain.getResourceSet().getResources().get(0);
 				Object rootObject = resource.getContents().get(0);
