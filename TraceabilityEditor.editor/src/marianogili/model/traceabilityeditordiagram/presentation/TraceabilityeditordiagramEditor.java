@@ -19,6 +19,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import marianogili.model.traceabilityeditordiagram.Artefact;
+import marianogili.model.traceabilityeditordiagram.TraceLink;
 import marianogili.model.traceabilityeditordiagram.TraceabilityEditorDiagram;
 import marianogili.model.traceabilityeditordiagram.TraceabilityeditordiagramPackage;
 import marianogili.model.traceabilityeditordiagram.Transformation;
@@ -963,7 +965,17 @@ public class TraceabilityeditordiagramEditor
 		column.setWidth(bound);
 		column.setResizable(true);
 		column.setMoveable(true);
-//		column.addSelectionListener(getSelectionAdapter(column, colNumber));
+//		column.addSelectionListener(new SelectionListener() {
+//			@Override
+//			public void widgetSelected(SelectionEvent e) {
+//				tableViewer.refresh();
+//			}
+//			
+//			@Override
+//			public void widgetDefaultSelected(SelectionEvent e) {
+//				tableViewer.refresh();
+//			}
+//		});
 		return viewerColumn;
 	}
 
@@ -1011,11 +1023,6 @@ public class TraceabilityeditordiagramEditor
 					
 					@Override
 					protected void setValue(Object element, Object value) {
-//						((Transformation) element).setName(String.valueOf(value));
-//						tableViewer.update(element, null);
-//						CommandParameter commandParameter = new CommandParameter(element, 
-//								TraceabilityeditordiagramPackage.eINSTANCE.getName(), String.valueOf(value));
-//						Command cmd = getEditingDomain().createCommand(SetCommand.class, commandParameter);
 						Command cmd = SetCommand.create(editingDomain, element, 
 								TraceabilityeditordiagramPackage.Literals.DIAGRAM_ELEMENT__NAME, value);
 						editingDomain.getCommandStack().execute(cmd);
@@ -1039,12 +1046,90 @@ public class TraceabilityeditordiagramEditor
 				});
 				
 				col = createTableViewerColumn("Enlace", 100, 1);
-				
-				
+				col.setEditingSupport(new EditingSupport(tableViewer) {
+
+					@Override
+					protected void setValue(Object element, Object value) {
+						TraceLink traceElement = ((Transformation)element).getTraceLinks().get(0);
+						Command cmd = SetCommand.create(editingDomain, traceElement, 
+								TraceabilityeditordiagramPackage.Literals.DIAGRAM_ELEMENT__NAME, value);
+						editingDomain.getCommandStack().execute(cmd);
+						tableViewer.refresh();
+					}
+
+					@Override
+					protected Object getValue(Object element) {
+						return ((Transformation) element).getTraceLinks().get(0).getName();
+					}
+
+					@Override
+					protected CellEditor getCellEditor(Object element) {
+						return new TextCellEditor(tableViewer.getTable());
+					}
+
+					@Override
+					protected boolean canEdit(Object element) {
+						return true;
+					}
+				});
+
+
 				col = createTableViewerColumn("Origen", 100, 2);
-				
-				
+				col.setEditingSupport(new EditingSupport(tableViewer) {
+
+					@Override
+					protected void setValue(Object element, Object value) {
+						Artefact artefactElement = ((Transformation)element).getTraceLinks().get(0).getSources().get(0);
+						Command cmd = SetCommand.create(editingDomain, artefactElement, 
+								TraceabilityeditordiagramPackage.Literals.DIAGRAM_ELEMENT__NAME, value);
+						editingDomain.getCommandStack().execute(cmd);
+						tableViewer.refresh();
+					}
+
+					@Override
+					protected Object getValue(Object element) {
+						return ((Transformation) element).getTraceLinks().get(0).getSources().get(0).getName();
+					}
+
+					@Override
+					protected CellEditor getCellEditor(Object element) {
+						return new TextCellEditor(tableViewer.getTable());
+					}
+
+					@Override
+					protected boolean canEdit(Object element) {
+						return true;
+					}
+				});
+
+
 				col = createTableViewerColumn("Destino", 100, 3);
+				col.setEditingSupport(new EditingSupport(tableViewer) {
+
+					@Override
+					protected void setValue(Object element, Object value) {
+						Artefact artefactElement = ((Transformation)element).getTraceLinks().get(0).getTargets().get(0);
+						Command cmd = SetCommand.create(editingDomain, artefactElement, 
+								TraceabilityeditordiagramPackage.Literals.DIAGRAM_ELEMENT__NAME, value);
+						editingDomain.getCommandStack().execute(cmd);
+						tableViewer.refresh();
+					}
+
+					@Override
+					protected Object getValue(Object element) {
+						return ((Transformation) element).getTraceLinks().get(0).getTargets().get(0).getName();
+					}
+
+					@Override
+					protected CellEditor getCellEditor(Object element) {
+						return new TextCellEditor(tableViewer.getTable());
+					}
+
+					@Override
+					protected boolean canEdit(Object element) {
+						return true;
+					}
+				});
 
 				tableViewer.setColumnProperties(new String [] {"a", "b"});
 				tableViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory)
