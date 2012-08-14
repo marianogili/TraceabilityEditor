@@ -8,7 +8,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transformation" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="traceLinks" upperBound="-1"
-        eType="#//TraceLink" containment="true"/>
+        eType="#//TraceLink" containment="true" eOpposite="#//TraceLink/transformation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TraceLink" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sources" upperBound="-1"
@@ -16,6 +16,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="targets" upperBound="-1"
         eType="#//Artefact"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//LinkType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transformation" eType="#//Transformation"
+        eOpposite="#//Transformation/traceLinks"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Artefact" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//TypeArtefact"/>
