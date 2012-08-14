@@ -1,14 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: TraceEditor
-Bundle-SymbolicName: com.marianogili.TraceEditor;singleton:=true
-Bundle-Version: 1.0.2
-Bundle-Activator: traceeditor.Activator
-Bundle-Vendor: Mariano Gili
-Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
- org.eclipse.jface.text,
- org.eclipse.ui.editors,
- TraceabilityEditor.edit;visibility:=reexport
+Bundle-SymbolicName: TraceEditor
+Bundle-Version: 0.1.0
+Require-Bundle: org.eclipse.emf.ecore
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-ActivationPolicy: lazy
