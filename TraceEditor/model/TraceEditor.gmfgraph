@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="traceeditor">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="TraceLinkSourcesTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="TraceLinkTargetsTargetDecoration"/>
+    <descriptors name="TransformationFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TransformationFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="TransformationNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TraceLinkFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TraceLinkFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="TraceLinkNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TraceLinkSourcesFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TraceLinkSourcesFigure" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="TraceLinkTargetsFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TraceLinkTargetsFigure" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="ArtefactFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ArtefactFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ArtefactNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="DashboardFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="DashboardFigure"/>
+    </descriptors>
+  </figures>
+  <nodes name="Transformation" figure="TransformationFigure"/>
+  <nodes name="TraceLink" figure="TraceLinkFigure"/>
+  <nodes name="Artefact" figure="ArtefactFigure"/>
+  <nodes name="Dashboard" figure="DashboardFigure"/>
+  <connections name="TraceLinkSources" figure="TraceLinkSourcesFigure"/>
+  <connections name="TraceLinkTargets" figure="TraceLinkTargetsFigure"/>
+  <labels name="TransformationName" figure="TransformationFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="TraceLinkName" figure="TraceLinkFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="ArtefactName" figure="ArtefactFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+</gmfgraph:Canvas>
