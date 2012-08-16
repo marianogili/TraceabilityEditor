@@ -8,8 +8,17 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import com.marianogili.traceeditor.TraceEditor;
 import com.marianogili.traceeditor.TraceeditorPackage;
+import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.ArtefactEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.ArtefactName2EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.ArtefactNameEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentCenterEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentLeftEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentRightEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TransformationNameEditPart;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -118,6 +127,24 @@ public class TraceEditorVisualIDRegistry {
 			}
 		}
 		switch (containerVisualID) {
+		case DashboardDashboardCompartmentLeftEditPart.VISUAL_ID:
+			if (TraceeditorPackage.eINSTANCE.getArtefact().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ArtefactEditPart.VISUAL_ID;
+			}
+			break;
+		case DashboardDashboardCompartmentCenterEditPart.VISUAL_ID:
+			if (TraceeditorPackage.eINSTANCE.getTransformation().isSuperTypeOf(
+					domainElement.eClass())) {
+				return TransformationEditPart.VISUAL_ID;
+			}
+			break;
+		case DashboardDashboardCompartmentRightEditPart.VISUAL_ID:
+			if (TraceeditorPackage.eINSTANCE.getArtefact().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Artefact2EditPart.VISUAL_ID;
+			}
+			break;
 		case TraceEditorEditPart.VISUAL_ID:
 			if (TraceeditorPackage.eINSTANCE.getDashboard().isSuperTypeOf(
 					domainElement.eClass())) {
@@ -149,6 +176,47 @@ public class TraceEditorVisualIDRegistry {
 			}
 		}
 		switch (containerVisualID) {
+		case DashboardEditPart.VISUAL_ID:
+			if (DashboardDashboardCompartmentLeftEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DashboardDashboardCompartmentCenterEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DashboardDashboardCompartmentRightEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ArtefactEditPart.VISUAL_ID:
+			if (ArtefactNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case TransformationEditPart.VISUAL_ID:
+			if (TransformationNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Artefact2EditPart.VISUAL_ID:
+			if (ArtefactName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DashboardDashboardCompartmentLeftEditPart.VISUAL_ID:
+			if (ArtefactEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DashboardDashboardCompartmentCenterEditPart.VISUAL_ID:
+			if (TransformationEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DashboardDashboardCompartmentRightEditPart.VISUAL_ID:
+			if (Artefact2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case TraceEditorEditPart.VISUAL_ID:
 			if (DashboardEditPart.VISUAL_ID == nodeVisualID) {
 				return true;

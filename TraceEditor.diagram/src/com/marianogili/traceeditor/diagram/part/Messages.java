@@ -308,12 +308,47 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String DashboardDashboardCompartmentLeftEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DashboardDashboardCompartmentCenterEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DashboardDashboardCompartmentRightEditPart_title;
+
+	/**
+	 * @generated
+	 */
 	public static String CommandName_OpenDiagram;
 
 	/**
 	 * @generated
 	 */
 	public static String NavigatorActionProvider_OpenDiagramActionName;
+
+	/**
+	 * @generated
+	 */
+	public static String AbstractParser_UnexpectedValueType;
+
+	/**
+	 * @generated
+	 */
+	public static String AbstractParser_WrongStringConversion;
+
+	/**
+	 * @generated
+	 */
+	public static String AbstractParser_UnknownLiteral;
+
+	/**
+	 * @generated
+	 */
+	public static String MessageFormatParser_InvalidInputError;
 
 	/**
 	 * @generated

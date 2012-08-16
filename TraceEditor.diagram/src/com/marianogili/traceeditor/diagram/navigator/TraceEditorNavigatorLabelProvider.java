@@ -1,5 +1,8 @@
 package com.marianogili.traceeditor.diagram.navigator;
 
+import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
+import org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions;
+import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.jface.resource.ImageDescriptor;
@@ -13,11 +16,18 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
+import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.ArtefactEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.ArtefactName2EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.ArtefactNameEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TransformationNameEditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorPlugin;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
+import com.marianogili.traceeditor.diagram.providers.TraceEditorParserProvider;
 
 /**
  * @generated
@@ -86,6 +96,15 @@ public class TraceEditorNavigatorLabelProvider extends LabelProvider implements
 		case DashboardEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?http://traceeditor/1.0?Dashboard", TraceEditorElementTypes.Dashboard_2001); //$NON-NLS-1$
+		case ArtefactEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://traceeditor/1.0?Artefact", TraceEditorElementTypes.Artefact_3001); //$NON-NLS-1$
+		case TransformationEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://traceeditor/1.0?Transformation", TraceEditorElementTypes.Transformation_3002); //$NON-NLS-1$
+		case Artefact2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://traceeditor/1.0?Artefact", TraceEditorElementTypes.Artefact_3003); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -142,6 +161,12 @@ public class TraceEditorNavigatorLabelProvider extends LabelProvider implements
 			return getTraceEditor_1000Text(view);
 		case DashboardEditPart.VISUAL_ID:
 			return getDashboard_2001Text(view);
+		case ArtefactEditPart.VISUAL_ID:
+			return getArtefact_3001Text(view);
+		case TransformationEditPart.VISUAL_ID:
+			return getTransformation_3002Text(view);
+		case Artefact2EditPart.VISUAL_ID:
+			return getArtefact_3003Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -158,6 +183,66 @@ public class TraceEditorNavigatorLabelProvider extends LabelProvider implements
 	 */
 	private String getDashboard_2001Text(View view) {
 		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getArtefact_3001Text(View view) {
+		IParser parser = TraceEditorParserProvider.getParser(
+				TraceEditorElementTypes.Artefact_3001,
+				view.getElement() != null ? view.getElement() : view,
+				TraceEditorVisualIDRegistry
+						.getType(ArtefactNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			TraceEditorDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getTransformation_3002Text(View view) {
+		IParser parser = TraceEditorParserProvider.getParser(
+				TraceEditorElementTypes.Transformation_3002,
+				view.getElement() != null ? view.getElement() : view,
+				TraceEditorVisualIDRegistry
+						.getType(TransformationNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			TraceEditorDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getArtefact_3003Text(View view) {
+		IParser parser = TraceEditorParserProvider.getParser(
+				TraceEditorElementTypes.Artefact_3003,
+				view.getElement() != null ? view.getElement() : view,
+				TraceEditorVisualIDRegistry
+						.getType(ArtefactName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			TraceEditorDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5003); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**

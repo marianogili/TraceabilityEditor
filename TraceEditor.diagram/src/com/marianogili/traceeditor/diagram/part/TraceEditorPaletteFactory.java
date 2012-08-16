@@ -46,13 +46,14 @@ public class TraceEditorPaletteFactory {
 	 */
 	private ToolEntry createTransformation1CreationTool() {
 		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(TraceEditorElementTypes.Dashboard_2001);
+		types.add(TraceEditorElementTypes.Transformation_3002);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Transformation1CreationTool_title,
 				Messages.Transformation1CreationTool_desc, types);
 		entry.setId("createTransformation1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(TraceEditorElementTypes
-				.getImageDescriptor(TraceEditorElementTypes.Dashboard_2001));
+		entry
+				.setSmallIcon(TraceEditorElementTypes
+						.getImageDescriptor(TraceEditorElementTypes.Transformation_3002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -96,10 +97,16 @@ public class TraceEditorPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createArtefact5CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Artefact5CreationTool_title,
-				Messages.Artefact5CreationTool_desc, null, null) {
-		};
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(2);
+		types.add(TraceEditorElementTypes.Artefact_3001);
+		types.add(TraceEditorElementTypes.Artefact_3003);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Artefact5CreationTool_title,
+				Messages.Artefact5CreationTool_desc, types);
 		entry.setId("createArtefact5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(TraceEditorElementTypes
+				.getImageDescriptor(TraceEditorElementTypes.Artefact_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
@@ -107,10 +114,15 @@ public class TraceEditorPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createDashboard6CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Dashboard6CreationTool_title,
-				Messages.Dashboard6CreationTool_desc, null, null) {
-		};
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types.add(TraceEditorElementTypes.Dashboard_2001);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Dashboard6CreationTool_title,
+				Messages.Dashboard6CreationTool_desc, types);
 		entry.setId("createDashboard6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(TraceEditorElementTypes
+				.getImageDescriptor(TraceEditorElementTypes.Dashboard_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 

@@ -21,8 +21,14 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonContentProvider;
 
+import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.ArtefactEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentCenterEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentLeftEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentRightEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 
 /**
@@ -218,6 +224,38 @@ public class TraceEditorNavigatorContentProvider implements
 			Collection connectedViews = getChildrenByType(Collections
 					.singleton(view), TraceEditorVisualIDRegistry
 					.getType(DashboardEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case DashboardEditPart.VISUAL_ID: {
+			Collection result = new ArrayList();
+			Collection connectedViews = getChildrenByType(
+					Collections.singleton(view),
+					TraceEditorVisualIDRegistry
+							.getType(DashboardDashboardCompartmentLeftEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					TraceEditorVisualIDRegistry
+							.getType(ArtefactEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(view),
+					TraceEditorVisualIDRegistry
+							.getType(DashboardDashboardCompartmentCenterEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					TraceEditorVisualIDRegistry
+							.getType(TransformationEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(view),
+					TraceEditorVisualIDRegistry
+							.getType(DashboardDashboardCompartmentRightEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					TraceEditorVisualIDRegistry
+							.getType(Artefact2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			return result.toArray();

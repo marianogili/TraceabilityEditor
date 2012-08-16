@@ -20,11 +20,170 @@
         figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
     <domainDiagramElement
         href="TraceEditor.genmodel#//traceeditor/TraceEditor"/>
+    <childNodes
+        visualID="3001"
+        editPartClassName="ArtefactEditPart"
+        itemSemanticEditPolicyClassName="ArtefactItemSemanticEditPolicy"
+        notationViewFactoryClassName="ArtefactViewFactory"
+        canonicalEditPolicyClassName="ArtefactCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="ArtefactGraphicalNodeEditPolicy"
+        createCommandClassName="ArtefactCreateCommand"
+        containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="ArtefactEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          layoutType="FLOW_LAYOUT"
+          className="ArtefactFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ArtefactFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureArtefactNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureArtefactFigureInt; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ArtefactFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(false);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setLineWidth(0);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(100)&#xA;, getMapMode().DPtoLP(75)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(2)&#xA;, getMapMode().DPtoLP(3)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureArtefactFigureInt = new org.eclipse.draw2d.RectangleFigure();&#xA;fFigureArtefactFigureInt.setLineWidth(1);&#xA;fFigureArtefactFigureInt.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(100)&#xA;, getMapMode().DPtoLP(75)&#xA;));&#xA;&#xA;this.add(fFigureArtefactFigureInt);&#xA;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutFFigureArtefactFigureInt = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutFFigureArtefactFigureInt.setStretchMinorAxis(false);&#xA;&#x9;layoutFFigureArtefactFigureInt.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutFFigureArtefactFigureInt.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutFFigureArtefactFigureInt.setMajorSpacing(5);&#xA;&#x9;layoutFFigureArtefactFigureInt.setMinorSpacing(5);&#xA;&#x9;layoutFFigureArtefactFigureInt.setHorizontal(true);&#xA;&#xA;&#x9;fFigureArtefactFigureInt.setLayoutManager(layoutFFigureArtefactFigureInt);&#xA;&#xA;&#xA;&#xA;fFigureArtefactNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureArtefactNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;fFigureArtefactFigureInt.add(fFigureArtefactNameFigure);&#xA;&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureArtefactNameFigure() {&#xA;&#x9;&#x9;return fFigureArtefactNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureArtefactFigureInt() {&#xA;&#x9;&#x9;return fFigureArtefactFigureInt;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="100"
+            height="75"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="TraceEditor.genmodel#//traceeditor/Artefact"/>
+        <containmentMetaFeature
+            href="TraceEditor.genmodel#//traceeditor/Dashboard/sourceArtefacts"/>
+        <childMetaFeature
+            href="TraceEditor.genmodel#//traceeditor/Dashboard/sourceArtefacts"/>
+      </modelFacet>
+      <labels
+          visualID="5001"
+          editPartClassName="ArtefactNameEditPart"
+          itemSemanticEditPolicyClassName="ArtefactNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="ArtefactNameViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureArtefactNameFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="TraceEditor.genmodel#//traceeditor/NamedElement/name"/>
+          <editableMetaFeatures
+              href="TraceEditor.genmodel#//traceeditor/NamedElement/name"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes
+        visualID="3002"
+        editPartClassName="TransformationEditPart"
+        itemSemanticEditPolicyClassName="TransformationItemSemanticEditPolicy"
+        notationViewFactoryClassName="TransformationViewFactory"
+        canonicalEditPolicyClassName="TransformationCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="TransformationGraphicalNodeEditPolicy"
+        createCommandClassName="TransformationCreateCommand"
+        containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="TransformationEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          layoutType="FLOW_LAYOUT"
+          className="TransformationFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TransformationFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTransformationNameFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TransformationFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setLineWidth(1);&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTransformationNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureTransformationNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureTransformationNameFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTransformationNameFigure() {&#xA;&#x9;&#x9;return fFigureTransformationNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass
+            href="TraceEditor.genmodel#//traceeditor/Transformation"/>
+        <containmentMetaFeature
+            href="TraceEditor.genmodel#//traceeditor/Dashboard/transformations"/>
+        <childMetaFeature
+            href="TraceEditor.genmodel#//traceeditor/Dashboard/transformations"/>
+      </modelFacet>
+      <labels
+          visualID="5002"
+          editPartClassName="TransformationNameEditPart"
+          itemSemanticEditPolicyClassName="TransformationNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="TransformationNameViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureTransformationNameFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="TraceEditor.genmodel#//traceeditor/NamedElement/name"/>
+          <editableMetaFeatures
+              href="TraceEditor.genmodel#//traceeditor/NamedElement/name"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes
+        visualID="3003"
+        editPartClassName="Artefact2EditPart"
+        itemSemanticEditPolicyClassName="Artefact2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="ArtefactViewFactory"
+        canonicalEditPolicyClassName="Artefact2CanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="Artefact2GraphicalNodeEditPolicy"
+        createCommandClassName="Artefact2CreateCommand"
+        containers="//@diagram/@compartments.2">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:SpecializationType"
+          metamodelType="//@diagram/@childNodes.0/@elementType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          layoutType="FLOW_LAYOUT"
+          className="ArtefactFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ArtefactFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureArtefactNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureArtefactFigureInt; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ArtefactFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(false);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setLineWidth(0);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(100)&#xA;, getMapMode().DPtoLP(75)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(2)&#xA;, getMapMode().DPtoLP(3)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureArtefactFigureInt = new org.eclipse.draw2d.RectangleFigure();&#xA;fFigureArtefactFigureInt.setLineWidth(1);&#xA;fFigureArtefactFigureInt.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(100)&#xA;, getMapMode().DPtoLP(75)&#xA;));&#xA;&#xA;this.add(fFigureArtefactFigureInt);&#xA;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutFFigureArtefactFigureInt = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutFFigureArtefactFigureInt.setStretchMinorAxis(false);&#xA;&#x9;layoutFFigureArtefactFigureInt.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutFFigureArtefactFigureInt.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutFFigureArtefactFigureInt.setMajorSpacing(5);&#xA;&#x9;layoutFFigureArtefactFigureInt.setMinorSpacing(5);&#xA;&#x9;layoutFFigureArtefactFigureInt.setHorizontal(true);&#xA;&#xA;&#x9;fFigureArtefactFigureInt.setLayoutManager(layoutFFigureArtefactFigureInt);&#xA;&#xA;&#xA;&#xA;fFigureArtefactNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureArtefactNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;fFigureArtefactFigureInt.add(fFigureArtefactNameFigure);&#xA;&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureArtefactNameFigure() {&#xA;&#x9;&#x9;return fFigureArtefactNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureArtefactFigureInt() {&#xA;&#x9;&#x9;return fFigureArtefactFigureInt;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="100"
+            height="75"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="TraceEditor.genmodel#//traceeditor/Artefact"/>
+        <containmentMetaFeature
+            href="TraceEditor.genmodel#//traceeditor/Dashboard/targetArtefacts"/>
+        <childMetaFeature
+            href="TraceEditor.genmodel#//traceeditor/Dashboard/targetArtefacts"/>
+      </modelFacet>
+      <labels
+          visualID="5003"
+          editPartClassName="ArtefactName2EditPart"
+          itemSemanticEditPolicyClassName="ArtefactName2ItemSemanticEditPolicy"
+          notationViewFactoryClassName="ArtefactNameViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureArtefactNameFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="TraceEditor.genmodel#//traceeditor/NamedElement/name"/>
+          <editableMetaFeatures
+              href="TraceEditor.genmodel#//traceeditor/NamedElement/name"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
     <topLevelNodes
         visualID="2001"
         editPartClassName="DashboardEditPart"
         itemSemanticEditPolicyClassName="DashboardItemSemanticEditPolicy"
+        notationViewFactoryClassName="DashboardViewFactory"
         canonicalEditPolicyClassName="DashboardCanonicalEditPolicy"
+        compartments="//@diagram/@compartments.0 //@diagram/@compartments.1 //@diagram/@compartments.2"
         graphicalNodeEditPolicyClassName="DashboardGraphicalNodeEditPolicy"
         createCommandClassName="DashboardCreateCommand">
       <diagramRunTimeClass
@@ -33,8 +192,15 @@
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="DashboardEditHelper"/>
       <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+          xsi:type="gmfgen:InnerClassViewmap"
+          layoutType="FLOW_LAYOUT"
+          className="DashboardFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class DashboardFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureDashboardCompartmentLeft; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureDashboardCompartmentCenter; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureDashboardCompartmentRight; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public DashboardFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(0);&#xA;&#x9;layoutThis.setMinorSpacing(0);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setLineWidth(1);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(800)&#xA;, getMapMode().DPtoLP(500)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureDashboardCompartmentLeft = new org.eclipse.draw2d.RectangleFigure();&#xA;fFigureDashboardCompartmentLeft.setLineWidth(1);&#xA;fFigureDashboardCompartmentLeft.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(200)&#xA;, getMapMode().DPtoLP(500)&#xA;));&#xA;&#xA;this.add(fFigureDashboardCompartmentLeft);&#xA;&#xA;&#x9;org.eclipse.draw2d.ToolbarLayout layoutFFigureDashboardCompartmentLeft = new org.eclipse.draw2d.ToolbarLayout();&#xA;&#x9;layoutFFigureDashboardCompartmentLeft.setStretchMinorAxis(false);&#xA;&#x9;layoutFFigureDashboardCompartmentLeft.setMinorAlignment(org.eclipse.draw2d.ToolbarLayout.ALIGN_CENTER&#xA;);&#xA;&#xA;&#x9;layoutFFigureDashboardCompartmentLeft.setSpacing(0);&#xA;&#x9;layoutFFigureDashboardCompartmentLeft.setVertical(true);&#xA;&#xA;&#x9;fFigureDashboardCompartmentLeft.setLayoutManager(layoutFFigureDashboardCompartmentLeft);&#xA;&#xA;&#xA;&#xA;&#xA;fFigureDashboardCompartmentCenter = new org.eclipse.draw2d.RectangleFigure();&#xA;fFigureDashboardCompartmentCenter.setLineWidth(1);&#xA;fFigureDashboardCompartmentCenter.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(400)&#xA;, getMapMode().DPtoLP(500)&#xA;));&#xA;&#xA;this.add(fFigureDashboardCompartmentCenter, org.eclipse.draw2d.BorderLayout.CENTER);&#xA;&#xA;&#xA;&#xA;fFigureDashboardCompartmentRight = new org.eclipse.draw2d.RectangleFigure();&#xA;fFigureDashboardCompartmentRight.setLineWidth(1);&#xA;fFigureDashboardCompartmentRight.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(200)&#xA;, getMapMode().DPtoLP(500)&#xA;));&#xA;&#xA;this.add(fFigureDashboardCompartmentRight);&#xA;&#xA;&#x9;org.eclipse.draw2d.ToolbarLayout layoutFFigureDashboardCompartmentRight = new org.eclipse.draw2d.ToolbarLayout();&#xA;&#x9;layoutFFigureDashboardCompartmentRight.setStretchMinorAxis(false);&#xA;&#x9;layoutFFigureDashboardCompartmentRight.setMinorAlignment(org.eclipse.draw2d.ToolbarLayout.ALIGN_CENTER&#xA;);&#xA;&#xA;&#x9;layoutFFigureDashboardCompartmentRight.setSpacing(0);&#xA;&#x9;layoutFFigureDashboardCompartmentRight.setVertical(true);&#xA;&#xA;&#x9;fFigureDashboardCompartmentRight.setLayoutManager(layoutFFigureDashboardCompartmentRight);&#xA;&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureDashboardCompartmentLeft() {&#xA;&#x9;&#x9;return fFigureDashboardCompartmentLeft;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureDashboardCompartmentCenter() {&#xA;&#x9;&#x9;return fFigureDashboardCompartmentCenter;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureDashboardCompartmentRight() {&#xA;&#x9;&#x9;return fFigureDashboardCompartmentRight;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="800"
+            height="500"/>
+      </viewmap>
       <modelFacet>
         <metaClass
             href="TraceEditor.genmodel#//traceeditor/Dashboard"/>
@@ -44,6 +210,60 @@
             href="TraceEditor.genmodel#//traceeditor/TraceEditor/dashboard"/>
       </modelFacet>
     </topLevelNodes>
+    <compartments
+        visualID="7001"
+        editPartClassName="DashboardDashboardCompartmentLeftEditPart"
+        itemSemanticEditPolicyClassName="DashboardDashboardCompartmentLeftItemSemanticEditPolicy"
+        notationViewFactoryClassName="DashboardDashboardCompartmentLeftViewFactory"
+        canonicalEditPolicyClassName="DashboardDashboardCompartmentLeftCanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.0"
+        title="DashboardCompartmentLeft"
+        canCollapse="false"
+        needsTitle="false"
+        node="//@diagram/@topLevelNodes.0">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap
+          xsi:type="gmfgen:ParentAssignedViewmap"
+          getterName="getFigureDashboardCompartmentLeft"
+          figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments
+        visualID="7002"
+        editPartClassName="DashboardDashboardCompartmentCenterEditPart"
+        itemSemanticEditPolicyClassName="DashboardDashboardCompartmentCenterItemSemanticEditPolicy"
+        notationViewFactoryClassName="DashboardDashboardCompartmentCenterViewFactory"
+        canonicalEditPolicyClassName="DashboardDashboardCompartmentCenterCanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.1"
+        title="DashboardCompartmentCenter"
+        canCollapse="false"
+        needsTitle="false"
+        node="//@diagram/@topLevelNodes.0">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap
+          xsi:type="gmfgen:ParentAssignedViewmap"
+          getterName="getFigureDashboardCompartmentCenter"
+          figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments
+        visualID="7003"
+        editPartClassName="DashboardDashboardCompartmentRightEditPart"
+        itemSemanticEditPolicyClassName="DashboardDashboardCompartmentRightItemSemanticEditPolicy"
+        notationViewFactoryClassName="DashboardDashboardCompartmentRightViewFactory"
+        canonicalEditPolicyClassName="DashboardDashboardCompartmentRightCanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.2"
+        title="DashboardCompartmentRight"
+        canCollapse="false"
+        needsTitle="false"
+        node="//@diagram/@topLevelNodes.0">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap
+          xsi:type="gmfgen:ParentAssignedViewmap"
+          getterName="getFigureDashboardCompartmentRight"
+          figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
     <palette>
       <groups
           title="traceeditor">
@@ -51,7 +271,7 @@
             xsi:type="gmfgen:ToolEntry"
             title="Transformation"
             description="Create new Transformation"
-            genNodes="//@diagram/@topLevelNodes.0"/>
+            genNodes="//@diagram/@childNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="TraceLink"
@@ -67,11 +287,13 @@
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Artefact"
-            description="Create new Artefact"/>
+            description="Create new Artefact"
+            genNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.2"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Dashboard"
-            description="Create new Dashboard"/>
+            description="Create new Dashboard"
+            genNodes="//@diagram/@topLevelNodes.0"/>
       </groups>
     </palette>
     <preferencePages
@@ -108,6 +330,15 @@
     <childReferences
         child="//@diagram"/>
     <childReferences
+        parent="//@diagram/@topLevelNodes.0"
+        child="//@diagram/@childNodes.0"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.0"
+        child="//@diagram/@childNodes.1"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.0"
+        child="//@diagram/@childNodes.2"/>
+    <childReferences
         parent="//@diagram"
         child="//@diagram/@topLevelNodes.0"/>
   </navigator>
@@ -133,6 +364,12 @@
   </propertySheet>
   <domainGenModel
       href="TraceEditor.genmodel#/"/>
+  <labelParsers
+      extensibleViaService="true">
+    <implementations
+        xsi:type="gmfgen:PredefinedParser"
+        uses="//@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@childNodes.2/@labels.0/@modelFacet"/>
+  </labelParsers>
   <contextMenus
       context="//@diagram">
     <items

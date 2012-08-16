@@ -12,9 +12,96 @@
           href="TraceEditor.ecore#//Dashboard"/>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="TraceEditor.gmftool#//@palette/@tools.0/@tools.0"/>
+          href="TraceEditor.gmftool#//@palette/@tools.0/@tools.5"/>
       <diagramNode
           href="TraceEditor.gmfgraph#Dashboard"/>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.0/@ownedChild">
+        <containmentFeature
+            href="TraceEditor.ecore#//Dashboard/sourceArtefacts"/>
+        <ownedChild>
+          <domainMetaElement
+              href="TraceEditor.ecore#//Artefact"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="TraceEditor.gmfgraph#ArtefactName"/>
+            <features
+                href="TraceEditor.ecore#//NamedElement/name"/>
+            <editableFeatures
+                href="TraceEditor.ecore#//NamedElement/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.4"/>
+          <diagramNode
+              href="TraceEditor.gmfgraph#Artefact"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.1"
+          referencedChild="//@nodes.0/@ownedChild">
+        <containmentFeature
+            href="TraceEditor.ecore#//Dashboard/transformations"/>
+        <ownedChild>
+          <domainMetaElement
+              href="TraceEditor.ecore#//Transformation"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="TraceEditor.gmfgraph#TransformationName"/>
+            <features
+                href="TraceEditor.ecore#//NamedElement/name"/>
+            <editableFeatures
+                href="TraceEditor.ecore#//NamedElement/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.0"/>
+          <diagramNode
+              href="TraceEditor.gmfgraph#Transformation"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.2"
+          referencedChild="//@nodes.0/@ownedChild">
+        <containmentFeature
+            href="TraceEditor.ecore#//Dashboard/targetArtefacts"/>
+        <ownedChild>
+          <domainMetaElement
+              href="TraceEditor.ecore#//Artefact"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="TraceEditor.gmfgraph#ArtefactName"/>
+            <features
+                href="TraceEditor.ecore#//NamedElement/name"/>
+            <editableFeatures
+                href="TraceEditor.ecore#//NamedElement/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.4"/>
+          <diagramNode
+              href="TraceEditor.gmfgraph#Artefact"/>
+        </ownedChild>
+      </children>
+      <compartments
+          children="//@nodes.0/@ownedChild/@children.0">
+        <compartment
+            href="TraceEditor.gmfgraph#DashboardCompartmentLeft"/>
+      </compartments>
+      <compartments
+          children="//@nodes.0/@ownedChild/@children.1">
+        <compartment
+            href="TraceEditor.gmfgraph#DashboardCompartmentCenter"/>
+      </compartments>
+      <compartments
+          children="//@nodes.0/@ownedChild/@children.2">
+        <compartment
+            href="TraceEditor.gmfgraph#DashboardCompartmentRight"/>
+      </compartments>
     </ownedChild>
   </nodes>
   <diagram>

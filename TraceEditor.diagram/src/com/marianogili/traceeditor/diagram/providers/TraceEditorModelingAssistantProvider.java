@@ -21,6 +21,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
+import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
 import com.marianogili.traceeditor.diagram.part.Messages;
 import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorPlugin;
@@ -37,6 +38,13 @@ public class TraceEditorModelingAssistantProvider extends
 	public List getTypesForPopupBar(IAdaptable host) {
 		IGraphicalEditPart editPart = (IGraphicalEditPart) host
 				.getAdapter(IGraphicalEditPart.class);
+		if (editPart instanceof DashboardEditPart) {
+			ArrayList types = new ArrayList(3);
+			types.add(TraceEditorElementTypes.Artefact_3001);
+			types.add(TraceEditorElementTypes.Transformation_3002);
+			types.add(TraceEditorElementTypes.Artefact_3003);
+			return types;
+		}
 		if (editPart instanceof TraceEditorEditPart) {
 			ArrayList types = new ArrayList(1);
 			types.add(TraceEditorElementTypes.Dashboard_2001);

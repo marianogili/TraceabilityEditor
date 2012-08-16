@@ -34,6 +34,33 @@ public class TraceEditorEditPartFactory implements EditPartFactory {
 
 			case DashboardEditPart.VISUAL_ID:
 				return new DashboardEditPart(view);
+
+			case ArtefactEditPart.VISUAL_ID:
+				return new ArtefactEditPart(view);
+
+			case ArtefactNameEditPart.VISUAL_ID:
+				return new ArtefactNameEditPart(view);
+
+			case TransformationEditPart.VISUAL_ID:
+				return new TransformationEditPart(view);
+
+			case TransformationNameEditPart.VISUAL_ID:
+				return new TransformationNameEditPart(view);
+
+			case Artefact2EditPart.VISUAL_ID:
+				return new Artefact2EditPart(view);
+
+			case ArtefactName2EditPart.VISUAL_ID:
+				return new ArtefactName2EditPart(view);
+
+			case DashboardDashboardCompartmentLeftEditPart.VISUAL_ID:
+				return new DashboardDashboardCompartmentLeftEditPart(view);
+
+			case DashboardDashboardCompartmentCenterEditPart.VISUAL_ID:
+				return new DashboardDashboardCompartmentCenterEditPart(view);
+
+			case DashboardDashboardCompartmentRightEditPart.VISUAL_ID:
+				return new DashboardDashboardCompartmentRightEditPart(view);
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

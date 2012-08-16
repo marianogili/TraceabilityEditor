@@ -17,8 +17,11 @@ import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
 
 import com.marianogili.traceeditor.TraceeditorPackage;
+import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.ArtefactEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorPlugin;
 
 /**
@@ -55,6 +58,18 @@ public class TraceEditorElementTypes extends ElementInitializers {
 	 * @generated
 	 */
 	public static final IElementType Dashboard_2001 = getElementType("TraceEditor.diagram.Dashboard_2001"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Artefact_3001 = getElementType("TraceEditor.diagram.Artefact_3001"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Transformation_3002 = getElementType("TraceEditor.diagram.Transformation_3002"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Artefact_3003 = getElementType("TraceEditor.diagram.Artefact_3003"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -172,6 +187,15 @@ public class TraceEditorElementTypes extends ElementInitializers {
 
 			elements.put(Dashboard_2001, TraceeditorPackage.eINSTANCE
 					.getDashboard());
+
+			elements.put(Artefact_3001, TraceeditorPackage.eINSTANCE
+					.getArtefact());
+
+			elements.put(Transformation_3002, TraceeditorPackage.eINSTANCE
+					.getTransformation());
+
+			elements.put(Artefact_3003, TraceeditorPackage.eINSTANCE
+					.getArtefact());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -191,6 +215,9 @@ public class TraceEditorElementTypes extends ElementInitializers {
 			KNOWN_ELEMENT_TYPES = new HashSet();
 			KNOWN_ELEMENT_TYPES.add(TraceEditor_1000);
 			KNOWN_ELEMENT_TYPES.add(Dashboard_2001);
+			KNOWN_ELEMENT_TYPES.add(Artefact_3001);
+			KNOWN_ELEMENT_TYPES.add(Transformation_3002);
+			KNOWN_ELEMENT_TYPES.add(Artefact_3003);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -204,6 +231,12 @@ public class TraceEditorElementTypes extends ElementInitializers {
 			return TraceEditor_1000;
 		case DashboardEditPart.VISUAL_ID:
 			return Dashboard_2001;
+		case ArtefactEditPart.VISUAL_ID:
+			return Artefact_3001;
+		case TransformationEditPart.VISUAL_ID:
+			return Transformation_3002;
+		case Artefact2EditPart.VISUAL_ID:
+			return Artefact_3003;
 		}
 		return null;
 	}
