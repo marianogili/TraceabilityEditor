@@ -78,4 +78,17 @@ public class DashboardDashboardCompartmentLeftEditPart extends
 		// super.setRatio(ratio); 
 	}
 
+	/* (non-Javadoc)
+	 * @see org.eclipse.gmf.runtime.diagram.ui.editparts.ListCompartmentEditPart#handleNotificationEvent(org.eclipse.emf.common.notify.Notification)
+	 */
+	@Override
+	protected void handleNotificationEvent(Notification event) {
+		if (event.getEventType() == Notification.ADD) {
+			this.getFigure().getParent().getPreferredSize().height += 50;
+		}
+		super.handleNotificationEvent(event);
+	}
+	
+	
+
 }
