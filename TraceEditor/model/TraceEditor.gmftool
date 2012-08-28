@@ -10,8 +10,8 @@
         title="traceeditor">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Transformation"
-          description="Create new Transformation">
+          title="Transformación"
+          description="Crear una transformación">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -19,8 +19,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TraceLink"
-          description="Create new TraceLink">
+          title="Traza"
+          description="Crear una traza">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -28,26 +28,34 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TraceLinkSources"
-          description="Create new TraceLinkSources">
+          title="Origen de la traza"
+          description="Asociar un artefato como origen de la traza">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/EdgeSource.gif"
+            bundle="TraceEditor.edit"/>
         <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/EdgeSource.gif"
+            bundle="TraceEditor.edit"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TraceLinkTargets"
-          description="Create new TraceLinkTargets">
+          title="Destino de la traza"
+          description="Asociar un artefato como destino de la traza">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/EdgeTarget.gif"
+            bundle="TraceEditor.edit"/>
         <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/EdgeTarget.gif"
+            bundle="TraceEditor.edit"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Artefact"
-          description="Create new Artefact">
+          title="Artefacto"
+          description="Crear un artefacto">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

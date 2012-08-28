@@ -248,52 +248,52 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Transformation1CreationTool_title;
+	public static String Transformación1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Transformation1CreationTool_desc;
+	public static String Transformación1CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String TraceLink2CreationTool_title;
+	public static String Traza2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String TraceLink2CreationTool_desc;
+	public static String Traza2CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String TraceLinkSources3CreationTool_title;
+	public static String Origendelatraza3CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String TraceLinkSources3CreationTool_desc;
+	public static String Origendelatraza3CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String TraceLinkTargets4CreationTool_title;
+	public static String Destinodelatraza4CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String TraceLinkTargets4CreationTool_desc;
+	public static String Destinodelatraza4CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Artefact5CreationTool_title;
+	public static String Artefacto5CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Artefact5CreationTool_desc;
+	public static String Artefacto5CreationTool_desc;
 
 	/**
 	 * @generated

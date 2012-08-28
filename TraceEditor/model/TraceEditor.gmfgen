@@ -237,6 +237,7 @@
         visualID="3005"
         editPartClassName="TraceLink2EditPart"
         itemSemanticEditPolicyClassName="TraceLink2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="TraceLinkViewFactory"
         canonicalEditPolicyClassName="TraceLink2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="TraceLink2GraphicalNodeEditPolicy"
         createCommandClassName="TraceLink2CreateCommand"
@@ -266,6 +267,7 @@
           visualID="5005"
           editPartClassName="TraceLinkName2EditPart"
           itemSemanticEditPolicyClassName="TraceLinkName2ItemSemanticEditPolicy"
+          notationViewFactoryClassName="TraceLinkNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -445,28 +447,32 @@
           title="traceeditor">
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="Transformation"
-            description="Create new Transformation"
+            title="Transformación"
+            description="Crear una transformación"
             genNodes="//@diagram/@childNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="TraceLink"
-            description="Create new TraceLink"
+            title="Traza"
+            description="Crear una traza"
             genNodes="//@diagram/@childNodes.2 //@diagram/@childNodes.4"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="TraceLinkSources"
-            description="Create new TraceLinkSources"
+            title="Origen de la traza"
+            description="Asociar un artefato como origen de la traza"
+            largeIconPath="/TraceEditor.edit/icons/full/obj16/EdgeSource.gif"
+            smallIconPath="/TraceEditor.edit/icons/full/obj16/EdgeSource.gif"
             genLinks="//@diagram/@links.0"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="TraceLinkTargets"
-            description="Create new TraceLinkTargets"
+            title="Destino de la traza"
+            description="Asociar un artefato como destino de la traza"
+            largeIconPath="/TraceEditor.edit/icons/full/obj16/EdgeTarget.gif"
+            smallIconPath="/TraceEditor.edit/icons/full/obj16/EdgeTarget.gif"
             genLinks="//@diagram/@links.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="Artefact"
-            description="Create new Artefact"
+            title="Artefacto"
+            description="Crear un artefacto"
             genNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.3"/>
         <entries
             xsi:type="gmfgen:ToolEntry"

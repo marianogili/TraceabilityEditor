@@ -160,26 +160,31 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 		return getContentPane();
 	}
 
-//	/**
-//	 * @generated
-//	 */
-//	protected NodeFigure createNodePlate() {
-//		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
-//		return result;
-//	}
+	//	/**
+	//	 * @generated
+	//	 */
+	//	protected NodeFigure createNodePlate() {
+	//		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
+	//		return result;
+	//	}
 	/**
 	 * @generated NOT
 	 */
 	protected NodeFigure createNodePlate() {
-		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40){
+		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40) {
 			public PointList getPolygonPoints() {
 				PointList points = new PointList(5);
 				Rectangle anchRect = getHandleBounds();
-				points.addPoint(anchRect.x + anchRect.width*20/40, anchRect.y); 				  	// A1
-				points.addPoint(anchRect.x + anchRect.width, anchRect.y + anchRect.height*20/40); 	// A2
-				points.addPoint(anchRect.x + anchRect.width * 20/40, anchRect.y + anchRect.height); // A3
-				points.addPoint(anchRect.x, anchRect.y + anchRect.height * 20/40);					// A4
-				points.addPoint(anchRect.x + anchRect.width*20/40, anchRect.y); 					// A1
+				points.addPoint(anchRect.x + anchRect.width * 20 / 40,
+						anchRect.y); // A1
+				points.addPoint(anchRect.x + anchRect.width, anchRect.y
+						+ anchRect.height * 20 / 40); // A2
+				points.addPoint(anchRect.x + anchRect.width * 20 / 40,
+						anchRect.y + anchRect.height); // A3
+				points.addPoint(anchRect.x, anchRect.y + anchRect.height * 20
+						/ 40); // A4
+				points.addPoint(anchRect.x + anchRect.width * 20 / 40,
+						anchRect.y); // A1
 				return points;
 			}
 		};
