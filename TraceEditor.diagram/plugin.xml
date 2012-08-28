@@ -213,8 +213,8 @@
       <viewProvider class="com.marianogili.traceeditor.diagram.providers.TraceEditorViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="TraceEditor"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,3001,3002,3003"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints=""/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,3001,3002,3004,3003,3005"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002"/>
       </viewProvider>
    </extension>
 
@@ -226,16 +226,16 @@
             <method name="getType()" value="TraceEditor"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,3001,3002,3003"/>
+            <method name="getType()" value="2001,3001,3002,3004,3003,3005"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value=""/>
+            <method name="getType()" value="4001,4002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001,5002,5003"/>
+            <method name="getType()" value="5001,5002,5004,5003,5005"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value="7001,7002,7003"/>
+            <method name="getType()" value="7001,7002,7003,7004"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -308,12 +308,49 @@
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://traceeditor/1.0">
+         <metamodelType
+               id="TraceEditor.diagram.TraceLink_3004"
+               name="%metatype.name.TraceLink_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="TraceLink"
+               edithelper="com.marianogili.traceeditor.diagram.edit.helpers.TraceLinkEditHelper">
+            <param name="semanticHint" value="3004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://traceeditor/1.0">
          <specializationType
                id="TraceEditor.diagram.Artefact_3003"
                name="%metatype.name.Artefact_3003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="TraceEditor.diagram.Artefact_3001"/>
             <param name="semanticHint" value="3003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://traceeditor/1.0">
+         <specializationType
+               id="TraceEditor.diagram.TraceLink_3005"
+               name="%metatype.name.TraceLink_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="TraceEditor.diagram.TraceLink_3004"/>
+            <param name="semanticHint" value="3005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://traceeditor/1.0">
+         <specializationType
+               id="TraceEditor.diagram.TraceLinkSources_4001"
+               name="%metatype.name.TraceLinkSources_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://traceeditor/1.0">
+         <specializationType
+               id="TraceEditor.diagram.TraceLinkTargets_4002"
+               name="%metatype.name.TraceLinkTargets_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4002"/>
          </specializationType>
       </metamodel>
    </extension>
@@ -332,7 +369,11 @@
          <elementType ref="TraceEditor.diagram.Dashboard_2001"/>
          <elementType ref="TraceEditor.diagram.Artefact_3001"/>
          <elementType ref="TraceEditor.diagram.Transformation_3002"/>
+         <elementType ref="TraceEditor.diagram.TraceLink_3004"/>
          <elementType ref="TraceEditor.diagram.Artefact_3003"/>
+         <elementType ref="TraceEditor.diagram.TraceLink_3005"/>
+         <elementType ref="TraceEditor.diagram.TraceLinkSources_4001"/>
+         <elementType ref="TraceEditor.diagram.TraceLinkTargets_4002"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

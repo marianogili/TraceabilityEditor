@@ -11,8 +11,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.CanonicalEditPolicy;
 import org.eclipse.gmf.runtime.notation.View;
 
 import com.marianogili.traceeditor.TraceeditorPackage;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLink2EditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkEditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramUpdater;
 import com.marianogili.traceeditor.diagram.part.TraceEditorNodeDescriptor;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
@@ -20,7 +19,7 @@ import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 /**
  * @generated
  */
-public class DashboardDashboardCompartmentCenterCanonicalEditPolicy extends
+public class TransformationTransformationCompartmentCanonicalEditPolicy extends
 		CanonicalEditPolicy {
 
 	/**
@@ -35,7 +34,7 @@ public class DashboardDashboardCompartmentCenterCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		List result = new LinkedList();
 		for (Iterator it = TraceEditorDiagramUpdater
-				.getDashboardDashboardCompartmentCenter_7002SemanticChildren(
+				.getTransformationTransformationCompartment_7004SemanticChildren(
 						viewObject).iterator(); it.hasNext();) {
 			result.add(((TraceEditorNodeDescriptor) it.next())
 					.getModelElement());
@@ -49,8 +48,7 @@ public class DashboardDashboardCompartmentCenterCanonicalEditPolicy extends
 	protected boolean isOrphaned(Collection semanticChildren, final View view) {
 		int visualID = TraceEditorVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case TransformationEditPart.VISUAL_ID:
-		case TraceLink2EditPart.VISUAL_ID:
+		case TraceLinkEditPart.VISUAL_ID:
 			if (!semanticChildren.contains(view.getElement())) {
 				return true;
 			}
@@ -72,9 +70,7 @@ public class DashboardDashboardCompartmentCenterCanonicalEditPolicy extends
 		if (myFeaturesToSynchronize == null) {
 			myFeaturesToSynchronize = new HashSet();
 			myFeaturesToSynchronize.add(TraceeditorPackage.eINSTANCE
-					.getDashboard_Transformations());
-			myFeaturesToSynchronize.add(TraceeditorPackage.eINSTANCE
-					.getDashboard_TraceLinks());
+					.getTransformation_TraceLinks());
 		}
 		return myFeaturesToSynchronize;
 	}

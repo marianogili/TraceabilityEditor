@@ -2,18 +2,19 @@ package com.marianogili.traceeditor.diagram.edit.parts;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.eclipse.draw2d.FlowLayout;
+import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.MarginBorder;
-import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
-import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.draw2d.geometry.Point;
+import org.eclipse.draw2d.geometry.PointList;
+import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
+import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
-import org.eclipse.gef.editpolicies.FlowLayoutEditPolicy;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
+import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
@@ -26,19 +27,19 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import com.marianogili.traceeditor.diagram.edit.policies.ArtefactItemSemanticEditPolicy;
+import com.marianogili.traceeditor.diagram.edit.policies.TraceLinkItemSemanticEditPolicy;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
 
 /**
  * @generated
  */
-public class ArtefactEditPart extends ShapeNodeEditPart {
+public class TraceLinkEditPart extends ShapeNodeEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3001;
+	public static final int VISUAL_ID = 3004;
 
 	/**
 	 * @generated
@@ -53,7 +54,7 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public ArtefactEditPart(View view) {
+	public TraceLinkEditPart(View view) {
 		super(view);
 	}
 
@@ -63,7 +64,7 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new ArtefactItemSemanticEditPolicy());
+				new TraceLinkItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -73,15 +74,18 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
+		LayoutEditPolicy lep = new LayoutEditPolicy() {
 
-		FlowLayoutEditPolicy lep = new FlowLayoutEditPolicy() {
-
-			protected Command createAddCommand(EditPart child, EditPart after) {
-				return null;
+			protected EditPolicy createChildEditPolicy(EditPart child) {
+				EditPolicy result = child
+						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
+				if (result == null) {
+					result = new NonResizableEditPolicy();
+				}
+				return result;
 			}
 
-			protected Command createMoveChildCommand(EditPart child,
-					EditPart after) {
+			protected Command getMoveChildrenCommand(Request request) {
 				return null;
 			}
 
@@ -96,24 +100,24 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		ArtefactFigure figure = new ArtefactFigure();
+		TraceLinkFigure figure = new TraceLinkFigure();
 		return primaryShape = figure;
 	}
 
 	/**
 	 * @generated
 	 */
-	public ArtefactFigure getPrimaryShape() {
-		return (ArtefactFigure) primaryShape;
+	public TraceLinkFigure getPrimaryShape() {
+		return (TraceLinkFigure) primaryShape;
 	}
 
 	/**
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof ArtefactNameEditPart) {
-			((ArtefactNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureArtefactNameFigure());
+		if (childEditPart instanceof TraceLinkNameEditPart) {
+			((TraceLinkNameEditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureTraceLinkNameFigure());
 			return true;
 		}
 		return false;
@@ -123,7 +127,7 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof ArtefactNameEditPart) {
+		if (childEditPart instanceof TraceLinkNameEditPart) {
 			return true;
 		}
 		return false;
@@ -160,7 +164,7 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected NodeFigure createNodePlate() {
-		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(100, 75);
+		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
 		return result;
 	}
 
@@ -247,13 +251,13 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(TraceEditorVisualIDRegistry
-				.getType(ArtefactNameEditPart.VISUAL_ID));
+				.getType(TraceLinkNameEditPart.VISUAL_ID));
 	}
 
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnTarget() {
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSource() {
 		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
 		types.add(TraceEditorElementTypes.TraceLinkSources_4001);
 		types.add(TraceEditorElementTypes.TraceLinkTargets_4002);
@@ -263,20 +267,20 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForSource(
-			IElementType relationshipType) {
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSourceAndTarget(
+			IGraphicalEditPart targetEditPart) {
 		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
-		if (relationshipType == TraceEditorElementTypes.TraceLinkSources_4001) {
-			types.add(TraceEditorElementTypes.TraceLink_3004);
+		if (targetEditPart instanceof ArtefactEditPart) {
+			types.add(TraceEditorElementTypes.TraceLinkSources_4001);
 		}
-		if (relationshipType == TraceEditorElementTypes.TraceLinkSources_4001) {
-			types.add(TraceEditorElementTypes.TraceLink_3005);
+		if (targetEditPart instanceof Artefact2EditPart) {
+			types.add(TraceEditorElementTypes.TraceLinkSources_4001);
 		}
-		if (relationshipType == TraceEditorElementTypes.TraceLinkTargets_4002) {
-			types.add(TraceEditorElementTypes.TraceLink_3004);
+		if (targetEditPart instanceof ArtefactEditPart) {
+			types.add(TraceEditorElementTypes.TraceLinkTargets_4002);
 		}
-		if (relationshipType == TraceEditorElementTypes.TraceLinkTargets_4002) {
-			types.add(TraceEditorElementTypes.TraceLink_3005);
+		if (targetEditPart instanceof Artefact2EditPart) {
+			types.add(TraceEditorElementTypes.TraceLinkTargets_4002);
 		}
 		return types;
 	}
@@ -284,39 +288,49 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class ArtefactFigure extends RectangleFigure {
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForTarget(
+			IElementType relationshipType) {
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		if (relationshipType == TraceEditorElementTypes.TraceLinkSources_4001) {
+			types.add(TraceEditorElementTypes.Artefact_3001);
+		}
+		if (relationshipType == TraceEditorElementTypes.TraceLinkSources_4001) {
+			types.add(TraceEditorElementTypes.Artefact_3003);
+		}
+		if (relationshipType == TraceEditorElementTypes.TraceLinkTargets_4002) {
+			types.add(TraceEditorElementTypes.Artefact_3001);
+		}
+		if (relationshipType == TraceEditorElementTypes.TraceLinkTargets_4002) {
+			types.add(TraceEditorElementTypes.Artefact_3003);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public class TraceLinkFigure extends Shape {
 
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureArtefactNameFigure;
-		/**
-		 * @generated
-		 */
-		private RectangleFigure fFigureArtefactFigureInt;
+		private WrappingLabel fFigureTraceLinkNameFigure;
 
 		/**
 		 * @generated
 		 */
-		public ArtefactFigure() {
-
-			FlowLayout layoutThis = new FlowLayout();
-			layoutThis.setStretchMinorAxis(false);
-			layoutThis.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
-
-			layoutThis.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
-			layoutThis.setMajorSpacing(5);
-			layoutThis.setMinorSpacing(5);
-			layoutThis.setHorizontal(false);
-
-			this.setLayoutManager(layoutThis);
-
-			this.setLineWidth(0);
-			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(100),
-					getMapMode().DPtoLP(75)));
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(20),
-					getMapMode().DPtoLP(2), getMapMode().DPtoLP(3),
-					getMapMode().DPtoLP(5)));
+		public TraceLinkFigure() {
+			this.addPoint(new Point(getMapMode().DPtoLP(20), getMapMode()
+					.DPtoLP(0)));
+			this.addPoint(new Point(getMapMode().DPtoLP(40), getMapMode()
+					.DPtoLP(20)));
+			this.addPoint(new Point(getMapMode().DPtoLP(20), getMapMode()
+					.DPtoLP(40)));
+			this.addPoint(new Point(getMapMode().DPtoLP(0), getMapMode()
+					.DPtoLP(20)));
+			this.setFill(true);
+			this.setLineWidth(1);
+			this.setBackgroundColor(THIS_BACK);
 			createContents();
 		}
 
@@ -325,67 +339,95 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureArtefactFigureInt = new RectangleFigure();
-			fFigureArtefactFigureInt.setLineWidth(1);
-			fFigureArtefactFigureInt
-					.setBackgroundColor(FFIGUREARTEFACTFIGUREINT_BACK);
-			fFigureArtefactFigureInt.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(100), getMapMode().DPtoLP(75)));
+			fFigureTraceLinkNameFigure = new WrappingLabel();
+			fFigureTraceLinkNameFigure.setText("<...>");
 
-			this.add(fFigureArtefactFigureInt);
-
-			FlowLayout layoutFFigureArtefactFigureInt = new FlowLayout();
-			layoutFFigureArtefactFigureInt.setStretchMinorAxis(false);
-			layoutFFigureArtefactFigureInt
-					.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
-
-			layoutFFigureArtefactFigureInt
-					.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
-			layoutFFigureArtefactFigureInt.setMajorSpacing(5);
-			layoutFFigureArtefactFigureInt.setMinorSpacing(5);
-			layoutFFigureArtefactFigureInt.setHorizontal(true);
-
-			fFigureArtefactFigureInt
-					.setLayoutManager(layoutFFigureArtefactFigureInt);
-
-			fFigureArtefactNameFigure = new WrappingLabel();
-			fFigureArtefactNameFigure.setText("<...>");
-
-			fFigureArtefactFigureInt.add(fFigureArtefactNameFigure);
+			this.add(fFigureTraceLinkNameFigure);
 
 		}
 
 		/**
 		 * @generated
 		 */
-		private boolean myUseLocalCoordinates = false;
+		private final PointList myTemplate = new PointList();
+		/**
+		 * @generated
+		 */
+		private Rectangle myTemplateBounds;
 
 		/**
 		 * @generated
 		 */
-		protected boolean useLocalCoordinates() {
-			return myUseLocalCoordinates;
+		public void addPoint(Point point) {
+			myTemplate.addPoint(point);
+			myTemplateBounds = null;
 		}
 
 		/**
 		 * @generated
 		 */
-		protected void setUseLocalCoordinates(boolean useLocalCoordinates) {
-			myUseLocalCoordinates = useLocalCoordinates;
+		protected void fillShape(Graphics graphics) {
+			Rectangle bounds = getBounds();
+			graphics.pushState();
+			graphics.translate(bounds.x, bounds.y);
+			graphics.fillPolygon(scalePointList());
+			graphics.popState();
 		}
 
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureArtefactNameFigure() {
-			return fFigureArtefactNameFigure;
+		protected void outlineShape(Graphics graphics) {
+			Rectangle bounds = getBounds();
+			graphics.pushState();
+			graphics.translate(bounds.x, bounds.y);
+			graphics.drawPolygon(scalePointList());
+			graphics.popState();
 		}
 
 		/**
 		 * @generated
 		 */
-		public RectangleFigure getFigureArtefactFigureInt() {
-			return fFigureArtefactFigureInt;
+		private Rectangle getTemplateBounds() {
+			if (myTemplateBounds == null) {
+				myTemplateBounds = myTemplate.getBounds().getCopy().union(0, 0);
+				//just safety -- we are going to use this as divider 
+				if (myTemplateBounds.width < 1) {
+					myTemplateBounds.width = 1;
+				}
+				if (myTemplateBounds.height < 1) {
+					myTemplateBounds.height = 1;
+				}
+			}
+			return myTemplateBounds;
+		}
+
+		/**
+		 * @generated
+		 */
+		private int[] scalePointList() {
+			Rectangle pointsBounds = getTemplateBounds();
+			Rectangle actualBounds = getBounds();
+
+			float xScale = ((float) actualBounds.width) / pointsBounds.width;
+			float yScale = ((float) actualBounds.height) / pointsBounds.height;
+
+			if (xScale == 1 && yScale == 1) {
+				return myTemplate.toIntArray();
+			}
+			int[] scaled = (int[]) myTemplate.toIntArray().clone();
+			for (int i = 0; i < scaled.length; i += 2) {
+				scaled[i] = (int) Math.floor(scaled[i] * xScale);
+				scaled[i + 1] = (int) Math.floor(scaled[i + 1] * yScale);
+			}
+			return scaled;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTraceLinkNameFigure() {
+			return fFigureTraceLinkNameFigure;
 		}
 
 	}
@@ -393,7 +435,6 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color FFIGUREARTEFACTFIGUREINT_BACK = new Color(null, 255,
-			255, 190);
+	static final Color THIS_BACK = new Color(null, 237, 184, 255);
 
 }

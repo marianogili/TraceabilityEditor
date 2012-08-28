@@ -8,6 +8,7 @@ import org.eclipse.gef.palette.PaletteContainer;
 import org.eclipse.gef.palette.PaletteGroup;
 import org.eclipse.gef.palette.PaletteRoot;
 import org.eclipse.gef.palette.ToolEntry;
+import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool;
 
 import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
@@ -62,10 +63,16 @@ public class TraceEditorPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createTraceLink2CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.TraceLink2CreationTool_title,
-				Messages.TraceLink2CreationTool_desc, null, null) {
-		};
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(2);
+		types.add(TraceEditorElementTypes.TraceLink_3004);
+		types.add(TraceEditorElementTypes.TraceLink_3005);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.TraceLink2CreationTool_title,
+				Messages.TraceLink2CreationTool_desc, types);
 		entry.setId("createTraceLink2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(TraceEditorElementTypes
+				.getImageDescriptor(TraceEditorElementTypes.TraceLink_3004));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
@@ -73,11 +80,16 @@ public class TraceEditorPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createTraceLinkSources3CreationTool() {
-		ToolEntry entry = new ToolEntry(
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types.add(TraceEditorElementTypes.TraceLinkSources_4001);
+		LinkToolEntry entry = new LinkToolEntry(
 				Messages.TraceLinkSources3CreationTool_title,
-				Messages.TraceLinkSources3CreationTool_desc, null, null) {
-		};
+				Messages.TraceLinkSources3CreationTool_desc, types);
 		entry.setId("createTraceLinkSources3CreationTool"); //$NON-NLS-1$
+		entry
+				.setSmallIcon(TraceEditorElementTypes
+						.getImageDescriptor(TraceEditorElementTypes.TraceLinkSources_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
@@ -85,11 +97,16 @@ public class TraceEditorPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createTraceLinkTargets4CreationTool() {
-		ToolEntry entry = new ToolEntry(
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types.add(TraceEditorElementTypes.TraceLinkTargets_4002);
+		LinkToolEntry entry = new LinkToolEntry(
 				Messages.TraceLinkTargets4CreationTool_title,
-				Messages.TraceLinkTargets4CreationTool_desc, null, null) {
-		};
+				Messages.TraceLinkTargets4CreationTool_desc, types);
 		entry.setId("createTraceLinkTargets4CreationTool"); //$NON-NLS-1$
+		entry
+				.setSmallIcon(TraceEditorElementTypes
+						.getImageDescriptor(TraceEditorElementTypes.TraceLinkTargets_4002));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
@@ -150,6 +167,35 @@ public class TraceEditorPaletteFactory {
 		 */
 		public Tool createTool() {
 			Tool tool = new UnspecifiedTypeCreationTool(elementTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private static class LinkToolEntry extends ToolEntry {
+
+		/**
+		 * @generated
+		 */
+		private final List relationshipTypes;
+
+		/**
+		 * @generated
+		 */
+		private LinkToolEntry(String title, String description,
+				List relationshipTypes) {
+			super(title, description, null, null);
+			this.relationshipTypes = relationshipTypes;
+		}
+
+		/**
+		 * @generated
+		 */
+		public Tool createTool() {
+			Tool tool = new UnspecifiedTypeConnectionTool(relationshipTypes);
 			tool.setProperties(getToolProperties());
 			return tool;
 		}

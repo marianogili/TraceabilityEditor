@@ -323,7 +323,57 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String TransformationTransformationCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
 	public static String CommandName_OpenDiagram;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TraceEditor_1000_links;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Artefact_3001_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TraceLink_3004_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Artefact_3003_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TraceLink_3005_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TraceLinkSources_4001_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TraceLinkSources_4001_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TraceLinkTargets_4002_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TraceLinkTargets_4002_source;
 
 	/**
 	 * @generated

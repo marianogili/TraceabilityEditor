@@ -315,10 +315,6 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 				return getChildBySemanticHint(TraceEditorVisualIDRegistry
 						.getType(DashboardDashboardCompartmentLeftEditPart.VISUAL_ID));
 			}
-			if (type == TraceEditorElementTypes.Transformation_3002) {
-				return getChildBySemanticHint(TraceEditorVisualIDRegistry
-						.getType(DashboardDashboardCompartmentCenterEditPart.VISUAL_ID));
-			}
 			if (type == TraceEditorElementTypes.Artefact_3003) {
 				return getChildBySemanticHint(TraceEditorVisualIDRegistry
 						.getType(DashboardDashboardCompartmentRightEditPart.VISUAL_ID));

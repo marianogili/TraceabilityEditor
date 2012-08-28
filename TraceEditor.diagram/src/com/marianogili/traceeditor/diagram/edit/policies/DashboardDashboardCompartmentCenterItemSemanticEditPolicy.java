@@ -3,6 +3,7 @@ package com.marianogili.traceeditor.diagram.edit.policies;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 
+import com.marianogili.traceeditor.diagram.edit.commands.TraceLink2CreateCommand;
 import com.marianogili.traceeditor.diagram.edit.commands.TransformationCreateCommand;
 import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
 
@@ -25,6 +26,9 @@ public class DashboardDashboardCompartmentCenterItemSemanticEditPolicy extends
 	protected Command getCreateCommand(CreateElementRequest req) {
 		if (TraceEditorElementTypes.Transformation_3002 == req.getElementType()) {
 			return getGEFWrapper(new TransformationCreateCommand(req));
+		}
+		if (TraceEditorElementTypes.TraceLink_3005 == req.getElementType()) {
+			return getGEFWrapper(new TraceLink2CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

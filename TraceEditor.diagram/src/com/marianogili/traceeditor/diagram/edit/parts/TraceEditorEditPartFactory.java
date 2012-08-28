@@ -47,11 +47,23 @@ public class TraceEditorEditPartFactory implements EditPartFactory {
 			case TransformationNameEditPart.VISUAL_ID:
 				return new TransformationNameEditPart(view);
 
+			case TraceLinkEditPart.VISUAL_ID:
+				return new TraceLinkEditPart(view);
+
+			case TraceLinkNameEditPart.VISUAL_ID:
+				return new TraceLinkNameEditPart(view);
+
 			case Artefact2EditPart.VISUAL_ID:
 				return new Artefact2EditPart(view);
 
 			case ArtefactName2EditPart.VISUAL_ID:
 				return new ArtefactName2EditPart(view);
+
+			case TraceLink2EditPart.VISUAL_ID:
+				return new TraceLink2EditPart(view);
+
+			case TraceLinkName2EditPart.VISUAL_ID:
+				return new TraceLinkName2EditPart(view);
 
 			case DashboardDashboardCompartmentLeftEditPart.VISUAL_ID:
 				return new DashboardDashboardCompartmentLeftEditPart(view);
@@ -61,6 +73,16 @@ public class TraceEditorEditPartFactory implements EditPartFactory {
 
 			case DashboardDashboardCompartmentRightEditPart.VISUAL_ID:
 				return new DashboardDashboardCompartmentRightEditPart(view);
+
+			case TransformationTransformationCompartmentEditPart.VISUAL_ID:
+				return new TransformationTransformationCompartmentEditPart(view);
+
+			case TraceLinkSourcesEditPart.VISUAL_ID:
+				return new TraceLinkSourcesEditPart(view);
+
+			case TraceLinkTargetsEditPart.VISUAL_ID:
+				return new TraceLinkTargetsEditPart(view);
+
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

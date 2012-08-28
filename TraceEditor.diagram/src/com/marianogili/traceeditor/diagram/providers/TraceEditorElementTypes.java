@@ -21,6 +21,10 @@ import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TraceLink2EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkSourcesEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkTargetsEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorPlugin;
 
@@ -69,7 +73,27 @@ public class TraceEditorElementTypes extends ElementInitializers {
 	/**
 	 * @generated
 	 */
+	public static final IElementType TraceLink_3004 = getElementType("TraceEditor.diagram.TraceLink_3004"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
 	public static final IElementType Artefact_3003 = getElementType("TraceEditor.diagram.Artefact_3003"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType TraceLink_3005 = getElementType("TraceEditor.diagram.TraceLink_3005"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType TraceLinkSources_4001 = getElementType("TraceEditor.diagram.TraceLinkSources_4001"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType TraceLinkTargets_4002 = getElementType("TraceEditor.diagram.TraceLinkTargets_4002"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -194,8 +218,20 @@ public class TraceEditorElementTypes extends ElementInitializers {
 			elements.put(Transformation_3002, TraceeditorPackage.eINSTANCE
 					.getTransformation());
 
+			elements.put(TraceLink_3004, TraceeditorPackage.eINSTANCE
+					.getTraceLink());
+
 			elements.put(Artefact_3003, TraceeditorPackage.eINSTANCE
 					.getArtefact());
+
+			elements.put(TraceLink_3005, TraceeditorPackage.eINSTANCE
+					.getTraceLink());
+
+			elements.put(TraceLinkSources_4001, TraceeditorPackage.eINSTANCE
+					.getTraceLink_Sources());
+
+			elements.put(TraceLinkTargets_4002, TraceeditorPackage.eINSTANCE
+					.getTraceLink_Targets());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -217,7 +253,11 @@ public class TraceEditorElementTypes extends ElementInitializers {
 			KNOWN_ELEMENT_TYPES.add(Dashboard_2001);
 			KNOWN_ELEMENT_TYPES.add(Artefact_3001);
 			KNOWN_ELEMENT_TYPES.add(Transformation_3002);
+			KNOWN_ELEMENT_TYPES.add(TraceLink_3004);
 			KNOWN_ELEMENT_TYPES.add(Artefact_3003);
+			KNOWN_ELEMENT_TYPES.add(TraceLink_3005);
+			KNOWN_ELEMENT_TYPES.add(TraceLinkSources_4001);
+			KNOWN_ELEMENT_TYPES.add(TraceLinkTargets_4002);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -235,8 +275,16 @@ public class TraceEditorElementTypes extends ElementInitializers {
 			return Artefact_3001;
 		case TransformationEditPart.VISUAL_ID:
 			return Transformation_3002;
+		case TraceLinkEditPart.VISUAL_ID:
+			return TraceLink_3004;
 		case Artefact2EditPart.VISUAL_ID:
 			return Artefact_3003;
+		case TraceLink2EditPart.VISUAL_ID:
+			return TraceLink_3005;
+		case TraceLinkSourcesEditPart.VISUAL_ID:
+			return TraceLinkSources_4001;
+		case TraceLinkTargetsEditPart.VISUAL_ID:
+			return TraceLinkTargets_4002;
 		}
 		return null;
 	}

@@ -1,5 +1,7 @@
 package com.marianogili.traceeditor.diagram.edit.parts;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
@@ -18,6 +20,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
@@ -25,6 +28,7 @@ import org.eclipse.swt.graphics.Color;
 
 import com.marianogili.traceeditor.diagram.edit.policies.Artefact2ItemSemanticEditPolicy;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
+import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
 
 /**
  * @generated
@@ -249,6 +253,37 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnTarget() {
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		types.add(TraceEditorElementTypes.TraceLinkSources_4001);
+		types.add(TraceEditorElementTypes.TraceLinkTargets_4002);
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForSource(
+			IElementType relationshipType) {
+		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		if (relationshipType == TraceEditorElementTypes.TraceLinkSources_4001) {
+			types.add(TraceEditorElementTypes.TraceLink_3004);
+		}
+		if (relationshipType == TraceEditorElementTypes.TraceLinkSources_4001) {
+			types.add(TraceEditorElementTypes.TraceLink_3005);
+		}
+		if (relationshipType == TraceEditorElementTypes.TraceLinkTargets_4002) {
+			types.add(TraceEditorElementTypes.TraceLink_3004);
+		}
+		if (relationshipType == TraceEditorElementTypes.TraceLinkTargets_4002) {
+			types.add(TraceEditorElementTypes.TraceLink_3005);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
 	public class ArtefactFigure extends RectangleFigure {
 
 		/**
@@ -292,6 +327,8 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 
 			fFigureArtefactFigureInt = new RectangleFigure();
 			fFigureArtefactFigureInt.setLineWidth(1);
+			fFigureArtefactFigureInt
+					.setBackgroundColor(FFIGUREARTEFACTFIGUREINT_BACK);
 			fFigureArtefactFigureInt.setPreferredSize(new Dimension(
 					getMapMode().DPtoLP(100), getMapMode().DPtoLP(75)));
 
@@ -352,5 +389,11 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Color FFIGUREARTEFACTFIGUREINT_BACK = new Color(null, 255,
+			255, 190);
 
 }

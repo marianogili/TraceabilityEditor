@@ -1,5 +1,7 @@
 package com.marianogili.traceeditor.diagram.edit.parts;
 
+import org.eclipse.draw2d.BorderLayout;
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.RectangleFigure;
@@ -7,15 +9,21 @@ import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
+import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.FlowLayoutEditPolicy;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
+import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.core.edithelpers.CreateElementRequestAdapter;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.CreationEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewAndElementRequest;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
@@ -23,6 +31,7 @@ import org.eclipse.swt.graphics.Color;
 
 import com.marianogili.traceeditor.diagram.edit.policies.TransformationItemSemanticEditPolicy;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
+import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
 
 /**
  * @generated
@@ -67,15 +76,18 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
+		LayoutEditPolicy lep = new LayoutEditPolicy() {
 
-		FlowLayoutEditPolicy lep = new FlowLayoutEditPolicy() {
-
-			protected Command createAddCommand(EditPart child, EditPart after) {
-				return null;
+			protected EditPolicy createChildEditPolicy(EditPart child) {
+				EditPolicy result = child
+						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
+				if (result == null) {
+					result = new NonResizableEditPolicy();
+				}
+				return result;
 			}
 
-			protected Command createMoveChildCommand(EditPart child,
-					EditPart after) {
+			protected Command getMoveChildrenCommand(Request request) {
 				return null;
 			}
 
@@ -111,6 +123,15 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 							.getFigureTransformationNameFigure());
 			return true;
 		}
+		if (childEditPart instanceof TransformationTransformationCompartmentEditPart) {
+			IFigure pane = getPrimaryShape()
+					.getFigureTransformacionCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane
+					.add(((TransformationTransformationCompartmentEditPart) childEditPart)
+							.getFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -119,6 +140,15 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof TransformationNameEditPart) {
+			return true;
+		}
+		if (childEditPart instanceof TransformationTransformationCompartmentEditPart) {
+			IFigure pane = getPrimaryShape()
+					.getFigureTransformacionCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane
+					.remove(((TransformationTransformationCompartmentEditPart) childEditPart)
+							.getFigure());
 			return true;
 		}
 		return false;
@@ -148,6 +178,9 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof TransformationTransformationCompartmentEditPart) {
+			return getPrimaryShape().getFigureTransformacionCompartmentFigure();
+		}
 		return getContentPane();
 	}
 
@@ -258,20 +291,18 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
+		private RectangleFigure fFigureTransformacionCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
 		public TransformationFigure() {
 
-			FlowLayout layoutThis = new FlowLayout();
-			layoutThis.setStretchMinorAxis(false);
-			layoutThis.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
-
-			layoutThis.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
-			layoutThis.setMajorSpacing(5);
-			layoutThis.setMinorSpacing(5);
-			layoutThis.setHorizontal(true);
-
+			BorderLayout layoutThis = new BorderLayout();
 			this.setLayoutManager(layoutThis);
 
 			this.setLineWidth(1);
+			this.setBackgroundColor(ColorConstants.yellow);
 			createContents();
 		}
 
@@ -283,7 +314,13 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 			fFigureTransformationNameFigure = new WrappingLabel();
 			fFigureTransformationNameFigure.setText("<...>");
 
-			this.add(fFigureTransformationNameFigure);
+			this.add(fFigureTransformationNameFigure, BorderLayout.TOP);
+
+			fFigureTransformacionCompartmentFigure = new RectangleFigure();
+			fFigureTransformacionCompartmentFigure.setLineWidth(1);
+
+			this.add(fFigureTransformacionCompartmentFigure,
+					BorderLayout.CENTER);
 
 		}
 
@@ -311,6 +348,13 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureTransformationNameFigure() {
 			return fFigureTransformationNameFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getFigureTransformacionCompartmentFigure() {
+			return fFigureTransformacionCompartmentFigure;
 		}
 
 	}

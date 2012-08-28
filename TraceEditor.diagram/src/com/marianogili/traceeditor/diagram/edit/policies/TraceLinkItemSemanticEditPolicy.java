@@ -26,14 +26,14 @@ import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
 /**
  * @generated
  */
-public class ArtefactItemSemanticEditPolicy extends
+public class TraceLinkItemSemanticEditPolicy extends
 		TraceEditorBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
 	 */
-	public ArtefactItemSemanticEditPolicy() {
-		super(TraceEditorElementTypes.Artefact_3001);
+	public TraceLinkItemSemanticEditPolicy() {
+		super(TraceEditorElementTypes.TraceLink_3004);
 	}
 
 	/**
@@ -44,22 +44,22 @@ public class ArtefactItemSemanticEditPolicy extends
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(
 				getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator it = view.getTargetEdges().iterator(); it.hasNext();) {
-			Edge incomingLink = (Edge) it.next();
-			if (TraceEditorVisualIDRegistry.getVisualID(incomingLink) == TraceLinkSourcesEditPart.VISUAL_ID) {
+		for (Iterator it = view.getSourceEdges().iterator(); it.hasNext();) {
+			Edge outgoingLink = (Edge) it.next();
+			if (TraceEditorVisualIDRegistry.getVisualID(outgoingLink) == TraceLinkSourcesEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
+						outgoingLink.getSource().getElement(), null,
+						outgoingLink.getTarget().getElement(), false);
 				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
-			if (TraceEditorVisualIDRegistry.getVisualID(incomingLink) == TraceLinkTargetsEditPart.VISUAL_ID) {
+			if (TraceEditorVisualIDRegistry.getVisualID(outgoingLink) == TraceLinkTargetsEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
+						outgoingLink.getSource().getElement(), null,
+						outgoingLink.getTarget().getElement(), false);
 				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
 		}
@@ -92,11 +92,13 @@ public class ArtefactItemSemanticEditPolicy extends
 			CreateRelationshipRequest req) {
 		if (TraceEditorElementTypes.TraceLinkSources_4001 == req
 				.getElementType()) {
-			return null;
+			return getGEFWrapper(new TraceLinkSourcesCreateCommand(req, req
+					.getSource(), req.getTarget()));
 		}
 		if (TraceEditorElementTypes.TraceLinkTargets_4002 == req
 				.getElementType()) {
-			return null;
+			return getGEFWrapper(new TraceLinkTargetsCreateCommand(req, req
+					.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -108,13 +110,11 @@ public class ArtefactItemSemanticEditPolicy extends
 			CreateRelationshipRequest req) {
 		if (TraceEditorElementTypes.TraceLinkSources_4001 == req
 				.getElementType()) {
-			return getGEFWrapper(new TraceLinkSourcesCreateCommand(req, req
-					.getSource(), req.getTarget()));
+			return null;
 		}
 		if (TraceEditorElementTypes.TraceLinkTargets_4002 == req
 				.getElementType()) {
-			return getGEFWrapper(new TraceLinkTargetsCreateCommand(req, req
-					.getSource(), req.getTarget()));
+			return null;
 		}
 		return null;
 	}

@@ -31,6 +31,8 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipReques
 import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
+import com.marianogili.traceeditor.Artefact;
+import com.marianogili.traceeditor.TraceLink;
 import com.marianogili.traceeditor.diagram.edit.helpers.TraceEditorBaseEditHelper;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
@@ -300,6 +302,50 @@ public class TraceEditorBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 	 * @generated
 	 */
 	public static class LinkConstraints {
+
+		/**
+		 * @generated
+		 */
+		public static boolean canCreateTraceLinkSources_4001(TraceLink source,
+				Artefact target) {
+			if (source != null) {
+				if (source.getSources().contains(target)) {
+					return false;
+				}
+			}
+
+			return canExistTraceLinkSources_4001(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public static boolean canCreateTraceLinkTargets_4002(TraceLink source,
+				Artefact target) {
+			if (source != null) {
+				if (source.getTargets().contains(target)) {
+					return false;
+				}
+			}
+
+			return canExistTraceLinkTargets_4002(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public static boolean canExistTraceLinkSources_4001(TraceLink source,
+				Artefact target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public static boolean canExistTraceLinkTargets_4002(TraceLink source,
+				Artefact target) {
+			return true;
+		}
 
 	}
 
