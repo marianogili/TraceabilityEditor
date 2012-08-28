@@ -243,7 +243,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Traceeditor1Group_title;
+	public static String TransformaciónyArtefactos1Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String TransformaciónyArtefactos1Group_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Trazas2Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Trazas2Group_desc;
 
 	/**
 	 * @generated
@@ -258,52 +273,42 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Traza2CreationTool_title;
+	public static String Artefacto2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Traza2CreationTool_desc;
+	public static String Artefacto2CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Origendelatraza3CreationTool_title;
+	public static String Traza1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Origendelatraza3CreationTool_desc;
+	public static String Traza1CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Destinodelatraza4CreationTool_title;
+	public static String Origendelatraza2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Destinodelatraza4CreationTool_desc;
+	public static String Origendelatraza2CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Artefacto5CreationTool_title;
+	public static String Destinodelatraza3CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Artefacto5CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String Dashboard6CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String Dashboard6CreationTool_desc;
+	public static String Destinodelatraza3CreationTool_desc;
 
 	/**
 	 * @generated

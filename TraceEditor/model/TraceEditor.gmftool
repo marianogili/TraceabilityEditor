@@ -7,7 +7,9 @@
       title="traceeditorPalette">
     <tools
         xsi:type="gmftool:ToolGroup"
-        title="traceeditor">
+        title="Transformación y Artefactos"
+        description="Transformación y Artefactos"
+        collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
           title="Transformación"
@@ -17,6 +19,21 @@
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Artefacto"
+          description="Crear un artefacto">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Trazas"
+        description="Trazas"
+        collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
           title="Traza"
@@ -51,24 +68,6 @@
             xsi:type="gmftool:BundleImage"
             path="icons/full/obj16/EdgeTarget.gif"
             bundle="TraceEditor.edit"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Artefacto"
-          description="Crear un artefacto">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Dashboard"
-          description="Create new Dashboard">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
       </tools>
     </tools>
   </palette>

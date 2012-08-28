@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.eclipse.gef.Tool;
 import org.eclipse.gef.palette.PaletteContainer;
+import org.eclipse.gef.palette.PaletteDrawer;
 import org.eclipse.gef.palette.PaletteGroup;
 import org.eclipse.gef.palette.PaletteRoot;
 import org.eclipse.gef.palette.ToolEntry;
@@ -22,23 +23,37 @@ public class TraceEditorPaletteFactory {
 	 * @generated
 	 */
 	public void fillPalette(PaletteRoot paletteRoot) {
-		paletteRoot.add(createTraceeditor1Group());
+		paletteRoot.add(createTransformaciónyArtefactos1Group());
+		paletteRoot.add(createTrazas2Group());
 	}
 
 	/**
-	 * Creates "traceeditor" palette tool group
+	 * Creates "Transformación y Artefactos" palette tool group
 	 * @generated
 	 */
-	private PaletteContainer createTraceeditor1Group() {
-		PaletteGroup paletteContainer = new PaletteGroup(
-				Messages.Traceeditor1Group_title);
-		paletteContainer.setId("createTraceeditor1Group"); //$NON-NLS-1$
+	private PaletteContainer createTransformaciónyArtefactos1Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(
+				Messages.TransformaciónyArtefactos1Group_title);
+		paletteContainer.setId("createTransformaciónyArtefactos1Group"); //$NON-NLS-1$
+		paletteContainer
+				.setDescription(Messages.TransformaciónyArtefactos1Group_desc);
 		paletteContainer.add(createTransformación1CreationTool());
-		paletteContainer.add(createTraza2CreationTool());
-		paletteContainer.add(createOrigendelatraza3CreationTool());
-		paletteContainer.add(createDestinodelatraza4CreationTool());
-		paletteContainer.add(createArtefacto5CreationTool());
-		paletteContainer.add(createDashboard6CreationTool());
+		paletteContainer.add(createArtefacto2CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+	 * Creates "Trazas" palette tool group
+	 * @generated
+	 */
+	private PaletteContainer createTrazas2Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(
+				Messages.Trazas2Group_title);
+		paletteContainer.setId("createTrazas2Group"); //$NON-NLS-1$
+		paletteContainer.setDescription(Messages.Trazas2Group_desc);
+		paletteContainer.add(createTraza1CreationTool());
+		paletteContainer.add(createOrigendelatraza2CreationTool());
+		paletteContainer.add(createDestinodelatraza3CreationTool());
 		return paletteContainer;
 	}
 
@@ -62,69 +77,14 @@ public class TraceEditorPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createTraza2CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(2);
-		types.add(TraceEditorElementTypes.TraceLink_3004);
-		types.add(TraceEditorElementTypes.TraceLink_3005);
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Traza2CreationTool_title,
-				Messages.Traza2CreationTool_desc, types);
-		entry.setId("createTraza2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(TraceEditorElementTypes
-				.getImageDescriptor(TraceEditorElementTypes.TraceLink_3004));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createOrigendelatraza3CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(TraceEditorElementTypes.TraceLinkSources_4001);
-		LinkToolEntry entry = new LinkToolEntry(
-				Messages.Origendelatraza3CreationTool_title,
-				Messages.Origendelatraza3CreationTool_desc, types);
-		entry.setId("createOrigendelatraza3CreationTool"); //$NON-NLS-1$
-		entry
-				.setSmallIcon(TraceEditorDiagramEditorPlugin
-						.findImageDescriptor("/TraceEditor.edit/icons/full/obj16/EdgeSource.gif")); //$NON-NLS-1$
-		entry
-				.setLargeIcon(TraceEditorDiagramEditorPlugin
-						.findImageDescriptor("/TraceEditor.edit/icons/full/obj16/EdgeSource.gif")); //$NON-NLS-1$
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createDestinodelatraza4CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(TraceEditorElementTypes.TraceLinkTargets_4002);
-		LinkToolEntry entry = new LinkToolEntry(
-				Messages.Destinodelatraza4CreationTool_title,
-				Messages.Destinodelatraza4CreationTool_desc, types);
-		entry.setId("createDestinodelatraza4CreationTool"); //$NON-NLS-1$
-		entry
-				.setSmallIcon(TraceEditorDiagramEditorPlugin
-						.findImageDescriptor("/TraceEditor.edit/icons/full/obj16/EdgeTarget.gif")); //$NON-NLS-1$
-		entry
-				.setLargeIcon(TraceEditorDiagramEditorPlugin
-						.findImageDescriptor("/TraceEditor.edit/icons/full/obj16/EdgeTarget.gif")); //$NON-NLS-1$
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createArtefacto5CreationTool() {
+	private ToolEntry createArtefacto2CreationTool() {
 		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(2);
 		types.add(TraceEditorElementTypes.Artefact_3001);
 		types.add(TraceEditorElementTypes.Artefact_3003);
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Artefacto5CreationTool_title,
-				Messages.Artefacto5CreationTool_desc, types);
-		entry.setId("createArtefacto5CreationTool"); //$NON-NLS-1$
+				Messages.Artefacto2CreationTool_title,
+				Messages.Artefacto2CreationTool_desc, types);
+		entry.setId("createArtefacto2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(TraceEditorElementTypes
 				.getImageDescriptor(TraceEditorElementTypes.Artefact_3001));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -134,16 +94,55 @@ public class TraceEditorPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createDashboard6CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(TraceEditorElementTypes.Dashboard_2001);
+	private ToolEntry createTraza1CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(2);
+		types.add(TraceEditorElementTypes.TraceLink_3004);
+		types.add(TraceEditorElementTypes.TraceLink_3005);
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Dashboard6CreationTool_title,
-				Messages.Dashboard6CreationTool_desc, types);
-		entry.setId("createDashboard6CreationTool"); //$NON-NLS-1$
+				Messages.Traza1CreationTool_title,
+				Messages.Traza1CreationTool_desc, types);
+		entry.setId("createTraza1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(TraceEditorElementTypes
-				.getImageDescriptor(TraceEditorElementTypes.Dashboard_2001));
+				.getImageDescriptor(TraceEditorElementTypes.TraceLink_3004));
 		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createOrigendelatraza2CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types.add(TraceEditorElementTypes.TraceLinkSources_4001);
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.Origendelatraza2CreationTool_title,
+				Messages.Origendelatraza2CreationTool_desc, types);
+		entry.setId("createOrigendelatraza2CreationTool"); //$NON-NLS-1$
+		entry
+				.setSmallIcon(TraceEditorDiagramEditorPlugin
+						.findImageDescriptor("/TraceEditor.edit/icons/full/obj16/EdgeSource.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(TraceEditorDiagramEditorPlugin
+						.findImageDescriptor("/TraceEditor.edit/icons/full/obj16/EdgeSource.gif")); //$NON-NLS-1$
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDestinodelatraza3CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types.add(TraceEditorElementTypes.TraceLinkTargets_4002);
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.Destinodelatraza3CreationTool_title,
+				Messages.Destinodelatraza3CreationTool_desc, types);
+		entry.setId("createDestinodelatraza3CreationTool"); //$NON-NLS-1$
+		entry
+				.setSmallIcon(TraceEditorDiagramEditorPlugin
+						.findImageDescriptor("/TraceEditor.edit/icons/full/obj16/EdgeTarget.gif")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(TraceEditorDiagramEditorPlugin
+						.findImageDescriptor("/TraceEditor.edit/icons/full/obj16/EdgeTarget.gif")); //$NON-NLS-1$
 		return entry;
 	}
 

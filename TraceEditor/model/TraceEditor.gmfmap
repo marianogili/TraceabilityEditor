@@ -11,9 +11,6 @@
     <ownedChild>
       <domainMetaElement
           href="TraceEditor.ecore#//Dashboard"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="TraceEditor.gmftool#//@palette/@tools.0/@tools.5"/>
       <diagramNode
           href="TraceEditor.gmfgraph#Dashboard"/>
       <children
@@ -35,7 +32,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.4"/>
+              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.1"/>
           <diagramNode
               href="TraceEditor.gmfgraph#Artefact"/>
         </ownedChild>
@@ -81,7 +78,7 @@
               </labelMappings>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="TraceEditor.gmftool#//@palette/@tools.0/@tools.1"/>
+                  href="TraceEditor.gmftool#//@palette/@tools.1/@tools.0"/>
               <diagramNode
                   href="TraceEditor.gmfgraph#TraceLink"/>
             </ownedChild>
@@ -112,7 +109,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.4"/>
+              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.1"/>
           <diagramNode
               href="TraceEditor.gmfgraph#Artefact"/>
         </ownedChild>
@@ -143,7 +140,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="TraceEditor.gmftool#//@palette/@tools.0/@tools.2"/>
+        href="TraceEditor.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
         href="TraceEditor.gmfgraph#TraceLinkSources"/>
     <linkMetaFeature
@@ -153,7 +150,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="TraceEditor.gmftool#//@palette/@tools.0/@tools.3"/>
+        href="TraceEditor.gmftool#//@palette/@tools.1/@tools.2"/>
     <diagramLink
         href="TraceEditor.gmfgraph#TraceLinkTargets"/>
     <linkMetaFeature

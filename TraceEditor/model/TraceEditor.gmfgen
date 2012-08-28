@@ -444,12 +444,24 @@
     </compartments>
     <palette>
       <groups
-          title="traceeditor">
+          title="Transformación y Artefactos"
+          description="Transformación y Artefactos"
+          collapse="true">
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Transformación"
             description="Crear una transformación"
             genNodes="//@diagram/@childNodes.1"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Artefacto"
+            description="Crear un artefacto"
+            genNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.3"/>
+      </groups>
+      <groups
+          title="Trazas"
+          description="Trazas"
+          collapse="true">
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Traza"
@@ -469,16 +481,6 @@
             largeIconPath="/TraceEditor.edit/icons/full/obj16/EdgeTarget.gif"
             smallIconPath="/TraceEditor.edit/icons/full/obj16/EdgeTarget.gif"
             genLinks="//@diagram/@links.1"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Artefacto"
-            description="Crear un artefacto"
-            genNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.3"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Dashboard"
-            description="Create new Dashboard"
-            genNodes="//@diagram/@topLevelNodes.0"/>
       </groups>
     </palette>
     <preferencePages
