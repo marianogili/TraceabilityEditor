@@ -2,6 +2,8 @@ package com.marianogili.traceeditor.diagram.edit.policies;
 
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
+import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyRequest;
+import org.eclipse.gmf.runtime.emf.type.core.requests.IEditCommandRequest;
 
 import com.marianogili.traceeditor.diagram.edit.commands.TraceLink2CreateCommand;
 import com.marianogili.traceeditor.diagram.edit.commands.TransformationCreateCommand;
@@ -31,6 +33,16 @@ public class DashboardDashboardCompartmentCenterItemSemanticEditPolicy extends
 			return getGEFWrapper(new TraceLink2CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
+	}
+
+	/**
+	 * @generated NOT
+	 */
+	protected Command getSemanticCommand(IEditCommandRequest request) {
+		if (request instanceof DestroyRequest) {
+			return null;
+		}
+		return super.getSemanticCommand(request);
 	}
 
 }

@@ -160,13 +160,6 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 		return getContentPane();
 	}
 
-	//	/**
-	//	 * @generated
-	//	 */
-	//	protected NodeFigure createNodePlate() {
-	//		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
-	//		return result;
-	//	}
 	/**
 	 * @generated NOT
 	 */

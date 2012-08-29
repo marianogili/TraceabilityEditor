@@ -49,6 +49,7 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
 
+import com.marianogili.traceeditor.Dashboard;
 import com.marianogili.traceeditor.TraceEditor;
 import com.marianogili.traceeditor.TraceeditorFactory;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
@@ -220,10 +221,13 @@ public class TraceEditorDiagramEditorUtil {
 	 * Create a new instance of domain element associated with canvas.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	private static TraceEditor createInitialModel() {
-		return TraceeditorFactory.eINSTANCE.createTraceEditor();
+		TraceEditor traceEditor = TraceeditorFactory.eINSTANCE.createTraceEditor();
+		Dashboard dashboard = TraceeditorFactory.eINSTANCE.createDashboard();
+		traceEditor.setDashboard(dashboard);
+		return traceEditor;
 	}
 
 	/**
