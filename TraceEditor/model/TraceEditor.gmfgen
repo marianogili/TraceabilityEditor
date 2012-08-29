@@ -454,9 +454,14 @@
             genNodes="//@diagram/@childNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="Artefacto"
-            description="Crear un artefacto"
-            genNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.3"/>
+            title="Artefacto Origen"
+            description="Crear un artefacto origen"
+            genNodes="//@diagram/@childNodes.0"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Artefacto Destino"
+            description="Crear un artefacto destino"
+            genNodes="//@diagram/@childNodes.3"/>
       </groups>
       <groups
           title="Trazas"

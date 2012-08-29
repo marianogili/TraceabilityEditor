@@ -202,7 +202,10 @@
       name="TraceLink"
       figure="TraceLinkFigure"/>
   <nodes
-      name="Artefact"
+      name="SourceArtefact"
+      figure="ArtefactFigure"/>
+  <nodes
+      name="TargetArtefact"
       figure="ArtefactFigure"/>
   <nodes
       name="Dashboard"

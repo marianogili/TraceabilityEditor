@@ -38,7 +38,8 @@ public class TraceEditorPaletteFactory {
 		paletteContainer
 				.setDescription(Messages.TransformaciónyArtefactos1Group_desc);
 		paletteContainer.add(createTransformación1CreationTool());
-		paletteContainer.add(createArtefacto2CreationTool());
+		paletteContainer.add(createArtefactoOrigen2CreationTool());
+		paletteContainer.add(createArtefactoDestino3CreationTool());
 		return paletteContainer;
 	}
 
@@ -77,16 +78,31 @@ public class TraceEditorPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createArtefacto2CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(2);
+	private ToolEntry createArtefactoOrigen2CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
 		types.add(TraceEditorElementTypes.Artefact_3001);
-		types.add(TraceEditorElementTypes.Artefact_3003);
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Artefacto2CreationTool_title,
-				Messages.Artefacto2CreationTool_desc, types);
-		entry.setId("createArtefacto2CreationTool"); //$NON-NLS-1$
+				Messages.ArtefactoOrigen2CreationTool_title,
+				Messages.ArtefactoOrigen2CreationTool_desc, types);
+		entry.setId("createArtefactoOrigen2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(TraceEditorElementTypes
 				.getImageDescriptor(TraceEditorElementTypes.Artefact_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createArtefactoDestino3CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types.add(TraceEditorElementTypes.Artefact_3003);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.ArtefactoDestino3CreationTool_title,
+				Messages.ArtefactoDestino3CreationTool_desc, types);
+		entry.setId("createArtefactoDestino3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(TraceEditorElementTypes
+				.getImageDescriptor(TraceEditorElementTypes.Artefact_3003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
