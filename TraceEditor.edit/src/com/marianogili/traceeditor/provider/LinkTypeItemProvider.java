@@ -61,26 +61,26 @@ public class LinkTypeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addParentPropertyDescriptor(object);
+			addSubTypesPropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Parent feature.
+	 * This adds a property descriptor for the Sub Types feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addParentPropertyDescriptor(Object object) {
+	protected void addSubTypesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_LinkType_parent_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_LinkType_parent_feature", "_UI_LinkType_type"),
-				 TraceeditorPackage.Literals.LINK_TYPE__PARENT,
+				 getString("_UI_LinkType_subTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LinkType_subTypes_feature", "_UI_LinkType_type"),
+				 TraceeditorPackage.Literals.LINK_TYPE__SUB_TYPES,
 				 true,
 				 false,
 				 true,

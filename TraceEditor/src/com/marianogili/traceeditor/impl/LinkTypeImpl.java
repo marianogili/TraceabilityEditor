@@ -9,12 +9,15 @@ package com.marianogili.traceeditor.impl;
 import com.marianogili.traceeditor.LinkType;
 import com.marianogili.traceeditor.TraceeditorPackage;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.marianogili.traceeditor.impl.LinkTypeImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link com.marianogili.traceeditor.impl.LinkTypeImpl#getSubTypes <em>Sub Types</em>}</li>
  *   <li>{@link com.marianogili.traceeditor.impl.LinkTypeImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
@@ -32,14 +35,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class LinkTypeImpl extends NamedElementImpl implements LinkType {
 	/**
-	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
+	 * The cached value of the '{@link #getSubTypes() <em>Sub Types</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParent()
+	 * @see #getSubTypes()
 	 * @generated
 	 * @ordered
 	 */
-	protected LinkType parent;
+	protected EList<LinkType> subTypes;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -85,37 +88,11 @@ public class LinkTypeImpl extends NamedElementImpl implements LinkType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LinkType getParent() {
-		if (parent != null && parent.eIsProxy()) {
-			InternalEObject oldParent = (InternalEObject)parent;
-			parent = (LinkType)eResolveProxy(oldParent);
-			if (parent != oldParent) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TraceeditorPackage.LINK_TYPE__PARENT, oldParent, parent));
-			}
+	public EList<LinkType> getSubTypes() {
+		if (subTypes == null) {
+			subTypes = new EObjectResolvingEList<LinkType>(LinkType.class, this, TraceeditorPackage.LINK_TYPE__SUB_TYPES);
 		}
-		return parent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LinkType basicGetParent() {
-		return parent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParent(LinkType newParent) {
-		LinkType oldParent = parent;
-		parent = newParent;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TraceeditorPackage.LINK_TYPE__PARENT, oldParent, parent));
+		return subTypes;
 	}
 
 	/**
@@ -147,9 +124,8 @@ public class LinkTypeImpl extends NamedElementImpl implements LinkType {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TraceeditorPackage.LINK_TYPE__PARENT:
-				if (resolve) return getParent();
-				return basicGetParent();
+			case TraceeditorPackage.LINK_TYPE__SUB_TYPES:
+				return getSubTypes();
 			case TraceeditorPackage.LINK_TYPE__DESCRIPTION:
 				return getDescription();
 		}
@@ -161,11 +137,13 @@ public class LinkTypeImpl extends NamedElementImpl implements LinkType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TraceeditorPackage.LINK_TYPE__PARENT:
-				setParent((LinkType)newValue);
+			case TraceeditorPackage.LINK_TYPE__SUB_TYPES:
+				getSubTypes().clear();
+				getSubTypes().addAll((Collection<? extends LinkType>)newValue);
 				return;
 			case TraceeditorPackage.LINK_TYPE__DESCRIPTION:
 				setDescription((String)newValue);
@@ -182,8 +160,8 @@ public class LinkTypeImpl extends NamedElementImpl implements LinkType {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TraceeditorPackage.LINK_TYPE__PARENT:
-				setParent((LinkType)null);
+			case TraceeditorPackage.LINK_TYPE__SUB_TYPES:
+				getSubTypes().clear();
 				return;
 			case TraceeditorPackage.LINK_TYPE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
@@ -200,8 +178,8 @@ public class LinkTypeImpl extends NamedElementImpl implements LinkType {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TraceeditorPackage.LINK_TYPE__PARENT:
-				return parent != null;
+			case TraceeditorPackage.LINK_TYPE__SUB_TYPES:
+				return subTypes != null && !subTypes.isEmpty();
 			case TraceeditorPackage.LINK_TYPE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}

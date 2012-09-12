@@ -41,7 +41,7 @@ public interface Dashboard extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source Artefacts</em>' containment reference list.
 	 * @see com.marianogili.traceeditor.TraceeditorPackage#getDashboard_SourceArtefacts()
-	 * @model containment="true"
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<Artefact> getSourceArtefacts();
@@ -57,7 +57,7 @@ public interface Dashboard extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Artefacts</em>' containment reference list.
 	 * @see com.marianogili.traceeditor.TraceeditorPackage#getDashboard_TargetArtefacts()
-	 * @model containment="true"
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<Artefact> getTargetArtefacts();
@@ -73,7 +73,7 @@ public interface Dashboard extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Trace Links</em>' containment reference list.
 	 * @see com.marianogili.traceeditor.TraceeditorPackage#getDashboard_TraceLinks()
-	 * @model containment="true"
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<TraceLink> getTraceLinks();
@@ -89,7 +89,7 @@ public interface Dashboard extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transformations</em>' containment reference list.
 	 * @see com.marianogili.traceeditor.TraceeditorPackage#getDashboard_Transformations()
-	 * @model containment="true"
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<Transformation> getTransformations();

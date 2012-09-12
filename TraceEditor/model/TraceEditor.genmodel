@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/TraceEditor/src"
     modelPluginID="TraceEditor" modelName="TraceEditor" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="6.0" copyrightFields="false" language="">
+    containmentProxies="true" complianceLevel="6.0" copyrightFields="false" language="">
   <foreignModel>TraceEditor.ecore</foreignModel>
   <genPackages prefix="Traceeditor" basePackage="com.marianogili" disposableProviderFactory="true"
       ecorePackage="TraceEditor.ecore#/">
@@ -30,10 +30,11 @@
     </genClasses>
     <genClasses ecoreClass="TraceEditor.ecore#//TraceEditor">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TraceEditor.ecore#//TraceEditor/dashboard"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TraceEditor.ecore#//TraceEditor/linkTypes"/>
     </genClasses>
     <genClasses ecoreClass="TraceEditor.ecore#//TypeArtefact"/>
     <genClasses ecoreClass="TraceEditor.ecore#//LinkType">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TraceEditor.ecore#//LinkType/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TraceEditor.ecore#//LinkType/subTypes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TraceEditor.ecore#//LinkType/description"/>
     </genClasses>
   </genPackages>

@@ -306,7 +306,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="__nxVYeFQEeGu4MxI0QLuJg" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="__nxVYuFQEeGu4MxI0QLuJg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="TraceEditor.ecore#//LinkType/parent"/>
+    <element xmi:type="ecore:EReference" href="TraceEditor.ecore#//LinkType/subTypes"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__nxVY-FQEeGu4MxI0QLuJg" points="[31, 0, 71, 24]$[81, 0, 121, 24]$[81, -62, 121, -38]$[-37, -62, 3, -38]$[-37, -34, 3, -10]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__n208OFQEeGu4MxI0QLuJg" id="(0.7962962962962963,0.7380952380952381)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__n208eFQEeGu4MxI0QLuJg" id="(0.5277777777777778,0.21428571428571427)"/>
@@ -337,5 +337,17 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8C9t4-ZeEeGw7oOMkNrx_g" points="[-1, 1, 162, -11]$[-73, 22, 90, 10]$[-154, 12, 9, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_I_cycOZfEeGw7oOMkNrx_g" id="(0.0196078431372549,0.21428571428571427)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_I_cyceZfEeGw7oOMkNrx_g" id="(0.9210526315789473,0.5)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_aG8v0PxhEeGp4MYi-bzWrQ" type="3002" source="_50QwkOFOEeGu4MxI0QLuJg" target="_0E2EwOFQEeGu4MxI0QLuJg">
+    <children xmi:type="notation:Node" xmi:id="_aG998PxhEeGp4MYi-bzWrQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_aG998fxhEeGp4MYi-bzWrQ" x="-100" y="-15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_aG-lAPxhEeGp4MYi-bzWrQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_aG-lAfxhEeGp4MYi-bzWrQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_aG9W4PxhEeGp4MYi-bzWrQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_aG9W4fxhEeGp4MYi-bzWrQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="TraceEditor.ecore#//TraceEditor/linkTypes"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aG9W4vxhEeGp4MYi-bzWrQ" points="[50, 0, -118, 417]$[562, 0, 394, 417]$[568, -417, 400, 0]$[243, -417, 75, 0]"/>
   </edges>
 </notation:Diagram>

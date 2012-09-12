@@ -38,7 +38,7 @@ public interface Transformation extends NamedElement {
 	 * @return the value of the '<em>Trace Links</em>' containment reference list.
 	 * @see com.marianogili.traceeditor.TraceeditorPackage#getTransformation_TraceLinks()
 	 * @see com.marianogili.traceeditor.TraceLink#getTransformation
-	 * @model opposite="transformation" containment="true"
+	 * @model opposite="transformation" containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	EList<TraceLink> getTraceLinks();

@@ -72,7 +72,7 @@ public class TransformationImpl extends NamedElementImpl implements Transformati
 	 */
 	public EList<TraceLink> getTraceLinks() {
 		if (traceLinks == null) {
-			traceLinks = new EObjectContainmentWithInverseEList<TraceLink>(TraceLink.class, this, TraceeditorPackage.TRANSFORMATION__TRACE_LINKS, TraceeditorPackage.TRACE_LINK__TRANSFORMATION);
+			traceLinks = new EObjectContainmentWithInverseEList.Resolving<TraceLink>(TraceLink.class, this, TraceeditorPackage.TRANSFORMATION__TRACE_LINKS, TraceeditorPackage.TRACE_LINK__TRANSFORMATION);
 		}
 		return traceLinks;
 	}

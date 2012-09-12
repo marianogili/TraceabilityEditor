@@ -35,10 +35,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="TraceEditor">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dashboard" eType="#//Dashboard"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkTypes" upperBound="-1"
+        eType="#//LinkType" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TypeArtefact" eSuperTypes="#//NamedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="LinkType" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//LinkType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subTypes" upperBound="-1"
+        eType="#//LinkType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

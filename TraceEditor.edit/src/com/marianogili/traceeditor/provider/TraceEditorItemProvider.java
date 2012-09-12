@@ -82,6 +82,7 @@ public class TraceEditorItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(TraceeditorPackage.Literals.TRACE_EDITOR__DASHBOARD);
+			childrenFeatures.add(TraceeditorPackage.Literals.TRACE_EDITOR__LINK_TYPES);
 		}
 		return childrenFeatures;
 	}
@@ -134,6 +135,7 @@ public class TraceEditorItemProvider
 
 		switch (notification.getFeatureID(TraceEditor.class)) {
 			case TraceeditorPackage.TRACE_EDITOR__DASHBOARD:
+			case TraceeditorPackage.TRACE_EDITOR__LINK_TYPES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -155,6 +157,11 @@ public class TraceEditorItemProvider
 			(createChildParameter
 				(TraceeditorPackage.Literals.TRACE_EDITOR__DASHBOARD,
 				 TraceeditorFactory.eINSTANCE.createDashboard()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TraceeditorPackage.Literals.TRACE_EDITOR__LINK_TYPES,
+				 TraceeditorFactory.eINSTANCE.createLinkType()));
 	}
 
 	/**

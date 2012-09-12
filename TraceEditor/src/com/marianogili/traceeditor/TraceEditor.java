@@ -6,6 +6,7 @@
  */
 package com.marianogili.traceeditor;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link com.marianogili.traceeditor.TraceEditor#getDashboard <em>Dashboard</em>}</li>
+ *   <li>{@link com.marianogili.traceeditor.TraceEditor#getLinkTypes <em>Link Types</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,7 +38,7 @@ public interface TraceEditor extends EObject {
 	 * @return the value of the '<em>Dashboard</em>' containment reference.
 	 * @see #setDashboard(Dashboard)
 	 * @see com.marianogili.traceeditor.TraceeditorPackage#getTraceEditor_Dashboard()
-	 * @model containment="true"
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	Dashboard getDashboard();
@@ -50,5 +52,21 @@ public interface TraceEditor extends EObject {
 	 * @generated
 	 */
 	void setDashboard(Dashboard value);
+
+	/**
+	 * Returns the value of the '<em><b>Link Types</b></em>' containment reference list.
+	 * The list contents are of type {@link com.marianogili.traceeditor.LinkType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Link Types</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Link Types</em>' containment reference list.
+	 * @see com.marianogili.traceeditor.TraceeditorPackage#getTraceEditor_LinkTypes()
+	 * @model containment="true" resolveProxies="true"
+	 * @generated
+	 */
+	EList<LinkType> getLinkTypes();
 
 } // TraceEditor

@@ -300,13 +300,22 @@ public interface TraceeditorPackage extends EPackage {
 	int TRACE_EDITOR__DASHBOARD = 0;
 
 	/**
+	 * The feature id for the '<em><b>Link Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_EDITOR__LINK_TYPES = 1;
+
+	/**
 	 * The number of structural features of the '<em>Trace Editor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACE_EDITOR_FEATURE_COUNT = 1;
+	int TRACE_EDITOR_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link com.marianogili.traceeditor.impl.TypeArtefactImpl <em>Type Artefact</em>}' class.
@@ -356,13 +365,13 @@ public interface TraceeditorPackage extends EPackage {
 	int LINK_TYPE__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * The feature id for the '<em><b>Sub Types</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_TYPE__PARENT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int LINK_TYPE__SUB_TYPES = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -576,6 +585,17 @@ public interface TraceeditorPackage extends EPackage {
 	EReference getTraceEditor_Dashboard();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.marianogili.traceeditor.TraceEditor#getLinkTypes <em>Link Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Link Types</em>'.
+	 * @see com.marianogili.traceeditor.TraceEditor#getLinkTypes()
+	 * @see #getTraceEditor()
+	 * @generated
+	 */
+	EReference getTraceEditor_LinkTypes();
+
+	/**
 	 * Returns the meta object for class '{@link com.marianogili.traceeditor.TypeArtefact <em>Type Artefact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -596,15 +616,15 @@ public interface TraceeditorPackage extends EPackage {
 	EClass getLinkType();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.marianogili.traceeditor.LinkType#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the reference list '{@link com.marianogili.traceeditor.LinkType#getSubTypes <em>Sub Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent</em>'.
-	 * @see com.marianogili.traceeditor.LinkType#getParent()
+	 * @return the meta object for the reference list '<em>Sub Types</em>'.
+	 * @see com.marianogili.traceeditor.LinkType#getSubTypes()
 	 * @see #getLinkType()
 	 * @generated
 	 */
-	EReference getLinkType_Parent();
+	EReference getLinkType_SubTypes();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.marianogili.traceeditor.LinkType#getDescription <em>Description</em>}'.
@@ -796,6 +816,14 @@ public interface TraceeditorPackage extends EPackage {
 		EReference TRACE_EDITOR__DASHBOARD = eINSTANCE.getTraceEditor_Dashboard();
 
 		/**
+		 * The meta object literal for the '<em><b>Link Types</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE_EDITOR__LINK_TYPES = eINSTANCE.getTraceEditor_LinkTypes();
+
+		/**
 		 * The meta object literal for the '{@link com.marianogili.traceeditor.impl.TypeArtefactImpl <em>Type Artefact</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -816,12 +844,12 @@ public interface TraceeditorPackage extends EPackage {
 		EClass LINK_TYPE = eINSTANCE.getLinkType();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Sub Types</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LINK_TYPE__PARENT = eINSTANCE.getLinkType_Parent();
+		EReference LINK_TYPE__SUB_TYPES = eINSTANCE.getLinkType_SubTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
