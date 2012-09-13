@@ -300,13 +300,13 @@ public interface TraceeditorPackage extends EPackage {
 	int TRACE_EDITOR__DASHBOARD = 0;
 
 	/**
-	 * The feature id for the '<em><b>Link Types</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Configuration</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACE_EDITOR__LINK_TYPES = 1;
+	int TRACE_EDITOR__CONFIGURATION = 1;
 
 	/**
 	 * The number of structural features of the '<em>Trace Editor</em>' class.
@@ -390,6 +390,44 @@ public interface TraceeditorPackage extends EPackage {
 	 * @ordered
 	 */
 	int LINK_TYPE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+
+	/**
+	 * The meta object id for the '{@link com.marianogili.traceeditor.impl.ConfigurationImpl <em>Configuration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.marianogili.traceeditor.impl.ConfigurationImpl
+	 * @see com.marianogili.traceeditor.impl.TraceeditorPackageImpl#getConfiguration()
+	 * @generated
+	 */
+	int CONFIGURATION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Link Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION__LINK_TYPES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type Artefacts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION__TYPE_ARTEFACTS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_FEATURE_COUNT = 2;
 
 
 	/**
@@ -585,15 +623,15 @@ public interface TraceeditorPackage extends EPackage {
 	EReference getTraceEditor_Dashboard();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.marianogili.traceeditor.TraceEditor#getLinkTypes <em>Link Types</em>}'.
+	 * Returns the meta object for the containment reference '{@link com.marianogili.traceeditor.TraceEditor#getConfiguration <em>Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Link Types</em>'.
-	 * @see com.marianogili.traceeditor.TraceEditor#getLinkTypes()
+	 * @return the meta object for the containment reference '<em>Configuration</em>'.
+	 * @see com.marianogili.traceeditor.TraceEditor#getConfiguration()
 	 * @see #getTraceEditor()
 	 * @generated
 	 */
-	EReference getTraceEditor_LinkTypes();
+	EReference getTraceEditor_Configuration();
 
 	/**
 	 * Returns the meta object for class '{@link com.marianogili.traceeditor.TypeArtefact <em>Type Artefact</em>}'.
@@ -636,6 +674,38 @@ public interface TraceeditorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLinkType_Description();
+
+	/**
+	 * Returns the meta object for class '{@link com.marianogili.traceeditor.Configuration <em>Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Configuration</em>'.
+	 * @see com.marianogili.traceeditor.Configuration
+	 * @generated
+	 */
+	EClass getConfiguration();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.marianogili.traceeditor.Configuration#getLinkTypes <em>Link Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Link Types</em>'.
+	 * @see com.marianogili.traceeditor.Configuration#getLinkTypes()
+	 * @see #getConfiguration()
+	 * @generated
+	 */
+	EReference getConfiguration_LinkTypes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.marianogili.traceeditor.Configuration#getTypeArtefacts <em>Type Artefacts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Type Artefacts</em>'.
+	 * @see com.marianogili.traceeditor.Configuration#getTypeArtefacts()
+	 * @see #getConfiguration()
+	 * @generated
+	 */
+	EReference getConfiguration_TypeArtefacts();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -816,12 +886,12 @@ public interface TraceeditorPackage extends EPackage {
 		EReference TRACE_EDITOR__DASHBOARD = eINSTANCE.getTraceEditor_Dashboard();
 
 		/**
-		 * The meta object literal for the '<em><b>Link Types</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Configuration</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRACE_EDITOR__LINK_TYPES = eINSTANCE.getTraceEditor_LinkTypes();
+		EReference TRACE_EDITOR__CONFIGURATION = eINSTANCE.getTraceEditor_Configuration();
 
 		/**
 		 * The meta object literal for the '{@link com.marianogili.traceeditor.impl.TypeArtefactImpl <em>Type Artefact</em>}' class.
@@ -858,6 +928,32 @@ public interface TraceeditorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LINK_TYPE__DESCRIPTION = eINSTANCE.getLinkType_Description();
+
+		/**
+		 * The meta object literal for the '{@link com.marianogili.traceeditor.impl.ConfigurationImpl <em>Configuration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.marianogili.traceeditor.impl.ConfigurationImpl
+		 * @see com.marianogili.traceeditor.impl.TraceeditorPackageImpl#getConfiguration()
+		 * @generated
+		 */
+		EClass CONFIGURATION = eINSTANCE.getConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Link Types</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONFIGURATION__LINK_TYPES = eINSTANCE.getConfiguration_LinkTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Artefacts</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONFIGURATION__TYPE_ARTEFACTS = eINSTANCE.getConfiguration_TypeArtefacts();
 
 	}
 

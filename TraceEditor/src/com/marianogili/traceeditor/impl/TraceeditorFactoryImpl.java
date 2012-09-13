@@ -67,6 +67,7 @@ public class TraceeditorFactoryImpl extends EFactoryImpl implements TraceeditorF
 			case TraceeditorPackage.TRACE_EDITOR: return createTraceEditor();
 			case TraceeditorPackage.TYPE_ARTEFACT: return createTypeArtefact();
 			case TraceeditorPackage.LINK_TYPE: return createLinkType();
+			case TraceeditorPackage.CONFIGURATION: return createConfiguration();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -140,6 +141,16 @@ public class TraceeditorFactoryImpl extends EFactoryImpl implements TraceeditorF
 	public LinkType createLinkType() {
 		LinkTypeImpl linkType = new LinkTypeImpl();
 		return linkType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Configuration createConfiguration() {
+		ConfigurationImpl configuration = new ConfigurationImpl();
+		return configuration;
 	}
 
 	/**

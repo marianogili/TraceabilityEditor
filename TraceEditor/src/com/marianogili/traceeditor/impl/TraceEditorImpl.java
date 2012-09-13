@@ -6,6 +6,7 @@
  */
 package com.marianogili.traceeditor.impl;
 
+import com.marianogili.traceeditor.Configuration;
 import com.marianogili.traceeditor.Dashboard;
 import com.marianogili.traceeditor.LinkType;
 import com.marianogili.traceeditor.TraceEditor;
@@ -32,7 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.marianogili.traceeditor.impl.TraceEditorImpl#getDashboard <em>Dashboard</em>}</li>
- *   <li>{@link com.marianogili.traceeditor.impl.TraceEditorImpl#getLinkTypes <em>Link Types</em>}</li>
+ *   <li>{@link com.marianogili.traceeditor.impl.TraceEditorImpl#getConfiguration <em>Configuration</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,14 +51,14 @@ public class TraceEditorImpl extends EObjectImpl implements TraceEditor {
 	protected Dashboard dashboard;
 
 	/**
-	 * The cached value of the '{@link #getLinkTypes() <em>Link Types</em>}' containment reference list.
+	 * The cached value of the '{@link #getConfiguration() <em>Configuration</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLinkTypes()
+	 * @see #getConfiguration()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<LinkType> linkTypes;
+	protected Configuration configuration;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -149,11 +150,65 @@ public class TraceEditorImpl extends EObjectImpl implements TraceEditor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<LinkType> getLinkTypes() {
-		if (linkTypes == null) {
-			linkTypes = new EObjectContainmentEList.Resolving<LinkType>(LinkType.class, this, TraceeditorPackage.TRACE_EDITOR__LINK_TYPES);
+	public Configuration getConfiguration() {
+		if (configuration != null && configuration.eIsProxy()) {
+			InternalEObject oldConfiguration = (InternalEObject)configuration;
+			configuration = (Configuration)eResolveProxy(oldConfiguration);
+			if (configuration != oldConfiguration) {
+				InternalEObject newConfiguration = (InternalEObject)configuration;
+				NotificationChain msgs = oldConfiguration.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TraceeditorPackage.TRACE_EDITOR__CONFIGURATION, null, null);
+				if (newConfiguration.eInternalContainer() == null) {
+					msgs = newConfiguration.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TraceeditorPackage.TRACE_EDITOR__CONFIGURATION, null, msgs);
+				}
+				if (msgs != null) msgs.dispatch();
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TraceeditorPackage.TRACE_EDITOR__CONFIGURATION, oldConfiguration, configuration));
+			}
 		}
-		return linkTypes;
+		return configuration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Configuration basicGetConfiguration() {
+		return configuration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConfiguration(Configuration newConfiguration, NotificationChain msgs) {
+		Configuration oldConfiguration = configuration;
+		configuration = newConfiguration;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TraceeditorPackage.TRACE_EDITOR__CONFIGURATION, oldConfiguration, newConfiguration);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConfiguration(Configuration newConfiguration) {
+		if (newConfiguration != configuration) {
+			NotificationChain msgs = null;
+			if (configuration != null)
+				msgs = ((InternalEObject)configuration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TraceeditorPackage.TRACE_EDITOR__CONFIGURATION, null, msgs);
+			if (newConfiguration != null)
+				msgs = ((InternalEObject)newConfiguration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TraceeditorPackage.TRACE_EDITOR__CONFIGURATION, null, msgs);
+			msgs = basicSetConfiguration(newConfiguration, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TraceeditorPackage.TRACE_EDITOR__CONFIGURATION, newConfiguration, newConfiguration));
 	}
 
 	/**
@@ -166,8 +221,8 @@ public class TraceEditorImpl extends EObjectImpl implements TraceEditor {
 		switch (featureID) {
 			case TraceeditorPackage.TRACE_EDITOR__DASHBOARD:
 				return basicSetDashboard(null, msgs);
-			case TraceeditorPackage.TRACE_EDITOR__LINK_TYPES:
-				return ((InternalEList<?>)getLinkTypes()).basicRemove(otherEnd, msgs);
+			case TraceeditorPackage.TRACE_EDITOR__CONFIGURATION:
+				return basicSetConfiguration(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -183,8 +238,9 @@ public class TraceEditorImpl extends EObjectImpl implements TraceEditor {
 			case TraceeditorPackage.TRACE_EDITOR__DASHBOARD:
 				if (resolve) return getDashboard();
 				return basicGetDashboard();
-			case TraceeditorPackage.TRACE_EDITOR__LINK_TYPES:
-				return getLinkTypes();
+			case TraceeditorPackage.TRACE_EDITOR__CONFIGURATION:
+				if (resolve) return getConfiguration();
+				return basicGetConfiguration();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -201,9 +257,8 @@ public class TraceEditorImpl extends EObjectImpl implements TraceEditor {
 			case TraceeditorPackage.TRACE_EDITOR__DASHBOARD:
 				setDashboard((Dashboard)newValue);
 				return;
-			case TraceeditorPackage.TRACE_EDITOR__LINK_TYPES:
-				getLinkTypes().clear();
-				getLinkTypes().addAll((Collection<? extends LinkType>)newValue);
+			case TraceeditorPackage.TRACE_EDITOR__CONFIGURATION:
+				setConfiguration((Configuration)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -220,8 +275,8 @@ public class TraceEditorImpl extends EObjectImpl implements TraceEditor {
 			case TraceeditorPackage.TRACE_EDITOR__DASHBOARD:
 				setDashboard((Dashboard)null);
 				return;
-			case TraceeditorPackage.TRACE_EDITOR__LINK_TYPES:
-				getLinkTypes().clear();
+			case TraceeditorPackage.TRACE_EDITOR__CONFIGURATION:
+				setConfiguration((Configuration)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -237,8 +292,8 @@ public class TraceEditorImpl extends EObjectImpl implements TraceEditor {
 		switch (featureID) {
 			case TraceeditorPackage.TRACE_EDITOR__DASHBOARD:
 				return dashboard != null;
-			case TraceeditorPackage.TRACE_EDITOR__LINK_TYPES:
-				return linkTypes != null && !linkTypes.isEmpty();
+			case TraceeditorPackage.TRACE_EDITOR__CONFIGURATION:
+				return configuration != null;
 		}
 		return super.eIsSet(featureID);
 	}

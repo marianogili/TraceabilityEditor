@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<traceeditor:TraceEditor xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:traceeditor="http://traceeditor/1.0">
+  <dashboard>
+    <sourceArtefacts name="origen"/>
+    <sourceArtefacts name="origen2"/>
+    <sourceArtefacts name="origen3"/>
+    <sourceArtefacts name="origen4"/>
+    <targetArtefacts name="S"/>
+    <targetArtefacts name="S2"/>
+    <targetArtefacts name="S3"/>
+    <targetArtefacts name="S4"/>
+    <traceLinks name="enlaces3" sources="//@dashboard/@sourceArtefacts.0 //@dashboard/@sourceArtefacts.1" targets="//@dashboard/@targetArtefacts.1 //@dashboard/@targetArtefacts.2">
+      <type href="configuration.traceeditor#/0/@linkTypes.23"/>
+    </traceLinks>
+    <traceLinks name="enlaceNuevo"/>
+    <traceLinks name="enlaceViejo" sources="//@dashboard/@sourceArtefacts.1" targets="//@dashboard/@targetArtefacts.2"/>
+    <transformations name="transformacion">
+      <traceLinks name="enlace" sources="//@dashboard/@sourceArtefacts.0" targets="//@dashboard/@targetArtefacts.0 //@dashboard/@targetArtefacts.1"/>
+      <traceLinks name="enlace2"/>
+    </transformations>
+    <transformations name="transformación2"/>
+  </dashboard>
+  <configuration href="configuration.traceeditor#/1"/>
+</traceeditor:TraceEditor>

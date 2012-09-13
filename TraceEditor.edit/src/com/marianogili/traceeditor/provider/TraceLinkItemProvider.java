@@ -8,6 +8,7 @@ package com.marianogili.traceeditor.provider;
 
 
 import com.marianogili.traceeditor.TraceLink;
+import com.marianogili.traceeditor.TraceeditorFactory;
 import com.marianogili.traceeditor.TraceeditorPackage;
 
 import java.util.Collection;
@@ -16,6 +17,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;

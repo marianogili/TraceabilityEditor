@@ -7,6 +7,7 @@
 package com.marianogili.traceeditor.impl;
 
 import com.marianogili.traceeditor.Artefact;
+import com.marianogili.traceeditor.Configuration;
 import com.marianogili.traceeditor.Dashboard;
 import com.marianogili.traceeditor.LinkType;
 import com.marianogili.traceeditor.NamedElement;
@@ -86,6 +87,13 @@ public class TraceeditorPackageImpl extends EPackageImpl implements TraceeditorP
 	 * @generated
 	 */
 	private EClass linkTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass configurationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -315,7 +323,7 @@ public class TraceeditorPackageImpl extends EPackageImpl implements TraceeditorP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTraceEditor_LinkTypes() {
+	public EReference getTraceEditor_Configuration() {
 		return (EReference)traceEditorEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -353,6 +361,33 @@ public class TraceeditorPackageImpl extends EPackageImpl implements TraceeditorP
 	 */
 	public EAttribute getLinkType_Description() {
 		return (EAttribute)linkTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConfiguration() {
+		return configurationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConfiguration_LinkTypes() {
+		return (EReference)configurationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConfiguration_TypeArtefacts() {
+		return (EReference)configurationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -406,13 +441,17 @@ public class TraceeditorPackageImpl extends EPackageImpl implements TraceeditorP
 
 		traceEditorEClass = createEClass(TRACE_EDITOR);
 		createEReference(traceEditorEClass, TRACE_EDITOR__DASHBOARD);
-		createEReference(traceEditorEClass, TRACE_EDITOR__LINK_TYPES);
+		createEReference(traceEditorEClass, TRACE_EDITOR__CONFIGURATION);
 
 		typeArtefactEClass = createEClass(TYPE_ARTEFACT);
 
 		linkTypeEClass = createEClass(LINK_TYPE);
 		createEReference(linkTypeEClass, LINK_TYPE__SUB_TYPES);
 		createEAttribute(linkTypeEClass, LINK_TYPE__DESCRIPTION);
+
+		configurationEClass = createEClass(CONFIGURATION);
+		createEReference(configurationEClass, CONFIGURATION__LINK_TYPES);
+		createEReference(configurationEClass, CONFIGURATION__TYPE_ARTEFACTS);
 	}
 
 	/**
@@ -473,13 +512,17 @@ public class TraceeditorPackageImpl extends EPackageImpl implements TraceeditorP
 
 		initEClass(traceEditorEClass, TraceEditor.class, "TraceEditor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTraceEditor_Dashboard(), this.getDashboard(), null, "dashboard", null, 0, 1, TraceEditor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTraceEditor_LinkTypes(), this.getLinkType(), null, "linkTypes", null, 0, -1, TraceEditor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTraceEditor_Configuration(), this.getConfiguration(), null, "configuration", null, 0, 1, TraceEditor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typeArtefactEClass, TypeArtefact.class, "TypeArtefact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(linkTypeEClass, LinkType.class, "LinkType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLinkType_SubTypes(), this.getLinkType(), null, "subTypes", null, 0, -1, LinkType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLinkType_Description(), ecorePackage.getEString(), "description", null, 0, 1, LinkType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(configurationEClass, Configuration.class, "Configuration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConfiguration_LinkTypes(), this.getLinkType(), null, "linkTypes", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfiguration_TypeArtefacts(), this.getTypeArtefact(), null, "typeArtefacts", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

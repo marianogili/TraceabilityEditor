@@ -237,6 +237,29 @@ public class TraceeditorItemProviderAdapterFactory extends TraceeditorAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.marianogili.traceeditor.Configuration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConfigurationItemProvider configurationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.marianogili.traceeditor.Configuration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConfigurationAdapter() {
+		if (configurationItemProvider == null) {
+			configurationItemProvider = new ConfigurationItemProvider(this);
+		}
+
+		return configurationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -342,6 +365,7 @@ public class TraceeditorItemProviderAdapterFactory extends TraceeditorAdapterFac
 		if (traceEditorItemProvider != null) traceEditorItemProvider.dispose();
 		if (typeArtefactItemProvider != null) typeArtefactItemProvider.dispose();
 		if (linkTypeItemProvider != null) linkTypeItemProvider.dispose();
+		if (configurationItemProvider != null) configurationItemProvider.dispose();
 	}
 
 }
