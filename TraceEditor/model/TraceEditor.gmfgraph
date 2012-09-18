@@ -116,7 +116,12 @@
             xsi:type="gmfgraph:Rectangle"
             name="ArtefactFigureInt">
           <layout
-              xsi:type="gmfgraph:FlowLayout"/>
+              xsi:type="gmfgraph:FlowLayout"
+              vertical="true"
+              matchMinorSize="true"
+              minorAlignment="CENTER"
+              majorSpacing="0"
+              minorSpacing="0"/>
           <backgroundColor
               xsi:type="gmfgraph:RGBColor"
               red="255"
@@ -124,13 +129,20 @@
               blue="190"/>
           <preferredSize
               dx="100"
-              dy="75"/>
+              dy="70"/>
           <children
               xsi:type="gmfgraph:Label"
               name="ArtefactNameFigure"
               text="&lt;...>"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="TypeArtefactFigure"
+              text="&lt;...>"/>
         </children>
       </actualFigure>
+      <accessors
+          accessor="getFigureTypeArtefact"
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0/@children.1"/>
       <accessors
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.0/@children.0"/>
       <accessors
@@ -243,5 +255,10 @@
   <labels
       name="ArtefactName"
       figure="ArtefactFigure"
+      accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+  <labels
+      name="TypeArtefact"
+      figure="ArtefactFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.4/@accessors.0"/>
 </gmfgraph:Canvas>

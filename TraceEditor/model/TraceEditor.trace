@@ -21,6 +21,9 @@
     <nodeLabelTraces
         visualID="5001"
         queryText="true"/>
+    <nodeLabelTraces
+        visualID="5006"
+        queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
       visualID="3002"

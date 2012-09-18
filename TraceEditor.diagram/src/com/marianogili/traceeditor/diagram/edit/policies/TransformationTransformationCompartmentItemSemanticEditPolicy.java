@@ -30,7 +30,7 @@ public class TransformationTransformationCompartmentItemSemanticEditPolicy
 		}
 		return super.getCreateCommand(req);
 	}
-	
+
 	/**
 	 * @generated NOT
 	 */

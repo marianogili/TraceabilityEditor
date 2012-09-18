@@ -2,6 +2,9 @@ package com.marianogili.traceeditor.diagram.edit.parts;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.management.NotificationFilter;
+
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
@@ -9,6 +12,8 @@ import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.impl.EReferenceImpl;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.commands.Command;
@@ -26,9 +31,14 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
+import com.marianogili.traceeditor.Artefact;
+import com.marianogili.traceeditor.TraceEditor;
+import com.marianogili.traceeditor.TraceeditorPackage;
+import com.marianogili.traceeditor.TypeArtefact;
 import com.marianogili.traceeditor.diagram.edit.policies.ArtefactItemSemanticEditPolicy;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
+import com.marianogili.traceeditor.impl.ArtefactImpl;
 
 /**
  * @generated
@@ -111,6 +121,11 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof WrappingLabelEditPart) {
+			((WrappingLabelEditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureTypeArtefact());
+			return true;
+		}
 		if (childEditPart instanceof ArtefactNameEditPart) {
 			((ArtefactNameEditPart) childEditPart).setLabel(getPrimaryShape()
 					.getFigureArtefactNameFigure());
@@ -123,6 +138,9 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof WrappingLabelEditPart) {
+			return true;
+		}
 		if (childEditPart instanceof ArtefactNameEditPart) {
 			return true;
 		}
@@ -280,12 +298,35 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 		}
 		return types;
 	}
+	
+	/* (non-Javadoc)
+	 * @see org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart#handleNotificationEvent(org.eclipse.emf.common.notify.Notification)
+	 */
+	@Override
+	protected void handleNotificationEvent(Notification notification) {
+//		System.out.println("entry.handleNotificationEvent(" + notification + ")");
+		if (notification.getNotifier() instanceof ArtefactImpl) {
+			if (notification.getFeature() instanceof EReferenceImpl) {
+				String attrName = ((EReferenceImpl) notification.getFeature()).getName();
+				if ("type".equals(attrName)) {
+//					((ArtefactImpl)notification.getNotifier());
+				}
+			}
+		}
+		super.handleNotificationEvent(notification);
+	}
+
+
 
 	/**
 	 * @generated
 	 */
 	public class ArtefactFigure extends RectangleFigure {
 
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTypeArtefact;
 		/**
 		 * @generated
 		 */
@@ -321,7 +362,7 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 		}
 
 		/**
-		 * @generated
+		 * @generated NOT
 		 */
 		private void createContents() {
 
@@ -330,20 +371,20 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 			fFigureArtefactFigureInt
 					.setBackgroundColor(FFIGUREARTEFACTFIGUREINT_BACK);
 			fFigureArtefactFigureInt.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(100), getMapMode().DPtoLP(75)));
+					getMapMode().DPtoLP(100), getMapMode().DPtoLP(70)));
 
 			this.add(fFigureArtefactFigureInt);
 
 			FlowLayout layoutFFigureArtefactFigureInt = new FlowLayout();
-			layoutFFigureArtefactFigureInt.setStretchMinorAxis(false);
+			layoutFFigureArtefactFigureInt.setStretchMinorAxis(true);
 			layoutFFigureArtefactFigureInt
-					.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
+					.setMinorAlignment(FlowLayout.ALIGN_CENTER);
 
 			layoutFFigureArtefactFigureInt
 					.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
-			layoutFFigureArtefactFigureInt.setMajorSpacing(5);
-			layoutFFigureArtefactFigureInt.setMinorSpacing(5);
-			layoutFFigureArtefactFigureInt.setHorizontal(true);
+			layoutFFigureArtefactFigureInt.setMajorSpacing(0);
+			layoutFFigureArtefactFigureInt.setMinorSpacing(0);
+			layoutFFigureArtefactFigureInt.setHorizontal(false);
 
 			fFigureArtefactFigureInt
 					.setLayoutManager(layoutFFigureArtefactFigureInt);
@@ -352,6 +393,15 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 			fFigureArtefactNameFigure.setText("<...>");
 
 			fFigureArtefactFigureInt.add(fFigureArtefactNameFigure);
+
+			Artefact artefact = (Artefact) resolveSemanticElement();
+			fFigureTypeArtefact = new WrappingLabel();
+			if (artefact != null && artefact.getType() != null)  
+				fFigureTypeArtefact.setText("<< " + artefact.getType().getName() + " >>");
+			else
+				fFigureTypeArtefact.setText("<...>");
+
+			fFigureArtefactFigureInt.add(fFigureTypeArtefact);
 
 		}
 
@@ -372,6 +422,13 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 		 */
 		protected void setUseLocalCoordinates(boolean useLocalCoordinates) {
 			myUseLocalCoordinates = useLocalCoordinates;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTypeArtefact() {
+			return fFigureTypeArtefact;
 		}
 
 		/**

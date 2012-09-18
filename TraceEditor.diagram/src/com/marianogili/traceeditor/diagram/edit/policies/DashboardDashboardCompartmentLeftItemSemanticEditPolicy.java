@@ -30,7 +30,7 @@ public class DashboardDashboardCompartmentLeftItemSemanticEditPolicy extends
 		}
 		return super.getCreateCommand(req);
 	}
-	
+
 	/**
 	 * @generated NOT
 	 */

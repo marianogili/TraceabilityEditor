@@ -30,6 +30,11 @@
             <editableFeatures
                 href="TraceEditor.ecore#//NamedElement/name"/>
           </labelMappings>
+          <labelMappings
+              readOnly="true">
+            <diagramLabel
+                href="TraceEditor.gmfgraph#TypeArtefact"/>
+          </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
               href="TraceEditor.gmftool#//@palette/@tools.0/@tools.1"/>

@@ -24,6 +24,7 @@ import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkNameEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationNameEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationTransformationCompartmentEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.WrappingLabelEditPart;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -204,6 +205,9 @@ public class TraceEditorVisualIDRegistry {
 			break;
 		case ArtefactEditPart.VISUAL_ID:
 			if (ArtefactNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WrappingLabelEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

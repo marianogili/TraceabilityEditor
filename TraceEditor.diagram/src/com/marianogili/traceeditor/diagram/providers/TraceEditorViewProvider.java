@@ -58,6 +58,7 @@ import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkTargetsEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationNameEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationTransformationCompartmentEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.WrappingLabelEditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 
 /**
@@ -371,6 +372,8 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 				.RGBToInteger(fillRGB));
 		Node label5001 = createLabel(node, TraceEditorVisualIDRegistry
 				.getType(ArtefactNameEditPart.VISUAL_ID));
+		Node label5006 = createLabel(node, TraceEditorVisualIDRegistry
+				.getType(WrappingLabelEditPart.VISUAL_ID));
 		return node;
 	}
 

@@ -224,7 +224,8 @@ public class TraceEditorDiagramEditorUtil {
 	 * @generated NOT
 	 */
 	private static TraceEditor createInitialModel() {
-		TraceEditor traceEditor = TraceeditorFactory.eINSTANCE.createTraceEditor();
+		TraceEditor traceEditor = TraceeditorFactory.eINSTANCE
+				.createTraceEditor();
 		Dashboard dashboard = TraceeditorFactory.eINSTANCE.createDashboard();
 		traceEditor.setDashboard(dashboard);
 		return traceEditor;

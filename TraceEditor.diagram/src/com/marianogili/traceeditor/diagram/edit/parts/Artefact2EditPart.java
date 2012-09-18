@@ -289,6 +289,10 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureTypeArtefact;
+		/**
+		 * @generated
+		 */
 		private WrappingLabel fFigureArtefactNameFigure;
 		/**
 		 * @generated
@@ -330,20 +334,20 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 			fFigureArtefactFigureInt
 					.setBackgroundColor(FFIGUREARTEFACTFIGUREINT_BACK);
 			fFigureArtefactFigureInt.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(100), getMapMode().DPtoLP(75)));
+					getMapMode().DPtoLP(100), getMapMode().DPtoLP(70)));
 
 			this.add(fFigureArtefactFigureInt);
 
 			FlowLayout layoutFFigureArtefactFigureInt = new FlowLayout();
-			layoutFFigureArtefactFigureInt.setStretchMinorAxis(false);
+			layoutFFigureArtefactFigureInt.setStretchMinorAxis(true);
 			layoutFFigureArtefactFigureInt
-					.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
+					.setMinorAlignment(FlowLayout.ALIGN_CENTER);
 
 			layoutFFigureArtefactFigureInt
 					.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
-			layoutFFigureArtefactFigureInt.setMajorSpacing(5);
-			layoutFFigureArtefactFigureInt.setMinorSpacing(5);
-			layoutFFigureArtefactFigureInt.setHorizontal(true);
+			layoutFFigureArtefactFigureInt.setMajorSpacing(0);
+			layoutFFigureArtefactFigureInt.setMinorSpacing(0);
+			layoutFFigureArtefactFigureInt.setHorizontal(false);
 
 			fFigureArtefactFigureInt
 					.setLayoutManager(layoutFFigureArtefactFigureInt);
@@ -352,6 +356,11 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 			fFigureArtefactNameFigure.setText("<...>");
 
 			fFigureArtefactFigureInt.add(fFigureArtefactNameFigure);
+
+			fFigureTypeArtefact = new WrappingLabel();
+			fFigureTypeArtefact.setText("<...>");
+
+			fFigureArtefactFigureInt.add(fFigureTypeArtefact);
 
 		}
 
@@ -372,6 +381,13 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 		 */
 		protected void setUseLocalCoordinates(boolean useLocalCoordinates) {
 			myUseLocalCoordinates = useLocalCoordinates;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTypeArtefact() {
+			return fFigureTypeArtefact;
 		}
 
 		/**

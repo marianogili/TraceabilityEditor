@@ -41,6 +41,9 @@ public class TraceEditorEditPartFactory implements EditPartFactory {
 			case ArtefactNameEditPart.VISUAL_ID:
 				return new ArtefactNameEditPart(view);
 
+			case WrappingLabelEditPart.VISUAL_ID:
+				return new WrappingLabelEditPart(view);
+
 			case TransformationEditPart.VISUAL_ID:
 				return new TransformationEditPart(view);
 

@@ -78,8 +78,9 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		installEditPolicy(EditPolicy.COMPONENT_ROLE, new ComponentEditPolicy() {
 			public Command getCommand(Request request) {
 				// If the user presses the delete key, don't delete
-				if (request instanceof GroupRequestViaKeyboard 
-						&& RequestConstants.REQ_DELETE.equals(request.getType())) {
+				if (request instanceof GroupRequestViaKeyboard
+						&& RequestConstants.REQ_DELETE
+								.equals(request.getType())) {
 					return UnexecutableCommand.INSTANCE;
 				}
 				return super.getCommand(request);

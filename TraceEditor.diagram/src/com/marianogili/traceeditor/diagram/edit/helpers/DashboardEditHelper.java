@@ -17,5 +17,5 @@ public class DashboardEditHelper extends TraceEditorBaseEditHelper {
 		// TODO Auto-generated method stub
 		return UnexecutableCommand.INSTANCE;
 	}
-	
+
 }
