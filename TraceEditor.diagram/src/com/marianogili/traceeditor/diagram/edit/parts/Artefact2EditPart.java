@@ -2,6 +2,7 @@ package com.marianogili.traceeditor.diagram.edit.parts;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
@@ -9,6 +10,8 @@ import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.impl.EReferenceImpl;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.commands.Command;
@@ -26,9 +29,12 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
+import com.marianogili.traceeditor.Artefact;
+import com.marianogili.traceeditor.TypeArtefact;
 import com.marianogili.traceeditor.diagram.edit.policies.Artefact2ItemSemanticEditPolicy;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
+import com.marianogili.traceeditor.impl.ArtefactImpl;
 
 /**
  * @generated
@@ -280,6 +286,23 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 		}
 		return types;
 	}
+	
+	/* (non-Javadoc)
+	 * @see org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart#handleNotificationEvent(org.eclipse.emf.common.notify.Notification)
+	 */
+	@Override
+	protected void handleNotificationEvent(Notification notification) {
+		if (notification.getNotifier() instanceof ArtefactImpl) {
+			if (notification.getFeature() instanceof EReferenceImpl) {
+				String attrName = ((EReferenceImpl) notification.getFeature()).getName();
+				if ("type".equals(attrName)) {
+					TypeArtefact type = (TypeArtefact) notification.getNewValue();
+					getPrimaryShape().fFigureTypeArtefact.setText("<< " + type.getName() + " >>");
+				}
+			}
+		}
+		super.handleNotificationEvent(notification);
+	}
 
 	/**
 	 * @generated
@@ -357,8 +380,12 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 
 			fFigureArtefactFigureInt.add(fFigureArtefactNameFigure);
 
+			Artefact artefact = (Artefact) resolveSemanticElement();
 			fFigureTypeArtefact = new WrappingLabel();
-			fFigureTypeArtefact.setText("<...>");
+			if (artefact != null && artefact.getType() != null)  
+				fFigureTypeArtefact.setText("<< " + artefact.getType().getName() + " >>");
+			else
+				fFigureTypeArtefact.setText("<...>");
 
 			fFigureArtefactFigureInt.add(fFigureTypeArtefact);
 

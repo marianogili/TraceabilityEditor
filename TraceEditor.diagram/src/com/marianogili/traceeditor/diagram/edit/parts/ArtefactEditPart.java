@@ -3,8 +3,6 @@ package com.marianogili.traceeditor.diagram.edit.parts;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.management.NotificationFilter;
-
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
@@ -32,8 +30,6 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
 import com.marianogili.traceeditor.Artefact;
-import com.marianogili.traceeditor.TraceEditor;
-import com.marianogili.traceeditor.TraceeditorPackage;
 import com.marianogili.traceeditor.TypeArtefact;
 import com.marianogili.traceeditor.diagram.edit.policies.ArtefactItemSemanticEditPolicy;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
@@ -304,19 +300,17 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 */
 	@Override
 	protected void handleNotificationEvent(Notification notification) {
-//		System.out.println("entry.handleNotificationEvent(" + notification + ")");
 		if (notification.getNotifier() instanceof ArtefactImpl) {
 			if (notification.getFeature() instanceof EReferenceImpl) {
 				String attrName = ((EReferenceImpl) notification.getFeature()).getName();
 				if ("type".equals(attrName)) {
-//					((ArtefactImpl)notification.getNotifier());
+					TypeArtefact type = (TypeArtefact) notification.getNewValue();
+					getPrimaryShape().fFigureTypeArtefact.setText("<< " + type.getName() + " >>");
 				}
 			}
 		}
 		super.handleNotificationEvent(notification);
 	}
-
-
 
 	/**
 	 * @generated
