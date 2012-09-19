@@ -56,6 +56,10 @@
             xsi:type="gmfgraph:Label"
             name="TraceLinkNameFigure"
             text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="TraceLinkType"
+            text="&lt;&lt;...>>"/>
         <template
             x="20"/>
         <template
@@ -69,6 +73,8 @@
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors
         name="TraceLinkSourcesFigure">
@@ -261,4 +267,8 @@
       figure="ArtefactFigure"
       elementIcon="false"
       accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels
+      name="TraceLinkType"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.1/@accessors.1"/>
 </gmfgraph:Canvas>

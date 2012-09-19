@@ -16,6 +16,8 @@ import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartm
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentLeftEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentRightEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.Label2EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.LabelEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLink2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkEditPart;
@@ -223,6 +225,9 @@ public class TraceEditorVisualIDRegistry {
 			if (TraceLinkNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (LabelEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case Artefact2EditPart.VISUAL_ID:
 			if (ArtefactName2EditPart.VISUAL_ID == nodeVisualID) {
@@ -231,6 +236,9 @@ public class TraceEditorVisualIDRegistry {
 			break;
 		case TraceLink2EditPart.VISUAL_ID:
 			if (TraceLinkName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Label2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

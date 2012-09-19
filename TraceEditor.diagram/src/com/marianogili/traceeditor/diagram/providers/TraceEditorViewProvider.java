@@ -48,6 +48,8 @@ import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartm
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentLeftEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentRightEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.Label2EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.LabelEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLink2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkEditPart;
@@ -466,6 +468,8 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		}
 		Node label5004 = createLabel(node, TraceEditorVisualIDRegistry
 				.getType(TraceLinkNameEditPart.VISUAL_ID));
+		Node label5007 = createLabel(node, TraceEditorVisualIDRegistry
+				.getType(LabelEditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -553,6 +557,8 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		}
 		Node label5005 = createLabel(node, TraceEditorVisualIDRegistry
 				.getType(TraceLinkName2EditPart.VISUAL_ID));
+		Node label5008 = createLabel(node, TraceEditorVisualIDRegistry
+				.getType(Label2EditPart.VISUAL_ID));
 		return node;
 	}
 

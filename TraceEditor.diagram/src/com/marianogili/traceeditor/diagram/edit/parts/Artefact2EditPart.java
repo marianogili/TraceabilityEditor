@@ -286,7 +286,7 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 		}
 		return types;
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart#handleNotificationEvent(org.eclipse.emf.common.notify.Notification)
 	 */
@@ -294,10 +294,13 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 	protected void handleNotificationEvent(Notification notification) {
 		if (notification.getNotifier() instanceof ArtefactImpl) {
 			if (notification.getFeature() instanceof EReferenceImpl) {
-				String attrName = ((EReferenceImpl) notification.getFeature()).getName();
+				String attrName = ((EReferenceImpl) notification.getFeature())
+						.getName();
 				if ("type".equals(attrName)) {
-					TypeArtefact type = (TypeArtefact) notification.getNewValue();
-					getPrimaryShape().fFigureTypeArtefact.setText("<< " + type.getName() + " >>");
+					TypeArtefact type = (TypeArtefact) notification
+							.getNewValue();
+					getPrimaryShape().fFigureTypeArtefact.setText("<< "
+							+ type.getName() + " >>");
 				}
 			}
 		}
@@ -348,7 +351,7 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 		}
 
 		/**
-		 * @generated
+		 * @generated NOT
 		 */
 		private void createContents() {
 
@@ -382,8 +385,9 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 
 			Artefact artefact = (Artefact) resolveSemanticElement();
 			fFigureTypeArtefact = new WrappingLabel();
-			if (artefact != null && artefact.getType() != null)  
-				fFigureTypeArtefact.setText("<< " + artefact.getType().getName() + " >>");
+			if (artefact != null && artefact.getType() != null)
+				fFigureTypeArtefact.setText("<< "
+						+ artefact.getType().getName() + " >>");
 			else
 				fFigureTypeArtefact.setText("<...>");
 

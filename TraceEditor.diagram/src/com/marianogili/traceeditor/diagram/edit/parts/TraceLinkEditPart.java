@@ -9,6 +9,8 @@ import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.PointList;
 import org.eclipse.draw2d.geometry.Rectangle;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.impl.EReferenceImpl;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -27,9 +29,15 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
+import com.marianogili.traceeditor.Artefact;
+import com.marianogili.traceeditor.LinkType;
+import com.marianogili.traceeditor.TraceLink;
+import com.marianogili.traceeditor.TypeArtefact;
 import com.marianogili.traceeditor.diagram.edit.policies.TraceLinkItemSemanticEditPolicy;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
+import com.marianogili.traceeditor.impl.ArtefactImpl;
+import com.marianogili.traceeditor.impl.TraceLinkImpl;
 
 /**
  * @generated
@@ -321,6 +329,24 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 		}
 		return types;
 	}
+	
+	/* (non-Javadoc)
+	 * @see org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart#handleNotificationEvent(org.eclipse.emf.common.notify.Notification)
+	 */
+	@Override
+	protected void handleNotificationEvent(Notification notification) {
+		if (notification.getNotifier() instanceof TraceLinkImpl) {
+			if (notification.getFeature() instanceof EReferenceImpl) {
+				String attrName = ((EReferenceImpl) notification.getFeature())
+						.getName();
+				if ("type".equals(attrName)) {
+					LinkType type = (LinkType) notification.getNewValue();
+					getPrimaryShape().fFigureTraceLinkType.setText("<< " + type.getName() + " >>");
+				}
+			}
+		}
+		super.handleNotificationEvent(notification);
+	}
 
 	/**
 	 * @generated
@@ -331,6 +357,11 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		private WrappingLabel fFigureTraceLinkNameFigure;
+
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTraceLinkType;
 
 		/**
 		 * @generated
@@ -351,7 +382,7 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 		}
 
 		/**
-		 * @generated
+		 * @generated NOT
 		 */
 		private void createContents() {
 
@@ -359,6 +390,15 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 			fFigureTraceLinkNameFigure.setText("<...>");
 
 			this.add(fFigureTraceLinkNameFigure);
+
+			fFigureTraceLinkType = new WrappingLabel();
+			TraceLink traceLink = (TraceLink) resolveSemanticElement();
+			if (traceLink != null && traceLink.getType() != null)
+				fFigureTraceLinkType.setText("<< " + traceLink.getType().getName() + " >>");
+			else
+				fFigureTraceLinkType.setText("<<...>>");
+
+			this.add(fFigureTraceLinkType);
 
 		}
 
@@ -444,6 +484,13 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureTraceLinkNameFigure() {
 			return fFigureTraceLinkNameFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTraceLinkType() {
+			return fFigureTraceLinkType;
 		}
 
 	}

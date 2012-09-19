@@ -81,6 +81,11 @@
                 <editableFeatures
                     href="TraceEditor.ecore#//NamedElement/name"/>
               </labelMappings>
+              <labelMappings
+                  readOnly="true">
+                <diagramLabel
+                    href="TraceEditor.gmfgraph#TraceLinkType"/>
+              </labelMappings>
               <tool
                   xsi:type="gmftool:CreationTool"
                   href="TraceEditor.gmftool#//@palette/@tools.1/@tools.0"/>

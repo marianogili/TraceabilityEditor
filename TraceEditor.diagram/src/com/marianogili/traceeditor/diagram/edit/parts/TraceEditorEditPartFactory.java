@@ -56,6 +56,9 @@ public class TraceEditorEditPartFactory implements EditPartFactory {
 			case TraceLinkNameEditPart.VISUAL_ID:
 				return new TraceLinkNameEditPart(view);
 
+			case LabelEditPart.VISUAL_ID:
+				return new LabelEditPart(view);
+
 			case Artefact2EditPart.VISUAL_ID:
 				return new Artefact2EditPart(view);
 
@@ -67,6 +70,9 @@ public class TraceEditorEditPartFactory implements EditPartFactory {
 
 			case TraceLinkName2EditPart.VISUAL_ID:
 				return new TraceLinkName2EditPart(view);
+
+			case Label2EditPart.VISUAL_ID:
+				return new Label2EditPart(view);
 
 			case DashboardDashboardCompartmentLeftEditPart.VISUAL_ID:
 				return new DashboardDashboardCompartmentLeftEditPart(view);
