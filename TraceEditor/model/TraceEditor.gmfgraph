@@ -47,6 +47,10 @@
       <actualFigure
           xsi:type="gmfgraph:ScalablePolygon"
           name="TraceLinkFigure">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"
+            vertical="true"
+            minorAlignment="CENTER"/>
         <backgroundColor
             xsi:type="gmfgraph:RGBColor"
             red="237"

@@ -35,7 +35,7 @@
             <styles xmi:type="notation:FontStyle" xmi:id="_1dvTovChEeGKnPsJUwX7_g" fontName="Ubuntu"/>
             <styles xmi:type="notation:LineStyle" xmi:id="_1dvTo_ChEeGKnPsJUwX7_g"/>
             <element xmi:type="traceeditor:TraceLink" href="default.traceeditor#//@dashboard/@transformations.0/@traceLinks.0"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1dvTpPChEeGKnPsJUwX7_g" x="42"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1dvTpPChEeGKnPsJUwX7_g" x="42" height="63"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_2eYw8fCkEeGhi80kdg6XWg" type="3004">
             <children xmi:type="notation:DecorationNode" xmi:id="_2eZ_EPCkEeGhi80kdg6XWg" type="5004"/>
@@ -43,7 +43,7 @@
             <styles xmi:type="notation:FontStyle" xmi:id="_2eZYAfCkEeGhi80kdg6XWg" fontName="Ubuntu"/>
             <styles xmi:type="notation:LineStyle" xmi:id="_2eZYAvCkEeGhi80kdg6XWg"/>
             <element xmi:type="traceeditor:TraceLink" href="default.traceeditor#//@dashboard/@transformations.0/@traceLinks.1"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2eZYA_CkEeGhi80kdg6XWg" x="73" y="38"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2eZYA_CkEeGhi80kdg6XWg" x="73" y="68" height="55"/>
           </children>
           <styles xmi:type="notation:SortingStyle" xmi:id="_y4cFUvChEeGKnPsJUwX7_g"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_y4cFU_ChEeGKnPsJUwX7_g"/>
@@ -52,7 +52,7 @@
         <styles xmi:type="notation:FontStyle" xmi:id="_y4beQfChEeGKnPsJUwX7_g" fontName="Ubuntu"/>
         <styles xmi:type="notation:LineStyle" xmi:id="_y4beQvChEeGKnPsJUwX7_g"/>
         <element xmi:type="traceeditor:Transformation" href="default.traceeditor#//@dashboard/@transformations.0"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y4beQ_ChEeGKnPsJUwX7_g" x="11" y="12" width="150" height="133"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y4beQ_ChEeGKnPsJUwX7_g" x="11" y="12" width="199" height="157"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_qpmCUfCmEeGR3PB6EKleiA" type="3004">
         <children xmi:type="notation:DecorationNode" xmi:id="_qpnQcPCmEeGR3PB6EKleiA" type="5004"/>
@@ -60,7 +60,7 @@
         <styles xmi:type="notation:FontStyle" xmi:id="_qpmpYfCmEeGR3PB6EKleiA" fontName="Ubuntu"/>
         <styles xmi:type="notation:LineStyle" xmi:id="_qpmpYvCmEeGR3PB6EKleiA"/>
         <element xmi:type="traceeditor:TraceLink" href="default.traceeditor#//@dashboard/@traceLinks.0"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qpmpY_CmEeGR3PB6EKleiA" x="191" y="138" width="115" height="73"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qpmpY_CmEeGR3PB6EKleiA" x="221" y="198" width="115" height="73"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_sS5loPCqEeGBXIsdYJkvUw" type="3005">
         <children xmi:type="notation:DecorationNode" xmi:id="_sS6MsPCqEeGBXIsdYJkvUw" type="5005"/>
@@ -68,7 +68,7 @@
         <styles xmi:type="notation:FontStyle" xmi:id="_sS5lovCqEeGBXIsdYJkvUw" fontName="Ubuntu"/>
         <styles xmi:type="notation:LineStyle" xmi:id="_sS5lo_CqEeGBXIsdYJkvUw"/>
         <element xmi:type="traceeditor:TraceLink" href="default.traceeditor#//@dashboard/@traceLinks.1"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sS5lpPCqEeGBXIsdYJkvUw" x="107" y="258"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sS5lpPCqEeGBXIsdYJkvUw" x="107" y="258" height="55"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="__cb74fFmEeGQFf0FC9r6bQ" type="3005">
         <children xmi:type="notation:DecorationNode" xmi:id="__cdKAPFmEeGQFf0FC9r6bQ" type="5005"/>
@@ -76,7 +76,7 @@
         <styles xmi:type="notation:FontStyle" xmi:id="__cb74_FmEeGQFf0FC9r6bQ" fontName="Ubuntu"/>
         <styles xmi:type="notation:LineStyle" xmi:id="__cb75PFmEeGQFf0FC9r6bQ"/>
         <element xmi:type="traceeditor:TraceLink" href="default.traceeditor#//@dashboard/@traceLinks.2"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="__cb75fFmEeGQFf0FC9r6bQ" x="233" y="312"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="__cb75fFmEeGQFf0FC9r6bQ" x="233" y="312" width="109" height="61"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_GI4lwPFnEeGQFf0FC9r6bQ" type="3002">
         <children xmi:type="notation:DecorationNode" xmi:id="_GI5M0PFnEeGQFf0FC9r6bQ" type="5002"/>
@@ -85,7 +85,7 @@
         <styles xmi:type="notation:FontStyle" xmi:id="_GI4lwvFnEeGQFf0FC9r6bQ" fontName="Ubuntu"/>
         <styles xmi:type="notation:LineStyle" xmi:id="_GI4lw_FnEeGQFf0FC9r6bQ"/>
         <element xmi:type="traceeditor:Transformation" href="default.traceeditor#//@dashboard/@transformations.1"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GI4lxPFnEeGQFf0FC9r6bQ" x="203" y="18"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GI4lxPFnEeGQFf0FC9r6bQ" x="245" y="18"/>
       </children>
       <styles xmi:type="notation:SortingStyle" xmi:id="_u7EQ1PChEeGKnPsJUwX7_g"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_u7E34PChEeGKnPsJUwX7_g"/>

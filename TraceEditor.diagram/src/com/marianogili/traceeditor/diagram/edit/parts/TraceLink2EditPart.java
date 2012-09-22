@@ -3,6 +3,7 @@ package com.marianogili.traceeditor.diagram.edit.parts;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Shape;
@@ -16,6 +17,7 @@ import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
+import org.eclipse.gef.editpolicies.FlowLayoutEditPolicy;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
@@ -80,18 +82,15 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
-		LayoutEditPolicy lep = new LayoutEditPolicy() {
 
-			protected EditPolicy createChildEditPolicy(EditPart child) {
-				EditPolicy result = child
-						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
-				if (result == null) {
-					result = new NonResizableEditPolicy();
-				}
-				return result;
+		FlowLayoutEditPolicy lep = new FlowLayoutEditPolicy() {
+
+			protected Command createAddCommand(EditPart child, EditPart after) {
+				return null;
 			}
 
-			protected Command getMoveChildrenCommand(Request request) {
+			protected Command createMoveChildCommand(EditPart child,
+					EditPart after) {
 				return null;
 			}
 
@@ -311,7 +310,7 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 		}
 		return types;
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart#handleNotificationEvent(org.eclipse.emf.common.notify.Notification)
 	 */
@@ -323,7 +322,8 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 						.getName();
 				if ("type".equals(attrName)) {
 					LinkType type = (LinkType) notification.getNewValue();
-					getPrimaryShape().fFigureTraceLinkType.setText("<< " + type.getName() + " >>");
+					getPrimaryShape().fFigureTraceLinkType.setText("<< "
+							+ type.getName() + " >>");
 				}
 			}
 		}
@@ -349,6 +349,18 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		public TraceLinkFigure() {
+
+			FlowLayout layoutThis = new FlowLayout();
+			layoutThis.setStretchMinorAxis(false);
+			layoutThis.setMinorAlignment(FlowLayout.ALIGN_CENTER);
+
+			layoutThis.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
+			layoutThis.setMajorSpacing(5);
+			layoutThis.setMinorSpacing(5);
+			layoutThis.setHorizontal(false);
+
+			this.setLayoutManager(layoutThis);
+
 			this.addPoint(new Point(getMapMode().DPtoLP(20), getMapMode()
 					.DPtoLP(0)));
 			this.addPoint(new Point(getMapMode().DPtoLP(40), getMapMode()
@@ -376,7 +388,8 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 			fFigureTraceLinkType = new WrappingLabel();
 			TraceLink traceLink = (TraceLink) resolveSemanticElement();
 			if (traceLink != null && traceLink.getType() != null)
-				fFigureTraceLinkType.setText("<< " + traceLink.getType().getName() + " >>");
+				fFigureTraceLinkType.setText("<< "
+						+ traceLink.getType().getName() + " >>");
 			else
 				fFigureTraceLinkType.setText("<<...>>");
 

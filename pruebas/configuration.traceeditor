@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:traceeditor="http://traceeditor/1.0">
-  <traceeditor:Configuration>
-    <linkTypes name="Implicit" subTypes="/0/@linkTypes.6 /0/@linkTypes.3 /0/@linkTypes.7 /0/@linkTypes.4 /0/@linkTypes.5 /0/@linkTypes.2 /0/@linkTypes.1"/>
-    <linkTypes name="Update"/>
-    <linkTypes name="Query"/>
-    <linkTypes name="Creation"/>
-    <linkTypes name="M2M"/>
-    <linkTypes name="M2T"/>
-    <linkTypes name="Composition"/>
-    <linkTypes name="Deletion"/>
-    <linkTypes name="Explicit" subTypes="/0/@linkTypes.10 /0/@linkTypes.9"/>
-    <linkTypes name="Model-Model" subTypes="/0/@linkTypes.12 /0/@linkTypes.11"/>
-    <linkTypes name="Model-Artefact" subTypes="/0/@linkTypes.20 /0/@linkTypes.23 /0/@linkTypes.21 /0/@linkTypes.19 /0/@linkTypes.22"/>
-    <linkTypes name="Static" subTypes="/0/@linkTypes.14 /0/@linkTypes.13"/>
-    <linkTypes name="Dynamic" subTypes="/0/@linkTypes.15 /0/@linkTypes.17 /0/@linkTypes.18 /0/@linkTypes.16"/>
-    <linkTypes name="Dependency"/>
-    <linkTypes name="Consistent-With"/>
-    <linkTypes name="Calls"/>
-    <linkTypes name="Synchronized-With"/>
-    <linkTypes name="Generates"/>
-    <linkTypes name="Notifies"/>
-    <linkTypes name="Satisfies"/>
-    <linkTypes name="Allocated-To"/>
-    <linkTypes name="Performs"/>
-    <linkTypes name="Supports"/>
-    <linkTypes name="Explains"/>
-  </traceeditor:Configuration>
-  <traceeditor:Configuration/>
-</xmi:XMI>
+<traceeditor:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:traceeditor="http://traceeditor/1.0">
+  <linkTypes name="Implicit" subTypes="//@linkTypes.6 //@linkTypes.3 //@linkTypes.7 //@linkTypes.4 //@linkTypes.5 //@linkTypes.2 //@linkTypes.1"/>
+  <linkTypes name="Update"/>
+  <linkTypes name="Query"/>
+  <linkTypes name="Creation"/>
+  <linkTypes name="M2M"/>
+  <linkTypes name="M2T"/>
+  <linkTypes name="Composition"/>
+  <linkTypes name="Deletion"/>
+  <linkTypes name="Explicit" subTypes="//@linkTypes.10 //@linkTypes.9"/>
+  <linkTypes name="Model-Model" subTypes="//@linkTypes.12 //@linkTypes.11"/>
+  <linkTypes name="Model-Artefact" subTypes="//@linkTypes.20 //@linkTypes.23 //@linkTypes.21 //@linkTypes.19 //@linkTypes.22"/>
+  <linkTypes name="Static" subTypes="//@linkTypes.14 //@linkTypes.13"/>
+  <linkTypes name="Dynamic" subTypes="//@linkTypes.15 //@linkTypes.17 //@linkTypes.18 //@linkTypes.16"/>
+  <linkTypes name="Dependency"/>
+  <linkTypes name="Consistent-With"/>
+  <linkTypes name="Calls"/>
+  <linkTypes name="Synchronized-With"/>
+  <linkTypes name="Generates"/>
+  <linkTypes name="Notifies"/>
+  <linkTypes name="Satisfies"/>
+  <linkTypes name="Allocated-To"/>
+  <linkTypes name="Performs"/>
+  <linkTypes name="Supports"/>
+  <linkTypes name="Explains"/>
+  <typeArtefacts name="Class"/>
+  <typeArtefacts name="Method"/>
+  <typeArtefacts name="Relation"/>
+</traceeditor:Configuration>

@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <traceeditor:TraceEditor xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:traceeditor="http://traceeditor/1.0">
   <dashboard>
-    <sourceArtefacts name="origen"/>
-    <sourceArtefacts name="origen2"/>
-    <sourceArtefacts name="origen3"/>
-    <sourceArtefacts name="origen4"/>
-    <targetArtefacts name="S"/>
-    <targetArtefacts name="S2"/>
-    <targetArtefacts name="S3"/>
+    <sourceArtefacts name="origen">
+      <type href="configuration.traceeditor#//@typeArtefacts.0"/>
+    </sourceArtefacts>
+    <sourceArtefacts name="origen2">
+      <type href="configuration.traceeditor#//@typeArtefacts.1"/>
+    </sourceArtefacts>
+    <sourceArtefacts name="origen3">
+      <type href="configuration.traceeditor#//@typeArtefacts.2"/>
+    </sourceArtefacts>
+    <sourceArtefacts name="origen4">
+      <type href="configuration.traceeditor#//@typeArtefacts.1"/>
+    </sourceArtefacts>
+    <targetArtefacts name="S">
+      <type href="configuration.traceeditor#//@typeArtefacts.1"/>
+    </targetArtefacts>
+    <targetArtefacts name="S2">
+      <type href="configuration.traceeditor#//@typeArtefacts.0"/>
+    </targetArtefacts>
+    <targetArtefacts name="S3">
+      <type href="configuration.traceeditor#//@typeArtefacts.2"/>
+    </targetArtefacts>
     <targetArtefacts name="S4"/>
     <traceLinks name="enlaces3" sources="//@dashboard/@sourceArtefacts.0 //@dashboard/@sourceArtefacts.1" targets="//@dashboard/@targetArtefacts.1 //@dashboard/@targetArtefacts.2">
-      <type href="configuration.traceeditor#/0/@linkTypes.23"/>
+      <type href="configuration.traceeditor#//@linkTypes.4"/>
     </traceLinks>
-    <traceLinks name="enlaceNuevo"/>
-    <traceLinks name="enlaceViejo" sources="//@dashboard/@sourceArtefacts.1" targets="//@dashboard/@targetArtefacts.2"/>
+    <traceLinks name="enlaceNuevo">
+      <type href="configuration.traceeditor#//@linkTypes.15"/>
+    </traceLinks>
+    <traceLinks name="enlaceViejo" sources="//@dashboard/@sourceArtefacts.1" targets="//@dashboard/@targetArtefacts.2">
+      <type href="configuration.traceeditor#//@linkTypes.7"/>
+    </traceLinks>
     <transformations name="transformacion">
-      <traceLinks name="enlace" sources="//@dashboard/@sourceArtefacts.0" targets="//@dashboard/@targetArtefacts.0 //@dashboard/@targetArtefacts.1"/>
-      <traceLinks name="enlace2"/>
+      <traceLinks name="enlace" sources="//@dashboard/@sourceArtefacts.0" targets="//@dashboard/@targetArtefacts.0 //@dashboard/@targetArtefacts.1">
+        <type href="configuration.traceeditor#//@linkTypes.8"/>
+      </traceLinks>
+      <traceLinks name="enlace2">
+        <type href="configuration.traceeditor#//@linkTypes.6"/>
+      </traceLinks>
     </transformations>
     <transformations name="transformación2"/>
   </dashboard>
