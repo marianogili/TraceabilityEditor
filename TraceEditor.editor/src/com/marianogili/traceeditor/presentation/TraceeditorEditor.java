@@ -196,31 +196,6 @@ public class TraceeditorEditor
 	 */
 	protected TreeViewer selectionViewer;
 
-//	/**
-//	 * This inverts the roll of parent and child in the content provider and show parents as a tree.
-//	 * <!-- begin-user-doc -->
-//	 * <!-- end-user-doc -->
-//	 * @generated
-//	 */
-//	protected TreeViewer parentViewer;
-//
-//	/**
-//	 * This shows how a tree view works.
-//	 * <!-- begin-user-doc -->
-//	 * <!-- end-user-doc -->
-//	 * @generated
-//	 */
-//	protected TreeViewer treeViewer;
-//
-//	/**
-//	 * This shows how a list view works.
-//	 * A list viewer doesn't support icons.
-//	 * <!-- begin-user-doc -->
-//	 * <!-- end-user-doc -->
-//	 * @generated
-//	 */
-//	protected ListViewer listViewer;
-
 	/**
 	 * This shows how a table view works.
 	 * A table can be used as a list with icons.
@@ -229,14 +204,6 @@ public class TraceeditorEditor
 	 * @generated
 	 */
 	protected TableViewer tableViewer;
-
-//	/**
-//	 * This shows how a tree view with columns works.
-//	 * <!-- begin-user-doc -->
-//	 * <!-- end-user-doc -->
-//	 * @generated
-//	 */
-//	protected TreeViewer treeViewerWithColumns;
 
 	/**
 	 * This keeps track of the active viewer pane, in the book.
@@ -966,17 +933,6 @@ public class TraceeditorEditor
 		column.setWidth(bound);
 		column.setResizable(true);
 		column.setMoveable(true);
-//		column.addSelectionListener(new SelectionListener() {
-//			@Override
-//			public void widgetSelected(SelectionEvent e) {
-//				tableViewer.refresh();
-//			}
-//			
-//			@Override
-//			public void widgetDefaultSelected(SelectionEvent e) {
-//				tableViewer.refresh();
-//			}
-//		});
 		return viewerColumn;
 	}
 	
@@ -1042,7 +998,11 @@ public class TraceeditorEditor
 				col.setLabelProvider(new ColumnLabelProvider(){
 					@Override
 					public String getText(Object element) {
-						return ((TransformationBuffer) element).transformation.getName();
+						Transformation transformation = ((TransformationBuffer) element).transformation;
+						if (transformation != null)
+							return transformation.getName();
+						else 
+							return "hola";
 					}
 				});
 				col.setEditingSupport(new EditingSupport(tableViewer) {
@@ -1076,7 +1036,11 @@ public class TraceeditorEditor
 				col.setLabelProvider(new ColumnLabelProvider(){
 					@Override
 					public String getText(Object element) {
-						return ((TransformationBuffer) element).traceLink.getName();
+						TraceLink traceLink = ((TransformationBuffer) element).traceLink;
+						if (traceLink != null)
+							return traceLink.getName();
+						else 
+							return "chau";
 					}
 				});
 				col.setEditingSupport(new EditingSupport(tableViewer) {
@@ -1112,7 +1076,11 @@ public class TraceeditorEditor
 				col.setLabelProvider(new ColumnLabelProvider(){
 					@Override
 					public String getText(Object element) {
-						return ((TransformationBuffer) element).source.getName();
+						Artefact artefact = ((TransformationBuffer) element).source;
+						if (artefact != null)
+							return artefact.getName();
+						else 
+							return "pero";
 					}
 				});
 				col.setEditingSupport(new EditingSupport(tableViewer) {
@@ -1147,7 +1115,11 @@ public class TraceeditorEditor
 				col.setLabelProvider(new ColumnLabelProvider(){
 					@Override
 					public String getText(Object element) {
-						return ((TransformationBuffer) element).target.getName();
+						Artefact artefact = ((TransformationBuffer) element).target;
+						if (artefact != null)
+							return artefact.getName();
+						else 
+							return "che";
 					}
 				});
 				col.setEditingSupport(new EditingSupport(tableViewer) {
@@ -1184,18 +1156,16 @@ public class TraceeditorEditor
 				{
 					public Object [] getElements(Object object) 
 					{
-//						return ((TraceabilityEditorDiagram)object).getTransformations().toArray();
-						List<Transformation> transformations = ((TraceEditor)object).getDashboard().getTransformations();
-						ArrayList<Object> elements = new ArrayList<Object>(transformations.size());
+						List<TraceLink> traceLinks = ((TraceEditor)object).getDashboard().getTraceLinks();
+						ArrayList<Object> elements = new ArrayList<Object>(traceLinks.size());
 						TransformationBuffer element;
 						
-						for (Transformation aTransformation : transformations) {
-							for (TraceLink aTrace : aTransformation.getTraceLinks()) {
-								for (Artefact aSource : aTrace.getSources()) {
-									for (Artefact aTarget : aTrace.getTargets()) {
-										element = new TransformationBuffer(aTransformation, aTrace, aSource, aTarget);
-										elements.add(element);
-									}
+						for (TraceLink aTraceLink : traceLinks) {
+							Transformation aTrasformation = aTraceLink.getTransformation();
+							for (Artefact aSource : aTraceLink.getSources()) {
+								for (Artefact aTarget : aTraceLink.getTargets()) {
+									element = new TransformationBuffer(aTrasformation, aTraceLink, aSource, aTarget);
+									elements.add(element);
 								}
 							}
 						}
@@ -1214,7 +1184,6 @@ public class TraceeditorEditor
 						super.notifyChanged(notification);
 					}
 				});
-//				tableViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 				
 				Resource resource = (Resource)editingDomain.getResourceSet().getResources().get(0);
 				Object rootObject = resource.getContents().get(0);
