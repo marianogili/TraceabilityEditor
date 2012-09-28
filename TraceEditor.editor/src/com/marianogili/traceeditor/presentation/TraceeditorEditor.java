@@ -38,6 +38,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.ui.MarkerHelper;
 import org.eclipse.emf.common.ui.ViewerPane;
+import org.eclipse.emf.common.ui.celleditor.ExtendedComboBoxCellEditor;
 import org.eclipse.emf.common.ui.editor.ProblemEditorPart;
 import org.eclipse.emf.common.ui.viewer.IViewerProvider;
 import org.eclipse.emf.common.util.BasicDiagnostic;
@@ -122,10 +123,13 @@ import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
 
 import com.marianogili.traceeditor.Artefact;
+import com.marianogili.traceeditor.Configuration;
+import com.marianogili.traceeditor.LinkType;
 import com.marianogili.traceeditor.TraceEditor;
 import com.marianogili.traceeditor.TraceLink;
 import com.marianogili.traceeditor.TraceeditorPackage;
 import com.marianogili.traceeditor.Transformation;
+import com.marianogili.traceeditor.TypeArtefact;
 import com.marianogili.traceeditor.provider.TraceeditorItemProviderAdapterFactory;
 
 /**
@@ -1014,8 +1018,10 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 				// Comienzo de configuración de las columnas.
 				//
+
+				// Transformación
 				TableViewerColumn col = createTableViewerColumn(
-						"Transformación", 100, 0);
+						"Transformación", 150, 0);
 				col.setLabelProvider(new ColumnLabelProvider() {
 					@Override
 					public String getText(Object element) {
@@ -1058,7 +1064,8 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 					}
 				});
 
-				col = createTableViewerColumn("Enlace", 100, 1);
+				// Enlace
+				col = createTableViewerColumn("Enlace/Traza", 150, 1);
 				col.setLabelProvider(new ColumnLabelProvider() {
 					@Override
 					public String getText(Object element) {
@@ -1102,7 +1109,63 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 					}
 				});
 
-				col = createTableViewerColumn("Origen", 100, 2);
+				// Tipo del enlace
+				col = createTableViewerColumn("Tipo del enlace", 150, 2);
+				col.setLabelProvider(new ColumnLabelProvider() {
+					@Override
+					public String getText(Object element) {
+						TraceLink traceLink = ((TransformationBuffer) element).traceLink;
+						if (traceLink != null && traceLink.getType() != null)
+							return traceLink.getType().getName();
+						else
+							return "<< Sin tipo >>";
+					}
+				});
+				col.setEditingSupport(new EditingSupport(tableViewer) {
+
+					@Override
+					protected void setValue(Object element, Object value) {
+						TraceLink traceLink = ((TransformationBuffer) element).traceLink;
+						Command cmd = SetCommand.create(editingDomain,
+								traceLink,
+								TraceeditorPackage.Literals.TRACE_LINK__TYPE,
+								value);
+						editingDomain.getCommandStack().execute(cmd);
+						tableViewer.refresh();
+					}
+
+					@Override
+					protected Object getValue(Object element) {
+						return ((TransformationBuffer) element).traceLink
+								.getType();
+					}
+
+					@Override
+					protected CellEditor getCellEditor(Object element) {
+						Resource resource = editingDomain.getResourceSet()
+								.getResources().get(1);
+
+						Configuration configuration = (Configuration) resource
+								.getContents().get(0);
+
+						return new ExtendedComboBoxCellEditor(tableViewer
+								.getTable(), configuration.getLinkTypes(),
+								new ColumnLabelProvider() {
+									@Override
+									public String getText(Object element) {
+										return ((LinkType) element).getName();
+									}
+								});
+					}
+
+					@Override
+					protected boolean canEdit(Object element) {
+						return true;
+					}
+				});
+
+				// Artefacto origen
+				col = createTableViewerColumn("Artefacto origen", 150, 3);
 				col.setLabelProvider(new ColumnLabelProvider() {
 					@Override
 					public String getText(Object element) {
@@ -1145,7 +1208,64 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 					}
 				});
 
-				col = createTableViewerColumn("Destino", 100, 3);
+				// Tipo del artefacto origen
+				col = createTableViewerColumn("Tipo del origen", 150, 4);
+				col.setLabelProvider(new ColumnLabelProvider() {
+					@Override
+					public String getText(Object element) {
+						Artefact artefact = ((TransformationBuffer) element).source;
+						if (artefact != null && artefact.getType() != null)
+							return artefact.getType().getName();
+						else
+							return "<< Sin tipo >>";
+					}
+				});
+				col.setEditingSupport(new EditingSupport(tableViewer) {
+
+					@Override
+					protected void setValue(Object element, Object value) {
+						Artefact artefact = ((TransformationBuffer) element).source;
+						Command cmd = SetCommand.create(editingDomain,
+								artefact,
+								TraceeditorPackage.Literals.ARTEFACT__TYPE,
+								value);
+						editingDomain.getCommandStack().execute(cmd);
+						tableViewer.refresh();
+					}
+
+					@Override
+					protected Object getValue(Object element) {
+						return ((TransformationBuffer) element).source
+								.getType();
+					}
+
+					@Override
+					protected CellEditor getCellEditor(Object element) {
+						Resource resource = editingDomain.getResourceSet()
+								.getResources().get(1);
+
+						Configuration configuration = (Configuration) resource
+								.getContents().get(0);
+
+						return new ExtendedComboBoxCellEditor(tableViewer
+								.getTable(), configuration.getTypeArtefacts(),
+								new ColumnLabelProvider() {
+									@Override
+									public String getText(Object element) {
+										return ((TypeArtefact) element)
+												.getName();
+									}
+								});
+					}
+
+					@Override
+					protected boolean canEdit(Object element) {
+						return true;
+					}
+				});
+
+				// Artefacto destino
+				col = createTableViewerColumn("Artefacto destino", 150, 5);
 				col.setLabelProvider(new ColumnLabelProvider() {
 					@Override
 					public String getText(Object element) {
@@ -1180,6 +1300,62 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 					@Override
 					protected CellEditor getCellEditor(Object element) {
 						return new TextCellEditor(tableViewer.getTable());
+					}
+
+					@Override
+					protected boolean canEdit(Object element) {
+						return true;
+					}
+				});
+
+				// Tipo del artefacto destino
+				col = createTableViewerColumn("Tipo del destino", 150, 6);
+				col.setLabelProvider(new ColumnLabelProvider() {
+					@Override
+					public String getText(Object element) {
+						Artefact artefact = ((TransformationBuffer) element).target;
+						if (artefact != null && artefact.getType() != null)
+							return artefact.getType().getName();
+						else
+							return "<< Sin tipo >>";
+					}
+				});
+				col.setEditingSupport(new EditingSupport(tableViewer) {
+
+					@Override
+					protected void setValue(Object element, Object value) {
+						Artefact artefact = ((TransformationBuffer) element).target;
+						Command cmd = SetCommand.create(editingDomain,
+								artefact,
+								TraceeditorPackage.Literals.ARTEFACT__TYPE,
+								value);
+						editingDomain.getCommandStack().execute(cmd);
+						tableViewer.refresh();
+					}
+
+					@Override
+					protected Object getValue(Object element) {
+						return ((TransformationBuffer) element).target
+								.getType();
+					}
+
+					@Override
+					protected CellEditor getCellEditor(Object element) {
+						Resource resource = editingDomain.getResourceSet()
+								.getResources().get(1);
+
+						Configuration configuration = (Configuration) resource
+								.getContents().get(0);
+
+						return new ExtendedComboBoxCellEditor(tableViewer
+								.getTable(), configuration.getTypeArtefacts(),
+								new ColumnLabelProvider() {
+									@Override
+									public String getText(Object element) {
+										return ((TypeArtefact) element)
+												.getName();
+									}
+								});
 					}
 
 					@Override
