@@ -15,20 +15,6 @@
       </parser>
    </extension>
 
-   <extension point="org.eclipse.ui.editors" id="gmf-editor">
-      <?gmfgen generated="true"?>
-      <editor
-         id="com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorID"
-         name="%editorName"
-         icon="icons/obj16/TraceeditorDiagramFile.gif"
-         extensions="traceeditor"
-         default="true"
-         class="com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditor"
-         matchingStrategy="com.marianogili.traceeditor.diagram.part.TraceEditorMatchingStrategy"
-         contributorClass="com.marianogili.traceeditor.diagram.part.TraceEditorDiagramActionBarContributor">
-      </editor>
-   </extension>
-   
    <extension point="org.eclipse.ui.contexts" id="ui-context">
       <?gmfgen generated="true"?>
       <context
@@ -73,7 +59,7 @@
          class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
          id="TraceEditorPresentation">
          <Priority name="Lowest"/>
-         <ViewId id="com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorID">
+         <ViewId id="com.marianogili.traceeditor.presentation.TraceeditorEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="delete"/>
             </ElementType>
@@ -86,7 +72,7 @@
          class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
          id="TraceEditorPresentationIDE">
          <Priority name="Lowest"/>
-         <ViewId id="com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorID">
+         <ViewId id="com.marianogili.traceeditor.presentation.TraceeditorEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="bookmark"/>
             </ElementType>
@@ -96,7 +82,7 @@
             class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
             id="TraceEditorRender">
          <Priority name="Lowest"/>
-         <ViewId id="com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorID">
+         <ViewId id="com.marianogili.traceeditor.presentation.TraceeditorEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="cut"/>
                <GlobalActionId actionId="copy"/>
@@ -204,6 +190,15 @@
             <input type="org.eclipse.gmf.runtime.notation.View"/>
             <input type="org.eclipse.gef.EditPart"/>
             <input type="com.marianogili.traceeditor.diagram.navigator.TraceEditorAbstractNavigatorItem"/>
+            <input type="com.marianogili.traceeditor.Artefact"/>
+            <input type="com.marianogili.traceeditor.Configuration"/>
+            <input type="com.marianogili.traceeditor.Dashboard"/>
+            <input type="com.marianogili.traceeditor.LynkType"/>
+            <input type="com.marianogili.traceeditor.TraceEditor"/>
+            <input type="com.marianogili.traceeditor.TraceLink"/>
+            <input type="com.marianogili.traceeditor.Transformation"/>
+            <input type="com.marianogili.traceeditor.TypeArtefact"/>
+            <input type="com.marianogili.traceeditor.NamedElement"/>
          </propertySection>
       </propertySections>
    </extension>
@@ -413,7 +408,7 @@
             contentProvider="com.marianogili.traceeditor.diagram.navigator.TraceEditorNavigatorContentProvider" 
             labelProvider="com.marianogili.traceeditor.diagram.navigator.TraceEditorNavigatorLabelProvider"
             icon="icons/obj16/TraceeditorDiagramFile.gif"
-            activeByDefault="true">
+            activeByDefault="false">
          <triggerPoints>
             <or>
 	           <and>

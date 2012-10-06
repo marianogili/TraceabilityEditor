@@ -65,11 +65,16 @@ import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
 import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
-import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramEditDomain;
+import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramGraphicalViewer;
+import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramWorkbenchPart;
+import org.eclipse.gmf.runtime.diagram.ui.properties.views.PropertiesBrowserPage;
 import org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.document.FileEditorInputProxy;
 import org.eclipse.gmf.runtime.emf.core.util.EMFCoreUtil;
+import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IStatusLineManager;
@@ -124,7 +129,7 @@ import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.PropertySheet;
-import org.eclipse.ui.views.properties.PropertySheetPage;
+import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor;
 
 import com.marianogili.traceeditor.Artefact;
 import com.marianogili.traceeditor.Configuration;
@@ -144,7 +149,8 @@ import com.marianogili.traceeditor.provider.TraceeditorItemProviderAdapterFactor
  * @generated
  */
 public class TraceeditorEditor extends MultiPageEditorPart implements
-		IEditingDomainProvider, IMenuListener, IViewerProvider, IGotoMarker {
+		IEditingDomainProvider, IMenuListener, IViewerProvider, IGotoMarker,
+		ITabbedPropertySheetPageContributor, IDiagramWorkbenchPart {
 	/**
 	 * This keeps track of the editing domain that is used to track all changes
 	 * to the model. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -190,24 +196,7 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * 
 	 * @generated
 	 */
-	protected PropertySheetPage propertySheetPage;
-
-	/**
-	 * This is the viewer that shadows the selection in the content outline. The
-	 * parent relation must be correctly defined for this to work. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected TreeViewer selectionViewer;
-
-	/**
-	 * This shows how a table view works. A table can be used as a list with
-	 * icons. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-//	protected TableViewer tableViewer;
+	protected PropertiesBrowserPage propertySheetPage;
 
 	/**
 	 * This keeps track of the active content viewer, which may be either one of
@@ -639,11 +628,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		TransactionalEditingDomain domain = TransactionalEditingDomain.Factory.INSTANCE
 				.createEditingDomain();
 		domain.setID("TraceEditor.diagram.EditingDomain");
-
-		// Create the command stack that will notify this editor as commands are
-		// executed.
-		//
-		// BasicCommandStack commandStack = new BasicCommandStack();
 
 		// Add a listener to set the most recent command's affected objects to
 		// be the selection of the viewer with focus.
@@ -1153,8 +1137,8 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 					Configuration configuration = (Configuration) resource
 							.getContents().get(0);
 
-					return new ExtendedComboBoxCellEditor(viewer
-							.getTable(), configuration.getLinkTypes(),
+					return new ExtendedComboBoxCellEditor(viewer.getTable(),
+							configuration.getLinkTypes(),
 							new ColumnLabelProvider() {
 								@Override
 								public String getText(Object element) {
@@ -1246,8 +1230,8 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 					Configuration configuration = (Configuration) resource
 							.getContents().get(0);
 
-					return new ExtendedComboBoxCellEditor(viewer
-							.getTable(), configuration.getTypeArtefacts(),
+					return new ExtendedComboBoxCellEditor(viewer.getTable(),
+							configuration.getTypeArtefacts(),
 							new ColumnLabelProvider() {
 								@Override
 								public String getText(Object element) {
@@ -1339,8 +1323,8 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 					Configuration configuration = (Configuration) resource
 							.getContents().get(0);
 
-					return new ExtendedComboBoxCellEditor(viewer
-							.getTable(), configuration.getTypeArtefacts(),
+					return new ExtendedComboBoxCellEditor(viewer.getTable(),
+							configuration.getTypeArtefacts(),
 							new ColumnLabelProvider() {
 								@Override
 								public String getText(Object element) {
@@ -1437,14 +1421,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 				}
 			});
 
-			// Resource resource = (Resource) editingDomain.getResourceSet()
-			// .getResources().get(0);
-			// Object rootObject = resource.getContents().get(0);
-			// if (rootObject instanceof TraceEditor) {
-			// tableViewer.setInput(rootObject);
-			// viewerPane.setTitle(rootObject);
-			// }
-
 			createContextMenuFor(viewer);
 			getEditorSite().setSelectionProvider(viewer);
 		}
@@ -1458,7 +1434,7 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		public void setInput(Object input) {
 			viewer.setInput(input);
 		}
-		
+
 		/**
 		 * @return the viewer
 		 */
@@ -1499,12 +1475,12 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 				pageIndex = addPage(diagramEditor, getEditorInput());
 				setPageText(pageIndex, "Diagram");
 
-				Resource resource = (Resource) editingDomain.getResourceSet()
-						.getResources().get(0);
-				Object rootObject = resource.getContents().get(0);
-				if (rootObject instanceof TraceEditor) {
-					tableEditorPart.getViewer().setInput(rootObject);
-				}
+				// Resource resource = (Resource) editingDomain.getResourceSet()
+				// .getResources().get(0);
+				// Object rootObject = resource.getContents().get(0);
+				// if (rootObject instanceof TraceEditor) {
+				// tableEditorPart.getViewer().setInput(rootObject);
+				// }
 			} catch (PartInitException e) {
 				// add some error handling for production-quality coding
 				e.printStackTrace();
@@ -1690,29 +1666,18 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * This accesses a cached version of the property sheet. <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
 		if (propertySheetPage == null) {
-			propertySheetPage = new ExtendedPropertySheetPage(editingDomain) {
-				@Override
-				public void setSelectionToViewer(List<?> selection) {
-					TraceeditorEditor.this.setSelectionToViewer(selection);
-					TraceeditorEditor.this.setFocus();
-				}
-
-				@Override
+			propertySheetPage = new PropertiesBrowserPage(this) {
 				public void setActionBars(IActionBars actionBars) {
 					super.setActionBars(actionBars);
 					getActionBarContributor().shareGlobalActions(this,
 							actionBars);
 				}
 			};
-			propertySheetPage
-					.setPropertySourceProvider(new AdapterFactoryContentProvider(
-							adapterFactory));
 		}
-
 		return propertySheetPage;
 	}
 
@@ -2068,5 +2033,30 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 */
 	protected boolean showOutlineView() {
 		return true;
+	}
+
+	@Override
+	public String getContributorId() {
+		return diagramEditor.getContributorId();
+	}
+
+	@Override
+	public Diagram getDiagram() {
+		return diagramEditor.getDiagram();
+	}
+
+	@Override
+	public IDiagramEditDomain getDiagramEditDomain() {
+		return diagramEditor.getDiagramEditDomain();
+	}
+
+	@Override
+	public DiagramEditPart getDiagramEditPart() {
+		return diagramEditor.getDiagramEditPart();
+	}
+
+	@Override
+	public IDiagramGraphicalViewer getDiagramGraphicalViewer() {
+		return diagramEditor.getDiagramGraphicalViewer();
 	}
 }
