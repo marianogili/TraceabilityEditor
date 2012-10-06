@@ -85,7 +85,7 @@ public class TraceEditorNewDiagramFileWizard extends Wizard {
 		}
 		myFileCreationPage.setContainerFullPath(filePath);
 		myFileCreationPage.setFileName(TraceEditorDiagramEditorUtil
-				.getUniqueFileName(filePath, fileName, "traceeditor_diagram")); //$NON-NLS-1$
+				.getUniqueFileName(filePath, fileName, "traceeditor")); //$NON-NLS-1$
 
 		diagramRootElementSelectionPage = new DiagramRootElementSelectionPage(
 				Messages.TraceEditorNewDiagramFileWizard_RootSelectionPageName);
@@ -141,6 +141,7 @@ public class TraceEditorNewDiagramFileWizard extends Wizard {
 								TraceEditorEditPart.MODEL_ID,
 								TraceEditorDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
 				diagramResource.getContents().add(diagram);
+				diagramResource.getContents().add(diagram.getElement());
 				return CommandResult.newOKCommandResult();
 			}
 		};

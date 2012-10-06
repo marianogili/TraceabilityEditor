@@ -17,7 +17,7 @@ public class TraceEditorUriEditorInputTester extends PropertyTester {
 			return false;
 		}
 		URIEditorInput editorInput = (URIEditorInput) receiver;
-		return "traceeditor_diagram".equals(editorInput.getURI().fileExtension()); //$NON-NLS-1$
+		return "traceeditor".equals(editorInput.getURI().fileExtension()); //$NON-NLS-1$
 	}
 
 }

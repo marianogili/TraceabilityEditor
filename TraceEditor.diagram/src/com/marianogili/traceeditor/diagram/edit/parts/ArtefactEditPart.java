@@ -117,14 +117,14 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof WrappingLabelEditPart) {
-			((WrappingLabelEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureTypeArtefact());
-			return true;
-		}
 		if (childEditPart instanceof ArtefactNameEditPart) {
 			((ArtefactNameEditPart) childEditPart).setLabel(getPrimaryShape()
 					.getFigureArtefactNameFigure());
+			return true;
+		}
+		if (childEditPart instanceof WrappingLabelEditPart) {
+			((WrappingLabelEditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureTypeArtefact());
 			return true;
 		}
 		return false;
@@ -134,10 +134,10 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof WrappingLabelEditPart) {
+		if (childEditPart instanceof ArtefactNameEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof ArtefactNameEditPart) {
+		if (childEditPart instanceof WrappingLabelEditPart) {
 			return true;
 		}
 		return false;

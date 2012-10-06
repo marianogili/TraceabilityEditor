@@ -156,7 +156,7 @@ public class TraceEditorDiagramEditorUtil {
 	 * This method should be called within a workspace modify operation since it creates resources.
 	 * @generated
 	 */
-	public static Resource createDiagram(URI diagramURI, URI modelURI,
+	public static Resource createDiagram(URI diagramURI,
 			IProgressMonitor progressMonitor) {
 		TransactionalEditingDomain editingDomain = GMFEditingDomainFactory.INSTANCE
 				.createEditingDomain();
@@ -166,8 +166,6 @@ public class TraceEditorDiagramEditorUtil {
 						3);
 		final Resource diagramResource = editingDomain.getResourceSet()
 				.createResource(diagramURI);
-		final Resource modelResource = editingDomain.getResourceSet()
-				.createResource(modelURI);
 		final String diagramName = diagramURI.lastSegment();
 		AbstractTransactionalCommand command = new AbstractTransactionalCommand(
 				editingDomain,
@@ -177,7 +175,7 @@ public class TraceEditorDiagramEditorUtil {
 					IProgressMonitor monitor, IAdaptable info)
 					throws ExecutionException {
 				TraceEditor model = createInitialModel();
-				attachModelToResource(model, modelResource);
+				attachModelToResource(model, diagramResource);
 
 				Diagram diagram = ViewService
 						.createDiagram(
@@ -191,9 +189,7 @@ public class TraceEditorDiagramEditorUtil {
 				}
 
 				try {
-					modelResource
-							.save(com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorUtil
-									.getSaveOptions());
+
 					diagramResource
 							.save(com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorUtil
 									.getSaveOptions());
@@ -212,7 +208,7 @@ public class TraceEditorDiagramEditorUtil {
 			TraceEditorDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-		setCharset(WorkspaceSynchronizer.getFile(modelResource));
+
 		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 		return diagramResource;
 	}

@@ -37,11 +37,6 @@ public class TraceEditorCreationWizard extends Wizard implements INewWizard {
 	/**
 	 * @generated
 	 */
-	protected TraceEditorCreationWizardPage domainModelFilePage;
-
-	/**
-	 * @generated
-	 */
 	protected Resource diagram;
 
 	/**
@@ -102,32 +97,12 @@ public class TraceEditorCreationWizard extends Wizard implements INewWizard {
 	 */
 	public void addPages() {
 		diagramModelFilePage = new TraceEditorCreationWizardPage(
-				"DiagramModelFile", getSelection(), "traceeditor_diagram"); //$NON-NLS-1$ //$NON-NLS-2$
+				"DiagramModelFile", getSelection(), "traceeditor"); //$NON-NLS-1$ //$NON-NLS-2$
 		diagramModelFilePage
 				.setTitle(Messages.TraceEditorCreationWizard_DiagramModelFilePageTitle);
 		diagramModelFilePage
 				.setDescription(Messages.TraceEditorCreationWizard_DiagramModelFilePageDescription);
 		addPage(diagramModelFilePage);
-
-		domainModelFilePage = new TraceEditorCreationWizardPage(
-				"DomainModelFile", getSelection(), "traceeditor") { //$NON-NLS-1$ //$NON-NLS-2$
-
-			public void setVisible(boolean visible) {
-				if (visible) {
-					String fileName = diagramModelFilePage.getFileName();
-					fileName = fileName.substring(0, fileName.length()
-							- ".traceeditor_diagram".length()); //$NON-NLS-1$
-					setFileName(TraceEditorDiagramEditorUtil.getUniqueFileName(
-							getContainerFullPath(), fileName, "traceeditor")); //$NON-NLS-1$
-				}
-				super.setVisible(visible);
-			}
-		};
-		domainModelFilePage
-				.setTitle(Messages.TraceEditorCreationWizard_DomainModelFilePageTitle);
-		domainModelFilePage
-				.setDescription(Messages.TraceEditorCreationWizard_DomainModelFilePageDescription);
-		addPage(domainModelFilePage);
 	}
 
 	/**
@@ -139,8 +114,7 @@ public class TraceEditorCreationWizard extends Wizard implements INewWizard {
 			protected void execute(IProgressMonitor monitor)
 					throws CoreException, InterruptedException {
 				diagram = TraceEditorDiagramEditorUtil.createDiagram(
-						diagramModelFilePage.getURI(), domainModelFilePage
-								.getURI(), monitor);
+						diagramModelFilePage.getURI(), monitor);
 				if (isOpenNewlyCreatedDiagramEditor() && diagram != null) {
 					try {
 						TraceEditorDiagramEditorUtil.openDiagram(diagram);

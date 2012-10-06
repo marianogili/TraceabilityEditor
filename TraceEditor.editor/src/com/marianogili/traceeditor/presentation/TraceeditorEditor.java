@@ -13,7 +13,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.EventObject;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,7 +36,6 @@ import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.ui.MarkerHelper;
-import org.eclipse.emf.common.ui.ViewerPane;
 import org.eclipse.emf.common.ui.celleditor.ExtendedComboBoxCellEditor;
 import org.eclipse.emf.common.ui.editor.ProblemEditorPart;
 import org.eclipse.emf.common.ui.viewer.IViewerProvider;
@@ -68,6 +66,10 @@ import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
 import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.document.FileEditorInputProxy;
+import org.eclipse.gmf.runtime.emf.core.util.EMFCoreUtil;
 import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IStatusLineManager;
@@ -81,7 +83,6 @@ import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
-import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
@@ -107,14 +108,17 @@ import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IEditorSite;
+import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.SaveAsDialog;
 import org.eclipse.ui.ide.IGotoMarker;
+import org.eclipse.ui.part.EditorPart;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.MultiPageEditorPart;
+import org.eclipse.ui.part.MultiPageSelectionProvider;
 import org.eclipse.ui.views.contentoutline.ContentOutline;
 import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
@@ -130,6 +134,7 @@ import com.marianogili.traceeditor.TraceLink;
 import com.marianogili.traceeditor.TraceeditorPackage;
 import com.marianogili.traceeditor.Transformation;
 import com.marianogili.traceeditor.TypeArtefact;
+import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditor;
 import com.marianogili.traceeditor.provider.TraceeditorItemProviderAdapterFactory;
 
 /**
@@ -139,8 +144,7 @@ import com.marianogili.traceeditor.provider.TraceeditorItemProviderAdapterFactor
  * @generated
  */
 public class TraceeditorEditor extends MultiPageEditorPart implements
-		IEditingDomainProvider, ISelectionProvider, IMenuListener,
-		IViewerProvider, IGotoMarker {
+		IEditingDomainProvider, IMenuListener, IViewerProvider, IGotoMarker {
 	/**
 	 * This keeps track of the editing domain that is used to track all changes
 	 * to the model. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -203,15 +207,7 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * 
 	 * @generated
 	 */
-	protected TableViewer tableViewer;
-
-	/**
-	 * This keeps track of the active viewer pane, in the book. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected ViewerPane currentViewerPane;
+//	protected TableViewer tableViewer;
 
 	/**
 	 * This keeps track of the active content viewer, which may be either one of
@@ -221,31 +217,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * @generated
 	 */
 	protected Viewer currentViewer;
-
-	/**
-	 * This listens to which ever viewer is active. <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected ISelectionChangedListener selectionChangedListener;
-
-	/**
-	 * This keeps track of all the
-	 * {@link org.eclipse.jface.viewers.ISelectionChangedListener}s that are
-	 * listening to this editor. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected Collection<ISelectionChangedListener> selectionChangedListeners = new ArrayList<ISelectionChangedListener>();
-
-	/**
-	 * This keeps track of the selection of the editor as a whole. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected ISelection editorSelection = StructuredSelection.EMPTY;
 
 	/**
 	 * The MarkerHelper is responsible for creating workspace resource markers
@@ -471,11 +442,19 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		}
 	};
 
+	private IEditorInput wrappedInput;
+
+	private TableEditorPart tableEditorPart;
+
+	private MultiPageSelectionProvider selectionProvider;
+
+	private TraceEditorDiagramEditor diagramEditor;
+
 	/**
 	 * Handles activation of the editor or it's associated views. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void handleActivate() {
 		// Recompute the read only state.
@@ -485,7 +464,7 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 			// Refresh any actions that may become enabled or disabled.
 			//
-			setSelection(getSelection());
+			selectionProvider.setSelection(selectionProvider.getSelection());
 		}
 
 		if (!removedResources.isEmpty()) {
@@ -508,7 +487,7 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * Handles what to do with changed resources on activation. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void handleChangedResources() {
 		if (!changedResources.isEmpty()
@@ -533,10 +512,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 						}
 					}
 				}
-			}
-
-			if (AdapterFactoryEditingDomain.isStale(editorSelection)) {
-				setSelection(StructuredSelection.EMPTY);
 			}
 
 			updateProblemIndication = true;
@@ -613,18 +588,38 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * This creates a model editor. <!-- begin-user-doc --> <!-- end-user-doc
 	 * -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public TraceeditorEditor() {
 		super();
 		initializeEditingDomain();
+		selectionProvider = new MultiPageSelectionProvider(this);
+		selectionProvider
+				.addSelectionChangedListener(new ISelectionChangedListener() {
+					public void selectionChanged(SelectionChangedEvent event) {
+						setStatusLineManager(event.getSelection());
+					}
+				});
+	}
+
+	protected IEditorInput getWrappedInput() {
+		if (wrappedInput == null) {
+			if (getEditorInput() instanceof IFileEditorInput) {
+				wrappedInput = new FileEditorInputProxy(
+						(IFileEditorInput) getEditorInput(),
+						(TransactionalEditingDomain) getEditingDomain());
+			} else {
+				wrappedInput = getEditorInput();
+			}
+		}
+		return wrappedInput;
 	}
 
 	/**
 	 * This sets up the editing domain for the model editor. <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void initializeEditingDomain() {
 		// Create an adapter factory that yields item providers.
@@ -639,41 +634,48 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		adapterFactory
 				.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
+		// Create a transactional editing domain
+		//
+		TransactionalEditingDomain domain = TransactionalEditingDomain.Factory.INSTANCE
+				.createEditingDomain();
+		domain.setID("TraceEditor.diagram.EditingDomain");
+
 		// Create the command stack that will notify this editor as commands are
 		// executed.
 		//
-		BasicCommandStack commandStack = new BasicCommandStack();
+		// BasicCommandStack commandStack = new BasicCommandStack();
 
 		// Add a listener to set the most recent command's affected objects to
 		// be the selection of the viewer with focus.
 		//
-		commandStack.addCommandStackListener(new CommandStackListener() {
-			public void commandStackChanged(final EventObject event) {
-				getContainer().getDisplay().asyncExec(new Runnable() {
-					public void run() {
-						firePropertyChange(IEditorPart.PROP_DIRTY);
+		domain.getCommandStack().addCommandStackListener(
+				new CommandStackListener() {
+					public void commandStackChanged(final EventObject event) {
+						getContainer().getDisplay().asyncExec(new Runnable() {
+							public void run() {
+								firePropertyChange(IEditorPart.PROP_DIRTY);
 
-						// Try to select the affected objects.
-						//
-						Command mostRecentCommand = ((CommandStack) event
-								.getSource()).getMostRecentCommand();
-						if (mostRecentCommand != null) {
-							setSelectionToViewer(mostRecentCommand
-									.getAffectedObjects());
-						}
-						if (propertySheetPage != null
-								&& !propertySheetPage.getControl().isDisposed()) {
-							propertySheetPage.refresh();
-						}
+								// Try to select the affected objects.
+								//
+								Command mostRecentCommand = ((CommandStack) event
+										.getSource()).getMostRecentCommand();
+								if (mostRecentCommand != null) {
+									setSelectionToViewer(mostRecentCommand
+											.getAffectedObjects());
+								}
+								if (propertySheetPage != null
+										&& !propertySheetPage.getControl()
+												.isDisposed()) {
+									propertySheetPage.refresh();
+								}
+							}
+						});
 					}
 				});
-			}
-		});
 
 		// Create the editing domain with a special command stack.
 		//
-		editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
-				commandStack, new HashMap<Resource, Boolean>());
+		editingDomain = (AdapterFactoryEditingDomain) domain;
 	}
 
 	/**
@@ -790,67 +792,15 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public void setCurrentViewerPane(ViewerPane viewerPane) {
-		if (currentViewerPane != viewerPane) {
-			if (currentViewerPane != null) {
-				currentViewerPane.showFocus(false);
-			}
-			currentViewerPane = viewerPane;
-		}
-		setCurrentViewer(currentViewerPane.getViewer());
-	}
-
-	/**
 	 * This makes sure that one content viewer, either for the current page or
 	 * the outline view, if it has focus, is the current one. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setCurrentViewer(Viewer viewer) {
-		// If it is changing...
-		//
 		if (currentViewer != viewer) {
-			if (selectionChangedListener == null) {
-				// Create the listener on demand.
-				//
-				selectionChangedListener = new ISelectionChangedListener() {
-					// This just notifies those things that are affected by the
-					// section.
-					//
-					public void selectionChanged(
-							SelectionChangedEvent selectionChangedEvent) {
-						setSelection(selectionChangedEvent.getSelection());
-					}
-				};
-			}
-
-			// Stop listening to the old one.
-			//
-			if (currentViewer != null) {
-				currentViewer
-						.removeSelectionChangedListener(selectionChangedListener);
-			}
-
-			// Start listening to the new one.
-			//
-			if (viewer != null) {
-				viewer.addSelectionChangedListener(selectionChangedListener);
-			}
-
-			// Remember it.
-			//
 			currentViewer = viewer;
-
-			// Set the editors selection based on the current viewer's
-			// selection.
-			//
-			setSelection(currentViewer == null ? StructuredSelection.EMPTY
-					: currentViewer.getSelection());
 		}
 	}
 
@@ -947,18 +897,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		}
 	}
 
-	private TableViewerColumn createTableViewerColumn(String title, int bound,
-			final int colNumber) {
-		final TableViewerColumn viewerColumn = new TableViewerColumn(
-				tableViewer, SWT.NONE);
-		final TableColumn column = viewerColumn.getColumn();
-		column.setText(title);
-		column.setWidth(bound);
-		column.setResizable(true);
-		column.setMoveable(true);
-		return viewerColumn;
-	}
-
 	private class TransformationBuffer {
 		public Transformation transformation;
 		public TraceLink traceLink;
@@ -972,6 +910,560 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 			this.traceLink = traceLink;
 			this.source = source;
 			this.target = target;
+		}
+	}
+
+	private abstract class TraceeditorEditorPart extends EditorPart implements
+			IMenuListener, IEditingDomainProvider {
+
+		protected TraceeditorEditor parentEditor;
+
+		public TraceeditorEditorPart(TraceeditorEditor parent) {
+			super();
+			this.parentEditor = parent;
+		}
+
+		protected String getString(String key) {
+			return TraceEditorEditorPlugin.INSTANCE.getString(key);
+		}
+
+		public EditingDomain getEditingDomain() {
+			return parentEditor.getEditingDomain();
+		}
+
+		protected BasicCommandStack getCommandStack() {
+			return ((BasicCommandStack) getEditingDomain().getCommandStack());
+		}
+
+		protected AdapterFactory getAdapterFactory() {
+			return ((AdapterFactoryEditingDomain) ((FileEditorInputProxy) getEditorInput())
+					.getEditingDomain()).getAdapterFactory();
+		}
+
+		protected void createContextMenuFor(StructuredViewer viewer) {
+			MenuManager contextMenu = new MenuManager("#PopUp");
+			contextMenu.add(new Separator("additions"));
+			contextMenu.setRemoveAllWhenShown(true);
+			contextMenu.addMenuListener(this);
+			Menu menu = contextMenu.createContextMenu(viewer.getControl());
+			viewer.getControl().setMenu(menu);
+			getSite().registerContextMenu(contextMenu,
+					new UnwrappingSelectionProvider(viewer));
+
+			int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
+			Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance() };
+			viewer.addDragSupport(dndOperations, transfers,
+					new ViewerDragAdapter(viewer));
+			viewer.addDropSupport(dndOperations, transfers,
+					new EditingDomainViewerDropAdapter(getEditingDomain(),
+							viewer));
+		}
+
+		@Override
+		public void doSave(IProgressMonitor monitor) {
+			// nothing to do here - this is handled by the parent editor
+		}
+
+		@Override
+		public void doSaveAs() {
+			// nothing to do here - this is handled by the parent editor
+		}
+
+		@Override
+		public void init(IEditorSite site, IEditorInput input)
+				throws PartInitException {
+			setSite(site);
+			setInput(input);
+		}
+
+		@Override
+		public boolean isDirty() {
+			return getCommandStack().isSaveNeeded();
+		}
+
+		@Override
+		public boolean isSaveAsAllowed() {
+			return true;
+		}
+
+		public void menuAboutToShow(IMenuManager manager) {
+			// pass the request to show the context menu on to the parent editor
+			((IMenuListener) parentEditor.getEditorSite()
+					.getActionBarContributor()).menuAboutToShow(manager);
+		}
+
+		public abstract void setInput(Object input);
+	}
+
+	private class TableEditorPart extends TraceeditorEditorPart {
+
+		protected TableViewer viewer;
+
+		public TableEditorPart(TraceeditorEditor parent) {
+			super(parent);
+		}
+
+		private TableViewerColumn createTableViewerColumn(String title,
+				int bound, final int colNumber) {
+			final TableViewerColumn viewerColumn = new TableViewerColumn(
+					viewer, SWT.NONE);
+			final TableColumn column = viewerColumn.getColumn();
+			column.setText(title);
+			column.setWidth(bound);
+			column.setResizable(true);
+			column.setMoveable(true);
+			return viewerColumn;
+		}
+
+		@Override
+		public void createPartControl(Composite parent) {
+			viewer = new TableViewer(parent, SWT.NONE);
+			Table table = viewer.getTable();
+
+			TableLayout layout = new TableLayout();
+			table.setLayout(layout);
+			table.setHeaderVisible(true);
+			table.setLinesVisible(true);
+
+			// Comienzo de configuración de las columnas.
+			//
+
+			// Transformación
+			TableViewerColumn col = createTableViewerColumn("Transformación",
+					150, 0);
+			col.setLabelProvider(new ColumnLabelProvider() {
+				@Override
+				public String getText(Object element) {
+					Transformation transformation = ((TransformationBuffer) element).transformation;
+					if (transformation != null)
+						return transformation.getName();
+					else
+						return "<< Sin transformación >>";
+				}
+			});
+			col.setEditingSupport(new EditingSupport(viewer) {
+
+				@Override
+				protected void setValue(Object element, Object value) {
+					TransformationBuffer buffer = (TransformationBuffer) element;
+					Command cmd = SetCommand.create(editingDomain,
+							buffer.transformation,
+							TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
+							value);
+					editingDomain.getCommandStack().execute(cmd);
+					viewer.refresh();
+				}
+
+				@Override
+				protected Object getValue(Object element) {
+					return ((TransformationBuffer) element).transformation
+							.getName();
+				}
+
+				@Override
+				protected CellEditor getCellEditor(Object element) {
+					return new TextCellEditor(viewer.getTable());
+				}
+
+				@Override
+				protected boolean canEdit(Object element) {
+					return true;
+				}
+			});
+
+			// Enlace
+			col = createTableViewerColumn("Enlace/Traza", 150, 1);
+			col.setLabelProvider(new ColumnLabelProvider() {
+				@Override
+				public String getText(Object element) {
+					TraceLink traceLink = ((TransformationBuffer) element).traceLink;
+					if (traceLink != null)
+						return traceLink.getName();
+					else
+						return "<< Sin enlace >>";
+				}
+			});
+			col.setEditingSupport(new EditingSupport(viewer) {
+
+				@Override
+				protected void setValue(Object element, Object value) {
+					TransformationBuffer buffer = (TransformationBuffer) element;
+					TraceLink traceElement = (TraceLink) buffer.traceLink;
+					Command cmd = SetCommand.create(editingDomain,
+							traceElement,
+							TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
+							value);
+					editingDomain.getCommandStack().execute(cmd);
+					viewer.refresh();
+				}
+
+				@Override
+				protected Object getValue(Object element) {
+					return ((TransformationBuffer) element).traceLink.getName();
+				}
+
+				@Override
+				protected CellEditor getCellEditor(Object element) {
+					return new TextCellEditor(viewer.getTable());
+				}
+
+				@Override
+				protected boolean canEdit(Object element) {
+					return true;
+				}
+			});
+
+			// Tipo del enlace
+			col = createTableViewerColumn("Tipo del enlace", 150, 2);
+			col.setLabelProvider(new ColumnLabelProvider() {
+				@Override
+				public String getText(Object element) {
+					TraceLink traceLink = ((TransformationBuffer) element).traceLink;
+					if (traceLink != null && traceLink.getType() != null)
+						return traceLink.getType().getName();
+					else
+						return "<< Sin tipo >>";
+				}
+			});
+			col.setEditingSupport(new EditingSupport(viewer) {
+
+				@Override
+				protected void setValue(Object element, Object value) {
+					TraceLink traceLink = ((TransformationBuffer) element).traceLink;
+					Command cmd = SetCommand
+							.create(
+									editingDomain,
+									traceLink,
+									TraceeditorPackage.Literals.TRACE_LINK__TYPE,
+									value);
+					editingDomain.getCommandStack().execute(cmd);
+					viewer.refresh();
+				}
+
+				@Override
+				protected Object getValue(Object element) {
+					return ((TransformationBuffer) element).traceLink.getType();
+				}
+
+				@Override
+				protected CellEditor getCellEditor(Object element) {
+					Resource resource = editingDomain.getResourceSet()
+							.getResources().get(1);
+
+					Configuration configuration = (Configuration) resource
+							.getContents().get(0);
+
+					return new ExtendedComboBoxCellEditor(viewer
+							.getTable(), configuration.getLinkTypes(),
+							new ColumnLabelProvider() {
+								@Override
+								public String getText(Object element) {
+									return ((LinkType) element).getName();
+								}
+							});
+				}
+
+				@Override
+				protected boolean canEdit(Object element) {
+					return true;
+				}
+			});
+
+			// Artefacto origen
+			col = createTableViewerColumn("Artefacto origen", 150, 3);
+			col.setLabelProvider(new ColumnLabelProvider() {
+				@Override
+				public String getText(Object element) {
+					Artefact artefact = ((TransformationBuffer) element).source;
+					if (artefact != null)
+						return artefact.getName();
+					else
+						return "<< Sin origen >>";
+				}
+			});
+			col.setEditingSupport(new EditingSupport(viewer) {
+
+				@Override
+				protected void setValue(Object element, Object value) {
+					Artefact artefactElement = ((TransformationBuffer) element).source;
+					Command cmd = SetCommand.create(editingDomain,
+							artefactElement,
+							TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
+							value);
+					editingDomain.getCommandStack().execute(cmd);
+					viewer.refresh();
+				}
+
+				@Override
+				protected Object getValue(Object element) {
+					return ((TransformationBuffer) element).source.getName();
+				}
+
+				@Override
+				protected CellEditor getCellEditor(Object element) {
+					return new TextCellEditor(viewer.getTable());
+				}
+
+				@Override
+				protected boolean canEdit(Object element) {
+					return true;
+				}
+			});
+
+			// Tipo del artefacto origen
+			col = createTableViewerColumn("Tipo del origen", 150, 4);
+			col.setLabelProvider(new ColumnLabelProvider() {
+				@Override
+				public String getText(Object element) {
+					Artefact artefact = ((TransformationBuffer) element).source;
+					if (artefact != null && artefact.getType() != null)
+						return artefact.getType().getName();
+					else
+						return "<< Sin tipo >>";
+				}
+			});
+			col.setEditingSupport(new EditingSupport(viewer) {
+
+				@Override
+				protected void setValue(Object element, Object value) {
+					Artefact artefact = ((TransformationBuffer) element).source;
+					Command cmd = SetCommand.create(editingDomain, artefact,
+							TraceeditorPackage.Literals.ARTEFACT__TYPE, value);
+					editingDomain.getCommandStack().execute(cmd);
+					viewer.refresh();
+				}
+
+				@Override
+				protected Object getValue(Object element) {
+					return ((TransformationBuffer) element).source.getType();
+				}
+
+				@Override
+				protected CellEditor getCellEditor(Object element) {
+					Resource resource = editingDomain.getResourceSet()
+							.getResources().get(1);
+
+					Configuration configuration = (Configuration) resource
+							.getContents().get(0);
+
+					return new ExtendedComboBoxCellEditor(viewer
+							.getTable(), configuration.getTypeArtefacts(),
+							new ColumnLabelProvider() {
+								@Override
+								public String getText(Object element) {
+									return ((TypeArtefact) element).getName();
+								}
+							});
+				}
+
+				@Override
+				protected boolean canEdit(Object element) {
+					return true;
+				}
+			});
+
+			// Artefacto destino
+			col = createTableViewerColumn("Artefacto destino", 150, 5);
+			col.setLabelProvider(new ColumnLabelProvider() {
+				@Override
+				public String getText(Object element) {
+					Artefact artefact = ((TransformationBuffer) element).target;
+					if (artefact != null)
+						return artefact.getName();
+					else
+						return "<< Sin destino >>";
+				}
+			});
+			col.setEditingSupport(new EditingSupport(viewer) {
+
+				@Override
+				protected void setValue(Object element, Object value) {
+					Artefact artefactElement = ((TransformationBuffer) element).target;
+					Command cmd = SetCommand.create(editingDomain,
+							artefactElement,
+							TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
+							value);
+					editingDomain.getCommandStack().execute(cmd);
+					viewer.refresh();
+				}
+
+				@Override
+				protected Object getValue(Object element) {
+					return ((TransformationBuffer) element).target.getName();
+				}
+
+				@Override
+				protected CellEditor getCellEditor(Object element) {
+					return new TextCellEditor(viewer.getTable());
+				}
+
+				@Override
+				protected boolean canEdit(Object element) {
+					return true;
+				}
+			});
+
+			// Tipo del artefacto destino
+			col = createTableViewerColumn("Tipo del destino", 150, 6);
+			col.setLabelProvider(new ColumnLabelProvider() {
+				@Override
+				public String getText(Object element) {
+					Artefact artefact = ((TransformationBuffer) element).target;
+					if (artefact != null && artefact.getType() != null)
+						return artefact.getType().getName();
+					else
+						return "<< Sin tipo >>";
+				}
+			});
+			col.setEditingSupport(new EditingSupport(viewer) {
+
+				@Override
+				protected void setValue(Object element, Object value) {
+					Artefact artefact = ((TransformationBuffer) element).target;
+					Command cmd = SetCommand.create(editingDomain, artefact,
+							TraceeditorPackage.Literals.ARTEFACT__TYPE, value);
+					editingDomain.getCommandStack().execute(cmd);
+					viewer.refresh();
+				}
+
+				@Override
+				protected Object getValue(Object element) {
+					return ((TransformationBuffer) element).target.getType();
+				}
+
+				@Override
+				protected CellEditor getCellEditor(Object element) {
+					Resource resource = editingDomain.getResourceSet()
+							.getResources().get(1);
+
+					Configuration configuration = (Configuration) resource
+							.getContents().get(0);
+
+					return new ExtendedComboBoxCellEditor(viewer
+							.getTable(), configuration.getTypeArtefacts(),
+							new ColumnLabelProvider() {
+								@Override
+								public String getText(Object element) {
+									return ((TypeArtefact) element).getName();
+								}
+							});
+				}
+
+				@Override
+				protected boolean canEdit(Object element) {
+					return true;
+				}
+			});
+			//
+			// Fin de configuración de columnas.
+
+			viewer.setColumnProperties(new String[] { "a", "b" });
+			viewer.setContentProvider(new AdapterFactoryContentProvider(
+					adapterFactory) {
+				private void TraceLinksTreeToList(ArrayList<Object> elements,
+						List<TraceLink> traceLinks,
+						Transformation aTransformation) {
+					TransformationBuffer element;
+
+					for (TraceLink aTraceLink : traceLinks) {
+						// Caso traza sin orígenes
+						if (aTraceLink.getSources().size() == 0) {
+							// Caso traza sin orígenes ni destinos
+							if (aTraceLink.getTargets().size() == 0) {
+								element = new TransformationBuffer(
+										aTransformation, aTraceLink, null, null);
+								elements.add(element);
+							}
+							// Caso traza sin orígenes pero con
+							// destinos
+							for (Artefact aTarget : aTraceLink.getTargets()) {
+								element = new TransformationBuffer(
+										aTransformation, aTraceLink, null,
+										aTarget);
+								elements.add(element);
+							}
+						}
+						for (Artefact aSource : aTraceLink.getSources()) {
+							// Caso trazas con orígenes sin destinos
+							if (aTraceLink.getTargets().size() == 0) {
+								element = new TransformationBuffer(
+										aTransformation, aTraceLink, aSource,
+										null);
+								elements.add(element);
+							}
+							// Caso trazas con orígenes y destinos
+							for (Artefact aTarget : aTraceLink.getTargets()) {
+								element = new TransformationBuffer(
+										aTransformation, aTraceLink, aSource,
+										aTarget);
+								elements.add(element);
+							}
+						}
+					}
+				}
+
+				public Object[] getElements(Object object) {
+					// Primero agrupo los enlaces sueltos, o sea que
+					// no pertenecen a una transformación.
+					//
+					List<TraceLink> traceLinks = ((TraceEditor) object)
+							.getDashboard().getTraceLinks();
+					ArrayList<Object> elements = new ArrayList<Object>(
+							traceLinks.size());
+
+					this.TraceLinksTreeToList(elements, traceLinks, null);
+
+					// Ahora los enlaces de las transformaciones.
+					//
+					List<Transformation> transformations = ((TraceEditor) object)
+							.getDashboard().getTransformations();
+					for (Transformation aTransformation : transformations) {
+						this.TraceLinksTreeToList(elements, aTransformation
+								.getTraceLinks(), aTransformation);
+					}
+
+					return elements.toArray();
+				}
+
+				public void notifyChanged(Notification notification) {
+					switch (notification.getEventType()) {
+					case Notification.ADD:
+					case Notification.ADD_MANY:
+						if (notification.getFeature() != TraceeditorPackage.eINSTANCE
+								.getTransformation_TraceLinks())
+							return;
+					}
+					super.notifyChanged(notification);
+				}
+			});
+
+			// Resource resource = (Resource) editingDomain.getResourceSet()
+			// .getResources().get(0);
+			// Object rootObject = resource.getContents().get(0);
+			// if (rootObject instanceof TraceEditor) {
+			// tableViewer.setInput(rootObject);
+			// viewerPane.setTitle(rootObject);
+			// }
+
+			createContextMenuFor(viewer);
+			getEditorSite().setSelectionProvider(viewer);
+		}
+
+		@Override
+		public void setFocus() {
+			viewer.getTable().setFocus();
+		}
+
+		@Override
+		public void setInput(Object input) {
+			viewer.setInput(input);
+		}
+		
+		/**
+		 * @return the viewer
+		 */
+		public TableViewer getViewer() {
+			return viewer;
 		}
 	}
 
@@ -989,483 +1481,33 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 		// Only creates the other pages if there is something that can be edited
 		//
-		if (!getEditingDomain().getResourceSet().getResources().isEmpty()) {
+		if (!getEditingDomain().getResourceSet().getResources().isEmpty()
+				&& !(getEditingDomain().getResourceSet().getResources().get(0))
+						.getContents().isEmpty()) {
 
-			// This is the page for the table viewer.
-			//
-			{
-				ViewerPane viewerPane = new ViewerPane(getSite().getPage(),
-						TraceeditorEditor.this) {
-					@Override
-					public Viewer createViewer(Composite composite) {
-						return new TableViewer(composite);
-					}
-
-					@Override
-					public void requestActivation() {
-						super.requestActivation();
-						setCurrentViewerPane(this);
-					}
-				};
-				viewerPane.createControl(getContainer());
-				tableViewer = (TableViewer) viewerPane.getViewer();
-
-				Table table = tableViewer.getTable();
-				TableLayout layout = new TableLayout();
-				table.setLayout(layout);
-				table.setHeaderVisible(true);
-				table.setLinesVisible(true);
-
-				// Comienzo de configuración de las columnas.
+			try {
+				int pageIndex;
+				// This is the page for the table viewer.
 				//
+				tableEditorPart = new TableEditorPart(this);
+				pageIndex = addPage(tableEditorPart, getWrappedInput());
+				setPageText(pageIndex, getString("_UI_TablePage_label"));
 
-				// Transformación
-				TableViewerColumn col = createTableViewerColumn(
-						"Transformación", 150, 0);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						Transformation transformation = ((TransformationBuffer) element).transformation;
-						if (transformation != null)
-							return transformation.getName();
-						else
-							return "<< Sin transformación >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						TransformationBuffer buffer = (TransformationBuffer) element;
-						Command cmd = SetCommand
-								.create(
-										editingDomain,
-										buffer.transformation,
-										TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
-										value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).transformation
-								.getName();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						return new TextCellEditor(tableViewer.getTable());
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
-
-				// Enlace
-				col = createTableViewerColumn("Enlace/Traza", 150, 1);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						TraceLink traceLink = ((TransformationBuffer) element).traceLink;
-						if (traceLink != null)
-							return traceLink.getName();
-						else
-							return "<< Sin enlace >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						TransformationBuffer buffer = (TransformationBuffer) element;
-						TraceLink traceElement = (TraceLink) buffer.traceLink;
-						Command cmd = SetCommand
-								.create(
-										editingDomain,
-										traceElement,
-										TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
-										value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).traceLink
-								.getName();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						return new TextCellEditor(tableViewer.getTable());
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
-
-				// Tipo del enlace
-				col = createTableViewerColumn("Tipo del enlace", 150, 2);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						TraceLink traceLink = ((TransformationBuffer) element).traceLink;
-						if (traceLink != null && traceLink.getType() != null)
-							return traceLink.getType().getName();
-						else
-							return "<< Sin tipo >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						TraceLink traceLink = ((TransformationBuffer) element).traceLink;
-						Command cmd = SetCommand.create(editingDomain,
-								traceLink,
-								TraceeditorPackage.Literals.TRACE_LINK__TYPE,
-								value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).traceLink
-								.getType();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						Resource resource = editingDomain.getResourceSet()
-								.getResources().get(1);
-
-						Configuration configuration = (Configuration) resource
-								.getContents().get(0);
-
-						return new ExtendedComboBoxCellEditor(tableViewer
-								.getTable(), configuration.getLinkTypes(),
-								new ColumnLabelProvider() {
-									@Override
-									public String getText(Object element) {
-										return ((LinkType) element).getName();
-									}
-								});
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
-
-				// Artefacto origen
-				col = createTableViewerColumn("Artefacto origen", 150, 3);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						Artefact artefact = ((TransformationBuffer) element).source;
-						if (artefact != null)
-							return artefact.getName();
-						else
-							return "<< Sin origen >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						Artefact artefactElement = ((TransformationBuffer) element).source;
-						Command cmd = SetCommand
-								.create(
-										editingDomain,
-										artefactElement,
-										TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
-										value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).source
-								.getName();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						return new TextCellEditor(tableViewer.getTable());
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
-
-				// Tipo del artefacto origen
-				col = createTableViewerColumn("Tipo del origen", 150, 4);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						Artefact artefact = ((TransformationBuffer) element).source;
-						if (artefact != null && artefact.getType() != null)
-							return artefact.getType().getName();
-						else
-							return "<< Sin tipo >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						Artefact artefact = ((TransformationBuffer) element).source;
-						Command cmd = SetCommand.create(editingDomain,
-								artefact,
-								TraceeditorPackage.Literals.ARTEFACT__TYPE,
-								value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).source
-								.getType();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						Resource resource = editingDomain.getResourceSet()
-								.getResources().get(1);
-
-						Configuration configuration = (Configuration) resource
-								.getContents().get(0);
-
-						return new ExtendedComboBoxCellEditor(tableViewer
-								.getTable(), configuration.getTypeArtefacts(),
-								new ColumnLabelProvider() {
-									@Override
-									public String getText(Object element) {
-										return ((TypeArtefact) element)
-												.getName();
-									}
-								});
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
-
-				// Artefacto destino
-				col = createTableViewerColumn("Artefacto destino", 150, 5);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						Artefact artefact = ((TransformationBuffer) element).target;
-						if (artefact != null)
-							return artefact.getName();
-						else
-							return "<< Sin destino >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						Artefact artefactElement = ((TransformationBuffer) element).target;
-						Command cmd = SetCommand
-								.create(
-										editingDomain,
-										artefactElement,
-										TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
-										value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).target
-								.getName();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						return new TextCellEditor(tableViewer.getTable());
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
-
-				// Tipo del artefacto destino
-				col = createTableViewerColumn("Tipo del destino", 150, 6);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						Artefact artefact = ((TransformationBuffer) element).target;
-						if (artefact != null && artefact.getType() != null)
-							return artefact.getType().getName();
-						else
-							return "<< Sin tipo >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						Artefact artefact = ((TransformationBuffer) element).target;
-						Command cmd = SetCommand.create(editingDomain,
-								artefact,
-								TraceeditorPackage.Literals.ARTEFACT__TYPE,
-								value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).target
-								.getType();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						Resource resource = editingDomain.getResourceSet()
-								.getResources().get(1);
-
-						Configuration configuration = (Configuration) resource
-								.getContents().get(0);
-
-						return new ExtendedComboBoxCellEditor(tableViewer
-								.getTable(), configuration.getTypeArtefacts(),
-								new ColumnLabelProvider() {
-									@Override
-									public String getText(Object element) {
-										return ((TypeArtefact) element)
-												.getName();
-									}
-								});
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
+				// This is the page for the graphical diagram viewer.
 				//
-				// Fin de configuración de columnas.
-
-				tableViewer.setColumnProperties(new String[] { "a", "b" });
-				tableViewer
-						.setContentProvider(new AdapterFactoryContentProvider(
-								adapterFactory) {
-							private void TraceLinksTreeToList(
-									ArrayList<Object> elements,
-									List<TraceLink> traceLinks,
-									Transformation aTransformation) {
-								TransformationBuffer element;
-
-								for (TraceLink aTraceLink : traceLinks) {
-									// Caso traza sin orígenes
-									if (aTraceLink.getSources().size() == 0) {
-										// Caso traza sin orígenes ni destinos
-										if (aTraceLink.getTargets().size() == 0) {
-											element = new TransformationBuffer(
-													aTransformation,
-													aTraceLink, null, null);
-											elements.add(element);
-										}
-										// Caso traza sin orígenes pero con
-										// destinos
-										for (Artefact aTarget : aTraceLink
-												.getTargets()) {
-											element = new TransformationBuffer(
-													aTransformation,
-													aTraceLink, null, aTarget);
-											elements.add(element);
-										}
-									}
-									for (Artefact aSource : aTraceLink
-											.getSources()) {
-										// Caso trazas con orígenes sin destinos
-										if (aTraceLink.getTargets().size() == 0) {
-											element = new TransformationBuffer(
-													aTransformation,
-													aTraceLink, aSource, null);
-											elements.add(element);
-										}
-										// Caso trazas con orígenes y destinos
-										for (Artefact aTarget : aTraceLink
-												.getTargets()) {
-											element = new TransformationBuffer(
-													aTransformation,
-													aTraceLink, aSource,
-													aTarget);
-											elements.add(element);
-										}
-									}
-								}
-							}
-
-							public Object[] getElements(Object object) {
-								// Primero agrupo los enlaces sueltos, o sea que
-								// no pertenecen a una transformación.
-								//
-								List<TraceLink> traceLinks = ((TraceEditor) object)
-										.getDashboard().getTraceLinks();
-								ArrayList<Object> elements = new ArrayList<Object>(
-										traceLinks.size());
-
-								this.TraceLinksTreeToList(elements, traceLinks,
-										null);
-
-								// Ahora los enlaces de las transformaciones.
-								//
-								List<Transformation> transformations = ((TraceEditor) object)
-										.getDashboard().getTransformations();
-								for (Transformation aTransformation : transformations) {
-									this.TraceLinksTreeToList(elements,
-											aTransformation.getTraceLinks(),
-											aTransformation);
-								}
-
-								return elements.toArray();
-							}
-
-							public void notifyChanged(Notification notification) {
-								switch (notification.getEventType()) {
-								case Notification.ADD:
-								case Notification.ADD_MANY:
-									if (notification.getFeature() != TraceeditorPackage.eINSTANCE
-											.getTransformation_TraceLinks())
-										return;
-								}
-								super.notifyChanged(notification);
-							}
-						});
+				diagramEditor = new TraceEditorDiagramEditor();
+				pageIndex = addPage(diagramEditor, getEditorInput());
+				setPageText(pageIndex, "Diagram");
 
 				Resource resource = (Resource) editingDomain.getResourceSet()
 						.getResources().get(0);
 				Object rootObject = resource.getContents().get(0);
 				if (rootObject instanceof TraceEditor) {
-					tableViewer.setInput(rootObject);
-					viewerPane.setTitle(rootObject);
+					tableEditorPart.getViewer().setInput(rootObject);
 				}
-
-				createContextMenuFor(tableViewer);
-				int pageIndex = addPage(viewerPane.getControl());
-				setPageText(pageIndex, getString("_UI_TablePage_label"));
+			} catch (PartInitException e) {
+				// add some error handling for production-quality coding
+				e.printStackTrace();
 			}
 
 			getSite().getShell().getDisplay().asyncExec(new Runnable() {
@@ -1681,55 +1723,30 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * @generated NOT
 	 */
 	public void handleContentOutlineSelection(ISelection selection) {
-		if (currentViewerPane != null && !selection.isEmpty()
-				&& selection instanceof IStructuredSelection) {
-			Iterator<?> selectedElements = ((IStructuredSelection) selection)
-					.iterator();
-			if (selectedElements.hasNext()) {
-				// Get the first selected element.
+		if (!selection.isEmpty() && selection instanceof IStructuredSelection) {
+			List selectedElements = ((IStructuredSelection) selection).toList();
+			if (getActiveEditor() == diagramEditor) {
+				// If the diagram viewer is active, we need to map the selection
+				// to the corresponding EditParts.
 				//
-				Object selectedElement = selectedElements.next();
-
-				// If it's the selection viewer, then we want it to select the
-				// same selection as this selection.
-				//
-				if (currentViewerPane.getViewer() == selectionViewer
-						|| currentViewerPane.getViewer() == tableViewer) {
-					ArrayList<Object> selectionList = new ArrayList<Object>();
-					selectionList.add(selectedElement);
-					while (selectedElements.hasNext()) {
-						selectionList.add(selectedElements.next());
+				ArrayList<Object> selectionList = new ArrayList<Object>();
+				for (Object selectedElement : selectedElements) {
+					if (selectedElement instanceof EObject) {
+						String elementID = EMFCoreUtil
+								.getProxyID((EObject) selectedElement);
+						selectionList.addAll(diagramEditor
+								.getDiagramGraphicalViewer()
+								.findEditPartsForElement(elementID,
+										IGraphicalEditPart.class));
 					}
-
-					// Set the selection to the widget.
-					//
-					// selectionViewer.setSelection(new
-					// StructuredSelection(selectionList));
-					currentViewerPane.getViewer().setSelection(
-							new StructuredSelection(selectionList));
-
-				} else {
-					// Set the input to the widget.
-					//
-					if (currentViewerPane.getViewer().getInput() != selectedElement) {
-						currentViewerPane.getViewer().setInput(selectedElement);
-						currentViewerPane.setTitle(selectedElement);
-					}
+					selectionProvider.setSelection(new StructuredSelection(
+							selectionList));
 				}
+			} else {
+				((TraceeditorEditorPart) getActiveEditor())
+						.setInput(selectedElements.get(0));
 			}
 		}
-	}
-
-	/**
-	 * This is for implementing {@link IEditorPart} and simply tests the command
-	 * stack. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public boolean isDirty() {
-		return ((BasicCommandStack) editingDomain.getCommandStack())
-				.isSaveNeeded();
 	}
 
 	/**
@@ -1904,73 +1921,10 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		setSite(site);
 		setInputWithNotify(editorInput);
 		setPartName(editorInput.getName());
-		site.setSelectionProvider(this);
+		site.setSelectionProvider(selectionProvider);
 		site.getPage().addPartListener(partListener);
 		ResourcesPlugin.getWorkspace().addResourceChangeListener(
 				resourceChangeListener, IResourceChangeEvent.POST_CHANGE);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public void setFocus() {
-		if (currentViewerPane != null) {
-			currentViewerPane.setFocus();
-		} else {
-			getControl(getActivePage()).setFocus();
-		}
-	}
-
-	/**
-	 * This implements {@link org.eclipse.jface.viewers.ISelectionProvider}.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public void addSelectionChangedListener(ISelectionChangedListener listener) {
-		selectionChangedListeners.add(listener);
-	}
-
-	/**
-	 * This implements {@link org.eclipse.jface.viewers.ISelectionProvider}.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public void removeSelectionChangedListener(
-			ISelectionChangedListener listener) {
-		selectionChangedListeners.remove(listener);
-	}
-
-	/**
-	 * This implements {@link org.eclipse.jface.viewers.ISelectionProvider} to
-	 * return this editor's overall selection. <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public ISelection getSelection() {
-		return editorSelection;
-	}
-
-	/**
-	 * This implements {@link org.eclipse.jface.viewers.ISelectionProvider} to
-	 * set this editor's overall selection. Calling this result will notify the
-	 * listeners. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public void setSelection(ISelection selection) {
-		editorSelection = selection;
-
-		for (ISelectionChangedListener listener : selectionChangedListeners) {
-			listener
-					.selectionChanged(new SelectionChangedEvent(this, selection));
-		}
-		setStatusLineManager(selection);
 	}
 
 	/**

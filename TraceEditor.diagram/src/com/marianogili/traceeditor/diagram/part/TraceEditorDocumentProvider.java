@@ -43,6 +43,7 @@ import org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.DiagramDocum
 import org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument;
 import org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocumentProvider;
 import org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocument;
+import org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.document.FileEditorInputProxy;
 import org.eclipse.gmf.runtime.diagram.ui.resources.editor.internal.EditorStatusCodes;
 import org.eclipse.gmf.runtime.diagram.ui.resources.editor.internal.util.DiagramIOUtil;
 import org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand;
@@ -90,7 +91,7 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected IDocument createDocument(Object element) throws CoreException {
 		if (false == element instanceof FileEditorInput
@@ -108,19 +109,22 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 													"org.eclipse.ui.part.FileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
 							null));
 		}
-		IDocument document = createEmptyDocument();
+//		IDocument document = createEmptyDocument();
+		IDocument document = createEmptyDocument(element);
 		setDocumentContent(document, (IEditorInput) element);
 		setupDocument(element, document);
 		return document;
 	}
 
 	/**
-	 * Sets up the given document as it would be provided for the given element. The
-	 * content of the document is not changed. This default implementation is empty.
-	 * Subclasses may reimplement.
+	 * Sets up the given document as it would be provided for the given element.
+	 * The content of the document is not changed. This default implementation
+	 * is empty. Subclasses may reimplement.
 	 * 
-	 * @param element the blue-print element
-	 * @param document the document to set up
+	 * @param element
+	 *            the blue-print element
+	 * @param document
+	 *            the document to set up
 	 * @generated
 	 */
 	protected void setupDocument(Object element, IDocument document) {
@@ -132,7 +136,7 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	 */
 	private long computeModificationStamp(ResourceSetInfo info) {
 		int result = 0;
-		for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
+		for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = info
 				.getLoadedResourcesIterator(); it.hasNext();) {
 			Resource nextResource = (Resource) it.next();
 			IFile file = WorkspaceSynchronizer.getFile(nextResource);
@@ -148,11 +152,23 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected IDocument createEmptyDocument() {
+		// DiagramDocument document = new DiagramDocument();
+		// document.setEditingDomain(createEditingDomain());
+		// return document;
+		return createEmptyDocument(null);
+	}
+
+	protected IDocument createEmptyDocument(Object input) {
 		DiagramDocument document = new DiagramDocument();
-		document.setEditingDomain(createEditingDomain());
+		if (input instanceof FileEditorInputProxy) {
+			FileEditorInputProxy proxy = (FileEditorInputProxy) input;
+			document.setEditingDomain(proxy.getEditingDomain());
+		} else {
+			document.setEditingDomain(createEditingDomain());
+		}
 		return document;
 	}
 
@@ -226,8 +242,9 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 					try {
 						Map options = new HashMap(GMFResourceFactory
 								.getDefaultLoadOptions());
-						// @see 171060 
-						// options.put(org.eclipse.emf.ecore.xmi.XMLResource.OPTION_RECORD_UNKNOWN_FEATURE, Boolean.TRUE);
+						// @see 171060
+						// options.put(org.eclipse.emf.ecore.xmi.XMLResource.OPTION_RECORD_UNKNOWN_FEATURE,
+						// Boolean.TRUE);
 						resource.load(options);
 					} catch (IOException e) {
 						resource.unload();
@@ -337,8 +354,19 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 			throws CoreException {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			Collection/*<org.eclipse.core.resources.IFile>*/files2Validate = new ArrayList/*<org.eclipse.core.resources.IFile>*/();
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
+			Collection/* <org.eclipse.core.resources.IFile> */files2Validate = new ArrayList/*
+																						 * <org
+																						 * .
+																						 * eclipse
+																						 * .
+																						 * core
+																						 * .
+																						 * resources
+																						 * .
+																						 * IFile
+																						 * >
+																						 */();
+			for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = info
 					.getLoadedResourcesIterator(); it.hasNext();) {
 				Resource nextResource = (Resource) it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
@@ -367,7 +395,8 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 					TraceEditorDiagramEditorPlugin.getInstance().logError(
 							Messages.TraceEditorDocumentProvider_isModifiable,
 							ex);
-					// Error message to log was initially taken from org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.StorageDocumentProvider_isModifiable
+					// Error message to log was initially taken from
+					// org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.StorageDocumentProvider_isModifiable
 				}
 			}
 			return info.isReadOnly();
@@ -394,7 +423,8 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 					TraceEditorDiagramEditorPlugin.getInstance().logError(
 							Messages.TraceEditorDocumentProvider_isModifiable,
 							ex);
-					// Error message to log was initially taken from org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.StorageDocumentProvider_isModifiable
+					// Error message to log was initially taken from
+					// org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.StorageDocumentProvider_isModifiable
 				}
 			}
 			return info.isModifiable();
@@ -408,7 +438,7 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	protected void updateCache(Object element) throws CoreException {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
+			for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = info
 					.getLoadedResourcesIterator(); it.hasNext();) {
 				Resource nextResource = (Resource) it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
@@ -452,8 +482,21 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	protected ISchedulingRule getResetRule(Object element) {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			Collection/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/rules = new ArrayList/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/();
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
+			Collection/* <org.eclipse.core.runtime.jobs.ISchedulingRule> */rules = new ArrayList/*
+																							 * <org
+																							 * .
+																							 * eclipse
+																							 * .
+																							 * core
+																							 * .
+																							 * runtime
+																							 * .
+																							 * jobs
+																							 * .
+																							 * ISchedulingRule
+																							 * >
+																							 */();
+			for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = info
 					.getLoadedResourcesIterator(); it.hasNext();) {
 				Resource nextResource = (Resource) it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
@@ -474,8 +517,21 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	protected ISchedulingRule getSaveRule(Object element) {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			Collection/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/rules = new ArrayList/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/();
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
+			Collection/* <org.eclipse.core.runtime.jobs.ISchedulingRule> */rules = new ArrayList/*
+																							 * <org
+																							 * .
+																							 * eclipse
+																							 * .
+																							 * core
+																							 * .
+																							 * runtime
+																							 * .
+																							 * jobs
+																							 * .
+																							 * ISchedulingRule
+																							 * >
+																							 */();
+			for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = info
 					.getLoadedResourcesIterator(); it.hasNext();) {
 				Resource nextResource = (Resource) it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
@@ -495,8 +551,21 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	protected ISchedulingRule getSynchronizeRule(Object element) {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			Collection/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/rules = new ArrayList/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/();
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
+			Collection/* <org.eclipse.core.runtime.jobs.ISchedulingRule> */rules = new ArrayList/*
+																							 * <org
+																							 * .
+																							 * eclipse
+																							 * .
+																							 * core
+																							 * .
+																							 * runtime
+																							 * .
+																							 * jobs
+																							 * .
+																							 * ISchedulingRule
+																							 * >
+																							 */();
+			for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = info
 					.getLoadedResourcesIterator(); it.hasNext();) {
 				Resource nextResource = (Resource) it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
@@ -517,8 +586,21 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	protected ISchedulingRule getValidateStateRule(Object element) {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			Collection/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/files = new ArrayList/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/();
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
+			Collection/* <org.eclipse.core.runtime.jobs.ISchedulingRule> */files = new ArrayList/*
+																							 * <org
+																							 * .
+																							 * eclipse
+																							 * .
+																							 * core
+																							 * .
+																							 * runtime
+																							 * .
+																							 * jobs
+																							 * .
+																							 * ISchedulingRule
+																							 * >
+																							 */();
+			for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = info
 					.getLoadedResourcesIterator(); it.hasNext();) {
 				Resource nextResource = (Resource) it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
@@ -564,7 +646,7 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 			throws CoreException {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
+			for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = info
 					.getLoadedResourcesIterator(); it.hasNext();) {
 				Resource nextResource = (Resource) it.next();
 				handleElementChanged(info, nextResource, monitor);
@@ -595,8 +677,8 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 			try {
 				monitor.beginTask(
 						Messages.TraceEditorDocumentProvider_SaveDiagramTask,
-						info.getResourceSet().getResources().size() + 1); //"Saving diagram"
-				for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
+						info.getResourceSet().getResources().size() + 1); // "Saving diagram"
+				for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = info
 						.getLoadedResourcesIterator(); it.hasNext();) {
 					Resource nextResource = (Resource) it.next();
 					monitor
@@ -710,7 +792,8 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 						.logError(
 								Messages.TraceEditorDocumentProvider_handleElementContentChanged,
 								ex);
-				// Error message to log was initially taken from org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.FileDocumentProvider_handleElementContentChanged
+				// Error message to log was initially taken from
+				// org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.internal.l10n.EditorMessages.FileDocumentProvider_handleElementContentChanged
 			}
 		}
 		changedResource.unload();
@@ -865,8 +948,8 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 		/**
 		 * @generated
 		 */
-		public Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/getLoadedResourcesIterator() {
-			return new ArrayList/*<org.eclipse.emf.ecore.resource.Resource>*/(
+		public Iterator/* <org.eclipse.emf.ecore.resource.Resource> */getLoadedResourcesIterator() {
+			return new ArrayList/* <org.eclipse.emf.ecore.resource.Resource> */(
 					getResourceSet().getResources()).iterator();
 		}
 
@@ -883,7 +966,7 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 		public void dispose() {
 			stopResourceListening();
 			getResourceSet().eAdapters().remove(myResourceSetListener);
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = getLoadedResourcesIterator(); it
+			for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = getLoadedResourcesIterator(); it
 					.hasNext();) {
 				Resource resource = (Resource) it.next();
 				resource.unload();
@@ -1089,7 +1172,7 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 					Resource resource = (Resource) notification.getNotifier();
 					if (resource.isLoaded()) {
 						boolean modified = false;
-						for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = myInfo
+						for (Iterator/* <org.eclipse.emf.ecore.resource.Resource> */it = myInfo
 								.getLoadedResourcesIterator(); it.hasNext()
 								&& !modified;) {
 							Resource nextResource = (Resource) it.next();

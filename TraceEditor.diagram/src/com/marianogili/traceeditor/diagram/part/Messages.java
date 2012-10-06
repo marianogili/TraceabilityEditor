@@ -38,16 +38,6 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String TraceEditorCreationWizard_DomainModelFilePageTitle;
-
-	/**
-	 * @generated
-	 */
-	public static String TraceEditorCreationWizard_DomainModelFilePageDescription;
-
-	/**
-	 * @generated
-	 */
 	public static String TraceEditorCreationWizardOpenEditorError;
 
 	/**

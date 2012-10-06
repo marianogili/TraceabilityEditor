@@ -4,13 +4,13 @@
 
    <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
       <?gmfgen generated="true"?>
-      <fileTypes type="text" extension="traceeditor_diagram"/>
+      <fileTypes type="text" extension="traceeditor"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
       <?gmfgen generated="true"?>
       <parser
-         type="traceeditor_diagram"
+         type="traceeditor"
          class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
       </parser>
    </extension>
@@ -21,7 +21,7 @@
          id="com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorID"
          name="%editorName"
          icon="icons/obj16/TraceeditorDiagramFile.gif"
-         extensions="traceeditor_diagram"
+         extensions="traceeditor"
          default="true"
          class="com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditor"
          matchingStrategy="com.marianogili.traceeditor.diagram.part.TraceEditorMatchingStrategy"
@@ -418,7 +418,7 @@
             <or>
 	           <and>
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
-        	      <test property="org.eclipse.core.resources.extension" value="traceeditor_diagram"/>
+        	      <test property="org.eclipse.core.resources.extension" value="traceeditor"/>
                </and>
                <instanceof value="com.marianogili.traceeditor.diagram.navigator.TraceEditorAbstractNavigatorItem"/>
             </or>
@@ -435,7 +435,7 @@
                <or>
 	              <and>
     	             <instanceof value="org.eclipse.core.resources.IFile"/>
-        	         <test property="org.eclipse.core.resources.extension" value="traceeditor_diagram"/>
+        	         <test property="org.eclipse.core.resources.extension" value="traceeditor"/>
                   </and>
                   <instanceof value="com.marianogili.traceeditor.diagram.navigator.TraceEditorAbstractNavigatorItem"/>
                </or>
