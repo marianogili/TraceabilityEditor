@@ -32,7 +32,7 @@
             icon="icons/full/obj16/TraceeditorModelFile.gif"
             extensions="traceeditor"
             class="com.marianogili.traceeditor.presentation.TraceeditorEditor"
-            contributorClass="com.marianogili.traceeditor.presentation.TraceeditorActionBarContributor">
+            contributorClass="com.marianogili.traceeditor.presentation.TraceeditorMultipageActionBarContributor">
       </editor>
    </extension>
 

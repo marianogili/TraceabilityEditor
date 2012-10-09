@@ -972,8 +972,10 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 		public void menuAboutToShow(IMenuManager manager) {
 			// pass the request to show the context menu on to the parent editor
-			((IMenuListener) parentEditor.getEditorSite()
-					.getActionBarContributor()).menuAboutToShow(manager);
+			((TraceeditorActionBarContributor) ((TraceeditorMultipageActionBarContributor) parentEditor
+					.getEditorSite().getActionBarContributor())
+					.getTreeSubActionBars().getContributor())
+					.menuAboutToShow(manager);
 		}
 
 		public abstract void setInput(Object input);
@@ -1340,10 +1342,11 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 			});
 			//
 			// Fin de configuración de columnas.
-
+			// TODO: ver en qué momento es recomendable cargar la info.
 			viewer.setColumnProperties(new String[] { "a", "b" });
 			viewer.setContentProvider(new AdapterFactoryContentProvider(
 					adapterFactory) {
+
 				private void TraceLinksTreeToList(ArrayList<Object> elements,
 						List<TraceLink> traceLinks,
 						Transformation aTransformation) {
@@ -1707,9 +1710,19 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 					selectionProvider.setSelection(new StructuredSelection(
 							selectionList));
 				}
-			} else {
-				((TraceeditorEditorPart) getActiveEditor())
-						.setInput(selectedElements.get(0));
+			} else if (getActiveEditor() == tableEditorPart) {
+				// TODO: acá es donde pienso que debe inicializarse el editor
+				// tabular con el modelo adecuado.
+//				Resource resource = (Resource) editingDomain.getResourceSet()
+//						.getResources().get(0);
+//				Object rootObject = resource.getContents().get(0);
+//				if (rootObject instanceof TraceEditor) {
+				if (selectedElements.get(0) instanceof TraceEditor) {
+					// tableEditorPart.setInput(rootObject);
+					((TraceeditorEditorPart) getActiveEditor())
+							.setInput(selectedElements.get(0));
+				}
+
 			}
 		}
 	}
@@ -1969,11 +1982,12 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public EditingDomainActionBarContributor getActionBarContributor() {
-		return (EditingDomainActionBarContributor) getEditorSite()
-				.getActionBarContributor();
+		return (TraceeditorActionBarContributor) ((TraceeditorMultipageActionBarContributor) getEditorSite()
+				.getActionBarContributor()).getTreeSubActionBars()
+				.getContributor();
 	}
 
 	/**

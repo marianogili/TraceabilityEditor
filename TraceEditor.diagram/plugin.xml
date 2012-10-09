@@ -193,7 +193,7 @@
             <input type="com.marianogili.traceeditor.Artefact"/>
             <input type="com.marianogili.traceeditor.Configuration"/>
             <input type="com.marianogili.traceeditor.Dashboard"/>
-            <input type="com.marianogili.traceeditor.LynkType"/>
+            <input type="com.marianogili.traceeditor.LinkType"/>
             <input type="com.marianogili.traceeditor.TraceEditor"/>
             <input type="com.marianogili.traceeditor.TraceLink"/>
             <input type="com.marianogili.traceeditor.Transformation"/>
