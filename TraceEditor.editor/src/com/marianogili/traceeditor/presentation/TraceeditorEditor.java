@@ -68,6 +68,8 @@ import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
 import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.document.FileEditorInputProxy;
 import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IStatusLineManager;
@@ -107,6 +109,7 @@ import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IEditorSite;
+import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
@@ -471,6 +474,8 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		}
 	};
 
+	private IEditorInput wrappedInput;
+
 	/**
 	 * Handles activation of the editor or it's associated views. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
@@ -624,7 +629,7 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * This sets up the editing domain for the model editor. <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void initializeEditingDomain() {
 		// Create an adapter factory that yields item providers.
@@ -638,21 +643,25 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 				.addAdapterFactory(new TraceeditorItemProviderAdapterFactory());
 		adapterFactory
 				.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
+		
+		// Create a transactional editing domain
+	    //
+	    TransactionalEditingDomain domain = TransactionalEditingDomain.Factory.INSTANCE.createEditingDomain();
+	    domain.setID("TraceEditor.diagram.EditingDomain");
 
 		// Create the command stack that will notify this editor as commands are
 		// executed.
 		//
-		BasicCommandStack commandStack = new BasicCommandStack();
+//		BasicCommandStack commandStack = new BasicCommandStack();
 
 		// Add a listener to set the most recent command's affected objects to
 		// be the selection of the viewer with focus.
 		//
-		commandStack.addCommandStackListener(new CommandStackListener() {
+		domain.getCommandStack().addCommandStackListener(new CommandStackListener() {
 			public void commandStackChanged(final EventObject event) {
 				getContainer().getDisplay().asyncExec(new Runnable() {
 					public void run() {
 						firePropertyChange(IEditorPart.PROP_DIRTY);
-
 						// Try to select the affected objects.
 						//
 						Command mostRecentCommand = ((CommandStack) event
@@ -672,9 +681,23 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 		// Create the editing domain with a special command stack.
 		//
-		editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
-				commandStack, new HashMap<Resource, Boolean>());
+//		editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
+//				commandStack, new HashMap<Resource, Boolean>());
+		
+		editingDomain = (AdapterFactoryEditingDomain) domain;
 	}
+	
+	protected IEditorInput getWrappedInput() {
+	    if (wrappedInput == null) {
+	      if (getEditorInput() instanceof IFileEditorInput) {
+	        wrappedInput = new FileEditorInputProxy((IFileEditorInput)getEditorInput(), 
+	                                                (TransactionalEditingDomain) getEditingDomain());
+	      } else {
+	        wrappedInput = getEditorInput();
+	      }
+	    }
+	    return wrappedInput;
+	  }
 
 	/**
 	 * This is here for the listener to be able to call it. <!-- begin-user-doc
