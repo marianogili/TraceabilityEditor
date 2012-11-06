@@ -1,0 +1,47 @@
+\BOOKMARK [0][-]{chapter*.3}{Agradecimientos}{}
+\BOOKMARK [0][-]{chapter*.4}{Introducci\363n}{}
+\BOOKMARK [0][-]{chapter*.5}{Objetivos}{}
+\BOOKMARK [0][-]{chapter.1}{Traceability}{}
+\BOOKMARK [1][-]{section.1.1}{Introducci\363n}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.1.1}{Beneficios}{section.1.1}
+\BOOKMARK [2][-]{subsection.1.1.2}{Algunos inconvenientes}{section.1.1}
+\BOOKMARK [0][-]{chapter.2}{Problemas y Desaf\355os}{}
+\BOOKMARK [1][-]{section.2.1}{Sobre el conocimiento de traceability}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Sobre la capacitaci\363n y la certificaci\363n}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{Sobre el soporte a la evoluci\363n}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{Sobre la sem\341ntica de los enlaces}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{Sobre la escalabilidad}{chapter.2}
+\BOOKMARK [1][-]{section.2.6}{Sobre los factores humanos}{chapter.2}
+\BOOKMARK [1][-]{section.2.7}{An\341lisis de costo-beneficio}{chapter.2}
+\BOOKMARK [1][-]{section.2.8}{Sobre los m\351todos y las herramientas}{chapter.2}
+\BOOKMARK [1][-]{section.2.9}{Sobre los procesos}{chapter.2}
+\BOOKMARK [1][-]{section.2.10}{Sobre el cumplimiento}{chapter.2}
+\BOOKMARK [1][-]{section.2.11}{Sobre las mediciones y los Benchmarks}{chapter.2}
+\BOOKMARK [1][-]{section.2.12}{Sobre la transferencia de tecnolog\355a}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Caminando hacia una soluci\363n}{}
+\BOOKMARK [1][-]{section.3.1}{Generaci\363n de trazas}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{Impl\355cita}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.2}{Expl\355cita}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{Estrategias}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{Almacenamiento de Traceability Links Intra-Modelo}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.2}{Almacenamiento externo de Tracebility Links}{section.3.2}
+\BOOKMARK [1][-]{section.3.3}{Meta-modelos}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.3.1}{Meta-modelo de prop\363sito general}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.2}{Meta-modelo de caso espec\355fico}{section.3.3}
+\BOOKMARK [1][-]{section.3.4}{Una clasificaci\363n gen\351rica de traceability}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.4.1}{Clasificaci\363n de trace links impl\355cita}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.2}{Clasificaci\363n de trace links expl\355cita}{section.3.4}
+\BOOKMARK [0][-]{chapter.4}{Descripci\363n de tecnolog\355as}{}
+\BOOKMARK [0][-]{chapter.5}{Trabajos relacionados}{}
+\BOOKMARK [1][-]{section.5.1}{Un motor de traceability de transformaci\363n de modelos en Ingenier\355a de Software}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line \(SPL\)}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.2.1}{Meta-modelo de traceability}{section.5.2}
+\BOOKMARK [2][-]{subsection.5.2.2}{Arquitectura}{section.5.2}
+\BOOKMARK [1][-]{section.5.3}{Integraci\363n de herramientas Case}{chapter.5}
+\BOOKMARK [1][-]{section.5.4}{Framework de extracci\363n de datos de traceability gen\351rico}{chapter.5}
+\BOOKMARK [1][-]{section.5.5}{Traceability local y global}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.5.1}{Meta-modelo de Traceability Local}{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.2}{Meta-modelo de Traceability Global}{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.3}{\277C\363mo trabaja el framework?}{section.5.5}
+\BOOKMARK [0][-]{chapter*.30}{Conclusi\363n}{}
+\BOOKMARK [0][-]{chapter*.31}{Glosario}{}
