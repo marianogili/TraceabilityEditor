@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.30)  25 SEP 2012 21:58
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  5 NOV 2012 21:23
 entering extended mode
  %&-line parsing enabled.
 **TesisLatex.tex
@@ -552,166 +552,159 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 
-      [1
+l.81 \item T
+            raceability en la ingeniería de requerimientos: donde se guarda...
+[1
 
 
-]
-<./img/ExplicitImplicitTraceLinkClassification.png, id=314, 382.42876pt x 349.3
+] [2] [3] [4]
+Cap\'{\i }tulo 2.
+
+Overfull \hbox (6.42914pt too wide) in paragraph at lines 152--153
+\OT1/cmr/m/n/12 dos para la apli-caci^^Son de trace-abil-i-ty, pocas an-o-ta-ci
+ones y doc-u-mentaci^^Son
+ []
+
+[5
+
+] [6] [7] [8] [9] [10] [11] [12] [13]
+Cap\'{\i }tulo 3.
+[14
+
+] [15]
+Overfull \hbox (28.33945pt too wide) in paragraph at lines 505--505
+[]\OT1/cmr/bx/n/14.4 Almacenamiento de Trace-abil-i-ty Links Intra-Modelo 
+ []
+
+LaTeX Font Info:    Try loading font information for U+lasy on input line 507.
+(/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [16] [17] [18]
+<./img/ExplicitImplicitTraceLinkClassification.png, id=429, 382.42876pt x 349.3
 05pt>
 File: ./img/ExplicitImplicitTraceLinkClassification.png Graphic file (type png)
 
- <use ./img/ExplicitImplicitTraceLinkClassification.png> [2]
-<./img/ImplicitTraceLinks.png, id=321, 738.76pt x 187.70125pt>
+ <use ./img/ExplicitImplicitTraceLinkClassification.png>
+<./img/ImplicitTraceLinks.png, id=431, 738.76pt x 187.70125pt>
 File: ./img/ImplicitTraceLinks.png Graphic file (type png)
 
 <use ./img/ImplicitTraceLinks.png>
-Overfull \hbox (16.31924pt too wide) in paragraph at lines 101--102
+Overfull \hbox (16.31924pt too wide) in paragraph at lines 551--552
  [][] 
  []
 
-[3 <./img/ExplicitImplicitTraceLinkClassification.png (PNG copy)> <./img/Implic
-itTraceLinks.png (PNG copy)>]
-<./img/ExplicitTraceLinks.png, id=327, 780.9175pt x 421.575pt>
+[19] [20 <./img/ExplicitImplicitTraceLinkClassification.png (PNG copy)> <./img/
+ImplicitTraceLinks.png (PNG copy)>]
+<./img/ExplicitTraceLinks.png, id=442, 780.9175pt x 421.575pt>
 File: ./img/ExplicitTraceLinks.png Graphic file (type png)
 
 <use ./img/ExplicitTraceLinks.png>
-Overfull \hbox (8.26265pt too wide) in paragraph at lines 116--117
+Overfull \hbox (8.26265pt too wide) in paragraph at lines 566--567
  [][] 
  []
 
-[4]
-Overfull \hbox (3.35954pt too wide) in paragraph at lines 130--131
-[]\OT1/cmr/m/n/12 An^^Sali-sis de cober-tu-ra: para de-ter-mi-nar si to-dos los
- re-quer-im-ien-tos fueron
- []
-
-[5 <./img/ExplicitTraceLinks.png (PNG copy)>]
-Overfull \hbox (2.70834pt too wide) in paragraph at lines 171--172
-\OT1/cmr/m/n/12 dos de trace-abil-i-ty, pocas an-o-ta-ciones o doc-u-mentaci^^S
-on so-bre las mejores
- []
-
-[6] [7] [8] [9] [10] [11]
-Overfull \hbox (7.79996pt too wide) in paragraph at lines 301--302
-\OT1/cmr/m/n/12 bar que las her-ramien-tas, t^^Secni-cas y metodolog^^S^^Pas de
- trace-abil-i-ty cumplen
- []
-
-[12] [13]
-Cap\'{\i }tulo 2.
-<./img/ETraceTool_Arquitectura.png, id=379, 754.82pt x 439.6425pt>
-File: ./img/ETraceTool_Arquitectura.png Graphic file (type png)
-
-<use ./img/ETraceTool_Arquitectura.png> [14
+[21] [22 <./img/ExplicitTraceLinks.png (PNG copy)>]
+Cap\'{\i }tulo 4.
+[23
 
 ]
-<./img/NestedTraceMetamodel.png, id=388, 644.4075pt x 426.59375pt>
+Cap\'{\i }tulo 5.
+<./img/ETraceTool_Arquitectura.png, id=457, 754.82pt x 439.6425pt>
+File: ./img/ETraceTool_Arquitectura.png Graphic file (type png)
+
+<use ./img/ETraceTool_Arquitectura.png> [24
+
+]
+<./img/NestedTraceMetamodel.png, id=467, 644.4075pt x 426.59375pt>
 File: ./img/NestedTraceMetamodel.png Graphic file (type png)
 
-<use ./img/NestedTraceMetamodel.png> [15 <./img/ETraceTool_Arquitectura.png (PN
-G copy)>] <./img/Traceability_Metamodel.png, id=397, 676.5275pt x 359.3425pt>
+<use ./img/NestedTraceMetamodel.png> [25 <./img/ETraceTool_Arquitectura.png (PN
+G copy)>] <./img/Traceability_Metamodel.png, id=476, 676.5275pt x 359.3425pt>
 File: ./img/Traceability_Metamodel.png Graphic file (type png)
 
 <use ./img/Traceability_Metamodel.png>
-Overfull \hbox (15.91962pt too wide) in paragraph at lines 387--388
+Overfull \hbox (15.91962pt too wide) in paragraph at lines 627--628
  [][] 
  []
 
-[16 <./img/NestedTraceMetamodel.png>] [17 <./img/Traceability_Metamodel.png (PN
+[26 <./img/NestedTraceMetamodel.png>] [27 <./img/Traceability_Metamodel.png (PN
 G copy)>]
-<./img/ArquitecturaTraceabilityFramework.png, id=412, 742.775pt x 284.06125pt>
+<./img/ArquitecturaTraceabilityFramework.png, id=491, 742.775pt x 284.06125pt>
 File: ./img/ArquitecturaTraceabilityFramework.png Graphic file (type png)
 
 <use ./img/ArquitecturaTraceabilityFramework.png>
-Overfull \hbox (18.52751pt too wide) in paragraph at lines 411--412
+Overfull \hbox (18.52751pt too wide) in paragraph at lines 651--652
  [][] 
  []
 
-[18 <./img/ArquitecturaTraceabilityFramework.png (PNG copy)>]
-Overfull \hbox (20.50781pt too wide) in paragraph at lines 428--428
+[28 <./img/ArquitecturaTraceabilityFramework.png (PNG copy)>]
+Overfull \hbox (20.50781pt too wide) in paragraph at lines 668--668
 []\OT1/cmr/bx/n/17.28 Framework de ex-trac-ci^^Son de datos de trace-
  []
 
-<./img/GenericTraceFrame_Arquitectura.png, id=426, 404.51125pt x 235.88126pt>
+<./img/GenericTraceFrame_Arquitectura.png, id=504, 404.51125pt x 235.88126pt>
 File: ./img/GenericTraceFrame_Arquitectura.png Graphic file (type png)
 
-<use ./img/GenericTraceFrame_Arquitectura.png> [19 <./img/GenericTraceFrame_Arq
+<use ./img/GenericTraceFrame_Arquitectura.png> [29 <./img/GenericTraceFrame_Arq
 uitectura.png (PNG copy)>]
-<./img/Trace-DSL.png, id=433, 418.56375pt x 220.825pt>
+<./img/Trace-DSL.png, id=511, 418.56375pt x 220.825pt>
 File: ./img/Trace-DSL.png Graphic file (type png)
 
 <use ./img/Trace-DSL.png>
-<./img/Faceta.png, id=435, 563.10374pt x 171.64125pt>
+<./img/Faceta.png, id=513, 563.10374pt x 171.64125pt>
 File: ./img/Faceta.png Graphic file (type png)
  <use ./img/Faceta.png>
-Overfull \hbox (15.43439pt too wide) in paragraph at lines 454--455
+Overfull \hbox (15.43439pt too wide) in paragraph at lines 694--695
  [][] 
  []
 
-[20 <./img/Trace-DSL.png (PNG copy)> <./img/Faceta.png (PNG copy)>]
-Overfull \hbox (7.95976pt too wide) in paragraph at lines 466--467
+[30 <./img/Trace-DSL.png (PNG copy)> <./img/Faceta.png (PNG copy)>]
+Overfull \hbox (7.95976pt too wide) in paragraph at lines 706--707
 []\OT1/cmr/m/n/12 La con-fig-u-raci^^Son de la gran-u-lar-i-dad con-siste en la
  es-peci-fi-caci^^Son de qu^^Se tipos
  []
 
-<./img/LocalTraceMetamodel.png, id=443, 706.64pt x 283.0575pt>
+<./img/LocalTraceMetamodel.png, id=522, 706.64pt x 283.0575pt>
 File: ./img/LocalTraceMetamodel.png Graphic file (type png)
 
-<use ./img/LocalTraceMetamodel.png> [21 <./img/LocalTraceMetamodel.png>]
-<./img/GlobalTraceMetamodel.png, id=454, 656.4525pt x 160.6pt>
+<use ./img/LocalTraceMetamodel.png> [31 <./img/LocalTraceMetamodel.png>]
+<./img/GlobalTraceMetamodel.png, id=533, 656.4525pt x 160.6pt>
 File: ./img/GlobalTraceMetamodel.png Graphic file (type png)
 
 <use ./img/GlobalTraceMetamodel.png>
-Overfull \hbox (3.87454pt too wide) in paragraph at lines 495--496
+Overfull \hbox (3.87454pt too wide) in paragraph at lines 735--736
  [][] 
  []
 
-[22] <./img/EjemploLocalGlobalMetamodel.png, id=460, 944.52875pt x 556.0775pt>
+[32] <./img/EjemploLocalGlobalMetamodel.png, id=539, 944.52875pt x 556.0775pt>
 File: ./img/EjemploLocalGlobalMetamodel.png Graphic file (type png)
 
 <use ./img/EjemploLocalGlobalMetamodel.png>
-Overfull \hbox (35.03401pt too wide) in paragraph at lines 514--515
+Overfull \hbox (35.03401pt too wide) in paragraph at lines 754--755
  [][] 
  []
 
-[23 <./img/GlobalTraceMetamodel.png>] [24 <./img/EjemploLocalGlobalMetamodel.pn
-g>]
-Cap\'{\i }tulo 3.
-[25
-
-] [26]
-Overfull \hbox (28.33945pt too wide) in paragraph at lines 565--565
-[]\OT1/cmr/bx/n/14.4 Almacenamiento de Trace-abil-i-ty Links Intra-Modelo 
- []
-
-LaTeX Font Info:    Try loading font information for U+lasy on input line 567.
-(/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [27] [28] [29]
-Cap\'{\i }tulo 4.
-[30
-
-] [31
+[33 <./img/GlobalTraceMetamodel.png>] [34 <./img/EjemploLocalGlobalMetamodel.pn
+g>] [35
 
 
-] [32
+] [36
 
-] [33
+] [37
 
-] [34] (./TesisLatex.aux)
+] [38] (./TesisLatex.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5866 strings out of 495061
- 81794 string characters out of 1182621
+ 5894 strings out of 495061
+ 81963 string characters out of 1182622
  159962 words of memory out of 3000000
  8806 multiletter control sequences out of 15000+50000
  12123 words of font info for 44 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,6n,36p,1645b,520s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,6n,36p,1645b,518s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-tex
 live/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-texlive/fonts
@@ -721,9 +714,9 @@ m/cmsl12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/shar
 e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-tex
 live/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on TesisLatex.pdf (41 pages, 613230 bytes).
+Output written on TesisLatex.pdf (45 pages, 621286 bytes).
 PDF statistics:
- 598 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
+ 645 PDF objects out of 1000 (max. 8388607)
+ 166 named destinations out of 1000 (max. 500000)
  442 words of extra memory for PDF output out of 10000 (max. 10000000)
 

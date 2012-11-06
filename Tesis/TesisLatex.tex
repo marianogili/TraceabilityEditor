@@ -43,7 +43,10 @@ Agradezco a todos...
 \chapter{Introducción}
 
 
-La Ingeniería de Software Dirigida por Modelos (MDE - Model-Driven Engineering) define al modelo como artefacto principal a lo largo de todas las tareas de la ingeniería de software – desarrollo, mantenimiento, etc. Un caso particular de ingeniería que sigue esta idea es la Arquitectura Dirigida por Modelos (MDA - Model Driven Architecture), definida por el Object Management Group (OMG), cuyo ciclo de vida del proceso de desarrollo propuesto está basado enteramente en el uso de modelos formales y transformaciones que se realizan sobre dichos modelos. Una característica muy importante de todo proceso de desarrollo dirigido por modelos (MDD – Model-Driven Development) es lo que se conoce como “posibilidad de rastreo” (o de ahora en más en inglés traceability), que ayuda o toma parte en todo lo que respecta a las relaciones que existen entre cada uno de los artefactos productos del proceso de desarrollo. Cuando nos referimos al término artefacto, hablamos por ejemplo de un requerimiento de sistema, un componente de software, un caso de prueba, entre otros. El mantenimiento y la definición de las relaciones y dependencias que existen entre los artefactos no es una tarea fácil y ésto ha sido un desafío desde principios de 1970.
+En la Ingeniería de Software Dirigida por Modelos (MDE - Model-Driven Engineering) se define al modelo como principal artefacto que toma participación a lo largo de todas las tareas/procesos de la ingeniería de software – análisis, diseño, desarrollo, pruebas, mantenimiento, etc. Una implementación particular propuesta  que sigue esta idea es la Arquitectura Dirigida por Modelos (MDA - Model Driven Architecture) definida por el Object Management Group (OMG), cuyo ciclo de proceso de desarrollo está basado enteramente en el uso de modelos formales y transformaciones que se realizan sobre dichos modelos. Una característica muy importante de todo proceso de desarrollo dirigido por modelos (MDD – Model-Driven Development) es lo que se conoce como “posibilidad de rastreo” (o de ahora en más en inglés traceability), que ayuda y toma parte en todo lo que respecta a las relaciones que existen entre cada uno de los artefactos productos del proceso de desarrollo.
+
+Cuando nos referimos al término artefacto, hablamos por ejemplo de un requerimiento de sistema, un componente de software, un caso de prueba, entre otros. El mantenimiento y la definición de las relaciones y dependencias que existen entre los artefactos no es una tarea fácil, el mismo ha sido un desafío desde principios de 1970.
+
 En el presente documento de tesis se abordará el tema de traceability, luego se presentará un análisis de los distintos problemas que aún se encuentran abiertos como así también un conjunto de soluciones encontradas a lo largo de la investigación. Finalmente, se elaborará un esquema de traceability con el fin de contribuir en la solución de alguno de los problemas nombrados.
 
 
@@ -52,8 +55,9 @@ En el presente documento de tesis se abordará el tema de traceability, luego se
 \chapter{Objetivos}
 
 
-El objetivo del trabajo de tesis propuesto comprende, por un lado, el análisis de los problemas de trazabilidad que aun se encuentran abiertos en el ámbito de MDE, seguido de la elaboración de un esquema de trazabilidad que contribuya a la solución de dichos problemas.
-Se diseñará e implementará una herramienta que pueda ser integrada a otra de desarrollo MDE, y asista al desarrollador automatizando el proceso de definición de trazas o links entre elementos de los modelos origen y destino. Esta solución proveerá un mapa de transformaciones que permitirá determinar la procedencia de cada ítem del modelo destino, y su correspondiente origen en el modelo fuente.
+El objetivo del trabajo de tesis propuesto comprende, por un lado, una introducción al tema de traceability conjunto con un análisis de los problemas que aún se encuentran abiertos en su ámbito en MDE, seguido de la elaboración de un esquema de traceability que contribuya en la solución de dichos problemas.
+
+También se diseñará e implementará una herramienta que pueda ser integrada a otra de desarrollo MDE, y asista al desarrollador automatizando el proceso de definición de trazas o links entre elementos de los modelos origen y destino. Esta solución proveerá un mapa de transformaciones que permitirá determinar la procedencia de cada ítem del modelo destino, y su correspondiente origen en el modelo fuente.
 
 
 \mainmatter
@@ -62,19 +66,465 @@ Se diseñará e implementará una herramienta que pueda ser integrada a otra de 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Traceability}
 
+\section{Introducción}
 
-Según el Glosario Estándar de Términos de la Ingeniería de Software del IEEE \cite{IEEE} la noción de traceability se define como: El grado o nivel en el cual una relación puede ser establecida entre dos o más productos del proceso de desarrollo, especialmente entre productos que tengan una relación de predecesor-sucesor o principal-secundario; por ejemplo el grado en el cual el requerimiento y el diseño de un componente de software se corresponden. La definición anterior fue dada por “the requirements management community”, para nosotros, que necesitamos un punto de vista maś cercano al contexto de MDD, traceability es un término usado para describir cualquiera de las complejas relaciones lógicas que existen entre los distintos artefactos del ciclo de vida del desarrollo de software, el establecimiento de estas relaciones y/o el mantenimiento de las mismas.
-Entre varios beneficios de traceability que enumeraremos mejor más adelante, podemos encontrar que ayuda a identificar las relaciones y dependencias que existen entre los artefactos de software. También, entre los requerimientos y su representación en los modelos, traceability es crucial para asegurar que el conjunto relevante de requerimientos fueron debidamente implementados en el código. Pero no solo traceability asegura la identificación de objetos y elementos relacionados, también puede facilitar el análisis de impactos del cambios durante el desarrollo de software.
-Las relaciones de traceability pueden ser definidas de forma automática, por ejemplo producto de una transformación de modelos, o manual como una relación de implementación entre un requerimiento y un componente de software.
-En la ingeniería de software encontramos dos usos principales (o semánticas) que dependen del contexto de traceability:
+Según el Glosario Estándar de Términos de la Ingeniería de Software del IEEE \cite{IEEE} la noción de traceability se define como: El grado o nivel en el cual una relación puede ser establecida entre dos o más productos del proceso de desarrollo, especialmente entre productos que tengan una relación de predecesor-sucesor o principal-secundario; por ejemplo el grado en el cual el requerimiento y el diseño de un componente de software se corresponden. La definición anterior fue dada por “the requirements management community”, para nosotros, que necesitamos un punto de vista maś cercano al contexto de MDD, traceability es un término usado para describir cualquiera de las complejas relaciones lógicas que existen entre los distintos artefactos que se presentan en cualquier momento del ciclo de vida del desarrollo de software, el establecimiento de estas relaciones y/o el mantenimiento de las mismas.
+
+Entre varios beneficios de traceability que enumeraremos mejor más adelante, podemos encontrar que ayuda a identificar las relaciones y dependencias que existen entre los artefactos de software. También traceability es crucial entre los requerimientos y su representación en los modelos para asegurar que el conjunto relevante de requerimientos fueron debidamente implementados en el código. Pero no solo traceability asegura la identificación de objetos y elementos relacionados, también puede facilitar el análisis de impactos de cambios durante el desarrollo de software.
+
+Las relaciones de traceability pueden ser definidas de forma automática, por ejemplo producto de una transformación de modelos, o de forma manual como el caso de una relación de implementación entre un requerimiento y un componente de software.
+
+En la ingeniería de software encontramos dos usos o semánticas principales que dependen del contexto de traceability:
 
 \begin{itemize}
 
-\item Traceability en la ingeniería de requerimientos: donde se guarda un requerimiento desde su expresión hasta su implementación. En más detalle según \cite{GotelFinkelstein} se refiere a la habilidad de describir y seguir la vida de los requerimientos en ambas direcciones, hacia delante y hacia atrás (forward and backward traceability). Desde los orígenes, pasando por el desarrollo y la especificación, hacia su posterior entrega y uso, y a través de todos los períodos de refinamiento e iteración de cualquiera de estas etapas.
+\item Traceability en la ingeniería de requerimientos: donde se guarda un requerimiento desde su definición hasta su implementación. En más detalle según \cite{GotelFinkelstein} se refiere a la habilidad de describir y seguir la vida de los requerimientos en ambas direcciones, hacia delante y hacia atrás (forward and backward traceability). Desde los orígenes, pasando por el desarrollo y la especificación, hacia su posterior entrega y uso, y a través de todos los períodos de refinamiento e iteración de cualquiera de estas etapas.
 
 \item Traceability en el Desarrollo Dirigido por Modelos: donde se almacenan principalmente las relaciones existentes entre los artefactos producto de las transformaciones de modelos.
 
 \end{itemize}
+
+\subsection{Beneficios}
+
+A continuación se listan un conjunto de actividades de diferentes dominios de la ingeniería en las cuales el uso de traceability es muy beneficioso según \cite{BrcinaRiebisch} y \cite{GrammelVoigt}:
+
+\begin{itemize}
+
+\item   En el Análisis de sistemas: nos ayuda a entender la complejidad de un sistema navegando a lo largo del modelo de enlaces obtenidos por la ejecución de las distintas cadenas de transformación.   
+
+\item    En el Análisis de cobertura: por ejemplo en el momento de ejecución de los casos de prueba, el uso de traceability es crucial para la hora de determinar si todos los requerimientos fueron cubiertos o tenidos en cuenta.
+
+ \item   En el Análisis de impacto de cambios: traceability nos ayuda a ver cómo los cambios en un modelo repercutirán en los otros modelos relacionados; también el uso de traceability nos permite saber en cualquier momento el tipo de dependencia que existe entre las entidades relacionadas, lo cual ayuda a determinar la necesidad de un cambio.
+
+ \item   En el Análisis de huérfanos: nos permitirá encontrar fácilmente los elementos huérfanos de un modelo dado que serán los artefactos que no se encuentren enlazados a ninguna traza.
+
+ \item   En la Comprensión del software y la ingeniería inversa: crucial cuando sea necesario identificar todas las entidades relacionadas a una en particular, entender el tipo de relación existente, identificar las abstracciones, es decir los patrones de diseño, estilos de arquitectura, principios.
+
+ \item   En el análisis de requerimiento: por ejemplo para identificar el artefacto particular que demanda una propiedad específica; encontrar y resolver un conjunto de requerimientos que se contradicen.
+
+ \item   Apoyo en la toma de decisiones: para justificar una decisión dado que nos facilita entender qué factores y metas influyen en la misma; también traceability nos será muy útil en los momentos que se nos presenten distintas propuestas de solución en su análisis y evaluación.
+
+\item    En la Configuración del sistema y versionado: en este momento el uso de traceability es beneficioso para identificar las restricciones entre los componentes, identificar los cambios necesarios para resolver una restricción, identificar las diferencias entre dos versiones distintas del mismo artefacto y su impacto en otros artefactos.
+
+\end{itemize}
+
+
+\subsection{Algunos inconvenientes}
+
+Aunque las ventajas de traceability hoy día ya han sido identificadas, su puesta en práctica apenas ha quedado establecida. Las principales razones de lo anterior según \cite{GrammelVoigt} puede ser por lo siguiente:
+
+\begin{itemize}
+
+ \item   El alto costo de la creación y mantenimiento manual de la información de     traceability.
+
+\item    La falta de heurísticas que determinen qué información de los enlaces deben ser grabados.
+
+ \item   Discrepancias entre los distintos roles de usuarios de traceability, por ejemplo entre quienes crean los enlaces y quienes los usan.
+
+\item    Carencia de soporte adecuado en las herramientas.
+
+\item    Los artefactos son escritos en diferentes lenguajes, por ejemplo los requerimientos se escriben en lenguaje natural mientras que los programas en algún lenguaje de programación.
+
+\item    Los artefactos describen el sistema de software en diferentes niveles de abstracción, los artefactos usados durante el diseño difiere de los usados en su implementación.
+
+\end{itemize}
+
+Más adelante en otro capítulo se presentará con más detalle los desafíos presentes en la implementación y el uso de traceability.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Problemas y Desafíos  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Problemas y Desafíos}
+
+En este capítulo vamos a describir los principales problemas y grandes desafíos que se encuentran abiertos en el ámbito de traceability a lo largo de distintos aspectos definidos por \cite{Excellence}. 
+
+El capítulo se encuentra organizado principalmente por temas. Luego, para cada tema, se describen sus problemas y a continuación se listan los desafíos que resultan de los mismos:
+
+\section{Sobre el conocimiento de traceability}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+
+\item[-]    Existe poco consenso respecto a cuáles son las mejores técnicas y métodos para la aplicación de traceability, pocas anotaciones y documentación sobre las mejores prácticas, sumado a una falta de recursos que provean una buena base de conocimiento.
+
+\item[-]    Las definiciones semánticas no coinciden y las terminologías son dispares o distintas, todo ésto crea barreras de comunicación.
+
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+
+\item[+] Crear una base de conocimiento en la que se vuelquen las mejores prácticas de traceability, una terminología estándar y mucha información adicional, como por ejemplo casos de estudio.
+
+\end{itemize}
+
+\section{Sobre la capacitación y la certificación}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+\item[-]     Muy poca gente es competente en la definición de trazas y, por otro lado, existen disponibles pocos programas educativos.
+
+\item[-]    Existen pocos programas de certificación, y de ellos, pocos incluyen componentes de traceability.
+
+\item[-]   No hay definido un conjunto estándar de estrategias de traceability.
+
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+\item[+]     Identificar las áreas de conocimientos centrales y las habilidades y/o estrategias asociadas a traceability.
+
+\item[+]   Desarrollar buenos componentes educativos para la puesta en práctica de traceability.
+
+\item[+]   Desarrollar materiales pedagógicos efectivos para educar con énfasis en la importancia y administración de los costos-beneficios del uso de traceability.
+
+\end{itemize}
+
+\section{Sobre el soporte a la evolución}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+
+\item[-]     La información precisa, coherente, completa y actualizada sobre traceability es fundamental para diversos ámbitos y aplicaciones. Sin embargo, las técnicas actuales de “recuperación de trazas” aún son realizadas de forma manual y por lo tanto son propensas a errores.
+
+\item[-]    Para que los enlaces de traceability sean útiles, éstos deben reflejar la dependencia actual entre los artefactos. Dado que el costo y esfuerzo para mantenerlos durante la evolución del sistema es inmenso, a menudo los enlaces pasan a encontrarse en un estado erróneo o incorrecto.
+
+ \item[-]   Las herramientas actuales de administración de requerimientos incluyen características como “suspect trace links” para ayudar a los analistas a administrar la evolución de los enlaces, pero en la mayoría de los proyectos complejos el número de “suspect trace links” se vuelve rápidamente excesivo, minimizando drásticamente la utilidad de tal característica.
+ 
+\item[-]    Los enlaces de traceability tienen que evolucionar de forma sincrónica con los artefactos relacionados, sin embargo los sistemas actuales de gestión de cambios y la semántica de los enlaces no son lo suficientemente sofisticados como para apoyar esta evolución.
+
+\item[-]    Los métodos para transformar y reusar los enlaces sincrónicamente con los productos de desarrollo en línea son inmaduros.
+
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+
+\item[+]     Desarrollar técnicas de “recuperación de trazas” para artefactos textuales que sean tan precisos como el proceso manual y a la vez mucho más efectivos en tiempo y costo.
+
+\item[+]    Desarrollar la recuperación de trazas para que se encuentren integrados a los ``IDE''.
+
+\item[+]    Desarrollar sistemas de administración de cambios que efectivamente soporten la evolución de los enlaces de trazas sobre múltiples tipos de artefactos.
+
+\item[+]    Desarrollar técnicas que soporten traceability en todos los componentes de una línea de productos maximizando la reutilización y la disponibilidad de traceability entre diferentes versiones de los mismos.
+
+\item[+]    Desarrollar técnicas para maximizar la reutilización de los enlaces de trazas cuando el código existente se reutiliza en un nuevo producto.
+
+\end{itemize}
+
+\section{Sobre la semántica de los enlaces}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+
+\item[-]     Para efectivamente utilizar los enlaces de trazas y entender las relaciones por debajo de traceability, es necesario definir la semántica de los enlaces, sin embargo definir una formalidad para representar esta semántica no es una tarea fácil y puede llegar a ser acotada a un dominio específico, cosa que no es conveniente.
+
+\item[-]    Es muy importante para la consistencia de traceability conocer y establecer la granularidad de los elementos a ser enlazados, pero no existe un modelo claro de costo-beneficio para determinar consistentemente cuál es la granularidad correcta (“trace granularity”).
+
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+
+\item[+]     Definir meta-modelos para representar la información semántica de los enlaces de trazas y proveer ejemplos de instanciación para distintos dominios específicos.
+
+\item[+]    Desarrollar técnicas y procesos para determinar la correcta granularidad de los enlaces de trazas en un proyecto.
+
+\end{itemize}
+
+\section{Sobre la escalabilidad}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+
+\item[-]     Las técnicas corrientes de traceability no escalan adecuadamente en proyectos largos.
+
+\item[-]    Las herramientas de visualización son esenciales para dar ayuda en la compresión y el uso de la gran cantidad de información de los enlaces de las trazas. Sin embargo, las técnicas de visualización actuales no escalan bien y no son efectivas al presentar información compleja porque carecen de características sofisticadas de filtrado, navegación, consultas, etc.
+
+\item[-]    Muchos conjuntos de datos industriales son compuestos por largos e inestructurados documentos que son difíciles de enlazar mediante trazas.
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+
+\item[+]    Obtener conjuntos de datos de escala industrial desde varios dominios y usarlos para investigar la escalabilidad de las técnicas disponibles actualmente y, si es necesario, crear nuevas aproximaciones que escalen más eficientemente.
+
+\item[+]    Desarrollar mecanismos visuales efectivos para soportar la navegación y consulta de un gran número de enlaces de traceability y sus artefactos asociados.
+
+\item[+]    Desarrollar técnicas escalables para marcar las trazas tanto para conjunto de datos heterogéneos y/o grandes y débilmente estructurados.
+
+\end{itemize}
+
+
+\section{Sobre los factores humanos}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+
+\item[-]     Los métodos automáticos de traceability producen enlaces de trazas candidatos; sin embargo, el proceso es inútil si el analista no es capaz de evaluarlos correctamente  para diferenciar los buenos de los malos, o si es incapaz de confiar en la completitud y precisión de los resultados.
+
+\item[-]     Idealmente la tarea de encontrar las trazas debería ser invisible durante el proceso de desarrollo, desafortunadamente la generación de trazas y el uso es interrumpido por interacciones humanas porque en los ambientes de desarrollo actuales aún no es posible automatizar todo el proceso.
+
+\item[-]     Los enlaces de trazas comunican artefactos semánticamente diferentes, a su vez estos artefactos son creados por diferentes personas y frecuentemente escritos en diferentes documentos. Como resultado, los usuarios de un lado de los enlaces de trazas no entienden bien los artefactos del otro lado de la relación.
+
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+
+\item[+]     Basado en el estudio del uso de herramientas de traceability, crear nuevas herramientas que reúnan las necesidades prácticas que vayan surgiendo.
+
+\item[+]    Entender el impacto y las vulnerabilidades de la fallas humanas sobre el proceso de traceability y desarrollar técnicas para ayudar a los analistas a prevenir errores y minimizar el impacto de los mismos cuando ocurran.
+
+\item[+]    Desarrollar técnicas para ayudar a los humanos a superar las barreras semánticas del proceso de desarrollo completo.
+
+\end{itemize}
+
+\section{Análisis de costo-beneficio}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+
+\item[-]     En un escenario de traceability completo, los enlaces son creados entre artefactos en un nivel bajo de abstracción, ésto puede ser deseable para propósitos de comprensión, sin embargo este nivel tan bajo no es frecuentemente práctico y efectivo en costo.
+
+\item[-]    Existe una carencia de un modelo de costo-beneficio para analizar entre las distintas necesidades de traceability sobre varios proyectos y para diferentes enlaces potenciales dentro de un proyecto.
+
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+
+\item[+]     Definir y desarrollar técnicas efectivas en costo para generar y mantener información de traceability.
+
+\item[+]    Definir un modelo de costo práctico para generar y mantener los enlaces de trazas que tomen en consideración factores tales como el tamaño del proyecto, el tiempo, el esfuerzo y la calidad del sistema.
+
+\item[+]   Definir un modelo de beneficios para usar enlaces de trazas que tomen en consideración factores como la crítica y la volatilidad, e incorpore el valor logrado mediante el uso de traceability.
+
+\end{itemize}
+
+\section{Sobre los métodos y las herramientas}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+
+\item[-]     Los métodos de recuperación multimedia no son suficientemente sofisticados y soportados, y se ha realizado poco para incorporar tales técnicas multimedia en las herramientas de traceability.
+
+\item[-]   Traceability automático es esencial; sin embargo, se hace difícil por la falta de consistencia entre los artefactos, y la imprecisión de los modelos.
+
+\item[-]    Traceability implica todas las siguientes actividades: construcción o generación, evaluación, mantenimiento y el uso de los enlaces; sin embargo, no existe una sola herramienta que pueda cubrir todas estas tareas.
+
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+
+\item[+]     Desarrollar métodos efectivos para enlazar artefactos multimedia.
+
+\item[+]    Construir métodos y herramientas con altos niveles de automatización para soportar el ciclo de vida entero, que incluya la construcción, la evaluación, el mantenimiento y el uso de los enlaces de trazas.
+
+\item[+]    Desarrollar métodos para trazar requerimientos no funcionales.
+
+\end{itemize}
+
+\section{Sobre los procesos}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+
+\item[-]     Traceability no es incluida frecuentemente como una parte integral del ciclo de vida del desarrollo.
+
+\item[-]    Traceability automático puede proveer una alternativa efectiva en costo en comparación a la manual, pero la práctica ha mostrado que algunos conjuntos de datos son difíciles de enlazar usando métodos automáticos debido a las inconsistencias en terminología, los estándares, la carencia de estructuras, los formatos heterogéneos, etc.
+
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+
+\item[+]     Construir modelos de proceso que definan el ciclo de vida del marcado de trazas.
+
+\item[+]   Desarrollar técnicas para evaluar la habilidad de un conjunto de datos dado para soportar los métodos automáticos de traceability.
+ 
+\end{itemize}
+
+\section{Sobre el cumplimiento}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+
+\item[-]     Los estándares pueden ayudar a asegurar procesos consistentes y completos, aunque abundan los estándares, no está claro si los investigadores o profesionales están enterados de la existencia de los mismos.
+
+\item[-]    La comunidad que engloba traceability son eruditos sobre técnicas y procesos de este tema, pero tienen poca influencia sobre los contenidos relacionados a traceability en los procesos estándar de ingeniería de software.
+
+\item[-]    No es claro cómo se puede demostrar el cumplimiento de los estándares y regulaciones .
+
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+
+\item[+]     Establecer un mecanismo de comunicación para hacer que la comunidad de expertos de traceability dictamine los estándares relacionados con la tecnología.
+
+\item[+]    Lograr una presencia en la comunidad de estándares para influir y/o desarrollar estándares de traceability.
+
+\item[+]    Como comunidad, desarrollar y promover escenarios válidos para probar que las herramientas, las técnicas y las metodologías de traceability cumplen con los estándares.
+
+\end{itemize}
+
+
+\section{Sobre las mediciones y los Benchmarks}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+
+\item[-]     Los estudios empíricos son necesarios para demostrar la eficacia de los métodos de traceability y así, facilitar el trabajo colaborativo y evolutivo entre los investigadores y profesionales, sin embargo, hay una falta de diseños experimentales, metodologías y benchmarks comunes.
+
+\item[-]    Las medidas, métodos y métricas propuestas actuales no han sido validadas a través de estudios o pruebas empíricas.
+
+\item[-]    No existen o no se han realizado buenas pruebas o “benchmarks” de traceability y/o no son compatibles.
+
+\item[-]    No existen pruebas estándares de comparación para aplicar sobre los métodos y técnicas desarrolladas de traceability.
+
+\item[-]    La detección de errores en los enlaces de trazas es necesaria para determinar la eficacia del producto y el proceso, sin embargo los modelos de detección de errores actuales aún son primitivos e inválidos.
+
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+
+\item[+]     Definir procesos estándares para la realización de estudios empíricos durante la investigación de traceability.
+
+\item[+]    Construir pruebas (benchmarks) para evaluar los métodos y las técnicas de traceability.
+
+\item[+]    Definir medidas para evaluar la calidad de los enlaces de trazas tanto forma individual como la de un conjunto.
+
+\item[+]    Desarrollar técnicas de evaluación de métodos y procesos de traceability.
+
+\end{itemize}
+
+\section{Sobre la transferencia de tecnología}
+
+\subsubsection{Problemas}
+
+\begin{itemize}
+
+\item[-]     El objetivo de la investigación de traceability es la transferencia de soluciones eficaces para la industria, sin embargo en la realidad en la industria son reacios a probar técnicas nuevas donde la eficacia aún no fue demostrada.
+
+\item[-]    La carencia de diálogo entre los dos grupos, investigadores y profesionales, limita la accesibilidad de los investigadores a un conjunto de datos reales para testear nuevas técnicas e inhibe la retroalimentación de la industria a los investigadores.
+
+\item[-]    Los prototipos de Traceability son generalmente diseñados para mostrar demostraciones de conceptos, sin embargo no son suficientemente rigurosos para el campo de prueba de la industria.
+
+\end{itemize}
+
+\subsubsection{Desafíos}
+
+\begin{itemize}
+
+\item[+]     Crear una infraestructura y un conjunto de métodos relacionados para organizar el proceso de transferencia de tecnología.
+
+\item[+]    Identificar los casos de estudio exitosos y darle publicidad, para demostrar la efectividad de los costos de las técnicas de traceability en el ámbito industrial.
+
+\item[+]    Identificar los usuarios de traceability y definir sus necesidades en términos de calidad, ciclo de vida, comunicación, etc.
+
+\item[+]    Incorporar las herramientas de traceability que se encuentren a la vanguardia en los IDE estándares (tal como Eclipse) y las herramientas de administración de requerimientos industriales.
+
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%     Solución        %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Caminando hacia una solución}
+
+\section{Generación de trazas}
+
+Uno de los desafíos presentados en \cite{GrammelVoigt} es sobre cuál de los dos enfoques de generación de trazas durante una transformación, implícita o explícita, seguir o tomar. En la implícita la transformación provee un soporte integral para traceability, en cambio en la explícita depende del desarrollador codificar las reglas de traceability como un modelo de salida.
+
+\subsection{Implícita}
+
+La ventaja mayor de la generación implícita de enlaces es que no es necesario ningún esfuerzo adicional para obtener los enlaces de trazas entre los modelos de entrada y salida, dado que son generados en paralelo automáticamente con el modelo actual de la transformación.
+
+Desventajas:
+
+\begin{enumerate}
+\item     El meta-modelo de traceability es fijo: como la mayoría de los enfoques de transformación tienen diferentes meta-modelos, lograr estandarizar entre estos diferentes enfoques es muy complejo.
+\item    Poca flexibilidad para controlar los datos de traceability:
+\begin{enumerate}
+\item         El tipo de información guardada: cuando se trazan todos los elementos del modelo referenciado, el número de enlaces puede volverse incomprensible y por lo tanto menos útil, también esto puede ser un tema de rendimiento al manejar un modelo de transformación grande y complejo.
+\item        El nivel de granularidad de la información de traceability: (esto es por ejemplo realizar trazas solo a nivel de archivo o bajar a nivel del contenido del mismo) esta configuración de los enlaces puede variar de un escenario de traceability a otro.
+\item       Contexto de la información: por necesidades de un cliente por ejemplo, por motivos de seguridad no toda la información de un modelo tiene permitido ser trazada.
+\end{enumerate}
+\end{enumerate}
+
+\subsection{Explícita}
+
+Ventajas de la explícita:
+
+\begin{enumerate}
+\item Es posible lidiar con traceability como un modelo regular de salida de la transformación e incorporar reglas de transformación adicionales para generarlo. La elección del meta-modelo es entonces completa del programador y no depende del motor de transformaciones. Por lo tanto, la granulación de los enlaces es adaptable.
+\end{enumerate}
+
+Desventajas:
+
+\begin{enumerate}
+\item     Se requiere un esfuerzo adicional para agregar reglas de transformación específicas para traceability, que pueden en consecuencia contaminar la implementación.
+\item    Como esta tarea es por lo general manual, es propensa a errores y consume mucho tiempo, más aun si pensamos que esta tarea se tiene que repetir para cada transformación que se realice.
+\end{enumerate}
+
+Otro desafío refiere a la semántica de los enlaces. Es necesario frecuentemente distinguir entre distintos tipos de enlaces. Por ejemplo un enlace entre un requerimiento textual y un elemento de modelo tiene una semántica distinta que una relación de refinamiento dentro de un modelo. Los tipos de enlaces requeridos frecuentemente son fuertemente dependientes al proyecto. Fijar los tipos de enlaces semánticos tiene la consecuencia de menor flexibilidad para los enlaces definidos por el usuario que pueden ser necesarios para juntar diferentes necesidades del proyecto o la compañía. Por otro lado, la selección de la semántica de un enlace es guiada por la razón del usuario sobre qué quiere realizar con el enlace, no predefinir la semántica de un enlace puede resultar en fallas de razonamientos debido al mal uso semántico.
+
+\section{Estrategias}
+
+\cite{DrivalosPaigeFernandesKolovos} Hay dos tipos principales de estrategias para almacenar y administrar la información de traceability. En la primera la información de traceability se encuentra embebida en los modelos que ella refiere, en la segunda esta información se encuentra almacenada separada de los modelos:
+
+\subsection{Almacenamiento de Traceability Links Intra-Modelo}
+
+Como ya se dijo, bajo esta estrategia la información de traceability es almacenada dentro de los artefactos a los que refiere, esto puede ser como elementos del modelo o atributos de elementos del modelo, como etiquetas o propiedades. Es una estrategia sencilla y amigable, pero puede ser muy problemática por varias razones. Si los enlaces son dirigidos y almacenados solamente en el modelo origen, estos no son visibles en el destino, a la inversa (almacenados en el destino) nos encontramos con el mismo problema. Por otro lado, si la información de traceability es almacenada en ambos modelos, entonces nos encontramos con el problema de que esta información debe mantenerse consistente por cada vez que se realice un cambio. Todo lo anterior sumado a la polución que se genera en el modelo con información ajena a su contexto o fin, pudiendo lograr que dicho modelo se vuelva difícil de comprender y mantener. También, en un entorno MDE es común que los modelos tengan sus propias representaciones y semánticas, por lo cual es muy difícil distinguir la información de traceability de los objetos del modelo. Como resultado, el análisis automatizado de la información de traceability se hace muy difícil. Los enfoques principales que hacen uso de esta estrategia utilizan las construcciones específicas del lenguaje, por ejemplo determinados tipos de enlaces de traceability están representados en los diagramas UML mediante el uso de las estereotipos como <<refines>>.
+
+\subsection{Almacenamiento externo de Tracebility Links}
+
+En esta estrategia la información de traceability se encuentra almacenada separada de los modelos a los que refiere en un modelo aparte. Esta propuesta tiene dos claras ventajas, la primera, los modelos origen y destino se mantienen totalmente limpios, de esta manera la polución antes nombrada es evitada. Y la segunda, dado que el modelo donde se almacena los traceability links se encuentra definido por un meta-modelo con una clara semántica, logra que el proceso de análisis de la información sea mucho más fácil que en la estrategia intra-modelo.
+Un requisito previo para el almacenamiento externo de los traceability links, es que los diferentes elementos del modelo tengan identificadores únicos, de modo que los traceability links relacionados se pueden resolver inequívocamente. Un ejemplo es el mecanismo propuesto por MetaObject Facility (MOF) y por el Eclipse Modeling Framework (EMF) en la forma de un identificador xmi.id .
+
+\section{Meta-modelos}
+
+Los modelos que definen los traceability links son determinados cada uno por su meta-modelo, este meta-modelo puede ser clasificado como un “meta-modelo de traceability de propósito general” o un “meta-modelo de de traceability de caso específico”.
+
+\subsection{Meta-modelo de propósito general}
+
+En este caso, nos encontramos con un meta-modelo genérico que permite la captura de las relaciones entre cualquier tipo de elementos de modelo. En este meta-modelo, un traceability link se puede conectar con cualquier número de elementos, de cualquier tipo de cualquier modelo. Las principales ventajas de este tipo de meta-modelo de propósito general son la simplicidad y la uniformidad (dado que todos los modelos conforman el mismo meta-modelo) con lo cual se mejora la interoperabilidad de las herramientas con capacidades de importar, exportar y gestionar traceability en un formato común. Por otro lado, como el meta-modelo de propósito general no capta casos específicos de traceability links fuertemente tipados con semántica y restricciones definidas rigurosamente, se abre la puerta a establecimientos de traceability links ilegítimas. Como por ejemplo en el caso que se quiere representar links entre un diagrama de clases y un modelo de base de datos relacional, sabemos que existen vínculos entre las clases del primer modelo y las tablas del segundo, un meta-modelo de traceability genérico permite el establecimiento de links ilegítimos tales como una clase relacionada con una columna. La provisión de mecanismos de extensión junto con el meta-modelo de propósito general es un método de uso frecuente para permitir un mejor apoyo para el caso de los requisitos específicos. Sin embargo, todavía carecen de la eficacia de los meta-modelos de casos específicos para capturar casos específicos de información y su semántica.
+
+\subsection{Meta-modelo de caso específico}
+
+En este caso, para cada escenario de traceability se define un meta-modelo de traceability específico. Este meta-modelo de traceability captura traceability links fuertemente tipados de caso específico con una semántica bien definida, que pueden o no incluir restricciones de corrección. Debido a su naturaleza de tipado fuerte y las restricciones asociadas, restringe a los usuarios y herramientas para que solo puedan establecer traceability links legítimos. Por otro lado, un meta-modelo de traceability para cada caso específico requiere mucho esfuerzo en su construcción, así como herramientas que soporten diferentes meta-modelos de traceability.
+Para ser fuertemente tipado el meta-modelo de traceability necesita referir explícitamente a los tipos de elementos definidos en otros meta-modelos. Por ejemplo, considereremos que es necesario definir un meta-modelo de traceability que permita el establecimiento de traceability links entre instancias de A (del meta-modelo MMa) y las de B (a partir de MMb), pero no entre dos instancias de A o dos de B. Para capturar tal meta-modelo, la tecnología de modelado que se use no debe tomar cada meta-modelo como un espacio cerrado, sino que debe permitir referencias inter-meta-modelo. Un ejemplo de tecnología que soporta referencias inter-meta-modelo es el Eclipse Modeling Framework (EMF).
+A pesar de que un meta-modelo capturado utilizando una tecnología que permita referencias inter-meta-modelo puede confiar tipos seguros, encontramos frecuentemente otras restricciones que necesitan especificarse y que el meta-modelo de traceability no puede capturarlas. Por ejemplo tomando como referencia el ejemplo anterior, podríamos querer que cada instancia A de MMa sólo se puede vincular a no más de una instancia B de MMb. Para especificar tales restricciones, se requiere un lenguaje de especificación de restricciones que pueda expresar restricciones que abarquen elementos que pertenezcan a modelos definidos por diferentes meta-modelos. En la actualidad el Object Constraint Language (OCL) carece de esta capacidad, ya que no proporciona las construcciones para la expresión de restricciones que atraviese modelos (cross-model). Ejemplos de lenguajes de restricción que soportan el establecimiento con tales restricciones incluyen el Epsilon Validation Language (EVL) y el XLinkit toolkit.
+La combinación de un meta-modelo de traceability fuertemente tipado conjunto con la verificación de restricciones inter-modelo restringe a los usuarios y a las herramientas a establecer y mantener sólo traceability links con sentido, que pueden ser automáticamente validadas para descubrir posibles omisiones e inconsistencias. Estas cuestiones pueden surgir, ya sea durante el establecimiento de los traceability links o más tarde en el ciclo de vida de los modelos entre los que los traceability links ya han sido establecidos.
 
 \section{Una clasificación genérica de traceability}
 
@@ -119,220 +569,10 @@ El alcance de Model-Artefact Link es muy amplio, es esta clasificación solo se 
 \end{figure}
 
 
-\section{Beneficios y problemas de traceability}
-
-\subsection{Beneficios}
-
-A continuación se listan algunos de los beneficios del uso de relaciones o enlaces de traceability en las siguientes actividades o dominios de la ingeniería según \cite{BrcinaRiebisch} y \cite{GrammelVoigt}:
-\begin{itemize}
-\item Análisis de sistemas: para entender la complejidad del mismo navegando los enlaces a lo largo del modelo de las cadenas de transformación.   
-
-\item    Análisis de cobertura: para determinar si todos los requerimientos fueron cubiertos en los casos de prueba del ciclo de vida del desarrollo, donde la traceability de los respectivos modelos es crucial.
-
- \item   Análisis de impactos de un cambio: para ver cómo los cambios en un modelo afectarán los otros relacionados; saber el tipo de dependencia que existe entre las entidades relacionadas ayudará a determinar el cambio necesario.
-
- \item   Análisis de huérfanos: para encontrar los elementos huérfanos de un modelo con respecto a un enlace específico.
-
- \item   Comprensión del software e ingeniería inversa: para identificar todas las entidades relacionadas a una en particular; entender el tipo de relación existente; identificar las abstracciones, es decir los patrones de diseño, estilos de arquitectura, principios.
-
- \item   Origen de una desición o requerimiento: para identificar el artefacto particular que demanda una propiedad específica; justificar una decisión; resolver un conjunto de requerimientos que se contradicen.
-
- \item   Apoyo en la toma de decisiones: para entender qué factores y metas influyen en una decisión; para ayudar en las propuesta de soluciones y en la evaluación de las mismas.
-
-\item    Configuración del sistema y versionado: para identificar las restricciones entre los componentes; identificar los cambios necesarios para resolver una restricción; identificar las diferencias entre dos versiones distintas del mismo artefacto y su impacto en otros.
-\end{itemize}
-
-\subsection{Problemas}
-
-Aunque las ventajas de traceability ya han sido identificadas, su puesta en práctica apenas ha quedado establecida. Las principales razones son \cite{GrammelVoigt}:
-
-\begin{itemize}
-
- \item   El alto     costo de la creación y mantenimiento manual de la información de     traceability.
-
-\item    La falta de heurísticas que determinen qué información de los enlaces deben ser grabados.
-
- \item   Discrepancias     entre los usuarios de traceability, quienes crean los enlaces y quienes los usan.
-
-\item    Carencia de soporte adecuado en las herramientas.
-
-\item    Los artefactos son escritos en diferentes lenguajes, lenguaje natural versus lenguaje de programación.
-
-\item    Los artefactos describen el sistema de software en diferentes niveles de abstracción (diseño versus implementación).
-\end{itemize}
-
-\section{Desafíos de traceability}
-
-Vamos a describir los principales problemas y grandes desafíos relacionados a varios aspectos de traceability en sistemas de software según \cite{Excellence} de la siguiente forma, agrupando por tema los problemas seguido de los grandes desafíos para dichos problemas:
-
-\subsection{Sobre el conocimiento de traceability}
-
-\begin{itemize}
-\item[+]    Existe poco consenso respecto a cuáles son las mejores técnicas y métodos de traceability, pocas anotaciones o documentación sobre las mejores prácticas, y una falta de recursos que provean una buena base de conocimiento.
-\item[+]    Definiciones semánticas que no coinciden y uso de terminologías dispares o distintas crean barreras de comunicación.
-\end{itemize}
-
-\begin{itemize}
-\item[-] Crear una base de conocimiento en la que se vuelquen las mejores prácticas de traceability, una terminología estándar y mucha información adicional como casos de estudio sobre traceability.
-\end{itemize}
-
-\subsection{Sobre la capacitación y la certificación}
-\begin{itemize}
-\item[+]     Muy poca gente es competente en tracing y por otro lado existen disponibles pocos programas educativos.
-\item[+]    Hay pocos programas de certificación, y pocos de ellos incluyen componentes de traceability.
-\item[+]   No hay definido un conjunto estándar de estrategias de traceability.
-\end{itemize}
-
-\begin{itemize}
-\item[-]     Identificar áreas de conocimientos centrales y habilidades o estrategias asociadas a traceability.
-\item[-]   Desarrollar componentes educativos buenos para la práctica de traceability.
-\item[-]   Desarrollar materiales pedagógicos efectivos para educar en la importancia y en la administración de costos-beneficios de traceability.
-\end{itemize}
-
-\subsection{Sobre el soporte a la evolución}
-
-\begin{itemize}
-\item[+]     La información precisa, coherente, completa y actualizada sobre traceability es fundamental para diversos ámbitos y aplicaciones. Sin embargo, las técnicas actuales de “link recovery” son aún realizadas de forma manual y por lo tanto son propensas a errores.
-\item[+]    Para que los enlaces de traceability sean útiles, éstos deben reflejar la dependencia actual entre los artefactos. Dado que el costo y esfuerzo para mantenerlos durante la evolución del sistema es inmenso, a menudo los links pasan a encontrarse en un estado erróneo o incorrecto.
- \item[+]   Las herramientas actuales de administración de requerimientos incluyen características como “suspect trace links” para ayudar a los analistas a administrar la evolución de los enlaces, pero en la mayoría de los proyectos complejos el número de “suspect trace links” se vuelve rápidamente excesivo, minimizando drásticamente la utilidad de tal característica.
-\item[+]    Los enlaces de traceability tienen que evolucionar de forma sincrónica con sus artefactos relacionados, sin embargo los sistemas actuales de gestión del cambios y la semántica de los enlaces no son lo suficientemente sofisticadas para apoyar esta evolución.
-\item[+]    Los métodos para transformar y reusar los “trace links” sincrónicamente con los productos de desarrollo en línea son inmaduros.
-\end{itemize}
-
-\begin{itemize}
-\item[-]     Desarrollar técnicas de “link recovery” para artefactos textuales que sean tan precisos como el proceso manual y mucho más efectivos en tiempo y costo.
-\item[-]    Desarrollar “traceability recovery” con el fin de ser integrado en los ``IDE''.
-\item[-]    Desarrollar sistemas de administración de cambios que efectivamente soporten la evolución de los “traceability links” sobre múltiples tipos de artefactos.
-\item[-]    Desarrollar técnicas que soporten traceability en todos los productos dentro de una línea de productos maximizando la reutilización y la disponibilidad de traceability entre diferentes versiones de la línea de productos.
-\item[-]    Desarrollar técnicas para maximizar la reutilización de los ``traceability links'' cuando el código existente se reutiliza en un nuevo producto.
-\end{itemize}
-
-\subsection{Sobre la semántica de los enlaces}
-
-\begin{itemize}
-\item[+]     Para efectivamente utilizar links y entender las relaciones por debajo de traceability, es necesario definir la semántica de los links, sin embargo definir una formalidad para representar esta semántica no es una tarea fácil y puede llegar a ser acotada a un dominio específico, cosa que no es conveniente.
-\item[+]    Es muy importante para la consistencia de traceability conocer y establecer la granularidad de los elementos a ser enlazados, pero no existe un modelo claro de costo-beneficio para determinar consistentemente la correcta granularidad o “trace granularity”.
-\end{itemize}
-
-\begin{itemize}
-\item[-]     Definir meta-modelos para representar información semántica de los “traceability links” y proveer ejemplos de instanciación para dominios específicos.
-\item[-]    Desarrollar técnicas y procesos para determinar la correcta granularidad de links en un proyecto.
-\end{itemize}
-
-\subsection{Sobre la escalabilidad}
-
-\begin{itemize}
-\item[+]     Las técnicas corrientes de traceability no escalan adecuadamente en proyectos largos.
-\item[+]    Las herramientas de visualización son esenciales para dar ayuda en la compresión y el uso de gran cantidad de información de ``trace links''. Sin embargo, las técnicas de visualización actuales no escalan bien y no son efectivas al presentar información compleja porque carecen de características sofisticadas de filtrado, navegación, consultas, etc.
-\item[+]    Muchos conjuntos de datos industriales son compuestos por largos e inestructurados documentos que son difíciles de “trace”.
-\end{itemize}
-
-\begin{itemize}
-\item[-]    Obtener conjunto de datos de escala industrial desde varios dominios y usarlos para investigar la escalabilidad de las técnicas disponibles y, si es necesario, crear nuevas aproximaciones que escalen más eficientemente.
-\item[-]    Desarrollar mecanismos visuales efectivos para soportar navegación y consulta de un gran número de “traceability links” y sus artefactos asociados.
-\item[-]    Desarrollar técnicas escalables para “tracing” tanto para conjunto de datos heterogéneos y/o grandes y débilmente estructurados.
-\end{itemize}
-
-
-\subsection{Sobre los factores humanos}
-
-\begin{itemize}
-\item[+]     Los métodos automáticos de traceability producen “trace links” candidatos; sin embargo, el proceso es inútil si el analista no es capaz de evaluar correctamente los links  para diferenciar los buenos de los malos, o si es incapaz de confiar en la completitud y precisión de los resultados.
-\item[+]     Idealmente la tarea de ``tracing'' debería ser invisible durante el proceso de desarrollo, desafortunadamente la generación de trazas y el uso es interrumpido por interacciones humanas porque en los ambientes de desarrollo actuales aún no es posible automatizar todo el proceso.
-\item[+]     Los ``trace links'' comunican artefactos semánticamente diferentes, pero éstos artefactos son creados por diferentes personas, frecuentemente escritos en diferentes documentos. Como resultado, los usuarios de un lado de los ``trace links'' no entienden bien los artefactos del otro lado relacionado.
-\end{itemize}
-
-\begin{itemize}
-\item[-]     Basado en el estudio del uso de herramientas de traceability, crear nuevas herramientas de traceability que reunan las necesidades prácticas que salgan a la luz.
-\item[-]    Entender el impacto y las vulnerabilidades de la fallas humanas sobre el proceso de traceability y desarrollar técnicas para ayudar a los analistas a prevenir errores y minimizar el impacto de éstos cuando ocurran.
-\item[-]    Desarrollar técnicas para ayudar a los humanos a superar las barreras semánticas del proceso de desarrollo completo.
-\end{itemize}
-
-\subsection{Análisis de costo-beneficio}
-
-\begin{itemize}
-\item[+]     En una traceability completa, links son creados entre artefactos en un nivel bajo de abstracción, ésto puede ser deseable para propósitos de comprensión, sin embargo este nivel tan bajo no es frecuentemente práctico y efectivo en costo.
-\item[+]    Existe una carencia de modelo de costo-beneficio para diferenciar entre diferentes necesidades de traceability sobre varios proyectos y para diferentes links potenciales dentro de un proyecto.
-\end{itemize}
-
-\begin{itemize}
-\item[-]     Definir y desarrollar técnicas efectivas en costo para generar y mantener información de traceability.
-\item[-]    Definir un modelo de costo práctico para generar y mantener “trace links” que tomen en consideración factores tales como el tamaño del proyecto, tiempo, esfuerzo y calidad del sistema.
- \item[-]   Definir un modelo de beneficios para usar “trace links” que tomen en consideración factores como crítica y volatilidad, e incorpore el valor logrado desde el uso de las traces.
-\end{itemize}
-
-\subsection{Sobre los métodos y las herramientas}
-
-\begin{itemize}
-\item[+]     Los métodos de recuperación multimedia no son suficientemente sofisticados y soportados, y se ha realizado poco para incorporar tales técnicas multimedia en las herramientas de traceability.
-\item[+]   Trace automático es esencial; sim embargo, se hace difícil por la escases de consistencia entre los artefactos, y la impresición de los modelos.
-\item[+]    Traceability implica las actividades de construcción o generación, evaluación, mantenimiento y uso de links; sin embargo, no hay una sola herramienta que pueda cubrir todas estas tareas.
-\end{itemize}
-
-\begin{itemize}
-\item[-]     Desarrollar métodos efectivos para ``trace'' artefactos multimedia.
-\item[-]    Construir métodos y herramientas con altos niveles de automatización para soportar el ciclo de vida entero que incluya la construcción, evaluación, mantenimiento y uso de los “trace links”.
-\item[-]    Desarrollar métodos para trazar requerimientos no funcionales.
-\end{itemize}
-
-\subsection{Sobre los procesos}
-
-\begin{itemize}
-\item[+]     Traceability no es incluida frecuentemente como una parte integral del ciclo de vida de desarrollo.
-\item[+]    El “tracing” automático puede proveer una alternativa efectiva en costo al manual, pero la práctica ha mostrado que algunos conjuntos de datos son difíciles de “trace” usando métodos automáticos debido a las inconsistencias en terminología, estándares, carencia de estructura, formatos heterogéneos, etc.
-\end{itemize}
-
-\begin{itemize}
-\item[-]     Construir modelos de proceso que definan el ciclo de vida del “tracing”.
- \item[-]   Desarrollar técnicas para evaluar la habilidad de un conjunto de datos dado para soportar los métodos automáticos de “tracing”.
-\end{itemize}
-
-\subsection{Sobre el cumplimiento}
-
-\begin{itemize}
-\item[+]     Los estándares pueden ayudar a asegurar procesos consistentes y completos, aunque abundan los estándares, no está claro si los investigadores o profesionales están enterados de la existencia de éstos.
-\item[+]    La comunidad de traceability son eruditos sobre técnicas y procesos de traceability, pero tienen poca influencia sobre los contenidos relacionados de traceability en los procesos estándar de ingeniería de software.
-\item[+]    No es claro cómo el cumplimento de los estándares y regulaciones se puede demostrar.
-\end{itemize}
-
-\begin{itemize}
-\item[-]     Establecer un mecanismo de comunicación para hacer que la comunidad conocedora de traceability de los estándares relacionados con traceability.
-\item[-]    Lograr una presencia en la comunidad de estándares para influir y/o desarrollar estándares de traceability.
-\item[-]    Como comunidad, desarrollar y promover escenarios válidos para probar que las herramientas, técnicas y metodologías de traceability cumplen con estándares.
-\end{itemize}
-
-
-\subsection{Sobre las mediciones y los Benchmarks}
-
-\begin{itemize}
-\item[+]     Los estudios empíricos son necesarios para demostrar la eficacia de los métodos de traceability y facilitar el trabajo colaborativo y evolutivo entre los investigadores y profesionales, sin embargo, hay una falta de diseños experimentales, metodologías y benchmarks comunes.
-\item[+]    Las medidas, métodos y métricas propuestas actuales no han sido validadas a través de estudios o pruebas empíricas.
-\item[+]    No existen o no se han realizado buenas pruebas o “benchmarks” de traceability o no son compatibles.
-\item[+]    No existen pruebas estándares de comparación para aplicar sobre los métodos y técnicas desarrolladas de traceability.
-\item[+]    La detección errores en los “traceability links” es necesaria para determinar la eficacia del producto y proceso, sin embargo los modelos de detección de errores actuales en traceability son primitivos y no válidos.
-\end{itemize}
-
-\begin{itemize}
-\item[-]     Definir procesos estándares y procedimientos relacionados para realizar estudios empíricos durante la investigación de traceability.
-\item[-]    Construir pruebas (benchmarks) para evaluar métodos y técnicas de traceability.
-\item[-]    Definir medidas para evaluar la calidad tanto individual como la de un conjunto de “traceability links”.
-\item[-]    Desarrollar técnicas para evaluar métodos y procesos de traceability.
-\end{itemize}
-
-\subsection{Sobre la transferencia de tecnología}
-
-\begin{itemize}
-\item[+]     El objetivo de la investigación de traceability es la transferencia de soluciones eficaces de traceability para la industria, sin embargo en la industria son reacios a probar nuevas y no demostradas técnicas.
-\item[+]    La carencia de diálogo entre los dos grupos, investigadores y profesionales, limita la accesibilidad de los investigadores a un conjunto de datos reales para testear nuevas técnicas e inhibe la retroalimentación de la industria a los investigadores.
-\item[+]    Los prototipos de Traceability son generalmente diseñados para mostrar demostraciones de conceptos, sin embargo no son suficientemente rigurosos para el campo de prueba de la industria.
-\end{itemize}
-
-\begin{itemize}
-\item[-]     Crear una infraestructura y métodos relacionados para organizar el proceso de transferencia de tecnología.
-\item[-]    Identificar los casos de estudio exitosos y publicitarlos para demostrar la efectividad de los costos y las técnicas de traceability para la industria.
-\item[-]    Identificar los usuarios de traceability y definir sus necesidades en términos de calidad, ciclo de vida, grupos de usuarios, comunicación, etc.
-\item[-]    Incorporar las herramientas de traceability que se encuentren a la vanguardia en los IDE estándares (tal como Eclipse) y las herramientas de administración de requerimientos industriales.
-\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%     tecnologías     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Descripción de tecnologías}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -342,7 +582,7 @@ Vamos a describir los principales problemas y grandes desafíos relacionados a v
 
 \section{Un motor de traceability de transformación de modelos en Ingeniería de Software}
 
-En \cite{AmarLeblancCoulette} describen un motor de traceability al que llaman ETraceTool, que funciona como un plug-in de Eclipse programado mediante el paradigma orientado a aspectos con el fin de mantener aislada la generación de las trazas del código de la transformación. El mismo trabaja sobre transformaciones escritas en Java usando la API EMF \cite{EMF} y a continuación se listan las principales características:
+En \cite{AmarLeblancCoulette} se describe un motor de traceability al que llamaron ETraceTool, que funciona como un plug-in de Eclipse programado mediante el paradigma orientado a aspectos con el fin de mantener aislada la generación de las trazas del código de la transformación. El mismo trabaja sobre transformaciones escritas en Java usando la API EMF \cite{EMF}. A continuación se listan sus principales características:
 
 \begin{itemize}
 \item     El código de generación de trazas no es intrusivo en el código de la transformación;
@@ -358,7 +598,7 @@ En \cite{AmarLeblancCoulette} describen un motor de traceability al que llaman E
 \label{fig:ArqETraceTool}
 \end{figure}
 
-La arquitectura se presenta en el dibujo \ref{fig:ArqETraceTool} y se explica de la siguiente manera, durante la transformación el plug-in captura un conjunto de eventos previamente identificados y clasificados gracias a la programación orientada a aspectos, luego el Aspect Tracer genera un modelo de trazas que conforma o ajusta al meta-modelo de trazas anidado que se muestra en el dibujo \ref{fig:ETraceToolMeta-modelo}. Al final, el modelo de trazas generado puede ser serializado en un archivo XMI o transformado a cualquier otra lenguaje mediante una transformación modelo-texto.
+La arquitectura se presenta en el dibujo \ref{fig:ArqETraceTool} y se explica de la siguiente manera, durante la transformación el plug-in captura un conjunto de eventos previamente identificados y clasificados gracias a la programación orientada a aspectos, luego el Aspect Tracer genera un modelo de trazas que conforma o ajusta al meta-modelo de trazas anidado que se muestra en el dibujo \ref{fig:ETraceToolMeta-modelo}. Al final, el modelo de trazas generado puede ser serializado en un archivo XMI o transformado a cualquier otro lenguaje mediante una transformación modelo-texto.
 
 \begin{figure}[hbtp]
 \centering
@@ -516,81 +756,6 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \label{fig:EjemploLocalGlobalMetamodel}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%     Solución        %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Caminando hacia una solución}
-
-\section{Desafíos}
-
-Uno de los desafíos presentados en \cite{GrammelVoigt} es sobre cuál de los dos enfoques de generación de trazas durante una transformación, implícita o explícita, seguir o tomar. En la implícita la transformación provee un soporte integral para traceability, en cambio en la explícita depende del desarrollador codificar las reglas de traceability como un modelo de salida.
-
-\subsection{Implícita}
-
-La ventaja mayor de la generación implícita de enlaces es que no es necesario ningún esfuerzo adicional para obtener los enlaces de trazas entre los modelos de entrada y salida, dado que son generados en paralelo automáticamente con el modelo actual de la transformación.
-
-Desventajas:
-
-\begin{enumerate}
-\item     El meta-modelo de traceability es fijo: como la mayoría de los enfoques de transformación tienen diferentes meta-modelos, lograr estandarizar entre estos diferentes enfoques es muy complejo.
-\item    Poca flexibilidad para controlar los datos de traceability:
-\begin{enumerate}
-\item         El tipo de información guardada: cuando se trazan todos los elementos del modelo referenciado, el número de enlaces puede volverse incomprensible y por lo tanto menos útil, también esto puede ser un tema de rendimiento al manejar un modelo de transformación grande y complejo.
-\item        El nivel de granularidad de la información de traceability: (esto es por ejemplo realizar trazas solo a nivel de archivo o bajar a nivel del contenido del mismo) esta configuración de los enlaces puede variar de un escenario de traceability a otro.
-\item       Contexto de la información: por necesidades de un cliente por ejemplo, por motivos de seguridad no toda la información de un modelo tiene permitido ser trazada.
-\end{enumerate}
-\end{enumerate}
-
-\subsection{Explícita}
-
-Ventajas de la explícita:
-
-\begin{enumerate}
-\item Es posible lidiar con traceability como un modelo regular de salida de la transformación e incorporar reglas de transformación adicionales para generarlo. La elección del meta-modelo es entonces completa del programador y no depende del motor de transformaciones. Por lo tanto, la granulación de los enlaces es adaptable.
-\end{enumerate}
-
-Desventajas:
-
-\begin{enumerate}
-\item     Se requiere un esfuerzo adicional para agregar reglas de transformación específicas para traceability, que pueden en consecuencia contaminar la implementación.
-\item    Como esta tarea es por lo general manual, es propensa a errores y consume mucho tiempo, más aun si pensamos que esta tarea se tiene que repetir para cada transformación que se realice.
-\end{enumerate}
-
-Otro desafío refiere a la semántica de los enlaces. Es necesario frecuentemente distinguir entre distintos tipos de enlaces. Por ejemplo un enlace entre un requerimiento textual y un elemento de modelo tiene una semántica distinta que una relación de refinamiento dentro de un modelo. Los tipos de enlaces requeridos frecuentemente son fuertemente dependientes al proyecto. Fijar los tipos de enlaces semánticos tiene la consecuencia de menor flexibilidad para los enlaces definidos por el usuario que pueden ser necesarios para juntar diferentes necesidades del proyecto o la compañía. Por otro lado, la selección de la semántica de un enlace es guiada por la razón del usuario sobre qué quiere realizar con el enlace, no predefinir la semántica de un enlace puede resultar en fallas de razonamientos debido al mal uso semántico.
-
-\section{Estrategias}
-
-\cite{DrivalosPaigeFernandesKolovos} Hay dos tipos principales de estrategias para almacenar y administrar la información de traceability. En la primera la información de traceability se encuentra embebida en los modelos que ella refiere, en la segunda esta información se encuentra almacenada separada de los modelos:
-
-\subsection{Almacenamiento de Traceability Links Intra-Modelo}
-
-Como ya se dijo, bajo esta estrategia la información de traceability es almacenada dentro de los artefactos a los que refiere, esto puede ser como elementos del modelo o atributos de elementos del modelo, como etiquetas o propiedades. Es una estrategia sencilla y amigable, pero puede ser muy problemática por varias razones. Si los enlaces son dirigidos y almacenados solamente en el modelo origen, estos no son visibles en el destino, a la inversa (almacenados en el destino) nos encontramos con el mismo problema. Por otro lado, si la información de traceability es almacenada en ambos modelos, entonces nos encontramos con el problema de que esta información debe mantenerse consistente por cada vez que se realice un cambio. Todo lo anterior sumado a la polución que se genera en el modelo con información ajena a su contexto o fin, pudiendo lograr que dicho modelo se vuelva difícil de comprender y mantener. También, en un entorno MDE es común que los modelos tengan sus propias representaciones y semánticas, por lo cual es muy difícil distinguir la información de traceability de los objetos del modelo. Como resultado, el análisis automatizado de la información de traceability se hace muy difícil. Los enfoques principales que hacen uso de esta estrategia utilizan las construcciones específicas del lenguaje, por ejemplo determinados tipos de enlaces de traceability están representados en los diagramas UML mediante el uso de las estereotipos como <<refines>>.
-
-\subsection{Almacenamiento externo de Tracebility Links}
-
-En esta estrategia la información de traceability se encuentra almacenada separada de los modelos a los que refiere en un modelo aparte. Esta propuesta tiene dos claras ventajas, la primera, los modelos origen y destino se mantienen totalmente limpios, de esta manera la polución antes nombrada es evitada. Y la segunda, dado que el modelo donde se almacena los traceability links se encuentra definido por un meta-modelo con una clara semántica, logra que el proceso de análisis de la información sea mucho más fácil que en la estrategia intra-modelo.
-Un requisito previo para el almacenamiento externo de los traceability links, es que los diferentes elementos del modelo tengan identificadores únicos, de modo que los traceability links relacionados se pueden resolver inequívocamente. Un ejemplo es el mecanismo propuesto por MetaObject Facility (MOF) y por el Eclipse Modeling Framework (EMF) en la forma de un identificador xmi.id .
-
-\section{Meta-modelos}
-
-Los modelos que definen los traceability links son determinados cada uno por su meta-modelo, este meta-modelo puede ser clasificado como un “meta-modelo de traceability de propósito general” o un “meta-modelo de de traceability de caso específico”.
-
-\subsection{Meta-modelo de propósito general}
-
-En este caso, nos encontramos con un meta-modelo genérico que permite la captura de las relaciones entre cualquier tipo de elementos de modelo. En este meta-modelo, un traceability link se puede conectar con cualquier número de elementos, de cualquier tipo de cualquier modelo. Las principales ventajas de este tipo de meta-modelo de propósito general son la simplicidad y la uniformidad (dado que todos los modelos conforman el mismo meta-modelo) con lo cual se mejora la interoperabilidad de las herramientas con capacidades de importar, exportar y gestionar traceability en un formato común. Por otro lado, como el meta-modelo de propósito general no capta casos específicos de traceability links fuertemente tipados con semántica y restricciones definidas rigurosamente, se abre la puerta a establecimientos de traceability links ilegítimas. Como por ejemplo en el caso que se quiere representar links entre un diagrama de clases y un modelo de base de datos relacional, sabemos que existen vínculos entre las clases del primer modelo y las tablas del segundo, un meta-modelo de traceability genérico permite el establecimiento de links ilegítimos tales como una clase relacionada con una columna. La provisión de mecanismos de extensión junto con el meta-modelo de propósito general es un método de uso frecuente para permitir un mejor apoyo para el caso de los requisitos específicos. Sin embargo, todavía carecen de la eficacia de los meta-modelos de casos específicos para capturar casos específicos de información y su semántica.
-
-\subsection{Meta-modelo de caso específico}
-
-En este caso, para cada escenario de traceability se define un meta-modelo de traceability específico. Este meta-modelo de traceability captura traceability links fuertemente tipados de caso específico con una semántica bien definida, que pueden o no incluir restricciones de corrección. Debido a su naturaleza de tipado fuerte y las restricciones asociadas, restringe a los usuarios y herramientas para que solo puedan establecer traceability links legítimos. Por otro lado, un meta-modelo de traceability para cada caso específico requiere mucho esfuerzo en su construcción, así como herramientas que soporten diferentes meta-modelos de traceability.
-Para ser fuertemente tipado el meta-modelo de traceability necesita referir explícitamente a los tipos de elementos definidos en otros meta-modelos. Por ejemplo, considereremos que es necesario definir un meta-modelo de traceability que permita el establecimiento de traceability links entre instancias de A (del meta-modelo MMa) y las de B (a partir de MMb), pero no entre dos instancias de A o dos de B. Para capturar tal meta-modelo, la tecnología de modelado que se use no debe tomar cada meta-modelo como un espacio cerrado, sino que debe permitir referencias inter-meta-modelo. Un ejemplo de tecnología que soporta referencias inter-meta-modelo es el Eclipse Modeling Framework (EMF).
-A pesar de que un meta-modelo capturado utilizando una tecnología que permita referencias inter-meta-modelo puede confiar tipos seguros, encontramos frecuentemente otras restricciones que necesitan especificarse y que el meta-modelo de traceability no puede capturarlas. Por ejemplo tomando como referencia el ejemplo anterior, podríamos querer que cada instancia A de MMa sólo se puede vincular a no más de una instancia B de MMb. Para especificar tales restricciones, se requiere un lenguaje de especificación de restricciones que pueda expresar restricciones que abarquen elementos que pertenezcan a modelos definidos por diferentes meta-modelos. En la actualidad el Object Constraint Language (OCL) carece de esta capacidad, ya que no proporciona las construcciones para la expresión de restricciones que atraviese modelos (cross-model). Ejemplos de lenguajes de restricción que soportan el establecimiento con tales restricciones incluyen el Epsilon Validation Language (EVL) y el XLinkit toolkit.
-La combinación de un meta-modelo de traceability fuertemente tipado conjunto con la verificación de restricciones inter-modelo restringe a los usuarios y a las herramientas a establecer y mantener sólo traceability links con sentido, que pueden ser automáticamente validadas para descubrir posibles omisiones e inconsistencias. Estas cuestiones pueden surgir, ya sea durante el establecimiento de los traceability links o más tarde en el ciclo de vida de los modelos entre los que los traceability links ya han sido establecidos.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%     tecnologías     %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Descripción de tecnologías}
 
 \backmatter
 
