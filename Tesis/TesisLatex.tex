@@ -461,63 +461,106 @@ El capítulo se encuentra organizado principalmente por temas. Luego, para cada 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Caminando hacia una solución}
 
+A continuación se presenta una pequeña introducción a un conjunto de temas que se tuvieron en cuenta a la hora de definir el esquema de traceability propuesto que se presenta en el capítulo \ref{cap:Propuesta}.
+
 \section{Generación de trazas}
 
-Uno de los desafíos presentados en \cite{GrammelVoigt} es sobre cuál de los dos enfoques de generación de trazas durante una transformación, implícita o explícita, seguir o tomar. En la implícita la transformación provee un soporte integral para traceability, en cambio en la explícita depende del desarrollador codificar las reglas de traceability como un modelo de salida.
+Uno de los desafíos presentados en \cite{GrammelVoigt} trata sobre cuál de los dos enfoques de generación de trazas que existen durante una transformación, implícita o explícita, es conveniente utilizar. En la generación implícita la transformación provee un soporte integral de traceability, en cambio en la explícita, queda en manos del desarrollador codificar las reglas de traceability como un modelo más de salida.
+
+A continuación se detallan las ventajas y desventajas de cada enfoque:
 
 \subsection{Implícita}
 
-La ventaja mayor de la generación implícita de enlaces es que no es necesario ningún esfuerzo adicional para obtener los enlaces de trazas entre los modelos de entrada y salida, dado que son generados en paralelo automáticamente con el modelo actual de la transformación.
-
-Desventajas:
+\paragraph{Ventajas}
 
 \begin{enumerate}
+
+\item	La mayor ventaja de la generación de trazas implícita es que no es necesario ningún esfuerzo adicional para obtener los enlaces de trazas entre los modelos de entrada y salida, dado que son generados en paralelo automáticamente con el modelo actual de la transformación.
+
+\end{enumerate}
+
+\paragraph{Desventajas}
+
+\begin{enumerate}
+
 \item     El meta-modelo de traceability es fijo: como la mayoría de los enfoques de transformación tienen diferentes meta-modelos, lograr estandarizar entre estos diferentes enfoques es muy complejo.
-\item    Poca flexibilidad para controlar los datos de traceability:
+
+\item    Poca flexibilidad para controlar los datos de traceability, ésto incluye:
+
 \begin{enumerate}
-\item         El tipo de información guardada: cuando se trazan todos los elementos del modelo referenciado, el número de enlaces puede volverse incomprensible y por lo tanto menos útil, también esto puede ser un tema de rendimiento al manejar un modelo de transformación grande y complejo.
-\item        El nivel de granularidad de la información de traceability: (esto es por ejemplo realizar trazas solo a nivel de archivo o bajar a nivel del contenido del mismo) esta configuración de los enlaces puede variar de un escenario de traceability a otro.
-\item       Contexto de la información: por necesidades de un cliente por ejemplo, por motivos de seguridad no toda la información de un modelo tiene permitido ser trazada.
+
+\item         El tipo de información guardada: cuando se trazan todos los elementos del modelo referenciado, el número de enlaces puede volverse incomprensible y por lo tanto menos útil. También al presentarse un modelo de transformación grande y complejo puede acarrear un problema en lo que respecta a rendimiento.
+
+\item        El nivel de granularidad de la información de traceability: (esto es por ejemplo realizar trazas solo a nivel de archivo o bajar a nivel del contenido del mismo) esta configuración de los enlaces varía de un escenario de traceability a otro.
+
+\item       Contexto de la información: por ejemplo por necesidades de un cliente que presente motivos de seguridad, puede requerir que no toda la información de un modelo tiene permitido ser trazada.
+
 \end{enumerate}
+
 \end{enumerate}
+
 
 \subsection{Explícita}
 
-Ventajas de la explícita:
+\paragraph{Ventajas}
 
 \begin{enumerate}
+
 \item Es posible lidiar con traceability como un modelo regular de salida de la transformación e incorporar reglas de transformación adicionales para generarlo. La elección del meta-modelo es entonces completa del programador y no depende del motor de transformaciones. Por lo tanto, la granulación de los enlaces es adaptable.
+
 \end{enumerate}
 
-Desventajas:
+\paragraph{Desventajas}
 
 \begin{enumerate}
+
 \item     Se requiere un esfuerzo adicional para agregar reglas de transformación específicas para traceability, que pueden en consecuencia contaminar la implementación.
+
 \item    Como esta tarea es por lo general manual, es propensa a errores y consume mucho tiempo, más aun si pensamos que esta tarea se tiene que repetir para cada transformación que se realice.
+
 \end{enumerate}
 
-Otro desafío refiere a la semántica de los enlaces. Es necesario frecuentemente distinguir entre distintos tipos de enlaces. Por ejemplo un enlace entre un requerimiento textual y un elemento de modelo tiene una semántica distinta que una relación de refinamiento dentro de un modelo. Los tipos de enlaces requeridos frecuentemente son fuertemente dependientes al proyecto. Fijar los tipos de enlaces semánticos tiene la consecuencia de menor flexibilidad para los enlaces definidos por el usuario que pueden ser necesarios para juntar diferentes necesidades del proyecto o la compañía. Por otro lado, la selección de la semántica de un enlace es guiada por la razón del usuario sobre qué quiere realizar con el enlace, no predefinir la semántica de un enlace puede resultar en fallas de razonamientos debido al mal uso semántico.
+\section{Tipos de enlaces}
 
-\section{Estrategias}
+Otro de los desafíos refiere a la semántica de los enlaces, es necesario frecuentemente distinguir entre los distintos tipos de enlaces que se pueden presentar. Por ejemplo un enlace entre un requerimiento textual y un elemento de modelo, tiene una semántica distinta que una relación de refinamiento dentro de un modelo. 
 
-\cite{DrivalosPaigeFernandesKolovos} Hay dos tipos principales de estrategias para almacenar y administrar la información de traceability. En la primera la información de traceability se encuentra embebida en los modelos que ella refiere, en la segunda esta información se encuentra almacenada separada de los modelos:
+Los tipos de enlaces requeridos por lo general son fuertemente dependientes al proyecto. Por lo cual definir fijamente los tipos de enlaces semánticos tiene la consecuencia de menor flexibilidad para los enlaces que desee trazar el usuario, los cuales serán definidos por las necesidades del proyecto o la compañía. 
 
-\subsection{Almacenamiento de Traceability Links Intra-Modelo}
+Es importante remarcar que la determinación de la semántica de un enlace es guiada por la razón del usuario sobre qué quiere realizar o representar con dicho enlace. No predefinir la semántica correctamente de un enlace puede resultar en fallas de razonamientos.
 
-Como ya se dijo, bajo esta estrategia la información de traceability es almacenada dentro de los artefactos a los que refiere, esto puede ser como elementos del modelo o atributos de elementos del modelo, como etiquetas o propiedades. Es una estrategia sencilla y amigable, pero puede ser muy problemática por varias razones. Si los enlaces son dirigidos y almacenados solamente en el modelo origen, estos no son visibles en el destino, a la inversa (almacenados en el destino) nos encontramos con el mismo problema. Por otro lado, si la información de traceability es almacenada en ambos modelos, entonces nos encontramos con el problema de que esta información debe mantenerse consistente por cada vez que se realice un cambio. Todo lo anterior sumado a la polución que se genera en el modelo con información ajena a su contexto o fin, pudiendo lograr que dicho modelo se vuelva difícil de comprender y mantener. También, en un entorno MDE es común que los modelos tengan sus propias representaciones y semánticas, por lo cual es muy difícil distinguir la información de traceability de los objetos del modelo. Como resultado, el análisis automatizado de la información de traceability se hace muy difícil. Los enfoques principales que hacen uso de esta estrategia utilizan las construcciones específicas del lenguaje, por ejemplo determinados tipos de enlaces de traceability están representados en los diagramas UML mediante el uso de las estereotipos como <<refines>>.
+\section{Estrategias de almacenamiento}
 
-\subsection{Almacenamiento externo de Tracebility Links}
+Según \cite{DrivalosPaigeFernandesKolovos} hay dos tipos principales de estrategias para almacenar y administrar la información de traceability. En la primera, la información de traceability se encuentra embebida en los modelos a los que ella refiere. En cambio en la segunda, dicha información se encuentra almacenada de forma separada de los modelos:
 
-En esta estrategia la información de traceability se encuentra almacenada separada de los modelos a los que refiere en un modelo aparte. Esta propuesta tiene dos claras ventajas, la primera, los modelos origen y destino se mantienen totalmente limpios, de esta manera la polución antes nombrada es evitada. Y la segunda, dado que el modelo donde se almacena los traceability links se encuentra definido por un meta-modelo con una clara semántica, logra que el proceso de análisis de la información sea mucho más fácil que en la estrategia intra-modelo.
-Un requisito previo para el almacenamiento externo de los traceability links, es que los diferentes elementos del modelo tengan identificadores únicos, de modo que los traceability links relacionados se pueden resolver inequívocamente. Un ejemplo es el mecanismo propuesto por MetaObject Facility (MOF) y por el Eclipse Modeling Framework (EMF) en la forma de un identificador xmi.id .
+\subsection{Almacenamiento de enlaces Intra-Modelo}
+
+Como ya se dijo, bajo esta estrategia la información de traceability es almacenada dentro de los artefactos a los que refiere, esto puede ser mediante elementos del modelo o mediante atributos de los elementos del modelo (como etiquetas o propiedades). 
+
+Es una estrategia sencilla y amigable, pero puede ser muy problemática por varias razones. Si los enlaces son dirigidos y almacenados solamente en el modelo origen, éstos no son visibles en el modelo destino, a la inversa (almacenados en el destino) nos encontramos con el mismo problema pero en el origen. Por otro lado, si la información de traceability es almacenada en ambos modelos, entonces nos encontramos con el problema de que dicha información se mantenga consistente por cada vez que se realice un cambio.
+
+A todo lo anterior se suma el problema de la polución que se genera en el modelo con la información de traceability que es ajena a su contexto o fin original, dicha polución puede lograr que el modelo se vuelva muy difícil de comprender y mantener. 
+
+Por otro lado, en un entorno MDE es común que los modelos tengan sus propias representaciones y semánticas, lo cual puede volver más complejo diferenciar la información de traceability de los objetos que representan el modelo del dominio. 
+
+Como resultado a los inconvenientes anteriores, el análisis automatizado de la información de traceability se hace muy difícil. Los enfoques principales que hacen uso de esta estrategia utilizan construcciones  de lenguajes específicas, por ejemplo determinados tipos de enlaces de traceability están representados en los diagramas UML mediante el uso de las estereotipos como <<refines>>.
+
+\subsection{Almacenamiento externo de los enlaces}
+
+En esta estrategia la información de traceability se encuentra almacenada de forma separada a los modelos a los que refiere, esto es en un modelo aparte. Esta propuesta tiene dos claras ventajas, la primera es que los modelos origen y destino se mantienen totalmente limpios, con lo cual la polución nombrada en el almacenamiento intra-modelo no sucede. Y la segunda, dado que el modelo en donde se almacena los traceability links se encuentra definido por un meta-modelo con una clara semántica, logra que el proceso de análisis de la información sea mucho más fácil que en la otra estrategia.
+
+Un requisito previo para el almacenamiento externo de los enlaces de traceability, es que los diferentes elementos del modelo tengan identificadores únicos, de modo que las trazas que los relacionan se pueden resolver inequívocamente. Un ejemplo es el mecanismo propuesto por MetaObject Facility (MOF) y por Eclipse Modeling Framework (EMF) en la forma de un identificador xmi.id .
 
 \section{Meta-modelos}
 
-Los modelos que definen los traceability links son determinados cada uno por su meta-modelo, este meta-modelo puede ser clasificado como un “meta-modelo de traceability de propósito general” o un “meta-modelo de de traceability de caso específico”.
+Los modelos que determinan los enlaces de traceability se encuentran definidos cada uno por un meta-modelo, éste puede ser clasificado como un “meta-modelo de traceability de propósito general” o un “meta-modelo de traceability de caso específico”.
 
 \subsection{Meta-modelo de propósito general}
 
-En este caso, nos encontramos con un meta-modelo genérico que permite la captura de las relaciones entre cualquier tipo de elementos de modelo. En este meta-modelo, un traceability link se puede conectar con cualquier número de elementos, de cualquier tipo de cualquier modelo. Las principales ventajas de este tipo de meta-modelo de propósito general son la simplicidad y la uniformidad (dado que todos los modelos conforman el mismo meta-modelo) con lo cual se mejora la interoperabilidad de las herramientas con capacidades de importar, exportar y gestionar traceability en un formato común. Por otro lado, como el meta-modelo de propósito general no capta casos específicos de traceability links fuertemente tipados con semántica y restricciones definidas rigurosamente, se abre la puerta a establecimientos de traceability links ilegítimas. Como por ejemplo en el caso que se quiere representar links entre un diagrama de clases y un modelo de base de datos relacional, sabemos que existen vínculos entre las clases del primer modelo y las tablas del segundo, un meta-modelo de traceability genérico permite el establecimiento de links ilegítimos tales como una clase relacionada con una columna. La provisión de mecanismos de extensión junto con el meta-modelo de propósito general es un método de uso frecuente para permitir un mejor apoyo para el caso de los requisitos específicos. Sin embargo, todavía carecen de la eficacia de los meta-modelos de casos específicos para capturar casos específicos de información y su semántica.
+En este caso, nos encontramos con un meta-modelo genérico que permite la captura de las relaciones entre cualquier tipo de elementos de modelo. En este meta-modelo, un enlace de traceability se puede conectar con cualquier número de elementos, de cualquier tipo y de cualquier modelo. Las principales ventajas de este tipo de meta-modelo de propósito general son la simplicidad y la uniformidad (dado que todos los modelos conforman el mismo meta-modelo) con lo cual se mejora la interoperabilidad de las herramientas con capacidades de importar, exportar y gestionar traceability en un formato común. 
+
+Por otro lado, como el meta-modelo de propósito general no capta casos específicos de enlaces de trazas fuertemente tipados, o sea con semántica y restricciones definidas rigurosamente, se abre la puerta a establecimientos de enlaces ilegítimos. Como por ejemplo en el caso que se quiera representar trazas entre un diagrama de clases y un modelo de base de datos relacional, sabemos que existen vínculos entre las clases del primer modelo y las tablas del segundo, un meta-modelo de traceability genérico permite el establecimiento de enlaces ilegítimos tales como una clase relacionada con una columna. 
+
+La provisión de mecanismos de extensión junto con el meta-modelo de propósito general es un método de uso frecuente para permitir un mejor apoyo para el caso de los requisitos específicos. Sin embargo, todavía carecen de la eficacia de los meta-modelos de casos específicos para capturar estos tipos de casos que requieren tal legitimidad entre la información y su semántica.
 
 \subsection{Meta-modelo de caso específico}
 
@@ -567,6 +610,11 @@ El alcance de Model-Artefact Link es muy amplio, es esta clasificación solo se 
 \caption{Jerarquía de links explícitos}
 \label{fig:LinksExplicitos}
 \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%     Propuesta      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Esquema propuesto}\label{cap:Propuesta}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
