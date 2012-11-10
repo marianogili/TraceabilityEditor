@@ -574,11 +574,11 @@ La combinación de un meta-modelo de traceability fuertemente tipado conjunto co
 
 \section{Una clasificación genérica de traceability}
 
-Conforme un proyecto de desarrollo crece, la administración de la información de traceability que se va generando se vuelve extramadamente compleja, una jerarquía de clasificación de esta información de traceability resulta esencial para poder entenderla y administrarla mejor. En \cite{PaigeOlsenKolovosZschalerPower} se encuentra una propuesta de clasificación de traceability conjunto con la descripción del proceso usado para su obtención al que llamaron ``Traceability Elicitation and Analysis Process'' (TEAP).
+Conforme un proyecto de desarrollo crece, la administración de la información de traceability que en consecuencia se va generando se vuelve extremadamente compleja, una jerarquía de clasificación de dicha información resultará esencial para poder entenderla y administrarla mejor. En \cite{PaigeOlsenKolovosZschalerPower} se encuentra una propuesta de clasificación de traceability conjunto con la descripción del proceso usado para su obtención al que llamaron ``Traceability Elicitation and Analysis Process'' (TEAP).
 
-Esta clasificación comienza con una simple clasificación o meta-modelo de traceability inicial, luego de forma incremental e iterativa se refina la clasificación siguiendo las siguientes tareas: obtención, análisis y clasificación. En la obtención se identifica un trace link y sus relaciones. En el análisis, se abstraen las principales características del trace link obtenido identificando restricciones, relaciones y generalizaciones. Por último, se construye la clasificación.
+Esta propuesta comienza con una clasificación o meta-modelo de traceability inicial, luego de forma iterativa e incremental esta clasificación se va refinando siguiendo las siguientes tareas: obtención, análisis y clasificación. En la obtención se identifica un enlace de traza y sus relaciones. En el análisis, se abstraen las principales características del enlace obtenido identificando las restricciones, sus relaciones y generalizaciones. Por último, se define la clasificación a la que pertenece.
 
-El meta-modelo inicial propuesto se muestra en el dibujo \ref{fig:ClasifInicial} en el que se encuentran los conceptos fundamentales de artefacts, trace links y operations. Artefact refiere tanto a artefactos MDE (ejemplo modelos específicos de dominio) como a no MDE (ejemplo hojas de cálculo), Operation encierra las operaciones bien manuales como automáticas que determina qué información de traceability debe almacenarse, y por último Trace Link engloba la clasificación que comienza con la idea de traceability implícita (Implicit Link) y explícita (Explicit Link). En este contexto, traceability implícita refiere a trace links que son creados y manipulados por la aplicación de operaciones MDE, en cambio explícita refiere a trace links que se encuentran ya concretamente representados en los modelos.
+El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el que se encuentran los siguientes conceptos fundamentales: artefacts, trace links y operations. Artefact refiere tanto a artefactos MDE (por ejemplo modelos específicos de dominio) como a no MDE (por ejemplo hojas de cálculo), en Operation se encierran las operaciones bien manuales como automáticas que determinan qué información de traceability debe almacenarse, y por último Trace Link engloba la clasificación que da inicio con la idea de traceability implícita (Implicit Link) y explícita (Explicit Link). En este contexto, traceability implícita refiere a los enlaces de trazas que son creados y manipulados por la aplicación de operaciones MDE, y por su parte explícita refiere a los enlaces que se encuentran concretamente ya representados en los modelos.
 
 
 \begin{figure}[hbtp]
@@ -588,9 +588,9 @@ El meta-modelo inicial propuesto se muestra en el dibujo \ref{fig:ClasifInicial}
 \label{fig:ClasifInicial}
 \end{figure}
 
-\subsection{Clasificación de trace links implícita}
+\subsection{Clasificación de enlaces de trazas implícita}
 
-En esta jerarquía que se muestra en el dibujo \ref{fig:LinksImplicitos} se presentan un conjunto de operaciones de MDE principales: consulta (Query Link), transformación (M2M Link), transformación modelo a texto (M2T Link), composición (Composition Link), actualización (Update Link), creación (Creation Link), eliminación (Delete Link), entre otras.
+En la jerarquía de esta sección que se muestra en el dibujo \ref{fig:LinksImplicitos} se representan el conjunto de operaciones de MDE principales: consulta (Query Link), transformación (M2M Link), transformación modelo a texto (M2T Link), composición (Composition Link), actualización (Update Link), creación (Creation Link), eliminación (Delete Link), entre otras.
 
 \begin{figure}[hbtp]
 \centering
@@ -599,13 +599,17 @@ En esta jerarquía que se muestra en el dibujo \ref{fig:LinksImplicitos} se pres
 \label{fig:LinksImplicitos}
 \end{figure}
 
-\subsection{Clasificación de trace links explícita}
+\subsection{Clasificación de enlaces de trazas explícitos}
 
-En esta jerarquía se clasifican los trace links explícitos, por ejemplo una dependencia UML es uno de ellos. En principio se identifican dos clases básicas: links modelo-modelo (ejemplo dependencias UML) y links modelo-artefacto (entre un modelo y un documento de texto que dicta un requerimiento), que en el dibujo \ref{fig:LinksExplicitos} aparecen como Model-Model Link y Model-Artefact Link.
+En un principio esta clasificación se encuentra dividida en dos grandes grupos representados por las siguientes clases básicas: links modelo-modelo (por ejemplo las relaciones de dependencias UML) y links modelo-artefacto (por ejemplo el enlace entre un modelo y un documento de texto que dicta un requerimiento), en el dibujo \ref{fig:LinksExplicitos} aparecen como Model-Model Link y Model-Artefact Link respectivamente.
 
-Model-Model Link es dividido en links estáticos (Static Link) y dinámicos (Dynamic Link). Los primeros representan relaciones estructurales que no cambian con el tiempo, los segundos representan información de los modelos que pueden variar a través del tiempo. Ejemplos de links estáticos, links consistentes (Consistent-With) donde dos modelos deben mantenerse de acuerdo o consistentes entre si, y links de dependencias (Dependency) donde la estructura y/o la semántica de un modelo depende de otro. Los links de dependencia pueden ser divididos: links de relación de subtipo (Is-A), links de referencias, links de subconjuntos, de importación y exportación, de uso, de refinamiento (Refines), etcétera. Ejemplos de links dinámicos incluyen links de llamadas (Calls) donde un modelo hace uso de métodos provisto por otro, links de notificación (Notifies) donde es necesario almacenar información que puede ser manejada automáticamente. También relaciones en tiempo de diseño como links de generación o construcción (Generates) que indica qué información de un modelo es usada para producir o deducir otro, y relaciones de sincronización (Synchronized With) donde el comportamiento de un conjunto de modelos es sincronizado.
+Model-Model Link se encuentra a su vez subdividido en links estáticos (Static Link) y dinámicos (Dynamic Link). Los primeros representan relaciones estructurales que no cambian con el tiempo, en cambio los segundos representan información de los modelos que si pueden llegar a variar. 
 
-El alcance de Model-Artefact Link es muy amplio, es esta clasificación solo se resumen un subconjunto de ejemplos, entre ellos: la relación satisface (Satisfies) que indican que propiedad o requerimiento de un artefacto es satisfecha por un modelo; links de asignación (Allocated-To) usados cuando la información de un artefacto no modelo es asignada a un modelo específico que la representa; la relación de realización (Performs) que indica que tarea descripta por un artefacto es llevada a cabo por el modelo; las relaciones explica y respalda (Explains y Supports respectivamente) que dictan qué modelo es explicado/respaldado por un artefacto no modelo.
+Los links estáticos pueden ser, o links consistentes (Consistent-With) donde dos modelos deben mantenerse de acuerdo o consistentes entre si, o links de dependencias (Dependency) donde la estructura y/o la semántica de un modelo depende de otro. Por su parte, los links de dependencia pueden ser: links de relación de subtipo (Is-A), links de referencias, links de subconjuntos, de importación y exportación, de uso, de refinamiento (Refines), etcétera. 
+
+Entre los links dinámicos se incluyen los links de llamadas (Calls) donde un modelo hace uso de métodos provisto por otro, los links de notificación (Notifies) donde es necesario almacenar información que puede ser manejada automáticamente. También las relaciones en tiempo de diseño como los links de generación o construcción (Generates), que indican qué información de un modelo es usada para producir o deducir otro, y las relaciones de sincronización (Synchronized With), donde el comportamiento de un conjunto de modelos se realiza de forma sincronizada.
+
+El alcance de Model-Artefact Link es muy amplio, por tal motivo es esta clasificación solo se resumen un subconjunto de ejemplos, entre ellos: la relación satisface (Satisfies), que indica qué propiedad o requerimiento de un artefacto es satisfecha por un modelo;  los links de asignación (Allocated-To), usados cuando la información de un artefacto no modelo es asignada a un modelo específico que la representa; la relación de realización (Performs), que indica qué tarea descripta por un artefacto es llevada a cabo por el modelo; las relaciones explica y respalda (Explains y Supports respectivamente) que dictan qué modelo se encuentra explicado/respaldado por un artefacto no modelo.
 
 \begin{figure}[hbtp]
 \centering
@@ -631,14 +635,16 @@ El alcance de Model-Artefact Link es muy amplio, es esta clasificación solo se 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Trabajos relacionados}
 
-\section{Un motor de traceability de transformación de modelos en Ingeniería de Software}
+En este capítulo se realiza una breve introducción de un conjunto de trabajos que tienen alguna relación con el tema en cuestión de la presente tesis, encontrados a lo largo del aprendizaje y la investigación.
 
-En \cite{AmarLeblancCoulette} se describe un motor de traceability al que llamaron ETraceTool, que funciona como un plug-in de Eclipse programado mediante el paradigma orientado a aspectos con el fin de mantener aislada la generación de las trazas del código de la transformación. El mismo trabaja sobre transformaciones escritas en Java usando la API EMF \cite{EMF}. A continuación se listan sus principales características:
+\section{Un motor de traceability de transformación de modelos en la Ingeniería de Software}
+
+En \cite{AmarLeblancCoulette} se describe un motor de traceability al que llamaron ETraceTool, que funciona como un plug-in de Eclipse programado mediante el paradigma orientado a aspectos con el fin de mantener aislada la generación de las trazas del código que pertenece a la transformación. El mismo trabaja sobre transformaciones escritas en Java usando la API EMF \cite{EMF}. A continuación se listan sus principales características:
 
 \begin{itemize}
 \item     El código de generación de trazas no es intrusivo en el código de la transformación;
-\item    La generación de trazas es activada explícitamente por el diseñador de la transformación;
-\item    Los modelos de las trazas se encuentran aisladas o aparte de los modelos origen y destino que forman parte de la transformación;
+\item    La generación de trazas tiene que ser activada explícitamente por el diseñador de la transformación;
+\item    Los modelos de las trazas se encuentran aislados de los modelos origen y destino que forman parte de la transformación;
 \item    Los modelos de las trazas pueden ser usados a diferentes niveles de granularidad.
 \end{itemize}
 
@@ -649,7 +655,7 @@ En \cite{AmarLeblancCoulette} se describe un motor de traceability al que llamar
 \label{fig:ArqETraceTool}
 \end{figure}
 
-La arquitectura se presenta en el dibujo \ref{fig:ArqETraceTool} y se explica de la siguiente manera, durante la transformación el plug-in captura un conjunto de eventos previamente identificados y clasificados gracias a la programación orientada a aspectos, luego el Aspect Tracer genera un modelo de trazas que conforma o ajusta al meta-modelo de trazas anidado que se muestra en el dibujo \ref{fig:ETraceToolMeta-modelo}. Al final, el modelo de trazas generado puede ser serializado en un archivo XMI o transformado a cualquier otro lenguaje mediante una transformación modelo-texto.
+La arquitectura se puede apreciar en el dibujo \ref{fig:ArqETraceTool} y se explica de la siguiente manera, durante la transformación el plug-in captura un conjunto de eventos previamente identificados y clasificados gracias a la programación orientada a aspectos, luego el Aspect Tracer genera un modelo de trazas que conforma al meta-modelo de trazas anidado que se muestra en el dibujo \ref{fig:ETraceToolMeta-modelo}. Al final, el modelo de trazas generado puede ser serializado en un archivo XMI o transformado a cualquier otro lenguaje mediante una transformación modelo-texto.
 
 \begin{figure}[hbtp]
 \centering
@@ -658,11 +664,11 @@ La arquitectura se presenta en el dibujo \ref{fig:ArqETraceTool} y se explica de
 \label{fig:ETraceToolMeta-modelo}
 \end{figure}
 
-El fundamento para el diseño del meta-modelo de trazas anidado propuesto es dado el caso en el que se presente una operación de transformación que llama o hace uso de otra transformación. En este caso el enlace compuesto permite separar las operaciones de bajo nivel (creación, eliminación, etc) de las operaciones de alto nivel (como una operación de refactorización).
+El fundamento del diseño del meta-modelo de trazas anidado propuesto es para el caso en el que se presente una operación de transformación que llama o hace uso de otra transformación. En este caso el enlace compuesto permite separar las operaciones de bajo nivel (creación, eliminación, etc) de las operaciones de alto nivel (como una operación de refactorización).
 
 \section{Un Framework  de Traceability dirigido por modelos para el desarrollo de Software Product Line (SPL)}
 
-El framework presentado en \cite{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmaralAraujo}  provee una plataforma abierta y flexible para crear enlaces de trazas entre distintos artefactos del desarrollo SPL, aunque dado que el diseño del framework es genérico, éste también puede aplicarse o usarse fuera del desarrollo SPL. El mismo ha sido diseñado e implementado basado en el uso de técnicas dirigidas por modelos. El meta-modelo de traceability descripto en el dibujo \ref{fig:SPLMeta-modelo} permite definir distintos tipos de enlaces de trazas entre los artefactos.
+El framework presentado en \cite{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmaralAraujo}  provee una plataforma abierta y flexible para crear enlaces de trazas entre distintos artefactos del desarrollo SPL. Pero, dado que el diseño del framework es genérico, éste también puede aplicarse o usarse en otras áreas del desarrollo SPL. El mismo ha sido diseñado e implementado basado en el uso de técnicas dirigidas por modelos. El meta-modelo de traceability descripto en el dibujo \ref{fig:SPLMeta-modelo} permite definir distintos tipos de enlaces de trazas entre los artefactos.
 
 Las principales funcionalidades ofrecidas por el framework son las siguientes:
 
@@ -685,17 +691,17 @@ Las principales funcionalidades ofrecidas por el framework son las siguientes:
 Los elementos principales del meta-modelo son los siguientes:
 
 \begin{itemize}
-\item     Un TraceableArtefact representa un artefacto que juega un rol en el ciclo del desarrollo. La granularidad del artefacto es arbitraria, puede ser un requerimiento, un diagrama UML, un elemento de dicho diagrama, una clase o un método de dicha clase. Dicho artefacto es identificado mediante resourceId.
+\item     Un TraceableArtefact representa un artefacto que juega un rol en el ciclo del desarrollo. La granularidad del artefacto es arbitraria, puede ser un requerimiento, un diagrama UML, un elemento de dicho diagrama, una clase o un método de dicha clase. El artefacto es identificado mediante la propiedad resourceId.
 \item    Un TraceLink es la abstracción de una transición de un artefacto a otro.
-\item    Cada TraceableArtefact tiene asignada una instancia de TraceableArtefactType, éstos pueden ser agrupados jerárquicamente.
- \item   Análogo a los tipos de los artefactos los TraceLinks también tienen un tipo, TraceLinkType, dado que la semántica de una relación entre dos artefactos puede variar.
-\item    Información adicional de artefactos y enlaces puede ser modelada mediante el contexto representado por TraceContext.
-\item    Las restricciones sobre el conjunto válido de artefactos sobre los cuales los tipos de enlaces son válidos es modelado mediante los elementos ScopeArea y Scope.
+\item    Cada TraceableArtefact tiene asignada una instancia de TraceableArtefactType, éstos se pueden encontrar agrupados de forma jerárquica.
+ \item   Análogo a los tipos de los artefactos los TraceLinks también tienen un tipo (TraceLinkType), teniendo en cuenta que la semántica de una relación entre dos artefactos puede variar.
+\item    Información adicional de artefactos y enlaces puede ser modelada mediante un contexto, el cual se encuentra representado por la clase TraceContext.
+\item    Las restricciones que determinan el conjunto de artefactos válidos, sobre los cuales los tipos de enlaces también son válidos se encuentran modeladas mediante los elementos ScopeArea y Scope.
 \end{itemize}
 
 \subsection{Arquitectura}
 
-Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido definida en término de cuatro módulos principales. Cada uno de los cuales implementa una de las funcionalidades principales del framework antes nombradas como se detalla a continuación:
+Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido definida en término de cuatro módulos principales. Cada uno de los cuales implementa una de las funcionalidades principales del framework, se detallan a continuación:
 
 \begin{figure}[hbtp]
 \centering
@@ -705,20 +711,22 @@ Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido 
 \end{figure}
 
 \begin{enumerate}
-\item    Trace Register: este módulo provee mecanismos para crear y mantener (actualizar, eliminar y buscar) enlaces de trazas;
-\item     Trace Storage: define los mecanismos de almacenamiento para persistir los enlaces de trazas;
-\item     Trace Query: éste permite crear y ejecutar consultas para buscar enlaces de trazas específicos previamente almacenados;
-\item     Trace View: usado específicamente para la representación visual de los enlaces de trazas entre los artefactos de software resultados de una consulta realizada.
+\item    Trace Register: este módulo provee mecanismos para crear y mantener (actualizar, eliminar y buscar) los enlaces de trazas;
+\item     Trace Storage: define los mecanismos de almacenamiento para persistir dichos enlaces;
+\item     Trace Query: este modulo permite crear y ejecutar consultas para buscar enlaces de trazas específicos que se encuentran previamente almacenados;
+\item     Trace View: usado específicamente para la representación visual de los enlaces resultados de una consulta realizada.
 \end{enumerate}
 
 
 \section{Integración de herramientas Case}
 
-En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que en su conjunto de actividades o pasos que lo conforman se van generando una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc) que aunque en esencia éstos se relacionan lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo UML, etc), estas relaciones entre dichos artefactos se pierden o mejor dicho no existen en la práctica. En otras palabras, presenta el problema de la imposibilidad de traceability entre la mayoría de las herramientas CASE actuales. Como solución a este problema, propusieron un ambiente de integración para estas herramientas  al que llamaron TiE - Tool Integration Environment, el mismo basa su integración por medio de la creación de traceability links entre los artefactos que pertenecen a las distintas herramientas.
+En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que como resultado del conjunto de actividades que lo conforman, se van generando una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc). Estos artefactos, aunque en esencia  se encuentran relacionados lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo UML, etc), las relaciones lógicas nombradas se pierden, o mejor dicho no existen o pasan desapercibidas en la práctica. En otras palabras, nos presenta el problema de la imposibilidad de traceability que encontramos entre la mayoría de las herramientas CASE actuales. 
 
-\section{Framework de extracción de datos de traceability genérico}
+Como solución a este problema, se propone un ambiente de integración para las herramientas CASE al que llamaron TiE - Tool Integration Environment, el cual basa su integración en la creación de enlaces de trazas entre los artefactos de las distintas herramientas.
 
-En \cite{GrammelKastenholz} proponen un framework genérico de traceability que toma una transformación de modelo y aumenta arbitrariamente su funcionalidad con un mecanismo de traceability. En el dibujo \ref{fig:GenericoArquitectura} se muestra un panorama de alto nivel de la arquitectura propuesta. Se basa en una interfase genérica que provee un punto de conexión para cualquier motor de transformación de modelos, mediante una API que se ofrece al ingeniero que conecta su motor de transformación con el motor de traceability (oAW connector, QVT connector). Como resultado el motor de transformación incluye la funcionalidad de traceability. El modelo de datos que usa el framework es el lenguaje específico de dominio para traceability que llaman Trace-DSL.
+\section{Framework genérico de extracción de datos de traceability}
+
+En \cite{GrammelKastenholz} proponen un framework genérico de traceability que toma como entrada una transformación de modelo y le aumenta arbitrariamente su funcionalidad con un mecanismo de traceability. En el dibujo \ref{fig:GenericoArquitectura} se muestra un panorama de alto nivel de la arquitectura propuesta. Ésta se basa en una interfase genérica que provee un punto de conexión para cualquier motor de transformación de modelos, mediante una API que se ofrece al ingeniero que conecta su motor de transformación con el motor de traceability (oAW connector, QVT connector). Como resultado el motor de transformación incluye la funcionalidad de traceability. El modelo de datos que usa el framework es el lenguaje específico de dominio para traceability al que llaman Trace-DSL.
 
 \begin{figure}[hbtp]
 \centering
@@ -728,7 +736,7 @@ En \cite{GrammelKastenholz} proponen un framework genérico de traceability que 
 \end{figure}
 
 
-Trace-DSL que se detalla en el dibujo \ref{fig:DSLTrace}, incluye como elemento raíz TraceModel. Un Artefact representa cualquier producto traceable generado en el proceso de desarrollo, como un requerimiento o una clase o un componente como un método dentro de una clase, cualquier artefacto es identificado por un identificador único universal (UUID). Un TraceLink es una abstracción de una transición de un artefacto a otro dirigida por la relación desde-hacia entre artefactos origen y destino. TraceLink puede ser de uno de las siguientes cuatro instancias: CreateTraceLink, QueryTraceLink, UpdateTraceLink y DeleteTraceLink.
+Trace-DSL que se detalla en el dibujo \ref{fig:DSLTrace}, tiene como elemento raíz TraceModel. Artefact representa cualquier producto traceable generado durante el proceso de desarrollo, esto puede ser un requerimiento o una clase o un componente, como el método que pertenece a una clase. Todo artefacto es identificado unívocamente mediante un identificador único universal (UUID). TraceLink es una abstracción de una transición de un artefacto a otro dirigida por la relación desde-hacia entre artefactos origen y destino. TraceLink puede ser de uno de las siguientes cuatro instancias: CreateTraceLink, QueryTraceLink, UpdateTraceLink y DeleteTraceLink.
 
 
 \begin{figure}[hbtp]
@@ -738,7 +746,7 @@ Trace-DSL que se detalla en el dibujo \ref{fig:DSLTrace}, incluye como elemento 
 \label{fig:DSLTrace}
 \end{figure}
 
-Para asignar tipos a los artefactos y a los enlaces se usa el concepto de faceta, donde Trace-DSL asigna un conjunto de facetas (Facet) a cada uno de los mismos. Un ejemplo de faceta se da en el dibujo \ref{fig:FacetaCodigoFuente}. Además de lograr una solución simple al tipado de artefactos y enlaces, se obtiene un mecanismo fácilmente extensible al contexto donde se necesite aplicar traceability.
+Para la asignación de tipos a los artefactos y a los enlaces se usa el concepto de faceta, donde Trace-DSL asigna un conjunto de facetas (Facet) a cada uno de los mismos. Un ejemplo de faceta se da en el dibujo \ref{fig:FacetaCodigoFuente}. Además de lograr una solución simple al tipado de artefactos y enlaces, se obtiene un mecanismo fácilmente extensible y configurable al contexto donde se necesite aplicar traceability.
 
 \begin{figure}[hbtp]
 \centering
@@ -754,7 +762,7 @@ La configuración necesaria para hacer uso del framework implica:
 \item    Configurar la granularidad (Granularity) y el alcance (Scope)
 \end{enumerate}
 
-La configuración de la granularidad consiste en la especificación de qué tipos (definidos por las facetas) de artefactos y enlaces serán trazados para un escenario de de traceability particular. En cambio la configuración del alcance implica restringir los datos de traceability a tener una combinación específica de valores. En otras palabras la primera solo chequea la existencia de facetas, mientras que la segunda adicionalmente examina las propiedades especificas de las facetas. Por ejemplo en el caso de TextFileFacet, puede ser necesario trazar solo archivos de textos con cierto nombre.
+La configuración de la granularidad consiste en la especificación de qué tipos (definidos por las facetas) de artefactos y enlaces serán trazados para un escenario de traceability particular. En cambio la configuración del alcance implica restringir los datos de traceability a una combinación específica de valores. En otras palabras la primera solo chequea la existencia de facetas, mientras que la segunda adicionalmente examina las propiedades especificas de las facetas. Por ejemplo en el caso de TextFileFacet, puede ser necesario trazar solo archivos de textos con cierto nombre.
 
 \section{Traceability local y global}
 
@@ -773,13 +781,13 @@ Este meta-modelo toma las trazas de la entrada y la salida de una única transfo
 
 El meta-modelo de trazas local contiene dos conceptos principales Link y ElementRef en donde se expresa que uno o más elementos orígenes son enlazados a uno o más elementos objetivos. ElementRef es una clase abstracta que representa elementos que pueden ser traceados: instancias de clases o valores de propiedades. Los valores de las propiedades son traceados usando PrimitivePropertyRef el cual apunta a la instancia contenedora de la propiedad y tiene el nombre de la misma. Este tratamiento especial para los tipos primitivos de Java se debe a que no existen instancias de ellos en el modelo. Por otro lado las propiedades que son tipadas mediante una clase normal, son traceadas mediante ClassRef.
 
-Para almacenar la información sobre las reglas de transformación aplicadas así como el caso particular de las cajas negras, se hace uso de los conceptos RuleRef y BlackBoxRef. Ambos casos pueden dar como resultado varios enlaces, por eso la relación uno a varios entre RuleRef y Link. RuleRef y BlackBoxRef son opcionales, en el caso de la primera sólo se usa para el caso de realizar una depuración de las transformaciones, y la segunda si nos encontramos con ciertas partes del sistema que no pueden ser vista su implementación.
+Para almacenar la información sobre las reglas de transformación aplicadas así como el caso particular de las cajas negras, se hace uso de los conceptos RuleRef y BlackBoxRef. En ambos casos, dado que pueden dar como resultado de su ejecución varios enlaces, se define la relación como uno a varios entre RuleRef y Link. RuleRef y BlackBoxRef son opcionales, en el caso de la primera solo se usa para realizar una depuración de las transformaciones, y la segunda si nos encontramos en la situación en la que ciertas partes del sistema no pueden ser pública su implementación.
 
 ElementRef tiene una referencia al objeto real de los modelos origen y destinos. Como estos modelos están implementados mediante EMF, la referencia EMFObject es un EObject del meta-modelo Ecore. La clase LocalTraces representa la raiz del modelo de trazas local y tiene un RuleContainer que se usa como contenedor de las reglas y dos ElementContainer usados para agrupar los ElementRef origen y destino respectivamente. Separar los elemento orígenes y destinos permite reducir los costos de búsquedas de elementos de entrada o salida.
 
 \subsection{Meta-modelo de Traceability Global}
 
-Este meta-modelo enlaza trazas locales de acuerdo a la cadena de transformación. Un modelo de trazas global es el punto de entrada principal en el cual todas los modelos de trazas locales se encuentran, y describe qué modelo origen/objetivo de una transformación es el modelo objetivo/origen de la siguiente/previa transformación. El dibujo \ref{fig:GlobalTraceMetamodel} muestra el meta-modelo.
+Este meta-modelo enlaza trazas locales de acuerdo a la cadena que define la transformación. Un modelo de trazas global es el punto de entrada principal en el cual todas los modelos de trazas locales se encuentran, y describe qué modelo origen/objetivo de una transformación es el modelo objetivo/origen de la siguiente/previa transformación. En el dibujo \ref{fig:GlobalTraceMetamodel} se puede observar el meta-modelo.
 
 \begin{figure}[hbtp]
 \centering
@@ -788,15 +796,13 @@ Este meta-modelo enlaza trazas locales de acuerdo a la cadena de transformación
 \label{fig:GlobalTraceMetamodel}
 \end{figure}
 
-Este meta-modelo engloba todas las trazas locales y los modelos de una cadena de transformación y la forma en que éstos se encuentran enlazados mediante TraceModel y LocalModel. Los modelos pueden ser compartidos entre distintas transformaciones, es decir uno puede ser producto de una transformación y también ser consumido por otra transformación.
+Este meta-modelo se engloban todas las trazas locales, los modelos de una cadena de transformación y la forma en que éstos se encuentran enlazados mediante TraceModel y LocalModel. Los modelos pueden ser compartidos entre distintas transformaciones, es decir uno puede ser producto de una transformación y también ser consumido por otra transformación.
 
-Introducir este nivel global de trazas permite la navegación entre los modelos transformados y sus modelos de trazas locales, dando una mejor separación de la compleja información de traceability lo que permite una mejor flexibilidad para la creación de las trazas y la explotación o uso de las mismas. No utilizar esta idea de trazas globales podría tener como consecuencia el colapso de todos las trazas en un único modelo de trazas para toda la cadena de transformación, más difícil de crear y consultar.
+Introducir este nivel global de trazas permite la navegación entre los modelos transformados y sus modelos de trazas locales, dando una mejor separación de lo que es en verdad la compleja información de traceability, lo que permite además una mejor flexibilidad para la creación de las trazas y la explotación de las mismas. No utilizar esta idea de trazas globales tiene como consecuencia disponer de todas las trazas en un único modelo de toda una cadena de transformación, lo cual desencadenaría en el colapso para la creación y la consulta de dicho modelo.
 
 \subsection{¿Cómo trabaja el framework?}
 
-Una de los principales objetivos de recolectar las trazas es dar luego la posibilidad a un usuario de inspeccionarlas realizando distintas consultas, una puede ser por ejemplo obtener los elementos relacionados a uno seleccionado.
-
-Este meta-modelo permite desde el modelo de trazas global navegar hacia los modelos de trazas locales y/o hacia a los modelos envueltos en cada una de las transformaciones. También desde el modelo de trazas local se puede navegar entre los elementos del modelo parte de la transformación.
+Una de los principales objetivos de recolectar las trazas es dar luego la posibilidad a un usuario de inspeccionarlas realizando distintas consultas, una puede ser por ejemplo obtener los elementos relacionados a uno seleccionado. Este meta-modelo permite desde el modelo de trazas global navegar hacia los modelos de trazas locales y/o hacia a los modelos envueltos en cada una de las transformaciones. También desde el modelo de trazas local se puede navegar entre los elementos del modelo parte de la transformación.
 
 En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un modelo de trazas locales y globales producto de una cadena de transformación. En el ejemplo se representan los enlaces (Link) entre los elementos sin tener en cuenta las instancias de RuleRef para no sobrecargarlo.
 
