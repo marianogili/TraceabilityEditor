@@ -43,7 +43,7 @@
 \contentsline {section}{\numberline {2.12}Sobre la transferencia de tecnolog\IeC {\'\i }a}{13}{section.2.12}
 \contentsline {subsubsection}{Problemas}{13}{section*.28}
 \contentsline {subsubsection}{Desaf\IeC {\'\i }os}{13}{section*.29}
-\contentsline {chapter}{\numberline {3}Caminando hacia una soluci\IeC {\'o}n}{14}{chapter.3}
+\contentsline {chapter}{\numberline {3}Caminando hacia la propuesta}{14}{chapter.3}
 \contentsline {section}{\numberline {3.1}Generaci\IeC {\'o}n de trazas}{14}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Impl\IeC {\'\i }cita}{14}{subsection.3.1.1}
 \contentsline {paragraph}{Ventajas}{14}{section*.30}
@@ -61,18 +61,18 @@
 \contentsline {section}{\numberline {3.5}Una clasificaci\IeC {\'o}n gen\IeC {\'e}rica de traceability}{19}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Clasificaci\IeC {\'o}n de enlaces de trazas impl\IeC {\'\i }cita}{20}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Clasificaci\IeC {\'o}n de enlaces de trazas expl\IeC {\'\i }citos}{21}{subsection.3.5.2}
-\contentsline {chapter}{\numberline {4}Esquema propuesto}{23}{chapter.4}
-\contentsline {chapter}{\numberline {5}Descripci\IeC {\'o}n de tecnolog\IeC {\'\i }as}{24}{chapter.5}
-\contentsline {chapter}{\numberline {6}Trabajos relacionados}{25}{chapter.6}
-\contentsline {section}{\numberline {6.1}Un motor de traceability de transformaci\IeC {\'o}n de modelos en la Ingenier\IeC {\'\i }a de Software}{25}{section.6.1}
-\contentsline {section}{\numberline {6.2}Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line (SPL)}{26}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Meta-modelo de traceability}{28}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Arquitectura}{29}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Integraci\IeC {\'o}n de herramientas Case}{29}{section.6.3}
-\contentsline {section}{\numberline {6.4}Framework gen\IeC {\'e}rico de extracci\IeC {\'o}n de datos de traceability}{30}{section.6.4}
-\contentsline {section}{\numberline {6.5}Traceability local y global}{32}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Meta-modelo de Traceability Local}{32}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Meta-modelo de Traceability Global}{33}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}\IeC {\textquestiondown }C\IeC {\'o}mo trabaja el framework?}{34}{subsection.6.5.3}
-\contentsline {chapter}{Conclusi\IeC {\'o}n}{36}{chapter*.34}
-\contentsline {chapter}{Glosario}{37}{chapter*.35}
+\contentsline {chapter}{\numberline {4}Esquema de traceability propuesto}{23}{chapter.4}
+\contentsline {chapter}{\numberline {5}Descripci\IeC {\'o}n de tecnolog\IeC {\'\i }as}{25}{chapter.5}
+\contentsline {chapter}{\numberline {6}Trabajos relacionados}{26}{chapter.6}
+\contentsline {section}{\numberline {6.1}Un motor de traceability de transformaci\IeC {\'o}n de modelos en la Ingenier\IeC {\'\i }a de Software}{26}{section.6.1}
+\contentsline {section}{\numberline {6.2}Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line (SPL)}{27}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Meta-modelo de traceability}{29}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Arquitectura}{30}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Integraci\IeC {\'o}n de herramientas Case}{30}{section.6.3}
+\contentsline {section}{\numberline {6.4}Framework gen\IeC {\'e}rico de extracci\IeC {\'o}n de datos de traceability}{31}{section.6.4}
+\contentsline {section}{\numberline {6.5}Traceability local y global}{33}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Meta-modelo de Traceability Local}{33}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Meta-modelo de Traceability Global}{34}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}\IeC {\textquestiondown }C\IeC {\'o}mo trabaja el framework?}{35}{subsection.6.5.3}
+\contentsline {chapter}{Conclusi\IeC {\'o}n}{37}{chapter*.34}
+\contentsline {chapter}{Glosario}{38}{chapter*.35}
