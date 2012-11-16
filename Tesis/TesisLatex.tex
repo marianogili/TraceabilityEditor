@@ -636,7 +636,9 @@ La idea fundamental es lograr un meta-modelo bien simple en el que se capture so
 
 \end{itemize}
 
-El meta-modelo se encuentra lógicamente dividido en dos partes principales, la primordial en la que se encuentran las abstracciones de los elementos fundamentales necesarios en cualquier herramienta que desee ofrecer traceability, y una secundaria en la que encierra la configuración del esquema. Esta configuración permite ofrecer un meta-modelo flexible a cualquier escenario/dominio en el que se desee hacer uso de traceability.
+El meta-modelo se encuentra lógicamente dividido en dos partes principales, la primordial en la que se encuentran las abstracciones de los elementos fundamentales necesarios en cualquier herramienta que desee ofrecer traceability, y una secundaria en la que se encierra la configuración del esquema. Esta configuración permite ofrecer un meta-modelo flexible a cualquier escenario/dominio en el que se desee hacer uso de traceability.
+
+Entre los elementos fundamentales se encuentra TraceLink que representa una traza cuya información que almacena es un nombre que sirva como identificador (name), un tipo con el cual se determina su semántica (type), una referencia optativa a la transformación que pertenece, y dos conjuntos de artefactos: el de artefactos orígenes (sources) y el de artefactos objetivos (targets).
 
 \begin{figure}[hbtp]
 \centering
