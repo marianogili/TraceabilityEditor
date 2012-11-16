@@ -62,17 +62,19 @@
 \contentsline {subsection}{\numberline {3.5.1}Clasificaci\IeC {\'o}n de enlaces de trazas impl\IeC {\'\i }cita}{20}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Clasificaci\IeC {\'o}n de enlaces de trazas expl\IeC {\'\i }citos}{21}{subsection.3.5.2}
 \contentsline {chapter}{\numberline {4}Esquema de traceability propuesto}{23}{chapter.4}
-\contentsline {chapter}{\numberline {5}Descripci\IeC {\'o}n de tecnolog\IeC {\'\i }as}{25}{chapter.5}
-\contentsline {chapter}{\numberline {6}Trabajos relacionados}{26}{chapter.6}
-\contentsline {section}{\numberline {6.1}Un motor de traceability de transformaci\IeC {\'o}n de modelos en la Ingenier\IeC {\'\i }a de Software}{26}{section.6.1}
-\contentsline {section}{\numberline {6.2}Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line (SPL)}{27}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Meta-modelo de traceability}{29}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Arquitectura}{30}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Integraci\IeC {\'o}n de herramientas Case}{30}{section.6.3}
-\contentsline {section}{\numberline {6.4}Framework gen\IeC {\'e}rico de extracci\IeC {\'o}n de datos de traceability}{31}{section.6.4}
-\contentsline {section}{\numberline {6.5}Traceability local y global}{33}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Meta-modelo de Traceability Local}{33}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Meta-modelo de Traceability Global}{34}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}\IeC {\textquestiondown }C\IeC {\'o}mo trabaja el framework?}{35}{subsection.6.5.3}
-\contentsline {chapter}{Conclusi\IeC {\'o}n}{37}{chapter*.34}
-\contentsline {chapter}{Glosario}{38}{chapter*.35}
+\contentsline {subsubsection}{Clases fundamentales}{24}{section*.34}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n del esquema}{24}{section*.35}
+\contentsline {chapter}{\numberline {5}Descripci\IeC {\'o}n de tecnolog\IeC {\'\i }as}{26}{chapter.5}
+\contentsline {chapter}{\numberline {6}Trabajos relacionados}{27}{chapter.6}
+\contentsline {section}{\numberline {6.1}Un motor de traceability de transformaci\IeC {\'o}n de modelos en la Ingenier\IeC {\'\i }a de Software}{27}{section.6.1}
+\contentsline {section}{\numberline {6.2}Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line (SPL)}{28}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Meta-modelo de traceability}{30}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Arquitectura}{31}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Integraci\IeC {\'o}n de herramientas Case}{31}{section.6.3}
+\contentsline {section}{\numberline {6.4}Framework gen\IeC {\'e}rico de extracci\IeC {\'o}n de datos de traceability}{32}{section.6.4}
+\contentsline {section}{\numberline {6.5}Traceability local y global}{34}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Meta-modelo de Traceability Local}{34}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Meta-modelo de Traceability Global}{35}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}\IeC {\textquestiondown }C\IeC {\'o}mo trabaja el framework?}{36}{subsection.6.5.3}
+\contentsline {chapter}{Conclusi\IeC {\'o}n}{38}{chapter*.36}
+\contentsline {chapter}{Glosario}{39}{chapter*.37}

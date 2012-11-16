@@ -216,9 +216,9 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_LHViQeFMEeGu4MxI0QLuJg" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_LHViQuFMEeGu4MxI0QLuJg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="TraceEditor.ecore#//Transformation/traceLinks"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LHViQ-FMEeGu4MxI0QLuJg" points="[9, -2, -153, 22]$[161, -24, -1, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_B-BjgAKtEeKrJ-9yqPsF5w" id="(0.9649122807017544,0.5238095238095238)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_B-CKkAKtEeKrJ-9yqPsF5w" id="(0.0196078431372549,0.5714285714285714)"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LHViQ-FMEeGu4MxI0QLuJg" points="[4, 2, -139, 0]$[77, 2, -66, 0]$[142, 2, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o45bkDAyEeKD4eOhGbPKDQ" id="(0.9649122807017544,0.5238095238095238)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o45bkTAyEeKD4eOhGbPKDQ" id="(0.0196078431372549,0.5714285714285714)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_QJ95MOFNEeGu4MxI0QLuJg" type="3002" source="_b6dzIOFKEeGu4MxI0QLuJg" target="_Ue518OFJEeGu4MxI0QLuJg">
     <children xmi:type="notation:Node" xmi:id="_QJ_uYOFNEeGu4MxI0QLuJg" type="4011">
@@ -356,7 +356,7 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_8C9t4eZeEeGw7oOMkNrx_g" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_8C9t4uZeEeGw7oOMkNrx_g" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="TraceEditor.ecore#//TraceLink/transformation"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8C9t4-ZeEeGw7oOMkNrx_g" points="[-1, 0, 161, -24]$[-153, 22, 9, -2]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8C9t4-ZeEeGw7oOMkNrx_g" points="[-1, 0, 142, 2]$[-66, 0, 77, 2]$[-139, 0, 4, 2]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NZHAcC3TEeKCp_z66WBhaw" id="(0.0196078431372549,0.5714285714285714)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NZHAcS3TEeKCp_z66WBhaw" id="(0.9649122807017544,0.5238095238095238)"/>
   </edges>

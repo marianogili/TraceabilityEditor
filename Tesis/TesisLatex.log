@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  14 NOV 2012 00:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  16 NOV 2012 18:48
 entering extended mode
  %&-line parsing enabled.
 **TesisLatex.tex
@@ -582,7 +582,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 File: ./img/ExplicitImplicitTraceLinkClassification.png Graphic file (type png)
 
  <use ./img/ExplicitImplicitTraceLinkClassification.png>
-Overfull \hbox (0.15553pt too wide) in paragraph at lines 593--594
+Overfull \hbox (0.15553pt too wide) in paragraph at lines 594--595
 \OT1/cmr/m/n/12 com-posi-ci^^Son (Com-po-si-tion Link), ac-tu-al-izaci^^Son (Up
 -date Link), creaci^^Son (Cre-
  []
@@ -591,7 +591,7 @@ Overfull \hbox (0.15553pt too wide) in paragraph at lines 593--594
 File: ./img/ImplicitTraceLinks.png Graphic file (type png)
 
 <use ./img/ImplicitTraceLinks.png>
-Overfull \hbox (16.31924pt too wide) in paragraph at lines 597--598
+Overfull \hbox (16.31924pt too wide) in paragraph at lines 599--600
  [][] 
  []
 
@@ -601,7 +601,7 @@ ImplicitTraceLinks.png (PNG copy)>]
 File: ./img/ExplicitTraceLinks.png Graphic file (type png)
 
 <use ./img/ExplicitTraceLinks.png>
-Overfull \hbox (8.26265pt too wide) in paragraph at lines 616--617
+Overfull \hbox (8.26265pt too wide) in paragraph at lines 619--620
  [][] 
  []
 
@@ -610,113 +610,119 @@ Cap\'{\i }tulo 4.
 <./img/Esquema.png, id=470, 557.83406pt x 338.01282pt>
 File: ./img/Esquema.png Graphic file (type png)
  <use ./img/Esquema.png>
-Overfull \hbox (28.37451pt too wide) in paragraph at lines 643--644
+Overfull \hbox (28.37451pt too wide) in paragraph at lines 634--635
  [][] 
  []
 
 [23
 
-] [24 <./img/Esquema.png>]
+ <./img/Esquema.png>]
+Overfull \hbox (0.714pt too wide) in paragraph at lines 663--664
+[]\OT1/cmr/m/n/12 Esta parte re-fle-ja la con-fig-u-raci^^Son nece-saria para l
+o-grar un es-que-ma adapt-
+ []
+
+[24] [25]
 Cap\'{\i }tulo 5.
-[25
+[26
 
 ]
 Cap\'{\i }tulo 6.
-<./img/ETraceTool_Arquitectura.png, id=488, 754.82pt x 439.6425pt>
+<./img/ETraceTool_Arquitectura.png, id=498, 754.82pt x 439.6425pt>
 File: ./img/ETraceTool_Arquitectura.png Graphic file (type png)
 
-<use ./img/ETraceTool_Arquitectura.png> [26
+<use ./img/ETraceTool_Arquitectura.png> [27
 
 ]
-<./img/NestedTraceMetamodel.png, id=497, 644.4075pt x 426.59375pt>
+<./img/NestedTraceMetamodel.png, id=507, 644.4075pt x 426.59375pt>
 File: ./img/NestedTraceMetamodel.png Graphic file (type png)
 
-<use ./img/NestedTraceMetamodel.png> [27 <./img/ETraceTool_Arquitectura.png (PN
-G copy)>] <./img/Traceability_Metamodel.png, id=505, 676.5275pt x 359.3425pt>
+<use ./img/NestedTraceMetamodel.png> [28 <./img/ETraceTool_Arquitectura.png (PN
+G copy)>] <./img/Traceability_Metamodel.png, id=515, 676.5275pt x 359.3425pt>
 File: ./img/Traceability_Metamodel.png Graphic file (type png)
 
 <use ./img/Traceability_Metamodel.png>
-Overfull \hbox (15.91962pt too wide) in paragraph at lines 706--707
+Overfull \hbox (15.91962pt too wide) in paragraph at lines 724--725
  [][] 
  []
 
-[28 <./img/NestedTraceMetamodel.png>] [29 <./img/Traceability_Metamodel.png (PN
+[29 <./img/NestedTraceMetamodel.png>] [30 <./img/Traceability_Metamodel.png (PN
 G copy)>]
-<./img/ArquitecturaTraceabilityFramework.png, id=520, 742.775pt x 284.06125pt>
+<./img/ArquitecturaTraceabilityFramework.png, id=531, 742.775pt x 284.06125pt>
 File: ./img/ArquitecturaTraceabilityFramework.png Graphic file (type png)
 
 <use ./img/ArquitecturaTraceabilityFramework.png>
-Overfull \hbox (18.52751pt too wide) in paragraph at lines 730--731
+Overfull \hbox (18.52751pt too wide) in paragraph at lines 748--749
  [][] 
  []
 
-[30 <./img/ArquitecturaTraceabilityFramework.png (PNG copy)>]
-Overfull \hbox (17.53778pt too wide) in paragraph at lines 749--749
+[31 <./img/ArquitecturaTraceabilityFramework.png (PNG copy)>]
+Overfull \hbox (17.53778pt too wide) in paragraph at lines 767--767
 []\OT1/cmr/bx/n/17.28 Framework gen^^Seri-co de ex-trac-ci^^Son de datos
  []
 
-<./img/GenericTraceFrame_Arquitectura.png, id=534, 404.51125pt x 235.88126pt>
+<./img/GenericTraceFrame_Arquitectura.png, id=544, 404.51125pt x 235.88126pt>
 File: ./img/GenericTraceFrame_Arquitectura.png Graphic file (type png)
 
-<use ./img/GenericTraceFrame_Arquitectura.png> [31 <./img/GenericTraceFrame_Arq
+<use ./img/GenericTraceFrame_Arquitectura.png> [32 <./img/GenericTraceFrame_Arq
 uitectura.png (PNG copy)>]
-<./img/Trace-DSL.png, id=541, 418.56375pt x 220.825pt>
+<./img/Trace-DSL.png, id=551, 418.56375pt x 220.825pt>
 File: ./img/Trace-DSL.png Graphic file (type png)
 
 <use ./img/Trace-DSL.png>
-<./img/Faceta.png, id=543, 563.10374pt x 171.64125pt>
+<./img/Faceta.png, id=553, 563.10374pt x 171.64125pt>
 File: ./img/Faceta.png Graphic file (type png)
  <use ./img/Faceta.png>
-Overfull \hbox (15.43439pt too wide) in paragraph at lines 775--776
+Overfull \hbox (15.43439pt too wide) in paragraph at lines 793--794
  [][] 
  []
 
 
-Overfull \hbox (7.95976pt too wide) in paragraph at lines 787--788
+Overfull \hbox (7.95976pt too wide) in paragraph at lines 805--806
 []\OT1/cmr/m/n/12 La con-fig-u-raci^^Son de la gran-u-lar-i-dad con-siste en la
  es-peci-fi-caci^^Son de qu^^Se tipos
  []
 
-[32 <./img/Trace-DSL.png (PNG copy)>]
-<./img/LocalTraceMetamodel.png, id=553, 706.64pt x 283.0575pt>
+[33 <./img/Trace-DSL.png (PNG copy)>]
+<./img/LocalTraceMetamodel.png, id=563, 706.64pt x 283.0575pt>
 File: ./img/LocalTraceMetamodel.png Graphic file (type png)
 
-<use ./img/LocalTraceMetamodel.png> [33 <./img/Faceta.png (PNG copy)>]
-<./img/GlobalTraceMetamodel.png, id=561, 656.4525pt x 160.6pt>
+<use ./img/LocalTraceMetamodel.png> [34 <./img/Faceta.png (PNG copy)>]
+<./img/GlobalTraceMetamodel.png, id=571, 656.4525pt x 160.6pt>
 File: ./img/GlobalTraceMetamodel.png Graphic file (type png)
 
 <use ./img/GlobalTraceMetamodel.png>
-Overfull \hbox (3.87454pt too wide) in paragraph at lines 816--817
+Overfull \hbox (3.87454pt too wide) in paragraph at lines 834--835
  [][] 
  []
 
-[34 <./img/LocalTraceMetamodel.png>]
-<./img/EjemploLocalGlobalMetamodel.png, id=568, 944.52875pt x 556.0775pt>
+[35 <./img/LocalTraceMetamodel.png>]
+<./img/EjemploLocalGlobalMetamodel.png, id=578, 944.52875pt x 556.0775pt>
 File: ./img/EjemploLocalGlobalMetamodel.png Graphic file (type png)
 
 <use ./img/EjemploLocalGlobalMetamodel.png>
-Overfull \hbox (35.03401pt too wide) in paragraph at lines 833--834
+Overfull \hbox (35.03401pt too wide) in paragraph at lines 851--852
  [][] 
  []
 
-[35 <./img/GlobalTraceMetamodel.png>] [36 <./img/EjemploLocalGlobalMetamodel.pn
-g>] [37
+[36 <./img/GlobalTraceMetamodel.png>] [37 <./img/EjemploLocalGlobalMetamodel.pn
+g>] [38
 
-
-] [38
 
 ] [39
 
-] [40] (./TesisLatex.aux)
+] [40
+
+] [41] (./TesisLatex.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5913 strings out of 495061
- 82217 string characters out of 1182622
+ 5917 strings out of 495061
+ 82277 string characters out of 1182622
  157962 words of memory out of 3000000
- 8814 multiletter control sequences out of 15000+50000
+ 8815 multiletter control sequences out of 15000+50000
  12123 words of font info for 44 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  38i,6n,36p,1043b,520s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -729,9 +735,9 @@ m/cmsl12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/shar
 e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-tex
 live/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on TesisLatex.pdf (47 pages, 650361 bytes).
+Output written on TesisLatex.pdf (48 pages, 653604 bytes).
 PDF statistics:
- 676 PDF objects out of 1000 (max. 8388607)
- 176 named destinations out of 1000 (max. 500000)
+ 686 PDF objects out of 1000 (max. 8388607)
+ 179 named destinations out of 1000 (max. 500000)
  463 words of extra memory for PDF output out of 10000 (max. 10000000)
 
