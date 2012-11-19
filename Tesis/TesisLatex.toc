@@ -61,10 +61,11 @@
 \contentsline {section}{\numberline {3.5}Una clasificaci\IeC {\'o}n gen\IeC {\'e}rica de traceability}{19}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Clasificaci\IeC {\'o}n de enlaces de trazas impl\IeC {\'\i }cita}{20}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Clasificaci\IeC {\'o}n de enlaces de trazas expl\IeC {\'\i }citos}{21}{subsection.3.5.2}
-\contentsline {chapter}{\numberline {4}Esquema de traceability propuesto}{23}{chapter.4}
+\contentsline {chapter}{\numberline {4}Manos a la obra}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}El esquema de traceability}{23}{section.4.1}
 \contentsline {subsubsection}{Clases fundamentales}{24}{section*.34}
 \contentsline {subsubsection}{Configuraci\IeC {\'o}n del esquema}{25}{section*.35}
-\contentsline {section}{\numberline {4.1}Lo que no ofrece}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Lo que no ofrece}{25}{section.4.2}
 \contentsline {chapter}{\numberline {5}Descripci\IeC {\'o}n de tecnolog\IeC {\'\i }as}{26}{chapter.5}
 \contentsline {chapter}{\numberline {6}Trabajos relacionados}{27}{chapter.6}
 \contentsline {section}{\numberline {6.1}Un motor de traceability de transformaci\IeC {\'o}n de modelos en la Ingenier\IeC {\'\i }a de Software}{27}{section.6.1}
