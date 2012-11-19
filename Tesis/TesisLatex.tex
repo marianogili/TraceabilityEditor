@@ -621,6 +621,8 @@ El alcance de Model-Artefact Link es muy amplio, por tal motivo es esta clasific
 \label{fig:LinksExplicitos}
 \end{figure}
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%     Propuesta      %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -636,13 +638,19 @@ En este capítulo se introduce, desarrolla y fundamenta el esquema de traceabili
 \label{fig:EsquenaPropuesto}
 \end{figure}
 
-La idea fundamental es lograr un meta-modelo bien simple en el que se capture solamente las ideas relevantes de traceability con lo cual mantener la independencia del dominio en el que se utilice y a su vez que capture la información mínima necesaria, con lo cual prestar especial énfasis en facilitar los siguientes aspectos:
+La idea fundamental es lograr un meta-modelo bien simple en el que se capture solamente las ideas relevantes de traceability con lo cual mantener la independencia del dominio en el que se utilice y a su vez que capture la información mínima necesaria, dando principal énfasis en los siguientes desafíos:
 
 \begin{itemize}
 
-\item El intercambio de información entre las distintas herramientas
+\item Un esquema que represente todas las trazas independientemente de como fueron generadas, si de forma explícita o implícitas, su granularidad y semántica.
 
-\item 
+\item No acomplejar la comunicación, tanto entre los distintos roles de usuarios como los distintos tipos de herramientas que hacen uso de traceability.
+
+\item Que la adecuación de una herramienta que quiera agregar la funcionalidad de traceability mediante el uso de este esquema sea una tarea sencilla.
+
+\item Aún dada la infinidad de artefactos que se pueden presentar, que el esquema ofrezca información semántica de los mismos, con el fin de facilitar la validación de enlaces legítimos.
+
+\item Posibilidad de identificar unívocamente cada artefacto que se desee tracear.
 
 \end{itemize}
 
@@ -663,6 +671,17 @@ Por último entre los elementos fundamentales, tenemos la clase Transformation q
 Esta parte refleja la configuración necesaria para lograr un esquema adaptable a la infinidad de escenarios en los que puede aplicarse el mismo. Dicha configuración consiste en la definición de dos jerarquías, una que define la semántica de los artefactos que se van a tracear, y la otra para la semántica de las trazas que pueden llegar a crearse. Ambas jerarquías están determinadas mediante las clases LinkType y TypeArtefact respectivamente, éstas comparten la siguiente estructura: un nombre (name) que las identifica, un texto que posibilita describirlas (description) y una relación (parent) que asocia una clasificación con su padre, gracias a dicha relación se logra la estructura jerárquica.
 
 Un ejemplo de una configuración de tipos de trazas puede ser la jerarquía propuesta en la sección \ref{sec:ClasificacionTraceability}, que se puede ver siguiendo los diagramas \ref{fig:ClasifInicial}, \ref{fig:LinksImplicitos} y \ref{fig:LinksExplicitos}.
+
+
+\section{Lo que no ofrece}
+
+A continuación se listan un conjunto de aspectos/funcionalidades que el esquema actualmente definido no ofrece/tiene en cuenta:
+
+\begin{itemize}
+
+\item funcionalidad de versionado: que permita navegar por las trazas y refleje las modificaciones conjunto con las que se fueron realizando sobre los artefactos relacionados en el tiempo, a lo largo de la evolución de todas las tareas que forman parte de la ingeniería de un software.
+
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%     tecnologías     %%%%%
