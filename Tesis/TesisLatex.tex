@@ -631,25 +631,31 @@ El alcance de Model-Artefact Link es muy amplio, por tal motivo es esta clasific
 
 En este capítulo se introduce, desarrolla y fundamenta el esquema de traceability propuesto en la presente tesis. 
 
-\section{El esquema de traceability}
+\section{Introducción}
+\label{sec:EsquemaPropIntro}
 
-La idea fundamental es lograr un meta-modelo bien simple en el que se capture solamente las ideas más relevantes de traceability y se almacene la información mínima necesaria. Gracias a todo lo anterior, y solo así, logramos obtener el concepto deseable de independencia del modelo con respecto al dominio en el que se quiera utilizar la funcionalidad de traceability. Concepto necesario para poder llegar a definir un esquema de propósito general que permita contrarrestar principalmente los siguientes desafíos:
+La idea fundamental es lograr un meta-modelo bien simple en el que se capture solamente las ideas más relevantes de traceability y se almacene la información mínima necesaria. Gracias a todo lo anterior, y solo así, logramos obtener el concepto deseable de independencia del modelo con respecto al dominio en el que se quiera utilizar la funcionalidad de traceability. Concepto necesario para poder llegar a definir un esquema de propósito general que apunte principalmente a dar solución a los siguientes desafíos:
 
 \begin{itemize}
 
-\item Un esquema que represente todas las trazas independientemente de como fueron generadas, si de forma explícita o implícitas, su granularidad y semántica.
+\item Lograr un esquema que represente todas las trazas independientemente de como fueron generadas, si de forma explícita o implícitas, su granularidad y semántica.
 
-\item No acomplejar la comunicación, tanto entre los distintos roles de usuarios como los distintos tipos de herramientas que hacen uso de traceability.
+\item Mantener la comunicación lo más simple posible, tanto la que existe entre los distintos usuarios en sus respectivos roles como la de los distintos tipos de herramientas que necesiten traceability.
 
-\item Que la adaptación de una herramienta cualquiera, que quiera agregar la funcionalidad de traceability que hace uso de este esquema, sea una tarea sencilla.
+\item La adaptación de una herramienta tiene que ser una tarea sencilla, cualquiera sea cuando desee agregar la funcionalidad de traceability mediante el uso de este esquema.
 
-\item Aún dada la infinidad de artefactos que se pueden presentar, que el esquema siempre permita ofrecer la información semántica de los mismos, con el fin de facilitar la validación de enlaces legítimos.
+\item Aún dada la infinidad de artefactos que se pueden presentar, el esquema siempre tiene que ofrecer información semántica de los mismos, con el fin de facilitar la validación de enlaces legítimos.
 
-\item Posibilidad de identificar unívocamente cada artefacto que se desee tracear.
+\item Lograr identificar unívocamente cada artefacto sobre el que se desee realizar traceability.
 
 \end{itemize}
 
-El esquema propuesto se puede observar en el dibujo \ref{fig:EsquenaPropuesto}
+\section{El esquema de traceability}
+
+Con el fin de lograr respetar todas las consignas fundamentales listadas en \ref{sec:EsquemaPropIntro}, se definió una propuesta de un esquema de traceability que se encuentra representado mediante un diagrama de clases que se puede observar en el dibujo \ref{fig:EsquenaPropuesto}.
+
+Como se puede observar, el meta-modelo se puede dividir lógicamente en dos partes principales, la primordial en la que se encuentran las abstracciones fundamentales de los elementos mínimos necesarios en cualquier herramienta que desee ofrecer traceability, y una secundaria en la que se engloba la configuración del esquema. Esta configuración permite ofrecer un meta-modelo flexible a cualquier escenario/dominio en el que se desee hacer uso de traceability.
+
 
 \begin{figure}[hbtp]
 \centering
@@ -657,8 +663,6 @@ El esquema propuesto se puede observar en el dibujo \ref{fig:EsquenaPropuesto}
 \caption{Esquema de traceability propuesto}
 \label{fig:EsquenaPropuesto}
 \end{figure}
-
-El meta-modelo se encuentra lógicamente dividido en dos partes principales, la primordial en la que se encuentran las abstracciones de los elementos fundamentales necesarios en cualquier herramienta que desee ofrecer traceability, y una secundaria en la que se encierra la configuración del esquema. Esta configuración permite ofrecer un meta-modelo flexible a cualquier escenario/dominio en el que se desee hacer uso de traceability.
 
 
 \subsubsection{Clases fundamentales}
@@ -672,14 +676,14 @@ Por último entre los elementos fundamentales, tenemos la clase Transformation q
 
 \subsubsection{Configuración del esquema}
 
-Esta parte refleja la configuración necesaria para lograr un esquema adaptable a la infinidad de escenarios en los que puede aplicarse el mismo. Dicha configuración consiste en la definición de dos jerarquías, una que define la semántica de los artefactos que se van a tracear, y la otra para la semántica de las trazas que pueden llegar a crearse. Ambas jerarquías están determinadas mediante las clases LinkType y TypeArtefact respectivamente, éstas comparten la siguiente estructura: un nombre (name) que las identifica, un texto que posibilita describirlas (description) y una relación (parent) que asocia una clasificación con su padre, gracias a dicha relación se logra la estructura jerárquica.
+Esta parte refleja la configuración necesaria para lograr un esquema adaptable a la infinidad de escenarios en los que puede aplicarse el mismo. Dicha configuración consiste en la definición de dos jerarquías, una que define la semántica de los artefactos que se van a tracear, y la otra para determinar la semántica de las trazas que pueden llegar a crearse. Ambas jerarquías están determinadas mediante las clases LinkType y TypeArtefact respectivamente, éstas comparten la siguiente estructura: un nombre (name) que las identifica, un texto que posibilita describirlas (description) y una relación (parent) que asocia una clasificación con su padre, gracias a dicha relación se logra la estructura jerárquica.
 
 Un ejemplo de una configuración de tipos de trazas puede ser la jerarquía propuesta en la sección \ref{sec:ClasificacionTraceability}, que se puede ver siguiendo los diagramas \ref{fig:ClasifInicial}, \ref{fig:LinksImplicitos} y \ref{fig:LinksExplicitos}.
 
 
 \section{Lo que no ofrece}
 
-A continuación se listan un conjunto de aspectos/funcionalidades que el esquema actualmente definido no ofrece/tiene en cuenta:
+A continuación se lista un conjunto de aspectos y/o funcionalidades que el esquema propuesto actual no ofrece o tiene en cuenta:
 
 \begin{itemize}
 
@@ -693,6 +697,47 @@ A continuación se listan un conjunto de aspectos/funcionalidades que el esquema
 %%%     tecnologías     %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Descripción de tecnologías}
+
+En el presente capítulo se realiza una breve introducción sobre cada una de las tecnologías que fueron utilizadas para la implementación del prototipo que hace uso del esquema propuesto de traceability.
+
+\section{Eclipse}
+
+Según se presenta en \cite{EMFADG, Eclipse} Eclipse es un proyecto de desarrollo de software de código abierto, cuyo propósito es proveer una plataforma de herramientas altamente integradas para la construcción, implementación y administración de software a lo largo de todo su ciclo de vida. 
+
+El proyecto núcleo es un framework genérico para la integración de herramientas conjunto con un entorno de desarrollo Java que ya se incluye para usarlo. Otros proyectos extienden el framework núcleo para soportar distintos tipos de herramientas y ambientes de desarrollo específicos. Estos proyectos en Eclipse están implementados en Java y pueden ser ejecutados en muchos sistemas operativos.
+
+La comunidad Eclipse tiene más de 200 proyectos, los cuales pueden conceptualmente organizarse dentro de las siguientes 7 categorías:
+
+\begin{enumerate}
+
+\item Enterprise Development
+
+\item    Embedded and Device Development
+
+\item    Rich Client Platform
+
+\item    Rich Internet Applications
+
+\item    Application Frameworks
+
+\item    Application Lifecycle Management (ALM)
+
+\item    Service Oriented Architecture (SOA)
+
+\end{enumerate}
+
+Eclipse hace uso de la Eclipse Public License (EPL), dicha licencia comercial permite a las organizaciones incluir software Eclipse en sus productos comerciales, mientras que al mismo tiempo les solicita en retorno un aporte a la comunidad con algo del producto derivado comercializado.
+
+Para obtener más información sobre el proyecto Eclipse ver \cite[\url{www.eclipse.org}]{Eclipse}, y para más información técnica consultar \cite[Eclipse Platform Technical Overview]{EclipseTech}.
+
+
+\section{Eclipse Modeling Framework}
+
+\section{Grafical Modeling Framework}
+
+\section{ATL}
+
+\section{QVT}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -895,6 +940,7 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%     Bibliografía    %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{acm}
 \begin{thebibliography}{99}
 
 
@@ -929,6 +975,13 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \bibitem{EMF} Eclipse Modeling Framework Project (EMF) \url{http://www.eclipse.org/modeling/emf/}.
 
 \bibitem{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmaralAraujo} A. Sousa, U. Kulesza, A. Rummler, N. Anquetil, R. Mitschke, A. Moreira, V. Amaral, J. Araújo: A Model-Driven Traceability Framework to Software Product Line Development. In: ECMDA Traceability Workshop (ECMDA-TW) 2008 Proceedings.
+
+\bibitem{Eclipse} Eclipse Project \url{http://www.eclipse.org}.
+
+\bibitem{EclipseTech} Eclipse Platform Technical Overview. Object Technology International, Inc., February 2003,
+\url{http://www.eclipse.org/whitepapers/eclipse-overview.pdf}.
+
+\bibitem{EMFADG} F. Budinsky, D. Steinberg, E. Merks, R. Ellersick, T. J. Grose: Eclipse Modeling Framework - A Developer's Guide. Addison Wesley.
 
 \end{thebibliography}
 
