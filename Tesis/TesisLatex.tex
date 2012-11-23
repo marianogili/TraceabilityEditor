@@ -475,7 +475,7 @@ A continuación se detallan las ventajas y desventajas de cada enfoque:
 
 \begin{enumerate}
 
-\item	La mayor ventaja de la generación de trazas implícita es que no es necesario ningún esfuerzo adicional para obtener los enlaces de trazas entre los modelos de entrada y salida, dado que son generados en paralelo automáticamente con el modelo actual de la transformación.
+\item La mayor ventaja de la generación de trazas implícita es que no es necesario ningún esfuerzo adicional para obtener los enlaces de trazas entre los modelos de entrada y salida, dado que son generados en paralelo automáticamente con el modelo actual de la transformación.
 
 \end{enumerate}
 
@@ -733,6 +733,44 @@ Para obtener más información sobre el proyecto Eclipse ver \cite[\url{www.ecli
 
 \section{Eclipse Modeling Framework}
 
+El EMF es un framework de modelado y generación de código para herramientas de construcción y otras aplicaciones basadas en un modelo de datos estructurados. A partir de una especificación de un modelo descrito en XMI, EMF provee herramientas y un entorno de ejecución para producir un conjunto de clases Java para el modelo y un conjunto de clases adaptadoras que permiten la visualización y la edición de dicho modelo.
+
+EMF consiste de tres partes fundamentales:
+
+\paragraph{EMF}
+
+El framework EMF base incluye un meta-modelo (Ecore) para la descripción de modelos y soporte para un entorno de ejecución para dichos modelos que incluye las funcionalidades de notificación de cambios, persistencia por defecto vía serialización XMI y una librería muy eficiente para la manipulación de objectos EMF genérica. 
+
+\paragraph{EMF.Edit}
+
+El framework EMF.Edit incluye clases genéricas reusables para la construcción de editores de modelos EMF. Este provee:
+
+\begin{itemize}
+
+\item Clases proveedoras de contenido y etiquetas, acceso a propiedades orígenes y otras clases convenientes que permiten a los modelos EMF ser visualizados mediante entornos visuales estándares de escritorio (vía JFace) y/o hojas de propiedades.
+
+\item Un framework de comandos que incluye un conjunto de clases que implementan comandos para la construcción de editores con soporte íntegro de deshacer y rehacer (undo/redo).
+
+\end{itemize}
+
+\paragraph{EMF.Codegen}
+
+La funcionalidad de generación de código EMF es capaz de generar todo lo necesario para la construcción de un editor de un modelo EMF completo. Ésta incluye una interfaz de usuario gráfica (GUI) desde la cual las opciones de generación pueden ser especificadas y los generadores son invocados. Dicha funcionalidad de generación aprovecha el componente de Eclipse JDT (Java Development Tooling).
+
+Tres niveles de generación de código son soportados:
+
+\subparagraph{Model} 
+
+Proporciona la implementación de interfaces y clases Java para todas las clases del modelo, además la implementación de una clase fábrica y el paquete.
+
+\subparagraph{Adapters}
+
+Genera la implementación de las clases, llamadas ItemProviders, que se adaptan a las clases del modelo para su edición y visualización.
+
+\subparagraph{Editor}
+
+Produce un editor estructurado apropiadamente que se ajusta al estilo recomendado para los editores de modelo EMF de Eclipse y sirve como punto de partida para comenzar con la personalización.
+
 \section{Grafical Modeling Framework}
 
 \section{ATL}
@@ -987,3 +1025,4 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 
 
 \end{document}
+
