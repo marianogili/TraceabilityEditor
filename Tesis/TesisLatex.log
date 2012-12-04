@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  22 NOV 2012 01:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  3 DEC 2012 21:14
 entering extended mode
  %&-line parsing enabled.
 **TesisLatex.tex
@@ -577,7 +577,7 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 545.
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [17] [18]
 [19]
-<./img/ExplicitImplicitTraceLinkClassification.png, id=492, 382.42876pt x 349.3
+<./img/ExplicitImplicitTraceLinkClassification.png, id=507, 382.42876pt x 349.3
 05pt>
 File: ./img/ExplicitImplicitTraceLinkClassification.png Graphic file (type png)
 
@@ -587,7 +587,7 @@ Overfull \hbox (0.15553pt too wide) in paragraph at lines 594--595
 -date Link), creaci^^Son (Cre-
  []
 
-<./img/ImplicitTraceLinks.png, id=494, 738.76pt x 187.70125pt>
+<./img/ImplicitTraceLinks.png, id=509, 738.76pt x 187.70125pt>
 File: ./img/ImplicitTraceLinks.png Graphic file (type png)
 
 <use ./img/ImplicitTraceLinks.png>
@@ -597,7 +597,7 @@ Overfull \hbox (16.31924pt too wide) in paragraph at lines 599--600
 
 [20 <./img/ExplicitImplicitTraceLinkClassification.png (PNG copy)>] [21 <./img/
 ImplicitTraceLinks.png (PNG copy)>]
-<./img/ExplicitTraceLinks.png, id=504, 780.9175pt x 421.575pt>
+<./img/ExplicitTraceLinks.png, id=519, 780.9175pt x 421.575pt>
 File: ./img/ExplicitTraceLinks.png Graphic file (type png)
 
 <use ./img/ExplicitTraceLinks.png>
@@ -609,7 +609,7 @@ Overfull \hbox (8.26265pt too wide) in paragraph at lines 619--620
 Cap\'{\i }tulo 4.
 [23
 
-] <./img/Esquema.png, id=515, 557.83406pt x 338.01282pt>
+] <./img/Esquema.png, id=530, 557.83406pt x 338.01282pt>
 File: ./img/Esquema.png Graphic file (type png)
 
 <use ./img/Esquema.png>
@@ -628,108 +628,128 @@ Cap\'{\i }tulo 5.
 [27
 
 ] [28]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 771.
+
+ (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 771.
+ [29]
+Overfull \hbox (11.91241pt too wide) in paragraph at lines 797--798
+[]\OT1/cmr/m/n/12 Clases provee-do-ras de con-tenido y eti-que-tas, ac-ce-so a 
+propiedades or^^S^^Pgenes
+ []
+
+
+Overfull \hbox (16.41435pt too wide) in paragraph at lines 815--816
+ \OT1/cmr/bx/sc/12 Adapters[] \OT1/cmr/m/n/12 Gen-era la im-ple-mentaci^^Son de
+ las clases, lla-madas Item-Providers,
+ []
+
+[30] [31]
 Cap\'{\i }tulo 6.
-<./img/ETraceTool_Arquitectura.png, id=564, 754.82pt x 439.6425pt>
+<./img/ETraceTool_Arquitectura.png, id=605, 754.82pt x 439.6425pt>
 File: ./img/ETraceTool_Arquitectura.png Graphic file (type png)
 
-<use ./img/ETraceTool_Arquitectura.png> [29
+<use ./img/ETraceTool_Arquitectura.png> [32
 
 ]
-<./img/NestedTraceMetamodel.png, id=573, 644.4075pt x 426.59375pt>
+<./img/NestedTraceMetamodel.png, id=614, 644.4075pt x 426.59375pt>
 File: ./img/NestedTraceMetamodel.png Graphic file (type png)
 
-<use ./img/NestedTraceMetamodel.png> [30 <./img/ETraceTool_Arquitectura.png (PN
-G copy)>] <./img/Traceability_Metamodel.png, id=582, 676.5275pt x 359.3425pt>
+<use ./img/NestedTraceMetamodel.png> [33 <./img/ETraceTool_Arquitectura.png (PN
+G copy)>] <./img/Traceability_Metamodel.png, id=622, 676.5275pt x 359.3425pt>
 File: ./img/Traceability_Metamodel.png Graphic file (type png)
 
 <use ./img/Traceability_Metamodel.png>
-Overfull \hbox (15.91962pt too wide) in paragraph at lines 794--795
+Overfull \hbox (15.91962pt too wide) in paragraph at lines 879--880
  [][] 
  []
 
-[31 <./img/NestedTraceMetamodel.png>] [32 <./img/Traceability_Metamodel.png (PN
+[34 <./img/NestedTraceMetamodel.png>] [35 <./img/Traceability_Metamodel.png (PN
 G copy)>]
-<./img/ArquitecturaTraceabilityFramework.png, id=597, 742.775pt x 284.06125pt>
+<./img/ArquitecturaTraceabilityFramework.png, id=637, 742.775pt x 284.06125pt>
 File: ./img/ArquitecturaTraceabilityFramework.png Graphic file (type png)
 
 <use ./img/ArquitecturaTraceabilityFramework.png>
-Overfull \hbox (18.52751pt too wide) in paragraph at lines 818--819
+Overfull \hbox (18.52751pt too wide) in paragraph at lines 903--904
  [][] 
  []
 
-[33 <./img/ArquitecturaTraceabilityFramework.png (PNG copy)>]
-Overfull \hbox (17.53778pt too wide) in paragraph at lines 837--837
+[36 <./img/ArquitecturaTraceabilityFramework.png (PNG copy)>]
+Overfull \hbox (17.53778pt too wide) in paragraph at lines 922--922
 []\OT1/cmr/bx/n/17.28 Framework gen^^Seri-co de ex-trac-ci^^Son de datos
  []
 
-<./img/GenericTraceFrame_Arquitectura.png, id=610, 404.51125pt x 235.88126pt>
+<./img/GenericTraceFrame_Arquitectura.png, id=651, 404.51125pt x 235.88126pt>
 File: ./img/GenericTraceFrame_Arquitectura.png Graphic file (type png)
 
-<use ./img/GenericTraceFrame_Arquitectura.png> [34 <./img/GenericTraceFrame_Arq
+<use ./img/GenericTraceFrame_Arquitectura.png> [37 <./img/GenericTraceFrame_Arq
 uitectura.png (PNG copy)>]
-<./img/Trace-DSL.png, id=617, 418.56375pt x 220.825pt>
+<./img/Trace-DSL.png, id=658, 418.56375pt x 220.825pt>
 File: ./img/Trace-DSL.png Graphic file (type png)
 
 <use ./img/Trace-DSL.png>
-<./img/Faceta.png, id=619, 563.10374pt x 171.64125pt>
+<./img/Faceta.png, id=660, 563.10374pt x 171.64125pt>
 File: ./img/Faceta.png Graphic file (type png)
  <use ./img/Faceta.png>
-Overfull \hbox (15.43439pt too wide) in paragraph at lines 863--864
+Overfull \hbox (15.43439pt too wide) in paragraph at lines 948--949
  [][] 
  []
 
 
-Overfull \hbox (7.95976pt too wide) in paragraph at lines 875--876
+Overfull \hbox (7.95976pt too wide) in paragraph at lines 960--961
 []\OT1/cmr/m/n/12 La con-fig-u-raci^^Son de la gran-u-lar-i-dad con-siste en la
  es-peci-fi-caci^^Son de qu^^Se tipos
  []
 
-[35 <./img/Trace-DSL.png (PNG copy)>]
-<./img/LocalTraceMetamodel.png, id=629, 706.64pt x 283.0575pt>
+[38 <./img/Trace-DSL.png (PNG copy)>]
+<./img/LocalTraceMetamodel.png, id=670, 706.64pt x 283.0575pt>
 File: ./img/LocalTraceMetamodel.png Graphic file (type png)
 
-<use ./img/LocalTraceMetamodel.png> [36 <./img/Faceta.png (PNG copy)>]
-<./img/GlobalTraceMetamodel.png, id=638, 656.4525pt x 160.6pt>
+<use ./img/LocalTraceMetamodel.png> [39 <./img/Faceta.png (PNG copy)>]
+<./img/GlobalTraceMetamodel.png, id=678, 656.4525pt x 160.6pt>
 File: ./img/GlobalTraceMetamodel.png Graphic file (type png)
 
 <use ./img/GlobalTraceMetamodel.png>
-Overfull \hbox (3.87454pt too wide) in paragraph at lines 904--905
+Overfull \hbox (3.87454pt too wide) in paragraph at lines 989--990
  [][] 
  []
 
-[37 <./img/LocalTraceMetamodel.png>]
-<./img/EjemploLocalGlobalMetamodel.png, id=645, 944.52875pt x 556.0775pt>
+[40 <./img/LocalTraceMetamodel.png>]
+<./img/EjemploLocalGlobalMetamodel.png, id=685, 944.52875pt x 556.0775pt>
 File: ./img/EjemploLocalGlobalMetamodel.png Graphic file (type png)
 
 <use ./img/EjemploLocalGlobalMetamodel.png>
-Overfull \hbox (35.03401pt too wide) in paragraph at lines 921--922
+Overfull \hbox (35.03401pt too wide) in paragraph at lines 1006--1007
  [][] 
  []
 
-[38 <./img/GlobalTraceMetamodel.png>] [39 <./img/EjemploLocalGlobalMetamodel.pn
-g>] [40
+[41 <./img/GlobalTraceMetamodel.png>] [42 <./img/EjemploLocalGlobalMetamodel.pn
+g>] [43
 
 
-] [41
+] [44
 
-] [42
+] [45
 
 ]
-Underfull \hbox (badness 1253) in paragraph at lines 981--983
+Underfull \hbox (badness 1253) in paragraph at lines 1066--1068
 []\OT1/cmr/m/n/12 Eclipse Plat-form Tech-ni-cal Overview. Ob-ject Tech-nol-o-gy
  In-ter-na-
  []
 
-[43] (./TesisLatex.aux)
+[46] (./TesisLatex.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5950 strings out of 495061
- 82631 string characters out of 1182622
- 158962 words of memory out of 3000000
- 8828 multiletter control sequences out of 15000+50000
+ 5988 strings out of 495061
+ 83168 string characters out of 1182622
+ 160962 words of memory out of 3000000
+ 8845 multiletter control sequences out of 15000+50000
  12123 words of font info for 44 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  38i,6n,36p,1043b,520s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -738,13 +758,14 @@ re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-tex
 live/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-texlive/fonts
 /type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/publi
 c/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
-m/cmsl12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-tex
-live/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on TesisLatex.pdf (50 pages, 667012 bytes).
+m/cmsl12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/latxfont/lasy10.pfb>
+Output written on TesisLatex.pdf (53 pages, 685194 bytes).
 PDF statistics:
- 760 PDF objects out of 1000 (max. 8388607)
- 199 named destinations out of 1000 (max. 500000)
- 527 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 809 PDF objects out of 1000 (max. 8388607)
+ 217 named destinations out of 1000 (max. 500000)
+ 551 words of extra memory for PDF output out of 10000 (max. 10000000)
 

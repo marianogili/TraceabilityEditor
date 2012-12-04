@@ -700,7 +700,13 @@ A continuación se lista un conjunto de aspectos y/o funcionalidades que el esqu
 
 En el presente capítulo se realiza una breve introducción sobre cada una de las tecnologías que fueron utilizadas para la implementación del prototipo que hace uso del esquema propuesto de traceability.
 
+
 \section{Eclipse}
+
+Empezamos con el proyecto base sobre el cual se desarrolló el prototipo, en la presente sección daremos una introducción a Eclipse en la que se presenta el proyecto y se detalla en breve la plataforma con sus principales componentes y/o funcionalidades.
+
+
+\subsection{El proyecto}
 
 Según se presenta en \cite{EMFADG, Eclipse} Eclipse es un proyecto de desarrollo de software de código abierto, cuyo propósito es proveer una plataforma de herramientas altamente integradas para la construcción, implementación y administración de software a lo largo de todo su ciclo de vida. 
 
@@ -728,7 +734,48 @@ La comunidad Eclipse tiene más de 200 proyectos, los cuales pueden conceptualme
 
 Eclipse hace uso de la Eclipse Public License (EPL), dicha licencia comercial permite a las organizaciones incluir software Eclipse en sus productos comerciales, mientras que al mismo tiempo les solicita en retorno un aporte a la comunidad con algo del producto derivado comercializado.
 
-Para obtener más información sobre el proyecto Eclipse ver \cite[\url{www.eclipse.org}]{Eclipse}, y para más información técnica consultar \cite[Eclipse Platform Technical Overview]{EclipseTech}.
+
+\subsection{La plataforma Eclipse}
+
+La plataforma Eclipse es un framework para la construcción de IDEs (Ambientes de Desarrollos Integrados), el mismo ha sido descripto como ``un ambiente para cualquier cosa y nada en particular''. La plataforma  define simplemente la estructura básica del IDE, luego mediante la definición de herramientas específicas que amplían y se conectan al framework terminan definiendo un IDE particular de forma colectiva.
+
+
+\subsubsection{Arquitectura de plugins}
+
+En Eclipse la unidad básica de funcionamiento, o sencillamente un componente, es llamado plugin-in. Tanto la plataforma misma de Eclipse como las herramientas que la extienden están compuestas por éstos plug-ins. Una  herramienta sencilla puede consistir de un simple plug-in, pero las más complejas por lo general están divididas en varios de éstos.
+
+Un plug-in incluye todo lo necesario para la ejecución del mismo, ésto puede ser: código Java, imágenes, textos, etc. También incluye un archivo manifiesto (plugin.xml), en el que se declaran las interconexiones con otros plug-ins.
+
+Durante el arranque la plataforma Eclipse descubre todos los plug-ins disponibles, sin embargo éstos son sólo activados cuando es necesaria su ejecución con el fin de no ralentizar el arranque.
+
+
+\subsubsection{Workspace}
+
+Las herramientas integradas en Eclipse trabajan con archivos y carpetas ordinarias, pero también disponen de una API de alto nivel que define los siguientes componentes: recursos (resources), proyectos y un espacio de trabajo (workspace).
+
+\paragraph{Resource} Un recurso es la representación que da Eclipse de un archivo y/o una carpeta, a los que provee de capacidades adicionales como detectores de cambios (change listeners), marcadores como las listas por hacer (to-do list) y/o mensajes de errores, y un registro de historia de cambios.
+
+\paragraph{Project} Un proyecto es un recurso especial de tipo carpeta que es asignada por el usuario a una carpeta del sistema de archivos, es la que contiene todos los recursos del proyecto y la que define el tipo del mismo.
+
+\paragraph{Workspace} El workspace es el espacio de trabajo o contenedor virtual en el que se encuentran todos los proyectos del usuario.
+
+
+\subsubsection{Workbench}
+
+El Workbench es la ventana principal que se le presenta al usuario cuando ejecuta la plataforma Eclipse, se encuentra implementada usando SWT y JFace. Esta ventana principal está conformada por un conjunto de vistas y editores, entre las vistas se encuentran:
+
+\begin{itemize}
+
+\item[Navigator] asasda
+
+\item[•]
+
+\end{itemize}
+
+
+\subsection{Más información}
+
+Para obtener más información sobre el proyecto Eclipse ver \cite[\url{www.eclipse.org}]{Eclipse}, y para información técnica consultar \cite[Eclipse Platform Technical Overview]{EclipseTech}.
 
 
 \section{Eclipse Modeling Framework}
