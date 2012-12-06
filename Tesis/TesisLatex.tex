@@ -711,7 +711,7 @@ En el presente capítulo se realiza una breve introducción sobre cada una de la
 
 \section{Eclipse}
 
-Empezamos con el proyecto base sobre el cual se desarrolló el prototipo, en la presente sección daremos una introducción a Eclipse en la que se presenta el proyecto y se detalla en breve la plataforma con sus principales componentes y/o funcionalidades.
+Empezamos con el proyecto base sobre el cual el prototipo va a funcionar/ejecutarse, en la presente sección daremos una introducción a Eclipse en la que se presenta el proyecto y se detalla en breve la plataforma con sus principales componentes y/o funcionalidades.
 
 
 \subsection{El proyecto}
@@ -795,6 +795,10 @@ Para obtener más información sobre el proyecto Eclipse ver \cite[\url{www.ecli
 
 \section{Eclipse Modeling Framework}
 
+A continuación proseguimos con una de las tecnologías del proyecto Eclipse usada para la implementación de una parte del prototipo, el framework EMF \cite{EMF}.
+
+\subsection{El framework EMF}
+
 El EMF es un framework de modelado y generación de código para herramientas de construcción y otras aplicaciones basadas en un modelo de datos estructurados. A partir de una especificación de un modelo descrito en XMI, EMF provee herramientas y un entorno de ejecución para producir un conjunto de clases Java para el modelo y un conjunto de clases adaptadoras que permiten la visualización y la edición de dicho modelo.
 
 EMF consiste de tres partes fundamentales:
@@ -832,6 +836,17 @@ Genera la implementación de las clases, llamadas ItemProviders, que se adaptan 
 \subparagraph{Editor}
 
 Produce un editor estructurado apropiadamente que se ajusta al estilo recomendado para los editores de modelo EMF de Eclipse y sirve como punto de partida para comenzar con la personalización.
+
+\subsection{El (Meta) modelo Ecore}
+
+Ecore es el modelo usado para representar modelos en EMF. Ecore es en sí mismo un modelo EMF, por lo cual es su propio meta-modelo. Un modelo simplificado de Ecore se puede observar en la imagen \ref{fig:EcoreModel}.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=1]{./img/Ecore}
+\caption{Modelo Ecore simplificado}
+\label{fig:EcoreModel}
+\end{figure}
 
 \section{Grafical Modeling Framework}
 
