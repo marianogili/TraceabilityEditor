@@ -101,10 +101,14 @@ import org.eclipse.swt.dnd.Transfer;
 import org.eclipse.swt.events.ControlAdapter;
 import org.eclipse.swt.events.ControlEvent;
 import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
@@ -1043,8 +1047,18 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 						setCurrentViewerPane(this);
 					}
 				};
+				GridLayout layoutf = new GridLayout(2, false);
+				getContainer().setLayout(layoutf);
+			    Label searchLabel = new Label(getContainer(), SWT.NONE);
+			    searchLabel.setText("Search: ");
+			    final Text searchText = new Text(getContainer(), SWT.BORDER | SWT.SEARCH);
+			    searchText.setLayoutData(new GridData(GridData.GRAB_HORIZONTAL
+			        | GridData.HORIZONTAL_ALIGN_FILL));
+				
 				viewerPane.createControl(getContainer());
 				tableViewer = (TableViewer) viewerPane.getViewer();
+				
+				
 
 				Table table = tableViewer.getTable();
 				TableLayout layout = new TableLayout();

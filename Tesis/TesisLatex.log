@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  3 DEC 2012 21:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.12.5)  5 DEC 2012 23:37
 entering extended mode
  %&-line parsing enabled.
 **TesisLatex.tex
 (./TesisLatex.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
+yphenation, spanish, galician, catalan, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/bk12.clo
@@ -252,12 +252,6 @@ File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
-
-Package babel Warning: No hyphenation patterns were loaded for
-(babel)                the language `Spanish'
-(babel)                I will use the patterns loaded for \language=0 instead.
-
-\l@spanish = a dialect from \language0
 \es@datefmt=\count89
 \es@quottoks=\toks16
 \es@quotdepth=\count90
@@ -265,7 +259,8 @@ Package babel Info: Making " an active character on input line 492.
 Package babel Info: Making . an active character on input line 585.
 Package babel Info: Making < an active character on input line 630.
 Package babel Info: Making > an active character on input line 630.
-)) (/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip43
 
@@ -378,6 +373,7 @@ Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
 Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
 t (HO)
 ))
+Package hyperref Info: Option `colorlinks' set `true' on input line 2864.
 Package hyperref Info: Hyper figures OFF on input line 2975.
 Package hyperref Info: Link nesting OFF on input line 2980.
 Package hyperref Info: Hyper index ON on input line 2983.
@@ -425,7 +421,7 @@ Package hyperref Info: Hyper figures OFF on input line 4377.
 Package hyperref Info: Link nesting OFF on input line 4382.
 Package hyperref Info: Hyper index ON on input line 4385.
 Package hyperref Info: backreferencing OFF on input line 4392.
-Package hyperref Info: Link coloring OFF on input line 4397.
+Package hyperref Info: Link coloring ON on input line 4395.
 Package hyperref Info: Link coloring with OCG OFF on input line 4402.
 Package hyperref Info: PDF/A mode OFF on input line 4407.
 
@@ -461,56 +457,176 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 ))
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
-) (./TesisLatex.aux)
+)
+(/usr/share/texmf-texlive/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2009/09/23 v2.03 (NLCT)
+
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-texlive/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/share/texmf-texlive/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks24
+\XKV@tempa@toks=\toks25
+\XKV@depth=\count111
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+))
+(/usr/share/texmf-texlive/tex/latex/glossaries/base/mfirstuc.sty
+Package: mfirstuc 2008/12/22 v1.03 (NLCT)
+)
+(/usr/share/texmf-texlive/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+(/usr/share/texmf/tex/latex/beamer/base/translator/translator.sty
+Package: translator 2010/06/12 ver 1.10
+
+(/usr/share/texmf/tex/latex/beamer/base/translator/translator-language-mappings
+.tex))
+\gls@level=\count112
+\@gls@tmpb=\toks26
+\gls@tmplen=\skip46
+\istfile=\write3
+
+(/usr/share/texmf-texlive/tex/latex/glossaries/styles/glossary-hypernav.sty
+Package: glossary-hypernav 2007/07/04 v1.01 (NLCT)
+)
+(/usr/share/texmf-texlive/tex/latex/glossaries/styles/glossary-list.sty
+Package: glossary-list 2009/05/30 v2.01 (NLCT)
+\glslistdottedwidth=\skip47
+)
+(/usr/share/texmf-texlive/tex/latex/glossaries/styles/glossary-long.sty
+Package: glossary-long 2009/05/30 v2.01 (NLCT)
+
+(/usr/share/texmf-texlive/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip48
+\LTright=\skip49
+\LTpre=\skip50
+\LTpost=\skip51
+\LTchunksize=\count113
+\LTcapwidth=\dimen118
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count114
+\LT@rows=\count115
+\c@LT@tables=\count116
+\c@LT@chunks=\count117
+\LT@p@ftn=\toks27
+)
+\glsdescwidth=\skip52
+\glspagelistwidth=\skip53
+)
+(/usr/share/texmf-texlive/tex/latex/glossaries/styles/glossary-super.sty
+Package: glossary-super 2009/05/30 v2.01 (NLCT)
+
+(/usr/share/texmf-texlive/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2004/02/20 v4.1e the supertabular environment
+\c@tracingst=\count118
+\ST@wd=\dimen119
+\ST@rightskip=\skip54
+\ST@leftskip=\skip55
+\ST@parfillskip=\skip56
+\ST@pageleft=\dimen120
+\ST@headht=\dimen121
+\ST@tailht=\dimen122
+\ST@pagesofar=\dimen123
+\ST@pboxht=\dimen124
+\ST@lineht=\dimen125
+\ST@stretchht=\dimen126
+\ST@prevht=\dimen127
+\ST@toadd=\dimen128
+\ST@dimen=\dimen129
+\ST@pbox=\box32
+))
+(/usr/share/texmf-texlive/tex/latex/glossaries/styles/glossary-tree.sty
+Package: glossary-tree 2009/01/14 v1.01 (NLCT)
+\glstreeindent=\skip57
+))
+\glo@main@file=\write4
+\openout4 = `TesisLatex.glo'.
+
+Package glossaries Info: Writing glossary file TesisLatex.glo on input line 16.
+
+\glo@acronym@file=\write5
+\openout5 = `TesisLatex.acn'.
+
+Package glossaries Info: Writing glossary file TesisLatex.acn on input line 16.
+
+
+(./TesisLatex.aux)
 \openout1 = `TesisLatex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-Package hyperref Info: Link coloring OFF on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+ (/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+Package hyperref Info: Link coloring ON on input line 22.
+
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count111
+\c@section@level=\count119
 )
-LaTeX Info: Redefining \ref on input line 16.
-LaTeX Info: Redefining \pageref on input line 16.
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
  (./TesisLatex.out)
 (./TesisLatex.out)
-\@outlinefile=\write3
-\openout3 = `TesisLatex.out'.
+\@outlinefile=\write6
+\openout6 = `TesisLatex.out'.
 
-\AtBeginShipoutBox=\box28
+\AtBeginShipoutBox=\box33
  (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count112
-\scratchdimen=\dimen118
-\scratchbox=\box29
-\nofMPsegments=\count113
-\nofMParguments=\count114
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count115
-\MPscratchDim=\dimen119
-\MPnumerator=\count116
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count120
+\scratchdimen=\dimen130
+\scratchbox=\box34
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen131
+\MPnumerator=\count124
+\everyMPtoPDFconversion=\toks29
+)
+(/usr/share/texmf-texlive/tex/latex/glossaries/dict/glossaries-dictionary-Engli
+sh.dict
+Dictionary: glossaries-dictionary, Language: English 
+)
+(/usr/share/texmf-texlive/tex/latex/glossaries/dict/glossaries-dictionary-Spani
+sh.dict
+Dictionary: glossaries-dictionary, Language: Spanish 
 ) [1
 
+\openout3 = `TesisLatex.xdy'.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./TesisLatex.toc
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(./TesisLatex.toc
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 2.
@@ -530,21 +646,21 @@ Package spanish Warning: Replacing `OT1/cmr/bx/sc' by
 [1
 
 
-])
-\tf@toc=\write4
-\openout4 = `TesisLatex.toc'.
+] [2])
+\tf@toc=\write7
+\openout7 = `TesisLatex.toc'.
 
- [2] (./TesisLatex.lof)
-\tf@lof=\write5
-\openout5 = `TesisLatex.lof'.
+ [3] (./TesisLatex.lof)
+\tf@lof=\write8
+\openout8 = `TesisLatex.lof'.
 
- [3
-
-] [4
+ [4
 
 ] [5
 
 ] [6
+
+] [7
 
 ]
 Cap\'{\i }tulo 1.
@@ -552,192 +668,155 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.81 \item T
+l.89 \item T
             raceability en la ingeniería de requerimientos: donde se guarda...
 [1
 
 
-] [2] [3] [4]
+] [2] [3]
 Cap\'{\i }tulo 2.
+[4
 
-Overfull \hbox (6.42914pt too wide) in paragraph at lines 152--153
-\OT1/cmr/m/n/12 dos para la apli-caci^^Son de trace-abil-i-ty, pocas an-o-ta-ci
-ones y doc-u-mentaci^^Son
- []
-
-[5
-
-] [6] [7] [8] [9] [10] [11] [12] [13]
+] [5] [6] [7] [8] [9] [10] [11] [12]
 Cap\'{\i }tulo 3.
-[14
+[13
 
-] [15] [16]
-LaTeX Font Info:    Try loading font information for U+lasy on input line 545.
+] [14] [15]
+LaTeX Font Info:    Try loading font information for U+lasy on input line 553.
  (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [17] [18]
-[19]
-<./img/ExplicitImplicitTraceLinkClassification.png, id=507, 382.42876pt x 349.3
+) [16] [17]
+[18]
+<./img/ExplicitImplicitTraceLinkClassification.png, id=519, 382.42876pt x 349.3
 05pt>
 File: ./img/ExplicitImplicitTraceLinkClassification.png Graphic file (type png)
 
  <use ./img/ExplicitImplicitTraceLinkClassification.png>
-Overfull \hbox (0.15553pt too wide) in paragraph at lines 594--595
-\OT1/cmr/m/n/12 com-posi-ci^^Son (Com-po-si-tion Link), ac-tu-al-izaci^^Son (Up
--date Link), creaci^^Son (Cre-
- []
-
-<./img/ImplicitTraceLinks.png, id=509, 738.76pt x 187.70125pt>
+<./img/ImplicitTraceLinks.png, id=521, 738.76pt x 187.70125pt>
 File: ./img/ImplicitTraceLinks.png Graphic file (type png)
 
 <use ./img/ImplicitTraceLinks.png>
-Overfull \hbox (16.31924pt too wide) in paragraph at lines 599--600
+Overfull \hbox (16.31924pt too wide) in paragraph at lines 607--608
  [][] 
  []
 
-[20 <./img/ExplicitImplicitTraceLinkClassification.png (PNG copy)>] [21 <./img/
+[19 <./img/ExplicitImplicitTraceLinkClassification.png (PNG copy)>] [20 <./img/
 ImplicitTraceLinks.png (PNG copy)>]
-<./img/ExplicitTraceLinks.png, id=519, 780.9175pt x 421.575pt>
+<./img/ExplicitTraceLinks.png, id=531, 780.9175pt x 421.575pt>
 File: ./img/ExplicitTraceLinks.png Graphic file (type png)
 
 <use ./img/ExplicitTraceLinks.png>
-Overfull \hbox (8.26265pt too wide) in paragraph at lines 619--620
+Overfull \hbox (8.26265pt too wide) in paragraph at lines 627--628
  [][] 
  []
 
-[22 <./img/ExplicitTraceLinks.png (PNG copy)>]
+[21 <./img/ExplicitTraceLinks.png (PNG copy)>]
 Cap\'{\i }tulo 4.
-[23
+[22
 
-] <./img/Esquema.png, id=530, 557.83406pt x 338.01282pt>
+] <./img/Esquema.png, id=542, 557.83406pt x 338.01282pt>
 File: ./img/Esquema.png Graphic file (type png)
 
 <use ./img/Esquema.png>
-Overfull \hbox (28.37451pt too wide) in paragraph at lines 662--663
+Overfull \hbox (28.37451pt too wide) in paragraph at lines 670--671
  [][] 
  []
 
-[24 <./img/Esquema.png>]
-Overfull \hbox (0.714pt too wide) in paragraph at lines 679--680
-[]\OT1/cmr/m/n/12 Esta parte re-fle-ja la con-fig-u-raci^^Son nece-saria para l
-o-grar un es-que-ma adapt-
- []
-
-[25] [26]
+[23 <./img/Esquema.png>] [24] [25]
 Cap\'{\i }tulo 5.
-[27
+[26
 
-] [28]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 771.
+] [27] <./img/EclipseWorkbench.png, id=585, 1284.8pt x 778.91pt>
+File: ./img/EclipseWorkbench.png Graphic file (type png)
 
- (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 771.
- [29]
-Overfull \hbox (11.91241pt too wide) in paragraph at lines 797--798
-[]\OT1/cmr/m/n/12 Clases provee-do-ras de con-tenido y eti-que-tas, ac-ce-so a 
-propiedades or^^S^^Pgenes
- []
-
-
-Overfull \hbox (16.41435pt too wide) in paragraph at lines 815--816
- \OT1/cmr/bx/sc/12 Adapters[] \OT1/cmr/m/n/12 Gen-era la im-ple-mentaci^^Son de
- las clases, lla-madas Item-Providers,
- []
-
-[30] [31]
+<use ./img/EclipseWorkbench.png> [28] [29 <./img/EclipseWorkbench.png (PNG copy
+)>] [30]
 Cap\'{\i }tulo 6.
-<./img/ETraceTool_Arquitectura.png, id=605, 754.82pt x 439.6425pt>
+<./img/ETraceTool_Arquitectura.png, id=621, 754.82pt x 439.6425pt>
 File: ./img/ETraceTool_Arquitectura.png Graphic file (type png)
 
-<use ./img/ETraceTool_Arquitectura.png> [32
+<use ./img/ETraceTool_Arquitectura.png> [31
 
 ]
-<./img/NestedTraceMetamodel.png, id=614, 644.4075pt x 426.59375pt>
+<./img/NestedTraceMetamodel.png, id=630, 644.4075pt x 426.59375pt>
 File: ./img/NestedTraceMetamodel.png Graphic file (type png)
 
-<use ./img/NestedTraceMetamodel.png> [33 <./img/ETraceTool_Arquitectura.png (PN
-G copy)>] <./img/Traceability_Metamodel.png, id=622, 676.5275pt x 359.3425pt>
+<use ./img/NestedTraceMetamodel.png> [32 <./img/ETraceTool_Arquitectura.png (PN
+G copy)>] <./img/Traceability_Metamodel.png, id=638, 676.5275pt x 359.3425pt>
 File: ./img/Traceability_Metamodel.png Graphic file (type png)
 
 <use ./img/Traceability_Metamodel.png>
-Overfull \hbox (15.91962pt too wide) in paragraph at lines 879--880
+Overfull \hbox (15.91962pt too wide) in paragraph at lines 894--895
  [][] 
  []
 
-[34 <./img/NestedTraceMetamodel.png>] [35 <./img/Traceability_Metamodel.png (PN
+[33 <./img/NestedTraceMetamodel.png>] [34 <./img/Traceability_Metamodel.png (PN
 G copy)>]
-<./img/ArquitecturaTraceabilityFramework.png, id=637, 742.775pt x 284.06125pt>
+<./img/ArquitecturaTraceabilityFramework.png, id=653, 742.775pt x 284.06125pt>
 File: ./img/ArquitecturaTraceabilityFramework.png Graphic file (type png)
 
 <use ./img/ArquitecturaTraceabilityFramework.png>
-Overfull \hbox (18.52751pt too wide) in paragraph at lines 903--904
+Overfull \hbox (18.52751pt too wide) in paragraph at lines 918--919
  [][] 
  []
 
-[36 <./img/ArquitecturaTraceabilityFramework.png (PNG copy)>]
-Overfull \hbox (17.53778pt too wide) in paragraph at lines 922--922
-[]\OT1/cmr/bx/n/17.28 Framework gen^^Seri-co de ex-trac-ci^^Son de datos
- []
-
-<./img/GenericTraceFrame_Arquitectura.png, id=651, 404.51125pt x 235.88126pt>
+[35 <./img/ArquitecturaTraceabilityFramework.png (PNG copy)>]
+<./img/GenericTraceFrame_Arquitectura.png, id=667, 404.51125pt x 235.88126pt>
 File: ./img/GenericTraceFrame_Arquitectura.png Graphic file (type png)
 
-<use ./img/GenericTraceFrame_Arquitectura.png> [37 <./img/GenericTraceFrame_Arq
+<use ./img/GenericTraceFrame_Arquitectura.png> [36 <./img/GenericTraceFrame_Arq
 uitectura.png (PNG copy)>]
-<./img/Trace-DSL.png, id=658, 418.56375pt x 220.825pt>
+<./img/Trace-DSL.png, id=674, 418.56375pt x 220.825pt>
 File: ./img/Trace-DSL.png Graphic file (type png)
 
 <use ./img/Trace-DSL.png>
-<./img/Faceta.png, id=660, 563.10374pt x 171.64125pt>
+<./img/Faceta.png, id=676, 563.10374pt x 171.64125pt>
 File: ./img/Faceta.png Graphic file (type png)
  <use ./img/Faceta.png>
-Overfull \hbox (15.43439pt too wide) in paragraph at lines 948--949
+Overfull \hbox (15.43439pt too wide) in paragraph at lines 963--964
  [][] 
  []
 
-
-Overfull \hbox (7.95976pt too wide) in paragraph at lines 960--961
-[]\OT1/cmr/m/n/12 La con-fig-u-raci^^Son de la gran-u-lar-i-dad con-siste en la
- es-peci-fi-caci^^Son de qu^^Se tipos
- []
-
-[38 <./img/Trace-DSL.png (PNG copy)>]
-<./img/LocalTraceMetamodel.png, id=670, 706.64pt x 283.0575pt>
+[37 <./img/Trace-DSL.png (PNG copy)>]
+<./img/LocalTraceMetamodel.png, id=686, 706.64pt x 283.0575pt>
 File: ./img/LocalTraceMetamodel.png Graphic file (type png)
 
-<use ./img/LocalTraceMetamodel.png> [39 <./img/Faceta.png (PNG copy)>]
-<./img/GlobalTraceMetamodel.png, id=678, 656.4525pt x 160.6pt>
+<use ./img/LocalTraceMetamodel.png> [38 <./img/Faceta.png (PNG copy)>]
+<./img/GlobalTraceMetamodel.png, id=694, 656.4525pt x 160.6pt>
 File: ./img/GlobalTraceMetamodel.png Graphic file (type png)
 
 <use ./img/GlobalTraceMetamodel.png>
-Overfull \hbox (3.87454pt too wide) in paragraph at lines 989--990
+Overfull \hbox (3.87454pt too wide) in paragraph at lines 1004--1005
  [][] 
  []
 
-[40 <./img/LocalTraceMetamodel.png>]
-<./img/EjemploLocalGlobalMetamodel.png, id=685, 944.52875pt x 556.0775pt>
+[39 <./img/LocalTraceMetamodel.png>]
+<./img/EjemploLocalGlobalMetamodel.png, id=701, 944.52875pt x 556.0775pt>
 File: ./img/EjemploLocalGlobalMetamodel.png Graphic file (type png)
 
 <use ./img/EjemploLocalGlobalMetamodel.png>
-Overfull \hbox (35.03401pt too wide) in paragraph at lines 1006--1007
+Overfull \hbox (35.03401pt too wide) in paragraph at lines 1021--1022
  [][] 
  []
 
-[41 <./img/GlobalTraceMetamodel.png>] [42 <./img/EjemploLocalGlobalMetamodel.pn
-g>] [43
+[40 <./img/GlobalTraceMetamodel.png>] [41 <./img/EjemploLocalGlobalMetamodel.pn
+g>] (/usr/share/texmf-texlive/tex/generic/babel/babel.sty) (./TesisLatex.gls
+[42
 
 
-] [44
+]) (/usr/share/texmf-texlive/tex/generic/babel/babel.sty) (./TesisLatex.acr
+[43
+
+
+]) [44
+
 
 ] [45
 
 ]
-Underfull \hbox (badness 1253) in paragraph at lines 1066--1068
-[]\OT1/cmr/m/n/12 Eclipse Plat-form Tech-ni-cal Overview. Ob-ject Tech-nol-o-gy
- In-ter-na-
+Underfull \hbox (badness 1253) in paragraph at lines 1083--1085
+[]\OT1/cmr/m/n/12 Eclipse Plat-form Te-ch-ni-cal Over-view. Ob-ject Te-ch-no-lo
+gy In-ter-na-
  []
 
 [46] (./TesisLatex.aux)
@@ -746,26 +825,45 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5988 strings out of 495061
- 83168 string characters out of 1182622
- 160962 words of memory out of 3000000
- 8845 multiletter control sequences out of 15000+50000
+ 7570 strings out of 494999
+ 108564 string characters out of 1180816
+ 200383 words of memory out of 3000000
+ 10349 multiletter control sequences out of 15000+50000
  12123 words of font info for 44 fonts, out of 3000000 for 9000
- 28 hyphenation exceptions out of 8191
- 38i,6n,36p,1043b,520s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-tex
-live/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/publi
-c/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
-m/cmsl12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-tex
-live/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on TesisLatex.pdf (53 pages, 685194 bytes).
+ 54 hyphenation exceptions out of 8191
+ 38i,7n,41p,1059b,572s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{page.\\protect\040\\protect\040\\unhbox\040\\void
+b@x\040\\hbox\040{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect
+\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT1/cmr/m/n/12\040}\\OT1/cmr/bx/n/12\040\
+\size@update\040\\enc@update\040\\protect\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\
+OT1/cmr/m/n/12\040}\\OT1/cmr/bx/n/12\040\\size@update\040\\enc@update\040\\gdef
+\04012{12}\\gdef\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\
+04012{12}\\afterassignment\040\\edef\04014.5pt{-5.0pt\040plus\040-1.5pt\040minu
+s\040-1.0pt}\\edef\040{}\\let\040\\def\040\\size@update\040{\\baselineskip\0401
+4.5pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\040\\b
+aselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\baseli
+neskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\040\\re
+lax\040}\\protect\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT1/cmr/m/n/12\040}\\OT1
+/cmr/bx/n/12\040\\size@update\040\\enc@update\040\\protect\040\\begingroup\040\
+\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\040\040\040\
+040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write\040\\@unus
+ed\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m/n'\040by\0
+40\\MessageBreak\040faked\040small\040caps\040on\040input\040line\0405.\012}\\e
+ndgroup\040\\uppercase\040{iv}}} has been referenced but does not exist, replac
+ed by a fixed one
+
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmsl12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/
+texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
+Output written on TesisLatex.pdf (54 pages, 875851 bytes).
 PDF statistics:
- 809 PDF objects out of 1000 (max. 8388607)
- 217 named destinations out of 1000 (max. 500000)
- 551 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 832 PDF objects out of 1000 (max. 8388607)
+ 228 named destinations out of 1000 (max. 500000)
+ 564 words of extra memory for PDF output out of 10000 (max. 10000000)
 

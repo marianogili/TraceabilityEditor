@@ -1,0 +1,6 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{L}\relax\glsresetentrylist
+\glossaryentryfield{led}{\glsnamefont{LED}}{light-emitting diode}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{\protect \es@scroman  {iv}}}}%
+\end{theglossary}\glossarypostamble

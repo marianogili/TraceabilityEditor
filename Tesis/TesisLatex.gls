@@ -1,0 +1,6 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{H}\relax\glsresetentrylist
+\glossaryentryfield{hola}{\glsnamefont{hola}}{Esto es una prueba}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{\protect \es@scroman  {iv}}}}%
+\end{theglossary}\glossarypostamble
