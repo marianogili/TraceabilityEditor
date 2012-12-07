@@ -839,7 +839,7 @@ Produce un editor estructurado apropiadamente que se ajusta al estilo recomendad
 
 \subsection{El (Meta) modelo Ecore}
 
-Ecore es el modelo usado para representar modelos en EMF. Ecore es en sí mismo un modelo EMF, por lo cual es su propio meta-modelo. Un modelo simplificado de Ecore se puede observar en la imagen \ref{fig:EcoreModel}.
+Ecore es el modelo usado para representar modelos en EMF. Ecore es en sí mismo un modelo EMF, por lo cual es su propio meta-modelo. 
 
 \begin{figure}[hbtp]
 \centering
@@ -848,7 +848,27 @@ Ecore es el modelo usado para representar modelos en EMF. Ecore es en sí mismo 
 \label{fig:EcoreModel}
 \end{figure}
 
+Un modelo simplificado de Ecore se puede observar en la imagen \ref{fig:EcoreModel}, en particular lo conforman las siguientes cuatro clases Ecore principales:
+
+\paragraph{EClass} Usada para representar una clase en el modelo. Tiene un nombre, atributos y referencias.
+
+\paragraph{EAttribute} Para representar en el modelo un atributo. Tiene un nombre y un tipo.
+
+\paragraph{EReference} Para representar una relación entre clases. Tiene un nombre, una marca que indica si es una composición, y el tipo de clase referenciada u objetivo que es otra clase.
+
+\paragraph{EDataType} Representa el tipo de un atributo. El mismo puede ser un tipo primitivo (int, float) o un tipo objeto.
+
+
+\subsection{Beneficios y más información}
+
+Además de incrementar la productividad gracias a la generación automática de código, el uso del framework EMF provee otros beneficios: la notificación de cambios, una funcionalidad de persistencia (como la serialización XMI entre otras), y una API genérica reflexiva muy eficiente que sirve para la manipulación de objetos EMF. Sin embargo, uno de los beneficios más importantes de este framework es que EMF provee las bases para la interoperabilidad con otras herramientas y aplicaciones que se basan en él. 
+
+Más información sobre el framework EMF se puede obtener en \cite{EMF} y \cite{EMFADG}.
+
+
 \section{Grafical Modeling Framework}
+
+En la presente sección analizamos el framework GMF, el mismo fue usado para el desarrollo de la parte gráfica del editor de trazas del prototipo realizado.
 
 \section{ATL}
 
