@@ -1,6 +1,93 @@
 \glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
 \begin{theglossary}\glossaryheader
-\glsgroupheading{L}\relax\glsresetentrylist
-\glossaryentryfield{led}{\glsnamefont{LED}}{light-emitting diode}{\relax }{\glossaryentrynumbers{\relax 
-\setentrycounter{page}\glsnumberformat{\protect \es@scroman  {iv}}}}%
+\glsgroupheading{A}\relax\glsresetentrylist
+\glossaryentryfield{alm}{\glsnamefont{ALM}}{Application Lifecycle Management}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{28}}}\relax\glsresetentrylist
+\glossaryentryfield{api}{\glsnamefont{API}}{Interfaz de programación de aplicaciones o Application Programming Interface}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{28}\delimN 
+\setentrycounter{page}\glsnumberformat{29}\delimN 
+\setentrycounter{page}\glsnumberformat{33}\delimN 
+\setentrycounter{page}\glsnumberformat{34}\delimN 
+\setentrycounter{page}\glsnumberformat{39}}}\glsgroupskip
+\glsgroupheading{C}\relax\glsresetentrylist
+\glossaryentryfield{case}{\glsnamefont{CASE}}{Computer Aided Software Engineering}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{38}\delimN 
+\setentrycounter{page}\glsnumberformat{39}}}\glsgroupskip
+\glsgroupheading{E}\relax\glsresetentrylist
+\glossaryentryfield{emf}{\glsnamefont{EMF}}{Eclipse Modeling Framework}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{17}\delimN 
+\setentrycounter{page}\glsnumberformat{18}\delimN 
+\setentrycounter{page}\glsnumberformat{30}\delimN 
+\setentrycounter{page}\glsnumberformat{31}\delimN 
+\setentrycounter{page}\glsnumberformat{33}\delimN 
+\setentrycounter{page}\glsnumberformat{34}\delimN 
+\setentrycounter{page}\glsnumberformat{42}}}\relax\glsresetentrylist
+\glossaryentryfield{epl}{\glsnamefont{EPL}}{Eclipse Public License}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{28}}}\relax\glsresetentrylist
+\glossaryentryfield{evl}{\glsnamefont{EVL}}{Epsilon Validation Language}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{18}}}\glsgroupskip
+\glsgroupheading{G}\relax\glsresetentrylist
+\glossaryentryfield{gmf}{\glsnamefont{GMF}}{Graphical Modeling Framework}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{33}}}\relax\glsresetentrylist
+\glossaryentryfield{gui}{\glsnamefont{GUI}}{Interfaz de Usuario Gráfica o Graphical User Interface}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{31}}}\glsgroupskip
+\glsgroupheading{I}\relax\glsresetentrylist
+\glossaryentryfield{ide}{\glsnamefont{IDE}}{Entornos de Desarrollo Integrados o Integrated Development Environment}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{7}\delimN 
+\setentrycounter{page}\glsnumberformat{13}\delimN 
+\setentrycounter{page}\glsnumberformat{28}}}\relax\glsresetentrylist
+\glossaryentryfield{ieee}{\glsnamefont{IEEE}}{Institute of Electrical and Electronics Engineers}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{1}}}\glsgroupskip
+\glsgroupheading{J}\relax\glsresetentrylist
+\glossaryentryfield{jdt}{\glsnamefont{JDT}}{Java Development Tooling}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{31}}}\glsgroupskip
+\glsgroupheading{M}\relax\glsresetentrylist
+\glossaryentryfield{mda}{\glsnamefont{MDA}}{Arquitectura Dirigida por Modelos o Model-Driven Architecture}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{\protect \es@scroman  {vi}}}}\relax\glsresetentrylist
+\glossaryentryfield{mdd}{\glsnamefont{MDD}}{Desarrollo Dirigido por Modelos o Model-Driven Development}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{\protect \es@scroman  {vi}}, 
+\setentrycounter{page}\glsnumberformat{1}}}\relax\glsresetentrylist
+\glossaryentryfield{mde}{\glsnamefont{MDE}}{Ingeniería de Software Dirigida por Modelos o Model-Driven Engineering}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{\protect \es@scroman  {vi}}\delimN 
+\setentrycounter{page}\glsnumberformat{\protect \es@scroman  {vii}}, 
+\setentrycounter{page}\glsnumberformat{16}\delimN 
+\setentrycounter{page}\glsnumberformat{19}\delimN 
+\setentrycounter{page}\glsnumberformat{20}}}\relax\glsresetentrylist
+\glossaryentryfield{mof}{\glsnamefont{MOF}}{MetaObject Facility}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{17}}}\glsgroupskip
+\glsgroupheading{O}\relax\glsresetentrylist
+\glossaryentryfield{ocl}{\glsnamefont{OCL}}{Object Constraint Language}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{18}}}\relax\glsresetentrylist
+\glossaryentryfield{omg}{\glsnamefont{OMG}}{Object Management Group}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{\protect \es@scroman  {vi}}}}\glsgroupskip
+\glsgroupheading{Q}\relax\glsresetentrylist
+\glossaryentryfield{qvt}{\glsnamefont{QVT}}{Query/View/Transformation}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{39}}}\glsgroupskip
+\glsgroupheading{R}\relax\glsresetentrylist
+\glossaryentryfield{rcp}{\glsnamefont{RCP}}{Rich Client Platform}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{27}}}\relax\glsresetentrylist
+\glossaryentryfield{ria}{\glsnamefont{RIA}}{Rich Internet Applications}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{28}}}\glsgroupskip
+\glsgroupheading{S}\relax\glsresetentrylist
+\glossaryentryfield{soa}{\glsnamefont{SOA}}{Service Oriented Architecture}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{28}}}\relax\glsresetentrylist
+\glossaryentryfield{spl}{\glsnamefont{SPL}}{Línea de Producto de Software o Software Product Line}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{35}}}\relax\glsresetentrylist
+\glossaryentryfield{swt}{\glsnamefont{SWT}}{Standard Widget Toolkit}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{29}}}\glsgroupskip
+\glsgroupheading{T}\relax\glsresetentrylist
+\glossaryentryfield{teap}{\glsnamefont{TEAP}}{Traceability Elicitation and Analysis Process}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{19}}}\glsgroupskip
+\glsgroupheading{U}\relax\glsresetentrylist
+\glossaryentryfield{uml}{\glsnamefont{UML}}{Unified Modeling Language}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{17}\delimN 
+\setentrycounter{page}\glsnumberformat{20}\delimN 
+\setentrycounter{page}\glsnumberformat{36}\delimR 
+\setentrycounter{page}\glsnumberformat{38}}}\glsgroupskip
+\glsgroupheading{X}\relax\glsresetentrylist
+\glossaryentryfield{xmi}{\glsnamefont{XMI}}{XML Metadata Interchange}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{30}\delimN 
+\setentrycounter{page}\glsnumberformat{31}\delimN 
+\setentrycounter{page}\glsnumberformat{33}\delimN 
+\setentrycounter{page}\glsnumberformat{34}}}%
 \end{theglossary}\glossarypostamble

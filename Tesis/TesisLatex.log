@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.12.5)  5 DEC 2012 23:37
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.12.5)  11 DEC 2012 01:16
 entering extended mode
  %&-line parsing enabled.
 **TesisLatex.tex
@@ -549,31 +549,31 @@ Package: glossary-tree 2009/01/14 v1.01 (NLCT)
 \glo@main@file=\write4
 \openout4 = `TesisLatex.glo'.
 
-Package glossaries Info: Writing glossary file TesisLatex.glo on input line 16.
+Package glossaries Info: Writing glossary file TesisLatex.glo on input line 19.
 
 \glo@acronym@file=\write5
 \openout5 = `TesisLatex.acn'.
 
-Package glossaries Info: Writing glossary file TesisLatex.acn on input line 16.
+Package glossaries Info: Writing glossary file TesisLatex.acn on input line 19.
 
 
 (./TesisLatex.aux)
 \openout1 = `TesisLatex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
  (/usr/share/texmf-texlive/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
@@ -582,7 +582,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-Package hyperref Info: Link coloring ON on input line 22.
+Package hyperref Info: Link coloring ON on input line 56.
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -592,8 +592,8 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count119
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
  (./TesisLatex.out)
 (./TesisLatex.out)
 \@outlinefile=\write6
@@ -668,167 +668,169 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.89 \item T
-            raceability en la ingeniería de requerimientos: donde se guarda...
-[1
+l.120 
+       [1
 
 
-] [2] [3]
+] [2] [3] [4]
 Cap\'{\i }tulo 2.
-[4
+[5
 
-] [5] [6] [7] [8] [9] [10] [11] [12]
+] [6] [7] [8] [9] [10] [11] [12] [13]
 Cap\'{\i }tulo 3.
-[13
+[14
 
-] [14] [15]
-LaTeX Font Info:    Try loading font information for U+lasy on input line 553.
+] [15] [16]
+LaTeX Font Info:    Try loading font information for U+lasy on input line 587.
  (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [16] [17]
-[18]
-<./img/ExplicitImplicitTraceLinkClassification.png, id=519, 382.42876pt x 349.3
+) [17] [18]
+[19]
+<./img/ExplicitImplicitTraceLinkClassification.png, id=577, 382.42876pt x 349.3
 05pt>
 File: ./img/ExplicitImplicitTraceLinkClassification.png Graphic file (type png)
 
  <use ./img/ExplicitImplicitTraceLinkClassification.png>
-<./img/ImplicitTraceLinks.png, id=521, 738.76pt x 187.70125pt>
+<./img/ImplicitTraceLinks.png, id=580, 738.76pt x 187.70125pt>
 File: ./img/ImplicitTraceLinks.png Graphic file (type png)
 
 <use ./img/ImplicitTraceLinks.png>
-Overfull \hbox (16.31924pt too wide) in paragraph at lines 607--608
+Overfull \hbox (16.31924pt too wide) in paragraph at lines 641--642
  [][] 
  []
 
-[19 <./img/ExplicitImplicitTraceLinkClassification.png (PNG copy)>] [20 <./img/
+[20 <./img/ExplicitImplicitTraceLinkClassification.png (PNG copy)>] [21 <./img/
 ImplicitTraceLinks.png (PNG copy)>]
-<./img/ExplicitTraceLinks.png, id=531, 780.9175pt x 421.575pt>
+<./img/ExplicitTraceLinks.png, id=591, 780.9175pt x 421.575pt>
 File: ./img/ExplicitTraceLinks.png Graphic file (type png)
 
 <use ./img/ExplicitTraceLinks.png>
-Overfull \hbox (8.26265pt too wide) in paragraph at lines 627--628
+Overfull \hbox (8.26265pt too wide) in paragraph at lines 661--662
  [][] 
  []
 
-[21 <./img/ExplicitTraceLinks.png (PNG copy)>]
+[22 <./img/ExplicitTraceLinks.png (PNG copy)>]
 Cap\'{\i }tulo 4.
-[22
+[23
 
-] <./img/Esquema.png, id=542, 557.83406pt x 338.01282pt>
+] <./img/Esquema.png, id=603, 557.83406pt x 338.01282pt>
 File: ./img/Esquema.png Graphic file (type png)
 
 <use ./img/Esquema.png>
-Overfull \hbox (28.37451pt too wide) in paragraph at lines 670--671
+Overfull \hbox (28.37451pt too wide) in paragraph at lines 704--705
  [][] 
  []
 
-[23 <./img/Esquema.png>] [24] [25]
+[24 <./img/Esquema.png>] [25] [26]
 Cap\'{\i }tulo 5.
-[26
+[27
 
-] [27] <./img/EclipseWorkbench.png, id=585, 1284.8pt x 778.91pt>
+] [28] <./img/EclipseWorkbench.png, id=660, 1284.8pt x 778.91pt>
 File: ./img/EclipseWorkbench.png Graphic file (type png)
 
-<use ./img/EclipseWorkbench.png> [28] [29 <./img/EclipseWorkbench.png (PNG copy
-)>] [30]
+<use ./img/EclipseWorkbench.png> [29] [30 <./img/EclipseWorkbench.png (PNG copy
+)>] <./img/Ecore.png, id=709, 337.7418pt x 292.4526pt>
+File: ./img/Ecore.png Graphic file (type png)
+ <use ./img/Ecore.png>
+[31] [32 <./img/Ecore.png>] [33]
 Cap\'{\i }tulo 6.
-<./img/ETraceTool_Arquitectura.png, id=621, 754.82pt x 439.6425pt>
+<./img/ETraceTool_Arquitectura.png, id=752, 754.82pt x 439.6425pt>
 File: ./img/ETraceTool_Arquitectura.png Graphic file (type png)
 
-<use ./img/ETraceTool_Arquitectura.png> [31
+<use ./img/ETraceTool_Arquitectura.png> [34
 
 ]
-<./img/NestedTraceMetamodel.png, id=630, 644.4075pt x 426.59375pt>
+<./img/NestedTraceMetamodel.png, id=761, 644.4075pt x 426.59375pt>
 File: ./img/NestedTraceMetamodel.png Graphic file (type png)
 
-<use ./img/NestedTraceMetamodel.png> [32 <./img/ETraceTool_Arquitectura.png (PN
-G copy)>] <./img/Traceability_Metamodel.png, id=638, 676.5275pt x 359.3425pt>
+<use ./img/NestedTraceMetamodel.png> [35 <./img/ETraceTool_Arquitectura.png (PN
+G copy)>] <./img/Traceability_Metamodel.png, id=774, 676.5275pt x 359.3425pt>
 File: ./img/Traceability_Metamodel.png Graphic file (type png)
 
 <use ./img/Traceability_Metamodel.png>
-Overfull \hbox (15.91962pt too wide) in paragraph at lines 894--895
+Overfull \hbox (15.91962pt too wide) in paragraph at lines 963--964
  [][] 
  []
 
-[33 <./img/NestedTraceMetamodel.png>] [34 <./img/Traceability_Metamodel.png (PN
+[36 <./img/NestedTraceMetamodel.png>] [37 <./img/Traceability_Metamodel.png (PN
 G copy)>]
-<./img/ArquitecturaTraceabilityFramework.png, id=653, 742.775pt x 284.06125pt>
+<./img/ArquitecturaTraceabilityFramework.png, id=790, 742.775pt x 284.06125pt>
 File: ./img/ArquitecturaTraceabilityFramework.png Graphic file (type png)
 
 <use ./img/ArquitecturaTraceabilityFramework.png>
-Overfull \hbox (18.52751pt too wide) in paragraph at lines 918--919
+Overfull \hbox (18.52751pt too wide) in paragraph at lines 987--988
  [][] 
  []
 
-[35 <./img/ArquitecturaTraceabilityFramework.png (PNG copy)>]
-<./img/GenericTraceFrame_Arquitectura.png, id=667, 404.51125pt x 235.88126pt>
+[38 <./img/ArquitecturaTraceabilityFramework.png (PNG copy)>]
+<./img/GenericTraceFrame_Arquitectura.png, id=808, 404.51125pt x 235.88126pt>
 File: ./img/GenericTraceFrame_Arquitectura.png Graphic file (type png)
 
-<use ./img/GenericTraceFrame_Arquitectura.png> [36 <./img/GenericTraceFrame_Arq
-uitectura.png (PNG copy)>]
-<./img/Trace-DSL.png, id=674, 418.56375pt x 220.825pt>
+<use ./img/GenericTraceFrame_Arquitectura.png>
+<./img/Trace-DSL.png, id=810, 418.56375pt x 220.825pt>
 File: ./img/Trace-DSL.png Graphic file (type png)
 
-<use ./img/Trace-DSL.png>
-<./img/Faceta.png, id=676, 563.10374pt x 171.64125pt>
+<use ./img/Trace-DSL.png> [39] [40 <./img/GenericTraceFrame_Arquitectura.png (P
+NG copy)> <./img/Trace-DSL.png (PNG copy)>]
+<./img/Faceta.png, id=823, 563.10374pt x 171.64125pt>
 File: ./img/Faceta.png Graphic file (type png)
  <use ./img/Faceta.png>
-Overfull \hbox (15.43439pt too wide) in paragraph at lines 963--964
+Overfull \hbox (15.43439pt too wide) in paragraph at lines 1032--1033
  [][] 
  []
 
-[37 <./img/Trace-DSL.png (PNG copy)>]
-<./img/LocalTraceMetamodel.png, id=686, 706.64pt x 283.0575pt>
+<./img/LocalTraceMetamodel.png, id=827, 706.64pt x 283.0575pt>
 File: ./img/LocalTraceMetamodel.png Graphic file (type png)
 
-<use ./img/LocalTraceMetamodel.png> [38 <./img/Faceta.png (PNG copy)>]
-<./img/GlobalTraceMetamodel.png, id=694, 656.4525pt x 160.6pt>
+<use ./img/LocalTraceMetamodel.png> [41 <./img/Faceta.png (PNG copy)>] [42 <./i
+mg/LocalTraceMetamodel.png>]
+<./img/GlobalTraceMetamodel.png, id=844, 656.4525pt x 160.6pt>
 File: ./img/GlobalTraceMetamodel.png Graphic file (type png)
 
 <use ./img/GlobalTraceMetamodel.png>
-Overfull \hbox (3.87454pt too wide) in paragraph at lines 1004--1005
+Overfull \hbox (3.87454pt too wide) in paragraph at lines 1073--1074
  [][] 
  []
 
-[39 <./img/LocalTraceMetamodel.png>]
-<./img/EjemploLocalGlobalMetamodel.png, id=701, 944.52875pt x 556.0775pt>
+[43 <./img/GlobalTraceMetamodel.png>]
+<./img/EjemploLocalGlobalMetamodel.png, id=851, 944.52875pt x 556.0775pt>
 File: ./img/EjemploLocalGlobalMetamodel.png Graphic file (type png)
 
 <use ./img/EjemploLocalGlobalMetamodel.png>
-Overfull \hbox (35.03401pt too wide) in paragraph at lines 1021--1022
+Overfull \hbox (35.03401pt too wide) in paragraph at lines 1090--1091
  [][] 
  []
 
-[40 <./img/GlobalTraceMetamodel.png>] [41 <./img/EjemploLocalGlobalMetamodel.pn
-g>] (/usr/share/texmf-texlive/tex/generic/babel/babel.sty) (./TesisLatex.gls
-[42
+[44 <./img/EjemploLocalGlobalMetamodel.png>]
+(/usr/share/texmf-texlive/tex/generic/babel/babel.sty) (./TesisLatex.gls
+[45
 
 
 ]) (/usr/share/texmf-texlive/tex/generic/babel/babel.sty) (./TesisLatex.acr
-[43
+[46
 
 
-]) [44
+] [47
 
 
-] [45
+]) [48] [49
 
 ]
-Underfull \hbox (badness 1253) in paragraph at lines 1083--1085
+Underfull \hbox (badness 1253) in paragraph at lines 1151--1153
 []\OT1/cmr/m/n/12 Eclipse Plat-form Te-ch-ni-cal Over-view. Ob-ject Te-ch-no-lo
 gy In-ter-na-
  []
 
-[46] (./TesisLatex.aux)
+[50] (./TesisLatex.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 7570 strings out of 494999
- 108564 string characters out of 1180816
- 200383 words of memory out of 3000000
- 10349 multiletter control sequences out of 15000+50000
+ 8089 strings out of 494999
+ 122465 string characters out of 1180816
+ 211888 words of memory out of 3000000
+ 10825 multiletter control sequences out of 15000+50000
  12123 words of font info for 44 fonts, out of 3000000 for 9000
  54 hyphenation exceptions out of 8191
  38i,7n,41p,1059b,572s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -848,9 +850,109 @@ lax\040}\\protect\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT1/cmr/m/n/12\040}\\OT1
 \def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\040\040\040\
 040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write\040\\@unus
 ed\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m/n'\040by\0
-40\\MessageBreak\040faked\040small\040caps\040on\040input\040line\0405.\012}\\e
-ndgroup\040\\uppercase\040{iv}}} has been referenced but does not exist, replac
+40\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04062.\012}\\
+endgroup\040\\uppercase\040{vi}}} has been referenced but does not exist, repla
+ced by a fixed one
+
+pdfTeX warning (dest): name{page.\\protect\040\\protect\040\\unhbox\040\\voidb@
+x\040\\hbox\040{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\0
+40\\xdef\040\\OT1/cmr/m/sc/12\040{\\OT1/cmr/m/n/12\040}\\OT1/cmr/m/sc/12\040\\s
+ize@update\040\\enc@update\040\\protect\040\\xdef\040\\OT1/cmr/m/sc/12\040{\\OT
+1/cmr/m/n/12\040}\\OT1/cmr/m/sc/12\040\\size@update\040\\enc@update\040\\gdef\0
+4012{12}\\gdef\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04
+012{12}\\afterassignment\040\\edef\04014.5pt{-5.0pt\040plus\040-1.5pt\040minus\
+040-1.0pt}\\edef\040{}\\let\040\\def\040\\size@update\040{\\baselineskip\04014.
+5pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\040\\bas
+elineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\baseline
+skip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\040\\rela
+x\040}\\protect\040\\xdef\040\\OT1/cmr/m/sc/12\040{\\OT1/cmr/m/n/12\040}\\OT1/c
+mr/m/sc/12\040\\size@update\040\\enc@update\040\\protect\040\\begingroup\040\\d
+ef\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\040\040\040\04
+0\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write\040\\@unused
+\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m/n'\040by\040
+\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04055.\012}\\en
+dgroup\040\\uppercase\040{vii}}} has been referenced but does not exist, replac
 ed by a fixed one
+
+pdfTeX warning (dest): name{page.\\protect\040\\protect\040\\unhbox\040\\voidb@
+x\040\\hbox\040{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\0
+40\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT1/cmr/m/n/12\040}\\OT1/cmr/bx/n/12\040\\s
+ize@update\040\\enc@update\040\\protect\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT
+1/cmr/m/n/12\040}\\OT1/cmr/bx/n/12\040\\size@update\040\\enc@update\040\\gdef\0
+4012{12}\\gdef\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04
+012{12}\\afterassignment\040\\edef\04014.5pt{-5.0pt\040plus\040-1.5pt\040minus\
+040-1.0pt}\\edef\040{}\\let\040\\def\040\\size@update\040{\\baselineskip\04014.
+5pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\040\\bas
+elineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\baseline
+skip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\040\\rela
+x\040}\\protect\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT1/cmr/m/n/12\040}\\OT1/c
+mr/bx/n/12\040\\size@update\040\\enc@update\040\\protect\040\\begingroup\040\\d
+ef\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\040\040\040\04
+0\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write\040\\@unused
+\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m/n'\040by\040
+\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04055.\012}\\en
+dgroup\040\\uppercase\040{vi}}} has been referenced but does not exist, replace
+d by a fixed one
+
+pdfTeX warning (dest): name{page.\\protect\040\\protect\040\\unhbox\040\\voidb@
+x\040\\hbox\040{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\0
+40\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT1/cmr/m/n/12\040}\\OT1/cmr/bx/n/12\040\\s
+ize@update\040\\enc@update\040\\protect\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT
+1/cmr/m/n/12\040}\\OT1/cmr/bx/n/12\040\\size@update\040\\enc@update\040\\gdef\0
+4012{12}\\gdef\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04
+012{12}\\afterassignment\040\\edef\04014.5pt{-5.0pt\040plus\040-1.5pt\040minus\
+040-1.0pt}\\edef\040{}\\let\040\\def\040\\size@update\040{\\baselineskip\04014.
+5pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\040\\bas
+elineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\baseline
+skip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\040\\rela
+x\040}\\protect\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT1/cmr/m/n/12\040}\\OT1/c
+mr/bx/n/12\040\\size@update\040\\enc@update\040\\protect\040\\begingroup\040\\d
+ef\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\040\040\040\04
+0\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write\040\\@unused
+\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m/n'\040by\040
+\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04049.\012}\\en
+dgroup\040\\uppercase\040{vi}}} has been referenced but does not exist, replace
+d by a fixed one
+
+pdfTeX warning (dest): name{page.\\protect\040\\protect\040\\unhbox\040\\voidb@
+x\040\\hbox\040{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\0
+40\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT1/cmr/m/n/12\040}\\OT1/cmr/bx/n/12\040\\s
+ize@update\040\\enc@update\040\\protect\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT
+1/cmr/m/n/12\040}\\OT1/cmr/bx/n/12\040\\size@update\040\\enc@update\040\\gdef\0
+4012{12}\\gdef\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04
+012{12}\\afterassignment\040\\edef\04014.5pt{-5.0pt\040plus\040-1.5pt\040minus\
+040-1.0pt}\\edef\040{}\\let\040\\def\040\\size@update\040{\\baselineskip\04014.
+5pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\040\\bas
+elineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\baseline
+skip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\040\\rela
+x\040}\\protect\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT1/cmr/m/n/12\040}\\OT1/c
+mr/bx/n/12\040\\size@update\040\\enc@update\040\\protect\040\\begingroup\040\\d
+ef\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\040\040\040\04
+0\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write\040\\@unused
+\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m/n'\040by\040
+\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04046.\012}\\en
+dgroup\040\\uppercase\040{vi}}} has been referenced but does not exist, replace
+d by a fixed one
+
+pdfTeX warning (dest): name{page.\\protect\040\\protect\040\\unhbox\040\\voidb@
+x\040\\hbox\040{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\0
+40\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT1/cmr/m/n/12\040}\\OT1/cmr/bx/n/12\040\\s
+ize@update\040\\enc@update\040\\protect\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT
+1/cmr/m/n/12\040}\\OT1/cmr/bx/n/12\040\\size@update\040\\enc@update\040\\gdef\0
+4012{12}\\gdef\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04
+012{12}\\afterassignment\040\\edef\04014.5pt{-5.0pt\040plus\040-1.5pt\040minus\
+040-1.0pt}\\edef\040{}\\let\040\\def\040\\size@update\040{\\baselineskip\04014.
+5pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\040\\bas
+elineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\baseline
+skip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\040\\rela
+x\040}\\protect\040\\xdef\040\\OT1/cmr/bx/n/12\040{\\OT1/cmr/m/n/12\040}\\OT1/c
+mr/bx/n/12\040\\size@update\040\\enc@update\040\\protect\040\\begingroup\040\\d
+ef\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\040\040\040\04
+0\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write\040\\@unused
+\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m/n'\040by\040
+\\MessageBreak\040faked\040small\040caps\040on\040input\040line\0405.\012}\\end
+group\040\\uppercase\040{v}}} has been referenced but does not exist, replaced 
+by a fixed one
 
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
 /texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-texli
@@ -861,9 +963,9 @@ cmsl12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 /usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/
 texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on TesisLatex.pdf (54 pages, 875851 bytes).
+Output written on TesisLatex.pdf (58 pages, 974222 bytes).
 PDF statistics:
- 832 PDF objects out of 1000 (max. 8388607)
- 228 named destinations out of 1000 (max. 500000)
- 564 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1043 PDF objects out of 1200 (max. 8388607)
+ 270 named destinations out of 1000 (max. 500000)
+ 593 words of extra memory for PDF output out of 10000 (max. 10000000)
 

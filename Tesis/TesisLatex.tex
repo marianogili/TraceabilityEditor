@@ -13,11 +13,45 @@
 \title{Tesis}
 \date{\today}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Glosario            %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeglossaries
 
 \newglossaryentry{hola}{name={hola},description={Esto es una prueba}}
 
-\newacronym{led}{LED}{light-emitting diode}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Siglas              %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newacronym{mde}{MDE}{Ingeniería de Software Dirigida por Modelos o Model-Driven Engineering}
+\newacronym{mda}{MDA}{Arquitectura Dirigida por Modelos o Model-Driven Architecture}
+\newacronym{omg}{OMG}{Object Management Group}
+\newacronym{mdd}{MDD}{Desarrollo Dirigido por Modelos o Model-Driven Development}
+\newacronym{ieee}{IEEE}{Institute of Electrical and Electronics Engineers}
+\newacronym{ide}{IDE}{Entornos de Desarrollo Integrados o Integrated Development Environment}
+\newacronym{uml}{UML}{Unified Modeling Language}
+\newacronym{mof}{MOF}{MetaObject Facility}
+\newacronym{emf}{EMF}{Eclipse Modeling Framework}
+\newacronym{ocl}{OCL}{Object Constraint Language}
+\newacronym{evl}{EVL}{Epsilon Validation Language}
+\newacronym{teap}{TEAP}{Traceability Elicitation and Analysis Process}
+\newacronym{alm}{ALM}{Application Lifecycle Management}
+\newacronym{soa}{SOA}{Service Oriented Architecture}
+\newacronym{ria}{RIA}{Rich Internet Applications}
+\newacronym{rcp}{RCP}{Rich Client Platform}
+\newacronym{epl}{EPL}{Eclipse Public License}
+\newacronym{api}{API}{Interfaz de programación de aplicaciones o Application Programming Interface}
+\newacronym{swt}{SWT}{Standard Widget Toolkit}
+\newacronym{xmi}{XMI}{XML Metadata Interchange}
+\newacronym{gui}{GUI}{Interfaz de Usuario Gráfica o Graphical User Interface}
+\newacronym{jdt}{JDT}{Java Development Tooling}
+\newacronym{gmf}{GMF}{Graphical Modeling Framework}
+\newacronym{spl}{SPL}{Línea de Producto de Software o Software Product Line}
+\newacronym{case}{CASE}{Computer Aided Software Engineering}
+\newacronym{qvt}{QVT}{Query/View/Transformation}
+\newacronym{dsl}{DSL}{Domain-Specific Language}
+
+
 
 \begin{document}
 
@@ -40,7 +74,7 @@
 \chapter{Agradecimientos}
 
 
-Agradezco a todos... \gls{led} holaaaaaaaa \gls{led}.
+Agradezco a todos...  holaaaaaaaa.
 
 puede ser que \gls{hola}
 
@@ -51,7 +85,7 @@ puede ser que \gls{hola}
 \chapter{Introducción}
 
 
-En la Ingeniería de Software Dirigida por Modelos (MDE - Model-Driven Engineering) se define al modelo como principal artefacto que toma participación a lo largo de todas las tareas/procesos de la ingeniería de software – análisis, diseño, desarrollo, pruebas, mantenimiento, etc. Una implementación particular propuesta que sigue esta idea es la Arquitectura Dirigida por Modelos (MDA - Model Driven Architecture) definida por el Object Management Group (OMG), cuyo ciclo de proceso de desarrollo está basado enteramente en el uso de modelos formales y transformaciones que se realizan sobre dichos modelos. Una característica muy importante de todo proceso de desarrollo dirigido por modelos (MDD – Model-Driven Development) es lo que se conoce como “posibilidad de rastreo” (o de ahora en más en inglés traceability), que ayuda y toma parte en todo lo que respecta a las relaciones que existen entre cada uno de los artefactos productos del proceso de desarrollo.
+En la \gls{mde}, se define al modelo como principal artefacto que toma participación a lo largo de todas las tareas/procesos de la ingeniería de software – análisis, diseño, desarrollo, pruebas, mantenimiento, etc. Una implementación particular propuesta que sigue esta idea es la \gls{mda}, definida por el \gls{omg}, cuyo ciclo de proceso de desarrollo está basado enteramente en el uso de modelos formales y transformaciones que se realizan sobre dichos modelos. Una característica muy importante de todo proceso de \gls{mdd}, es lo que se conoce como “posibilidad de rastreo” (o de ahora en más en inglés traceability), que ayuda y toma parte en todo lo que respecta a las relaciones que existen entre cada uno de los artefactos productos del proceso de desarrollo.
 
 Cuando nos referimos al término artefacto, hablamos por ejemplo de un requerimiento de sistema, un componente de software, un caso de prueba, entre otros. El mantenimiento y la definición de las relaciones y dependencias que existen entre los artefactos no es una tarea fácil, el mismo ha sido un desafío desde principios de 1970.
 
@@ -63,9 +97,9 @@ En el presente documento de tesis se abordará el tema de traceability, luego se
 \chapter{Objetivos}
 
 
-El objetivo del trabajo de tesis propuesto comprende, por un lado, una introducción al tema de traceability conjunto con un análisis de los problemas que aún se encuentran abiertos en su ámbito en MDE, seguido de la elaboración de un esquema de traceability que contribuya en la solución de dichos problemas.
+El objetivo del trabajo de tesis propuesto comprende, por un lado, una introducción al tema de traceability conjunto con un análisis de los problemas que aún se encuentran abiertos en su ámbito en \gls{mde}, seguido de la elaboración de un esquema de traceability que contribuya en la solución de dichos problemas.
 
-También se diseñará e implementará una herramienta que pueda ser integrada a otra de desarrollo MDE, y asista al desarrollador automatizando el proceso de definición de trazas o links entre elementos de los modelos origen y destino. Esta solución proveerá un mapa de transformaciones que permitirá determinar la procedencia de cada ítem del modelo destino, y su correspondiente origen en el modelo fuente.
+También se diseñará e implementará una herramienta que pueda ser integrada a otra de desarrollo \gls{mde}, y asista al desarrollador automatizando el proceso de definición de trazas o links entre elementos de los modelos origen y destino. Esta solución proveerá un mapa de transformaciones que permitirá determinar la procedencia de cada ítem del modelo destino, y su correspondiente origen en el modelo fuente.
 
 
 \mainmatter
@@ -76,7 +110,7 @@ También se diseñará e implementará una herramienta que pueda ser integrada a
 
 \section{Introducción}
 
-Según el Glosario Estándar de Términos de la Ingeniería de Software del IEEE \cite{IEEE} la noción de traceability se define como: El grado o nivel en el cual una relación puede ser establecida entre dos o más productos del proceso de desarrollo, especialmente entre productos que tengan una relación de predecesor-sucesor o principal-secundario; por ejemplo el grado en el cual el requerimiento y el diseño de un componente de software se corresponden. La definición anterior fue dada por “the requirements management community”, para nosotros, que necesitamos un punto de vista maś cercano al contexto de MDD, traceability es un término usado para describir cualquiera de las complejas relaciones lógicas que existen entre los distintos artefactos que se presentan en cualquier momento del ciclo de vida del desarrollo de software, el establecimiento de estas relaciones y/o el mantenimiento de las mismas.
+Según el Glosario Estándar de Términos de la Ingeniería de Software del \gls{ieee} \cite{IEEE} la noción de traceability se define como: El grado o nivel en el cual una relación puede ser establecida entre dos o más productos del proceso de desarrollo, especialmente entre productos que tengan una relación de predecesor-sucesor o principal-secundario; por ejemplo el grado en el cual el requerimiento y el diseño de un componente de software se corresponden. La definición anterior fue dada por “the requirements management community”, para nosotros, que necesitamos un punto de vista maś cercano al contexto de \gls{mdd}, traceability es un término usado para describir cualquiera de las complejas relaciones lógicas que existen entre los distintos artefactos que se presentan en cualquier momento del ciclo de vida del desarrollo de software, el establecimiento de estas relaciones y/o el mantenimiento de las mismas.
 
 Entre varios beneficios de traceability que enumeraremos mejor más adelante, podemos encontrar que ayuda a identificar las relaciones y dependencias que existen entre los artefactos de software. También traceability es crucial entre los requerimientos y su representación en los modelos para asegurar que el conjunto relevante de requerimientos fueron debidamente implementados en el código. Pero no solo traceability asegura la identificación de objetos y elementos relacionados, también puede facilitar el análisis de impactos de cambios durante el desarrollo de software.
 
@@ -219,7 +253,7 @@ El capítulo se encuentra organizado principalmente por temas. Luego, para cada 
 
 \item[+] Desarrollar técnicas de “recuperación de trazas” para artefactos textuales que sean tan precisos como el proceso manual y a la vez mucho más efectivos en tiempo y costo.
 
-\item[+] Desarrollar la recuperación de trazas para que se encuentren integrados a los ``IDE''.
+\item[+] Desarrollar la recuperación de trazas para que se encuentren integrados a los \gls{ide}.
 
 \item[+] Desarrollar sistemas de administración de cambios que efectivamente soporten la evolución de los enlaces de trazas sobre múltiples tipos de artefactos.
 
@@ -458,7 +492,7 @@ El capítulo se encuentra organizado principalmente por temas. Luego, para cada 
 
 \item[+] Identificar los usuarios de traceability y definir sus necesidades en términos de calidad, ciclo de vida, comunicación, etc.
 
-\item[+] Incorporar las herramientas de traceability que se encuentren a la vanguardia en los IDE estándares (tal como Eclipse) y las herramientas de administración de requerimientos industriales.
+\item[+] Incorporar las herramientas de traceability que se encuentren a la vanguardia en los \gls{ide} estándares (tal como Eclipse) y las herramientas de administración de requerimientos industriales.
 
 \end{itemize}
 
@@ -548,15 +582,15 @@ Es una estrategia sencilla y amigable, pero puede ser muy problemática por vari
 
 A todo lo anterior se suma el problema de la polución que se genera en el modelo con la información de traceability que es ajena a su contexto o fin original, dicha polución puede lograr que el modelo se vuelva muy difícil de comprender y mantener.
 
-Por otro lado, en un entorno MDE es común que los modelos tengan sus propias representaciones y semánticas, lo cual puede volver más complejo diferenciar la información de traceability de los objetos que representan el modelo del dominio.
+Por otro lado, en un entorno \gls{mde} es común que los modelos tengan sus propias representaciones y semánticas, lo cual puede volver más complejo diferenciar la información de traceability de los objetos que representan el modelo del dominio.
 
-Como resultado a los inconvenientes anteriores, el análisis automatizado de la información de traceability se hace muy difícil. Los enfoques principales que hacen uso de esta estrategia utilizan construcciones de lenguajes específicas, por ejemplo determinados tipos de enlaces de traceability están representados en los diagramas UML mediante el uso de las estereotipos como <<refines>>.
+Como resultado a los inconvenientes anteriores, el análisis automatizado de la información de traceability se hace muy difícil. Los enfoques principales que hacen uso de esta estrategia utilizan construcciones de lenguajes específicas, por ejemplo determinados tipos de enlaces de traceability están representados en los diagramas \gls{uml} mediante el uso de las estereotipos como <<refines>>.
 
 \subsection{Almacenamiento externo de los enlaces}
 
 En esta estrategia la información de traceability se encuentra almacenada de forma separada a los modelos a los que refiere, esto es en un modelo aparte. Esta propuesta tiene dos claras ventajas, la primera es que los modelos origen y destino se mantienen totalmente limpios, con lo cual la polución nombrada en el almacenamiento intra-modelo no sucede. Y la segunda, dado que el modelo en donde se almacena los traceability links se encuentra definido por un meta-modelo con una clara semántica, logra que el proceso de análisis de la información sea mucho más fácil que en la otra estrategia.
 
-Un requisito previo para el almacenamiento externo de los enlaces de traceability, es que los diferentes elementos del modelo tengan identificadores únicos, de modo que las trazas que los relacionan se pueden resolver inequívocamente. Un ejemplo es el mecanismo propuesto por MetaObject Facility (MOF) y por Eclipse Modeling Framework (EMF) en la forma de un identificador xmi.id .
+Un requisito previo para el almacenamiento externo de los enlaces de traceability, es que los diferentes elementos del modelo tengan identificadores únicos, de modo que las trazas que los relacionan se pueden resolver inequívocamente. Un ejemplo es el mecanismo propuesto por \gls{mof} y por \gls{emf} en la forma de un identificador xmi.id .
 
 \section{Meta-modelos}
 
@@ -574,20 +608,20 @@ La provisión de mecanismos de extensión junto con el meta-modelo de propósito
 
 En este caso, para cada escenario de traceability se define un meta-modelo específico. Este meta-modelo de traceability captura enlaces fuertemente tipados para casos específicos con una semántica bien definida, que pueden o no incluir restricciones de corrección. Debido a su naturaleza de tipado fuerte y las restricciones asociadas, restringe a los usuarios y las herramientas para que sólo puedan establecer enlaces legítimos. Por otro lado, la definición de un meta-modelo para cada caso específico requiere mucho esfuerzo en su construcción, así como herramientas que soporten, o mejor dicho, ofrezcan la posibilidad de aceptar diferentes meta-modelos de traceability.
 
-Para ser fuertemente tipado el meta-modelo de traceability necesita referir explícitamente a los tipos de elementos que se encuentran definidos en otros meta-modelos. Por ejemplo, consideremos que es necesario definir un meta-modelo de traceability que permita el establecimiento de enlaces entre instancias de A (del meta-modelo MMa) e instancias de B (a partir de MMb), pero no entre dos instancias de A o dos de B. Para capturar tal meta-modelo, la tecnología de modelado que se use no debe tomar cada meta-modelo como un espacio cerrado, sino que por el contrario debe permitir referencias inter-meta-modelo. Un ejemplo de tecnología que soporta referencias inter-meta-modelo es el Eclipse Modeling Framework (EMF).
+Para ser fuertemente tipado el meta-modelo de traceability necesita referir explícitamente a los tipos de elementos que se encuentran definidos en otros meta-modelos. Por ejemplo, consideremos que es necesario definir un meta-modelo de traceability que permita el establecimiento de enlaces entre instancias de A (del meta-modelo MMa) e instancias de B (a partir de MMb), pero no entre dos instancias de A o dos de B. Para capturar tal meta-modelo, la tecnología de modelado que se use no debe tomar cada meta-modelo como un espacio cerrado, sino que por el contrario debe permitir referencias inter-meta-modelo. Un ejemplo de tecnología que soporta referencias inter-meta-modelo es el framework \gls{emf}.
 
-Mas allá de que un meta-modelo de traceability definido utilizando una tecnología que permita referencias inter-meta-modelo puede brindar tipos seguros, encontramos frecuentemente otras restricciones que necesitan especificarse y que dicho meta-modelo no puede capturarlas. Por ejemplo, tomando como referencia el ejemplo anterior, podríamos precisar que cada instancia A de MMa sólo se puede vincular a no más de una instancia B de MMb. Para especificar tales restricciones, se requiere un lenguaje de especificación de restricciones que pueda expresar restricciones que abarquen elementos que pertenezcan a modelos definidos por diferentes meta-modelos. En la actualidad el Object Constraint Language (OCL) carece de esta capacidad, ya que no proporciona las construcciones para la expresión de restricciones que atraviese modelos (cross-model). Ejemplos de lenguajes de restricción que soportan el establecimiento con tales restricciones incluyen el Epsilon Validation Language (EVL) y el XLinkit toolkit.
+Mas allá de que un meta-modelo de traceability definido utilizando una tecnología que permita referencias inter-meta-modelo puede brindar tipos seguros, encontramos frecuentemente otras restricciones que necesitan especificarse y que dicho meta-modelo no puede capturarlas. Por ejemplo, tomando como referencia el ejemplo anterior, podríamos precisar que cada instancia A de MMa sólo se puede vincular a no más de una instancia B de MMb. Para especificar tales restricciones, se requiere un lenguaje de especificación de restricciones que pueda expresar restricciones que abarquen elementos que pertenezcan a modelos definidos por diferentes meta-modelos. En la actualidad el \gls{ocl} carece de esta capacidad, ya que no proporciona las construcciones para la expresión de restricciones que atraviese modelos (cross-model). Ejemplos de lenguajes de restricción que soportan el establecimiento con tales restricciones incluyen el \gls{evl} y el XLinkit toolkit.
 
 La combinación de un meta-modelo de traceability fuertemente tipado conjunto con la verificación de restricciones inter-modelo restringe a los usuarios y a las herramientas a establecer y mantener sólo enlaces de trazas con sentido, que pueden ser automáticamente validadas para descubrir posibles omisiones e inconsistencias. Estas cuestiones pueden surgir, ya sea durante el establecimiento de las trazas o más tarde en el ciclo de vida de los modelos donde ya los enlaces de trazas ya han sido establecidos.
 
 \section{Una clasificación genérica de traceability}
 \label{sec:ClasificacionTraceability}
 
-Conforme un proyecto de desarrollo crece, la administración de la información de traceability que en consecuencia se va generando se vuelve extremadamente compleja, una jerarquía de clasificación de dicha información resultará esencial para poder entenderla y administrarla mejor. En \cite{PaigeOlsenKolovosZschalerPower} se encuentra una propuesta de clasificación de traceability conjunto con la descripción del proceso usado para su obtención al que llamaron ``Traceability Elicitation and Analysis Process'' (TEAP).
+Conforme un proyecto de desarrollo crece, la administración de la información de traceability que en consecuencia se va generando se vuelve extremadamente compleja, una jerarquía de clasificación de dicha información resultará esencial para poder entenderla y administrarla mejor. En \cite{PaigeOlsenKolovosZschalerPower} se encuentra una propuesta de clasificación de traceability conjunto con la descripción del proceso usado para su obtención al que llamaron \gls{teap}.
 
 Esta propuesta comienza con una clasificación o meta-modelo de traceability inicial, luego de forma iterativa e incremental esta clasificación se va refinando siguiendo las siguientes tareas: obtención, análisis y clasificación. En la obtención se identifica un enlace de traza y sus relaciones. En el análisis, se abstraen las principales características del enlace obtenido identificando las restricciones, sus relaciones y generalizaciones. Por último, se define la clasificación a la que pertenece.
 
-El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el que se encuentran los siguientes conceptos fundamentales: artefacts, trace links y operations. Artefact refiere tanto a artefactos MDE (por ejemplo modelos específicos de dominio) como a no MDE (por ejemplo hojas de cálculo), en Operation se encierran las operaciones bien manuales como automáticas que determinan qué información de traceability debe almacenarse, y por último Trace Link engloba la clasificación que da inicio con la idea de traceability implícita (Implicit Link) y explícita (Explicit Link). En este contexto, traceability implícita refiere a los enlaces de trazas que son creados y manipulados por la aplicación de operaciones MDE, y por su parte explícita refiere a los enlaces que se encuentran concretamente ya representados en los modelos.
+El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el que se encuentran los siguientes conceptos fundamentales: artefacts, trace links y operations. Artefact refiere tanto a artefactos \gls{mde} (por ejemplo modelos específicos de dominio) como a no \gls{mde} (por ejemplo hojas de cálculo), en Operation se encierran las operaciones bien manuales como automáticas que determinan qué información de traceability debe almacenarse, y por último Trace Link engloba la clasificación que da inicio con la idea de traceability implícita (Implicit Link) y explícita (Explicit Link). En este contexto, traceability implícita refiere a los enlaces de trazas que son creados y manipulados por la aplicación de operaciones \gls{mde}, y por su parte explícita refiere a los enlaces que se encuentran concretamente ya representados en los modelos.
 
 
 \begin{figure}[hbtp]
@@ -599,7 +633,7 @@ El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el 
 
 \subsection{Clasificación de enlaces de trazas implícita}
 
-En la jerarquía de esta sección que se muestra en el dibujo \ref{fig:LinksImplicitos} se representan el conjunto de operaciones de MDE principales: consulta (Query Link), transformación (M2M Link), transformación modelo a texto (M2T Link), composición (Composition Link), actualización (Update Link), creación (Creation Link), eliminación (Delete Link), entre otras.
+En la jerarquía de esta sección que se muestra en el dibujo \ref{fig:LinksImplicitos} se representan el conjunto de operaciones de \gls{mde} principales: consulta (Query Link), transformación (M2M Link), transformación modelo a texto (M2T Link), composición (Composition Link), actualización (Update Link), creación (Creation Link), eliminación (Delete Link), entre otras.
 
 
 \begin{figure}[hbtp]
@@ -612,7 +646,7 @@ En la jerarquía de esta sección que se muestra en el dibujo \ref{fig:LinksImpl
 
 \subsection{Clasificación de enlaces de trazas explícitos}
 
-En un principio esta clasificación se encuentra dividida en dos grandes grupos representados por las siguientes clases básicas: links modelo-modelo (por ejemplo las relaciones de dependencias UML) y links modelo-artefacto (por ejemplo el enlace entre un modelo y un documento de texto que dicta un requerimiento), en el dibujo \ref{fig:LinksExplicitos} aparecen como Model-Model Link y Model-Artefact Link respectivamente.
+En un principio esta clasificación se encuentra dividida en dos grandes grupos representados por las siguientes clases básicas: links modelo-modelo (por ejemplo las relaciones de dependencias \gls{uml}) y links modelo-artefacto (por ejemplo el enlace entre un modelo y un documento de texto que dicta un requerimiento), en el dibujo \ref{fig:LinksExplicitos} aparecen como Model-Model Link y Model-Artefact Link respectivamente.
 
 Model-Model Link se encuentra a su vez subdividido en links estáticos (Static Link) y dinámicos (Dynamic Link). Los primeros representan relaciones estructurales que no cambian con el tiempo, en cambio los segundos representan información de los modelos que si pueden llegar a variar.
 
@@ -728,24 +762,24 @@ La comunidad Eclipse tiene más de 200 proyectos, los cuales pueden conceptualme
 
 \item Embedded and Device Development
 
-\item Rich Client Platform
+\item \gls{rcp}
 
-\item Rich Internet Applications
+\item \gls{ria}
 
 \item Application Frameworks
 
-\item Application Lifecycle Management (ALM)
+\item \gls{alm}
 
-\item Service Oriented Architecture (SOA)
+\item \gls{soa}
 
 \end{enumerate}
 
-Eclipse hace uso de la Eclipse Public License (EPL), dicha licencia comercial permite a las organizaciones incluir software Eclipse en sus productos comerciales, mientras que al mismo tiempo les solicita en retorno un aporte a la comunidad con algo del producto derivado comercializado.
+Eclipse hace uso de la \gls{epl}, dicha licencia comercial permite a las organizaciones incluir software Eclipse en sus productos comerciales, mientras que al mismo tiempo les solicita en retorno un aporte a la comunidad con algo del producto derivado comercializado.
 
 
 \subsection{La plataforma Eclipse}
 
-La plataforma Eclipse es un framework para la construcción de IDEs (Ambientes de Desarrollos Integrados), el mismo ha sido descripto como ``un ambiente para cualquier cosa y nada en particular''. La plataforma define simplemente la estructura básica del IDE, luego mediante la definición de herramientas específicas que amplían y se conectan al framework terminan definiendo un IDE particular de forma colectiva.
+La plataforma Eclipse es un framework para la construcción de \glspl{ide}, el mismo ha sido descripto como ``un ambiente para cualquier cosa y nada en particular''. La plataforma define simplemente la estructura básica del \gls{ide}, luego mediante la definición de herramientas específicas que amplían y se conectan al framework terminan definiendo un \gls{ide} particular de forma colectiva.
 
 
 \subsubsection{Arquitectura de plugins}
@@ -759,7 +793,7 @@ Durante el arranque la plataforma Eclipse descubre todos los plug-ins disponible
 
 \subsubsection{Workspace}
 
-Las herramientas integradas en Eclipse trabajan con archivos y carpetas ordinarias, pero también disponen de una API de alto nivel que define los siguientes componentes: recursos (resources), proyectos y un espacio de trabajo (workspace).
+Las herramientas integradas en Eclipse trabajan con archivos y carpetas ordinarias, pero también disponen de una \gls{api} de alto nivel que define los siguientes componentes: recursos (resources), proyectos y un espacio de trabajo (workspace).
 
 \paragraph{Resource} Un recurso es la representación que da Eclipse de un archivo y/o una carpeta, a los que provee de capacidades adicionales como detectores de cambios (change listeners), marcadores como las listas por hacer (to-do list) y/o mensajes de errores, y un registro de historia de cambios.
 
@@ -770,7 +804,7 @@ Las herramientas integradas en Eclipse trabajan con archivos y carpetas ordinari
 
 \subsubsection{Workbench}
 
-El Workbench es la ventana principal que se le presenta al usuario cuando ejecuta la plataforma Eclipse, se encuentra implementada usando SWT y JFace. Esta ventana principal, que se puede apreciar en la imagen \ref{fig:EclipseWorkbench} está compuesta de vistas, editores y perspectivas.
+El Workbench es la ventana principal que se le presenta al usuario cuando ejecuta la plataforma Eclipse, se encuentra implementada usando \gls{swt} y JFace. Esta ventana principal, que se puede apreciar en la imagen \ref{fig:EclipseWorkbench} está compuesta de vistas, editores y perspectivas.
 
 \begin{figure}[hbtp]
 \centering
@@ -788,32 +822,32 @@ El Workbench es la ventana principal que se le presenta al usuario cuando ejecut
 
 \subsection{Resumen y más información}
 
-Para cerrar y en resumen, la plataforma Eclipse proporciona un núcleo de elementos básicos y un conjunto de APIs genéricas, como el workspace y el workbench, y varios puntos de extensión a través del cual se pueden integrar nuevas funcionalidades. A través de estos puntos de extensión, las herramientas escritas como plug-ins independientes pueden extender la plataforma Eclipse.
+Para cerrar y en resumen, la plataforma Eclipse proporciona un núcleo de elementos básicos y un conjunto de \glspl{api} genéricas, como el workspace y el workbench, y varios puntos de extensión a través del cual se pueden integrar nuevas funcionalidades. A través de estos puntos de extensión, las herramientas escritas como plug-ins independientes pueden extender la plataforma Eclipse.
 
 Para obtener más información sobre el proyecto Eclipse ver \cite[\url{www.eclipse.org}]{Eclipse}, y para información técnica consultar \cite[Eclipse Platform Technical Overview]{EclipseTech}.
 
 
 \section{Eclipse Modeling Framework}
 
-A continuación proseguimos con una de las tecnologías del proyecto Eclipse usada para la implementación de una parte del prototipo, el framework EMF \cite{EMF}.
+A continuación proseguimos con una de las tecnologías del proyecto Eclipse usada para la implementación de una parte del prototipo, el framework \gls{emf} \cite{EMF}.
 
 \subsection{El framework EMF}
 
-El EMF es un framework de modelado y generación de código para herramientas de construcción y otras aplicaciones basadas en un modelo de datos estructurados. A partir de una especificación de un modelo descrito en XMI, EMF provee herramientas y un entorno de ejecución para producir un conjunto de clases Java para el modelo y un conjunto de clases adaptadoras que permiten la visualización y la edición de dicho modelo.
+El \gls{emf} es un framework de modelado y generación de código para herramientas de construcción y otras aplicaciones basadas en un modelo de datos estructurados. A partir de una especificación de un modelo descrito en \gls{xmi}, \gls{emf} provee herramientas y un entorno de ejecución para producir un conjunto de clases Java para el modelo y un conjunto de clases adaptadoras que permiten la visualización y la edición de dicho modelo.
 
-EMF consiste de tres partes fundamentales:
+\gls{emf} consiste de tres partes fundamentales:
 
 \paragraph{EMF}
 
-El framework EMF base incluye un meta-modelo (Ecore) para la descripción de modelos y soporte para un entorno de ejecución para dichos modelos que incluye las funcionalidades de notificación de cambios, persistencia por defecto vía serialización XMI y una librería muy eficiente para la manipulación de objectos EMF genérica.
+El framework \gls{emf} base incluye un meta-modelo (Ecore) para la descripción de modelos y soporte para un entorno de ejecución para dichos modelos que incluye las funcionalidades de notificación de cambios, persistencia por defecto vía serialización \gls{xmi} y una librería muy eficiente para la manipulación de objectos \gls{emf} genérica.
 
 \paragraph{EMF.Edit}
 
-El framework EMF.Edit incluye clases genéricas reusables para la construcción de editores de modelos EMF. Este provee:
+El framework EMF.Edit incluye clases genéricas reusables para la construcción de editores de modelos \gls{emf}. Este provee:
 
 \begin{itemize}
 
-\item Clases proveedoras de contenido y etiquetas, acceso a propiedades orígenes y otras clases convenientes que permiten a los modelos EMF ser visualizados mediante entornos visuales estándares de escritorio (vía JFace) y/o hojas de propiedades.
+\item Clases proveedoras de contenido y etiquetas, acceso a propiedades orígenes y otras clases convenientes que permiten a los modelos \gls{emf} ser visualizados mediante entornos visuales estándares de escritorio (vía JFace) y/o hojas de propiedades.
 
 \item Un framework de comandos que incluye un conjunto de clases que implementan comandos para la construcción de editores con soporte íntegro de deshacer y rehacer (undo/redo).
 
@@ -821,7 +855,7 @@ El framework EMF.Edit incluye clases genéricas reusables para la construcción 
 
 \paragraph{EMF.Codegen}
 
-La funcionalidad de generación de código EMF es capaz de generar todo lo necesario para la construcción de un editor de un modelo EMF completo. Ésta incluye una interfaz de usuario gráfica (GUI) desde la cual las opciones de generación pueden ser especificadas y los generadores son invocados. Dicha funcionalidad de generación aprovecha el componente de Eclipse JDT (Java Development Tooling).
+La funcionalidad de generación de código \gls{emf} es capaz de generar todo lo necesario para la construcción de un editor de un modelo \gls{emf} completo. Ésta incluye una \gls{gui} desde la cual las opciones de generación pueden ser especificadas y los generadores son invocados. Dicha funcionalidad de generación aprovecha el componente de Eclipse \gls{jdt}.
 
 Tres niveles de generación de código son soportados:
 
@@ -835,11 +869,11 @@ Genera la implementación de las clases, llamadas ItemProviders, que se adaptan 
 
 \subparagraph{Editor}
 
-Produce un editor estructurado apropiadamente que se ajusta al estilo recomendado para los editores de modelo EMF de Eclipse y sirve como punto de partida para comenzar con la personalización.
+Produce un editor estructurado apropiadamente que se ajusta al estilo recomendado para los editores de modelo \gls{emf} de Eclipse y sirve como punto de partida para comenzar con la personalización.
 
 \subsection{El (Meta) modelo Ecore}
 
-Ecore es el modelo usado para representar modelos en EMF. Ecore es en sí mismo un modelo EMF, por lo cual es su propio meta-modelo. 
+Ecore es el modelo usado para representar modelos en \gls{emf}. Ecore es en sí mismo un modelo \gls{emf}, por lo cual es su propio meta-modelo. 
 
 \begin{figure}[hbtp]
 \centering
@@ -861,14 +895,14 @@ Un modelo simplificado de Ecore se puede observar en la imagen \ref{fig:EcoreMod
 
 \subsection{Beneficios y más información}
 
-Además de incrementar la productividad gracias a la generación automática de código, el uso del framework EMF provee otros beneficios: la notificación de cambios, una funcionalidad de persistencia (como la serialización XMI entre otras), y una API genérica reflexiva muy eficiente que sirve para la manipulación de objetos EMF. Sin embargo, uno de los beneficios más importantes de este framework es que EMF provee las bases para la interoperabilidad con otras herramientas y aplicaciones que se basan en él. 
+Además de incrementar la productividad gracias a la generación automática de código, el uso del framework \gls{emf} provee otros beneficios: la notificación de cambios, una funcionalidad de persistencia (como la serialización \gls{xmi} entre otras), y una \gls{api} genérica reflexiva muy eficiente que sirve para la manipulación de objetos \gls{emf}. Sin embargo, uno de los beneficios más importantes de este framework es que \gls{emf} provee las bases para la interoperabilidad con otras herramientas y aplicaciones que se basan en él. 
 
-Más información sobre el framework EMF se puede obtener en \cite{EMF} y \cite{EMFADG}.
+Más información sobre el framework \gls{emf} se puede obtener en \cite{EMF} y \cite{EMFADG}.
 
 
-\section{Grafical Modeling Framework}
+\section{Graphical Modeling Framework}
 
-En la presente sección analizamos el framework GMF, el mismo fue usado para el desarrollo de la parte gráfica del editor de trazas del prototipo realizado.
+En la presente sección analizamos el framework \gls{gmf}, el mismo fue usado para el desarrollo de la parte gráfica del editor de trazas del prototipo realizado.
 
 \section{ATL}
 
@@ -884,7 +918,7 @@ En este capítulo se realiza una breve introducción de un conjunto de trabajos 
 
 \section{Un motor de traceability de transformación de modelos en la Ingeniería de Software}
 
-En \cite{AmarLeblancCoulette} se describe un motor de traceability al que llamaron ETraceTool, que funciona como un plug-in de Eclipse programado mediante el paradigma orientado a aspectos con el fin de mantener aislada la generación de las trazas del código que pertenece a la transformación. El mismo trabaja sobre transformaciones escritas en Java usando la API EMF \cite{EMF}. A continuación se listan sus principales características:
+En \cite{AmarLeblancCoulette} se describe un motor de traceability al que llamaron ETraceTool, que funciona como un plug-in de Eclipse programado mediante el paradigma orientado a aspectos con el fin de mantener aislada la generación de las trazas del código que pertenece a la transformación. El mismo trabaja sobre transformaciones escritas en Java usando la \gls{api} \gls{emf} \cite{EMF}. A continuación se listan sus principales características:
 
 \begin{itemize}
 \item El código de generación de trazas no es intrusivo en el código de la transformación;
@@ -900,7 +934,7 @@ En \cite{AmarLeblancCoulette} se describe un motor de traceability al que llamar
 \label{fig:ArqETraceTool}
 \end{figure}
 
-La arquitectura se puede apreciar en el dibujo \ref{fig:ArqETraceTool} y se explica de la siguiente manera, durante la transformación el plug-in captura un conjunto de eventos previamente identificados y clasificados gracias a la programación orientada a aspectos, luego el Aspect Tracer genera un modelo de trazas que conforma al meta-modelo de trazas anidado que se muestra en el dibujo \ref{fig:ETraceToolMeta-modelo}. Al final, el modelo de trazas generado puede ser serializado en un archivo XMI o transformado a cualquier otro lenguaje mediante una transformación modelo-texto.
+La arquitectura se puede apreciar en el dibujo \ref{fig:ArqETraceTool} y se explica de la siguiente manera, durante la transformación el plug-in captura un conjunto de eventos previamente identificados y clasificados gracias a la programación orientada a aspectos, luego el Aspect Tracer genera un modelo de trazas que conforma al meta-modelo de trazas anidado que se muestra en el dibujo \ref{fig:ETraceToolMeta-modelo}. Al final, el modelo de trazas generado puede ser serializado en un archivo \gls{xmi} o transformado a cualquier otro lenguaje mediante una transformación modelo-texto.
 
 \begin{figure}[hbtp]
 \centering
@@ -913,12 +947,12 @@ El fundamento del diseño del meta-modelo de trazas anidado propuesto es para el
 
 \section{Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line (SPL)}
 
-El framework presentado en \cite{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmaralAraujo} provee una plataforma abierta y flexible para crear enlaces de trazas entre distintos artefactos del desarrollo SPL. Pero, dado que el diseño del framework es genérico, éste también puede aplicarse o usarse en otras áreas del desarrollo SPL. El mismo ha sido diseñado e implementado basado en el uso de técnicas dirigidas por modelos. El meta-modelo de traceability descripto en el dibujo \ref{fig:SPLMeta-modelo} permite definir distintos tipos de enlaces de trazas entre los artefactos.
+El framework presentado en \cite{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmaralAraujo} provee una plataforma abierta y flexible para crear enlaces de trazas entre distintos artefactos del desarrollo de una \gls{spl}. Pero, dado que el diseño del framework es genérico, éste también puede aplicarse o usarse en otras áreas del desarrollo \gls{spl}. El mismo ha sido diseñado e implementado basado en el uso de técnicas dirigidas por modelos. El meta-modelo de traceability descripto en el dibujo \ref{fig:SPLMeta-modelo} permite definir distintos tipos de enlaces de trazas entre los artefactos.
 
 Las principales funcionalidades ofrecidas por el framework son las siguientes:
 
 \begin{enumerate}
-\item Creación y mantenimiento de los enlaces de trazas de artefactos existentes (modelos UML, código fuente, etc);
+\item Creación y mantenimiento de los enlaces de trazas de artefactos existentes (modelos \gls{uml}, código fuente, etc);
 \item Almacenamiento de los enlaces de trazas mediante el uso de un repositorio;
 \item Búsqueda de enlaces de trazas específicos usando consultas de trazas predefinidas o personalizadas;
 \item Visualización flexible de los resultados de las consultas de trazas por medio de diferentes tipos de vistas, como vista de árbol, grafo, tabla, etc.
@@ -936,7 +970,7 @@ Las principales funcionalidades ofrecidas por el framework son las siguientes:
 Los elementos principales del meta-modelo son los siguientes:
 
 \begin{itemize}
-\item Un TraceableArtefact representa un artefacto que juega un rol en el ciclo del desarrollo. La granularidad del artefacto es arbitraria, puede ser un requerimiento, un diagrama UML, un elemento de dicho diagrama, una clase o un método de dicha clase. El artefacto es identificado mediante la propiedad resourceId.
+\item Un TraceableArtefact representa un artefacto que juega un rol en el ciclo del desarrollo. La granularidad del artefacto es arbitraria, puede ser un requerimiento, un diagrama \gls{uml}, un elemento de dicho diagrama, una clase o un método de dicha clase. El artefacto es identificado mediante la propiedad resourceId.
 \item Un TraceLink es la abstracción de una transición de un artefacto a otro.
 \item Cada TraceableArtefact tiene asignada una instancia de TraceableArtefactType, éstos se pueden encontrar agrupados de forma jerárquica.
  \item Análogo a los tipos de los artefactos los TraceLinks también tienen un tipo (TraceLinkType), teniendo en cuenta que la semántica de una relación entre dos artefactos puede variar.
@@ -965,13 +999,13 @@ Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido 
 
 \section{Integración de herramientas Case}
 
-En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que como resultado del conjunto de actividades que lo conforman, se van generando una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc). Estos artefactos, aunque en esencia se encuentran relacionados lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo UML, etc), las relaciones lógicas nombradas se pierden, o mejor dicho no existen o pasan desapercibidas en la práctica. En otras palabras, nos presenta el problema de la imposibilidad de traceability que encontramos entre la mayoría de las herramientas CASE actuales.
+En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que como resultado del conjunto de actividades que lo conforman, se van generando una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc). Estos artefactos, aunque en esencia se encuentran relacionados lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo \gls{uml}, etc), las relaciones lógicas nombradas se pierden, o mejor dicho no existen o pasan desapercibidas en la práctica. En otras palabras, nos presenta el problema de la imposibilidad de traceability que encontramos entre la mayoría de las herramientas \gls{case} actuales.
 
-Como solución a este problema, se propone un ambiente de integración para las herramientas CASE al que llamaron TiE - Tool Integration Environment, el cual basa su integración en la creación de enlaces de trazas entre los artefactos de las distintas herramientas.
+Como solución a este problema, se propone un ambiente de integración para las herramientas \gls{case} al que llamaron TiE - Tool Integration Environment, el cual basa su integración en la creación de enlaces de trazas entre los artefactos de las distintas herramientas.
 
 \section{Framework genérico de extracción de datos de traceability}
 
-En \cite{GrammelKastenholz} proponen un framework genérico de traceability que toma como entrada una transformación de modelo y le aumenta arbitrariamente su funcionalidad con un mecanismo de traceability. En el dibujo \ref{fig:GenericoArquitectura} se muestra un panorama de alto nivel de la arquitectura propuesta. Ésta se basa en una interfase genérica que provee un punto de conexión para cualquier motor de transformación de modelos, mediante una API que se ofrece al ingeniero que conecta su motor de transformación con el motor de traceability (oAW connector, QVT connector). Como resultado el motor de transformación incluye la funcionalidad de traceability. El modelo de datos que usa el framework es el lenguaje específico de dominio para traceability al que llaman Trace-DSL.
+En \cite{GrammelKastenholz} proponen un framework genérico de traceability que toma como entrada una transformación de modelo y le aumenta arbitrariamente su funcionalidad con un mecanismo de traceability. En el dibujo \ref{fig:GenericoArquitectura} se muestra un panorama de alto nivel de la arquitectura propuesta. Ésta se basa en una interfase genérica que provee un punto de conexión para cualquier motor de transformación de modelos, mediante una \gls{api} que se ofrece al ingeniero que conecta su motor de transformación con el motor de traceability (oAW connector, \gls{qvt} connector). Como resultado el motor de transformación incluye la funcionalidad de traceability. El modelo de datos que usa el framework es el lenguaje específico de dominio para traceability al que llaman Trace-DSL.
 
 \begin{figure}[hbtp]
 \centering
@@ -1028,7 +1062,7 @@ El meta-modelo de trazas local contiene dos conceptos principales Link y Element
 
 Para almacenar la información sobre las reglas de transformación aplicadas así como el caso particular de las cajas negras, se hace uso de los conceptos RuleRef y BlackBoxRef. En ambos casos, dado que pueden dar como resultado de su ejecución varios enlaces, se define la relación como uno a varios entre RuleRef y Link. RuleRef y BlackBoxRef son opcionales, en el caso de la primera solo se usa para realizar una depuración de las transformaciones, y la segunda si nos encontramos en la situación en la que ciertas partes del sistema no pueden ser pública su implementación.
 
-ElementRef tiene una referencia al objeto real de los modelos origen y destinos. Como estos modelos están implementados mediante EMF, la referencia EMFObject es un EObject del meta-modelo Ecore. La clase LocalTraces representa la raiz del modelo de trazas local y tiene un RuleContainer que se usa como contenedor de las reglas y dos ElementContainer usados para agrupar los ElementRef origen y destino respectivamente. Separar los elemento orígenes y destinos permite reducir los costos de búsquedas de elementos de entrada o salida.
+ElementRef tiene una referencia al objeto real de los modelos origen y destinos. Como estos modelos están implementados mediante \gls{emf}, la referencia EMFObject es un EObject del meta-modelo Ecore. La clase LocalTraces representa la raiz del modelo de trazas local y tiene un RuleContainer que se usa como contenedor de las reglas y dos ElementContainer usados para agrupar los ElementRef origen y destino respectivamente. Separar los elemento orígenes y destinos permite reducir los costos de búsquedas de elementos de entrada o salida.
 
 \subsection{Meta-modelo de Traceability Global}
 
@@ -1070,7 +1104,6 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Glosario %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{Glosario}
 
 \printglossaries
 
