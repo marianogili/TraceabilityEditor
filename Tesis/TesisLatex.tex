@@ -46,6 +46,7 @@
 \newacronym{gui}{GUI}{Interfaz de Usuario Gráfica o Graphical User Interface}
 \newacronym{jdt}{JDT}{Java Development Tooling}
 \newacronym{gmf}{GMF}{Graphical Modeling Framework}
+\newacronym{gef}{GEF}{Graphical Editing Framework}
 \newacronym{spl}{SPL}{Línea de Producto de Software o Software Product Line}
 \newacronym{case}{CASE}{Computer Aided Software Engineering}
 \newacronym{qvt}{QVT}{Query/View/Transformation}
@@ -902,7 +903,16 @@ Más información sobre el framework \gls{emf} se puede obtener en \cite{EMF} y 
 
 \section{Graphical Modeling Framework}
 
-En la presente sección analizamos el framework \gls{gmf}, el mismo fue usado para el desarrollo de la parte gráfica del editor de trazas del prototipo realizado.
+En la presente sección analizamos el framework \gls{gmf}, el mismo fue usado para el desarrollo de la parte gráfica del editor de trazas del prototipo.
+
+\subsection{El framework GMF}
+
+\gls{gmf} es un framework para la construcción de editores gráficos de modelado para la plataforma Eclipse, por ejemplo editores \gls{uml}, ECore, de procesos de negocios, diagramas de flujo, etc. Este framework está compuesto por un componente de generación (GMF Tooling) y un entorno de ejecución (GMF Runtime) que ayudan en el desarrollo de editores gráficos que se basan en \gls{emf} y \gls{gef}.
+
+\subparagraph{GMF Tooling} incluye por un lado editores para crear y/o modificar los modelos que describen los aspectos de notación, semántica y utilidad de un editor gráfico, y por otro, un generador que da como resultado la implementación del editor definido.
+
+\subparagraph{GMF Runtime} Los plug-ins generados con GFM-Tooling dependen de este componente que es el entorno de ejecución sobre el que va a correr el editor.
+
 
 \section{ATL}
 
