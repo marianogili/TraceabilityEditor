@@ -1,11 +1,12 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 11.12.2012  01:16:09
-;; Indexstyle: "/tmp/LfWR91HoeO", Rawindex: "/tmp/jiog2VglJc", Output: "TesisLatex.acr"
+;; at 17.12.2012  15:06:09
+;; Indexstyle: "/tmp/9e3eFslWb7", Rawindex: "/tmp/6yxCZp0Qjc", Output: "TesisLatex.acr"
 
 
 Building indexentry-tree:
 Hierdepth of index is :TREE
 
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
@@ -57,6 +58,7 @@ Letter-group: "ë»¨" -> "X"
 Letter-group: "à¨" -> "G"
 Letter-group: "¬Ú" -> "J"
 Letter-group: "»œ" -> "G"
+Letter-group: "—œ" -> "G"
 Letter-group: "ÐÈ´" -> "S"
 Letter-group: "†€Ð—" -> "C"
 Letter-group: "ÊåÚ" -> "Q"
@@ -67,7 +69,7 @@ Letter-group: "†€Ð—" -> "C"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "—»œ" -> "E"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "»œ" -> "G"
+Letter-group: "—œ" -> "G"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "¨—" -> "I"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)

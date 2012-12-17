@@ -7,12 +7,12 @@
 \setentrycounter{page}\glsnumberformat{28}\delimN 
 \setentrycounter{page}\glsnumberformat{29}\delimN 
 \setentrycounter{page}\glsnumberformat{33}\delimN 
-\setentrycounter{page}\glsnumberformat{34}\delimN 
-\setentrycounter{page}\glsnumberformat{39}}}\glsgroupskip
+\setentrycounter{page}\glsnumberformat{35}\delimN 
+\setentrycounter{page}\glsnumberformat{40}}}\glsgroupskip
 \glsgroupheading{C}\relax\glsresetentrylist
 \glossaryentryfield{case}{\glsnamefont{CASE}}{Computer Aided Software Engineering}{\relax }{\glossaryentrynumbers{\relax 
-\setentrycounter{page}\glsnumberformat{38}\delimN 
-\setentrycounter{page}\glsnumberformat{39}}}\glsgroupskip
+\setentrycounter{page}\glsnumberformat{39}\delimN 
+\setentrycounter{page}\glsnumberformat{40}}}\glsgroupskip
 \glsgroupheading{E}\relax\glsresetentrylist
 \glossaryentryfield{emf}{\glsnamefont{EMF}}{Eclipse Modeling Framework}{\relax }{\glossaryentrynumbers{\relax 
 \setentrycounter{page}\glsnumberformat{17}\delimN 
@@ -20,13 +20,15 @@
 \setentrycounter{page}\glsnumberformat{30}\delimN 
 \setentrycounter{page}\glsnumberformat{31}\delimN 
 \setentrycounter{page}\glsnumberformat{33}\delimN 
-\setentrycounter{page}\glsnumberformat{34}\delimN 
-\setentrycounter{page}\glsnumberformat{42}}}\relax\glsresetentrylist
+\setentrycounter{page}\glsnumberformat{35}\delimN 
+\setentrycounter{page}\glsnumberformat{43}}}\relax\glsresetentrylist
 \glossaryentryfield{epl}{\glsnamefont{EPL}}{Eclipse Public License}{\relax }{\glossaryentrynumbers{\relax 
 \setentrycounter{page}\glsnumberformat{28}}}\relax\glsresetentrylist
 \glossaryentryfield{evl}{\glsnamefont{EVL}}{Epsilon Validation Language}{\relax }{\glossaryentrynumbers{\relax 
 \setentrycounter{page}\glsnumberformat{18}}}\glsgroupskip
 \glsgroupheading{G}\relax\glsresetentrylist
+\glossaryentryfield{gef}{\glsnamefont{GEF}}{Graphical Editing Framework}{\relax }{\glossaryentrynumbers{\relax 
+\setentrycounter{page}\glsnumberformat{33}}}\relax\glsresetentrylist
 \glossaryentryfield{gmf}{\glsnamefont{GMF}}{Graphical Modeling Framework}{\relax }{\glossaryentrynumbers{\relax 
 \setentrycounter{page}\glsnumberformat{33}}}\relax\glsresetentrylist
 \glossaryentryfield{gui}{\glsnamefont{GUI}}{Interfaz de Usuario Gráfica o Graphical User Interface}{\relax }{\glossaryentrynumbers{\relax 
@@ -62,7 +64,7 @@
 \setentrycounter{page}\glsnumberformat{\protect \es@scroman  {vi}}}}\glsgroupskip
 \glsgroupheading{Q}\relax\glsresetentrylist
 \glossaryentryfield{qvt}{\glsnamefont{QVT}}{Query/View/Transformation}{\relax }{\glossaryentrynumbers{\relax 
-\setentrycounter{page}\glsnumberformat{39}}}\glsgroupskip
+\setentrycounter{page}\glsnumberformat{40}}}\glsgroupskip
 \glsgroupheading{R}\relax\glsresetentrylist
 \glossaryentryfield{rcp}{\glsnamefont{RCP}}{Rich Client Platform}{\relax }{\glossaryentrynumbers{\relax 
 \setentrycounter{page}\glsnumberformat{27}}}\relax\glsresetentrylist
@@ -72,7 +74,7 @@
 \glossaryentryfield{soa}{\glsnamefont{SOA}}{Service Oriented Architecture}{\relax }{\glossaryentrynumbers{\relax 
 \setentrycounter{page}\glsnumberformat{28}}}\relax\glsresetentrylist
 \glossaryentryfield{spl}{\glsnamefont{SPL}}{Línea de Producto de Software o Software Product Line}{\relax }{\glossaryentrynumbers{\relax 
-\setentrycounter{page}\glsnumberformat{35}}}\relax\glsresetentrylist
+\setentrycounter{page}\glsnumberformat{36}}}\relax\glsresetentrylist
 \glossaryentryfield{swt}{\glsnamefont{SWT}}{Standard Widget Toolkit}{\relax }{\glossaryentrynumbers{\relax 
 \setentrycounter{page}\glsnumberformat{29}}}\glsgroupskip
 \glsgroupheading{T}\relax\glsresetentrylist
@@ -82,12 +84,13 @@
 \glossaryentryfield{uml}{\glsnamefont{UML}}{Unified Modeling Language}{\relax }{\glossaryentrynumbers{\relax 
 \setentrycounter{page}\glsnumberformat{17}\delimN 
 \setentrycounter{page}\glsnumberformat{20}\delimN 
-\setentrycounter{page}\glsnumberformat{36}\delimR 
-\setentrycounter{page}\glsnumberformat{38}}}\glsgroupskip
+\setentrycounter{page}\glsnumberformat{33}\delimN 
+\setentrycounter{page}\glsnumberformat{37}\delimR 
+\setentrycounter{page}\glsnumberformat{39}}}\glsgroupskip
 \glsgroupheading{X}\relax\glsresetentrylist
 \glossaryentryfield{xmi}{\glsnamefont{XMI}}{XML Metadata Interchange}{\relax }{\glossaryentrynumbers{\relax 
 \setentrycounter{page}\glsnumberformat{30}\delimN 
 \setentrycounter{page}\glsnumberformat{31}\delimN 
 \setentrycounter{page}\glsnumberformat{33}\delimN 
-\setentrycounter{page}\glsnumberformat{34}}}%
+\setentrycounter{page}\glsnumberformat{35}}}%
 \end{theglossary}\glossarypostamble
