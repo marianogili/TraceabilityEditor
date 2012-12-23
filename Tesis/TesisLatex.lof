@@ -13,16 +13,17 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Elcipse Workbench}}{30}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Modelo Ecore simplificado}}{32}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Flujo de trabajo de GMF}}{34}{figure.5.3}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Arquitectura GMF}}{34}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Flujo de trabajo de GMF}}{35}{figure.5.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Arquitectura de la herramienta ETraceTool}}{37}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Meta-modelo de trazas anidado}}{38}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Meta-modelo de traceability}}{39}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Arquitectura del Framework de Traceability}}{40}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Resumen de la arquitectura del Framework Gen\IeC {\'e}rico de Traceability}}{42}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Lenguaje espec\IeC {\'\i }fico de dominio para traceability}}{42}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Faceta para traceability de c\IeC {\'o}digo fuente}}{43}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Meta-modelo de Trazas Local}}{44}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Meta-modelo de Trazas Global}}{45}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Ejemplo de un modelo de trazas local y global}}{46}{figure.6.10}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Arquitectura de la herramienta ETraceTool}}{38}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Meta-modelo de trazas anidado}}{39}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Meta-modelo de traceability}}{40}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Arquitectura del Framework de Traceability}}{41}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Resumen de la arquitectura del Framework Gen\IeC {\'e}rico de Traceability}}{43}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Lenguaje espec\IeC {\'\i }fico de dominio para traceability}}{43}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Faceta para traceability de c\IeC {\'o}digo fuente}}{44}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Meta-modelo de Trazas Local}}{45}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Meta-modelo de Trazas Global}}{46}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Ejemplo de un modelo de trazas local y global}}{47}{figure.6.10}
 \addvspace {10\p@ }

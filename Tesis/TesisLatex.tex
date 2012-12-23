@@ -913,18 +913,22 @@ En la presente sección analizamos el framework \gls{gmf}, el mismo fue usado pa
 
 \subparagraph{GMF Runtime} Los plug-ins generados con GFM-Tooling dependen de este componente que es el entorno de ejecución sobre el que va a correr el editor.
 
+\subsection{Arquitectura}
 
-%\begin{figure}[hbtp]
-%\centering
-%\includegraphics[scale=.65]{./img/GMFArquitectura}
-%\caption{Arquitectura GMF}
-%\label{fig:GMFArquitectura}
-%\end{figure}
+En el diagrama de componentes que podemos ver en la figura \ref{fig:GMFArquitectura} se muestran las dependencias existentes entre el editor gráfico generado, el entorno GMF Runtime, \gls{emf}, \gls{gef} y la plataforma Eclipse. Como se puede ver, el editor gráfico \gls{gmf} depende del componente \gls{gmf} runtime, y a su vez hace uso directo de \gls{emf}, \gls{gef} y la plataforma Eclipse.
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=.75]{./img/GMFArquitectura}
+\caption{Arquitectura GMF}
+\label{fig:GMFArquitectura}
+\end{figure}
 
 
 \subsection{Modelos y flujo de trabajo}
 
-En el diagrama \ref{fig:GMFWorkflow} se encuentran los principales componentes y modelos usados durante el desarrollo de un editor gráfico mediante el framework \gls{gmf}. Entre ellos se encuentra el concepto de \textbf{modelo de definición gráfica}, el cual contiene toda la información relacionada con los elementos gráficos que formarán parte del editor, pero que no tiene ninguna conexión directa o es dependiente con ninguno de los componentes del modelo de dominio para el cual ofrecerá la representación y/o edición. También tenemos el \textbf{modelo de definición de herramientas} que es opcional y usado para el diseño de la paleta, el menú y las barras de herramientas.
+En el diagrama \ref{fig:GMFWorkflow} se encuentran los principales componentes y modelos usados durante el desarrollo de un editor gráfico mediante el framework \gls{gmf}. Entre ellos se encuentra el concepto de \textbf{modelo de definición gráfica}, el cual contiene toda la información relacionada con los elementos gráficos que formarán parte del editor (figuras, nodos, enlaces, etc), pero que no tiene ninguna conexión directa o es dependiente con ninguno de los componentes del modelo de dominio para el cual ofrecerá la representación y/o edición. También tenemos el \textbf{modelo de definición de herramientas} que es opcional y usado para el diseño de la paleta, el menú y las barras de herramientas.
 
 Tanto la definición gráfica como la de las herramientas pueden funcionar para modelos variados de dominios, éste es uno de los objetivos de \gls{gmf}, lograr que estas definiciones sean reusables para distintos dominios que se puedan presentar. Lo anterior se logra gracias al uso de un \textbf{modelo de asignación o mapeo}, que se encuentra separado y vincula las definiciones gráficas y las herramientas con los correspondientes modelos de dominios seleccionados.
 
@@ -944,15 +948,15 @@ Una vez fueron definidas los mapeos o asignaciones, \gls{gmf} dispone de un \tex
 \begin{enumerate}
 
 
-\item Create a domain model, this model defines the non-graphical information managed by the editor
+\item Creación del modelo del dominio, en este modelo se define la información no gráfica  que gestiona el editor.
 
-\item    Create a diagram definition model, this model defines graphical elements to be displayed in the editor
+\item Creación del modelo de definición gráfica, en el que se definen los elementos gráficos que se mostrarán/presentarán en el editor.
 
-\item    Create a diagram mapping model, this model defines mapping between domain model elements and graphical elements
+\item Creación del modelo de asignación gráfica, que es el que define la correspondencia entre los elementos del modelo del dominio con los elementos gráficos del modelo de definición gráfica.
 
-\item    Generate the graphical editor
+\item Generación del editor gráfico.
 
-\item    Enhance the graphical editor by editing the generated plug-in code
+\item Mejorar el editor gráfico por medio de la edición del código del plug-in generado.
 
 \end{enumerate}
 
