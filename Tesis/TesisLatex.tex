@@ -51,6 +51,7 @@
 \newacronym{case}{CASE}{Computer Aided Software Engineering}
 \newacronym{qvt}{QVT}{Query/View/Transformation}
 \newacronym{dsl}{DSL}{Domain-Specific Language}
+\newacronym{atl}{ATL}{Atlas Transformation Language}
 
 
 
@@ -779,6 +780,7 @@ Eclipse hace uso de la \gls{epl}, dicha licencia comercial permite a las organiz
 
 
 \subsection{La plataforma Eclipse}
+\label{subsec:PlatEclipse}
 
 La plataforma Eclipse es un framework para la construcción de \glspl{ide}, el mismo ha sido descripto como ``un ambiente para cualquier cosa y nada en particular''. La plataforma define simplemente la estructura básica del \gls{ide}, luego mediante la definición de herramientas específicas que amplían y se conectan al framework terminan definiendo un \gls{ide} particular de forma colectiva.
 
@@ -966,7 +968,32 @@ Una vez fueron definidas los mapeos o asignaciones, \gls{gmf} dispone de un \tex
 Más información sobre el framework \gls{gmf} se puede obtener en \cite{GMP}, \cite{IntroGMFRuntime} y \cite{GMFTutorial}.
 
 
-\section{ATL}
+\section{Atlas Transformation Language}
+
+A continuación se da una introducción a la tecnología \gls{atl}, que no solo refiere a un lenguaje de transformación de modelos como su nombre puede confundir, sino que además trata de un conjunto de herramientas de desarrollo construidas para ser ejecutadas sobre la Plataforma Eclipse introducida en \ref{subsec:PlatEclipse}.
+
+
+\subsection{Una tecnología de transformación de modelos}
+
+En el campo de \gls{mde}, \gls{atl} nos ofrece un medio para especificar la forma de producir un conjunto de modelos resultados/destinos a partir de un conjunto de modelos fuentes.
+
+El lenguaje \gls{atl} es un híbrido de la programación declarativa e imperativa, dado que aunque el estilo declarativo es el más conveniente para la definición de las transformaciones, \gls{atl} también provee la posibilidad de construcciones imperativas con el fin de facilitar la especificación de algunos mapeos que en forma declarativa pueden llegar a resultar muy complejos de expresar.
+
+Por otro lado, el \gls{ide} \gls{atl} provee un conjunto de herramientas estándar (resaltado de sintaxis, auto-completado de código, depurador, etc) con el fin de facilitar el desarrollo de las transformaciones mediante este lenguaje.
+
+
+
+\subsection{Algunos conceptos}
+
+Un modelo fuente se transforma en un modelo destino gracias a la definición de una transformación escrita en \gls{atl}, la cual también es un modelo. Los modelos fuente, destino y la definición de la transformación, cada uno conforman a sus respectivos meta-modelos y, a su vez, todos los meta-modelos se ajustan a \gls{mof} o Ecore. Una transformación \gls{atl} es unidireccional, o sea que trabaja sobre un modelo fuente de solo lectura y produce un modelo destino de solo escritura. Durante la ejecución de una transformación, el modelo fuente puede ser navegado pero no cambiado, en cambio el modelo destino no puede ser navegado.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=.65]{./img/ATL-concepts}
+\caption{Modelos, transformaciones y sus meta-modelos}
+\label{ATL-concepts}
+\end{figure}
+
 
 \section{QVT}
 
@@ -1220,6 +1247,8 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \bibitem{IntroGMFRuntime} Frederic Plante, IBM: Introducing the GMF Runtime, January 2006 \url{http://www.eclipse.org/articles/Article-Introducing-GMF/article.html}
 
 \bibitem{GMFTutorial} Graphical Modeling Framework - Tutorial - Part 1 \url{http://wiki.eclipse.org/Graphical_Modeling_Framework/Tutorial/Part_1}
+
+\bibitem{ATL} ATL Eclipse Project \url{http://www.eclipse.org/atl/}.
 
 \end{thebibliography}
 
