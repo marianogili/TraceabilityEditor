@@ -979,13 +979,15 @@ En el campo de \gls{mde}, \gls{atl} nos ofrece un medio para especificar la form
 
 El lenguaje \gls{atl} es un híbrido de la programación declarativa e imperativa, dado que aunque el estilo declarativo es el más conveniente para la definición de las transformaciones, \gls{atl} también provee la posibilidad de construcciones imperativas con el fin de facilitar la especificación de algunos mapeos que en forma declarativa pueden llegar a resultar muy complejos de expresar.
 
-Por otro lado, el \gls{ide} \gls{atl} provee un conjunto de herramientas estándar (resaltado de sintaxis, auto-completado de código, depurador, etc) con el fin de facilitar el desarrollo de las transformaciones mediante este lenguaje.
+Por otro lado, el \gls{ide} \gls{atl} provee un conjunto de herramientas estándar con el fin de facilitar el desarrollo de las transformaciones mediante este lenguaje como el  resaltado de sintaxis, el auto-completado de código, un depurador, entre otras.
 
 
 
 \subsection{Algunos conceptos}
 
-Un modelo fuente se transforma en un modelo destino gracias a la definición de una transformación escrita en \gls{atl}, la cual también es un modelo. Los modelos fuente, destino y la definición de la transformación, cada uno conforman a sus respectivos meta-modelos y, a su vez, todos los meta-modelos se ajustan a \gls{mof} o Ecore. Una transformación \gls{atl} es unidireccional, o sea que trabaja sobre un modelo fuente de solo lectura y produce un modelo destino de solo escritura. Durante la ejecución de una transformación, el modelo fuente puede ser navegado pero no cambiado, en cambio el modelo destino no puede ser navegado.
+Un modelo fuente se transforma en un modelo destino gracias a la definición de una transformación escrita en \gls{atl}, la cual también es un modelo. Los modelos fuente, destino y la definición de la transformación, cada uno conforman a sus respectivos meta-modelos y, a su vez, todos los meta-modelos se ajustan a \gls{mof} o Ecore. Esta relación se puede observar en la imagen \ref{ATL-concepts}.
+
+Una transformación \gls{atl} es unidireccional, o sea que trabaja sobre un modelo fuente de solo lectura y produce un modelo destino de solo escritura. Durante la ejecución de una transformación, el modelo fuente puede ser navegado pero no cambiado, en cambio el modelo destino no puede ser navegado.
 
 \begin{figure}[hbtp]
 \centering
@@ -995,7 +997,25 @@ Un modelo fuente se transforma en un modelo destino gracias a la definición de 
 \end{figure}
 
 
+\subsection{Más información}
+
+Más información sobre la tecnología \gls{atl} se puede encontrar en la sección de documentación de la página del proyecto \cite[\url{www.eclipse.org/atl/}]{ATL}.
+
+
 \section{QVT}
+
+Por último en este capítulo dedicado a las tecnologías que forman parte de la presente tesis, se introduce el estándar para transformaciones especificado por la \gls{omg}, el lenguaje \gls{qvt}.
+
+
+\subsection{Introducción a QVT}
+
+\gls{qvt} como ya se dijo antes es el estándar de \gls{omg} para transformaciones. La especificación de \gls{qvt} tiene una naturaleza híbrida, relacional (o declarativa) y operacional (o imperativa). Comprende tres diferentes lenguajes M2M: dos lenguajes declarativos llamados Relations y Core, y un tercer lenguaje, de naturaleza imperativa, llamado Operational Mappings. Esta naturaleza híbrida fue introducida para cubrir diferentes tipos de usuarios con diferentes necesidades, requisitos y hábitos. La especificación de \gls{qvt} define tres paquetes principales, uno por cada lenguaje definido: QVTCore, QVTRelation y QVTOperational, como puede observarse en la figura 6-1. Estos paquetes principales se comunican entre sí y comparten otros paquetes intermedios (ver la figura 6-2).
+
+\subsection{Más información}
+
+Para información más técnica y ejemplos se puede consultar el documento de especificación \gls{mof} Query/View/Transformation \cite{QVT}.
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1249,6 +1269,11 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \bibitem{GMFTutorial} Graphical Modeling Framework - Tutorial - Part 1 \url{http://wiki.eclipse.org/Graphical_Modeling_Framework/Tutorial/Part_1}
 
 \bibitem{ATL} ATL Eclipse Project \url{http://www.eclipse.org/atl/}.
+
+\bibitem{QVT} Meta Object Facility (MOF) 2.0 Query/View/Transformation Specification. Version 1.1, January 2011 - Version 1.0, April 2008. \url{http://www.omg.org/spec/QVT/index.htm}.
+
+\bibitem{DSDPM} C. Pons, R. Giandini y G. Pérez: Desarrollo de Software Dirigido por Modelos. Conceptos teóricos y su aplicación práctica. Facultad de Informática, Universidad Nacional de La Plata. Octubre de 2008.
+
 
 \end{thebibliography}
 
