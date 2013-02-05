@@ -52,6 +52,7 @@
 \newacronym{qvt}{QVT}{Query/View/Transformation}
 \newacronym{dsl}{DSL}{Domain-Specific Language}
 \newacronym{atl}{ATL}{Atlas Transformation Language}
+\newacronym{mmt}{MMT}{Model-to-Model Transformation}
 
 
 
@@ -983,7 +984,7 @@ Por otro lado, el \gls{ide} \gls{atl} provee un conjunto de herramientas estánd
 
 
 
-\subsection{Algunos conceptos}
+\subsection{Conceptos de ATL}
 
 Un modelo fuente se transforma en un modelo destino gracias a la definición de una transformación escrita en \gls{atl}, la cual también es un modelo. Los modelos fuente, destino y la definición de la transformación, cada uno conforman a sus respectivos meta-modelos y, a su vez, todos los meta-modelos se ajustan a \gls{mof} o Ecore. Esta relación se puede observar en la imagen \ref{ATL-concepts}.
 
@@ -1009,11 +1010,51 @@ Por último en este capítulo dedicado a las tecnologías que forman parte de la
 
 \subsection{Introducción a QVT}
 
-\gls{qvt} como ya se dijo antes es el estándar de \gls{omg} para transformaciones. La especificación de \gls{qvt} tiene una naturaleza híbrida, relacional (o declarativa) y operacional (o imperativa). Comprende tres diferentes lenguajes M2M: dos lenguajes declarativos llamados Relations y Core, y un tercer lenguaje, de naturaleza imperativa, llamado Operational Mappings. Esta naturaleza híbrida fue introducida para cubrir diferentes tipos de usuarios con diferentes necesidades, requisitos y hábitos. La especificación de \gls{qvt} define tres paquetes principales, uno por cada lenguaje definido: QVTCore, QVTRelation y QVTOperational, como puede observarse en la figura 6-1. Estos paquetes principales se comunican entre sí y comparten otros paquetes intermedios (ver la figura 6-2).
+\gls{qvt} como ya se dijo antes es el estándar de \gls{omg} para la definición de transformaciones. La especificación de \gls{qvt} es híbrida, como en el caso de \gls{atl}, relacional (o declarativa) y operacional (o imperativa). Comprende tres diferentes lenguajes \gls{mmt}: dos lenguajes declarativos llamados Relations y Core, y un tercer lenguaje, de naturaleza imperativa, llamado Operational Mappings. Puede observarse la relación de los meta-modelos de cada uno de los lenguajes en la figura \ref{QVTmetamodelos}. 
+
+La naturaleza híbrida de este estándar fue introducida para abarcar distintos tipos de usuarios con diferentes necesidades, requisitos y hábitos.
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=.65]{./img/metamodelosQVT}
+\caption{Relación entre los meta-modelos QVT}
+\label{QVTmetamodelos}
+\end{figure}
+
+
+\subsection{Lenguajes QVT}
+
+
+\subsubsection{QVT declarativo}
+
+
+\paragraph{Relations}
+
+Es un lenguaje amigable para el usuario, que soporta pattern matching complejo y la creación de templates para objetos. Tiene creación de trazas implícita. También incluye la propagación de cambios, ya que provee un mecanismo para identificar elementos del modelo destino. 
+
+\paragraph{Core}
+
+Es un lenguaje pequeño con un soporte de pattern matching acotado. Tiene traceability explícito y las trazas pueden crearse y borrarse como cualquier otro objeto. Es igual de poderoso semánticamente que el lenguaje Relations pero trabaja a un nivel más bajo de abstracción. Esta propuesta absolutamente minimal lleva a que el lenguaje Core sea usado como un “assembler” de los lenguajes de transformación.
+
+
+\subsubsection{QVT imperativo}
+
+
+\paragraph{Operational Mappings}
+
+Este lenguaje se especificó como una forma estándar para proveer implementaciones imperativas de transformaciones unidireccionales. También como el lenguaje Relations, dispone de creación de trazas implícita sobre el mismo modelo de trazas.
+
+
+\paragraph{Implementaciones Black-box}
+
+Estas implementaciones de caja negra, permite escribir transformaciones en otro lenguaje distinto a \gls{qvt}. Una implementación de este tipo no tiene
+relación explicita con el lenguaje Relations, aunque una caja negra podría implementar una Relation, la misma debe ser responsable de mantener las trazas entre los elementos relacionados.
+
 
 \subsection{Más información}
 
-Para información más técnica y ejemplos se puede consultar el documento de especificación \gls{mof} Query/View/Transformation \cite{QVT}.
+Para obtener más información introductoria consultar \cite{DSDPM}. Para más detalles técnicos y ejemplos se puede leer el documento de especificación \gls{mof} Query/View/Transformation \cite{QVT}.
 
 
 

@@ -52,11 +52,12 @@
 \BOOKMARK [2][-]{subsection.5.3.4}{M\341s informaci\363n}{section.5.3}
 \BOOKMARK [1][-]{section.5.4}{Atlas Transformation Language}{chapter.5}
 \BOOKMARK [2][-]{subsection.5.4.1}{Una tecnolog\355a de transformaci\363n de modelos}{section.5.4}
-\BOOKMARK [2][-]{subsection.5.4.2}{Algunos conceptos}{section.5.4}
+\BOOKMARK [2][-]{subsection.5.4.2}{Conceptos de ATL}{section.5.4}
 \BOOKMARK [2][-]{subsection.5.4.3}{M\341s informaci\363n}{section.5.4}
 \BOOKMARK [1][-]{section.5.5}{QVT}{chapter.5}
 \BOOKMARK [2][-]{subsection.5.5.1}{Introducci\363n a QVT}{section.5.5}
-\BOOKMARK [2][-]{subsection.5.5.2}{M\341s informaci\363n}{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.2}{Lenguajes QVT}{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.3}{M\341s informaci\363n}{section.5.5}
 \BOOKMARK [0][-]{chapter.6}{Trabajos relacionados}{}
 \BOOKMARK [1][-]{section.6.1}{Un motor de traceability de transformaci\363n de modelos en la Ingenier\355a de Software}{chapter.6}
 \BOOKMARK [1][-]{section.6.2}{Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line \(SPL\)}{chapter.6}
@@ -68,6 +69,6 @@
 \BOOKMARK [2][-]{subsection.6.5.1}{Meta-modelo de Traceability Local}{section.6.5}
 \BOOKMARK [2][-]{subsection.6.5.2}{Meta-modelo de Traceability Global}{section.6.5}
 \BOOKMARK [2][-]{subsection.6.5.3}{\277C\363mo trabaja el framework?}{section.6.5}
-\BOOKMARK [0][-]{chapter*.58}{Conclusi\363n}{}
-\BOOKMARK [0][-]{section*.59}{Glosario}{}
-\BOOKMARK [0][-]{section*.61}{Siglas}{}
+\BOOKMARK [0][-]{chapter*.64}{Conclusi\363n}{}
+\BOOKMARK [0][-]{section*.65}{Glosario}{}
+\BOOKMARK [0][-]{section*.67}{Siglas}{}
