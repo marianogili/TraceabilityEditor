@@ -62,11 +62,13 @@
 \contentsline {subsection}{\numberline {3.5.1}Clasificaci\IeC {\'o}n de enlaces de trazas impl\IeC {\'\i }cita}{20}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Clasificaci\IeC {\'o}n de enlaces de trazas expl\IeC {\'\i }citos}{21}{subsection.3.5.2}
 \contentsline {chapter}{\numberline {4}Manos a la obra}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introducci\IeC {\'o}n}{23}{section.4.1}
+\contentsline {section}{\numberline {4.1}Esquema de traceability}{23}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Introducci\IeC {\'o}n}{23}{subsection.4.1.1}
 \contentsline {section}{\numberline {4.2}El esquema de traceability}{24}{section.4.2}
 \contentsline {subsubsection}{Clases fundamentales}{25}{section*.34}
 \contentsline {subsubsection}{Configuraci\IeC {\'o}n del esquema}{25}{section*.35}
-\contentsline {section}{\numberline {4.3}Lo que no ofrece}{25}{section.4.3}
+\contentsline {subsection}{\numberline {4.2.1}Lo que no ofrece}{25}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}El prototipo}{26}{section.4.3}
 \contentsline {chapter}{\numberline {5}Descripci\IeC {\'o}n de tecnolog\IeC {\'\i }as}{27}{chapter.5}
 \contentsline {section}{\numberline {5.1}Eclipse}{27}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}El proyecto}{27}{subsection.5.1.1}
@@ -104,17 +106,18 @@
 \contentsline {paragraph}{Flujo de trabajo}{35}{section*.57}
 \contentsline {subsection}{\numberline {5.3.4}M\IeC {\'a}s informaci\IeC {\'o}n}{36}{subsection.5.3.4}
 \contentsline {section}{\numberline {5.4}Atlas Transformation Language}{36}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Una tecnolog\IeC {\'\i }a de transformaci\IeC {\'o}n de modelos}{36}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.1}\IeC {\textquestiondown }Qu\IeC {\'e} es ATL?}{36}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2}Conceptos de ATL}{36}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}M\IeC {\'a}s informaci\IeC {\'o}n}{37}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}QVT}{37}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Introducci\IeC {\'o}n a QVT}{37}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.4.3}El lenguaje ATL}{37}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}M\IeC {\'a}s informaci\IeC {\'o}n}{38}{subsection.5.4.4}
+\contentsline {section}{\numberline {5.5}QVT}{38}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Introducci\IeC {\'o}n a QVT}{38}{subsection.5.5.1}
 \contentsline {subsection}{\numberline {5.5.2}Lenguajes QVT}{38}{subsection.5.5.2}
 \contentsline {subsubsection}{QVT declarativo}{38}{section*.58}
 \contentsline {paragraph}{Relations}{38}{section*.59}
-\contentsline {paragraph}{Core}{38}{section*.60}
-\contentsline {subsubsection}{QVT imperativo}{38}{section*.61}
-\contentsline {paragraph}{Operational Mappings}{38}{section*.62}
+\contentsline {paragraph}{Core}{39}{section*.60}
+\contentsline {subsubsection}{QVT imperativo}{39}{section*.61}
+\contentsline {paragraph}{Operational Mappings}{39}{section*.62}
 \contentsline {paragraph}{Implementaciones Black-box}{39}{section*.63}
 \contentsline {subsection}{\numberline {5.5.3}M\IeC {\'a}s informaci\IeC {\'o}n}{39}{subsection.5.5.3}
 \contentsline {chapter}{\numberline {6}Trabajos relacionados}{40}{chapter.6}

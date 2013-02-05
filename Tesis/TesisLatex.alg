@@ -101,3 +101,5 @@ Cannot locate xindy module for language spanish in codepage utf8.
 Retrying using default codepage.
 Cannot locate xindy module for language spanish.
 Retrying with -L general
+
+sh: 1: xindy: not found

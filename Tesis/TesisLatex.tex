@@ -676,7 +676,11 @@ El alcance de Model-Artefact Link es muy amplio, por tal motivo es esta clasific
 
 En este capítulo se introduce, desarrolla y fundamenta el esquema de traceability propuesto en la presente tesis.
 
-\section{Introducción}
+
+\section{Esquema de traceability}
+
+
+\subsection{Introducción}
 \label{sec:EsquemaPropIntro}
 
 La idea fundamental es lograr un meta-modelo bien simple en el que se capture solamente las ideas más relevantes de traceability y se almacene la información mínima necesaria. Gracias a todo lo anterior, y solo así, logramos obtener el concepto deseable de independencia del modelo con respecto al dominio en el que se quiera utilizar la funcionalidad de traceability. Concepto necesario para poder llegar a definir un esquema de propósito general que apunte principalmente a dar solución a los siguientes desafíos:
@@ -726,7 +730,7 @@ Esta parte refleja la configuración necesaria para lograr un esquema adaptable 
 Un ejemplo de una configuración de tipos de trazas puede ser la jerarquía propuesta en la sección \ref{sec:ClasificacionTraceability}, que se puede ver siguiendo los diagramas \ref{fig:ClasifInicial}, \ref{fig:LinksImplicitos} y \ref{fig:LinksExplicitos}.
 
 
-\section{Lo que no ofrece}
+\subsection{Lo que no ofrece}
 
 A continuación se lista un conjunto de aspectos y/o funcionalidades que el esquema propuesto actual no ofrece o tiene en cuenta:
 
@@ -737,6 +741,10 @@ A continuación se lista un conjunto de aspectos y/o funcionalidades que el esqu
 \item métodos de detección o información de errores: que determine o informe cuando una traza es inválida.
 
 \end{itemize}
+
+
+\section{El prototipo}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% tecnologías %%%%%
@@ -971,10 +979,10 @@ Más información sobre el framework \gls{gmf} se puede obtener en \cite{GMP}, \
 
 \section{Atlas Transformation Language}
 
-A continuación se da una introducción a la tecnología \gls{atl}, que no solo refiere a un lenguaje de transformación de modelos como su nombre puede confundir, sino que además trata de un conjunto de herramientas de desarrollo construidas para ser ejecutadas sobre la Plataforma Eclipse introducida en \ref{subsec:PlatEclipse}.
+A continuación se da una introducción a la tecnología \gls{atl}, que no solo refiere a un lenguaje de transformación de modelos como su nombre puede confundir, sino que además trata de un conjunto de herramientas de desarrollo construidas para ser ejecutadas sobre la Plataforma Eclipse (introducida en \ref{subsec:PlatEclipse}).
 
 
-\subsection{Una tecnología de transformación de modelos}
+\subsection{¿Qué es ATL?}
 
 En el campo de \gls{mde}, \gls{atl} nos ofrece un medio para especificar la forma de producir un conjunto de modelos resultados/destinos a partir de un conjunto de modelos fuentes.
 
@@ -996,6 +1004,15 @@ Una transformación \gls{atl} es unidireccional, o sea que trabaja sobre un mode
 \caption{Modelos, transformaciones y sus meta-modelos}
 \label{ATL-concepts}
 \end{figure}
+
+
+\subsection{El lenguaje ATL}
+
+En este lenguaje de transformaciones modelo a modelo o \gls{mmt}, las operaciones de transformación son especificadas mediante módulos \gls{atl}. Cada módulo \gls{atl} permite a un desarrollador especificar la forma de producir un conjunto de modelos resultados desde un conjunto de modelos fuentes/orígenes. 
+
+Además de módulos, este lenguaje permite crear programas que transforman modelos en tipos de datos primitivos (como booleanos, enteros o cadenas), lo cual se logra mediante la especificación de unidades llamadas \gls{atl} queries.
+
+Por último \gls{atl} ofrece la posibilidad de desarrollar librerías independientes que pueden ser importadas a lo largo de diferentes tipos de unidades \glspl{atl}. Ésto nos da una forma conveniente de factorizar el código que va a ser usado por muchas unidades \gls{atl}.
 
 
 \subsection{Más información}
