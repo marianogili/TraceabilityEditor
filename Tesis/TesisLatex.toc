@@ -69,6 +69,7 @@
 \contentsline {subsubsection}{Configuraci\IeC {\'o}n del esquema}{25}{section*.35}
 \contentsline {subsection}{\numberline {4.2.1}Lo que no ofrece}{25}{subsection.4.2.1}
 \contentsline {section}{\numberline {4.3}El prototipo}{26}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}\IeC {\textquestiondown }Cu\IeC {\'a}l es la idea?}{26}{subsection.4.3.1}
 \contentsline {chapter}{\numberline {5}Descripci\IeC {\'o}n de tecnolog\IeC {\'\i }as}{27}{chapter.5}
 \contentsline {section}{\numberline {5.1}Eclipse}{27}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}El proyecto}{27}{subsection.5.1.1}

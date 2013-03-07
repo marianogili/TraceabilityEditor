@@ -1,6 +1,6 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 05.02.2013  11:44:45
-;; Indexstyle: "/tmp/UslTNilxv7", Rawindex: "/tmp/7khfCl1xYv", Output: "TesisLatex.acr"
+;; at 18.02.2013  17:47:18
+;; Indexstyle: "/tmp/bvmBEjubm2", Rawindex: "/tmp/SGnmeN0edu", Output: "TesisLatex.acr"
 
 
 Building indexentry-tree:
@@ -62,8 +62,8 @@ Letter-group: "¬Ú" -> "J"
 Letter-group: "»œ" -> "G"
 Letter-group: "—œ" -> "G"
 Letter-group: "€Ú´" -> "A"
-Letter-group: "ÊåÚ" -> "Q"
 Letter-group: "»»Ú" -> "M"
+Letter-group: "ÊåÚ" -> "Q"
 Letter-group: "ÐÈ´" -> "S"
 Letter-group: "†€Ð—" -> "C"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
@@ -101,5 +101,3 @@ Cannot locate xindy module for language spanish in codepage utf8.
 Retrying using default codepage.
 Cannot locate xindy module for language spanish.
 Retrying with -L general
-
-sh: 1: xindy: not found
