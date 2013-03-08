@@ -700,6 +700,7 @@ La idea fundamental es lograr un meta-modelo bien simple en el que se capture so
 \end{itemize}
 
 \section{El esquema de traceability}
+\label{sec:EsquemaTraceability}
 
 Con el fin de lograr respetar todas las consignas fundamentales listadas en \ref{sec:EsquemaPropIntro}, se definió una propuesta de un esquema de traceability que se encuentra representado mediante un diagrama de clases que se puede observar en el dibujo \ref{fig:EsquenaPropuesto}.
 
@@ -745,11 +746,29 @@ A continuación se lista un conjunto de aspectos y/o funcionalidades que el esqu
 
 \section{El prototipo}
 
-En la presente sección se explica y presenta el prototipo desarrollado como ejemplo de la idea de la herramienta de traceability propuesta en la tesis.
+En la presente sección se explica y presenta el prototipo desarrollado  para presentar la idea de la herramienta de traceability propuesta en la tesis.
 
-\subsection{¿Cuál es la idea?}
 
-La idea es lograr una herramienta que dada una definición de una transformación conjunto con sus modelos de entrada para su ejecución y sus modelos resultados, retorne el mapa de trazas 
+\subsection{La herramienta}
+
+La idea es lograr una herramienta que dada la definición de una transformación en conjunto con sus modelos de entrada y modelos resultados de su ejecución, retorne y muestre el mapa de trazas que se generará implícitamente producto de la transformación definida. El modelo del mapa de trazas se encuentra definido según el esquema de traceability propuesto y presentado en \ref{sec:EsquemaTraceability}.
+
+El prototipo de la herramienta propuesta trabaja sobre transformaciones \gls{qvt}, pero en la sección 
+
+
+\subsubsection{Arquitectura}
+
+
+
+\section{Traceability en ATL}
+\label{sec:ATLTtraceability}
+
+La información de traceability forma parte del lenguaje \gls{atl}, ésta ayuda en la interacción de cada regla de transformación cuando necesita tomar la salida de alguna otra regla por medio del mecanismo interno de traceability implícito. Sin embargo, actualmente \gls{atl} ofrece un acceso muy limitado a dicha información de traceability sólo por medio del método resolveTemp(). Además, ésta información es eliminada ni bien la ejecución de la transformación termina. Dada las carencias enumeradas antes, para lograr obtener alguna información de traceability en esta tecnología es necesario implementar de dicha funcionalidad.
+
+Existen varias propuestas de implementación, una de ellas, la que se presenta en \cite{Jouault} en donde propone considerar tanto a los programas de transformación como a la información de traceability como modelos, entonces mediante la definición de una nueva transformación modificar los programas para que generen la información de traceability como una salida más al modelo resultado original. Con este enfoque, la generación de código de traceability está claramente separada de la lógica de la transformación y la misma se puede agregar después de que un programa haya sido escrito. Por lo cual, es posible añadir el soporte para nuevos formatos o modificar la granularidad o rango de las trazas sin interferir con la lógica del programa.
+
+Otras propuestas hacen uso del mecanismo de traceability implícito de \gls{atl}, como copiar toda la información de trazas durante la ejecución de la transformación, o directamente persistirla y dejarla accesible en un archivo aparte, pero para todas estas implementaciones se requiere de modificaciones del motor de ejecución de \gls{atl}.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%

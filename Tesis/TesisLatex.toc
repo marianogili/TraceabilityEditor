@@ -69,69 +69,71 @@
 \contentsline {subsubsection}{Configuraci\IeC {\'o}n del esquema}{25}{section*.35}
 \contentsline {subsection}{\numberline {4.2.1}Lo que no ofrece}{25}{subsection.4.2.1}
 \contentsline {section}{\numberline {4.3}El prototipo}{26}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}\IeC {\textquestiondown }Cu\IeC {\'a}l es la idea?}{26}{subsection.4.3.1}
-\contentsline {chapter}{\numberline {5}Descripci\IeC {\'o}n de tecnolog\IeC {\'\i }as}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Eclipse}{27}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}El proyecto}{27}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}La plataforma Eclipse}{28}{subsection.5.1.2}
-\contentsline {subsubsection}{Arquitectura de plugins}{28}{section*.36}
-\contentsline {subsubsection}{Workspace}{29}{section*.37}
-\contentsline {paragraph}{Resource}{29}{section*.38}
-\contentsline {paragraph}{Project}{29}{section*.39}
-\contentsline {paragraph}{Workspace}{29}{section*.40}
-\contentsline {subsubsection}{Workbench}{29}{section*.41}
-\contentsline {paragraph}{Editores}{29}{section*.42}
-\contentsline {paragraph}{Vistas}{29}{section*.43}
-\contentsline {paragraph}{Perspectivas}{29}{section*.44}
-\contentsline {subsection}{\numberline {5.1.3}Resumen y m\IeC {\'a}s informaci\IeC {\'o}n}{29}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Eclipse Modeling Framework}{30}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}El framework EMF}{30}{subsection.5.2.1}
-\contentsline {paragraph}{EMF}{31}{section*.45}
-\contentsline {paragraph}{EMF.Edit}{31}{section*.46}
-\contentsline {paragraph}{EMF.Codegen}{31}{section*.47}
-\contentsline {subparagraph}{Model}{31}{section*.48}
-\contentsline {subparagraph}{Adapters}{31}{section*.49}
-\contentsline {subparagraph}{Editor}{31}{section*.50}
-\contentsline {subsection}{\numberline {5.2.2}El (Meta) modelo Ecore}{32}{subsection.5.2.2}
-\contentsline {paragraph}{EClass}{32}{section*.51}
-\contentsline {paragraph}{EAttribute}{32}{section*.52}
-\contentsline {paragraph}{EReference}{32}{section*.53}
-\contentsline {paragraph}{EDataType}{33}{section*.54}
-\contentsline {subsection}{\numberline {5.2.3}Beneficios y m\IeC {\'a}s informaci\IeC {\'o}n}{33}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Graphical Modeling Framework}{33}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}El framework GMF}{33}{subsection.5.3.1}
-\contentsline {subparagraph}{GMF Tooling}{33}{section*.55}
-\contentsline {subparagraph}{GMF Runtime}{33}{section*.56}
-\contentsline {subsection}{\numberline {5.3.2}Arquitectura}{34}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Modelos y flujo de trabajo}{34}{subsection.5.3.3}
-\contentsline {paragraph}{Flujo de trabajo}{35}{section*.57}
-\contentsline {subsection}{\numberline {5.3.4}M\IeC {\'a}s informaci\IeC {\'o}n}{36}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Atlas Transformation Language}{36}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}\IeC {\textquestiondown }Qu\IeC {\'e} es ATL?}{36}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Conceptos de ATL}{36}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}El lenguaje ATL}{37}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}M\IeC {\'a}s informaci\IeC {\'o}n}{38}{subsection.5.4.4}
-\contentsline {section}{\numberline {5.5}QVT}{38}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Introducci\IeC {\'o}n a QVT}{38}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Lenguajes QVT}{38}{subsection.5.5.2}
-\contentsline {subsubsection}{QVT declarativo}{38}{section*.58}
-\contentsline {paragraph}{Relations}{38}{section*.59}
-\contentsline {paragraph}{Core}{39}{section*.60}
-\contentsline {subsubsection}{QVT imperativo}{39}{section*.61}
-\contentsline {paragraph}{Operational Mappings}{39}{section*.62}
-\contentsline {paragraph}{Implementaciones Black-box}{39}{section*.63}
-\contentsline {subsection}{\numberline {5.5.3}M\IeC {\'a}s informaci\IeC {\'o}n}{39}{subsection.5.5.3}
-\contentsline {chapter}{\numberline {6}Trabajos relacionados}{40}{chapter.6}
-\contentsline {section}{\numberline {6.1}Un motor de traceability de transformaci\IeC {\'o}n de modelos en la Ingenier\IeC {\'\i }a de Software}{40}{section.6.1}
-\contentsline {section}{\numberline {6.2}Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line (SPL)}{41}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Meta-modelo de traceability}{43}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Arquitectura}{44}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Integraci\IeC {\'o}n de herramientas Case}{44}{section.6.3}
-\contentsline {section}{\numberline {6.4}Framework gen\IeC {\'e}rico de extracci\IeC {\'o}n de datos de traceability}{45}{section.6.4}
-\contentsline {section}{\numberline {6.5}Traceability local y global}{47}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Meta-modelo de Traceability Local}{47}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Meta-modelo de Traceability Global}{49}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}\IeC {\textquestiondown }C\IeC {\'o}mo trabaja el framework?}{49}{subsection.6.5.3}
-\contentsline {chapter}{Conclusi\IeC {\'o}n}{51}{chapter*.64}
-\contentsline {chapter}{Glosario}{52}{section*.65}
-\contentsline {chapter}{Siglas}{53}{section*.67}
+\contentsline {subsection}{\numberline {4.3.1}La herramienta}{26}{subsection.4.3.1}
+\contentsline {subsubsection}{Arquitectura}{26}{section*.36}
+\contentsline {section}{\numberline {4.4}Traceability en ATL}{26}{section.4.4}
+\contentsline {chapter}{\numberline {5}Descripci\IeC {\'o}n de tecnolog\IeC {\'\i }as}{28}{chapter.5}
+\contentsline {section}{\numberline {5.1}Eclipse}{28}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}El proyecto}{28}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}La plataforma Eclipse}{29}{subsection.5.1.2}
+\contentsline {subsubsection}{Arquitectura de plugins}{29}{section*.37}
+\contentsline {subsubsection}{Workspace}{30}{section*.38}
+\contentsline {paragraph}{Resource}{30}{section*.39}
+\contentsline {paragraph}{Project}{30}{section*.40}
+\contentsline {paragraph}{Workspace}{30}{section*.41}
+\contentsline {subsubsection}{Workbench}{30}{section*.42}
+\contentsline {paragraph}{Editores}{30}{section*.43}
+\contentsline {paragraph}{Vistas}{30}{section*.44}
+\contentsline {paragraph}{Perspectivas}{30}{section*.45}
+\contentsline {subsection}{\numberline {5.1.3}Resumen y m\IeC {\'a}s informaci\IeC {\'o}n}{30}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Eclipse Modeling Framework}{31}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}El framework EMF}{31}{subsection.5.2.1}
+\contentsline {paragraph}{EMF}{32}{section*.46}
+\contentsline {paragraph}{EMF.Edit}{32}{section*.47}
+\contentsline {paragraph}{EMF.Codegen}{32}{section*.48}
+\contentsline {subparagraph}{Model}{32}{section*.49}
+\contentsline {subparagraph}{Adapters}{32}{section*.50}
+\contentsline {subparagraph}{Editor}{32}{section*.51}
+\contentsline {subsection}{\numberline {5.2.2}El (Meta) modelo Ecore}{33}{subsection.5.2.2}
+\contentsline {paragraph}{EClass}{33}{section*.52}
+\contentsline {paragraph}{EAttribute}{33}{section*.53}
+\contentsline {paragraph}{EReference}{33}{section*.54}
+\contentsline {paragraph}{EDataType}{34}{section*.55}
+\contentsline {subsection}{\numberline {5.2.3}Beneficios y m\IeC {\'a}s informaci\IeC {\'o}n}{34}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Graphical Modeling Framework}{34}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}El framework GMF}{34}{subsection.5.3.1}
+\contentsline {subparagraph}{GMF Tooling}{34}{section*.56}
+\contentsline {subparagraph}{GMF Runtime}{34}{section*.57}
+\contentsline {subsection}{\numberline {5.3.2}Arquitectura}{35}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Modelos y flujo de trabajo}{35}{subsection.5.3.3}
+\contentsline {paragraph}{Flujo de trabajo}{36}{section*.58}
+\contentsline {subsection}{\numberline {5.3.4}M\IeC {\'a}s informaci\IeC {\'o}n}{37}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Atlas Transformation Language}{37}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}\IeC {\textquestiondown }Qu\IeC {\'e} es ATL?}{37}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Conceptos de ATL}{37}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}El lenguaje ATL}{38}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}M\IeC {\'a}s informaci\IeC {\'o}n}{39}{subsection.5.4.4}
+\contentsline {section}{\numberline {5.5}QVT}{39}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Introducci\IeC {\'o}n a QVT}{39}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Lenguajes QVT}{39}{subsection.5.5.2}
+\contentsline {subsubsection}{QVT declarativo}{39}{section*.59}
+\contentsline {paragraph}{Relations}{39}{section*.60}
+\contentsline {paragraph}{Core}{40}{section*.61}
+\contentsline {subsubsection}{QVT imperativo}{40}{section*.62}
+\contentsline {paragraph}{Operational Mappings}{40}{section*.63}
+\contentsline {paragraph}{Implementaciones Black-box}{40}{section*.64}
+\contentsline {subsection}{\numberline {5.5.3}M\IeC {\'a}s informaci\IeC {\'o}n}{40}{subsection.5.5.3}
+\contentsline {chapter}{\numberline {6}Trabajos relacionados}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}Un motor de traceability de transformaci\IeC {\'o}n de modelos en la Ingenier\IeC {\'\i }a de Software}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line (SPL)}{42}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Meta-modelo de traceability}{44}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Arquitectura}{45}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Integraci\IeC {\'o}n de herramientas Case}{45}{section.6.3}
+\contentsline {section}{\numberline {6.4}Framework gen\IeC {\'e}rico de extracci\IeC {\'o}n de datos de traceability}{46}{section.6.4}
+\contentsline {section}{\numberline {6.5}Traceability local y global}{48}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Meta-modelo de Traceability Local}{48}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Meta-modelo de Traceability Global}{50}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}\IeC {\textquestiondown }C\IeC {\'o}mo trabaja el framework?}{50}{subsection.6.5.3}
+\contentsline {chapter}{Conclusi\IeC {\'o}n}{52}{chapter*.65}
+\contentsline {chapter}{Glosario}{53}{section*.66}
+\contentsline {chapter}{Siglas}{54}{section*.68}
