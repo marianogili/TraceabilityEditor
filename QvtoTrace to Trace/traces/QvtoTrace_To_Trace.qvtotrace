@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:Trace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http:///www.eclipse.org/m2m/qvt/operational/trace.ecore">
+  <traceRecords>
+    <mappingOperation name="trace2TraceEditor" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="qvto:/module.env#//trace2TraceEditor"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Trace">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/Simpleuml_To_Rdb.qvtotrace#/"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceEditor">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/Simpleuml_To_Rdb.traceeditor#/"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="trace2Dashboard" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="qvto:/module.env#//trace2Dashboard"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Trace">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/Simpleuml_To_Rdb.qvtotrace#/"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Dashboard">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/Simpleuml_To_Rdb.traceeditor#//@dashboard"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+</trace:Trace>

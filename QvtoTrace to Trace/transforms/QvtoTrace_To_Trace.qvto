@@ -1,0 +1,40 @@
+modeltype TraceEditor uses 'http://traceeditor/TraceEditor';
+modeltype QvtoTrace uses 'http:///www.eclipse.org/m2m/qvt/operational/trace.ecore';
+		
+
+transformation QvtoTrace_To_Trace(in qvto : QvtoTrace, out TraceEditor);
+
+main() {
+	qvto.rootObjects()[QvtoTrace::Trace]->map trace2TraceEditor();
+}
+
+mapping QvtoTrace::Trace::trace2TraceEditor() : TraceEditor::TraceEditor {
+ 	dashboard :=  self.map trace2Dashboard();
+}
+
+mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
+	transformations := self.MappingsOperationsByName()->map mappingOperation2Transformation(); 
+	traceLinks := self.traceRecords[QvtoTrace::TraceRecord]->map traceRecord2TraceLink(result.transformations);	
+}
+
+mapping QvtoTrace::EMappingOperation::mappingOperation2Transformation() : TraceEditor::Transformation {
+	name := self.name;
+}
+
+mapping QvtoTrace::TraceRecord::traceRecord2TraceLink(in transformations : OrderedSet(TraceEditor::Transformation)) : TraceEditor::TraceLink {
+	name := self.mappingOperation.name;
+	_transformation := transformations->selectOne(t | t.name = name);
+}
+
+/*
+ * Retorna el listado de operaciones sin repeticiones por nombre.
+ */
+helper QvtoTrace::Trace::MappingsOperationsByName() : List(QvtoTrace::EMappingOperation) {
+	var names := self.traceRecords.mappingOperation->collect(name)->asSet();
+	var res : List(QvtoTrace::EMappingOperation) := List{};
+	names->forEach(n){
+		var temp := self.traceRecords.mappingOperation->selectOne(m | m.name = n);
+		res->append(temp);
+	};
+	return res;
+}
