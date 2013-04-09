@@ -13,19 +13,40 @@ mapping QvtoTrace::Trace::trace2TraceEditor() : TraceEditor::TraceEditor {
 }
 
 mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
-	transformations := self.MappingsOperationsByName()->map mappingOperation2Transformation(); 
-	traceLinks := self.traceRecords[QvtoTrace::TraceRecord]->map traceRecord2TraceLink(result.transformations);	
+	transformations := self.MappingsOperationsByName()->map mappingOperation2Transformation();
+	//traceLinks := self.traceRecords[QvtoTrace::TraceRecord].resolveIn(
+//		QvtoTrace::TraceRecord::traceRecord2TraceLink,
+	//	TraceEditor::TraceLink);
+	//traceLinks := self.traceRecords[QvtoTrace::TraceRecord]->map traceRecord2TraceLink();
 }
 
 mapping QvtoTrace::EMappingOperation::mappingOperation2Transformation() : TraceEditor::Transformation {
 	name := self.name;
+	traceLinks := self.container().container().oclAsType(QvtoTrace::Trace).TraceRecordsForMappingsOperationsByName(result.name)->
+		map traceRecord2TraceLink();
 }
 
+mapping QvtoTrace::TraceRecord::traceRecord2TraceLink() : TraceEditor::TraceLink {
+	name := self.mappingOperation.name;
+	_transformation := self.container().oclAsType(QvtoTrace::Trace).MappingsOperationsByName()->
+		selectOne(o | o.name = result.name).resolveoneIn(
+			QvtoTrace::EMappingOperation::mappingOperation2Transformation,
+			TraceEditor::Transformation);
+}
+
+/*
 mapping QvtoTrace::TraceRecord::traceRecord2TraceLink(in transformations : OrderedSet(TraceEditor::Transformation)) : TraceEditor::TraceLink {
 	name := self.mappingOperation.name;
 	_transformation := transformations->selectOne(t | t.name = name);
 }
-
+*/
+/*
+ * Retorna el listado de trazas para las operaciones que sean del nombre parámetro.
+ */
+helper QvtoTrace::Trace::TraceRecordsForMappingsOperationsByName(in operationName : String) : Set(QvtoTrace::TraceRecord) {
+	var traces := self.traceRecords->select(t | t.mappingOperation.name = operationName);
+	return traces;
+}
 /*
  * Retorna el listado de operaciones sin repeticiones por nombre.
  */
