@@ -10,14 +10,33 @@ main() {
 
 mapping QvtoTrace::Trace::trace2TraceEditor() : TraceEditor::TraceEditor {
  	dashboard :=  self.map trace2Dashboard();
+ 	_configuration := self.map trace2Configuration();
+}
+
+mapping QvtoTrace::Trace::trace2Configuration() : TraceEditor::Configuration {
+	//TODO: crear tipos coherentes a las transformaciones QVT.
+	linkTypes := OrderedSet{};
+	typeArtefacts := self.VarParametersValuesByName()-> map varParameterValue2TypeArtefact(); 
+}
+
+mapping QvtoTrace::VarParameterValue::varParameterValue2TypeArtefact() : TraceEditor::TypeArtefact {
+	name := self.type;
+	description := "";
 }
 
 mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
 	transformations := self.MappingsOperationsByName()->map mappingOperation2Transformation();
-	//traceLinks := self.traceRecords[QvtoTrace::TraceRecord].resolveIn(
-//		QvtoTrace::TraceRecord::traceRecord2TraceLink,
-	//	TraceEditor::TraceLink);
-	//traceLinks := self.traceRecords[QvtoTrace::TraceRecord]->map traceRecord2TraceLink();
+	// dado que las trazas de QVT son todas producto de transformaciones, la colección traceLinks se inicializa vacía.
+	traceLinks := OrderedSet{};
+	// TODO: acotar los sources a los contextos con name='self'
+	sourceArtefacts := self.traceRecords._context._context.map varParameterValue2Artefact();
+	targetArtefacts := self.traceRecords._result._result->map varParameterValue2Artefact(); 
+}
+
+mapping QvtoTrace::VarParameterValue::varParameterValue2Artefact() : TraceEditor::Artefact {
+	name := self.value.repr();
+	// TODO: crear los tipos y acá asociar el creado antes.
+	type := self.late resolveoneIn(QvtoTrace::VarParameterValue::varParameterValue2TypeArtefact, TraceEditor::TypeArtefact); 
 }
 
 mapping QvtoTrace::EMappingOperation::mappingOperation2Transformation() : TraceEditor::Transformation {
@@ -28,18 +47,21 @@ mapping QvtoTrace::EMappingOperation::mappingOperation2Transformation() : TraceE
 
 mapping QvtoTrace::TraceRecord::traceRecord2TraceLink() : TraceEditor::TraceLink {
 	name := self.mappingOperation.name;
-	_transformation := self.container().oclAsType(QvtoTrace::Trace).MappingsOperationsByName()->
-		selectOne(o | o.name = result.name).resolveoneIn(
+	// TODO: ver si ésto está bien
+	_transformation := self.container().oclAsType(QvtoTrace::Trace).TraceRecordsForMappingsOperationsByName(result.name).resolveoneIn(
 			QvtoTrace::EMappingOperation::mappingOperation2Transformation,
 			TraceEditor::Transformation);
+	sources := self._context._context.late resolveIn(
+		QvtoTrace::VarParameterValue::varParameterValue2Artefact,
+		TraceEditor::Artefact
+	);
+	targets := self._result._result.late resolveIn(
+		QvtoTrace::VarParameterValue::varParameterValue2Artefact,
+		TraceEditor::Artefact
+	); 
 }
 
-/*
-mapping QvtoTrace::TraceRecord::traceRecord2TraceLink(in transformations : OrderedSet(TraceEditor::Transformation)) : TraceEditor::TraceLink {
-	name := self.mappingOperation.name;
-	_transformation := transformations->selectOne(t | t.name = name);
-}
-*/
+
 /*
  * Retorna el listado de trazas para las operaciones que sean del nombre parámetro.
  */
@@ -47,6 +69,28 @@ helper QvtoTrace::Trace::TraceRecordsForMappingsOperationsByName(in operationNam
 	var traces := self.traceRecords->select(t | t.mappingOperation.name = operationName);
 	return traces;
 }
+
+/*
+ * Retorna el listado de tipos de artefactos sin repeticiones por nombre.
+ */
+helper QvtoTrace::Trace::VarParametersValuesByName() : List(QvtoTrace::VarParameterValue) {
+	// Primero los tipos de los artefactos orígenes.
+	var types := self.traceRecords._context._context.type;
+	var res : List(QvtoTrace::VarParameterValue) := List{};
+	types->forEach(t){
+		var temp := self.traceRecords._context._context->select(m | m.type = t)->first();
+		res->append(temp);
+	};
+	//TODO: diferenciar los tipos primitivos, objetos y colecciones.
+	// Luego los tipos de  los artefactos resultados.
+	types := self.traceRecords._result._result.type;
+	types->forEach(t){
+		var temp := self.traceRecords._result._result->select(m | m.type = t)->first();
+		res->append(temp);
+	};
+	return res;
+}
+
 /*
  * Retorna el listado de operaciones sin repeticiones por nombre.
  */
@@ -54,7 +98,7 @@ helper QvtoTrace::Trace::MappingsOperationsByName() : List(QvtoTrace::EMappingOp
 	var names := self.traceRecords.mappingOperation->collect(name)->asSet();
 	var res : List(QvtoTrace::EMappingOperation) := List{};
 	names->forEach(n){
-		var temp := self.traceRecords.mappingOperation->selectOne(m | m.name = n);
+		var temp := self.traceRecords.mappingOperation->select(m | m.name = n)->first();
 		res->append(temp);
 	};
 	return res;

@@ -1,123 +1,310 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <traceeditor:TraceEditor xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:traceeditor="http://traceeditor/1.0" xsi:schemaLocation="http://traceeditor/1.0 ../../TraceEditor/model/TraceEditor.ecore">
   <dashboard>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@5fe88f1c (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.0"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@21c42a11 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.1"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7735a802 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.2"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4cde0f64 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.3"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@15231496 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3c3df49 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4b149f76 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@75b3a77d (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6d1b985d (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.4"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@23aee5e5 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@13601bc5 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4796c862 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3197839a (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4e68d1d3 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3ce7c0f7 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@14aebbad (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6810c25 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4ae945c0 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4f7392ba (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@5e8b083b (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@56fe8ea0 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7bb62601 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@272004d3 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@5dc70315 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@ea28c46 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@2f20d8b2 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4f498a01 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@60ae948e (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7a5affef (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4b6458de (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@536dee1a (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@47c87671 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4984ac26 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7bd67447 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@2b3bcf39 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7756d89f (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@55fdd48f (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@422c05a7 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@77df718 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@239bccdf (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@b076f83 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3733f133 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6640e3ef (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@23422f65 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@36c94465 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@182766a4 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@63d866f1 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@168477ae (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7518040b (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4069dad0 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@541a0cbe (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6602ad6c (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@a11f432 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@70a380cb (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@5b59d288 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@cd548f5 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3ea4d4a7 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@2b4ef94c (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1b7dc1c9 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@474113a2 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1dff8a4e (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@52f557b2 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@57cffa71 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@54b0338a (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3a014e8 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1552dc19 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@5191b86 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@216a8202 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@2b4f6099 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@19485c1c (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@77577068 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1d28fca1 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4e99e5eb (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3d4efece (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1ebd9d73 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@38f30d2b (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@47a40fb7 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6931f35 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1f87d68c (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@74320c5d (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@2d023c91 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7540064f (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6293b190 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@2ea7c82 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@478ceec1 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@18e76cc6 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@314cde60 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.5"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3e7b3763 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.6"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@41858be5 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.7"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3a76ef83 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.8"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6b6de007 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4b2d05c2 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@72bfd23d (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1a4cc53f (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7d15936c (primitiveValue: null, oclObject: null, collectionType: OclCollection)" type="//@configuration/@typeArtefacts.9"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@31724cc5 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@752df2ea (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@78508f6e (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.10"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@5a1d6292 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@fe55e64 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@17ffcabc (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@480c9707 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6765ecb1 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6823b83b (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6062903e (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@11f97991 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@22f99011 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7a64355a (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@35c1fc4a (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1bb57e46 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@26a0cbe0 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3de56dfa (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@5707722d (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6af14528 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@344e4feb (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@127cf3c (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@17bc987a (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@2c327c26 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@393bc40c (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@153d8a14 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1fbac2c1 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@107384e3 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@70c78104 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7390e5f (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@2e5545f2 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@e83e177 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@769efe61 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@75ffdb8d (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@74ff1b47 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3d1477a1 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3bfde1dd (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@25cfd75e (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1d024f4f (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@14ff6681 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6441caeb (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@278b4ac2 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.11"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6c70ed10 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@65a8686d (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3b03209 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@48375700 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@494eafa6 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@15477e8a (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@2521f10f (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1cfdb919 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@15812737 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3c468382 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4ec6f377 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3c4ae05b (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7d5218a8 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@40cb4833 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@20e260bc (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6082feb1 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@dadc5ea (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@52d6f2da (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@5c818718 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@68c6a1a1 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@5dfad31a (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@710d447c (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7d886f88 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@62e8f6e1 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@62580db5 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@5a3d839b (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@232abbc4 (primitiveValue: null, oclObject: null, collectionType: null)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@43d5ea0 (primitiveValue: null, oclObject: null, collectionType: OclCollection)" type="//@configuration/@typeArtefacts.12"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7f851901 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3b92d44f (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4b33d3d2 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@45385473 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3e6672de (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6241ad5d (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@29c5ef45 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4b88a06 (primitiveValue: null, oclObject: null, collectionType: OclCollection)"/>
     <transformations name="class2columns">
-      <traceLinks name="class2columns"/>
-      <traceLinks name="class2columns"/>
-      <traceLinks name="class2columns"/>
-      <traceLinks name="class2columns"/>
-      <traceLinks name="class2columns"/>
+      <traceLinks name="class2columns" sources="//@dashboard/@sourceArtefacts.75" targets="//@dashboard/@targetArtefacts.75"/>
+      <traceLinks name="class2columns" sources="//@dashboard/@sourceArtefacts.46" targets="//@dashboard/@targetArtefacts.46"/>
+      <traceLinks name="class2columns" sources="//@dashboard/@sourceArtefacts.60" targets="//@dashboard/@targetArtefacts.60"/>
+      <traceLinks name="class2columns" sources="//@dashboard/@sourceArtefacts.48" targets="//@dashboard/@targetArtefacts.48"/>
+      <traceLinks name="class2columns" sources="//@dashboard/@sourceArtefacts.58" targets="//@dashboard/@targetArtefacts.58"/>
     </transformations>
     <transformations name="class2primaryKey">
-      <traceLinks name="class2primaryKey"/>
-      <traceLinks name="class2primaryKey"/>
-      <traceLinks name="class2primaryKey"/>
+      <traceLinks name="class2primaryKey" sources="//@dashboard/@sourceArtefacts.61" targets="//@dashboard/@targetArtefacts.61"/>
+      <traceLinks name="class2primaryKey" sources="//@dashboard/@sourceArtefacts.49" targets="//@dashboard/@targetArtefacts.49"/>
+      <traceLinks name="class2primaryKey" sources="//@dashboard/@sourceArtefacts.76" targets="//@dashboard/@targetArtefacts.76"/>
     </transformations>
     <transformations name="primitiveAttribute2column">
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
-      <traceLinks name="primitiveAttribute2column"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.65" targets="//@dashboard/@targetArtefacts.65"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.15" targets="//@dashboard/@targetArtefacts.15"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.5" targets="//@dashboard/@targetArtefacts.5"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.13" targets="//@dashboard/@targetArtefacts.13"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.3" targets="//@dashboard/@targetArtefacts.3"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.22" targets="//@dashboard/@targetArtefacts.22"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.14" targets="//@dashboard/@targetArtefacts.14"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.27" targets="//@dashboard/@targetArtefacts.27"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.51" targets="//@dashboard/@targetArtefacts.51"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.7" targets="//@dashboard/@targetArtefacts.7"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.12" targets="//@dashboard/@targetArtefacts.12"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.64" targets="//@dashboard/@targetArtefacts.64"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.25" targets="//@dashboard/@targetArtefacts.25"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.23" targets="//@dashboard/@targetArtefacts.23"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.17" targets="//@dashboard/@targetArtefacts.17"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.24" targets="//@dashboard/@targetArtefacts.24"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.63" targets="//@dashboard/@targetArtefacts.63"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.21" targets="//@dashboard/@targetArtefacts.21"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.4" targets="//@dashboard/@targetArtefacts.4"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.26" targets="//@dashboard/@targetArtefacts.26"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.39" targets="//@dashboard/@targetArtefacts.39"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.6" targets="//@dashboard/@targetArtefacts.6"/>
+      <traceLinks name="primitiveAttribute2column" sources="//@dashboard/@sourceArtefacts.16" targets="//@dashboard/@targetArtefacts.16"/>
     </transformations>
     <transformations name="relationshipAttributes2columns">
-      <traceLinks name="relationshipAttributes2columns"/>
-      <traceLinks name="relationshipAttributes2columns"/>
-      <traceLinks name="relationshipAttributes2columns"/>
-      <traceLinks name="relationshipAttributes2columns"/>
-      <traceLinks name="relationshipAttributes2columns"/>
-      <traceLinks name="relationshipAttributes2columns"/>
+      <traceLinks name="relationshipAttributes2columns" sources="//@dashboard/@sourceArtefacts.20" targets="//@dashboard/@targetArtefacts.20"/>
+      <traceLinks name="relationshipAttributes2columns" sources="//@dashboard/@sourceArtefacts.54" targets="//@dashboard/@targetArtefacts.54"/>
+      <traceLinks name="relationshipAttributes2columns" sources="//@dashboard/@sourceArtefacts.42" targets="//@dashboard/@targetArtefacts.42"/>
+      <traceLinks name="relationshipAttributes2columns" sources="//@dashboard/@sourceArtefacts.30" targets="//@dashboard/@targetArtefacts.30"/>
+      <traceLinks name="relationshipAttributes2columns" sources="//@dashboard/@sourceArtefacts.36" targets="//@dashboard/@targetArtefacts.36"/>
+      <traceLinks name="relationshipAttributes2columns" sources="//@dashboard/@sourceArtefacts.71" targets="//@dashboard/@targetArtefacts.71"/>
     </transformations>
     <transformations name="associationAttributes2columns">
-      <traceLinks name="associationAttributes2columns"/>
-      <traceLinks name="associationAttributes2columns"/>
-      <traceLinks name="associationAttributes2columns"/>
-      <traceLinks name="associationAttributes2columns"/>
-      <traceLinks name="associationAttributes2columns"/>
-      <traceLinks name="associationAttributes2columns"/>
+      <traceLinks name="associationAttributes2columns" sources="//@dashboard/@sourceArtefacts.37" targets="//@dashboard/@targetArtefacts.37"/>
+      <traceLinks name="associationAttributes2columns" sources="//@dashboard/@sourceArtefacts.31" targets="//@dashboard/@targetArtefacts.31"/>
+      <traceLinks name="associationAttributes2columns" sources="//@dashboard/@sourceArtefacts.72" targets="//@dashboard/@targetArtefacts.72"/>
+      <traceLinks name="associationAttributes2columns" sources="//@dashboard/@sourceArtefacts.55" targets="//@dashboard/@targetArtefacts.55"/>
+      <traceLinks name="associationAttributes2columns" sources="//@dashboard/@sourceArtefacts.43" targets="//@dashboard/@targetArtefacts.43"/>
+      <traceLinks name="associationAttributes2columns" sources="//@dashboard/@sourceArtefacts.33" targets="//@dashboard/@targetArtefacts.33"/>
     </transformations>
     <transformations name="enumerationAttributes2columns">
-      <traceLinks name="enumerationAttributes2columns"/>
-      <traceLinks name="enumerationAttributes2columns"/>
-      <traceLinks name="enumerationAttributes2columns"/>
-      <traceLinks name="enumerationAttributes2columns"/>
-      <traceLinks name="enumerationAttributes2columns"/>
-      <traceLinks name="enumerationAttributes2columns"/>
+      <traceLinks name="enumerationAttributes2columns" sources="//@dashboard/@sourceArtefacts.29" targets="//@dashboard/@targetArtefacts.29"/>
+      <traceLinks name="enumerationAttributes2columns" sources="//@dashboard/@sourceArtefacts.41" targets="//@dashboard/@targetArtefacts.41"/>
+      <traceLinks name="enumerationAttributes2columns" sources="//@dashboard/@sourceArtefacts.53" targets="//@dashboard/@targetArtefacts.53"/>
+      <traceLinks name="enumerationAttributes2columns" sources="//@dashboard/@sourceArtefacts.19" targets="//@dashboard/@targetArtefacts.19"/>
+      <traceLinks name="enumerationAttributes2columns" sources="//@dashboard/@sourceArtefacts.68" targets="//@dashboard/@targetArtefacts.68"/>
+      <traceLinks name="enumerationAttributes2columns" sources="//@dashboard/@sourceArtefacts.10" targets="//@dashboard/@targetArtefacts.10"/>
     </transformations>
     <transformations name="package2schemas">
-      <traceLinks name="package2schemas"/>
-      <traceLinks name="package2schemas"/>
-      <traceLinks name="package2schemas"/>
-      <traceLinks name="package2schemas"/>
-      <traceLinks name="package2schemas"/>
-      <traceLinks name="package2schemas"/>
-      <traceLinks name="package2schemas"/>
-      <traceLinks name="package2schemas"/>
-      <traceLinks name="package2schemas"/>
+      <traceLinks name="package2schemas" sources="//@dashboard/@sourceArtefacts.82" targets="//@dashboard/@targetArtefacts.82"/>
+      <traceLinks name="package2schemas" sources="//@dashboard/@sourceArtefacts.83" targets="//@dashboard/@targetArtefacts.83"/>
+      <traceLinks name="package2schemas" sources="//@dashboard/@sourceArtefacts.85" targets="//@dashboard/@targetArtefacts.85"/>
+      <traceLinks name="package2schemas" sources="//@dashboard/@sourceArtefacts.77" targets="//@dashboard/@targetArtefacts.77"/>
+      <traceLinks name="package2schemas" sources="//@dashboard/@sourceArtefacts.78" targets="//@dashboard/@targetArtefacts.78"/>
+      <traceLinks name="package2schemas" sources="//@dashboard/@sourceArtefacts.81" targets="//@dashboard/@targetArtefacts.81"/>
+      <traceLinks name="package2schemas" sources="//@dashboard/@sourceArtefacts.79" targets="//@dashboard/@targetArtefacts.79"/>
+      <traceLinks name="package2schemas" sources="//@dashboard/@sourceArtefacts.84" targets="//@dashboard/@targetArtefacts.84"/>
+      <traceLinks name="package2schemas" sources="//@dashboard/@sourceArtefacts.80" targets="//@dashboard/@targetArtefacts.80"/>
     </transformations>
     <transformations name="generalizations2columns">
-      <traceLinks name="generalizations2columns"/>
-      <traceLinks name="generalizations2columns"/>
-      <traceLinks name="generalizations2columns"/>
-      <traceLinks name="generalizations2columns"/>
-      <traceLinks name="generalizations2columns"/>
+      <traceLinks name="generalizations2columns" sources="//@dashboard/@sourceArtefacts.74" targets="//@dashboard/@targetArtefacts.74"/>
+      <traceLinks name="generalizations2columns" sources="//@dashboard/@sourceArtefacts.59" targets="//@dashboard/@targetArtefacts.59"/>
+      <traceLinks name="generalizations2columns" sources="//@dashboard/@sourceArtefacts.57" targets="//@dashboard/@targetArtefacts.57"/>
+      <traceLinks name="generalizations2columns" sources="//@dashboard/@sourceArtefacts.47" targets="//@dashboard/@targetArtefacts.47"/>
+      <traceLinks name="generalizations2columns" sources="//@dashboard/@sourceArtefacts.45" targets="//@dashboard/@targetArtefacts.45"/>
     </transformations>
     <transformations name="dataType2primaryKeyColumns">
-      <traceLinks name="dataType2primaryKeyColumns"/>
-      <traceLinks name="dataType2primaryKeyColumns"/>
+      <traceLinks name="dataType2primaryKeyColumns" sources="//@dashboard/@sourceArtefacts.70" targets="//@dashboard/@targetArtefacts.70"/>
+      <traceLinks name="dataType2primaryKeyColumns" sources="//@dashboard/@sourceArtefacts.35" targets="//@dashboard/@targetArtefacts.35"/>
     </transformations>
     <transformations name="enumerationAttribute2column">
-      <traceLinks name="enumerationAttribute2column"/>
-      <traceLinks name="enumerationAttribute2column"/>
+      <traceLinks name="enumerationAttribute2column" sources="//@dashboard/@sourceArtefacts.9" targets="//@dashboard/@targetArtefacts.9"/>
+      <traceLinks name="enumerationAttribute2column" sources="//@dashboard/@sourceArtefacts.67" targets="//@dashboard/@targetArtefacts.67"/>
     </transformations>
     <transformations name="relationshipAttribute2foreignKey">
-      <traceLinks name="relationshipAttribute2foreignKey"/>
-      <traceLinks name="relationshipAttribute2foreignKey"/>
+      <traceLinks name="relationshipAttribute2foreignKey" sources="//@dashboard/@sourceArtefacts.11" targets="//@dashboard/@targetArtefacts.11"/>
+      <traceLinks name="relationshipAttribute2foreignKey" sources="//@dashboard/@sourceArtefacts.69" targets="//@dashboard/@targetArtefacts.69"/>
     </transformations>
     <transformations name="model2RDBModel">
-      <traceLinks name="model2RDBModel"/>
+      <traceLinks name="model2RDBModel" sources="//@dashboard/@sourceArtefacts.0" targets="//@dashboard/@targetArtefacts.0"/>
     </transformations>
     <transformations name="persistentClass2table">
-      <traceLinks name="persistentClass2table"/>
-      <traceLinks name="persistentClass2table"/>
-      <traceLinks name="persistentClass2table"/>
+      <traceLinks name="persistentClass2table" sources="//@dashboard/@sourceArtefacts.62" targets="//@dashboard/@targetArtefacts.62"/>
+      <traceLinks name="persistentClass2table" sources="//@dashboard/@sourceArtefacts.2" targets="//@dashboard/@targetArtefacts.2"/>
+      <traceLinks name="persistentClass2table" sources="//@dashboard/@sourceArtefacts.50" targets="//@dashboard/@targetArtefacts.50"/>
     </transformations>
     <transformations name="package2schema">
-      <traceLinks name="package2schema"/>
+      <traceLinks name="package2schema" sources="//@dashboard/@sourceArtefacts.1" targets="//@dashboard/@targetArtefacts.1"/>
     </transformations>
     <transformations name="primitiveAttributes2columns">
-      <traceLinks name="primitiveAttributes2columns"/>
-      <traceLinks name="primitiveAttributes2columns"/>
-      <traceLinks name="primitiveAttributes2columns"/>
-      <traceLinks name="primitiveAttributes2columns"/>
-      <traceLinks name="primitiveAttributes2columns"/>
-      <traceLinks name="primitiveAttributes2columns"/>
+      <traceLinks name="primitiveAttributes2columns" sources="//@dashboard/@sourceArtefacts.52" targets="//@dashboard/@targetArtefacts.52"/>
+      <traceLinks name="primitiveAttributes2columns" sources="//@dashboard/@sourceArtefacts.40" targets="//@dashboard/@targetArtefacts.40"/>
+      <traceLinks name="primitiveAttributes2columns" sources="//@dashboard/@sourceArtefacts.18" targets="//@dashboard/@targetArtefacts.18"/>
+      <traceLinks name="primitiveAttributes2columns" sources="//@dashboard/@sourceArtefacts.8" targets="//@dashboard/@targetArtefacts.8"/>
+      <traceLinks name="primitiveAttributes2columns" sources="//@dashboard/@sourceArtefacts.66" targets="//@dashboard/@targetArtefacts.66"/>
+      <traceLinks name="primitiveAttributes2columns" sources="//@dashboard/@sourceArtefacts.28" targets="//@dashboard/@targetArtefacts.28"/>
     </transformations>
     <transformations name="dataType2columns">
-      <traceLinks name="dataType2columns"/>
-      <traceLinks name="dataType2columns"/>
-      <traceLinks name="dataType2columns"/>
-      <traceLinks name="dataType2columns"/>
-      <traceLinks name="dataType2columns"/>
-      <traceLinks name="dataType2columns"/>
+      <traceLinks name="dataType2columns" sources="//@dashboard/@sourceArtefacts.56" targets="//@dashboard/@targetArtefacts.56"/>
+      <traceLinks name="dataType2columns" sources="//@dashboard/@sourceArtefacts.34" targets="//@dashboard/@targetArtefacts.34"/>
+      <traceLinks name="dataType2columns" sources="//@dashboard/@sourceArtefacts.44" targets="//@dashboard/@targetArtefacts.44"/>
+      <traceLinks name="dataType2columns" sources="//@dashboard/@sourceArtefacts.38" targets="//@dashboard/@targetArtefacts.38"/>
+      <traceLinks name="dataType2columns" sources="//@dashboard/@sourceArtefacts.32" targets="//@dashboard/@targetArtefacts.32"/>
+      <traceLinks name="dataType2columns" sources="//@dashboard/@sourceArtefacts.73" targets="//@dashboard/@targetArtefacts.73"/>
     </transformations>
   </dashboard>
+  <configuration>
+    <typeArtefacts name="Model" description=""/>
+    <typeArtefacts name="Package" description=""/>
+    <typeArtefacts name="Class" description=""/>
+    <typeArtefacts name="Property" description=""/>
+    <typeArtefacts name="DataType" description=""/>
+    <typeArtefacts name="Model" description=""/>
+    <typeArtefacts name="Schema" description=""/>
+    <typeArtefacts name="Table" description=""/>
+    <typeArtefacts name="TableColumn" description=""/>
+    <typeArtefacts name="OrderedSet(TableColumn)" description=""/>
+    <typeArtefacts name="ForeignKey" description=""/>
+    <typeArtefacts name="PrimaryKey" description=""/>
+    <typeArtefacts name="Sequence(Schema)" description=""/>
+  </configuration>
 </traceeditor:TraceEditor>
