@@ -9,19 +9,17 @@ main() {
 }
 
 mapping QvtoTrace::Trace::trace2TraceEditor() : TraceEditor::TraceEditor {
- 	dashboard :=  self.map trace2Dashboard();
  	_configuration := self.map trace2Configuration();
+ 	dashboard :=  self.map trace2Dashboard();
 }
 
 mapping QvtoTrace::Trace::trace2Configuration() : TraceEditor::Configuration {
 	//TODO: crear tipos coherentes a las transformaciones QVT.
 	linkTypes := OrderedSet{};
-	typeArtefacts := self.VarParametersValuesByName()-> map varParameterValue2TypeArtefact(); 
-}
-
-mapping QvtoTrace::VarParameterValue::varParameterValue2TypeArtefact() : TraceEditor::TypeArtefact {
-	name := self.type;
-	description := "";
+	typeArtefacts := self.TypesByName()->collect(n | object TraceEditor::TypeArtefact {
+		name := n;
+		description := "una descrip.";
+	}); 
 }
 
 mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
@@ -35,8 +33,10 @@ mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
 
 mapping QvtoTrace::VarParameterValue::varParameterValue2Artefact() : TraceEditor::Artefact {
 	name := self.value.repr();
-	// TODO: crear los tipos y acá asociar el creado antes.
-	type := self.late resolveoneIn(QvtoTrace::VarParameterValue::varParameterValue2TypeArtefact, TraceEditor::TypeArtefact); 
+	type := self.container().container().container().oclAsType(QvtoTrace::Trace).resolveoneIn(
+		QvtoTrace::Trace::trace2Configuration,
+		TraceEditor::Configuration
+	).typeArtefacts![name = self.type]; 
 }
 
 mapping QvtoTrace::EMappingOperation::mappingOperation2Transformation() : TraceEditor::Transformation {
@@ -71,24 +71,13 @@ helper QvtoTrace::Trace::TraceRecordsForMappingsOperationsByName(in operationNam
 }
 
 /*
- * Retorna el listado de tipos de artefactos sin repeticiones por nombre.
+ * Retorna el conjunto de nombres de los distintos tipos de artefactos que se encuentran en el registro de trazas.
  */
-helper QvtoTrace::Trace::VarParametersValuesByName() : List(QvtoTrace::VarParameterValue) {
-	// Primero los tipos de los artefactos orígenes.
-	var types := self.traceRecords._context._context.type;
-	var res : List(QvtoTrace::VarParameterValue) := List{};
-	types->forEach(t){
-		var temp := self.traceRecords._context._context->select(m | m.type = t)->first();
-		res->append(temp);
-	};
-	//TODO: diferenciar los tipos primitivos, objetos y colecciones.
-	// Luego los tipos de  los artefactos resultados.
-	types := self.traceRecords._result._result.type;
-	types->forEach(t){
-		var temp := self.traceRecords._result._result->select(m | m.type = t)->first();
-		res->append(temp);
-	};
-	return res;
+query QvtoTrace::Trace::TypesByName() : OrderedSet(String) {
+	//TODO: ver si es necesario un tratamiento especial para obtener los tipos.
+	return self.traceRecords._context._context[name="self"].type->asSet()->union(
+		self.traceRecords._result._result[name="result" and value.collectionType = null].type->asSet()
+	)->asOrderedSet();
 }
 
 /*
