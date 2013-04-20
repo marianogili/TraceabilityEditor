@@ -14,7 +14,7 @@ mapping QvtoTrace::Trace::trace2TraceEditor() : TraceEditor::TraceEditor {
 }
 
 mapping QvtoTrace::Trace::trace2Configuration() : TraceEditor::Configuration {
-	//TODO: crear tipos coherentes a las transformaciones QVT.
+	//TODO: crear tipos coherentes para las transformaciones QVT.
 	linkTypes := OrderedSet{};
 	typeArtefacts := self.TypesByName()->collect(n | object TraceEditor::TypeArtefact {
 		name := n;
@@ -36,16 +36,8 @@ mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
 mapping QvtoTrace::TraceRecord::traceRecord2TraceLink() : TraceEditor::TraceLink {
 	name := self.mappingOperation.name;
 	_transformation := result.container().oclAsType(TraceEditor::Transformation);
-	/*
-	sources := self._context._context.late resolveIn(
-		QvtoTrace::VarParameterValue::varParameterValue2Artefact,
-		TraceEditor::Artefact
-	);
-	targets := self._result._result.late resolveIn(
-		QvtoTrace::VarParameterValue::varParameterValue2Artefact,
-		TraceEditor::Artefact
-	);
-	*/ 
+	sources := self._context._context.map varParameterValue2Artefact();
+	targets := self._result._result->map varParameterValue2Artefact()->flatten(); 
 }
 
 mapping QvtoTrace::VarParameterValue::varParameterValue2Artefact() : OrderedSet(TraceEditor::Artefact) 
