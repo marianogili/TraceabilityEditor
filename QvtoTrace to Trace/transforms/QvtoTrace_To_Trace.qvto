@@ -29,22 +29,22 @@ mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
 	});
 	// dado que las trazas de QVT son todas producto de transformaciones, la colección traceLinks se inicializa vacía.
 	traceLinks := OrderedSet{};
-	sourceArtefacts := self.traceRecords._context._context[name="self"].map varParameterValue2Artefact();
-	targetArtefacts := self.traceRecords._result._result.map varParameterValue2Artefact();
+	sourceArtefacts := self.traceRecords._context._context[name="self"].map varParameterValue2Artefact("Source");
+	targetArtefacts := self.traceRecords._result._result.map varParameterValue2Artefact("Target");
 }
 
 mapping QvtoTrace::TraceRecord::traceRecord2TraceLink() : TraceEditor::TraceLink {
-	name := self.mappingOperation.name;
+	name := self.repr();
 	_transformation := result.container().oclAsType(TraceEditor::Transformation);
-	sources := self._context._context.map varParameterValue2Artefact();
-	targets := self._result._result->map varParameterValue2Artefact()->flatten(); 
+	sources := self._context._context[name="self"].map varParameterValue2Artefact("Source");
+	targets := self._result._result->map varParameterValue2Artefact("Target")->flatten(); 
 }
 
-mapping QvtoTrace::VarParameterValue::varParameterValue2Artefact() : OrderedSet(TraceEditor::Artefact) 
+mapping QvtoTrace::VarParameterValue::varParameterValue2Artefact(in prefix : String) : OrderedSet(TraceEditor::Artefact) 
 	disjuncts QvtoTrace::VarParameterValue::varParameterValueSimple2Artefact, 
 		QvtoTrace::VarParameterValue::varParameterValueCollection2Artefact {}
 
-mapping QvtoTrace::VarParameterValue::varParameterValueSimple2Artefact() : OrderedSet(TraceEditor::Artefact) 
+mapping QvtoTrace::VarParameterValue::varParameterValueSimple2Artefact(in prefix : String) : OrderedSet(TraceEditor::Artefact) 
 	when { self.value.collectionType = null } {
 		init {
 			result := object TraceEditor::Artefact {
@@ -52,12 +52,12 @@ mapping QvtoTrace::VarParameterValue::varParameterValueSimple2Artefact() : Order
 				type := self.container().container().container().oclAsType(QvtoTrace::Trace).resolveoneIn(
 					QvtoTrace::Trace::trace2Configuration,
 					TraceEditor::Configuration
-				).typeArtefacts![name = self.type];
+				).typeArtefacts![name = self.type.prefix(prefix)];
 			}->asOrderedSet();
 		}
 }
 
-mapping QvtoTrace::VarParameterValue::varParameterValueCollection2Artefact() : OrderedSet(TraceEditor::Artefact) 
+mapping QvtoTrace::VarParameterValue::varParameterValueCollection2Artefact(in prefix : String) : OrderedSet(TraceEditor::Artefact) 
 	when { self.value.collectionType <> null } {
 		init {
 			result := self.value.collection->collect(e | object TraceEditor::Artefact {
@@ -68,13 +68,17 @@ mapping QvtoTrace::VarParameterValue::varParameterValueCollection2Artefact() : O
 		}
 }
 
+helper String::prefix(in pre : String) : String {
+	return pre + "_" + self;
+}
+
 /*
  * Retorna el conjunto de nombres de los distintos tipos de artefactos que se encuentran en el registro de trazas.
  */
 query QvtoTrace::Trace::TypesByName() : OrderedSet(String) {
 	//TODO: ver si es necesario un tratamiento especial para obtener los tipos.
-	return self.traceRecords._context._context[name="self"].type->asSet()->union(
-		self.traceRecords._result._result[name="result" and value.collectionType = null].type->asSet()
+	return self.traceRecords._context._context[name="self"].type.prefix("Source")->asSet()->union(
+		self.traceRecords._result._result[name="result" and value.collectionType = null].type.prefix("Target")->asSet()
 	)->asOrderedSet();
 }
 
@@ -84,3 +88,4 @@ query QvtoTrace::Trace::TypesByName() : OrderedSet(String) {
 query QvtoTrace::Trace::TransformationsByName() : OrderedSet(String) {
 	return self.traceRecords.mappingOperation.name->asOrderedSet();
 }
+
