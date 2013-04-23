@@ -60,10 +60,13 @@ mapping QvtoTrace::VarParameterValue::varParameterValueSimple2Artefact(in prefix
 mapping QvtoTrace::VarParameterValue::varParameterValueCollection2Artefact(in prefix : String) : OrderedSet(TraceEditor::Artefact) 
 	when { self.value.collectionType <> null } {
 		init {
+			var typeName := self.type.substringAfter("(").substringBefore(")");
 			result := self.value.collection->collect(e | object TraceEditor::Artefact {
 				name := e.repr();
-				//TODO: obtener el tipo del artefacto y asociarlo. Una opción es sacar el nombre de la colección y otra ver tema blackboxes.
-				//type := e.container().oclAsType(QvtoTrace::VarParameterValue).type
+				type := self.container().container().container().oclAsType(QvtoTrace::Trace).resolveoneIn(
+					QvtoTrace::Trace::trace2Configuration,
+					TraceEditor::Configuration
+				).typeArtefacts![name = typeName.prefix(prefix)];
 			})->asOrderedSet();
 		}
 }
@@ -76,7 +79,6 @@ helper String::prefix(in pre : String) : String {
  * Retorna el conjunto de nombres de los distintos tipos de artefactos que se encuentran en el registro de trazas.
  */
 query QvtoTrace::Trace::TypesByName() : OrderedSet(String) {
-	//TODO: ver si es necesario un tratamiento especial para obtener los tipos.
 	return self.traceRecords._context._context[name="self"].type.prefix("Source")->asSet()->union(
 		self.traceRecords._result._result[name="result" and value.collectionType = null].type.prefix("Target")->asSet()
 	)->asOrderedSet();

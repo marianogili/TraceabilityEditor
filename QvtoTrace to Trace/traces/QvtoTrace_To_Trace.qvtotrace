@@ -2,7 +2,7 @@
 <trace:Trace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http:///www.eclipse.org/m2m/qvt/operational/trace.ecore">
   <traceRecords>
     <mappingOperation name="trace2TraceEditor" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/trace2TraceEditor"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//trace2TraceEditor"/>
     </mappingOperation>
     <context>
       <context name="self" type="Trace">
@@ -22,7 +22,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="trace2Configuration" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/trace2Configuration"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//trace2Configuration"/>
     </mappingOperation>
     <context>
       <context name="self" type="Trace">
@@ -42,7 +42,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="trace2Dashboard" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/trace2Dashboard"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//trace2Dashboard"/>
     </mappingOperation>
     <context>
       <context name="self" type="Trace">
@@ -62,7 +62,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -82,7 +82,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -108,7 +108,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -134,7 +134,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -154,7 +154,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -180,7 +180,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -206,7 +206,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -226,7 +226,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -252,7 +252,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -278,7 +278,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -298,7 +298,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -324,7 +324,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -350,7 +350,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -370,7 +370,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -396,7 +396,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -422,7 +422,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -442,7 +442,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -468,7 +468,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -494,7 +494,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -514,7 +514,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -540,7 +540,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -566,7 +566,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -586,7 +586,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -612,7 +612,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -638,7 +638,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -658,7 +658,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -684,7 +684,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -710,7 +710,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -730,7 +730,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -756,7 +756,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -782,7 +782,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -802,7 +802,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -828,7 +828,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -854,7 +854,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -874,7 +874,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -900,7 +900,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -926,7 +926,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -946,7 +946,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -972,7 +972,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -998,7 +998,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1018,7 +1018,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1044,7 +1044,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1070,7 +1070,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1090,7 +1090,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1116,7 +1116,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1142,7 +1142,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1162,7 +1162,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1188,7 +1188,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1214,7 +1214,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1234,7 +1234,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1260,7 +1260,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1286,7 +1286,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1306,7 +1306,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1332,7 +1332,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1358,7 +1358,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1378,7 +1378,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1404,7 +1404,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1430,7 +1430,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1450,7 +1450,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1476,7 +1476,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1502,7 +1502,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1522,7 +1522,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1548,7 +1548,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1574,7 +1574,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1594,7 +1594,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1620,7 +1620,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1646,7 +1646,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1666,7 +1666,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1692,7 +1692,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1718,7 +1718,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1738,7 +1738,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1764,7 +1764,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1790,7 +1790,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1810,7 +1810,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1836,7 +1836,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1862,7 +1862,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1882,7 +1882,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1908,7 +1908,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1934,7 +1934,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -1954,7 +1954,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -1980,7 +1980,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2006,7 +2006,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2026,7 +2026,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2052,7 +2052,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2078,7 +2078,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2098,7 +2098,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2124,7 +2124,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2162,7 +2162,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2182,7 +2182,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2208,7 +2208,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2249,7 +2249,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2269,7 +2269,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2295,7 +2295,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2339,7 +2339,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2359,7 +2359,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2385,7 +2385,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2411,7 +2411,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2431,7 +2431,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2457,7 +2457,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2483,7 +2483,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2503,7 +2503,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2529,7 +2529,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2561,7 +2561,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2581,7 +2581,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2607,7 +2607,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2633,7 +2633,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2653,7 +2653,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2679,7 +2679,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2705,7 +2705,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2725,7 +2725,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2751,7 +2751,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2777,7 +2777,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2797,7 +2797,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2823,7 +2823,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2845,7 +2845,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2865,7 +2865,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2891,7 +2891,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2913,7 +2913,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -2933,7 +2933,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2959,7 +2959,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -2981,7 +2981,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3001,7 +3001,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3027,7 +3027,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3049,7 +3049,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3069,7 +3069,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3095,7 +3095,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3121,7 +3121,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3141,7 +3141,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3167,7 +3167,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3193,7 +3193,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3213,7 +3213,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3239,7 +3239,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3265,7 +3265,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3285,7 +3285,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3311,7 +3311,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3333,7 +3333,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3353,7 +3353,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3379,7 +3379,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3401,7 +3401,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3421,7 +3421,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3447,7 +3447,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3473,7 +3473,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3493,7 +3493,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3519,7 +3519,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3541,7 +3541,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3561,7 +3561,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3587,7 +3587,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3609,7 +3609,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3629,7 +3629,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3655,7 +3655,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3681,7 +3681,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3701,7 +3701,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3727,7 +3727,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3749,7 +3749,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3769,7 +3769,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3795,7 +3795,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3839,7 +3839,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3859,7 +3859,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3885,7 +3885,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3907,7 +3907,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3927,7 +3927,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3953,7 +3953,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -3975,7 +3975,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -3995,7 +3995,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4021,7 +4021,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4043,7 +4043,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4063,7 +4063,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4089,7 +4089,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4111,7 +4111,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4131,7 +4131,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4157,7 +4157,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4201,7 +4201,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4221,7 +4221,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4247,7 +4247,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4309,7 +4309,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4329,7 +4329,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4355,7 +4355,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4399,7 +4399,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4419,7 +4419,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4445,7 +4445,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4471,7 +4471,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4491,7 +4491,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4517,7 +4517,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4543,7 +4543,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4563,7 +4563,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4589,7 +4589,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4627,7 +4627,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4647,7 +4647,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4673,7 +4673,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4699,7 +4699,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4719,7 +4719,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4745,7 +4745,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4771,7 +4771,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4791,7 +4791,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4817,7 +4817,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4839,7 +4839,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4859,7 +4859,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4885,7 +4885,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4911,7 +4911,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4931,7 +4931,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4957,7 +4957,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -4979,7 +4979,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -4999,7 +4999,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5025,7 +5025,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5051,7 +5051,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5071,7 +5071,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5097,7 +5097,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5119,7 +5119,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5139,7 +5139,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5165,7 +5165,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5191,7 +5191,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5211,7 +5211,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5237,7 +5237,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5284,7 +5284,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5304,7 +5304,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5330,7 +5330,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5356,7 +5356,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5376,7 +5376,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5402,7 +5402,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5467,7 +5467,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5487,7 +5487,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5513,7 +5513,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5551,7 +5551,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5571,7 +5571,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5597,7 +5597,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5623,7 +5623,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5643,7 +5643,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5669,7 +5669,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5695,7 +5695,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5715,7 +5715,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5741,7 +5741,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5767,7 +5767,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5787,7 +5787,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5813,7 +5813,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5839,7 +5839,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5859,7 +5859,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5885,7 +5885,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5911,7 +5911,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -5931,7 +5931,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5957,7 +5957,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -5983,7 +5983,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -6003,7 +6003,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -6029,7 +6029,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -6055,7 +6055,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -6075,7 +6075,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -6101,7 +6101,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -6127,7 +6127,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -6147,7 +6147,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -6173,7 +6173,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -6199,7 +6199,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -6219,7 +6219,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -6245,7 +6245,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -6271,7 +6271,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -6291,7 +6291,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -6317,7 +6317,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -6339,7 +6339,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/traceRecord2TraceLink"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
     </mappingOperation>
     <context>
       <context name="self" type="TraceRecord">
@@ -6359,7 +6359,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueSimple2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
@@ -6385,7 +6385,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="varParameterValueCollection2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
-      <runtimeMappingOperation href="qvto:/module.env#/0/varParameterValueCollection2Artefact"/>
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueCollection2Artefact"/>
     </mappingOperation>
     <context>
       <context name="self" type="VarParameterValue">
