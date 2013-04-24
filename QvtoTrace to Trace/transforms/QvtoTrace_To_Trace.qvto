@@ -1,33 +1,80 @@
+/*
+ * La definición de la presente transformación QvtoTrace_To_Trace 
+ * forma parte del prototipo desarrollado para la tesis del alumno 
+ * Mariano Gabriel Gili. 
+ *
+ * Esta transformación toma como entrada las trazas generadas por
+ * la tecnología QVT que conforman el meta-modelo Trace, y genera 
+ * un modelo para el prototipo de edición de trazas que conforma 
+ * el meta-modelo propuesto TraceEditor.
+ */
+
+/*
+ * Definición de los meta-modelos.
+ */
 modeltype TraceEditor uses 'http://traceeditor/TraceEditor';
 modeltype QvtoTrace uses 'http:///www.eclipse.org/m2m/qvt/operational/trace.ecore';
 		
-
+/*
+ * Declaración de la transformación.
+ */
 transformation QvtoTrace_To_Trace(in qvto : QvtoTrace, out TraceEditor);
 
+/*
+ * Punto de entrada donde se inicia la transformación por los objectos 
+ * raiz de tipo Trace del modelo de entrada mediante la invocación del 
+ * mapeo trace2TraceEditor().
+ */
 main() {
 	qvto.rootObjects()[QvtoTrace::Trace]->map trace2TraceEditor();
 }
 
+/*
+ * trace2TraceEditor() toma una instancia de Trace y retorna una de 
+ * TraceEditor.
+ * Genera la configuración (_configuracion) mediante el mapeo 
+ * trace2Configuration() y el dashboard mediante trace2Dashboard().
+ */
 mapping QvtoTrace::Trace::trace2TraceEditor() : TraceEditor::TraceEditor {
  	_configuration := self.map trace2Configuration();
  	dashboard :=  self.map trace2Dashboard();
 }
 
+/*
+ * trace2Configuration() genera una configuración del editor TraceEditor
+ * representada por el modelo de TraceEditor::Configuration en la que se
+ * definen los tipos de las trazas y se obtienen los tipos de artefactos
+ * que se encuentran en las trazas del modelo QvtoTrace::Trace.
+ */
 mapping QvtoTrace::Trace::trace2Configuration() : TraceEditor::Configuration {
 	//TODO: crear tipos coherentes para las transformaciones QVT.
 	linkTypes := OrderedSet{};
-	typeArtefacts := self.TypesByName()->collect(n | object TraceEditor::TypeArtefact {
-		name := n;
-		description := "";
+	typeArtefacts := self.TypesByName()->collect(n | 
+		object TraceEditor::TypeArtefact {
+			name := n;
+			//TODO: solucionar prototipo de editores para que muestren la descripción si la tiene e inicializarla con alguna información.
+			//description := "";
 	}); 
 }
 
+/*
+ * trace2Dashboard() de las trazas del modelo de entrada QvtoTrace::Trace
+ * obtiene el listado de transformaciones (transformations) y los 
+ * listados de los artefactos origen y destino (sourceArtefacts y 
+ * targetArtefacts respectivamente) mediante la inspección de las 
+ * instancias TraceRecord del modelo de entrada. Las trazas que representan
+ * los enlaces explícitos (tracelinks) se inicializan como un conjunto 
+ * vacío.
+ */
 mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
-	transformations := self.TransformationsByName()->collect(t | object TraceEditor::Transformation {
-		name := t;
-		traceLinks := self.traceRecords[mappingOperation.name=t]->map traceRecord2TraceLink();
+	transformations := self.TransformationsByName()->collect(t | 
+		object TraceEditor::Transformation {
+			name := t;
+			traceLinks := self.traceRecords[mappingOperation.name=t]->
+				map traceRecord2TraceLink();
 	});
-	// dado que las trazas de QVT son todas producto de transformaciones, la colección traceLinks se inicializa vacía.
+	// dado que las trazas de QVT son todas producto de transformaciones,
+	// la colección traceLinks se inicializa vacía.
 	traceLinks := OrderedSet{};
 	sourceArtefacts := self.traceRecords._context._context[name="self"].map varParameterValue2Artefact("Source");
 	targetArtefacts := self.traceRecords._result._result.map varParameterValue2Artefact("Target");
