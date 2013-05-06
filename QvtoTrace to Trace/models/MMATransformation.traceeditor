@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<traceeditor:TraceEditor xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:traceeditor="http://traceeditor/1.0" xsi:schemaLocation="http://traceeditor/1.0 ../../TraceEditor/model/TraceEditor.ecore">
+  <dashboard>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@6ea66d4c (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.5"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@73a39bc1 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.10"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@64c042d (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.1"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@b493db4 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7c4f31de (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.4"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@54741cd8 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1cc1fc88 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.9"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@3ad464da (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@2d608c65 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.1"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@15ce0ae2 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7a1513bc (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.7"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7468a8d8 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.7"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4018f98f (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.7"/>
+    <sourceArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@2c4ed6dc (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.7"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@161c279e (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.0"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@40db58f1 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.3"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@74f42adf (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@de1e9d0 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@17c831df (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7783f3f6 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@234ded29 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@76c55804 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@4a1910f1 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@7139b2a2 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@38721e8 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.8"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@a7cd08 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.8"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@1605bc16 (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.8"/>
+    <targetArtefacts name="org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@74a2202d (primitiveValue: null, oclObject: null, collectionType: null)" type="//@configuration/@typeArtefacts.8"/>
+    <transformations name="ProjectToModel">
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@a9555a9" sources="//@dashboard/@sourceArtefacts.0" targets="//@dashboard/@targetArtefacts.0"/>
+    </transformations>
+    <transformations name="toAutomaton">
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@522acfac" sources="//@dashboard/@sourceArtefacts.1" targets="//@dashboard/@targetArtefacts.1"/>
+    </transformations>
+    <transformations name="fromRectangle">
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@78a84f58" sources="//@dashboard/@sourceArtefacts.2" targets="//@dashboard/@targetArtefacts.2"/>
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@2d8a343a" sources="//@dashboard/@sourceArtefacts.8" targets="//@dashboard/@targetArtefacts.8"/>
+    </transformations>
+    <transformations name="Updates">
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@71f1584a" sources="//@dashboard/@sourceArtefacts.3" targets="//@dashboard/@targetArtefacts.3"/>
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@6f0dc0aa" sources="//@dashboard/@sourceArtefacts.5" targets="//@dashboard/@targetArtefacts.5"/>
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@66507a40" sources="//@dashboard/@sourceArtefacts.7" targets="//@dashboard/@targetArtefacts.7"/>
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@4c6ae331" sources="//@dashboard/@sourceArtefacts.9" targets="//@dashboard/@targetArtefacts.9"/>
+    </transformations>
+    <transformations name="fromEllipse">
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@1bdb9cb7" sources="//@dashboard/@sourceArtefacts.4" targets="//@dashboard/@targetArtefacts.4"/>
+    </transformations>
+    <transformations name="fromTriangle2">
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@6fe411db" sources="//@dashboard/@sourceArtefacts.6" targets="//@dashboard/@targetArtefacts.6"/>
+    </transformations>
+    <transformations name="toTransition">
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@7d69cd28" sources="//@dashboard/@sourceArtefacts.10" targets="//@dashboard/@targetArtefacts.10"/>
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@2d1c3d6b" sources="//@dashboard/@sourceArtefacts.11" targets="//@dashboard/@targetArtefacts.11"/>
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@190452f0" sources="//@dashboard/@sourceArtefacts.12" targets="//@dashboard/@targetArtefacts.12"/>
+      <traceLinks name="org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@6ae11764" sources="//@dashboard/@sourceArtefacts.13" targets="//@dashboard/@targetArtefacts.13"/>
+    </transformations>
+  </dashboard>
+  <configuration>
+    <typeArtefacts name="Target_Model"/>
+    <typeArtefacts name="Source_Rectangle"/>
+    <typeArtefacts name="Target_Mode"/>
+    <typeArtefacts name="Target_Automaton"/>
+    <typeArtefacts name="Source_Ellipse"/>
+    <typeArtefacts name="Source_Project"/>
+    <typeArtefacts name="Source_Location"/>
+    <typeArtefacts name="Source_Edge"/>
+    <typeArtefacts name="Target_Transition"/>
+    <typeArtefacts name="Source_Triangle"/>
+    <typeArtefacts name="Source_Automaton"/>
+  </configuration>
+</traceeditor:TraceEditor>

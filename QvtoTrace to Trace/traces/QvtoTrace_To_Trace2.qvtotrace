@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:Trace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http:///www.eclipse.org/m2m/qvt/operational/trace.ecore">
+  <traceRecords>
+    <mappingOperation name="trace2TraceEditor" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//trace2TraceEditor"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Trace">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#/"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceEditor">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#/"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="trace2Configuration" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//trace2Configuration"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Trace">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#/"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Configuration">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@configuration"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="trace2Dashboard" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//trace2Dashboard"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Trace">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#/"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Dashboard">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.0/@traceLinks.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.0/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.0"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.0/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.0"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.1"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.1/@traceLinks.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.1/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.1"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.1/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.1"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.2"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.2/@traceLinks.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.2/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.2"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.2/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.2"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.8"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.2/@traceLinks.1"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.8/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.8"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.8/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.8"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.3"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.3/@traceLinks.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.3/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.3"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.3/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.3"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.5"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.3/@traceLinks.1"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.5/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.5"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.5/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.5"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.7"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.3/@traceLinks.2"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.7/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.7"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.7/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.7"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.9"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.3/@traceLinks.3"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.9/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.9"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.9/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.9"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.4"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.4/@traceLinks.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.4/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.4"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.4/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.4"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.6"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.5/@traceLinks.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.6/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.6"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.6/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.6"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.10"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.6/@traceLinks.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.10/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.10"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.10/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.10"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.11"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.6/@traceLinks.1"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.11/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.11"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.11/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.11"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.12"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.6/@traceLinks.2"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.12/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.12"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.12/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.12"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="traceRecord2TraceLink" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//traceRecord2TraceLink"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="TraceRecord">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.13"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="TraceLink">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@transformations.6/@traceLinks.3"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.13/@context/@context"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Source"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@sourceArtefacts.13"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="varParameterValueSimple2Artefact" package="QvtoTrace_To_Trace" module="QvtoTrace_To_Trace">
+      <runtimeMappingOperation href="platform:/resource/QvtoTrace%20to%20Trace/transforms/QvtoTrace_To_Trace.qvtox#//varParameterValueSimple2Artefact"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="VarParameterValue">
+        <value>
+          <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.qvtotrace#//@traceRecords.13/@result/@result.0"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="prefix" type="String">
+        <value primitiveValue="Target"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="OrderedSet(Artefact)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/QvtoTrace to Trace/models/MMATransformation.traceeditor#//@dashboard/@targetArtefacts.13"/>
+          </collection>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+</trace:Trace>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mmb:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mmb="http://mmb/1.0" xsi:schemaLocation="http://mmb/1.0 MMB.ecore" Name="Our First Transformation">
+  <automata Name="A1">
+    <modes Name="S1" InitialState="true" Shape="Rectangle" Dimension="4.5">
+      <Modifications VarName="V2" VarType="Double"/>
+      <Modifications VarName="V4" VarType="Integer"/>
+    </modes>
+    <modes Name="S2" Shape="Ellipse" Dimension="2.0">
+      <Modifications VarName="V1" VarType="Boolean"/>
+    </modes>
+    <modes Name="S3" Shape="Triangle" Dimension="5.0"/>
+    <modes Name="S4" Shape="Rectangle" Dimension="1.0">
+      <Modifications VarName="V3" VarType="String"/>
+      <Modifications VarName="V5" VarType="Char"/>
+    </modes>
+    <transistions Event="A" sourceMode="//@automata.0/@modes.0" targetMode="//@automata.0/@modes.1"/>
+    <transistions Event="C" sourceMode="//@automata.0/@modes.1" targetMode="//@automata.0/@modes.1"/>
+    <transistions Event="B" sourceMode="//@automata.0/@modes.1" targetMode="//@automata.0/@modes.2"/>
+    <transistions Event="A" sourceMode="//@automata.0/@modes.2" targetMode="//@automata.0/@modes.3"/>
+  </automata>
+</mmb:Model>
