@@ -1,29 +1,20 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package com.marianogili.traceeditor.impl;
 
 import com.marianogili.traceeditor.Configuration;
 import com.marianogili.traceeditor.Dashboard;
-import com.marianogili.traceeditor.LinkType;
 import com.marianogili.traceeditor.TraceEditor;
 import com.marianogili.traceeditor.TraceeditorPackage;
 
-import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -85,29 +76,6 @@ public class TraceEditorImpl extends EObjectImpl implements TraceEditor {
 	 * @generated
 	 */
 	public Dashboard getDashboard() {
-		if (dashboard != null && dashboard.eIsProxy()) {
-			InternalEObject oldDashboard = (InternalEObject)dashboard;
-			dashboard = (Dashboard)eResolveProxy(oldDashboard);
-			if (dashboard != oldDashboard) {
-				InternalEObject newDashboard = (InternalEObject)dashboard;
-				NotificationChain msgs = oldDashboard.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TraceeditorPackage.TRACE_EDITOR__DASHBOARD, null, null);
-				if (newDashboard.eInternalContainer() == null) {
-					msgs = newDashboard.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TraceeditorPackage.TRACE_EDITOR__DASHBOARD, null, msgs);
-				}
-				if (msgs != null) msgs.dispatch();
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TraceeditorPackage.TRACE_EDITOR__DASHBOARD, oldDashboard, dashboard));
-			}
-		}
-		return dashboard;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Dashboard basicGetDashboard() {
 		return dashboard;
 	}
 
@@ -151,29 +119,6 @@ public class TraceEditorImpl extends EObjectImpl implements TraceEditor {
 	 * @generated
 	 */
 	public Configuration getConfiguration() {
-		if (configuration != null && configuration.eIsProxy()) {
-			InternalEObject oldConfiguration = (InternalEObject)configuration;
-			configuration = (Configuration)eResolveProxy(oldConfiguration);
-			if (configuration != oldConfiguration) {
-				InternalEObject newConfiguration = (InternalEObject)configuration;
-				NotificationChain msgs = oldConfiguration.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TraceeditorPackage.TRACE_EDITOR__CONFIGURATION, null, null);
-				if (newConfiguration.eInternalContainer() == null) {
-					msgs = newConfiguration.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TraceeditorPackage.TRACE_EDITOR__CONFIGURATION, null, msgs);
-				}
-				if (msgs != null) msgs.dispatch();
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TraceeditorPackage.TRACE_EDITOR__CONFIGURATION, oldConfiguration, configuration));
-			}
-		}
-		return configuration;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Configuration basicGetConfiguration() {
 		return configuration;
 	}
 
@@ -236,11 +181,9 @@ public class TraceEditorImpl extends EObjectImpl implements TraceEditor {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case TraceeditorPackage.TRACE_EDITOR__DASHBOARD:
-				if (resolve) return getDashboard();
-				return basicGetDashboard();
+				return getDashboard();
 			case TraceeditorPackage.TRACE_EDITOR__CONFIGURATION:
-				if (resolve) return getConfiguration();
-				return basicGetConfiguration();
+				return getConfiguration();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -250,7 +193,6 @@ public class TraceEditorImpl extends EObjectImpl implements TraceEditor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

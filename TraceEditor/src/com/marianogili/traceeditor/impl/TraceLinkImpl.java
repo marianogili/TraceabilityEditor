@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package com.marianogili.traceeditor.impl;
 
@@ -170,16 +166,6 @@ public class TraceLinkImpl extends NamedElementImpl implements TraceLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Transformation basicGetTransformation() {
-		if (eContainerFeatureID() != TraceeditorPackage.TRACE_LINK__TRANSFORMATION) return null;
-		return (Transformation)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public NotificationChain basicSetTransformation(Transformation newTransformation, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newTransformation, TraceeditorPackage.TRACE_LINK__TRANSFORMATION, msgs);
 		return msgs;
@@ -266,8 +252,7 @@ public class TraceLinkImpl extends NamedElementImpl implements TraceLink {
 				if (resolve) return getType();
 				return basicGetType();
 			case TraceeditorPackage.TRACE_LINK__TRANSFORMATION:
-				if (resolve) return getTransformation();
-				return basicGetTransformation();
+				return getTransformation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -338,7 +323,7 @@ public class TraceLinkImpl extends NamedElementImpl implements TraceLink {
 			case TraceeditorPackage.TRACE_LINK__TYPE:
 				return type != null;
 			case TraceeditorPackage.TRACE_LINK__TRANSFORMATION:
-				return basicGetTransformation() != null;
+				return getTransformation() != null;
 		}
 		return super.eIsSet(featureID);
 	}

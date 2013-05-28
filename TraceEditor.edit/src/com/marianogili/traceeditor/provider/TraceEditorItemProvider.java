@@ -1,41 +1,36 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package com.marianogili.traceeditor.provider;
 
+
+import com.marianogili.traceeditor.TraceEditor;
+import com.marianogili.traceeditor.TraceeditorFactory;
+import com.marianogili.traceeditor.TraceeditorPackage;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITableItemLabelProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import com.marianogili.traceeditor.Artefact;
-import com.marianogili.traceeditor.TraceEditor;
-import com.marianogili.traceeditor.TraceLink;
-import com.marianogili.traceeditor.TraceeditorFactory;
-import com.marianogili.traceeditor.TraceeditorPackage;
-import com.marianogili.traceeditor.Transformation;
 
 /**
  * This is the item provider adapter for a {@link com.marianogili.traceeditor.TraceEditor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * @generated NOT
+ * @generated
  */
 public class TraceEditorItemProvider
 	extends ItemProviderAdapter
@@ -44,50 +39,7 @@ public class TraceEditorItemProvider
 		IStructuredItemContentProvider,
 		ITreeItemContentProvider,
 		IItemLabelProvider,
-		IItemPropertySource,
-		ITableItemLabelProvider {
-	
-	/* (non-Javadoc)
-	 * @see org.eclipse.emf.edit.provider.ItemProviderAdapter#getColumnImage(java.lang.Object, int)
-	 */
-	@Override
-	public Object getColumnImage(Object object, int columnIndex) {
-		// TODO Auto-generated method stub
-		return super.getColumnImage(object, columnIndex);
-	}
-
-	/* (non-Javadoc)
-	 * @see org.eclipse.emf.edit.provider.ItemProviderAdapter#getColumnText(java.lang.Object, int)
-	 */
-	@Override
-	public String getColumnText(Object object, int columnIndex) {
-		if (columnIndex == 0) return getText(object);
-		IItemLabelProvider itemLabelProvider;
-		TraceLink traceLink = ((Transformation)object).getTraceLinks().get(0);
-		if (traceLink == null) return "";
-		if (columnIndex == 1) {
-			itemLabelProvider =
-				(IItemLabelProvider)adapterFactory.adapt(
-						traceLink, IItemLabelProvider.class);
-			return itemLabelProvider.getText(traceLink);
-		}
-		Artefact artefact = traceLink.getSources().get(0);
-		if (artefact == null) return "";
-		if (columnIndex == 2) {
-			itemLabelProvider =
-				(IItemLabelProvider)adapterFactory.adapt(
-						artefact, IItemLabelProvider.class);
-			return itemLabelProvider.getText(artefact);
-		}
-		artefact = traceLink.getTargets().get(0);
-		if (artefact == null) return "";
-		itemLabelProvider =
-			(IItemLabelProvider)adapterFactory.adapt(
-					artefact, IItemLabelProvider.class);
-		return itemLabelProvider.getText(artefact);
-//		return super.getColumnText(object, columnIndex);
-	}
-
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

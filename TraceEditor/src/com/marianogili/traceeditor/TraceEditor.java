@@ -1,12 +1,7 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package com.marianogili.traceeditor;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -38,7 +33,7 @@ public interface TraceEditor extends EObject {
 	 * @return the value of the '<em>Dashboard</em>' containment reference.
 	 * @see #setDashboard(Dashboard)
 	 * @see com.marianogili.traceeditor.TraceeditorPackage#getTraceEditor_Dashboard()
-	 * @model containment="true" resolveProxies="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Dashboard getDashboard();
@@ -64,7 +59,7 @@ public interface TraceEditor extends EObject {
 	 * @return the value of the '<em>Configuration</em>' containment reference.
 	 * @see #setConfiguration(Configuration)
 	 * @see com.marianogili.traceeditor.TraceeditorPackage#getTraceEditor_Configuration()
-	 * @model containment="true" resolveProxies="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Configuration getConfiguration();

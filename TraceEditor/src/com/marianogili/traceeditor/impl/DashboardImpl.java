@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package com.marianogili.traceeditor.impl;
 
@@ -109,7 +105,7 @@ public class DashboardImpl extends EObjectImpl implements Dashboard {
 	 */
 	public EList<Artefact> getSourceArtefacts() {
 		if (sourceArtefacts == null) {
-			sourceArtefacts = new EObjectContainmentEList.Resolving<Artefact>(Artefact.class, this, TraceeditorPackage.DASHBOARD__SOURCE_ARTEFACTS);
+			sourceArtefacts = new EObjectContainmentEList<Artefact>(Artefact.class, this, TraceeditorPackage.DASHBOARD__SOURCE_ARTEFACTS);
 		}
 		return sourceArtefacts;
 	}
@@ -121,7 +117,7 @@ public class DashboardImpl extends EObjectImpl implements Dashboard {
 	 */
 	public EList<Artefact> getTargetArtefacts() {
 		if (targetArtefacts == null) {
-			targetArtefacts = new EObjectContainmentEList.Resolving<Artefact>(Artefact.class, this, TraceeditorPackage.DASHBOARD__TARGET_ARTEFACTS);
+			targetArtefacts = new EObjectContainmentEList<Artefact>(Artefact.class, this, TraceeditorPackage.DASHBOARD__TARGET_ARTEFACTS);
 		}
 		return targetArtefacts;
 	}
@@ -133,7 +129,7 @@ public class DashboardImpl extends EObjectImpl implements Dashboard {
 	 */
 	public EList<TraceLink> getTraceLinks() {
 		if (traceLinks == null) {
-			traceLinks = new EObjectContainmentEList.Resolving<TraceLink>(TraceLink.class, this, TraceeditorPackage.DASHBOARD__TRACE_LINKS);
+			traceLinks = new EObjectContainmentEList<TraceLink>(TraceLink.class, this, TraceeditorPackage.DASHBOARD__TRACE_LINKS);
 		}
 		return traceLinks;
 	}
@@ -145,7 +141,7 @@ public class DashboardImpl extends EObjectImpl implements Dashboard {
 	 */
 	public EList<Transformation> getTransformations() {
 		if (transformations == null) {
-			transformations = new EObjectContainmentEList.Resolving<Transformation>(Transformation.class, this, TraceeditorPackage.DASHBOARD__TRANSFORMATIONS);
+			transformations = new EObjectContainmentEList<Transformation>(Transformation.class, this, TraceeditorPackage.DASHBOARD__TRANSFORMATIONS);
 		}
 		return transformations;
 	}

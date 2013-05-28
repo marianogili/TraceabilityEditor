@@ -1,278 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gmfgraph:Canvas xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="traceeditor">
-  <figures
-      name="Default">
-    <figures
-        xsi:type="gmfgraph:PolylineDecoration"
-        name="TraceLinkSourcesTargetDecoration"/>
-    <figures
-        xsi:type="gmfgraph:PolylineDecoration"
-        name="TraceLinkTargetsTargetDecoration"/>
-    <descriptors
-        name="TransformationFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="TransformationFigure">
-        <layout
-            xsi:type="gmfgraph:BorderLayout"/>
-        <backgroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="yellow"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="TransformationNameFigure"
-            text="&lt;...>">
-          <layoutData
-              xsi:type="gmfgraph:BorderLayoutData"
-              alignment="BEGINNING"
-              vertical="true"/>
-        </children>
-        <children
-            xsi:type="gmfgraph:Rectangle"
-            name="TransformacionCompartmentFigure">
-          <layoutData
-              xsi:type="gmfgraph:BorderLayoutData"/>
-        </children>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="traceeditor">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="TraceLinkSourcesTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="TraceLinkTargetsTargetDecoration"/>
+    <descriptors name="TransformationFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TransformationFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="TransformationNameFigure" text="&lt;...>"/>
       </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
-      <accessors
-          figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
     </descriptors>
-    <descriptors
-        name="TraceLinkFigure">
-      <actualFigure
-          xsi:type="gmfgraph:ScalablePolygon"
-          name="TraceLinkFigure">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            vertical="true"
-            minorAlignment="CENTER"/>
-        <backgroundColor
-            xsi:type="gmfgraph:RGBColor"
-            red="237"
-            green="184"
-            blue="255"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="TraceLinkNameFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="TraceLinkType"
-            text="&lt;&lt;...>>"/>
-        <template
-            x="20"/>
-        <template
-            x="40"
-            y="20"/>
-        <template
-            x="20"
-            y="40"/>
-        <template
-            y="20"/>
+    <descriptors name="TraceLinkFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TraceLinkFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="TraceLinkNameFigure" text="&lt;...>"/>
       </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
-      <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
     </descriptors>
-    <descriptors
-        name="TraceLinkSourcesFigure">
-      <actualFigure
-          xsi:type="gmfgraph:PolylineConnection"
-          name="TraceLinkSourcesFigure"
-          targetDecoration="//@figures.0/@figures.0">
-        <foregroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="blue"/>
-      </actualFigure>
+    <descriptors name="TraceLinkSourcesFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TraceLinkSourcesFigure" targetDecoration="//@figures.0/@figures.0"/>
     </descriptors>
-    <descriptors
-        name="TraceLinkTargetsFigure">
-      <actualFigure
-          xsi:type="gmfgraph:PolylineConnection"
-          name="TraceLinkTargetsFigure"
-          targetDecoration="//@figures.0/@figures.1">
-        <foregroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="red"/>
-      </actualFigure>
+    <descriptors name="TraceLinkTargetsFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TraceLinkTargetsFigure" targetDecoration="//@figures.0/@figures.1"/>
     </descriptors>
-    <descriptors
-        name="ArtefactFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="ArtefactFigure"
-          lineWidth="0">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            vertical="true"/>
-        <preferredSize
-            dx="100"
-            dy="75"/>
-        <border
-            xsi:type="gmfgraph:MarginBorder">
-          <insets
-              top="20"
-              left="2"
-              bottom="3"
-              right="5"/>
-        </border>
-        <children
-            xsi:type="gmfgraph:Rectangle"
-            name="ArtefactFigureInt">
-          <layout
-              xsi:type="gmfgraph:FlowLayout"
-              vertical="true"
-              matchMinorSize="true"
-              minorAlignment="CENTER"
-              majorSpacing="0"
-              minorSpacing="0"/>
-          <backgroundColor
-              xsi:type="gmfgraph:RGBColor"
-              red="255"
-              green="255"
-              blue="190"/>
-          <preferredSize
-              dx="100"
-              dy="70"/>
-          <children
-              xsi:type="gmfgraph:Label"
-              name="ArtefactNameFigure"
-              text="&lt;...>"/>
-          <children
-              xsi:type="gmfgraph:Label"
-              name="TypeArtefactFigure"
-              text="&lt;...>"/>
-        </children>
+    <descriptors name="ArtefactFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ArtefactFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ArtefactNameFigure" text="&lt;...>"/>
       </actualFigure>
-      <accessors
-          accessor="getFigureTypeArtefact"
-          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0/@children.1"/>
-      <accessors
-          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0/@children.0"/>
-      <accessors
-          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
     </descriptors>
-    <descriptors
-        name="DashboardFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="DashboardFigure">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            majorSpacing="0"
-            minorSpacing="0"/>
-        <preferredSize
-            dx="800"
-            dy="500"/>
-        <children
-            xsi:type="gmfgraph:Rectangle"
-            name="DashboardCompartmentLeft">
-          <layout
-              xsi:type="gmfgraph:FlowLayout"
-              vertical="true"
-              forceSingleLine="true"
-              minorAlignment="CENTER"
-              majorSpacing="0"
-              minorSpacing="0"/>
-          <preferredSize
-              dx="200"
-              dy="500"/>
-        </children>
-        <children
-            xsi:type="gmfgraph:Rectangle"
-            name="DashboardCompartmentCenter">
-          <layoutData
-              xsi:type="gmfgraph:BorderLayoutData"
-              vertical="true"/>
-          <preferredSize
-              dx="400"
-              dy="500"/>
-        </children>
-        <children
-            xsi:type="gmfgraph:Rectangle"
-            name="DashboardCompartmentRight">
-          <layout
-              xsi:type="gmfgraph:FlowLayout"
-              vertical="true"
-              forceSingleLine="true"
-              minorAlignment="CENTER"
-              majorSpacing="0"
-              minorSpacing="0"/>
-          <preferredSize
-              dx="200"
-              dy="500"/>
-        </children>
-      </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
-      <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
-      <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
+    <descriptors name="DashboardFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="DashboardFigure"/>
     </descriptors>
   </figures>
-  <nodes
-      name="Transformation"
-      figure="TransformationFigure"/>
-  <nodes
-      name="TraceLink"
-      figure="TraceLinkFigure"/>
-  <nodes
-      name="SourceArtefact"
-      figure="ArtefactFigure"/>
-  <nodes
-      name="TargetArtefact"
-      figure="ArtefactFigure"/>
-  <nodes
-      name="Dashboard"
-      figure="DashboardFigure"/>
-  <connections
-      name="TraceLinkSources"
-      figure="TraceLinkSourcesFigure"/>
-  <connections
-      name="TraceLinkTargets"
-      figure="TraceLinkTargetsFigure"/>
-  <compartments
-      name="DashboardCompartmentLeft"
-      figure="DashboardFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.0"/>
-  <compartments
-      name="DashboardCompartmentCenter"
-      figure="DashboardFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.1"/>
-  <compartments
-      name="DashboardCompartmentRight"
-      figure="DashboardFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.2"/>
-  <compartments
-      name="TransformationCompartment"
-      figure="TransformationFigure"
-      accessor="//@figures.0/@descriptors.0/@accessors.1"/>
-  <labels
-      name="TransformationName"
-      figure="TransformationFigure"
-      accessor="//@figures.0/@descriptors.0/@accessors.0"/>
-  <labels
-      name="TraceLinkName"
-      figure="TraceLinkFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.0"/>
-  <labels
-      name="ArtefactName"
-      figure="ArtefactFigure"
-      accessor="//@figures.0/@descriptors.4/@accessors.1"/>
-  <labels
-      name="TypeArtefact"
-      figure="ArtefactFigure"
-      elementIcon="false"
-      accessor="//@figures.0/@descriptors.4/@accessors.0"/>
-  <labels
-      name="TraceLinkType"
-      elementIcon="false"
-      accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <nodes name="Transformation" figure="TransformationFigure"/>
+  <nodes name="TraceLink" figure="TraceLinkFigure"/>
+  <nodes name="Artefact" figure="ArtefactFigure"/>
+  <nodes name="Dashboard" figure="DashboardFigure"/>
+  <connections name="TraceLinkSources" figure="TraceLinkSourcesFigure"/>
+  <connections name="TraceLinkTargets" figure="TraceLinkTargetsFigure"/>
+  <labels name="TransformationName" figure="TransformationFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="TraceLinkName" figure="TraceLinkFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="ArtefactName" figure="ArtefactFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
 </gmfgraph:Canvas>

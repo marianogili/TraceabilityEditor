@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package com.marianogili.traceeditor.impl;
 
@@ -86,7 +82,7 @@ public class ConfigurationImpl extends EObjectImpl implements Configuration {
 	 */
 	public EList<LinkType> getLinkTypes() {
 		if (linkTypes == null) {
-			linkTypes = new EObjectContainmentEList.Resolving<LinkType>(LinkType.class, this, TraceeditorPackage.CONFIGURATION__LINK_TYPES);
+			linkTypes = new EObjectContainmentEList<LinkType>(LinkType.class, this, TraceeditorPackage.CONFIGURATION__LINK_TYPES);
 		}
 		return linkTypes;
 	}
@@ -98,7 +94,7 @@ public class ConfigurationImpl extends EObjectImpl implements Configuration {
 	 */
 	public EList<TypeArtefact> getTypeArtefacts() {
 		if (typeArtefacts == null) {
-			typeArtefacts = new EObjectContainmentEList.Resolving<TypeArtefact>(TypeArtefact.class, this, TraceeditorPackage.CONFIGURATION__TYPE_ARTEFACTS);
+			typeArtefacts = new EObjectContainmentEList<TypeArtefact>(TypeArtefact.class, this, TraceeditorPackage.CONFIGURATION__TYPE_ARTEFACTS);
 		}
 		return typeArtefacts;
 	}

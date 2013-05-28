@@ -1,14 +1,9 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package com.marianogili.traceeditor.provider;
 
 
 import com.marianogili.traceeditor.LinkType;
-import com.marianogili.traceeditor.TraceeditorFactory;
 import com.marianogili.traceeditor.TraceeditorPackage;
 
 import java.util.Collection;
@@ -17,7 +12,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -63,26 +57,26 @@ public class LinkTypeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSubTypesPropertyDescriptor(object);
+			addParentPropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Sub Types feature.
+	 * This adds a property descriptor for the Parent feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSubTypesPropertyDescriptor(Object object) {
+	protected void addParentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_LinkType_subTypes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_LinkType_subTypes_feature", "_UI_LinkType_type"),
-				 TraceeditorPackage.Literals.LINK_TYPE__SUB_TYPES,
+				 getString("_UI_LinkType_parent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LinkType_parent_feature", "_UI_LinkType_type"),
+				 TraceeditorPackage.Literals.LINK_TYPE__PARENT,
 				 true,
 				 false,
 				 true,

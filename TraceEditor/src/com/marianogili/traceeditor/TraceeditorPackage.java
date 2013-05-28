@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package com.marianogili.traceeditor;
 
@@ -337,13 +333,31 @@ public interface TraceeditorPackage extends EPackage {
 	int TYPE_ARTEFACT__NAME = NAMED_ELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_ARTEFACT__DESCRIPTION = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_ARTEFACT__PARENT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Type Artefact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_ARTEFACT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int TYPE_ARTEFACT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link com.marianogili.traceeditor.impl.LinkTypeImpl <em>Link Type</em>}' class.
@@ -365,13 +379,13 @@ public interface TraceeditorPackage extends EPackage {
 	int LINK_TYPE__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Sub Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_TYPE__SUB_TYPES = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int LINK_TYPE__PARENT = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -390,7 +404,6 @@ public interface TraceeditorPackage extends EPackage {
 	 * @ordered
 	 */
 	int LINK_TYPE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
-
 
 	/**
 	 * The meta object id for the '{@link com.marianogili.traceeditor.impl.ConfigurationImpl <em>Configuration</em>}' class.
@@ -644,6 +657,28 @@ public interface TraceeditorPackage extends EPackage {
 	EClass getTypeArtefact();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.marianogili.traceeditor.TypeArtefact#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see com.marianogili.traceeditor.TypeArtefact#getDescription()
+	 * @see #getTypeArtefact()
+	 * @generated
+	 */
+	EAttribute getTypeArtefact_Description();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.marianogili.traceeditor.TypeArtefact#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent</em>'.
+	 * @see com.marianogili.traceeditor.TypeArtefact#getParent()
+	 * @see #getTypeArtefact()
+	 * @generated
+	 */
+	EReference getTypeArtefact_Parent();
+
+	/**
 	 * Returns the meta object for class '{@link com.marianogili.traceeditor.LinkType <em>Link Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -654,15 +689,15 @@ public interface TraceeditorPackage extends EPackage {
 	EClass getLinkType();
 
 	/**
-	 * Returns the meta object for the reference list '{@link com.marianogili.traceeditor.LinkType#getSubTypes <em>Sub Types</em>}'.
+	 * Returns the meta object for the reference '{@link com.marianogili.traceeditor.LinkType#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Sub Types</em>'.
-	 * @see com.marianogili.traceeditor.LinkType#getSubTypes()
+	 * @return the meta object for the reference '<em>Parent</em>'.
+	 * @see com.marianogili.traceeditor.LinkType#getParent()
 	 * @see #getLinkType()
 	 * @generated
 	 */
-	EReference getLinkType_SubTypes();
+	EReference getLinkType_Parent();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.marianogili.traceeditor.LinkType#getDescription <em>Description</em>}'.
@@ -904,6 +939,22 @@ public interface TraceeditorPackage extends EPackage {
 		EClass TYPE_ARTEFACT = eINSTANCE.getTypeArtefact();
 
 		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TYPE_ARTEFACT__DESCRIPTION = eINSTANCE.getTypeArtefact_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TYPE_ARTEFACT__PARENT = eINSTANCE.getTypeArtefact_Parent();
+
+		/**
 		 * The meta object literal for the '{@link com.marianogili.traceeditor.impl.LinkTypeImpl <em>Link Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -914,12 +965,12 @@ public interface TraceeditorPackage extends EPackage {
 		EClass LINK_TYPE = eINSTANCE.getLinkType();
 
 		/**
-		 * The meta object literal for the '<em><b>Sub Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LINK_TYPE__SUB_TYPES = eINSTANCE.getLinkType_SubTypes();
+		EReference LINK_TYPE__PARENT = eINSTANCE.getLinkType_Parent();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.

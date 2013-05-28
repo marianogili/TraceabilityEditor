@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package com.marianogili.traceeditor;
 
@@ -39,7 +35,7 @@ public interface Configuration extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Link Types</em>' containment reference list.
 	 * @see com.marianogili.traceeditor.TraceeditorPackage#getConfiguration_LinkTypes()
-	 * @model containment="true" resolveProxies="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<LinkType> getLinkTypes();
@@ -55,7 +51,7 @@ public interface Configuration extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Artefacts</em>' containment reference list.
 	 * @see com.marianogili.traceeditor.TraceeditorPackage#getConfiguration_TypeArtefacts()
-	 * @model containment="true" resolveProxies="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<TypeArtefact> getTypeArtefacts();
