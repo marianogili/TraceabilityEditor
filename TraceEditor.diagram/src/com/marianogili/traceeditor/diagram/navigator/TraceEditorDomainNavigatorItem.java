@@ -100,10 +100,9 @@ public class TraceEditorDomainNavigatorItem extends PlatformObject {
 		if (obj instanceof com.marianogili.traceeditor.diagram.navigator.TraceEditorDomainNavigatorItem) {
 			return EcoreUtil
 					.getURI(getEObject())
-					.equals(
-							EcoreUtil
-									.getURI(((com.marianogili.traceeditor.diagram.navigator.TraceEditorDomainNavigatorItem) obj)
-											.getEObject()));
+					.equals(EcoreUtil
+							.getURI(((com.marianogili.traceeditor.diagram.navigator.TraceEditorDomainNavigatorItem) obj)
+									.getEObject()));
 		}
 		return super.equals(obj);
 	}

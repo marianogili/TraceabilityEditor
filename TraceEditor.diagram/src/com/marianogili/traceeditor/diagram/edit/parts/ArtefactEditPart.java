@@ -1,40 +1,33 @@
 package com.marianogili.traceeditor.diagram.edit.parts;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.MarginBorder;
-import org.eclipse.draw2d.RectangleFigure;
+import org.eclipse.draw2d.RoundedRectangle;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.impl.EReferenceImpl;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.commands.Command;
-import org.eclipse.gef.editpolicies.FlowLayoutEditPolicy;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
-import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.widgets.Display;
 
-import com.marianogili.traceeditor.Artefact;
-import com.marianogili.traceeditor.TypeArtefact;
 import com.marianogili.traceeditor.diagram.edit.policies.ArtefactItemSemanticEditPolicy;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
-import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
-import com.marianogili.traceeditor.impl.ArtefactImpl;
 
 /**
  * @generated
@@ -102,8 +95,7 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		ArtefactFigure figure = new ArtefactFigure();
-		return primaryShape = figure;
+		return primaryShape = new ArtefactFigure();
 	}
 
 	/**
@@ -117,11 +109,6 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof WrappingLabelEditPart) {
-			((WrappingLabelEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureTypeArtefact());
-			return true;
-		}
 		if (childEditPart instanceof ArtefactNameEditPart) {
 			((ArtefactNameEditPart) childEditPart).setLabel(getPrimaryShape()
 					.getFigureArtefactNameFigure());
@@ -134,9 +121,6 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof WrappingLabelEditPart) {
-			return true;
-		}
 		if (childEditPart instanceof ArtefactNameEditPart) {
 			return true;
 		}
@@ -174,7 +158,7 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected NodeFigure createNodePlate() {
-		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(100, 75);
+		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
 		return result;
 	}
 
@@ -267,71 +251,12 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnTarget() {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
-		types.add(TraceEditorElementTypes.TraceLinkSources_4001);
-		types.add(TraceEditorElementTypes.TraceLinkTargets_4002);
-		return types;
-	}
+	public class ArtefactFigure extends RoundedRectangle {
 
-	/**
-	 * @generated
-	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForSource(
-			IElementType relationshipType) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
-		if (relationshipType == TraceEditorElementTypes.TraceLinkSources_4001) {
-			types.add(TraceEditorElementTypes.TraceLink_3004);
-		}
-		if (relationshipType == TraceEditorElementTypes.TraceLinkSources_4001) {
-			types.add(TraceEditorElementTypes.TraceLink_3005);
-		}
-		if (relationshipType == TraceEditorElementTypes.TraceLinkTargets_4002) {
-			types.add(TraceEditorElementTypes.TraceLink_3004);
-		}
-		if (relationshipType == TraceEditorElementTypes.TraceLinkTargets_4002) {
-			types.add(TraceEditorElementTypes.TraceLink_3005);
-		}
-		return types;
-	}
-
-	/* (non-Javadoc)
-	 * @see org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart#handleNotificationEvent(org.eclipse.emf.common.notify.Notification)
-	 */
-	@Override
-	protected void handleNotificationEvent(Notification notification) {
-		if (notification.getNotifier() instanceof ArtefactImpl) {
-			if (notification.getFeature() instanceof EReferenceImpl) {
-				String attrName = ((EReferenceImpl) notification.getFeature())
-						.getName();
-				if ("type".equals(attrName)) {
-					TypeArtefact type = (TypeArtefact) notification
-							.getNewValue();
-					getPrimaryShape().fFigureTypeArtefact.setText("<< "
-							+ type.getName() + " >>");
-				}
-			}
-		}
-		super.handleNotificationEvent(notification);
-	}
-
-	/**
-	 * @generated
-	 */
-	public class ArtefactFigure extends RectangleFigure {
-
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTypeArtefact;
 		/**
 		 * @generated
 		 */
 		private WrappingLabel fFigureArtefactNameFigure;
-		/**
-		 * @generated
-		 */
-		private RectangleFigure fFigureArtefactFigureInt;
 
 		/**
 		 * @generated
@@ -339,94 +264,36 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 		public ArtefactFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
-			layoutThis.setStretchMinorAxis(false);
+			layoutThis.setStretchMinorAxis(true);
 			layoutThis.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
 
 			layoutThis.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
-			layoutThis.setMajorSpacing(5);
-			layoutThis.setMinorSpacing(5);
+			layoutThis.setMajorSpacing(0);
+			layoutThis.setMinorSpacing(0);
 			layoutThis.setHorizontal(false);
 
 			this.setLayoutManager(layoutThis);
 
-			this.setLineWidth(0);
-			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(100),
-					getMapMode().DPtoLP(75)));
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(20),
-					getMapMode().DPtoLP(2), getMapMode().DPtoLP(3),
-					getMapMode().DPtoLP(5)));
+			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
+					getMapMode().DPtoLP(8)));
+			this.setForegroundColor(ColorConstants.black);
+			this.setBackgroundColor(ColorConstants.lightGreen);
 			createContents();
 		}
 
 		/**
-		 * @generated NOT
+		 * @generated
 		 */
 		private void createContents() {
 
-			fFigureArtefactFigureInt = new RectangleFigure();
-			fFigureArtefactFigureInt.setLineWidth(1);
-			fFigureArtefactFigureInt
-					.setBackgroundColor(FFIGUREARTEFACTFIGUREINT_BACK);
-			fFigureArtefactFigureInt.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(100), getMapMode().DPtoLP(70)));
-
-			this.add(fFigureArtefactFigureInt);
-
-			FlowLayout layoutFFigureArtefactFigureInt = new FlowLayout();
-			layoutFFigureArtefactFigureInt.setStretchMinorAxis(true);
-			layoutFFigureArtefactFigureInt
-					.setMinorAlignment(FlowLayout.ALIGN_CENTER);
-
-			layoutFFigureArtefactFigureInt
-					.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
-			layoutFFigureArtefactFigureInt.setMajorSpacing(0);
-			layoutFFigureArtefactFigureInt.setMinorSpacing(0);
-			layoutFFigureArtefactFigureInt.setHorizontal(false);
-
-			fFigureArtefactFigureInt
-					.setLayoutManager(layoutFFigureArtefactFigureInt);
-
 			fFigureArtefactNameFigure = new WrappingLabel();
-			fFigureArtefactNameFigure.setText("<...>");
 
-			fFigureArtefactFigureInt.add(fFigureArtefactNameFigure);
+			fFigureArtefactNameFigure.setText("");
 
-			Artefact artefact = (Artefact) resolveSemanticElement();
-			fFigureTypeArtefact = new WrappingLabel();
-			if (artefact != null && artefact.getType() != null)
-				fFigureTypeArtefact.setText("<< "
-						+ artefact.getType().getName() + " >>");
-			else
-				fFigureTypeArtefact.setText("<...>");
+			fFigureArtefactNameFigure.setFont(FFIGUREARTEFACTNAMEFIGURE_FONT);
 
-			fFigureArtefactFigureInt.add(fFigureTypeArtefact);
+			this.add(fFigureArtefactNameFigure);
 
-		}
-
-		/**
-		 * @generated
-		 */
-		private boolean myUseLocalCoordinates = false;
-
-		/**
-		 * @generated
-		 */
-		protected boolean useLocalCoordinates() {
-			return myUseLocalCoordinates;
-		}
-
-		/**
-		 * @generated
-		 */
-		protected void setUseLocalCoordinates(boolean useLocalCoordinates) {
-			myUseLocalCoordinates = useLocalCoordinates;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTypeArtefact() {
-			return fFigureTypeArtefact;
 		}
 
 		/**
@@ -436,19 +303,13 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 			return fFigureArtefactNameFigure;
 		}
 
-		/**
-		 * @generated
-		 */
-		public RectangleFigure getFigureArtefactFigureInt() {
-			return fFigureArtefactFigureInt;
-		}
-
 	}
 
 	/**
 	 * @generated
 	 */
-	static final Color FFIGUREARTEFACTFIGUREINT_BACK = new Color(null, 255,
-			255, 190);
+	static final Font FFIGUREARTEFACTNAMEFIGURE_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 9, SWT.BOLD);
 
 }

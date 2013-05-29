@@ -1,6 +1,5 @@
 package com.marianogili.traceeditor.diagram.providers;
 
-import java.util.ArrayList;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EObject;
@@ -29,12 +28,9 @@ import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
-import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
-import org.eclipse.gmf.runtime.notation.Routing;
 import org.eclipse.gmf.runtime.notation.Shape;
 import org.eclipse.gmf.runtime.notation.TitleStyle;
 import org.eclipse.gmf.runtime.notation.View;
-import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.SWT;
@@ -44,23 +40,16 @@ import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactName2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactNameEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentCenterEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentLeftEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentRightEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.Label2EditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.LabelEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.DashboardSourceArtefactCompartmentEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.DashboardTargetArtefactCompartmentEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.DashboardTraceLinkCompartmentEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.DashboardTransformationCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLink2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkName2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkNameEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkSourcesEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkTargetsEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationNameEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TransformationTransformationCompartmentEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.WrappingLabelEditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 
 /**
@@ -128,8 +117,8 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 			if (elementType != null || domainElement == null) {
 				return false;
 			}
-			visualID = TraceEditorVisualIDRegistry.getNodeVisualID(op
-					.getContainerView(), domainElement);
+			visualID = TraceEditorVisualIDRegistry.getNodeVisualID(
+					op.getContainerView(), domainElement);
 		} else {
 			visualID = TraceEditorVisualIDRegistry.getVisualID(op
 					.getSemanticHint());
@@ -158,10 +147,9 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 				switch (visualID) {
 				case DashboardEditPart.VISUAL_ID:
 				case ArtefactEditPart.VISUAL_ID:
-				case TransformationEditPart.VISUAL_ID:
 				case TraceLinkEditPart.VISUAL_ID:
+				case TransformationEditPart.VISUAL_ID:
 				case Artefact2EditPart.VISUAL_ID:
-				case TraceLink2EditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != TraceEditorVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -176,10 +164,9 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		}
 		return DashboardEditPart.VISUAL_ID == visualID
 				|| ArtefactEditPart.VISUAL_ID == visualID
-				|| TransformationEditPart.VISUAL_ID == visualID
 				|| TraceLinkEditPart.VISUAL_ID == visualID
-				|| Artefact2EditPart.VISUAL_ID == visualID
-				|| TraceLink2EditPart.VISUAL_ID == visualID;
+				|| TransformationEditPart.VISUAL_ID == visualID
+				|| Artefact2EditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -242,17 +229,14 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		case ArtefactEditPart.VISUAL_ID:
 			return createArtefact_3001(domainElement, containerView, index,
 					persisted, preferencesHint);
-		case TransformationEditPart.VISUAL_ID:
-			return createTransformation_3002(domainElement, containerView,
-					index, persisted, preferencesHint);
 		case TraceLinkEditPart.VISUAL_ID:
-			return createTraceLink_3004(domainElement, containerView, index,
+			return createTraceLink_3002(domainElement, containerView, index,
 					persisted, preferencesHint);
+		case TransformationEditPart.VISUAL_ID:
+			return createTransformation_3003(domainElement, containerView,
+					index, persisted, preferencesHint);
 		case Artefact2EditPart.VISUAL_ID:
-			return createArtefact_3003(domainElement, containerView, index,
-					persisted, preferencesHint);
-		case TraceLink2EditPart.VISUAL_ID:
-			return createTraceLink_3005(domainElement, containerView, index,
+			return createArtefact_3004(domainElement, containerView, index,
 					persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
@@ -268,12 +252,6 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		IElementType elementType = getSemanticElementType(semanticAdapter);
 		String elementTypeHint = ((IHintedType) elementType).getSemanticHint();
 		switch (TraceEditorVisualIDRegistry.getVisualID(elementTypeHint)) {
-		case TraceLinkSourcesEditPart.VISUAL_ID:
-			return createTraceLinkSources_4001(containerView, index, persisted,
-					preferencesHint);
-		case TraceLinkTargetsEditPart.VISUAL_ID:
-			return createTraceLinkTargets_4002(containerView, index, persisted,
-					preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
 		return null;
@@ -297,9 +275,9 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
-				.getLineStyle_LineColor(), FigureUtilities
-				.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -316,19 +294,28 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
-				.getFillStyle_FillColor(), FigureUtilities
-				.RGBToInteger(fillRGB));
-		createCompartment(node, TraceEditorVisualIDRegistry
-				.getType(DashboardDashboardCompartmentLeftEditPart.VISUAL_ID),
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		createCompartment(
+				node,
+				TraceEditorVisualIDRegistry
+						.getType(DashboardSourceArtefactCompartmentEditPart.VISUAL_ID),
 				false, false, true, true);
 		createCompartment(
 				node,
 				TraceEditorVisualIDRegistry
-						.getType(DashboardDashboardCompartmentCenterEditPart.VISUAL_ID),
-				false, false, false, false);
-		createCompartment(node, TraceEditorVisualIDRegistry
-				.getType(DashboardDashboardCompartmentRightEditPart.VISUAL_ID),
+						.getType(DashboardTraceLinkCompartmentEditPart.VISUAL_ID),
+				false, false, true, true);
+		createCompartment(
+				node,
+				TraceEditorVisualIDRegistry
+						.getType(DashboardTransformationCompartmentEditPart.VISUAL_ID),
+				false, false, true, true);
+		createCompartment(
+				node,
+				TraceEditorVisualIDRegistry
+						.getType(DashboardTargetArtefactCompartmentEditPart.VISUAL_ID),
 				false, false, true, true);
 		return node;
 	}
@@ -338,7 +325,10 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 	 */
 	public Node createArtefact_3001(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(TraceEditorVisualIDRegistry
 				.getType(ArtefactEditPart.VISUAL_ID));
@@ -347,12 +337,6 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		// initializeFromPreferences 
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
 				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
-				.getLineStyle_LineColor(), FigureUtilities
-				.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -367,77 +351,18 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
-				.getFillStyle_FillColor(), FigureUtilities
-				.RGBToInteger(fillRGB));
-		Node label5001 = createLabel(node, TraceEditorVisualIDRegistry
-				.getType(ArtefactNameEditPart.VISUAL_ID));
-		Node label5006 = createLabel(node, TraceEditorVisualIDRegistry
-				.getType(WrappingLabelEditPart.VISUAL_ID));
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Node createTransformation_3002(EObject domainElement,
-			View containerView, int index, boolean persisted,
-			PreferencesHint preferencesHint) {
-		Node node = NotationFactory.eINSTANCE.createNode();
-		node.getStyles()
-				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
-		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(TraceEditorVisualIDRegistry
-				.getType(TransformationEditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
-				.getLineStyle_LineColor(), FigureUtilities
-				.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Node label5002 = createLabel(node, TraceEditorVisualIDRegistry
-				.getType(TransformationNameEditPart.VISUAL_ID));
-		createCompartment(
-				node,
+		Node label5001 = createLabel(node,
 				TraceEditorVisualIDRegistry
-						.getType(TransformationTransformationCompartmentEditPart.VISUAL_ID),
-				false, false, false, false);
+						.getType(ArtefactNameEditPart.VISUAL_ID));
 		return node;
 	}
 
 	/**
 	 * @generated
 	 */
-	public Node createTraceLink_3004(EObject domainElement, View containerView,
+	public Node createTraceLink_3002(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Node node = NotationFactory.eINSTANCE.createNode();
-		node.getStyles()
-				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
-		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(TraceEditorVisualIDRegistry
 				.getType(TraceLinkEditPart.VISUAL_ID));
@@ -449,50 +374,9 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
-				.getLineStyle_LineColor(), FigureUtilities
-				.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Node label5004 = createLabel(node, TraceEditorVisualIDRegistry
-				.getType(TraceLinkNameEditPart.VISUAL_ID));
-		Node label5007 = createLabel(node, TraceEditorVisualIDRegistry
-				.getType(LabelEditPart.VISUAL_ID));
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Node createArtefact_3003(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(TraceEditorVisualIDRegistry
-				.getType(Artefact2EditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
-				.getLineStyle_LineColor(), FigureUtilities
-				.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -509,27 +393,25 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
-				.getFillStyle_FillColor(), FigureUtilities
-				.RGBToInteger(fillRGB));
-		Node label5003 = createLabel(node, TraceEditorVisualIDRegistry
-				.getType(ArtefactName2EditPart.VISUAL_ID));
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5002 = createLabel(node,
+				TraceEditorVisualIDRegistry
+						.getType(TraceLinkNameEditPart.VISUAL_ID));
 		return node;
 	}
 
 	/**
 	 * @generated
 	 */
-	public Node createTraceLink_3005(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Node node = NotationFactory.eINSTANCE.createNode();
-		node.getStyles()
-				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
-		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+	public Node createTransformation_3003(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(TraceEditorVisualIDRegistry
-				.getType(TraceLink2EditPart.VISUAL_ID));
+				.getType(TransformationEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -538,9 +420,9 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 
 		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE
-				.getLineStyle_LineColor(), FigureUtilities
-				.RGBToInteger(lineRGB));
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
 		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (nodeFontStyle != null) {
@@ -555,101 +437,52 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5005 = createLabel(node, TraceEditorVisualIDRegistry
-				.getType(TraceLinkName2EditPart.VISUAL_ID));
-		Node label5008 = createLabel(node, TraceEditorVisualIDRegistry
-				.getType(Label2EditPart.VISUAL_ID));
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5003 = createLabel(node,
+				TraceEditorVisualIDRegistry
+						.getType(TransformationNameEditPart.VISUAL_ID));
 		return node;
 	}
 
 	/**
 	 * @generated
 	 */
-	public Edge createTraceLinkSources_4001(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
-		Edge edge = NotationFactory.eINSTANCE.createEdge();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList points = new ArrayList(2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(TraceEditorVisualIDRegistry
-				.getType(TraceLinkSourcesEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
+	public Node createArtefact_3004(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(TraceEditorVisualIDRegistry
+				.getType(Artefact2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
 				.getPreferenceStore();
-		FontStyle edgeFontStyle = (FontStyle) edge
+		FontStyle nodeFontStyle = (FontStyle) node
 				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
+		if (nodeFontStyle != null) {
 			FontData fontData = PreferenceConverter.getFontData(prefStore,
 					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
 			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
 					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
-					.getRoutingStyle_Routing(), routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createTraceLinkTargets_4002(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
-		Edge edge = NotationFactory.eINSTANCE.createEdge();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList points = new ArrayList(2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(TraceEditorVisualIDRegistry
-				.getType(TraceLinkTargetsEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE
-					.getRoutingStyle_Routing(), routing);
-		}
-		return edge;
+		Node label5004 = createLabel(node,
+				TraceEditorVisualIDRegistry
+						.getType(ArtefactName2EditPart.VISUAL_ID));
+		return node;
 	}
 
 	/**
@@ -718,8 +551,8 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		}
 		EObject eObject = (EObject) semanticAdapter.getAdapter(EObject.class);
 		if (eObject != null) {
-			return EMFCoreUtil.resolve(TransactionUtil
-					.getEditingDomain(eObject), eObject);
+			return EMFCoreUtil.resolve(
+					TransactionUtil.getEditingDomain(eObject), eObject);
 		}
 		return null;
 	}

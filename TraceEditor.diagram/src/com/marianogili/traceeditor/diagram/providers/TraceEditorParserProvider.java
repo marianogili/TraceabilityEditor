@@ -16,7 +16,6 @@ import org.eclipse.gmf.runtime.notation.View;
 import com.marianogili.traceeditor.TraceeditorPackage;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactName2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactNameEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkName2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkNameEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationNameEditPart;
 import com.marianogili.traceeditor.diagram.parsers.MessageFormatParser;
@@ -52,85 +51,64 @@ public class TraceEditorParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser transformationName_5002Parser;
+	private IParser traceLinkName_5002Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getTransformationName_5002Parser() {
-		if (transformationName_5002Parser == null) {
+	private IParser getTraceLinkName_5002Parser() {
+		if (traceLinkName_5002Parser == null) {
 			EAttribute[] features = new EAttribute[] { TraceeditorPackage.eINSTANCE
 					.getNamedElement_Name() };
 			EAttribute[] editableFeatures = new EAttribute[] { TraceeditorPackage.eINSTANCE
 					.getNamedElement_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			transformationName_5002Parser = parser;
+			traceLinkName_5002Parser = parser;
 		}
-		return transformationName_5002Parser;
+		return traceLinkName_5002Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser traceLinkName_5004Parser;
+	private IParser transformationName_5003Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getTraceLinkName_5004Parser() {
-		if (traceLinkName_5004Parser == null) {
+	private IParser getTransformationName_5003Parser() {
+		if (transformationName_5003Parser == null) {
 			EAttribute[] features = new EAttribute[] { TraceeditorPackage.eINSTANCE
 					.getNamedElement_Name() };
 			EAttribute[] editableFeatures = new EAttribute[] { TraceeditorPackage.eINSTANCE
 					.getNamedElement_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			traceLinkName_5004Parser = parser;
+			transformationName_5003Parser = parser;
 		}
-		return traceLinkName_5004Parser;
+		return transformationName_5003Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser artefactName_5003Parser;
+	private IParser artefactName_5004Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getArtefactName_5003Parser() {
-		if (artefactName_5003Parser == null) {
+	private IParser getArtefactName_5004Parser() {
+		if (artefactName_5004Parser == null) {
 			EAttribute[] features = new EAttribute[] { TraceeditorPackage.eINSTANCE
 					.getNamedElement_Name() };
 			EAttribute[] editableFeatures = new EAttribute[] { TraceeditorPackage.eINSTANCE
 					.getNamedElement_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			artefactName_5003Parser = parser;
+			artefactName_5004Parser = parser;
 		}
-		return artefactName_5003Parser;
-	}
-
-	/**
-	 * @generated
-	 */
-	private IParser traceLinkName_5005Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getTraceLinkName_5005Parser() {
-		if (traceLinkName_5005Parser == null) {
-			EAttribute[] features = new EAttribute[] { TraceeditorPackage.eINSTANCE
-					.getNamedElement_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { TraceeditorPackage.eINSTANCE
-					.getNamedElement_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features,
-					editableFeatures);
-			traceLinkName_5005Parser = parser;
-		}
-		return traceLinkName_5005Parser;
+		return artefactName_5004Parser;
 	}
 
 	/**
@@ -140,14 +118,12 @@ public class TraceEditorParserProvider extends AbstractProvider implements
 		switch (visualID) {
 		case ArtefactNameEditPart.VISUAL_ID:
 			return getArtefactName_5001Parser();
-		case TransformationNameEditPart.VISUAL_ID:
-			return getTransformationName_5002Parser();
 		case TraceLinkNameEditPart.VISUAL_ID:
-			return getTraceLinkName_5004Parser();
+			return getTraceLinkName_5002Parser();
+		case TransformationNameEditPart.VISUAL_ID:
+			return getTransformationName_5003Parser();
 		case ArtefactName2EditPart.VISUAL_ID:
-			return getArtefactName_5003Parser();
-		case TraceLinkName2EditPart.VISUAL_ID:
-			return getTraceLinkName_5005Parser();
+			return getArtefactName_5004Parser();
 		}
 		return null;
 	}

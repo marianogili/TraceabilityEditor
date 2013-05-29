@@ -12,9 +12,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
+import com.marianogili.traceeditor.Dashboard;
 import com.marianogili.traceeditor.TraceLink;
 import com.marianogili.traceeditor.TraceeditorFactory;
-import com.marianogili.traceeditor.Transformation;
 
 /**
  * @generated
@@ -56,7 +56,7 @@ public class TraceLinkCreateCommand extends EditElementCommand {
 			IAdaptable info) throws ExecutionException {
 		TraceLink newElement = TraceeditorFactory.eINSTANCE.createTraceLink();
 
-		Transformation owner = (Transformation) getElementToEdit();
+		Dashboard owner = (Dashboard) getElementToEdit();
 		owner.getTraceLinks().add(newElement);
 
 		doConfigure(newElement, monitor, info);

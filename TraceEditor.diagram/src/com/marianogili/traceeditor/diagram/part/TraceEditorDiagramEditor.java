@@ -99,6 +99,7 @@ public class TraceEditorDiagramEditor extends DiagramDocumentEditor implements
 	/**
 	 * @generated
 	 */
+	@SuppressWarnings("rawtypes")
 	public Object getAdapter(Class type) {
 		if (type == IShowInTargetList.class) {
 			return new IShowInTargetList() {
@@ -176,8 +177,7 @@ public class TraceEditorDiagramEditor extends DiagramDocumentEditor implements
 		IEditorInput input = getEditorInput();
 		SaveAsDialog dialog = new SaveAsDialog(shell);
 		IFile original = input instanceof IFileEditorInput ? ((IFileEditorInput) input)
-				.getFile()
-				: null;
+				.getFile() : null;
 		if (original != null) {
 			dialog.setOriginalFile(original);
 		}
@@ -236,8 +236,8 @@ public class TraceEditorDiagramEditor extends DiagramDocumentEditor implements
 			if (status == null || status.getSeverity() != IStatus.CANCEL) {
 				ErrorDialog.openError(shell,
 						Messages.TraceEditorDiagramEditor_SaveErrorTitle,
-						Messages.TraceEditorDiagramEditor_SaveErrorMessage, x
-								.getStatus());
+						Messages.TraceEditorDiagramEditor_SaveErrorMessage,
+						x.getStatus());
 			}
 		} finally {
 			provider.changed(newInput);
@@ -266,6 +266,9 @@ public class TraceEditorDiagramEditor extends DiagramDocumentEditor implements
 			return StructuredSelection.EMPTY;
 		}
 		Diagram diagram = document.getDiagram();
+		if (diagram == null || diagram.eResource() == null) {
+			return StructuredSelection.EMPTY;
+		}
 		IFile file = WorkspaceSynchronizer.getFile(diagram.eResource());
 		if (file != null) {
 			TraceEditorNavigatorItem item = new TraceEditorNavigatorItem(

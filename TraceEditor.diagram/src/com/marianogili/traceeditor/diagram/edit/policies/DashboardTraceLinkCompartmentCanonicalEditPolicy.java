@@ -2,7 +2,6 @@ package com.marianogili.traceeditor.diagram.edit.policies;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -23,7 +22,7 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 import com.marianogili.traceeditor.TraceeditorPackage;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkEditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramUpdater;
 import com.marianogili.traceeditor.diagram.part.TraceEditorNodeDescriptor;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
@@ -31,7 +30,8 @@ import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 /**
  * @generated
  */
-public class TraceEditorCanonicalEditPolicy extends CanonicalEditPolicy {
+public class DashboardTraceLinkCompartmentCanonicalEditPolicy extends
+		CanonicalEditPolicy {
 
 	/**
 	 * @generated
@@ -49,7 +49,7 @@ public class TraceEditorCanonicalEditPolicy extends CanonicalEditPolicy {
 	 * @generated
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return TraceeditorPackage.eINSTANCE.getTraceEditor_Dashboard();
+		return TraceeditorPackage.eINSTANCE.getDashboard_TraceLinks();
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class TraceEditorCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<TraceEditorNodeDescriptor> childDescriptors = TraceEditorDiagramUpdater
-				.getTraceEditor_1000SemanticChildren(viewObject);
+				.getDashboardTraceLinkCompartment_7002SemanticChildren(viewObject);
 		for (TraceEditorNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -80,7 +80,7 @@ public class TraceEditorCanonicalEditPolicy extends CanonicalEditPolicy {
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return DashboardEditPart.VISUAL_ID == TraceEditorVisualIDRegistry
+		return TraceLinkEditPart.VISUAL_ID == TraceEditorVisualIDRegistry
 				.getVisualID(view);
 	}
 
@@ -93,7 +93,7 @@ public class TraceEditorCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<TraceEditorNodeDescriptor> childDescriptors = TraceEditorDiagramUpdater
-				.getTraceEditor_1000SemanticChildren((View) getHost()
+				.getDashboardTraceLinkCompartment_7002SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
@@ -163,7 +163,6 @@ public class TraceEditorCanonicalEditPolicy extends CanonicalEditPolicy {
 		if (changed || createdViews.size() > 0) {
 			postProcessRefreshSemantic(createdViews);
 		}
-
 		if (createdViews.size() > 1) {
 			// perform a layout of the container
 			DeferredLayoutCommand layoutCmd = new DeferredLayoutCommand(host()
@@ -172,35 +171,5 @@ public class TraceEditorCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 
 		makeViewsImmutable(createdViews);
-	}
-
-	/**
-	 * @generated
-	 */
-	@SuppressWarnings("serial")
-	protected static class Domain2Notation extends HashMap<EObject, View> {
-		/**
-		 * @generated
-		 */
-		public boolean containsDomainElement(EObject domainElement) {
-			return this.containsKey(domainElement);
-		}
-
-		/**
-		 * @generated
-		 */
-		public View getHinted(EObject domainEObject, String hint) {
-			return this.get(domainEObject);
-		}
-
-		/**
-		 * @generated
-		 */
-		public void putView(EObject domainElement, View view) {
-			if (!containsKey(view.getElement())) {
-				this.put(domainElement, view);
-			}
-		}
-
 	}
 }

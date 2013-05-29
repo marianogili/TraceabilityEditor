@@ -30,10 +30,8 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
-import com.marianogili.traceeditor.Artefact;
-import com.marianogili.traceeditor.TraceLink;
-import com.marianogili.traceeditor.diagram.edit.helpers.TraceEditorBaseEditHelper;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 import com.marianogili.traceeditor.diagram.providers.TraceEditorElementTypes;
 
@@ -74,8 +72,8 @@ public class TraceEditorBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 			Object view = ((ReconnectRequest) request).getConnectionEditPart()
 					.getModel();
 			if (view instanceof View) {
-				Integer id = new Integer(TraceEditorVisualIDRegistry
-						.getVisualID((View) view));
+				Integer id = new Integer(
+						TraceEditorVisualIDRegistry.getVisualID((View) view));
 				request.getExtendedData().put(VISUAL_ID_KEY, id);
 			}
 		}
@@ -125,19 +123,16 @@ public class TraceEditorBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 			Command editPolicyCommand) {
 		if (editPolicyCommand != null) {
 			ICommand command = editPolicyCommand instanceof ICommandProxy ? ((ICommandProxy) editPolicyCommand)
-					.getICommand()
-					: new CommandProxy(editPolicyCommand);
-			request.setParameter(TraceEditorBaseEditHelper.EDIT_POLICY_COMMAND,
+					.getICommand() : new CommandProxy(editPolicyCommand);
+			request.setParameter(GeneratedEditHelperBase.EDIT_POLICY_COMMAND,
 					command);
 		}
 		IElementType requestContextElementType = getContextElementType(request);
-		request.setParameter(TraceEditorBaseEditHelper.CONTEXT_ELEMENT_TYPE,
+		request.setParameter(GeneratedEditHelperBase.CONTEXT_ELEMENT_TYPE,
 				requestContextElementType);
 		ICommand command = requestContextElementType.getEditCommand(request);
-		request.setParameter(TraceEditorBaseEditHelper.EDIT_POLICY_COMMAND,
-				null);
-		request.setParameter(TraceEditorBaseEditHelper.CONTEXT_ELEMENT_TYPE,
-				null);
+		request.setParameter(GeneratedEditHelperBase.EDIT_POLICY_COMMAND, null);
+		request.setParameter(GeneratedEditHelperBase.CONTEXT_ELEMENT_TYPE, null);
 		if (command != null) {
 			if (!(command instanceof CompositeTransactionalCommand)) {
 				command = new CompositeTransactionalCommand(getEditingDomain(),
@@ -296,57 +291,6 @@ public class TraceEditorBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 			}
 			cmd.add(new DeleteCommand(getEditingDomain(), nextView));
 		}
-	}
-
-	/**
-	 * @generated
-	 */
-	public static class LinkConstraints {
-
-		/**
-		 * @generated
-		 */
-		public static boolean canCreateTraceLinkSources_4001(TraceLink source,
-				Artefact target) {
-			if (source != null) {
-				if (source.getSources().contains(target)) {
-					return false;
-				}
-			}
-
-			return canExistTraceLinkSources_4001(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public static boolean canCreateTraceLinkTargets_4002(TraceLink source,
-				Artefact target) {
-			if (source != null) {
-				if (source.getTargets().contains(target)) {
-					return false;
-				}
-			}
-
-			return canExistTraceLinkTargets_4002(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public static boolean canExistTraceLinkSources_4001(TraceLink source,
-				Artefact target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public static boolean canExistTraceLinkTargets_4002(TraceLink source,
-				Artefact target) {
-			return true;
-		}
-
 	}
 
 }

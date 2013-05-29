@@ -22,12 +22,8 @@ import com.marianogili.traceeditor.diagram.edit.parts.ArtefactName2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactNameEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLink2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkName2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkNameEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkSourcesEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkTargetsEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationNameEditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorPlugin;
@@ -48,13 +44,11 @@ public class TraceEditorNavigatorLabelProvider extends LabelProvider implements
 		TraceEditorDiagramEditorPlugin
 				.getInstance()
 				.getImageRegistry()
-				.put(
-						"Navigator?UnknownElement", ImageDescriptor.getMissingImageDescriptor()); //$NON-NLS-1$
+				.put("Navigator?UnknownElement", ImageDescriptor.getMissingImageDescriptor()); //$NON-NLS-1$
 		TraceEditorDiagramEditorPlugin
 				.getInstance()
 				.getImageRegistry()
-				.put(
-						"Navigator?ImageNotFound", ImageDescriptor.getMissingImageDescriptor()); //$NON-NLS-1$
+				.put("Navigator?ImageNotFound", ImageDescriptor.getMissingImageDescriptor()); //$NON-NLS-1$
 	}
 
 	/**
@@ -105,24 +99,15 @@ public class TraceEditorNavigatorLabelProvider extends LabelProvider implements
 		case ArtefactEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://traceeditor/1.0?Artefact", TraceEditorElementTypes.Artefact_3001); //$NON-NLS-1$
-		case TransformationEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://traceeditor/1.0?Transformation", TraceEditorElementTypes.Transformation_3002); //$NON-NLS-1$
 		case TraceLinkEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://traceeditor/1.0?TraceLink", TraceEditorElementTypes.TraceLink_3004); //$NON-NLS-1$
+					"Navigator?Node?http://traceeditor/1.0?TraceLink", TraceEditorElementTypes.TraceLink_3002); //$NON-NLS-1$
+		case TransformationEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://traceeditor/1.0?Transformation", TraceEditorElementTypes.Transformation_3003); //$NON-NLS-1$
 		case Artefact2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://traceeditor/1.0?Artefact", TraceEditorElementTypes.Artefact_3003); //$NON-NLS-1$
-		case TraceLink2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://traceeditor/1.0?TraceLink", TraceEditorElementTypes.TraceLink_3005); //$NON-NLS-1$
-		case TraceLinkSourcesEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://traceeditor/1.0?TraceLink?sources", TraceEditorElementTypes.TraceLinkSources_4001); //$NON-NLS-1$
-		case TraceLinkTargetsEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://traceeditor/1.0?TraceLink?targets", TraceEditorElementTypes.TraceLinkTargets_4002); //$NON-NLS-1$
+					"Navigator?Node?http://traceeditor/1.0?Artefact", TraceEditorElementTypes.Artefact_3004); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -181,18 +166,12 @@ public class TraceEditorNavigatorLabelProvider extends LabelProvider implements
 			return getDashboard_2001Text(view);
 		case ArtefactEditPart.VISUAL_ID:
 			return getArtefact_3001Text(view);
-		case TransformationEditPart.VISUAL_ID:
-			return getTransformation_3002Text(view);
 		case TraceLinkEditPart.VISUAL_ID:
-			return getTraceLink_3004Text(view);
+			return getTraceLink_3002Text(view);
+		case TransformationEditPart.VISUAL_ID:
+			return getTransformation_3003Text(view);
 		case Artefact2EditPart.VISUAL_ID:
-			return getArtefact_3003Text(view);
-		case TraceLink2EditPart.VISUAL_ID:
-			return getTraceLink_3005Text(view);
-		case TraceLinkSourcesEditPart.VISUAL_ID:
-			return getTraceLinkSources_4001Text(view);
-		case TraceLinkTargetsEditPart.VISUAL_ID:
-			return getTraceLinkTargets_4002Text(view);
+			return getArtefact_3004Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -234,12 +213,12 @@ public class TraceEditorNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getTransformation_3002Text(View view) {
+	private String getTraceLink_3002Text(View view) {
 		IParser parser = TraceEditorParserProvider.getParser(
-				TraceEditorElementTypes.Transformation_3002,
+				TraceEditorElementTypes.TraceLink_3002,
 				view.getElement() != null ? view.getElement() : view,
 				TraceEditorVisualIDRegistry
-						.getType(TransformationNameEditPart.VISUAL_ID));
+						.getType(TraceLinkNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -254,32 +233,12 @@ public class TraceEditorNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getTraceLink_3004Text(View view) {
+	private String getTransformation_3003Text(View view) {
 		IParser parser = TraceEditorParserProvider.getParser(
-				TraceEditorElementTypes.TraceLink_3004,
+				TraceEditorElementTypes.Transformation_3003,
 				view.getElement() != null ? view.getElement() : view,
 				TraceEditorVisualIDRegistry
-						.getType(TraceLinkNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			TraceEditorDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5004); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getArtefact_3003Text(View view) {
-		IParser parser = TraceEditorParserProvider.getParser(
-				TraceEditorElementTypes.Artefact_3003,
-				view.getElement() != null ? view.getElement() : view,
-				TraceEditorVisualIDRegistry
-						.getType(ArtefactName2EditPart.VISUAL_ID));
+						.getType(TransformationNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -294,35 +253,21 @@ public class TraceEditorNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getTraceLink_3005Text(View view) {
+	private String getArtefact_3004Text(View view) {
 		IParser parser = TraceEditorParserProvider.getParser(
-				TraceEditorElementTypes.TraceLink_3005,
+				TraceEditorElementTypes.Artefact_3004,
 				view.getElement() != null ? view.getElement() : view,
 				TraceEditorVisualIDRegistry
-						.getType(TraceLinkName2EditPart.VISUAL_ID));
+						.getType(ArtefactName2EditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
 			TraceEditorDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5005); //$NON-NLS-1$
+					"Parser was not found for label " + 5004); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getTraceLinkSources_4001Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getTraceLinkTargets_4002Text(View view) {
-		return ""; //$NON-NLS-1$
 	}
 
 	/**

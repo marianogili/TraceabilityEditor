@@ -243,12 +243,7 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String TransformaciónyArtefactos1Group_title;
-
-	/**
-	 * @generated
-	 */
-	public static String TransformaciónyArtefactos1Group_desc;
+	public static String Transformaciones1Group_title;
 
 	/**
 	 * @generated
@@ -258,7 +253,7 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Trazas2Group_desc;
+	public static String Porsacar3Group_title;
 
 	/**
 	 * @generated
@@ -273,22 +268,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String ArtefactoOrigen2CreationTool_title;
+	public static String Artefactoorigen3CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String ArtefactoOrigen2CreationTool_desc;
+	public static String Artefactoorigen3CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String ArtefactoDestino3CreationTool_title;
+	public static String Artefactodestino4CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String ArtefactoDestino3CreationTool_desc;
+	public static String Artefactodestino4CreationTool_desc;
 
 	/**
 	 * @generated
@@ -303,92 +298,57 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Origendelatraza2CreationTool_title;
+	public static String Origendelatraza3CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Origendelatraza2CreationTool_desc;
+	public static String Origendelatraza3CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Destinodelatraza3CreationTool_title;
+	public static String Destinodelatraza4CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Destinodelatraza3CreationTool_desc;
+	public static String Destinodelatraza4CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String DashboardDashboardCompartmentLeftEditPart_title;
+	public static String Tablero1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String DashboardDashboardCompartmentCenterEditPart_title;
+	public static String Tablero1CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String DashboardDashboardCompartmentRightEditPart_title;
+	public static String DashboardSourceArtefactCompartmentEditPart_title;
 
 	/**
 	 * @generated
 	 */
-	public static String TransformationTransformationCompartmentEditPart_title;
+	public static String DashboardTraceLinkCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DashboardTransformationCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DashboardTargetArtefactCompartmentEditPart_title;
 
 	/**
 	 * @generated
 	 */
 	public static String CommandName_OpenDiagram;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_TraceEditor_1000_links;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Artefact_3001_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_TraceLink_3004_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Artefact_3003_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_TraceLink_3005_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_TraceLinkSources_4001_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_TraceLinkSources_4001_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_TraceLinkTargets_4002_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_TraceLinkTargets_4002_source;
 
 	/**
 	 * @generated

@@ -2,10 +2,10 @@ package com.marianogili.traceeditor.diagram.part;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -43,7 +43,6 @@ import org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.DiagramDocum
 import org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument;
 import org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocumentProvider;
 import org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocument;
-import org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.document.FileEditorInputProxy;
 import org.eclipse.gmf.runtime.diagram.ui.resources.editor.internal.EditorStatusCodes;
 import org.eclipse.gmf.runtime.diagram.ui.resources.editor.internal.util.DiagramIOUtil;
 import org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand;
@@ -53,7 +52,6 @@ import org.eclipse.jface.operation.IRunnableContext;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorInput;
-import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.part.FileEditorInput;
 
 /**
@@ -63,23 +61,22 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 		implements IDiagramDocumentProvider {
 
 	/**
-	 * @generated NOT
+	 * @generated
 	 */
 	protected ElementInfo createElementInfo(Object element)
 			throws CoreException {
-		if (false == element instanceof IFileEditorInput
+		if (false == element instanceof FileEditorInput
 				&& false == element instanceof URIEditorInput) {
 			throw new CoreException(
 					new Status(
 							IStatus.ERROR,
 							TraceEditorDiagramEditorPlugin.ID,
 							0,
-							NLS
-									.bind(
-											Messages.TraceEditorDocumentProvider_IncorrectInputError,
-											new Object[] {
-													element,
-													"org.eclipse.ui.part.IFileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
+							NLS.bind(
+									Messages.TraceEditorDocumentProvider_IncorrectInputError,
+									new Object[] {
+											element,
+											"org.eclipse.ui.part.FileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
 							null));
 		}
 		IEditorInput editorInput = (IEditorInput) element;
@@ -92,26 +89,24 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated NOT
+	 * @generated
 	 */
 	protected IDocument createDocument(Object element) throws CoreException {
-		if (false == element instanceof IFileEditorInput
+		if (false == element instanceof FileEditorInput
 				&& false == element instanceof URIEditorInput) {
 			throw new CoreException(
 					new Status(
 							IStatus.ERROR,
 							TraceEditorDiagramEditorPlugin.ID,
 							0,
-							NLS
-									.bind(
-											Messages.TraceEditorDocumentProvider_IncorrectInputError,
-											new Object[] {
-													element,
-													"org.eclipse.ui.part.IFileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
+							NLS.bind(
+									Messages.TraceEditorDocumentProvider_IncorrectInputError,
+									new Object[] {
+											element,
+											"org.eclipse.ui.part.FileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
 							null));
 		}
-//		IDocument document = createEmptyDocument();
-		IDocument document = createEmptyDocument(element);
+		IDocument document = createEmptyDocument();
 		setDocumentContent(document, (IEditorInput) element);
 		setupDocument(element, document);
 		return document;
@@ -135,9 +130,9 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	 */
 	private long computeModificationStamp(ResourceSetInfo info) {
 		int result = 0;
-		for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
-				.getLoadedResourcesIterator(); it.hasNext();) {
-			Resource nextResource = (Resource) it.next();
+		for (Iterator<Resource> it = info.getLoadedResourcesIterator(); it
+				.hasNext();) {
+			Resource nextResource = it.next();
 			IFile file = WorkspaceSynchronizer.getFile(nextResource);
 			if (file != null) {
 				if (file.getLocation() != null) {
@@ -151,25 +146,13 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated NOT
+	 * @generated
 	 */
 	protected IDocument createEmptyDocument() {
-//		DiagramDocument document = new DiagramDocument();
-//		document.setEditingDomain(createEditingDomain());
-		return createEmptyDocument(null);
-//		return document;
+		DiagramDocument document = new DiagramDocument();
+		document.setEditingDomain(createEditingDomain());
+		return document;
 	}
-	
-	protected IDocument createEmptyDocument(Object input) {
-	    DiagramDocument document = new DiagramDocument();
-	    if (input instanceof FileEditorInputProxy) {
-	      FileEditorInputProxy proxy = (FileEditorInputProxy) input;
-	      document.setEditingDomain(proxy.getEditingDomain());
-	    } else {
-	      document.setEditingDomain(createEditingDomain());
-	    }
-	    return document;
-	  }
 
 	/**
 	 * @generated
@@ -179,12 +162,10 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 				.getInstance().createEditingDomain();
 		editingDomain.setID("TraceEditor.diagram.EditingDomain"); //$NON-NLS-1$
 		final NotificationFilter diagramResourceModifiedFilter = NotificationFilter
-				.createNotifierFilter(editingDomain.getResourceSet()).and(
-						NotificationFilter
-								.createEventTypeFilter(Notification.ADD)).and(
-						NotificationFilter.createFeatureFilter(
-								ResourceSet.class,
-								ResourceSet.RESOURCE_SET__RESOURCES));
+				.createNotifierFilter(editingDomain.getResourceSet())
+				.and(NotificationFilter.createEventTypeFilter(Notification.ADD))
+				.and(NotificationFilter.createFeatureFilter(ResourceSet.class,
+						ResourceSet.RESOURCE_SET__RESOURCES));
 		editingDomain.getResourceSet().eAdapters().add(new Adapter() {
 
 			private Notifier myTarger;
@@ -216,14 +197,14 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated NOT
+	 * @generated
 	 */
 	protected void setDocumentContent(IDocument document, IEditorInput element)
 			throws CoreException {
 		IDiagramDocument diagramDocument = (IDiagramDocument) document;
 		TransactionalEditingDomain domain = diagramDocument.getEditingDomain();
-		if (element instanceof IFileEditorInput) {
-			IStorage storage = ((IFileEditorInput) element).getStorage();
+		if (element instanceof FileEditorInput) {
+			IStorage storage = ((FileEditorInput) element).getStorage();
 			Diagram diagram = DiagramIOUtil.load(domain, storage, true,
 					getProgressMonitor());
 			document.setContent(diagram);
@@ -239,8 +220,8 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 				}
 				if (!resource.isLoaded()) {
 					try {
-						Map options = new HashMap(GMFResourceFactory
-								.getDefaultLoadOptions());
+						Map options = new HashMap(
+								GMFResourceFactory.getDefaultLoadOptions());
 						// @see 171060 
 						// options.put(org.eclipse.emf.ecore.xmi.XMLResource.OPTION_RECORD_UNKNOWN_FEATURE, Boolean.TRUE);
 						resource.load(options);
@@ -290,12 +271,11 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 							IStatus.ERROR,
 							TraceEditorDiagramEditorPlugin.ID,
 							0,
-							NLS
-									.bind(
-											Messages.TraceEditorDocumentProvider_IncorrectInputError,
-											new Object[] {
-													element,
-													"org.eclipse.ui.part.IFileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
+							NLS.bind(
+									Messages.TraceEditorDocumentProvider_IncorrectInputError,
+									new Object[] {
+											element,
+											"org.eclipse.ui.part.FileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
 							null));
 		}
 	}
@@ -352,10 +332,10 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 			throws CoreException {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			Collection/*<org.eclipse.core.resources.IFile>*/files2Validate = new ArrayList/*<org.eclipse.core.resources.IFile>*/();
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
-					.getLoadedResourcesIterator(); it.hasNext();) {
-				Resource nextResource = (Resource) it.next();
+			LinkedList<IFile> files2Validate = new LinkedList<IFile>();
+			for (Iterator<Resource> it = info.getLoadedResourcesIterator(); it
+					.hasNext();) {
+				Resource nextResource = it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
 				if (file != null && file.isReadOnly()) {
 					files2Validate.add(file);
@@ -391,11 +371,11 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated NOT
+	 * @generated
 	 */
 	public boolean isModifiable(Object element) {
 		if (!isStateValidated(element)) {
-			if (element instanceof IFileEditorInput
+			if (element instanceof FileEditorInput
 					|| element instanceof URIEditorInput) {
 				return true;
 			}
@@ -423,9 +403,9 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	protected void updateCache(Object element) throws CoreException {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
-					.getLoadedResourcesIterator(); it.hasNext();) {
-				Resource nextResource = (Resource) it.next();
+			for (Iterator<Resource> it = info.getLoadedResourcesIterator(); it
+					.hasNext();) {
+				Resource nextResource = it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
 				if (file != null && file.isReadOnly()) {
 					info.setReadOnly(true);
@@ -467,18 +447,19 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	protected ISchedulingRule getResetRule(Object element) {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			Collection/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/rules = new ArrayList/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/();
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
-					.getLoadedResourcesIterator(); it.hasNext();) {
-				Resource nextResource = (Resource) it.next();
+			LinkedList<ISchedulingRule> rules = new LinkedList<ISchedulingRule>();
+			for (Iterator<Resource> it = info.getLoadedResourcesIterator(); it
+					.hasNext();) {
+				Resource nextResource = it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
 				if (file != null) {
 					rules.add(ResourcesPlugin.getWorkspace().getRuleFactory()
 							.modifyRule(file));
 				}
 			}
-			return new MultiRule((ISchedulingRule[]) rules
-					.toArray(new ISchedulingRule[rules.size()]));
+			return new MultiRule(
+					(ISchedulingRule[]) rules.toArray(new ISchedulingRule[rules
+							.size()]));
 		}
 		return null;
 	}
@@ -489,17 +470,18 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	protected ISchedulingRule getSaveRule(Object element) {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			Collection/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/rules = new ArrayList/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/();
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
-					.getLoadedResourcesIterator(); it.hasNext();) {
-				Resource nextResource = (Resource) it.next();
+			LinkedList<ISchedulingRule> rules = new LinkedList<ISchedulingRule>();
+			for (Iterator<Resource> it = info.getLoadedResourcesIterator(); it
+					.hasNext();) {
+				Resource nextResource = it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
 				if (file != null) {
 					rules.add(computeSchedulingRule(file));
 				}
 			}
-			return new MultiRule((ISchedulingRule[]) rules
-					.toArray(new ISchedulingRule[rules.size()]));
+			return new MultiRule(
+					(ISchedulingRule[]) rules.toArray(new ISchedulingRule[rules
+							.size()]));
 		}
 		return null;
 	}
@@ -510,18 +492,19 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	protected ISchedulingRule getSynchronizeRule(Object element) {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			Collection/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/rules = new ArrayList/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/();
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
-					.getLoadedResourcesIterator(); it.hasNext();) {
-				Resource nextResource = (Resource) it.next();
+			LinkedList<ISchedulingRule> rules = new LinkedList<ISchedulingRule>();
+			for (Iterator<Resource> it = info.getLoadedResourcesIterator(); it
+					.hasNext();) {
+				Resource nextResource = it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
 				if (file != null) {
 					rules.add(ResourcesPlugin.getWorkspace().getRuleFactory()
 							.refreshRule(file));
 				}
 			}
-			return new MultiRule((ISchedulingRule[]) rules
-					.toArray(new ISchedulingRule[rules.size()]));
+			return new MultiRule(
+					(ISchedulingRule[]) rules.toArray(new ISchedulingRule[rules
+							.size()]));
 		}
 		return null;
 	}
@@ -532,16 +515,18 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	protected ISchedulingRule getValidateStateRule(Object element) {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			Collection/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/files = new ArrayList/*<org.eclipse.core.runtime.jobs.ISchedulingRule>*/();
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
-					.getLoadedResourcesIterator(); it.hasNext();) {
-				Resource nextResource = (Resource) it.next();
+			LinkedList<ISchedulingRule> files = new LinkedList<ISchedulingRule>();
+			for (Iterator<Resource> it = info.getLoadedResourcesIterator(); it
+					.hasNext();) {
+				Resource nextResource = it.next();
 				IFile file = WorkspaceSynchronizer.getFile(nextResource);
 				if (file != null) {
 					files.add(file);
 				}
 			}
-			return ResourcesPlugin.getWorkspace().getRuleFactory()
+			return ResourcesPlugin
+					.getWorkspace()
+					.getRuleFactory()
 					.validateEditRule(
 							(IFile[]) files.toArray(new IFile[files.size()]));
 		}
@@ -553,8 +538,8 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	 */
 	private ISchedulingRule computeSchedulingRule(IResource toCreateOrModify) {
 		if (toCreateOrModify.exists())
-			return ResourcesPlugin.getWorkspace().getRuleFactory().modifyRule(
-					toCreateOrModify);
+			return ResourcesPlugin.getWorkspace().getRuleFactory()
+					.modifyRule(toCreateOrModify);
 
 		IResource parent = toCreateOrModify;
 		do {
@@ -568,8 +553,8 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 			parent = toCreateOrModify.getParent();
 		} while (parent != null && !parent.exists());
 
-		return ResourcesPlugin.getWorkspace().getRuleFactory().createRule(
-				toCreateOrModify);
+		return ResourcesPlugin.getWorkspace().getRuleFactory()
+				.createRule(toCreateOrModify);
 	}
 
 	/**
@@ -579,9 +564,9 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 			throws CoreException {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
-					.getLoadedResourcesIterator(); it.hasNext();) {
-				Resource nextResource = (Resource) it.next();
+			for (Iterator<Resource> it = info.getLoadedResourcesIterator(); it
+					.hasNext();) {
+				Resource nextResource = it.next();
 				handleElementChanged(info, nextResource, monitor);
 			}
 			return;
@@ -590,7 +575,7 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated NOT
+	 * @generated
 	 */
 	protected void doSaveDocument(IProgressMonitor monitor, Object element,
 			IDocument document, boolean overwrite) throws CoreException {
@@ -611,14 +596,12 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 				monitor.beginTask(
 						Messages.TraceEditorDocumentProvider_SaveDiagramTask,
 						info.getResourceSet().getResources().size() + 1); //"Saving diagram"
-				for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = info
-						.getLoadedResourcesIterator(); it.hasNext();) {
-					Resource nextResource = (Resource) it.next();
-					monitor
-							.setTaskName(NLS
-									.bind(
-											Messages.TraceEditorDocumentProvider_SaveNextResourceTask,
-											nextResource.getURI()));
+				for (Iterator<Resource> it = info.getLoadedResourcesIterator(); it
+						.hasNext();) {
+					Resource nextResource = it.next();
+					monitor.setTaskName(NLS
+							.bind(Messages.TraceEditorDocumentProvider_SaveNextResourceTask,
+									nextResource.getURI()));
 					if (nextResource.isLoaded()
 							&& !info.getEditingDomain()
 									.isReadOnly(nextResource)) {
@@ -629,8 +612,8 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 							fireElementStateChangeFailed(element);
 							throw new CoreException(new Status(IStatus.ERROR,
 									TraceEditorDiagramEditorPlugin.ID,
-									EditorStatusCodes.RESOURCE_FAILURE, e
-											.getLocalizedMessage(), null));
+									EditorStatusCodes.RESOURCE_FAILURE,
+									e.getLocalizedMessage(), null));
 						}
 					}
 					monitor.worked(1);
@@ -645,9 +628,9 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 			}
 		} else {
 			URI newResoruceURI;
-			List affectedFiles = null;
-			if (element instanceof IFileEditorInput) {
-				IFile newFile = ((IFileEditorInput) element).getFile();
+			List<IFile> affectedFiles = null;
+			if (element instanceof FileEditorInput) {
+				IFile newFile = ((FileEditorInput) element).getFile();
 				affectedFiles = Collections.singletonList(newFile);
 				newResoruceURI = URI.createPlatformResourceURI(newFile
 						.getFullPath().toString(), true);
@@ -660,12 +643,11 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 								IStatus.ERROR,
 								TraceEditorDiagramEditorPlugin.ID,
 								0,
-								NLS
-										.bind(
-												Messages.TraceEditorDocumentProvider_IncorrectInputError,
-												new Object[] {
-														element,
-														"org.eclipse.ui.part.IFileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
+								NLS.bind(
+										Messages.TraceEditorDocumentProvider_IncorrectInputError,
+										new Object[] {
+												element,
+												"org.eclipse.ui.part.FileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
 								null));
 			}
 			if (false == document instanceof IDiagramDocument) {
@@ -683,10 +665,11 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 			final Diagram diagramCopy = (Diagram) EcoreUtil
 					.copy(diagramDocument.getDiagram());
 			try {
-				new AbstractTransactionalCommand(diagramDocument
-						.getEditingDomain(), NLS.bind(
-						Messages.TraceEditorDocumentProvider_SaveAsOperation,
-						diagramCopy.getName()), affectedFiles) {
+				new AbstractTransactionalCommand(
+						diagramDocument.getEditingDomain(),
+						NLS.bind(
+								Messages.TraceEditorDocumentProvider_SaveAsOperation,
+								diagramCopy.getName()), affectedFiles) {
 					protected CommandResult doExecuteWithResult(
 							IProgressMonitor monitor, IAdaptable info)
 							throws ExecutionException {
@@ -698,13 +681,13 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 			} catch (ExecutionException e) {
 				fireElementStateChangeFailed(element);
 				throw new CoreException(new Status(IStatus.ERROR,
-						TraceEditorDiagramEditorPlugin.ID, 0, e
-								.getLocalizedMessage(), null));
+						TraceEditorDiagramEditorPlugin.ID, 0,
+						e.getLocalizedMessage(), null));
 			} catch (IOException e) {
 				fireElementStateChangeFailed(element);
 				throw new CoreException(new Status(IStatus.ERROR,
-						TraceEditorDiagramEditorPlugin.ID, 0, e
-								.getLocalizedMessage(), null));
+						TraceEditorDiagramEditorPlugin.ID, 0,
+						e.getLocalizedMessage(), null));
 			}
 			newResource.unload();
 		}
@@ -746,12 +729,16 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated NOT
+	 * @generated
 	 */
 	protected void handleElementMoved(IEditorInput input, URI uri) {
 		if (input instanceof FileEditorInput) {
-			IFile newFile = ResourcesPlugin.getWorkspace().getRoot().getFile(
-					new Path(URI.decode(uri.path())).removeFirstSegments(1));
+			IFile newFile = ResourcesPlugin
+					.getWorkspace()
+					.getRoot()
+					.getFile(
+							new Path(URI.decode(uri.path()))
+									.removeFirstSegments(1));
 			fireElementMoved(input, newFile == null ? null
 					: new FileEditorInput(newFile));
 			return;
@@ -804,7 +791,7 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 		/**
 		 * @generated
 		 */
-		private Collection myUnSynchronizedResources = new ArrayList();
+		private LinkedList<Resource> myUnSynchronizedResources = new LinkedList<Resource>();
 
 		/**
 		 * @generated
@@ -880,9 +867,9 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 		/**
 		 * @generated
 		 */
-		public Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/getLoadedResourcesIterator() {
-			return new ArrayList/*<org.eclipse.emf.ecore.resource.Resource>*/(
-					getResourceSet().getResources()).iterator();
+		public Iterator<Resource> getLoadedResourcesIterator() {
+			return new ArrayList<Resource>(getResourceSet().getResources())
+					.iterator();
 		}
 
 		/**
@@ -898,9 +885,9 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 		public void dispose() {
 			stopResourceListening();
 			getResourceSet().eAdapters().remove(myResourceSetListener);
-			for (Iterator/*<org.eclipse.emf.ecore.resource.Resource>*/it = getLoadedResourcesIterator(); it
+			for (Iterator<Resource> it = getLoadedResourcesIterator(); it
 					.hasNext();) {
-				Resource resource = (Resource) it.next();
+				Resource resource = it.next();
 				resource.unload();
 			}
 			getEditingDomain().dispose();
@@ -1049,8 +1036,9 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 				if (myDocument.getDiagram().eResource() == resource) {
 					Display.getDefault().asyncExec(new Runnable() {
 						public void run() {
-							handleElementMoved(ResourceSetInfo.this
-									.getEditorInput(), newURI);
+							handleElementMoved(
+									ResourceSetInfo.this.getEditorInput(),
+									newURI);
 						}
 					});
 				} else {
@@ -1083,11 +1071,11 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 		 */
 		public ResourceSetModificationListener(ResourceSetInfo info) {
 			myInfo = info;
-			myModifiedFilter = NotificationFilter.createEventTypeFilter(
-					Notification.SET).or(
-					NotificationFilter
-							.createEventTypeFilter(Notification.UNSET)).and(
-					NotificationFilter.createFeatureFilter(Resource.class,
+			myModifiedFilter = NotificationFilter
+					.createEventTypeFilter(Notification.SET)
+					.or(NotificationFilter
+							.createEventTypeFilter(Notification.UNSET))
+					.and(NotificationFilter.createFeatureFilter(Resource.class,
 							Resource.RESOURCE__IS_MODIFIED));
 		}
 
@@ -1123,12 +1111,11 @@ public class TraceEditorDocumentProvider extends AbstractDocumentProvider
 							}
 						}
 						if (dirtyStateChanged) {
-							fireElementDirtyStateChanged(myInfo
-									.getEditorInput(), modified);
+							fireElementDirtyStateChanged(
+									myInfo.getEditorInput(), modified);
 
 							if (!modified) {
-								myInfo
-										.setModificationStamp(computeModificationStamp(myInfo));
+								myInfo.setModificationStamp(computeModificationStamp(myInfo));
 							}
 						}
 					}

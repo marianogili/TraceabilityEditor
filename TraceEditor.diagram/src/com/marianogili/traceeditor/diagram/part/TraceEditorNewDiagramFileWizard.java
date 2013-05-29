@@ -2,7 +2,6 @@ package com.marianogili.traceeditor.diagram.part;
 
 import java.io.IOException;
 import java.util.LinkedList;
-import java.util.List;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.operations.OperationHistoryFactory;
@@ -67,8 +66,7 @@ public class TraceEditorNewDiagramFileWizard extends Wizard {
 				.setTitle(Messages.TraceEditorNewDiagramFileWizard_CreationPageTitle);
 		myFileCreationPage
 				.setDescription(NLS
-						.bind(
-								Messages.TraceEditorNewDiagramFileWizard_CreationPageDescription,
+						.bind(Messages.TraceEditorNewDiagramFileWizard_CreationPageDescription,
 								TraceEditorEditPart.MODEL_ID));
 		IPath filePath;
 		String fileName = URI.decode(domainModelURI.trimFileExtension()
@@ -110,7 +108,7 @@ public class TraceEditorNewDiagramFileWizard extends Wizard {
 	 * @generated
 	 */
 	public boolean performFinish() {
-		List affectedFiles = new LinkedList();
+		LinkedList<IFile> affectedFiles = new LinkedList<IFile>();
 		IFile diagramFile = myFileCreationPage.createNewFile();
 		TraceEditorDiagramEditorUtil.setCharset(diagramFile);
 		affectedFiles.add(diagramFile);

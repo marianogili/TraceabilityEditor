@@ -3,31 +3,32 @@ package com.marianogili.traceeditor.diagram.edit.parts;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ListCompartmentEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.CreationEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.DragDropEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.figures.ResizableCompartmentFigure;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
 
-import com.marianogili.traceeditor.diagram.edit.policies.DashboardDashboardCompartmentLeftCanonicalEditPolicy;
-import com.marianogili.traceeditor.diagram.edit.policies.DashboardDashboardCompartmentLeftItemSemanticEditPolicy;
+import com.marianogili.traceeditor.diagram.edit.policies.DashboardTargetArtefactCompartmentCanonicalEditPolicy;
+import com.marianogili.traceeditor.diagram.edit.policies.DashboardTargetArtefactCompartmentItemSemanticEditPolicy;
 import com.marianogili.traceeditor.diagram.part.Messages;
+import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 
 /**
  * @generated
  */
-public class DashboardDashboardCompartmentLeftEditPart extends
+public class DashboardTargetArtefactCompartmentEditPart extends
 		ListCompartmentEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7001;
+	public static final int VISUAL_ID = 7004;
 
 	/**
 	 * @generated
 	 */
-	public DashboardDashboardCompartmentLeftEditPart(View view) {
+	public DashboardTargetArtefactCompartmentEditPart(View view) {
 		super(view);
 	}
 
@@ -42,7 +43,7 @@ public class DashboardDashboardCompartmentLeftEditPart extends
 	 * @generated
 	 */
 	public String getCompartmentName() {
-		return Messages.DashboardDashboardCompartmentLeftEditPart_title;
+		return Messages.DashboardTargetArtefactCompartmentEditPart_title;
 	}
 
 	/**
@@ -61,13 +62,14 @@ public class DashboardDashboardCompartmentLeftEditPart extends
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new DashboardDashboardCompartmentLeftItemSemanticEditPolicy());
+				new DashboardTargetArtefactCompartmentItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE,
-				new CreationEditPolicy());
+				new CreationEditPolicyWithCustomReparent(
+						TraceEditorVisualIDRegistry.TYPED_INSTANCE));
 		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE,
 				new DragDropEditPolicy());
 		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
-				new DashboardDashboardCompartmentLeftCanonicalEditPolicy());
+				new DashboardTargetArtefactCompartmentCanonicalEditPolicy());
 	}
 
 	/**
@@ -76,17 +78,6 @@ public class DashboardDashboardCompartmentLeftEditPart extends
 	protected void setRatio(Double ratio) {
 		// nothing to do -- parent layout does not accept Double constraints as ratio
 		// super.setRatio(ratio); 
-	}
-
-	/* (non-Javadoc)
-	 * @see org.eclipse.gmf.runtime.diagram.ui.editparts.ListCompartmentEditPart#handleNotificationEvent(org.eclipse.emf.common.notify.Notification)
-	 */
-	@Override
-	protected void handleNotificationEvent(Notification event) {
-		if (event.getEventType() == Notification.ADD) {
-			this.getFigure().getParent().getPreferredSize().height += 50;
-		}
-		super.handleNotificationEvent(event);
 	}
 
 }

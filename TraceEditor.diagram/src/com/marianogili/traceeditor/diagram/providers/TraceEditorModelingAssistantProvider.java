@@ -21,15 +21,8 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
-import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.ArtefactEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardDashboardCompartmentCenterEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLink2EditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.TransformationTransformationCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.part.Messages;
 import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorPlugin;
 
@@ -45,26 +38,17 @@ public class TraceEditorModelingAssistantProvider extends
 	public List getTypesForPopupBar(IAdaptable host) {
 		IGraphicalEditPart editPart = (IGraphicalEditPart) host
 				.getAdapter(IGraphicalEditPart.class);
-		if (editPart instanceof DashboardEditPart) {
-			ArrayList types = new ArrayList(2);
-			types.add(TraceEditorElementTypes.Artefact_3001);
-			types.add(TraceEditorElementTypes.Artefact_3003);
-			return types;
-		}
-		if (editPart instanceof DashboardDashboardCompartmentCenterEditPart) {
-			ArrayList types = new ArrayList(2);
-			types.add(TraceEditorElementTypes.Transformation_3002);
-			types.add(TraceEditorElementTypes.TraceLink_3005);
-			return types;
-		}
-		if (editPart instanceof TransformationTransformationCompartmentEditPart) {
-			ArrayList types = new ArrayList(1);
-			types.add(TraceEditorElementTypes.TraceLink_3004);
-			return types;
-		}
 		if (editPart instanceof TraceEditorEditPart) {
-			ArrayList types = new ArrayList(1);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
 			types.add(TraceEditorElementTypes.Dashboard_2001);
+			return types;
+		}
+		if (editPart instanceof DashboardEditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+			types.add(TraceEditorElementTypes.Artefact_3001);
+			types.add(TraceEditorElementTypes.TraceLink_3002);
+			types.add(TraceEditorElementTypes.Transformation_3003);
+			types.add(TraceEditorElementTypes.Artefact_3004);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -76,13 +60,6 @@ public class TraceEditorModelingAssistantProvider extends
 	public List getRelTypesOnSource(IAdaptable source) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof TraceLinkEditPart) {
-			return ((TraceLinkEditPart) sourceEditPart).getMARelTypesOnSource();
-		}
-		if (sourceEditPart instanceof TraceLink2EditPart) {
-			return ((TraceLink2EditPart) sourceEditPart)
-					.getMARelTypesOnSource();
-		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -92,12 +69,6 @@ public class TraceEditorModelingAssistantProvider extends
 	public List getRelTypesOnTarget(IAdaptable target) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		if (targetEditPart instanceof ArtefactEditPart) {
-			return ((ArtefactEditPart) targetEditPart).getMARelTypesOnTarget();
-		}
-		if (targetEditPart instanceof Artefact2EditPart) {
-			return ((Artefact2EditPart) targetEditPart).getMARelTypesOnTarget();
-		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -110,14 +81,6 @@ public class TraceEditorModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof TraceLinkEditPart) {
-			return ((TraceLinkEditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
-		if (sourceEditPart instanceof TraceLink2EditPart) {
-			return ((TraceLink2EditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -128,14 +91,6 @@ public class TraceEditorModelingAssistantProvider extends
 			IElementType relationshipType) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		if (targetEditPart instanceof ArtefactEditPart) {
-			return ((ArtefactEditPart) targetEditPart)
-					.getMATypesForSource(relationshipType);
-		}
-		if (targetEditPart instanceof Artefact2EditPart) {
-			return ((Artefact2EditPart) targetEditPart)
-					.getMATypesForSource(relationshipType);
-		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -146,14 +101,6 @@ public class TraceEditorModelingAssistantProvider extends
 			IElementType relationshipType) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof TraceLinkEditPart) {
-			return ((TraceLinkEditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
-		if (sourceEditPart instanceof TraceLink2EditPart) {
-			return ((TraceLink2EditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -162,8 +109,8 @@ public class TraceEditorModelingAssistantProvider extends
 	 */
 	public EObject selectExistingElementForSource(IAdaptable target,
 			IElementType relationshipType) {
-		return selectExistingElement(target, getTypesForSource(target,
-				relationshipType));
+		return selectExistingElement(target,
+				getTypesForSource(target, relationshipType));
 	}
 
 	/**
@@ -171,8 +118,8 @@ public class TraceEditorModelingAssistantProvider extends
 	 */
 	public EObject selectExistingElementForTarget(IAdaptable source,
 			IElementType relationshipType) {
-		return selectExistingElement(source, getTypesForTarget(source,
-				relationshipType));
+		return selectExistingElement(source,
+				getTypesForTarget(source, relationshipType));
 	}
 
 	/**
@@ -188,9 +135,10 @@ public class TraceEditorModelingAssistantProvider extends
 			return null;
 		}
 		Diagram diagram = (Diagram) editPart.getRoot().getContents().getModel();
-		Collection elements = new HashSet();
-		for (Iterator it = diagram.getElement().eAllContents(); it.hasNext();) {
-			EObject element = (EObject) it.next();
+		HashSet<EObject> elements = new HashSet<EObject>();
+		for (Iterator<EObject> it = diagram.getElement().eAllContents(); it
+				.hasNext();) {
+			EObject element = it.next();
 			if (isApplicableElement(element, types)) {
 				elements.add(element);
 			}

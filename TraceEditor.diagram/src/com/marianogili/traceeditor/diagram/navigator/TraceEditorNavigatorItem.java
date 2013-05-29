@@ -76,10 +76,9 @@ public class TraceEditorNavigatorItem extends TraceEditorAbstractNavigatorItem {
 		if (obj instanceof com.marianogili.traceeditor.diagram.navigator.TraceEditorNavigatorItem) {
 			return EcoreUtil
 					.getURI(getView())
-					.equals(
-							EcoreUtil
-									.getURI(((com.marianogili.traceeditor.diagram.navigator.TraceEditorNavigatorItem) obj)
-											.getView()));
+					.equals(EcoreUtil
+							.getURI(((com.marianogili.traceeditor.diagram.navigator.TraceEditorNavigatorItem) obj)
+									.getView()));
 		}
 		return super.equals(obj);
 	}

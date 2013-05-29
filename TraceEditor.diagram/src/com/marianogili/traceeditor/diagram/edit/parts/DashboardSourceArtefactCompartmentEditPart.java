@@ -3,40 +3,47 @@ package com.marianogili.traceeditor.diagram.edit.parts;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ListCompartmentEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeCompartmentEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.CreationEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.DragDropEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.figures.ResizableCompartmentFigure;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
 
-import com.marianogili.traceeditor.diagram.edit.policies.DashboardDashboardCompartmentCenterCanonicalEditPolicy;
-import com.marianogili.traceeditor.diagram.edit.policies.DashboardDashboardCompartmentCenterItemSemanticEditPolicy;
+import com.marianogili.traceeditor.diagram.edit.policies.DashboardSourceArtefactCompartmentCanonicalEditPolicy;
+import com.marianogili.traceeditor.diagram.edit.policies.DashboardSourceArtefactCompartmentItemSemanticEditPolicy;
 import com.marianogili.traceeditor.diagram.part.Messages;
+import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 
 /**
  * @generated
  */
-public class DashboardDashboardCompartmentCenterEditPart extends
-		ShapeCompartmentEditPart {
+public class DashboardSourceArtefactCompartmentEditPart extends
+		ListCompartmentEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7002;
+	public static final int VISUAL_ID = 7001;
 
 	/**
 	 * @generated
 	 */
-	public DashboardDashboardCompartmentCenterEditPart(View view) {
+	public DashboardSourceArtefactCompartmentEditPart(View view) {
 		super(view);
 	}
 
 	/**
 	 * @generated
 	 */
+	protected boolean hasModelChildrenChanged(Notification evt) {
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
 	public String getCompartmentName() {
-		return Messages.DashboardDashboardCompartmentCenterEditPart_title;
+		return Messages.DashboardSourceArtefactCompartmentEditPart_title;
 	}
 
 	/**
@@ -55,13 +62,14 @@ public class DashboardDashboardCompartmentCenterEditPart extends
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new DashboardDashboardCompartmentCenterItemSemanticEditPolicy());
+				new DashboardSourceArtefactCompartmentItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE,
-				new CreationEditPolicy());
+				new CreationEditPolicyWithCustomReparent(
+						TraceEditorVisualIDRegistry.TYPED_INSTANCE));
 		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE,
 				new DragDropEditPolicy());
 		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
-				new DashboardDashboardCompartmentCenterCanonicalEditPolicy());
+				new DashboardSourceArtefactCompartmentCanonicalEditPolicy());
 	}
 
 	/**
