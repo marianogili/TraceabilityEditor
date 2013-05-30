@@ -92,12 +92,12 @@
       <actualFigure
           xsi:type="gmfgraph:Rectangle"
           name="DashboardFigure">
+        <layoutData
+            xsi:type="gmfgraph:GridLayoutData"/>
         <layout
-            xsi:type="gmfgraph:FlowLayout"
-            matchMinorSize="true"
-            forceSingleLine="true"
-            majorSpacing="0"
-            minorSpacing="0"/>
+            xsi:type="gmfgraph:GridLayout"
+            numColumns="3"
+            equalWidth="false"/>
         <foregroundColor
             xsi:type="gmfgraph:ConstantColor"
             value="black"/>
