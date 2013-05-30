@@ -60,30 +60,42 @@
     <descriptors
         name="ArtefactFigure">
       <actualFigure
-          xsi:type="gmfgraph:RoundedRectangle"
-          name="ArtefactFigure">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            vertical="true"
-            matchMinorSize="true"
-            majorSpacing="0"
-            minorSpacing="0"/>
-        <foregroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="black"/>
-        <backgroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="lightGreen"/>
+          xsi:type="gmfgraph:InvisibleRectangle"
+          name="MarginArtefactRectangle">
+        <border
+            xsi:type="gmfgraph:MarginBorder">
+          <insets
+              top="5"
+              bottom="5"/>
+        </border>
         <children
-            xsi:type="gmfgraph:Label"
-            name="ArtefactNameFigure"
-            text="">
-          <font
-              xsi:type="gmfgraph:BasicFont"
-              faceName=""
-              style="BOLD"/>
+            xsi:type="gmfgraph:RoundedRectangle"
+            name="ArtefactFigure">
+          <layout
+              xsi:type="gmfgraph:FlowLayout"
+              vertical="true"
+              matchMinorSize="true"
+              majorSpacing="0"
+              minorSpacing="0"/>
+          <foregroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="black"/>
+          <backgroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="lightGreen"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="ArtefactNameFigure"
+              text=" ">
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                faceName=""
+                style="BOLD"/>
+          </children>
         </children>
       </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0/@children.0"/>
       <accessors
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
     </descriptors>
@@ -132,6 +144,12 @@
           <children
               xsi:type="gmfgraph:Rectangle"
               name="LeftRectangleCompartment">
+            <layout
+                xsi:type="gmfgraph:FlowLayout"
+                majorAlignment="CENTER"
+                minorAlignment="CENTER"
+                majorSpacing="0"
+                minorSpacing="0"/>
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
@@ -202,6 +220,12 @@
           <children
               xsi:type="gmfgraph:Rectangle"
               name="RightRectangleCompartment">
+            <layout
+                xsi:type="gmfgraph:FlowLayout"
+                majorAlignment="CENTER"
+                minorAlignment="CENTER"
+                majorSpacing="0"
+                minorSpacing="0"/>
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
