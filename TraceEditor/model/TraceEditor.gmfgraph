@@ -95,8 +95,15 @@
         <layout
             xsi:type="gmfgraph:FlowLayout"
             matchMinorSize="true"
+            forceSingleLine="true"
             majorSpacing="0"
             minorSpacing="0"/>
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="lightGray"/>
       </actualFigure>
     </descriptors>
   </figures>

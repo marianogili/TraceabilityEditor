@@ -34,7 +34,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="TraceEditor.gmftool#//@palette/@tools.1/@tools.2"/>
+              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
               href="TraceEditor.gmfgraph#Artefact"/>
         </ownedChild>

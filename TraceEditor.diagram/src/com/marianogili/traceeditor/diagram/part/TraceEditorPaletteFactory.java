@@ -90,11 +90,15 @@ public class TraceEditorPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createArtefactoorigen3CreationTool() {
-		ToolEntry entry = new ToolEntry(
+		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Artefactoorigen3CreationTool_title,
-				Messages.Artefactoorigen3CreationTool_desc, null, null) {
-		};
+				Messages.Artefactoorigen3CreationTool_desc,
+				Collections
+						.singletonList(TraceEditorElementTypes.Artefact_3001));
 		entry.setId("createArtefactoorigen3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(TraceEditorElementTypes
+				.getImageDescriptor(TraceEditorElementTypes.Artefact_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
@@ -134,15 +138,11 @@ public class TraceEditorPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createOrigendelatraza3CreationTool() {
-		NodeToolEntry entry = new NodeToolEntry(
+		ToolEntry entry = new ToolEntry(
 				Messages.Origendelatraza3CreationTool_title,
-				Messages.Origendelatraza3CreationTool_desc,
-				Collections
-						.singletonList(TraceEditorElementTypes.Artefact_3001));
+				Messages.Origendelatraza3CreationTool_desc, null, null) {
+		};
 		entry.setId("createOrigendelatraza3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(TraceEditorElementTypes
-				.getImageDescriptor(TraceEditorElementTypes.Artefact_3001));
-		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
