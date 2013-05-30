@@ -15,7 +15,6 @@ import org.eclipse.gmf.runtime.notation.View;
 import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardSourceArtefactCompartmentEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardTargetArtefactCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardTraceLinkCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardTransformationCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkEditPart;
@@ -92,14 +91,6 @@ public class DashboardItemSemanticEditPolicy extends
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					}
-				}
-				break;
-			case DashboardTransformationCompartmentEditPart.VISUAL_ID:
-				for (Iterator<?> cit = node.getChildren().iterator(); cit
-						.hasNext();) {
-					Node cnode = (Node) cit.next();
-					switch (TraceEditorVisualIDRegistry.getVisualID(cnode)) {
 					case TransformationEditPart.VISUAL_ID:
 						cmd.add(new DestroyElementCommand(
 								new DestroyElementRequest(getEditingDomain(),
@@ -110,7 +101,7 @@ public class DashboardItemSemanticEditPolicy extends
 					}
 				}
 				break;
-			case DashboardTargetArtefactCompartmentEditPart.VISUAL_ID:
+			case DashboardTransformationCompartmentEditPart.VISUAL_ID:
 				for (Iterator<?> cit = node.getChildren().iterator(); cit
 						.hasNext();) {
 					Node cnode = (Node) cit.next();

@@ -42,7 +42,6 @@ import com.marianogili.traceeditor.diagram.edit.parts.ArtefactName2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactNameEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardSourceArtefactCompartmentEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardTargetArtefactCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardTraceLinkCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardTransformationCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
@@ -303,11 +302,6 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 				node,
 				TraceEditorVisualIDRegistry
 						.getType(DashboardTransformationCompartmentEditPart.VISUAL_ID),
-				false, false, true, true);
-		createCompartment(
-				node,
-				TraceEditorVisualIDRegistry
-						.getType(DashboardTargetArtefactCompartmentEditPart.VISUAL_ID),
 				false, false, true, true);
 		return node;
 	}

@@ -17,7 +17,6 @@ import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardSourceArtefactCompartmentEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardTargetArtefactCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardTraceLinkCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardTransformationCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
@@ -41,9 +40,7 @@ public class TraceEditorDiagramUpdater {
 		case DashboardTraceLinkCompartmentEditPart.VISUAL_ID:
 			return getDashboardTraceLinkCompartment_7002SemanticChildren(view);
 		case DashboardTransformationCompartmentEditPart.VISUAL_ID:
-			return getDashboardTransformationCompartment_7003SemanticChildren(view);
-		case DashboardTargetArtefactCompartmentEditPart.VISUAL_ID:
-			return getDashboardTargetArtefactCompartment_7004SemanticChildren(view);
+			return getDashboardTargetArtefactCompartment_7003SemanticChildren(view);
 		}
 		return Collections.emptyList();
 	}
@@ -120,23 +117,6 @@ public class TraceEditorDiagramUpdater {
 				continue;
 			}
 		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<TraceEditorNodeDescriptor> getDashboardTransformationCompartment_7003SemanticChildren(
-			View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		Dashboard modelElement = (Dashboard) containerView.getElement();
-		LinkedList<TraceEditorNodeDescriptor> result = new LinkedList<TraceEditorNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getTransformations().iterator(); it
 				.hasNext();) {
 			Transformation childElement = (Transformation) it.next();
@@ -153,7 +133,7 @@ public class TraceEditorDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<TraceEditorNodeDescriptor> getDashboardTargetArtefactCompartment_7004SemanticChildren(
+	public static List<TraceEditorNodeDescriptor> getDashboardTargetArtefactCompartment_7003SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();

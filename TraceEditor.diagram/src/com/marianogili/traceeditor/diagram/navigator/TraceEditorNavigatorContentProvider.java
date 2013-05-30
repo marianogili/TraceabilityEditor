@@ -27,7 +27,6 @@ import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardSourceArtefactCompartmentEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardTargetArtefactCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardTraceLinkCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardTransformationCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
@@ -263,7 +262,7 @@ public class TraceEditorNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					TraceEditorVisualIDRegistry
-							.getType(DashboardTransformationCompartmentEditPart.VISUAL_ID));
+							.getType(DashboardTraceLinkCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					TraceEditorVisualIDRegistry
 							.getType(TransformationEditPart.VISUAL_ID));
@@ -272,7 +271,7 @@ public class TraceEditorNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					TraceEditorVisualIDRegistry
-							.getType(DashboardTargetArtefactCompartmentEditPart.VISUAL_ID));
+							.getType(DashboardTransformationCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					TraceEditorVisualIDRegistry
 							.getType(Artefact2EditPart.VISUAL_ID));

@@ -63,7 +63,7 @@
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
             href="TraceEditor.ecore#//Dashboard/transformations"/>
         <ownedChild>
@@ -86,7 +86,7 @@
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.3">
+          compartment="//@nodes.0/@ownedChild/@compartments.2">
         <containmentFeature
             href="TraceEditor.ecore#//Dashboard/targetArtefacts"/>
         <ownedChild>
@@ -114,14 +114,9 @@
             href="TraceEditor.gmfgraph#SourceArtefactCompartment"/>
       </compartments>
       <compartments
-          children="//@nodes.0/@ownedChild/@children.1">
+          children="//@nodes.0/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.2">
         <compartment
             href="TraceEditor.gmfgraph#TraceLinkCompartment"/>
-      </compartments>
-      <compartments
-          children="//@nodes.0/@ownedChild/@children.2">
-        <compartment
-            href="TraceEditor.gmfgraph#TransformationCompartment"/>
       </compartments>
       <compartments
           children="//@nodes.0/@ownedChild/@children.3">

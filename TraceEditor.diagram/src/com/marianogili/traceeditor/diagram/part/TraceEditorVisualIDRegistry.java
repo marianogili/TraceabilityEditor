@@ -15,7 +15,6 @@ import com.marianogili.traceeditor.diagram.edit.parts.ArtefactName2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactNameEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardSourceArtefactCompartmentEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardTargetArtefactCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardTraceLinkCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardTransformationCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
@@ -148,14 +147,12 @@ public class TraceEditorVisualIDRegistry {
 					domainElement.eClass())) {
 				return TraceLinkEditPart.VISUAL_ID;
 			}
-			break;
-		case DashboardTransformationCompartmentEditPart.VISUAL_ID:
 			if (TraceeditorPackage.eINSTANCE.getTransformation().isSuperTypeOf(
 					domainElement.eClass())) {
 				return TransformationEditPart.VISUAL_ID;
 			}
 			break;
-		case DashboardTargetArtefactCompartmentEditPart.VISUAL_ID:
+		case DashboardTransformationCompartmentEditPart.VISUAL_ID:
 			if (TraceeditorPackage.eINSTANCE.getArtefact().isSuperTypeOf(
 					domainElement.eClass())) {
 				return Artefact2EditPart.VISUAL_ID;
@@ -201,9 +198,6 @@ public class TraceEditorVisualIDRegistry {
 			if (DashboardTransformationCompartmentEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (DashboardTargetArtefactCompartmentEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			break;
 		case ArtefactEditPart.VISUAL_ID:
 			if (ArtefactNameEditPart.VISUAL_ID == nodeVisualID) {
@@ -234,13 +228,11 @@ public class TraceEditorVisualIDRegistry {
 			if (TraceLinkEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			break;
-		case DashboardTransformationCompartmentEditPart.VISUAL_ID:
 			if (TransformationEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case DashboardTargetArtefactCompartmentEditPart.VISUAL_ID:
+		case DashboardTransformationCompartmentEditPart.VISUAL_ID:
 			if (Artefact2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -290,7 +282,6 @@ public class TraceEditorVisualIDRegistry {
 		case DashboardSourceArtefactCompartmentEditPart.VISUAL_ID:
 		case DashboardTraceLinkCompartmentEditPart.VISUAL_ID:
 		case DashboardTransformationCompartmentEditPart.VISUAL_ID:
-		case DashboardTargetArtefactCompartmentEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

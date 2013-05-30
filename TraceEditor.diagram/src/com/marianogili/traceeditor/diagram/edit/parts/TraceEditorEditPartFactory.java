@@ -60,9 +60,6 @@ public class TraceEditorEditPartFactory implements EditPartFactory {
 
 			case DashboardTransformationCompartmentEditPart.VISUAL_ID:
 				return new DashboardTransformationCompartmentEditPart(view);
-
-			case DashboardTargetArtefactCompartmentEditPart.VISUAL_ID:
-				return new DashboardTargetArtefactCompartmentEditPart(view);
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

@@ -22,7 +22,7 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 import com.marianogili.traceeditor.TraceeditorPackage;
-import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramUpdater;
 import com.marianogili.traceeditor.diagram.part.TraceEditorNodeDescriptor;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
@@ -49,7 +49,7 @@ public class DashboardTransformationCompartmentCanonicalEditPolicy extends
 	 * @generated
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return TraceeditorPackage.eINSTANCE.getDashboard_Transformations();
+		return TraceeditorPackage.eINSTANCE.getDashboard_TargetArtefacts();
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class DashboardTransformationCompartmentCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<TraceEditorNodeDescriptor> childDescriptors = TraceEditorDiagramUpdater
-				.getDashboardTransformationCompartment_7003SemanticChildren(viewObject);
+				.getDashboardTargetArtefactCompartment_7003SemanticChildren(viewObject);
 		for (TraceEditorNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -80,7 +80,7 @@ public class DashboardTransformationCompartmentCanonicalEditPolicy extends
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return TransformationEditPart.VISUAL_ID == TraceEditorVisualIDRegistry
+		return Artefact2EditPart.VISUAL_ID == TraceEditorVisualIDRegistry
 				.getVisualID(view);
 	}
 
@@ -93,7 +93,7 @@ public class DashboardTransformationCompartmentCanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<TraceEditorNodeDescriptor> childDescriptors = TraceEditorDiagramUpdater
-				.getDashboardTransformationCompartment_7003SemanticChildren((View) getHost()
+				.getDashboardTargetArtefactCompartment_7003SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

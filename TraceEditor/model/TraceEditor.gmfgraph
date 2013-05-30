@@ -140,13 +140,6 @@
         alignment="CENTER"/>
   </compartments>
   <compartments
-      name="TransformationCompartment"
-      figure="TransformationFigure">
-    <facets
-        xsi:type="gmfgraph:AlignmentFacet"
-        alignment="CENTER"/>
-  </compartments>
-  <compartments
       name="TargetArtefactCompartment"
       figure="ArtefactFigure">
     <facets

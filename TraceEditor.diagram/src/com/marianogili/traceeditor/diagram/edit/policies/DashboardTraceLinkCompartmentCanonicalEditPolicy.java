@@ -2,9 +2,11 @@ package com.marianogili.traceeditor.diagram.edit.policies;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EObject;
@@ -23,6 +25,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import com.marianogili.traceeditor.TraceeditorPackage;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramUpdater;
 import com.marianogili.traceeditor.diagram.part.TraceEditorNodeDescriptor;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
@@ -32,6 +35,11 @@ import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
  */
 public class DashboardTraceLinkCompartmentCanonicalEditPolicy extends
 		CanonicalEditPolicy {
+
+	/**
+	 * @generated
+	 */
+	private Set<EStructuralFeature> myFeaturesToSynchronize;
 
 	/**
 	 * @generated
@@ -48,8 +56,15 @@ public class DashboardTraceLinkCompartmentCanonicalEditPolicy extends
 	/**
 	 * @generated
 	 */
-	protected EStructuralFeature getFeatureToSynchronize() {
-		return TraceeditorPackage.eINSTANCE.getDashboard_TraceLinks();
+	protected Set getFeaturesToSynchronize() {
+		if (myFeaturesToSynchronize == null) {
+			myFeaturesToSynchronize = new HashSet<EStructuralFeature>();
+			myFeaturesToSynchronize.add(TraceeditorPackage.eINSTANCE
+					.getDashboard_TraceLinks());
+			myFeaturesToSynchronize.add(TraceeditorPackage.eINSTANCE
+					.getDashboard_Transformations());
+		}
+		return myFeaturesToSynchronize;
 	}
 
 	/**
@@ -80,8 +95,9 @@ public class DashboardTraceLinkCompartmentCanonicalEditPolicy extends
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return TraceLinkEditPart.VISUAL_ID == TraceEditorVisualIDRegistry
-				.getVisualID(view);
+		int visualID = TraceEditorVisualIDRegistry.getVisualID(view);
+		return visualID == TraceLinkEditPart.VISUAL_ID
+				|| visualID == TransformationEditPart.VISUAL_ID;
 	}
 
 	/**
