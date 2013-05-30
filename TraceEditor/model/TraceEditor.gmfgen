@@ -57,8 +57,7 @@
           visualID="5001"
           editPartClassName="ArtefactNameEditPart"
           itemSemanticEditPolicyClassName="ArtefactNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="ArtefactNameViewFactory"
-          elementIcon="true">
+          notationViewFactoryClassName="ArtefactNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -110,8 +109,7 @@
           visualID="5002"
           editPartClassName="TraceLinkNameEditPart"
           itemSemanticEditPolicyClassName="TraceLinkNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="TraceLinkNameViewFactory"
-          elementIcon="true">
+          notationViewFactoryClassName="TraceLinkNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -159,8 +157,7 @@
           visualID="5003"
           editPartClassName="TransformationNameEditPart"
           itemSemanticEditPolicyClassName="TransformationNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="TransformationNameViewFactory"
-          elementIcon="true">
+          notationViewFactoryClassName="TransformationNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -213,8 +210,7 @@
           visualID="5004"
           editPartClassName="ArtefactName2EditPart"
           itemSemanticEditPolicyClassName="ArtefactName2ItemSemanticEditPolicy"
-          notationViewFactoryClassName="ArtefactNameViewFactory"
-          elementIcon="true">
+          notationViewFactoryClassName="ArtefactNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -253,7 +249,7 @@
           xsi:type="gmfgen:InnerClassViewmap"
           layoutType="TOOLBAR_LAYOUT"
           className="DashboardFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class DashboardFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public DashboardFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.ToolbarLayout layoutThis = new org.eclipse.draw2d.ToolbarLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(true);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.ToolbarLayout.ALIGN_TOPLEFT&#xA;);&#xA;&#xA;&#x9;layoutThis.setSpacing(0);&#xA;&#x9;layoutThis.setVertical(false);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightGray);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class DashboardFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RoundedRectangle fFigureCentralRectangle; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RoundedRectangle fFigureLeftRectangle; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RoundedRectangle fFigureRightRectangle; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public DashboardFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.ToolbarLayout layoutThis = new org.eclipse.draw2d.ToolbarLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(true);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.ToolbarLayout.ALIGN_TOPLEFT&#xA;);&#xA;&#xA;&#x9;layoutThis.setSpacing(0);&#xA;&#x9;layoutThis.setVertical(false);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightGray);&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(800)&#xA;, getMapMode().DPtoLP(1000)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureLeftRectangle = new org.eclipse.draw2d.RoundedRectangle();&#xA;&#xA;fFigureLeftRectangle.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;fFigureLeftRectangle.setForegroundColor(org.eclipse.draw2d.ColorConstants.gray);&#xA;&#x9;fFigureLeftRectangle.setBackgroundColor(org.eclipse.draw2d.ColorConstants.white);&#xA;fFigureLeftRectangle.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(200)&#xA;, getMapMode().DPtoLP(1000)&#xA;));&#xA;&#xA;this.add(fFigureLeftRectangle);&#xA;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutFFigureLeftRectangle = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutFFigureLeftRectangle.setStretchMinorAxis(true);&#xA;&#x9;layoutFFigureLeftRectangle.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutFFigureLeftRectangle.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutFFigureLeftRectangle.setMajorSpacing(0);&#xA;&#x9;layoutFFigureLeftRectangle.setMinorSpacing(0);&#xA;&#x9;layoutFFigureLeftRectangle.setHorizontal(false);&#xA;&#xA;&#x9;fFigureLeftRectangle.setLayoutManager(layoutFFigureLeftRectangle);&#xA;&#xA;&#xA;&#xA;org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel leftRectangleTitle1 = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;leftRectangleTitle1.setText(&quot;Artefactos orígenes&quot;);&#xA;&#xA;leftRectangleTitle1.setFont(LEFTRECTANGLETITLE1_FONT);&#xA;&#xA;&#xA;&#xA;fFigureLeftRectangle.add(leftRectangleTitle1);&#xA;&#xA;&#xA;&#xA;&#xA;fFigureCentralRectangle = new org.eclipse.draw2d.RoundedRectangle();&#xA;&#xA;fFigureCentralRectangle.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;fFigureCentralRectangle.setForegroundColor(org.eclipse.draw2d.ColorConstants.gray);&#xA;&#x9;fFigureCentralRectangle.setBackgroundColor(org.eclipse.draw2d.ColorConstants.white);&#xA;fFigureCentralRectangle.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(400)&#xA;, getMapMode().DPtoLP(1000)&#xA;));&#xA;&#xA;this.add(fFigureCentralRectangle);&#xA;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutFFigureCentralRectangle = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutFFigureCentralRectangle.setStretchMinorAxis(true);&#xA;&#x9;layoutFFigureCentralRectangle.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutFFigureCentralRectangle.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutFFigureCentralRectangle.setMajorSpacing(0);&#xA;&#x9;layoutFFigureCentralRectangle.setMinorSpacing(0);&#xA;&#x9;layoutFFigureCentralRectangle.setHorizontal(false);&#xA;&#xA;&#x9;fFigureCentralRectangle.setLayoutManager(layoutFFigureCentralRectangle);&#xA;&#xA;&#xA;&#xA;org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel centralRectangleTitle1 = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;centralRectangleTitle1.setText(&quot;Transformaciones y trazas&quot;);&#xA;&#xA;centralRectangleTitle1.setFont(CENTRALRECTANGLETITLE1_FONT);&#xA;&#xA;&#xA;&#xA;fFigureCentralRectangle.add(centralRectangleTitle1);&#xA;&#xA;&#xA;&#xA;&#xA;fFigureRightRectangle = new org.eclipse.draw2d.RoundedRectangle();&#xA;&#xA;fFigureRightRectangle.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;fFigureRightRectangle.setForegroundColor(org.eclipse.draw2d.ColorConstants.gray);&#xA;&#x9;fFigureRightRectangle.setBackgroundColor(org.eclipse.draw2d.ColorConstants.white);&#xA;fFigureRightRectangle.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(200)&#xA;, getMapMode().DPtoLP(1000)&#xA;));&#xA;&#xA;this.add(fFigureRightRectangle);&#xA;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutFFigureRightRectangle = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutFFigureRightRectangle.setStretchMinorAxis(true);&#xA;&#x9;layoutFFigureRightRectangle.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutFFigureRightRectangle.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutFFigureRightRectangle.setMajorSpacing(0);&#xA;&#x9;layoutFFigureRightRectangle.setMinorSpacing(0);&#xA;&#x9;layoutFFigureRightRectangle.setHorizontal(false);&#xA;&#xA;&#x9;fFigureRightRectangle.setLayoutManager(layoutFFigureRightRectangle);&#xA;&#xA;&#xA;&#xA;org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel rightRectangleTitle1 = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;rightRectangleTitle1.setText(&quot;Artefactos destinos&quot;);&#xA;&#xA;rightRectangleTitle1.setFont(RIGHTRECTANGLETITLE1_FONT);&#xA;&#xA;&#xA;&#xA;fFigureRightRectangle.add(rightRectangleTitle1);&#xA;&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RoundedRectangle getFigureCentralRectangle() {&#xA;&#x9;&#x9;return fFigureCentralRectangle;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RoundedRectangle getFigureLeftRectangle() {&#xA;&#x9;&#x9;return fFigureLeftRectangle;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RoundedRectangle getFigureRightRectangle() {&#xA;&#x9;&#x9;return fFigureRightRectangle;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font LEFTRECTANGLETITLE1_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 12, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font CENTRALRECTANGLETITLE1_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 12, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font RIGHTRECTANGLETITLE1_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 12, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedForeground="true"
@@ -282,9 +278,9 @@
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="ArtefactFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ArtefactFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureArtefactNameFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ArtefactFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(true);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(0);&#xA;&#x9;layoutThis.setMinorSpacing(0);&#xA;&#x9;layoutThis.setHorizontal(false);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightGreen);&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureArtefactNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureArtefactNameFigure.setText(&quot;&quot;);&#xA;&#xA;fFigureArtefactNameFigure.setFont(FFIGUREARTEFACTNAMEFIGURE_FONT);&#xA;&#xA;&#xA;&#xA;this.add(fFigureArtefactNameFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureArtefactNameFigure() {&#xA;&#x9;&#x9;return fFigureArtefactNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREARTEFACTNAMEFIGURE_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 9, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;">
+          xsi:type="gmfgen:ParentAssignedViewmap"
+          getterName="getFigureLeftRectangle"
+          figureQualifiedClassName="org.eclipse.draw2d.RoundedRectangle">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedForeground="true"
@@ -305,16 +301,21 @@
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="TraceLinkFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TraceLinkFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTraceLinkNameFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TraceLinkFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTraceLinkNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTraceLinkNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureTraceLinkNameFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTraceLinkNameFigure() {&#xA;&#x9;&#x9;return fFigureTraceLinkNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          xsi:type="gmfgen:ParentAssignedViewmap"
+          getterName="getFigureCentralRectangle"
+          figureQualifiedClassName="org.eclipse.draw2d.RoundedRectangle">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedForeground="true"
+            fixedBackground="true"/>
+      </viewmap>
     </compartments>
     <compartments
         visualID="7003"
-        editPartClassName="DashboardTransformationCompartmentEditPart"
-        itemSemanticEditPolicyClassName="DashboardTransformationCompartmentItemSemanticEditPolicy"
-        notationViewFactoryClassName="DashboardTransformationCompartmentViewFactory"
-        canonicalEditPolicyClassName="DashboardTransformationCompartmentCanonicalEditPolicy"
+        editPartClassName="DashboardTargetArtefactCompartmentEditPart"
+        itemSemanticEditPolicyClassName="DashboardTargetArtefactCompartmentItemSemanticEditPolicy"
+        notationViewFactoryClassName="DashboardTargetArtefactCompartmentViewFactory"
+        canonicalEditPolicyClassName="DashboardTargetArtefactCompartmentCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.3"
         title="TargetArtefactCompartment"
         canCollapse="false"
@@ -323,9 +324,9 @@
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="ArtefactFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ArtefactFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureArtefactNameFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ArtefactFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(true);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(0);&#xA;&#x9;layoutThis.setMinorSpacing(0);&#xA;&#x9;layoutThis.setHorizontal(false);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightGreen);&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureArtefactNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureArtefactNameFigure.setText(&quot;&quot;);&#xA;&#xA;fFigureArtefactNameFigure.setFont(FFIGUREARTEFACTNAMEFIGURE_FONT);&#xA;&#xA;&#xA;&#xA;this.add(fFigureArtefactNameFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureArtefactNameFigure() {&#xA;&#x9;&#x9;return fFigureArtefactNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREARTEFACTNAMEFIGURE_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 9, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;">
+          xsi:type="gmfgen:ParentAssignedViewmap"
+          getterName="getFigureRightRectangle"
+          figureQualifiedClassName="org.eclipse.draw2d.RoundedRectangle">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedForeground="true"

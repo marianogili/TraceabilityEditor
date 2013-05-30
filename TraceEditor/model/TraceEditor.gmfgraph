@@ -104,7 +104,97 @@
         <backgroundColor
             xsi:type="gmfgraph:ConstantColor"
             value="lightGray"/>
+        <minimumSize
+            dx="800"
+            dy="1000"/>
+        <children
+            xsi:type="gmfgraph:RoundedRectangle"
+            name="LeftRectangle">
+          <layout
+              xsi:type="gmfgraph:FlowLayout"
+              vertical="true"
+              matchMinorSize="true"
+              majorSpacing="0"
+              minorSpacing="0"/>
+          <foregroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="gray"/>
+          <backgroundColor
+              xsi:type="gmfgraph:ConstantColor"/>
+          <preferredSize
+              dx="200"
+              dy="1000"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="LeftRectangleTitle"
+              text="Artefactos orígenes">
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                height="12"
+                style="BOLD"/>
+          </children>
+        </children>
+        <children
+            xsi:type="gmfgraph:RoundedRectangle"
+            name="CentralRectangle">
+          <layout
+              xsi:type="gmfgraph:FlowLayout"
+              vertical="true"
+              matchMinorSize="true"
+              majorSpacing="0"
+              minorSpacing="0"/>
+          <foregroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="gray"/>
+          <backgroundColor
+              xsi:type="gmfgraph:ConstantColor"/>
+          <preferredSize
+              dx="400"
+              dy="1000"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="CentralRectangleTitle"
+              text="Transformaciones y trazas">
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                height="12"
+                style="BOLD"/>
+          </children>
+        </children>
+        <children
+            xsi:type="gmfgraph:RoundedRectangle"
+            name="RightRectangle">
+          <layout
+              xsi:type="gmfgraph:FlowLayout"
+              vertical="true"
+              matchMinorSize="true"
+              majorSpacing="0"
+              minorSpacing="0"/>
+          <foregroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="gray"/>
+          <backgroundColor
+              xsi:type="gmfgraph:ConstantColor"/>
+          <preferredSize
+              dx="200"
+              dy="1000"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="RightRectangleTitle"
+              text="Artefactos destinos">
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                height="12"
+                style="BOLD"/>
+          </children>
+        </children>
       </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
     </descriptors>
   </figures>
   <nodes
@@ -127,21 +217,24 @@
       figure="TraceLinkTargetsFigure"/>
   <compartments
       name="SourceArtefactCompartment"
-      figure="ArtefactFigure">
+      figure="ArtefactFigure"
+      accessor="//@figures.0/@descriptors.5/@accessors.1">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
   </compartments>
   <compartments
       name="TraceLinkCompartment"
-      figure="TraceLinkFigure">
+      figure="TraceLinkFigure"
+      accessor="//@figures.0/@descriptors.5/@accessors.0">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
   </compartments>
   <compartments
       name="TargetArtefactCompartment"
-      figure="ArtefactFigure">
+      figure="ArtefactFigure"
+      accessor="//@figures.0/@descriptors.5/@accessors.2">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
@@ -149,13 +242,16 @@
   <labels
       name="TransformationName"
       figure="TransformationFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
   <labels
       name="TraceLinkName"
       figure="TraceLinkFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels
       name="ArtefactName"
       figure="ArtefactFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.4/@accessors.0"/>
 </gmfgraph:Canvas>
