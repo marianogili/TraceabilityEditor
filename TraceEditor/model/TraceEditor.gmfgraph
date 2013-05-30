@@ -92,8 +92,6 @@
       <actualFigure
           xsi:type="gmfgraph:Rectangle"
           name="DashboardFigure">
-        <layoutData
-            xsi:type="gmfgraph:GridLayoutData"/>
         <layout
             xsi:type="gmfgraph:GridLayout"
             numColumns="3"
@@ -110,8 +108,6 @@
         <children
             xsi:type="gmfgraph:RoundedRectangle"
             name="LeftRectangle">
-          <layoutData
-              xsi:type="gmfgraph:GridLayoutData"/>
           <layout
               xsi:type="gmfgraph:GridLayout"/>
           <foregroundColor
@@ -126,6 +122,8 @@
               xsi:type="gmfgraph:Label"
               name="LeftRectangleTitle"
               text="Artefactos orígenes">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"/>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 height="12"
@@ -145,8 +143,6 @@
         <children
             xsi:type="gmfgraph:RoundedRectangle"
             name="CentralRectangle">
-          <layoutData
-              xsi:type="gmfgraph:GridLayoutData"/>
           <layout
               xsi:type="gmfgraph:GridLayout"/>
           <foregroundColor
@@ -161,6 +157,8 @@
               xsi:type="gmfgraph:Label"
               name="CentralRectangleTitle"
               text="Transformaciones y trazas">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"/>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 height="12"
@@ -180,8 +178,6 @@
         <children
             xsi:type="gmfgraph:RoundedRectangle"
             name="RightRectangle">
-          <layoutData
-              xsi:type="gmfgraph:GridLayoutData"/>
           <layout
               xsi:type="gmfgraph:GridLayout"/>
           <foregroundColor
@@ -196,6 +192,8 @@
               xsi:type="gmfgraph:Label"
               name="RightRectangleTitle"
               text="Artefactos destinos">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"/>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 height="12"
