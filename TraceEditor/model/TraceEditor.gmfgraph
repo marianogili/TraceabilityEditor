@@ -34,14 +34,64 @@
           xsi:type="gmfgraph:Rectangle"
           name="TraceLinkFigure">
         <layout
-            xsi:type="gmfgraph:FlowLayout"/>
+            xsi:type="gmfgraph:GridLayout"
+            numColumns="2"
+            equalWidth="false"/>
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="lightBlue"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="LabelTraceLinkName"
+            text="traza:">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              verticalAlignment="END"
+              horizontalAlignment="BEGINNING"/>
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              height="7"/>
+        </children>
         <children
             xsi:type="gmfgraph:Label"
             name="TraceLinkNameFigure"
-            text="&lt;...>"/>
+            text="&lt;...>">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              verticalAlignment="END"/>
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              style="BOLD"/>
+        </children>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="LabelTraceLinkType"
+            text="tipo:">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              verticalAlignment="END"
+              horizontalAlignment="BEGINNING"/>
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              height="7"/>
+        </children>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="TraceLinkTypeFigure">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              verticalAlignment="END"/>
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName=""
+              style="BOLD"/>
+        </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors
         name="TraceLinkSourcesFigure">
@@ -90,14 +140,6 @@
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"
               value="lightGreen"/>
-          <border
-              xsi:type="gmfgraph:MarginBorder">
-            <insets
-                top="5"
-                left="5"
-                bottom="5"
-                right="5"/>
-          </border>
           <children
               xsi:type="gmfgraph:Label"
               name="ArtefactLabelNameFigure"
