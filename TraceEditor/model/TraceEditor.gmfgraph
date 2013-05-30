@@ -110,12 +110,10 @@
         <children
             xsi:type="gmfgraph:RoundedRectangle"
             name="LeftRectangle">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"/>
           <layout
-              xsi:type="gmfgraph:FlowLayout"
-              vertical="true"
-              matchMinorSize="true"
-              majorSpacing="0"
-              minorSpacing="0"/>
+              xsi:type="gmfgraph:GridLayout"/>
           <foregroundColor
               xsi:type="gmfgraph:ConstantColor"
               value="gray"/>
@@ -133,16 +131,24 @@
                 height="12"
                 style="BOLD"/>
           </children>
+          <children
+              xsi:type="gmfgraph:Rectangle"
+              name="LeftRectangleCompartment">
+            <backgroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="orange"/>
+            <preferredSize
+                dx="190"
+                dy="940"/>
+          </children>
         </children>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
             name="CentralRectangle">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"/>
           <layout
-              xsi:type="gmfgraph:FlowLayout"
-              vertical="true"
-              matchMinorSize="true"
-              majorSpacing="0"
-              minorSpacing="0"/>
+              xsi:type="gmfgraph:GridLayout"/>
           <foregroundColor
               xsi:type="gmfgraph:ConstantColor"
               value="gray"/>
@@ -160,16 +166,24 @@
                 height="12"
                 style="BOLD"/>
           </children>
+          <children
+              xsi:type="gmfgraph:Rectangle"
+              name="CentralRectangleCompartment">
+            <backgroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="orange"/>
+            <preferredSize
+                dx="390"
+                dy="940"/>
+          </children>
         </children>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
             name="RightRectangle">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"/>
           <layout
-              xsi:type="gmfgraph:FlowLayout"
-              vertical="true"
-              matchMinorSize="true"
-              majorSpacing="0"
-              minorSpacing="0"/>
+              xsi:type="gmfgraph:GridLayout"/>
           <foregroundColor
               xsi:type="gmfgraph:ConstantColor"
               value="gray"/>
@@ -187,14 +201,24 @@
                 height="12"
                 style="BOLD"/>
           </children>
+          <children
+              xsi:type="gmfgraph:Rectangle"
+              name="RightRectangleCompartment">
+            <backgroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="orange"/>
+            <preferredSize
+                dx="190"
+                dy="940"/>
+          </children>
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.1/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.2/@children.1"/>
     </descriptors>
   </figures>
   <nodes
