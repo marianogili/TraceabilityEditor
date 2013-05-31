@@ -16,7 +16,7 @@
     <descriptors
         name="TransformationFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
+          xsi:type="gmfgraph:RoundedRectangle"
           name="TransformationFigure">
         <layout
             xsi:type="gmfgraph:GridLayout"/>
@@ -48,7 +48,7 @@
     <descriptors
         name="TraceLinkFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
+          xsi:type="gmfgraph:RoundedRectangle"
           name="TraceLinkFigure">
         <layout
             xsi:type="gmfgraph:GridLayout"
