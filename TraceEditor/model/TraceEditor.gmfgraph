@@ -19,14 +19,31 @@
           xsi:type="gmfgraph:Rectangle"
           name="TransformationFigure">
         <layout
-            xsi:type="gmfgraph:FlowLayout"/>
+            xsi:type="gmfgraph:GridLayout"/>
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="lightGreen"/>
+        <preferredSize
+            dx="150"
+            dy="100"/>
         <children
             xsi:type="gmfgraph:Label"
             name="TransformationNameFigure"
-            text="&lt;...>"/>
+            text="&lt;...>">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"/>
+        </children>
+        <children
+            xsi:type="gmfgraph:InvisibleRectangle"
+            name="TransformationRectangleCompartment"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors
         name="TraceLinkFigure">
@@ -98,14 +115,22 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="TraceLinkSourcesFigure"
-          targetDecoration="//@figures.0/@figures.0"/>
+          targetDecoration="//@figures.0/@figures.0">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="blue"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="TraceLinkTargetsFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="TraceLinkTargetsFigure"
-          targetDecoration="//@figures.0/@figures.1"/>
+          targetDecoration="//@figures.0/@figures.1">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="red"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="ArtefactFigure">
@@ -129,7 +154,7 @@
         </border>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
-            name="ArtefactFigure">
+            name="ArtefactFigureInt">
           <layout
               xsi:type="gmfgraph:GridLayout"
               numColumns="2"
@@ -195,9 +220,9 @@
       <accessors
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.0/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
-      <accessors
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.0/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="DashboardFigure">
@@ -381,6 +406,14 @@
       name="TargetArtefactCompartment"
       figure="ArtefactFigure"
       accessor="//@figures.0/@descriptors.5/@accessors.2">
+    <facets
+        xsi:type="gmfgraph:AlignmentFacet"
+        alignment="CENTER"/>
+  </compartments>
+  <compartments
+      name="TransformationCompartment"
+      figure="TransformationFigure"
+      accessor="//@figures.0/@descriptors.0/@accessors.1">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
