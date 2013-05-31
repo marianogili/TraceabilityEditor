@@ -27,7 +27,7 @@
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="TraceEditor.gmfgraph#ArtefactName"/>
+                href="TraceEditor.gmfgraph#SourceArtefactName"/>
             <features
                 href="TraceEditor.ecore#//NamedElement/name"/>
             <editableFeatures
@@ -37,7 +37,7 @@
               xsi:type="gmftool:CreationTool"
               href="TraceEditor.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
-              href="TraceEditor.gmfgraph#Artefact"/>
+              href="TraceEditor.gmfgraph#SourceArtefact"/>
         </ownedChild>
       </children>
       <children
@@ -84,6 +84,17 @@
               href="TraceEditor.gmftool#//@palette/@tools.0/@tools.0"/>
           <diagramNode
               href="TraceEditor.gmfgraph#Transformation"/>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
+            <containmentFeature
+                href="TraceEditor.ecore#//Transformation/traceLinks"/>
+          </children>
+          <compartments
+              children="//@nodes.0/@ownedChild/@children.2/@ownedChild/@children.0">
+            <compartment
+                href="TraceEditor.gmfgraph#TransformationCompartment"/>
+          </compartments>
         </ownedChild>
       </children>
       <children
@@ -96,7 +107,7 @@
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="TraceEditor.gmfgraph#ArtefactName"/>
+                href="TraceEditor.gmfgraph#TargetArtefactName"/>
             <features
                 href="TraceEditor.ecore#//NamedElement/name"/>
             <editableFeatures
@@ -106,7 +117,7 @@
               xsi:type="gmftool:CreationTool"
               href="TraceEditor.gmftool#//@palette/@tools.0/@tools.3"/>
           <diagramNode
-              href="TraceEditor.gmfgraph#Artefact"/>
+              href="TraceEditor.gmfgraph#TargetArtefact"/>
         </ownedChild>
       </children>
       <compartments

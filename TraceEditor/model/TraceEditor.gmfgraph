@@ -133,10 +133,10 @@
       </actualFigure>
     </descriptors>
     <descriptors
-        name="ArtefactFigure">
+        name="SourceArtefactFigure">
       <actualFigure
           xsi:type="gmfgraph:Rectangle"
-          name="MarginArtefactRectangle"
+          name="MarginSourceArtefactRectangle"
           lineWidth="0">
         <backgroundColor
             xsi:type="gmfgraph:ConstantColor"
@@ -154,7 +154,7 @@
         </border>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
-            name="ArtefactFigureInt">
+            name="SourceArtefactFigureInt">
           <layout
               xsi:type="gmfgraph:GridLayout"
               numColumns="2"
@@ -167,7 +167,7 @@
               value="lightGreen"/>
           <children
               xsi:type="gmfgraph:Label"
-              name="ArtefactLabelNameFigure"
+              name="SourceArtefactLabelNameFigure"
               text="nombre:">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
@@ -180,7 +180,7 @@
           </children>
           <children
               xsi:type="gmfgraph:Label"
-              name="ArtefactNameFigure"
+              name="SourceArtefactNameFigure"
               text=" ">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
@@ -192,7 +192,7 @@
           </children>
           <children
               xsi:type="gmfgraph:Label"
-              name="ArtefactLabelTypeFigure"
+              name="SourceArtefactLabelTypeFigure"
               text="tipo:">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
@@ -205,7 +205,7 @@
           </children>
           <children
               xsi:type="gmfgraph:Label"
-              name="ArtefactTypeFigure"
+              name="SourceArtefactTypeFigure"
               text=" ">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
@@ -223,6 +223,98 @@
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.0/@children.3"/>
       <accessors
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors
+        name="TargetArtefactFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="MarginTargetArtefactRectangle"
+          lineWidth="0">
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="lightBlue"/>
+        <preferredSize
+            dx="180"
+            dy="110"/>
+        <border
+            xsi:type="gmfgraph:MarginBorder">
+          <insets
+              top="10"
+              left="20"
+              bottom="20"
+              right="20"/>
+        </border>
+        <children
+            xsi:type="gmfgraph:RoundedRectangle"
+            name="TargetArtefactFigureInt">
+          <layout
+              xsi:type="gmfgraph:GridLayout"
+              numColumns="2"
+              equalWidth="false"/>
+          <foregroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="black"/>
+          <backgroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="cyan"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="TargetArtefactLabelNameFigure"
+              text="nombre:">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="END"
+                horizontalAlignment="BEGINNING"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                faceName=""
+                height="7"/>
+          </children>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="TargetArtefactNameFigure"
+              text=" ">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="END"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                faceName=""
+                style="BOLD"/>
+          </children>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="TargetArtefactLabelTypeFigure"
+              text="tipo:">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="END"
+                horizontalAlignment="BEGINNING"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                faceName=""
+                height="7"/>
+          </children>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="TargetArtefactTypeFigure"
+              text=" ">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="END"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                faceName=""
+                style="BOLD"/>
+          </children>
+        </children>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure"/>
     </descriptors>
     <descriptors
         name="DashboardFigure">
@@ -361,11 +453,11 @@
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.1/@children.1"/>
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.1/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0/@children.1"/>
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.0/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.2/@children.1"/>
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.2/@children.1"/>
     </descriptors>
   </figures>
   <nodes
@@ -375,8 +467,11 @@
       name="TraceLink"
       figure="TraceLinkFigure"/>
   <nodes
-      name="Artefact"
-      figure="ArtefactFigure"/>
+      name="SourceArtefact"
+      figure="SourceArtefactFigure"/>
+  <nodes
+      name="TargetArtefact"
+      figure="TargetArtefactFigure"/>
   <nodes
       name="Dashboard"
       figure="DashboardFigure"/>
@@ -388,8 +483,8 @@
       figure="TraceLinkTargetsFigure"/>
   <compartments
       name="SourceArtefactCompartment"
-      figure="ArtefactFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.1">
+      figure="SourceArtefactFigure"
+      accessor="//@figures.0/@descriptors.6/@accessors.1">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
@@ -397,15 +492,15 @@
   <compartments
       name="TraceLinkCompartment"
       figure="TraceLinkFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.0">
+      accessor="//@figures.0/@descriptors.6/@accessors.0">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
   </compartments>
   <compartments
       name="TargetArtefactCompartment"
-      figure="ArtefactFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.2">
+      figure="SourceArtefactFigure"
+      accessor="//@figures.0/@descriptors.6/@accessors.2">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
@@ -429,8 +524,13 @@
       elementIcon="false"
       accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels
-      name="ArtefactName"
-      figure="ArtefactFigure"
+      name="SourceArtefactName"
+      figure="SourceArtefactFigure"
       elementIcon="false"
       accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels
+      name="TargetArtefactName"
+      figure="TargetArtefactFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.5/@accessors.0"/>
 </gmfgraph:Canvas>
