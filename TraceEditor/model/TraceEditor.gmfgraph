@@ -323,7 +323,7 @@
           name="DashboardFigure">
         <layout
             xsi:type="gmfgraph:GridLayout"
-            numColumns="3"
+            numColumns="4"
             equalWidth="false"/>
         <foregroundColor
             xsi:type="gmfgraph:ConstantColor"
@@ -332,7 +332,7 @@
             xsi:type="gmfgraph:ConstantColor"
             value="lightGray"/>
         <minimumSize
-            dx="800"
+            dx="900"
             dy="1000"/>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
@@ -386,12 +386,12 @@
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
           <preferredSize
-              dx="400"
+              dx="250"
               dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
               name="CentralRectangleTitle"
-              text="Transformaciones y trazas">
+              text="Transformaciones">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"/>
             <font
@@ -406,8 +406,46 @@
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
             <preferredSize
-                dx="390"
-                dy="940"/>
+                dx="240"
+                dy="960"/>
+          </children>
+        </children>
+        <children
+            xsi:type="gmfgraph:RoundedRectangle"
+            name="CentralRectangle1">
+          <layout
+              xsi:type="gmfgraph:GridLayout"/>
+          <foregroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="gray"/>
+          <backgroundColor
+              xsi:type="gmfgraph:ConstantColor"/>
+          <maximumSize
+              dx="250"
+              dy="1000"/>
+          <preferredSize
+              dx="250"
+              dy="1000"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="CentralRectangle1Title"
+              text="Trazas">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                height="12"
+                style="BOLD"/>
+          </children>
+          <children
+              xsi:type="gmfgraph:Rectangle"
+              name="CentralRectangle1Compartment">
+            <backgroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="orange"/>
+            <preferredSize
+                dx="240"
+                dy="960"/>
           </children>
         </children>
         <children
@@ -448,16 +486,18 @@
                 value="orange"/>
             <preferredSize
                 dx="190"
-                dy="940"/>
+                dy="960"/>
           </children>
         </children>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.6/@actualFigure/@children.1/@children.1"/>
       <accessors
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.2/@children.1"/>
+      <accessors
           figure="//@figures.0/@descriptors.6/@actualFigure/@children.0/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.6/@actualFigure/@children.2/@children.1"/>
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.3/@children.1"/>
     </descriptors>
   </figures>
   <nodes
@@ -482,25 +522,33 @@
       name="TraceLinkTargets"
       figure="TraceLinkTargetsFigure"/>
   <compartments
-      name="SourceArtefactCompartment"
-      figure="SourceArtefactFigure"
+      name="DashboardSourceArtefactCompartment"
+      figure="DashboardFigure"
+      accessor="//@figures.0/@descriptors.6/@accessors.2">
+    <facets
+        xsi:type="gmfgraph:AlignmentFacet"
+        alignment="CENTER"/>
+  </compartments>
+  <compartments
+      name="DashboardTraceLinkCompartment"
+      figure="DashboardFigure"
       accessor="//@figures.0/@descriptors.6/@accessors.1">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
   </compartments>
   <compartments
-      name="TraceLinkCompartment"
-      figure="TraceLinkFigure"
+      name="DashBoardTransformationCompartment"
+      figure="DashboardFigure"
       accessor="//@figures.0/@descriptors.6/@accessors.0">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
   </compartments>
   <compartments
-      name="TargetArtefactCompartment"
-      figure="SourceArtefactFigure"
-      accessor="//@figures.0/@descriptors.6/@accessors.2">
+      name="DashboardTargetArtefactCompartment"
+      figure="DashboardFigure"
+      accessor="//@figures.0/@descriptors.6/@accessors.3">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>

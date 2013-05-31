@@ -15,6 +15,9 @@
     <compartmentTraces
         visualID="7003"
         queryText="true"/>
+    <compartmentTraces
+        visualID="7005"
+        queryText="true"/>
   </nodeTraces>
   <childNodeTraces
       visualID="3001"
