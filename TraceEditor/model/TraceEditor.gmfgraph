@@ -22,9 +22,9 @@
             xsi:type="gmfgraph:MarginBorder">
           <insets
               top="5"
-              left="5"
+              left="30"
               bottom="5"
-              right="5"/>
+              right="30"/>
         </border>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
@@ -169,9 +169,9 @@
             xsi:type="gmfgraph:MarginBorder">
           <insets
               top="10"
-              left="20"
+              left="30"
               bottom="10"
-              right="20"/>
+              right="30"/>
         </border>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
@@ -254,9 +254,9 @@
             xsi:type="gmfgraph:MarginBorder">
           <insets
               top="10"
-              left="20"
+              left="30"
               bottom="10"
-              right="20"/>
+              right="30"/>
         </border>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
@@ -345,9 +345,6 @@
         <backgroundColor
             xsi:type="gmfgraph:ConstantColor"
             value="lightGray"/>
-        <minimumSize
-            dx="900"
-            dy="1000"/>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
             name="LeftRectangle">
@@ -359,7 +356,7 @@
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
           <preferredSize
-              dx="200"
+              dx="300"
               dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
@@ -385,7 +382,7 @@
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
             <preferredSize
-                dx="190"
+                dx="290"
                 dy="960"/>
           </children>
         </children>
@@ -400,7 +397,7 @@
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
           <preferredSize
-              dx="250"
+              dx="350"
               dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
@@ -420,7 +417,7 @@
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
             <preferredSize
-                dx="240"
+                dx="340"
                 dy="960"/>
           </children>
         </children>
@@ -434,11 +431,8 @@
               value="gray"/>
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
-          <maximumSize
-              dx="250"
-              dy="1000"/>
           <preferredSize
-              dx="250"
+              dx="350"
               dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
@@ -458,7 +452,7 @@
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
             <preferredSize
-                dx="240"
+                dx="340"
                 dy="960"/>
           </children>
         </children>
@@ -473,7 +467,7 @@
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
           <preferredSize
-              dx="200"
+              dx="300"
               dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
@@ -499,7 +493,7 @@
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
             <preferredSize
-                dx="190"
+                dx="290"
                 dy="960"/>
           </children>
         </children>
