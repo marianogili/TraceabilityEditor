@@ -16,99 +16,127 @@
     <descriptors
         name="TransformationFigure">
       <actualFigure
-          xsi:type="gmfgraph:RoundedRectangle"
-          name="TransformationFigure">
-        <layout
-            xsi:type="gmfgraph:GridLayout"/>
-        <foregroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="black"/>
-        <backgroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="lightGreen"/>
-        <preferredSize
-            dx="150"
-            dy="100"/>
+          xsi:type="gmfgraph:InvisibleRectangle"
+          name="MarginTransformationFigure">
+        <border
+            xsi:type="gmfgraph:MarginBorder">
+          <insets
+              top="5"
+              left="5"
+              bottom="5"
+              right="5"/>
+        </border>
         <children
-            xsi:type="gmfgraph:Label"
-            name="TransformationNameFigure"
-            text="&lt;...>">
-          <layoutData
-              xsi:type="gmfgraph:GridLayoutData"/>
+            xsi:type="gmfgraph:RoundedRectangle"
+            name="TransformationFigureInt">
+          <layout
+              xsi:type="gmfgraph:GridLayout"/>
+          <foregroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="black"/>
+          <backgroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="lightGreen"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="TransformationNameFigure"
+              text="&lt;...>">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"/>
+          </children>
+          <children
+              xsi:type="gmfgraph:InvisibleRectangle"
+              name="TransformationRectangleCompartment"/>
         </children>
-        <children
-            xsi:type="gmfgraph:InvisibleRectangle"
-            name="TransformationRectangleCompartment"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0/@children.0"/>
       <accessors
-          figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="TraceLinkFigure">
       <actualFigure
-          xsi:type="gmfgraph:RoundedRectangle"
-          name="TraceLinkFigure">
-        <layout
-            xsi:type="gmfgraph:GridLayout"
-            numColumns="2"
-            equalWidth="false"/>
-        <foregroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="black"/>
+          xsi:type="gmfgraph:InvisibleRectangle"
+          name="MarginTraceLink">
         <backgroundColor
             xsi:type="gmfgraph:ConstantColor"
             value="lightBlue"/>
+        <border
+            xsi:type="gmfgraph:MarginBorder">
+          <insets
+              top="5"
+              left="10"
+              bottom="10"
+              right="10"/>
+        </border>
         <children
-            xsi:type="gmfgraph:Label"
-            name="LabelTraceLinkName"
-            text="traza:">
-          <layoutData
-              xsi:type="gmfgraph:GridLayoutData"
-              verticalAlignment="END"
-              horizontalAlignment="BEGINNING"/>
-          <font
-              xsi:type="gmfgraph:BasicFont"
-              height="7"/>
-        </children>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="TraceLinkNameFigure"
-            text="&lt;...>">
-          <layoutData
-              xsi:type="gmfgraph:GridLayoutData"
-              verticalAlignment="END"/>
-          <font
-              xsi:type="gmfgraph:BasicFont"
-              style="BOLD"/>
-        </children>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="LabelTraceLinkType"
-            text="tipo:">
-          <layoutData
-              xsi:type="gmfgraph:GridLayoutData"
-              verticalAlignment="END"
-              horizontalAlignment="BEGINNING"/>
-          <font
-              xsi:type="gmfgraph:BasicFont"
-              height="7"/>
-        </children>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="TraceLinkTypeFigure">
-          <layoutData
-              xsi:type="gmfgraph:GridLayoutData"
-              verticalAlignment="END"/>
-          <font
-              xsi:type="gmfgraph:BasicFont"
-              faceName=""
-              style="BOLD"/>
+            xsi:type="gmfgraph:RoundedRectangle"
+            name="TraceLinkFigureInt">
+          <layout
+              xsi:type="gmfgraph:GridLayout"
+              numColumns="2"
+              equalWidth="false"/>
+          <foregroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="black"/>
+          <backgroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="lightBlue"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="LabelTraceLinkName"
+              text="traza:">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="END"
+                horizontalAlignment="BEGINNING"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                height="7"/>
+          </children>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="TraceLinkNameFigure"
+              text="&lt;...>">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="END"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                style="BOLD"/>
+          </children>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="LabelTraceLinkType"
+              text="tipo:">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="END"
+                horizontalAlignment="BEGINNING"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                height="7"/>
+          </children>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="TraceLinkTypeFigure">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="END"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                faceName=""
+                style="BOLD"/>
+          </children>
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.0/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure"/>
     </descriptors>
     <descriptors
         name="TraceLinkSourcesFigure">
@@ -135,21 +163,14 @@
     <descriptors
         name="SourceArtefactFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="MarginSourceArtefactRectangle"
-          lineWidth="0">
-        <backgroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="lightBlue"/>
-        <preferredSize
-            dx="180"
-            dy="110"/>
+          xsi:type="gmfgraph:InvisibleRectangle"
+          name="MarginSourceArtefactRectangle">
         <border
             xsi:type="gmfgraph:MarginBorder">
           <insets
               top="10"
               left="20"
-              bottom="20"
+              bottom="10"
               right="20"/>
         </border>
         <children
@@ -227,21 +248,14 @@
     <descriptors
         name="TargetArtefactFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="MarginTargetArtefactRectangle"
-          lineWidth="0">
-        <backgroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="lightBlue"/>
-        <preferredSize
-            dx="180"
-            dy="110"/>
+          xsi:type="gmfgraph:InvisibleRectangle"
+          name="MarginTargetArtefactRectangle">
         <border
             xsi:type="gmfgraph:MarginBorder">
           <insets
               top="10"
               left="20"
-              bottom="20"
+              bottom="10"
               right="20"/>
         </border>
         <children
