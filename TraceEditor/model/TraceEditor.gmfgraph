@@ -67,7 +67,7 @@
         <border
             xsi:type="gmfgraph:MarginBorder">
           <insets
-              top="5"
+              top="10"
               left="10"
               bottom="10"
               right="10"/>
