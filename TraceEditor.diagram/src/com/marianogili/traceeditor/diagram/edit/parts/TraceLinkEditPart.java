@@ -14,6 +14,8 @@ import org.eclipse.draw2d.RoundedRectangle;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.draw2d.geometry.PointList;
+import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -168,10 +170,21 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected NodeFigure createNodePlate() {
-		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
+		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40) {
+			public PointList getPolygonPoints() {
+				PointList points = new PointList(5);
+				Rectangle anchRect = getHandleBounds();
+				points.addPoint(anchRect.x + 10, anchRect.y + 10); // A1
+				points.addPoint(anchRect.x + anchRect.width - 10, anchRect.y + 10); // A2
+				points.addPoint(anchRect.x + anchRect.width - 10, anchRect.y + anchRect.height - 10); // A3
+				points.addPoint(anchRect.x + 10, anchRect.y + anchRect.height - 10); // A4
+				points.addPoint(anchRect.x + 10, anchRect.y + 10); // A1
+				return points;
+			}
+		};
 		return result;
 	}
 
