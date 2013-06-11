@@ -21,6 +21,7 @@ import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITableItemLabelProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 /**
@@ -61,7 +62,7 @@ public class TraceeditorItemProviderAdapterFactory extends TraceeditorAdapterFac
 	 * This constructs an instance.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public TraceeditorItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
@@ -69,6 +70,7 @@ public class TraceeditorItemProviderAdapterFactory extends TraceeditorAdapterFac
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
+		supportedTypes.add(ITableItemLabelProvider.class);
 	}
 
 	/**
