@@ -62,7 +62,6 @@ import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
 import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
-import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IStatusLineManager;
@@ -84,7 +83,6 @@ import org.eclipse.jface.viewers.TableLayout;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.TextCellEditor;
-import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CTabFolder;
@@ -107,8 +105,6 @@ import org.eclipse.ui.dialogs.SaveAsDialog;
 import org.eclipse.ui.ide.IGotoMarker;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.MultiPageEditorPart;
-import org.eclipse.ui.views.properties.IPropertySheetPage;
-import org.eclipse.ui.views.properties.PropertySheetPage;
 
 import com.marianogili.traceeditor.Artefact;
 import com.marianogili.traceeditor.Configuration;
@@ -151,22 +147,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * @generated
 	 */
 	protected IStatusLineManager contentOutlineStatusLineManager;
-
-	/**
-	 * This is the content outline page's viewer. <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected TreeViewer contentOutlineViewer;
-
-	/**
-	 * This is the property sheet page. <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected PropertySheetPage propertySheetPage;
 
 	/**
 	 * This shows how a table view works. A table can be used as a list with
@@ -589,10 +569,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 						if (mostRecentCommand != null) {
 							setSelectionToViewer(mostRecentCommand
 									.getAffectedObjects());
-						}
-						if (propertySheetPage != null
-								&& !propertySheetPage.getControl().isDisposed()) {
-							propertySheetPage.refresh();
 						}
 					}
 				});
@@ -1505,43 +1481,11 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	@SuppressWarnings("rawtypes")
 	@Override
 	public Object getAdapter(Class key) {
-		if (key.equals(IPropertySheetPage.class)) {
-			return getPropertySheetPage();
-		} else if (key.equals(IGotoMarker.class)) {
+		if (key.equals(IGotoMarker.class)) {
 			return this;
 		} else {
 			return super.getAdapter(key);
 		}
-	}
-
-	/**
-	 * This accesses a cached version of the property sheet. <!-- begin-user-doc
-	 * --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public IPropertySheetPage getPropertySheetPage() {
-		if (propertySheetPage == null) {
-			propertySheetPage = new ExtendedPropertySheetPage(editingDomain) {
-				@Override
-				public void setSelectionToViewer(List<?> selection) {
-					TraceeditorEditor.this.setSelectionToViewer(selection);
-					TraceeditorEditor.this.setFocus();
-				}
-
-				@Override
-				public void setActionBars(IActionBars actionBars) {
-					super.setActionBars(actionBars);
-					getActionBarContributor().shareGlobalActions(this,
-							actionBars);
-				}
-			};
-			propertySheetPage
-					.setPropertySourceProvider(new AdapterFactoryContentProvider(
-							adapterFactory));
-		}
-
-		return propertySheetPage;
 	}
 
 	/**
@@ -1845,8 +1789,7 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * @generated
 	 */
 	public void setStatusLineManager(ISelection selection) {
-		IStatusLineManager statusLineManager = currentViewer != null
-				&& currentViewer == contentOutlineViewer ? contentOutlineStatusLineManager
+		IStatusLineManager statusLineManager = currentViewer != null ? contentOutlineStatusLineManager
 				: getActionBars().getStatusLineManager();
 
 		if (statusLineManager != null) {
@@ -1957,10 +1900,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 		if (getActionBarContributor().getActiveEditor() == this) {
 			getActionBarContributor().setActiveEditor(null);
-		}
-
-		if (propertySheetPage != null) {
-			propertySheetPage.dispose();
 		}
 
 		super.dispose();
