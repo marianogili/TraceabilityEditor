@@ -9,7 +9,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.EventObject;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -155,14 +154,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * @generated
 	 */
 	protected TableViewer tableViewer;
-
-	/**
-	 * This keeps track of the active viewer pane, in the book. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected ViewerPane currentViewerPane;
 
 	/**
 	 * This keeps track of the active content viewer, which may be either one of
@@ -695,21 +686,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public void setCurrentViewerPane(ViewerPane viewerPane) {
-		if (currentViewerPane != viewerPane) {
-			if (currentViewerPane != null) {
-				currentViewerPane.showFocus(false);
-			}
-			currentViewerPane = viewerPane;
-		}
-		setCurrentViewer(currentViewerPane.getViewer());
-	}
-
-	/**
 	 * This makes sure that one content viewer, either for the current page or
 	 * the outline view, if it has focus, is the current one. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
@@ -908,7 +884,7 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 					@Override
 					public void requestActivation() {
 						super.requestActivation();
-						setCurrentViewerPane(this);
+						// setCurrentViewerPane(this);
 					}
 				};
 				viewerPane.createControl(getContainer());
@@ -1489,49 +1465,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	}
 
 	/**
-	 * This deals with how we want selection in the outliner to affect the other
-	 * views. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated NOT
-	 */
-	public void handleContentOutlineSelection(ISelection selection) {
-		if (currentViewerPane != null && !selection.isEmpty()
-				&& selection instanceof IStructuredSelection) {
-			Iterator<?> selectedElements = ((IStructuredSelection) selection)
-					.iterator();
-			if (selectedElements.hasNext()) {
-				// Get the first selected element.
-				//
-				Object selectedElement = selectedElements.next();
-
-				// If it's the selection viewer, then we want it to select the
-				// same selection as this selection.
-				//
-				if (currentViewerPane.getViewer() == tableViewer) {
-					ArrayList<Object> selectionList = new ArrayList<Object>();
-					selectionList.add(selectedElement);
-					while (selectedElements.hasNext()) {
-						selectionList.add(selectedElements.next());
-					}
-
-					// Set the selection to the widget.
-					//
-					currentViewerPane.getViewer().setSelection(
-							new StructuredSelection(selectionList));
-
-				} else {
-					// Set the input to the widget.
-					//
-					if (currentViewerPane.getViewer().getInput() != selectedElement) {
-						currentViewerPane.getViewer().setInput(selectedElement);
-						currentViewerPane.setTitle(selectedElement);
-					}
-				}
-			}
-		}
-	}
-
-	/**
 	 * This is for implementing {@link IEditorPart} and simply tests the command
 	 * stack. <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -1728,11 +1661,7 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 */
 	@Override
 	public void setFocus() {
-		if (currentViewerPane != null) {
-			currentViewerPane.setFocus();
-		} else {
-			getControl(getActivePage()).setFocus();
-		}
+		getControl(getActivePage()).setFocus();
 	}
 
 	/**
