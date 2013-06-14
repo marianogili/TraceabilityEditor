@@ -856,6 +856,372 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		}
 	}
 
+	private void armarTabla() {
+		Table table = tableViewer.getTable();
+		TableLayout layout = new TableLayout();
+		table.setLayout(layout);
+		table.setHeaderVisible(true);
+		table.setLinesVisible(true);
+
+		// Comienzo de configuración de las columnas.
+		//
+		// Transformación
+		TableViewerColumn col = createTableViewerColumn("Transformación", 150,
+				0);
+		col.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				Transformation transformation = ((TransformationBuffer) element).transformation;
+				if (transformation != null)
+					return transformation.getName();
+				else
+					return "<< Sin transformación >>";
+			}
+		});
+		col.setEditingSupport(new EditingSupport(tableViewer) {
+
+			@Override
+			protected void setValue(Object element, Object value) {
+				TransformationBuffer buffer = (TransformationBuffer) element;
+				Command cmd = SetCommand.create(editingDomain,
+						buffer.transformation,
+						TraceeditorPackage.Literals.NAMED_ELEMENT__NAME, value);
+				editingDomain.getCommandStack().execute(cmd);
+				tableViewer.refresh();
+			}
+
+			@Override
+			protected Object getValue(Object element) {
+				return ((TransformationBuffer) element).transformation
+						.getName();
+			}
+
+			@Override
+			protected CellEditor getCellEditor(Object element) {
+				return new TextCellEditor(tableViewer.getTable());
+			}
+
+			@Override
+			protected boolean canEdit(Object element) {
+				return true;
+			}
+		});
+
+		// Enlace
+		col = createTableViewerColumn("Enlace/Traza", 150, 1);
+		col.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				TraceLink traceLink = ((TransformationBuffer) element).traceLink;
+				if (traceLink != null)
+					return traceLink.getName();
+				else
+					return "<< Sin enlace >>";
+			}
+		});
+		col.setEditingSupport(new EditingSupport(tableViewer) {
+			@Override
+			protected void setValue(Object element, Object value) {
+				TransformationBuffer buffer = (TransformationBuffer) element;
+				TraceLink traceElement = (TraceLink) buffer.traceLink;
+				Command cmd = SetCommand.create(editingDomain, traceElement,
+						TraceeditorPackage.Literals.NAMED_ELEMENT__NAME, value);
+				editingDomain.getCommandStack().execute(cmd);
+				tableViewer.refresh();
+			}
+
+			@Override
+			protected Object getValue(Object element) {
+				return ((TransformationBuffer) element).traceLink.getName();
+			}
+
+			@Override
+			protected CellEditor getCellEditor(Object element) {
+				return new TextCellEditor(tableViewer.getTable());
+			}
+
+			@Override
+			protected boolean canEdit(Object element) {
+				return true;
+			}
+
+		});
+
+		// Tipo del enlace
+		col = createTableViewerColumn("Tipo del enlace", 150, 2);
+		col.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				TraceLink traceLink = ((TransformationBuffer) element).traceLink;
+				if (traceLink != null && traceLink.getType() != null)
+					return traceLink.getType().getName();
+				else
+					return "<< Sin tipo >>";
+			}
+		});
+		col.setEditingSupport(new EditingSupport(tableViewer) {
+
+			@Override
+			protected void setValue(Object element, Object value) {
+				TraceLink traceLink = ((TransformationBuffer) element).traceLink;
+				Command cmd = SetCommand.create(editingDomain, traceLink,
+						TraceeditorPackage.Literals.TRACE_LINK__TYPE, value);
+				editingDomain.getCommandStack().execute(cmd);
+				tableViewer.refresh();
+			}
+
+			@Override
+			protected Object getValue(Object element) {
+				return ((TransformationBuffer) element).traceLink.getType();
+			}
+
+			@Override
+			protected CellEditor getCellEditor(Object element) {
+				Resource resource = editingDomain.getResourceSet()
+						.getResources().get(1);
+
+				Configuration configuration = (Configuration) resource
+						.getContents().get(0);
+
+				return new ExtendedComboBoxCellEditor(tableViewer.getTable(),
+						configuration.getLinkTypes(),
+						new ColumnLabelProvider() {
+							@Override
+							public String getText(Object element) {
+								return ((LinkType) element).getName();
+							}
+						});
+			}
+
+			@Override
+			protected boolean canEdit(Object element) {
+				return true;
+			}
+		});
+
+		// Artefacto origen
+
+		col = createTableViewerColumn("Artefacto origen", 150, 3);
+		col.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				Artefact artefact = ((TransformationBuffer) element).source;
+				if (artefact != null)
+					return artefact.getName();
+				else
+					return "<< Sin origen >>";
+			}
+		});
+		col.setEditingSupport(new EditingSupport(tableViewer) {
+			@Override
+			protected void setValue(Object element, Object value) {
+				Artefact artefactElement = ((TransformationBuffer) element).source;
+				Command cmd = SetCommand.create(editingDomain, artefactElement,
+						TraceeditorPackage.Literals.NAMED_ELEMENT__NAME, value);
+				editingDomain.getCommandStack().execute(cmd);
+				tableViewer.refresh();
+			}
+
+			@Override
+			protected Object getValue(Object element) {
+				return ((TransformationBuffer) element).source.getName();
+			}
+
+			@Override
+			protected CellEditor getCellEditor(Object element) {
+				return new TextCellEditor(tableViewer.getTable());
+			}
+
+			@Override
+			protected boolean canEdit(Object element) {
+				return true;
+			}
+
+		});
+
+		// Tipo del artefacto origen
+		col = createTableViewerColumn("Tipo del origen", 150, 4);
+		col.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				Artefact artefact = ((TransformationBuffer) element).source;
+				if (artefact != null && artefact.getType() != null)
+					return artefact.getType().getName();
+				else
+					return "<< Sin tipo >>";
+			}
+		});
+		col.setEditingSupport(new EditingSupport(tableViewer) {
+
+			@Override
+			protected void setValue(Object element, Object value) {
+				Artefact artefact = ((TransformationBuffer) element).source;
+				Command cmd = SetCommand.create(editingDomain, artefact,
+						TraceeditorPackage.Literals.ARTEFACT__TYPE, value);
+				editingDomain.getCommandStack().execute(cmd);
+				tableViewer.refresh();
+			}
+
+			@Override
+			protected Object getValue(Object element) {
+				return ((TransformationBuffer) element).source.getType();
+			}
+
+			@Override
+			protected CellEditor getCellEditor(Object element) {
+				Resource resource = editingDomain.getResourceSet()
+						.getResources().get(1);
+
+				Configuration configuration = (Configuration) resource
+						.getContents().get(0);
+
+				return new ExtendedComboBoxCellEditor(tableViewer.getTable(),
+						configuration.getTypeArtefacts(),
+						new ColumnLabelProvider() {
+							@Override
+							public String getText(Object element) {
+								return ((TypeArtefact) element).getName();
+							}
+						});
+			}
+
+			@Override
+			protected boolean canEdit(Object element) {
+				return true;
+			}
+		});
+
+		col.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				Artefact artefact = ((TransformationBuffer) element).target;
+				if (artefact != null)
+					return artefact.getName();
+				else
+					return "<< Sin destino >>";
+			}
+		});
+		col.setEditingSupport(new EditingSupport(tableViewer) {
+			@Override
+			protected void setValue(Object element, Object value) {
+				Artefact artefactElement = ((TransformationBuffer) element).target;
+				Command cmd = SetCommand.create(editingDomain, artefactElement,
+						TraceeditorPackage.Literals.NAMED_ELEMENT__NAME, value);
+				editingDomain.getCommandStack().execute(cmd);
+				tableViewer.refresh();
+			}
+
+			@Override
+			protected Object getValue(Object element) {
+				return ((TransformationBuffer) element).target.getName();
+			}
+
+			@Override
+			protected CellEditor getCellEditor(Object element) {
+				return new TextCellEditor(tableViewer.getTable());
+			}
+
+			@Override
+			protected boolean canEdit(Object element) {
+				return true;
+			}
+
+		});
+
+		// Artefacto destino
+		col = createTableViewerColumn("Artefacto destino", 150, 5);
+		col.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				Artefact artefact = ((TransformationBuffer) element).target;
+				if (artefact != null)
+					return artefact.getName();
+				else
+					return "<< Sin destino >>";
+			}
+		});
+		col.setEditingSupport(new EditingSupport(tableViewer) {
+
+			@Override
+			protected void setValue(Object element, Object value) {
+				Artefact artefactElement = ((TransformationBuffer) element).target;
+				Command cmd = SetCommand.create(editingDomain, artefactElement,
+						TraceeditorPackage.Literals.NAMED_ELEMENT__NAME, value);
+				editingDomain.getCommandStack().execute(cmd);
+				tableViewer.refresh();
+			}
+
+			@Override
+			protected Object getValue(Object element) {
+				return ((TransformationBuffer) element).target.getName();
+			}
+
+			@Override
+			protected CellEditor getCellEditor(Object element) {
+				return new TextCellEditor(tableViewer.getTable());
+			}
+
+			@Override
+			protected boolean canEdit(Object element) {
+				return true;
+			}
+		});
+
+		// Tipo del artefacto destino
+		col = createTableViewerColumn("Tipo del destino", 150, 6);
+		col.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				Artefact artefact = ((TransformationBuffer) element).target;
+				if (artefact != null && artefact.getType() != null)
+					return artefact.getType().getName();
+				else
+					return "<< Sin tipo >>";
+			}
+		});
+		col.setEditingSupport(new EditingSupport(tableViewer) {
+
+			@Override
+			protected void setValue(Object element, Object value) {
+				Artefact artefact = ((TransformationBuffer) element).target;
+				Command cmd = SetCommand.create(editingDomain, artefact,
+						TraceeditorPackage.Literals.ARTEFACT__TYPE, value);
+				editingDomain.getCommandStack().execute(cmd);
+				tableViewer.refresh();
+			}
+
+			@Override
+			protected Object getValue(Object element) {
+				return ((TransformationBuffer) element).target.getType();
+			}
+
+			@Override
+			protected CellEditor getCellEditor(Object element) {
+				Resource resource = editingDomain.getResourceSet()
+						.getResources().get(1);
+
+				Configuration configuration = (Configuration) resource
+						.getContents().get(0);
+
+				return new ExtendedComboBoxCellEditor(tableViewer.getTable(),
+						configuration.getTypeArtefacts(),
+						new ColumnLabelProvider() {
+							@Override
+							public String getText(Object element) {
+								return ((TypeArtefact) element).getName();
+							}
+						});
+			}
+
+			@Override
+			protected boolean canEdit(Object element) {
+				return true;
+			}
+		});
+		//
+		// Fin de configuración de columnas.
+	}
+
 	/**
 	 * This is the method used by the framework to install your own controls.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -884,405 +1250,14 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 					@Override
 					public void requestActivation() {
 						super.requestActivation();
-						// setCurrentViewerPane(this);
 					}
 				};
+
 				viewerPane.createControl(getContainer());
 				tableViewer = (TableViewer) viewerPane.getViewer();
 
-				Table table = tableViewer.getTable();
-				TableLayout layout = new TableLayout();
-				table.setLayout(layout);
-				table.setHeaderVisible(true);
-				table.setLinesVisible(true);
+				this.armarTabla();
 
-				// Comienzo de configuración de las columnas.
-				//
-				// Transformación
-				TableViewerColumn col = createTableViewerColumn(
-						"Transformación", 150, 0);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						Transformation transformation = ((TransformationBuffer) element).transformation;
-						if (transformation != null)
-							return transformation.getName();
-						else
-							return "<< Sin transformación >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						TransformationBuffer buffer = (TransformationBuffer) element;
-						Command cmd = SetCommand
-								.create(editingDomain,
-										buffer.transformation,
-										TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
-										value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).transformation
-								.getName();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						return new TextCellEditor(tableViewer.getTable());
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
-
-				// Enlace
-				col = createTableViewerColumn("Enlace/Traza", 150, 1);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						TraceLink traceLink = ((TransformationBuffer) element).traceLink;
-						if (traceLink != null)
-							return traceLink.getName();
-						else
-							return "<< Sin enlace >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-					@Override
-					protected void setValue(Object element, Object value) {
-						TransformationBuffer buffer = (TransformationBuffer) element;
-						TraceLink traceElement = (TraceLink) buffer.traceLink;
-						Command cmd = SetCommand
-								.create(editingDomain,
-										traceElement,
-										TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
-										value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).traceLink
-								.getName();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						return new TextCellEditor(tableViewer.getTable());
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-
-				});
-
-				// Tipo del enlace
-				col = createTableViewerColumn("Tipo del enlace", 150, 2);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						TraceLink traceLink = ((TransformationBuffer) element).traceLink;
-						if (traceLink != null && traceLink.getType() != null)
-							return traceLink.getType().getName();
-						else
-							return "<< Sin tipo >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						TraceLink traceLink = ((TransformationBuffer) element).traceLink;
-						Command cmd = SetCommand.create(editingDomain,
-								traceLink,
-								TraceeditorPackage.Literals.TRACE_LINK__TYPE,
-								value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).traceLink
-								.getType();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						Resource resource = editingDomain.getResourceSet()
-								.getResources().get(1);
-
-						Configuration configuration = (Configuration) resource
-								.getContents().get(0);
-
-						return new ExtendedComboBoxCellEditor(tableViewer
-								.getTable(), configuration.getLinkTypes(),
-								new ColumnLabelProvider() {
-									@Override
-									public String getText(Object element) {
-										return ((LinkType) element).getName();
-									}
-								});
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
-
-				// Artefacto origen
-
-				col = createTableViewerColumn("Artefacto origen", 150, 3);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						Artefact artefact = ((TransformationBuffer) element).source;
-						if (artefact != null)
-							return artefact.getName();
-						else
-							return "<< Sin origen >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-					@Override
-					protected void setValue(Object element, Object value) {
-						Artefact artefactElement = ((TransformationBuffer) element).source;
-						Command cmd = SetCommand
-								.create(editingDomain,
-										artefactElement,
-										TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
-										value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).source
-								.getName();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						return new TextCellEditor(tableViewer.getTable());
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-
-				});
-
-				// Tipo del artefacto origen
-				col = createTableViewerColumn("Tipo del origen", 150, 4);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						Artefact artefact = ((TransformationBuffer) element).source;
-						if (artefact != null && artefact.getType() != null)
-							return artefact.getType().getName();
-						else
-							return "<< Sin tipo >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						Artefact artefact = ((TransformationBuffer) element).source;
-						Command cmd = SetCommand.create(editingDomain,
-								artefact,
-								TraceeditorPackage.Literals.ARTEFACT__TYPE,
-								value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).source
-								.getType();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						Resource resource = editingDomain.getResourceSet()
-								.getResources().get(1);
-
-						Configuration configuration = (Configuration) resource
-								.getContents().get(0);
-
-						return new ExtendedComboBoxCellEditor(tableViewer
-								.getTable(), configuration.getTypeArtefacts(),
-								new ColumnLabelProvider() {
-									@Override
-									public String getText(Object element) {
-										return ((TypeArtefact) element)
-												.getName();
-									}
-								});
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
-
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						Artefact artefact = ((TransformationBuffer) element).target;
-						if (artefact != null)
-							return artefact.getName();
-						else
-							return "<< Sin destino >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-					@Override
-					protected void setValue(Object element, Object value) {
-						Artefact artefactElement = ((TransformationBuffer) element).target;
-						Command cmd = SetCommand
-								.create(editingDomain,
-										artefactElement,
-										TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
-										value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).target
-								.getName();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						return new TextCellEditor(tableViewer.getTable());
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-
-				});
-
-				// Artefacto destino
-				col = createTableViewerColumn("Artefacto destino", 150, 5);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						Artefact artefact = ((TransformationBuffer) element).target;
-						if (artefact != null)
-							return artefact.getName();
-						else
-							return "<< Sin destino >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						Artefact artefactElement = ((TransformationBuffer) element).target;
-						Command cmd = SetCommand
-								.create(editingDomain,
-										artefactElement,
-										TraceeditorPackage.Literals.NAMED_ELEMENT__NAME,
-										value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).target
-								.getName();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						return new TextCellEditor(tableViewer.getTable());
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
-
-				// Tipo del artefacto destino
-				col = createTableViewerColumn("Tipo del destino", 150, 6);
-				col.setLabelProvider(new ColumnLabelProvider() {
-					@Override
-					public String getText(Object element) {
-						Artefact artefact = ((TransformationBuffer) element).target;
-						if (artefact != null && artefact.getType() != null)
-							return artefact.getType().getName();
-						else
-							return "<< Sin tipo >>";
-					}
-				});
-				col.setEditingSupport(new EditingSupport(tableViewer) {
-
-					@Override
-					protected void setValue(Object element, Object value) {
-						Artefact artefact = ((TransformationBuffer) element).target;
-						Command cmd = SetCommand.create(editingDomain,
-								artefact,
-								TraceeditorPackage.Literals.ARTEFACT__TYPE,
-								value);
-						editingDomain.getCommandStack().execute(cmd);
-						tableViewer.refresh();
-					}
-
-					@Override
-					protected Object getValue(Object element) {
-						return ((TransformationBuffer) element).target
-								.getType();
-					}
-
-					@Override
-					protected CellEditor getCellEditor(Object element) {
-						Resource resource = editingDomain.getResourceSet()
-								.getResources().get(1);
-
-						Configuration configuration = (Configuration) resource
-								.getContents().get(0);
-
-						return new ExtendedComboBoxCellEditor(tableViewer
-								.getTable(), configuration.getTypeArtefacts(),
-								new ColumnLabelProvider() {
-									@Override
-									public String getText(Object element) {
-										return ((TypeArtefact) element)
-												.getName();
-									}
-								});
-					}
-
-					@Override
-					protected boolean canEdit(Object element) {
-						return true;
-					}
-				});
-				//
-				// Fin de configuración de columnas.
-				tableViewer.setColumnProperties(new String[] { "a", "b" });
 				tableViewer
 						.setContentProvider(new AdapterFactoryContentProvider(
 								adapterFactory) {
@@ -1335,28 +1310,37 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 							}
 
 							public Object[] getElements(Object object) {
-								// Primero agrupo los enlaces sueltos, o sea que
-								// no pertenecen a una transformación.
-								//
-								List<TraceLink> traceLinks = ((TraceEditor) object)
-										.getDashboard().getTraceLinks();
-								ArrayList<Object> elements = new ArrayList<Object>(
-										traceLinks.size());
+								Resource resource = (Resource) object;
+								Object rootObject = resource.getContents().get(
+										0);
+								if (rootObject instanceof TraceEditor) {
+									// Primero agrupo los enlaces sueltos, o sea
+									// que
+									// no pertenecen a una transformación.
+									//
+									List<TraceLink> traceLinks = ((TraceEditor) rootObject)
+											.getDashboard().getTraceLinks();
+									ArrayList<Object> elements = new ArrayList<Object>(
+											traceLinks.size());
 
-								this.TraceLinksTreeToList(elements, traceLinks,
-										null);
-
-								// Ahora los enlaces de las transformaciones.
-								//
-								List<Transformation> transformations = ((TraceEditor) object)
-										.getDashboard().getTransformations();
-								for (Transformation aTransformation : transformations) {
 									this.TraceLinksTreeToList(elements,
-											aTransformation.getTraceLinks(),
-											aTransformation);
-								}
+											traceLinks, null);
 
-								return elements.toArray();
+									// Ahora los enlaces de las
+									// transformaciones.
+									//
+									List<Transformation> transformations = ((TraceEditor) rootObject)
+											.getDashboard()
+											.getTransformations();
+									for (Transformation aTransformation : transformations) {
+										this.TraceLinksTreeToList(
+												elements,
+												aTransformation.getTraceLinks(),
+												aTransformation);
+									}
+									return elements.toArray();
+								}
+								return new Object[0];
 							}
 
 							public void notifyChanged(Notification notification) {
@@ -1371,13 +1355,9 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 							}
 						});
 
-				Resource resource = (Resource) editingDomain.getResourceSet()
-						.getResources().get(0);
-				Object rootObject = resource.getContents().get(0);
-				if (rootObject instanceof TraceEditor) {
-					tableViewer.setInput(rootObject);
-					viewerPane.setTitle(rootObject);
-				}
+				tableViewer.setInput(editingDomain.getResourceSet()
+						.getResources().get(0));
+				viewerPane.setTitle("hola qué tal");
 
 				createContextMenuFor(tableViewer);
 				int pageIndex = addPage(viewerPane.getControl());
