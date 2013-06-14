@@ -119,7 +119,7 @@ import com.marianogili.traceeditor.provider.TraceeditorItemProviderAdapterFactor
  * This is an example of a Traceeditor model editor. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * 
- * @generated
+ * @generated NOT
  */
 public class TraceeditorEditor extends MultiPageEditorPart implements
 		IEditingDomainProvider, ISelectionProvider, IMenuListener,
@@ -1358,8 +1358,8 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 				tableViewer.setInput(editingDomain.getResourceSet()
 						.getResources().get(0));
 
-				viewerPane.setTitle(editingDomain.getResourceSet()
-						.getResources().get(0));
+//				viewerPane.setTitle(editingDomain.getResourceSet()
+//						.getResources().get(0));
 
 				createContextMenuFor(tableViewer);
 				int pageIndex = addPage(viewerPane.getControl());
