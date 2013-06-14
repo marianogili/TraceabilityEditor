@@ -1069,14 +1069,13 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 			@Override
 			protected CellEditor getCellEditor(Object element) {
-				Resource resource = editingDomain.getResourceSet()
-						.getResources().get(1);
 
-				Configuration configuration = (Configuration) resource
-						.getContents().get(0);
+				Resource resource = (Resource) tableViewer.getInput();
+				TraceEditor traceEditor = (TraceEditor) resource.getContents()
+						.get(0);
 
 				return new ExtendedComboBoxCellEditor(tableViewer.getTable(),
-						configuration.getTypeArtefacts(),
+						traceEditor.getConfiguration().getTypeArtefacts(),
 						new ColumnLabelProvider() {
 							@Override
 							public String getText(Object element) {
@@ -1090,43 +1089,44 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 				return true;
 			}
 		});
-
-		col.setLabelProvider(new ColumnLabelProvider() {
-			@Override
-			public String getText(Object element) {
-				Artefact artefact = ((TransformationBuffer) element).target;
-				if (artefact != null)
-					return artefact.getName();
-				else
-					return "<< Sin destino >>";
-			}
-		});
-		col.setEditingSupport(new EditingSupport(tableViewer) {
-			@Override
-			protected void setValue(Object element, Object value) {
-				Artefact artefactElement = ((TransformationBuffer) element).target;
-				Command cmd = SetCommand.create(editingDomain, artefactElement,
-						TraceeditorPackage.Literals.NAMED_ELEMENT__NAME, value);
-				editingDomain.getCommandStack().execute(cmd);
-				tableViewer.refresh();
-			}
-
-			@Override
-			protected Object getValue(Object element) {
-				return ((TransformationBuffer) element).target.getName();
-			}
-
-			@Override
-			protected CellEditor getCellEditor(Object element) {
-				return new TextCellEditor(tableViewer.getTable());
-			}
-
-			@Override
-			protected boolean canEdit(Object element) {
-				return true;
-			}
-
-		});
+		//
+		// @Override
+		// protected void setValue(Object element, Object value) {
+		// Artefact artefact = ((TransformationBuffer) element).source;
+		// Command cmd = SetCommand.create(editingDomain, artefact,
+		// TraceeditorPackage.Literals.ARTEFACT__TYPE, value);
+		// editingDomain.getCommandStack().execute(cmd);
+		// tableViewer.refresh();
+		// }
+		//
+		// @Override
+		// protected Object getValue(Object element) {
+		// return ((TransformationBuffer) element).source.getType();
+		// }
+		//
+		// @Override
+		// protected CellEditor getCellEditor(Object element) {
+		// Resource resource = editingDomain.getResourceSet()
+		// .getResources().get(1);
+		//
+		// Configuration configuration = (Configuration) resource
+		// .getContents().get(0);
+		//
+		// return new ExtendedComboBoxCellEditor(tableViewer.getTable(),
+		// configuration.getTypeArtefacts(),
+		// new ColumnLabelProvider() {
+		// @Override
+		// public String getText(Object element) {
+		// return ((TypeArtefact) element).getName();
+		// }
+		// });
+		// }
+		//
+		// @Override
+		// protected boolean canEdit(Object element) {
+		// return true;
+		// }
+		// });
 
 		// Artefacto destino
 		col = createTableViewerColumn("Artefacto destino", 150, 5);
@@ -1197,14 +1197,13 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 			@Override
 			protected CellEditor getCellEditor(Object element) {
-				Resource resource = editingDomain.getResourceSet()
-						.getResources().get(1);
 
-				Configuration configuration = (Configuration) resource
-						.getContents().get(0);
+				Resource resource = (Resource) tableViewer.getInput();
+				TraceEditor traceEditor = (TraceEditor) resource.getContents()
+						.get(0);
 
 				return new ExtendedComboBoxCellEditor(tableViewer.getTable(),
-						configuration.getTypeArtefacts(),
+						traceEditor.getConfiguration().getTypeArtefacts(),
 						new ColumnLabelProvider() {
 							@Override
 							public String getText(Object element) {
@@ -1242,6 +1241,7 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 			{
 				ViewerPane viewerPane = new ViewerPane(getSite().getPage(),
 						TraceeditorEditor.this) {
+					
 					@Override
 					public Viewer createViewer(Composite composite) {
 						return new TableViewer(composite);
@@ -1357,7 +1357,9 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 				tableViewer.setInput(editingDomain.getResourceSet()
 						.getResources().get(0));
-				viewerPane.setTitle("hola qué tal");
+
+				viewerPane.setTitle(editingDomain.getResourceSet()
+						.getResources().get(0));
 
 				createContextMenuFor(tableViewer);
 				int pageIndex = addPage(viewerPane.getControl());
