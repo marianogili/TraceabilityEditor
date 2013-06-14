@@ -59,7 +59,6 @@ import org.eclipse.emf.edit.ui.dnd.EditingDomainViewerDropAdapter;
 import org.eclipse.emf.edit.ui.dnd.LocalTransfer;
 import org.eclipse.emf.edit.ui.dnd.ViewerDragAdapter;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
 import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
@@ -67,7 +66,6 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IStatusLineManager;
-import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -103,19 +101,13 @@ import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IEditorSite;
-import org.eclipse.ui.IPartListener;
-import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.SaveAsDialog;
 import org.eclipse.ui.ide.IGotoMarker;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.MultiPageEditorPart;
-import org.eclipse.ui.views.contentoutline.ContentOutline;
-import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
-import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
-import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
 
 import com.marianogili.traceeditor.Artefact;
@@ -154,14 +146,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	protected ComposedAdapterFactory adapterFactory;
 
 	/**
-	 * This is the content outline page. <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected IContentOutlinePage contentOutlinePage;
-
-	/**
 	 * This is a kludge... <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -183,15 +167,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * @generated
 	 */
 	protected PropertySheetPage propertySheetPage;
-
-	/**
-	 * This is the viewer that shadows the selection in the content outline. The
-	 * parent relation must be correctly defined for this to work. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-//	protected TreeViewer selectionViewer;
 
 	/**
 	 * This shows how a table view works. A table can be used as a list with
@@ -251,49 +226,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * @generated
 	 */
 	protected MarkerHelper markerHelper = new EditUIMarkerHelper();
-
-	/**
-	 * This listens for when the outline becomes active <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected IPartListener partListener = new IPartListener() {
-		public void partActivated(IWorkbenchPart p) {
-			if (p instanceof ContentOutline) {
-				if (((ContentOutline) p).getCurrentPage() == contentOutlinePage) {
-					getActionBarContributor().setActiveEditor(
-							TraceeditorEditor.this);
-
-					setCurrentViewer(contentOutlineViewer);
-				}
-			} else if (p instanceof PropertySheet) {
-				if (((PropertySheet) p).getCurrentPage() == propertySheetPage) {
-					getActionBarContributor().setActiveEditor(
-							TraceeditorEditor.this);
-					handleActivate();
-				}
-			} else if (p == TraceeditorEditor.this) {
-				handleActivate();
-			}
-		}
-
-		public void partBroughtToTop(IWorkbenchPart p) {
-			// Ignore.
-		}
-
-		public void partClosed(IWorkbenchPart p) {
-			// Ignore.
-		}
-
-		public void partDeactivated(IWorkbenchPart p) {
-			// Ignore.
-		}
-
-		public void partOpened(IWorkbenchPart p) {
-			// Ignore.
-		}
-	};
 
 	/**
 	 * Resources that have been removed since last activation. <!--
@@ -987,48 +919,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		// Only creates the other pages if there is something that can be edited
 		//
 		if (!getEditingDomain().getResourceSet().getResources().isEmpty()) {
-			// Create a page for the selection tree view.
-			//
-//			{
-//				ViewerPane viewerPane = new ViewerPane(getSite().getPage(),
-//						TraceeditorEditor.this) {
-//					@Override
-//					public Viewer createViewer(Composite composite) {
-//						Tree tree = new Tree(composite, SWT.MULTI);
-//						TreeViewer newTreeViewer = new TreeViewer(tree);
-//						return newTreeViewer;
-//					}
-//
-//					@Override
-//					public void requestActivation() {
-//						super.requestActivation();
-//						setCurrentViewerPane(this);
-//					}
-//				};
-//				viewerPane.createControl(getContainer());
-//
-//				selectionViewer = (TreeViewer) viewerPane.getViewer();
-//				selectionViewer
-//						.setContentProvider(new AdapterFactoryContentProvider(
-//								adapterFactory));
-//
-//				selectionViewer
-//						.setLabelProvider(new AdapterFactoryLabelProvider(
-//								adapterFactory));
-//				selectionViewer.setInput(editingDomain.getResourceSet());
-//				selectionViewer.setSelection(new StructuredSelection(
-//						editingDomain.getResourceSet().getResources().get(0)),
-//						true);
-//				viewerPane.setTitle(editingDomain.getResourceSet());
-//
-//				new AdapterFactoryTreeEditor(selectionViewer.getTree(),
-//						adapterFactory);
-//
-//				createContextMenuFor(selectionViewer);
-//				int pageIndex = addPage(viewerPane.getControl());
-//				setPageText(pageIndex, getString("_UI_SelectionPage_label"));
-//			}
-
 			// This is the page for the table viewer.
 			//
 			{
@@ -1607,21 +1497,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	}
 
 	/**
-	 * This is used to track the active viewer. <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	protected void pageChange(int pageIndex) {
-		super.pageChange(pageIndex);
-
-		if (contentOutlinePage != null) {
-			handleContentOutlineSelection(contentOutlinePage.getSelection());
-		}
-	}
-
-	/**
 	 * This is how the framework determines which interfaces we implement. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -1630,92 +1505,13 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	@SuppressWarnings("rawtypes")
 	@Override
 	public Object getAdapter(Class key) {
-		if (key.equals(IContentOutlinePage.class)) {
-			return showOutlineView() ? getContentOutlinePage() : null;
-		} else if (key.equals(IPropertySheetPage.class)) {
+		if (key.equals(IPropertySheetPage.class)) {
 			return getPropertySheetPage();
 		} else if (key.equals(IGotoMarker.class)) {
 			return this;
 		} else {
 			return super.getAdapter(key);
 		}
-	}
-
-	/**
-	 * This accesses a cached version of the content outliner. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public IContentOutlinePage getContentOutlinePage() {
-		if (contentOutlinePage == null) {
-			// The content outline is just a tree.
-			//
-			class MyContentOutlinePage extends ContentOutlinePage {
-				@Override
-				public void createControl(Composite parent) {
-					super.createControl(parent);
-					contentOutlineViewer = getTreeViewer();
-					contentOutlineViewer.addSelectionChangedListener(this);
-
-					// Set up the tree viewer.
-					//
-					contentOutlineViewer
-							.setContentProvider(new AdapterFactoryContentProvider(
-									adapterFactory));
-					contentOutlineViewer
-							.setLabelProvider(new AdapterFactoryLabelProvider(
-									adapterFactory));
-					contentOutlineViewer.setInput(editingDomain
-							.getResourceSet());
-
-					// Make sure our popups work.
-					//
-					createContextMenuFor(contentOutlineViewer);
-
-					if (!editingDomain.getResourceSet().getResources()
-							.isEmpty()) {
-						// Select the root object in the view.
-						//
-						contentOutlineViewer
-								.setSelection(new StructuredSelection(
-										editingDomain.getResourceSet()
-												.getResources().get(0)), true);
-					}
-				}
-
-				@Override
-				public void makeContributions(IMenuManager menuManager,
-						IToolBarManager toolBarManager,
-						IStatusLineManager statusLineManager) {
-					super.makeContributions(menuManager, toolBarManager,
-							statusLineManager);
-					contentOutlineStatusLineManager = statusLineManager;
-				}
-
-				@Override
-				public void setActionBars(IActionBars actionBars) {
-					super.setActionBars(actionBars);
-					getActionBarContributor().shareGlobalActions(this,
-							actionBars);
-				}
-			}
-
-			contentOutlinePage = new MyContentOutlinePage();
-
-			// Listen to selection so that we can handle it is a special way.
-			//
-			contentOutlinePage
-					.addSelectionChangedListener(new ISelectionChangedListener() {
-						// This ensures that we handle selections correctly.
-						//
-						public void selectionChanged(SelectionChangedEvent event) {
-							handleContentOutlineSelection(event.getSelection());
-						}
-					});
-		}
-
-		return contentOutlinePage;
 	}
 
 	/**
@@ -1767,8 +1563,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 				// If it's the selection viewer, then we want it to select the
 				// same selection as this selection.
 				//
-//				if (currentViewerPane.getViewer() == selectionViewer
-//						|| currentViewerPane.getViewer() == tableViewer) {
 				if (currentViewerPane.getViewer() == tableViewer) {
 					ArrayList<Object> selectionList = new ArrayList<Object>();
 					selectionList.add(selectedElement);
@@ -1778,8 +1572,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 					// Set the selection to the widget.
 					//
-//					selectionViewer.setSelection(new StructuredSelection(
-//							selectionList));
 					currentViewerPane.getViewer().setSelection(
 							new StructuredSelection(selectionList));
 
@@ -1981,7 +1773,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		setInputWithNotify(editorInput);
 		setPartName(editorInput.getName());
 		site.setSelectionProvider(this);
-		site.getPage().addPartListener(partListener);
 		ResourcesPlugin.getWorkspace().addResourceChangeListener(
 				resourceChangeListener, IResourceChangeEvent.POST_CHANGE);
 	}
@@ -2162,8 +1953,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		ResourcesPlugin.getWorkspace().removeResourceChangeListener(
 				resourceChangeListener);
 
-		getSite().getPage().removePartListener(partListener);
-
 		adapterFactory.dispose();
 
 		if (getActionBarContributor().getActiveEditor() == this) {
@@ -2172,10 +1961,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 		if (propertySheetPage != null) {
 			propertySheetPage.dispose();
-		}
-
-		if (contentOutlinePage != null) {
-			contentOutlinePage.dispose();
 		}
 
 		super.dispose();
