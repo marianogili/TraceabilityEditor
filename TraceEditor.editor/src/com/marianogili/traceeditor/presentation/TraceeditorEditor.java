@@ -55,7 +55,6 @@ import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
 import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
 import org.eclipse.emf.edit.ui.action.EditingDomainActionBarContributor;
-import org.eclipse.emf.edit.ui.celleditor.AdapterFactoryTreeEditor;
 import org.eclipse.emf.edit.ui.dnd.EditingDomainViewerDropAdapter;
 import org.eclipse.emf.edit.ui.dnd.LocalTransfer;
 import org.eclipse.emf.edit.ui.dnd.ViewerDragAdapter;
@@ -100,7 +99,6 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
-import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
@@ -193,7 +191,7 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 	 * 
 	 * @generated
 	 */
-	protected TreeViewer selectionViewer;
+//	protected TreeViewer selectionViewer;
 
 	/**
 	 * This shows how a table view works. A table can be used as a list with
@@ -991,45 +989,45 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 		if (!getEditingDomain().getResourceSet().getResources().isEmpty()) {
 			// Create a page for the selection tree view.
 			//
-			{
-				ViewerPane viewerPane = new ViewerPane(getSite().getPage(),
-						TraceeditorEditor.this) {
-					@Override
-					public Viewer createViewer(Composite composite) {
-						Tree tree = new Tree(composite, SWT.MULTI);
-						TreeViewer newTreeViewer = new TreeViewer(tree);
-						return newTreeViewer;
-					}
-
-					@Override
-					public void requestActivation() {
-						super.requestActivation();
-						setCurrentViewerPane(this);
-					}
-				};
-				viewerPane.createControl(getContainer());
-
-				selectionViewer = (TreeViewer) viewerPane.getViewer();
-				selectionViewer
-						.setContentProvider(new AdapterFactoryContentProvider(
-								adapterFactory));
-
-				selectionViewer
-						.setLabelProvider(new AdapterFactoryLabelProvider(
-								adapterFactory));
-				selectionViewer.setInput(editingDomain.getResourceSet());
-				selectionViewer.setSelection(new StructuredSelection(
-						editingDomain.getResourceSet().getResources().get(0)),
-						true);
-				viewerPane.setTitle(editingDomain.getResourceSet());
-
-				new AdapterFactoryTreeEditor(selectionViewer.getTree(),
-						adapterFactory);
-
-				createContextMenuFor(selectionViewer);
-				int pageIndex = addPage(viewerPane.getControl());
-				setPageText(pageIndex, getString("_UI_SelectionPage_label"));
-			}
+//			{
+//				ViewerPane viewerPane = new ViewerPane(getSite().getPage(),
+//						TraceeditorEditor.this) {
+//					@Override
+//					public Viewer createViewer(Composite composite) {
+//						Tree tree = new Tree(composite, SWT.MULTI);
+//						TreeViewer newTreeViewer = new TreeViewer(tree);
+//						return newTreeViewer;
+//					}
+//
+//					@Override
+//					public void requestActivation() {
+//						super.requestActivation();
+//						setCurrentViewerPane(this);
+//					}
+//				};
+//				viewerPane.createControl(getContainer());
+//
+//				selectionViewer = (TreeViewer) viewerPane.getViewer();
+//				selectionViewer
+//						.setContentProvider(new AdapterFactoryContentProvider(
+//								adapterFactory));
+//
+//				selectionViewer
+//						.setLabelProvider(new AdapterFactoryLabelProvider(
+//								adapterFactory));
+//				selectionViewer.setInput(editingDomain.getResourceSet());
+//				selectionViewer.setSelection(new StructuredSelection(
+//						editingDomain.getResourceSet().getResources().get(0)),
+//						true);
+//				viewerPane.setTitle(editingDomain.getResourceSet());
+//
+//				new AdapterFactoryTreeEditor(selectionViewer.getTree(),
+//						adapterFactory);
+//
+//				createContextMenuFor(selectionViewer);
+//				int pageIndex = addPage(viewerPane.getControl());
+//				setPageText(pageIndex, getString("_UI_SelectionPage_label"));
+//			}
 
 			// This is the page for the table viewer.
 			//
@@ -1531,9 +1529,6 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 							}
 						});
 
-				tableViewer.setLabelProvider(new AdapterFactoryLabelProvider(
-						adapterFactory));
-
 				Resource resource = (Resource) editingDomain.getResourceSet()
 						.getResources().get(0);
 				Object rootObject = resource.getContents().get(0);
@@ -1772,8 +1767,9 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 				// If it's the selection viewer, then we want it to select the
 				// same selection as this selection.
 				//
-				if (currentViewerPane.getViewer() == selectionViewer
-						|| currentViewerPane.getViewer() == tableViewer) {
+//				if (currentViewerPane.getViewer() == selectionViewer
+//						|| currentViewerPane.getViewer() == tableViewer) {
+				if (currentViewerPane.getViewer() == tableViewer) {
 					ArrayList<Object> selectionList = new ArrayList<Object>();
 					selectionList.add(selectedElement);
 					while (selectedElements.hasNext()) {
@@ -1782,8 +1778,8 @@ public class TraceeditorEditor extends MultiPageEditorPart implements
 
 					// Set the selection to the widget.
 					//
-					selectionViewer.setSelection(new StructuredSelection(
-							selectionList));
+//					selectionViewer.setSelection(new StructuredSelection(
+//							selectionList));
 					currentViewerPane.getViewer().setSelection(
 							new StructuredSelection(selectionList));
 
