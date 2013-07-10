@@ -52,6 +52,7 @@ mapping QvtoTrace::Trace::trace2TraceEditor() : TraceEditor::TraceEditor {
  */
 mapping QvtoTrace::Trace::trace2Configuration() : TraceEditor::Configuration {
 	//TODO: crear tipos coherentes para las transformaciones QVT.
+	// Una opción puede ser definir el tipo implícito.
 	linkTypes := OrderedSet{};
 	typeArtefacts := self.typesByName()->collect(n | 
 		object TraceEditor::TypeArtefact {

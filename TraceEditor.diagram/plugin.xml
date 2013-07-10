@@ -550,6 +550,14 @@
    <extension point="org.eclipse.ui.handlers" id="menu-handlers">
       <?gmfgen generated="true"?>
    </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.marianogili.traceeditor.diagram.perspectives.PerspectiveFactory"
+            id="TraceEditor.diagram.perspective"
+            name="TraceEditor 0.1">
+      </perspective>
+   </extension>
 
    <!-- optionally, specify keybindings -->
 </plugin>
