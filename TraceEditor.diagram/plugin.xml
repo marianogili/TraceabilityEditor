@@ -555,8 +555,18 @@
       <perspective
             class="com.marianogili.traceeditor.diagram.perspectives.PerspectiveFactory"
             id="TraceEditor.diagram.perspective"
-            name="TraceEditor 0.1">
+            name="TraceEditor">
       </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            class="com.marianogili.traceeditor.diagram.views.ViewListOfTrace"
+            id="com.marianogili.traceeditor.diagram.views.ViewListOfTrace"
+            name="Lista de Trazas"
+            restorable="true">
+      </view>
    </extension>
 
    <!-- optionally, specify keybindings -->
