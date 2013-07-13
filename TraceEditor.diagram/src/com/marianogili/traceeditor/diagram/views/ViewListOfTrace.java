@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.common.command.Command;
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.ui.celleditor.ExtendedComboBoxCellEditor;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.edit.command.SetCommand;
@@ -22,6 +21,10 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.ui.IEditorInput;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IPartListener;
+import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.part.ViewPart;
 
 import com.marianogili.traceeditor.Artefact;
@@ -31,6 +34,7 @@ import com.marianogili.traceeditor.TraceLink;
 import com.marianogili.traceeditor.TraceeditorPackage;
 import com.marianogili.traceeditor.Transformation;
 import com.marianogili.traceeditor.TypeArtefact;
+import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditor;
 
 public class ViewListOfTrace extends ViewPart {
 	
@@ -44,6 +48,48 @@ public class ViewListOfTrace extends ViewPart {
 	private TableViewer tableViewer;
 
 	protected EditingDomain editingDomain;
+	
+	private IPartListener partListener = new IPartListener() {
+		public void partOpened(IWorkbenchPart part) {
+			trackOpenTraceEditorDiagramEditor(part);
+		}
+
+		public void partClosed(IWorkbenchPart part) {
+			trackOpenTraceEditorDiagramEditor(part);
+		}
+
+		private void trackOpenTraceEditorDiagramEditor(IWorkbenchPart part) {
+			if (!(part instanceof TraceEditorDiagramEditor))
+				return;
+			TraceEditorDiagramEditor editor = (TraceEditorDiagramEditor) part;
+			IEditorInput input = (IEditorInput) editor.getEditorInput();
+//			String participant = input.getParticipant();
+//			if (openEditors.contains(participant)) {
+//				openEditors.remove(participant);
+//			} else {
+//				openEditors.add(participant);
+//			}
+//			treeViewer.refresh(true);
+		}
+
+		@Override
+		public void partActivated(IWorkbenchPart part) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void partBroughtToTop(IWorkbenchPart part) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void partDeactivated(IWorkbenchPart part) {
+			// TODO Auto-generated method stub
+			
+		}
+	};
 
 	
 	public ViewListOfTrace() {
@@ -59,8 +105,17 @@ public class ViewListOfTrace extends ViewPart {
 		
 		tableViewer.setContentProvider(new TableViewerContentProvider());
 		
-		tableViewer.setInput(editingDomain.getResourceSet().getResources().get(0));
+		getSite().getWorkbenchWindow().getPartService().addPartListener(partListener);
 		
+//		if (editorPart != null) {
+//			tableViewer.setInput(editingDomain.getResourceSet().getResources().get(0));
+//		}				
+	}
+
+	@Override
+	public void dispose() {
+		getSite().getWorkbenchWindow().getPartService().removePartListener(partListener);
+		super.dispose();
 	}
 
 	@Override
