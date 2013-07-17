@@ -1,37 +1,32 @@
 package com.marianogili.traceeditor.diagram.views;
 
 import java.util.ArrayList;
-import java.util.EventObject;
 import java.util.List;
 
 import org.eclipse.emf.common.command.Command;
-import org.eclipse.emf.common.command.CommandStack;
-import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.common.ui.celleditor.ExtendedComboBoxCellEditor;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.edit.command.SetCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
 import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
+import org.eclipse.emf.transaction.NotificationFilter;
+import org.eclipse.emf.transaction.ResourceSetChangeEvent;
+import org.eclipse.emf.transaction.ResourceSetListener;
+import org.eclipse.emf.transaction.RollbackException;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.EditingSupport;
-import org.eclipse.jface.viewers.IStructuredContentProvider;
 import org.eclipse.jface.viewers.TableLayout;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.TextCellEditor;
-import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
-import org.eclipse.ui.IEditorInput;
-import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.part.ViewPart;
@@ -65,7 +60,7 @@ public class ViewListOfTrace extends ViewPart {
 	 */
 	protected ComposedAdapterFactory adapterFactory;
 
-	protected EditingDomain editingDomain;
+	protected TransactionalEditingDomain editingDomain;
 	
 	/**
 	 * This sets up the editing domain for the model editor. 
@@ -82,35 +77,6 @@ public class ViewListOfTrace extends ViewPart {
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new TraceeditorItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
-
-		// Create a transactional editing domain
-	    //
-//	    TransactionalEditingDomain domain = TransactionalEditingDomain.Factory.INSTANCE.createEditingDomain();
-//	    domain.setID("TraceEditor.diagram.EditingDomain");
-
-		// Add a listener to set the most recent command's affected objects to
-		// be the selection of the viewer with focus.
-		//
-//	    domain.getCommandStack().addCommandStackListener(
-//	    		new CommandStackListener() {
-//	    			public void commandStackChanged(final EventObject event) {
-//	    				getContainer().getDisplay().asyncExec(new Runnable() {
-//	    					public void run() {
-//	    						firePropertyChange(IEditorPart.PROP_DIRTY);
-//	    						// Try to select the affected objects.
-//	    						//
-//	    						Command mostRecentCommand = ((CommandStack) event
-//	    								.getSource()).getMostRecentCommand();
-//								if (mostRecentCommand != null) {
-//									setSelectionToViewer(mostRecentCommand
-//											.getAffectedObjects());
-//								}
-//							}
-//	    				});
-//	    			}
-//	    		});
-
-//	    editingDomain = (AdapterFactoryEditingDomain) domain;
 	}
 	
 	private IPartListener partListener = new IPartListener() {
@@ -120,6 +86,46 @@ public class ViewListOfTrace extends ViewPart {
 			TraceEditorDiagramEditor editor = (TraceEditorDiagramEditor) part;
 			
 			editingDomain = editor.getEditingDomain();
+			
+			editingDomain.addResourceSetListener(new ResourceSetListener() {
+				
+				@Override
+				public void resourceSetChanged(ResourceSetChangeEvent event) {
+					tableViewer.refresh();
+				}
+
+				@Override
+				public NotificationFilter getFilter() {
+					// TODO Auto-generated method stub
+					return null;
+				}
+
+				@Override
+				public Command transactionAboutToCommit(
+						ResourceSetChangeEvent event) throws RollbackException {
+					// TODO Auto-generated method stub
+					return null;
+				}
+
+				@Override
+				public boolean isAggregatePrecommitListener() {
+					// TODO Auto-generated method stub
+					return false;
+				}
+
+				@Override
+				public boolean isPrecommitOnly() {
+					// TODO Auto-generated method stub
+					return false;
+				}
+
+				@Override
+				public boolean isPostcommitOnly() {
+					// TODO Auto-generated method stub
+					return false;
+				}
+			});
+			
 			Resource input = editingDomain.getResourceSet().getResources().get(1);
 			tableViewer.setInput(input);
 			tableViewer.refresh();
@@ -154,7 +160,6 @@ public class ViewListOfTrace extends ViewPart {
 
 	
 	public ViewListOfTrace() {
-		// TODO Auto-generated constructor stub
 		super();
 		initializeEditingDomain();
 	}
@@ -248,86 +253,7 @@ public class ViewListOfTrace extends ViewPart {
 	public void setFocus() {
 		// TODO Auto-generated method stub
 
-	}
-	
-//	private class TableViewerContentProvider implements IStructuredContentProvider {
-//		
-//		private void TraceLinksTreeToList (ArrayList<Object> elements, List<TraceLink> traceLinks, Transformation aTransformation) {
-//			
-//			TransformationBuffer element;
-//
-//			for (TraceLink aTraceLink : traceLinks) {
-//				// Caso traza sin orígenes
-//				if (aTraceLink.getSources().size() == 0) {
-//					// Caso traza sin orígenes ni destinos
-//					if (aTraceLink.getTargets().size() == 0) {
-//						element = new TransformationBuffer(aTransformation, aTraceLink, null, null);
-//						elements.add(element);
-//					}
-//					// Caso traza sin orígenes pero con destinos
-//					for (Artefact aTarget : aTraceLink.getTargets()) {
-//						element = new TransformationBuffer(aTransformation,	aTraceLink, null, aTarget);
-//						elements.add(element);
-//					}
-//				}
-//				for (Artefact aSource : aTraceLink.getSources()) {
-//					// Caso trazas con orígenes sin destinos
-//					if (aTraceLink.getTargets().size() == 0) {
-//						element = new TransformationBuffer(aTransformation, aTraceLink, aSource, null);
-//						elements.add(element);
-//					}
-//					// Caso trazas con orígenes y destinos
-//					for (Artefact aTarget : aTraceLink.getTargets()) {
-//						element = new TransformationBuffer(aTransformation, aTraceLink, aSource, aTarget);
-//						elements.add(element);
-//					}
-//				}
-//			}
-//		}
-//
-//		public Object[] getElements(Object object) {
-//			Resource resource = (Resource) object;
-//			Object rootObject = resource.getContents().get(0);
-//			if (rootObject instanceof TraceEditor) {
-//				// Primero agrupo los enlaces sueltos, o sea que no pertenecen a una transformación.
-//				List<TraceLink> traceLinks = ((TraceEditor) rootObject).getDashboard().getTraceLinks();
-//				ArrayList<Object> elements = new ArrayList<Object>(traceLinks.size());
-//
-//				this.TraceLinksTreeToList(elements, traceLinks, null);
-//
-//				// Ahora los enlaces de las transformaciones.
-//				List<Transformation> transformations = ((TraceEditor) rootObject).getDashboard().getTransformations();
-//				for (Transformation aTransformation : transformations) {
-//					this.TraceLinksTreeToList(elements, aTransformation.getTraceLinks(), aTransformation);
-//				}
-//				return elements.toArray();
-//			}
-//			return new Object[0];
-//		}
-//
-////		public void notifyChanged(Notification notification) {
-////			switch (notification.getEventType()) {
-////			case Notification.ADD:
-////			case Notification.ADD_MANY:
-////				if (notification.getFeature() != TraceeditorPackage.eINSTANCE
-////						.getTransformation_TraceLinks())
-////					return;
-////			}
-////			super.notifyChanged(notification);
-////		}
-//
-//		@Override
-//		public void dispose() {
-//			// TODO Auto-generated method stub
-//			
-//		}
-//
-//		@Override
-//		public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
-//			// TODO Auto-generated method stub
-//			
-//		}
-//	}
+	}	
 	
 	private TableViewerColumn createTableViewerColumn(String title, int bound, final int colNumber) {
 		final TableViewerColumn viewerColumn = new TableViewerColumn(tableViewer, SWT.NONE);
