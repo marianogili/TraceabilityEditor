@@ -178,9 +178,12 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 				PointList points = new PointList(5);
 				Rectangle anchRect = getHandleBounds();
 				points.addPoint(anchRect.x + 30, anchRect.y + 10); // A1
-				points.addPoint(anchRect.x + anchRect.width - 30, anchRect.y + 10); // A2
-				points.addPoint(anchRect.x + anchRect.width - 30, anchRect.y + anchRect.height - 10); // A3
-				points.addPoint(anchRect.x + 30, anchRect.y + anchRect.height - 10); // A4
+				points.addPoint(anchRect.x + anchRect.width - 30,
+						anchRect.y + 10); // A2
+				points.addPoint(anchRect.x + anchRect.width - 30, anchRect.y
+						+ anchRect.height - 10); // A3
+				points.addPoint(anchRect.x + 30, anchRect.y + anchRect.height
+						- 10); // A4
 				points.addPoint(anchRect.x + 30, anchRect.y + 10); // A1
 				return points;
 			}

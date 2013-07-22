@@ -318,7 +318,7 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 				node,
 				TraceEditorVisualIDRegistry
 						.getType(DashboardTraceLinkCompartmentEditPart.VISUAL_ID),
-				false, false, false, false);
+				false, false, true, true);
 		createCompartment(
 				node,
 				TraceEditorVisualIDRegistry

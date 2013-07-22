@@ -60,7 +60,7 @@ public class DashboardTraceLinkCompartmentCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<TraceEditorNodeDescriptor> childDescriptors = TraceEditorDiagramUpdater
-				.getDashboardDashboardTraceLinkCompartment_7002SemanticChildren(viewObject);
+				.getDashboardDashBoardTraceLinkCompartment_7002SemanticChildren(viewObject);
 		for (TraceEditorNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -93,7 +93,7 @@ public class DashboardTraceLinkCompartmentCanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<TraceEditorNodeDescriptor> childDescriptors = TraceEditorDiagramUpdater
-				.getDashboardDashboardTraceLinkCompartment_7002SemanticChildren((View) getHost()
+				.getDashboardDashBoardTraceLinkCompartment_7002SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

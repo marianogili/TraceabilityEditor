@@ -337,7 +337,7 @@
           name="DashboardFigure">
         <layout
             xsi:type="gmfgraph:GridLayout"
-            numColumns="4"
+            numColumns="3"
             equalWidth="false"/>
         <foregroundColor
             xsi:type="gmfgraph:ConstantColor"
@@ -397,7 +397,7 @@
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
           <preferredSize
-              dx="350"
+              dx="700"
               dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
@@ -413,47 +413,21 @@
           <children
               xsi:type="gmfgraph:Rectangle"
               name="CentralRectangleCompartment">
+            <layout
+                xsi:type="gmfgraph:GridLayout"
+                numColumns="2"/>
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
             <preferredSize
-                dx="340"
+                dx="700"
                 dy="960"/>
-          </children>
-        </children>
-        <children
-            xsi:type="gmfgraph:RoundedRectangle"
-            name="CentralRectangle1">
-          <layout
-              xsi:type="gmfgraph:GridLayout"/>
-          <foregroundColor
-              xsi:type="gmfgraph:ConstantColor"
-              value="gray"/>
-          <backgroundColor
-              xsi:type="gmfgraph:ConstantColor"/>
-          <preferredSize
-              dx="350"
-              dy="1000"/>
-          <children
-              xsi:type="gmfgraph:Label"
-              name="CentralRectangle1Title"
-              text="Trazas">
-            <layoutData
-                xsi:type="gmfgraph:GridLayoutData"/>
-            <font
-                xsi:type="gmfgraph:BasicFont"
-                height="12"
-                style="BOLD"/>
-          </children>
-          <children
-              xsi:type="gmfgraph:Rectangle"
-              name="CentralRectangle1Compartment">
-            <backgroundColor
-                xsi:type="gmfgraph:ConstantColor"
-                value="orange"/>
-            <preferredSize
-                dx="340"
-                dy="960"/>
+            <children
+                xsi:type="gmfgraph:Rectangle"
+                name="CentralRectangleCompartmentTranformations"/>
+            <children
+                xsi:type="gmfgraph:Rectangle"
+                name="CentralRectangleCompartmentTraceLinks"/>
           </children>
         </children>
         <children
@@ -499,13 +473,13 @@
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.6/@actualFigure/@children.1/@children.1"/>
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.1/@children.1/@children.0"/>
       <accessors
-          figure="//@figures.0/@descriptors.6/@actualFigure/@children.2/@children.1"/>
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.1/@children.1/@children.1"/>
       <accessors
           figure="//@figures.0/@descriptors.6/@actualFigure/@children.0/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.6/@actualFigure/@children.3/@children.1"/>
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.2/@children.1"/>
     </descriptors>
   </figures>
   <nodes
@@ -538,17 +512,17 @@
         alignment="CENTER"/>
   </compartments>
   <compartments
-      name="DashboardTraceLinkCompartment"
+      name="DashBoardTransformationCompartment"
       figure="DashboardFigure"
-      accessor="//@figures.0/@descriptors.6/@accessors.1">
+      accessor="//@figures.0/@descriptors.6/@accessors.0">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
   </compartments>
   <compartments
-      name="DashBoardTransformationCompartment"
+      name="DashBoardTraceLinkCompartment"
       figure="DashboardFigure"
-      accessor="//@figures.0/@descriptors.6/@accessors.0">
+      accessor="//@figures.0/@descriptors.6/@accessors.1">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>

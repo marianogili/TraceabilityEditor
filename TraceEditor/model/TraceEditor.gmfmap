@@ -128,7 +128,7 @@
       <compartments
           children="//@nodes.0/@ownedChild/@children.1">
         <compartment
-            href="TraceEditor.gmfgraph#DashboardTraceLinkCompartment"/>
+            href="TraceEditor.gmfgraph#DashBoardTraceLinkCompartment"/>
       </compartments>
       <compartments
           children="//@nodes.0/@ownedChild/@children.3">

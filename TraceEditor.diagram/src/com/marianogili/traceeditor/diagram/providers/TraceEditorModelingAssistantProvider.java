@@ -50,8 +50,9 @@ public class TraceEditorModelingAssistantProvider extends
 			return types;
 		}
 		if (editPart instanceof DashboardEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
 			types.add(TraceEditorElementTypes.Artefact_3001);
+			types.add(TraceEditorElementTypes.TraceLink_3002);
 			types.add(TraceEditorElementTypes.Artefact_3004);
 			types.add(TraceEditorElementTypes.Transformation_3003);
 			return types;
@@ -59,11 +60,6 @@ public class TraceEditorModelingAssistantProvider extends
 		if (editPart instanceof TransformationEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
 			types.add(TraceEditorElementTypes.TraceLink_3005);
-			return types;
-		}
-		if (editPart instanceof DashboardTraceLinkCompartmentEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-			types.add(TraceEditorElementTypes.TraceLink_3002);
 			return types;
 		}
 		return Collections.EMPTY_LIST;

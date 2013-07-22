@@ -50,7 +50,7 @@ public class TraceEditorDiagramUpdater {
 		case DashboardSourceArtefactCompartmentEditPart.VISUAL_ID:
 			return getDashboardDashboardSourceArtefactCompartment_7001SemanticChildren(view);
 		case DashboardTraceLinkCompartmentEditPart.VISUAL_ID:
-			return getDashboardDashboardTraceLinkCompartment_7002SemanticChildren(view);
+			return getDashboardDashBoardTraceLinkCompartment_7002SemanticChildren(view);
 		case DashboardTargetArtefactCompartmentEditPart.VISUAL_ID:
 			return getDashboardDashboardTargetArtefactCompartment_7003SemanticChildren(view);
 		case DashboardDashBoardTransformationCompartmentEditPart.VISUAL_ID:
@@ -112,7 +112,7 @@ public class TraceEditorDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<TraceEditorNodeDescriptor> getDashboardDashboardTraceLinkCompartment_7002SemanticChildren(
+	public static List<TraceEditorNodeDescriptor> getDashboardDashBoardTraceLinkCompartment_7002SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();

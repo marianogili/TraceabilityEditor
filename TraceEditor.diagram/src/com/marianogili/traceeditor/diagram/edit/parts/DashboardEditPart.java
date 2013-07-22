@@ -134,7 +134,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		}
 		if (childEditPart instanceof DashboardTraceLinkCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
-					.getFigureCentralRectangle1Compartment();
+					.getFigureCentralRectangleCompartmentTraceLinks();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.add(((DashboardTraceLinkCompartmentEditPart) childEditPart)
 					.getFigure());
@@ -150,7 +150,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		}
 		if (childEditPart instanceof DashboardDashBoardTransformationCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
-					.getFigureCentralRectangleCompartment();
+					.getFigureCentralRectangleCompartmentTranformations();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.add(((DashboardDashBoardTransformationCompartmentEditPart) childEditPart)
 					.getFigure());
@@ -172,7 +172,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		}
 		if (childEditPart instanceof DashboardTraceLinkCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
-					.getFigureCentralRectangle1Compartment();
+					.getFigureCentralRectangleCompartmentTraceLinks();
 			pane.remove(((DashboardTraceLinkCompartmentEditPart) childEditPart)
 					.getFigure());
 			return true;
@@ -186,7 +186,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		}
 		if (childEditPart instanceof DashboardDashBoardTransformationCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
-					.getFigureCentralRectangleCompartment();
+					.getFigureCentralRectangleCompartmentTranformations();
 			pane.remove(((DashboardDashBoardTransformationCompartmentEditPart) childEditPart)
 					.getFigure());
 			return true;
@@ -222,13 +222,15 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			return getPrimaryShape().getFigureLeftRectangleCompartment();
 		}
 		if (editPart instanceof DashboardTraceLinkCompartmentEditPart) {
-			return getPrimaryShape().getFigureCentralRectangle1Compartment();
+			return getPrimaryShape()
+					.getFigureCentralRectangleCompartmentTraceLinks();
 		}
 		if (editPart instanceof DashboardTargetArtefactCompartmentEditPart) {
 			return getPrimaryShape().getFigureRightRectangleCompartment();
 		}
 		if (editPart instanceof DashboardDashBoardTransformationCompartmentEditPart) {
-			return getPrimaryShape().getFigureCentralRectangleCompartment();
+			return getPrimaryShape()
+					.getFigureCentralRectangleCompartmentTranformations();
 		}
 		return getContentPane();
 	}
@@ -333,6 +335,10 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 				return getChildBySemanticHint(TraceEditorVisualIDRegistry
 						.getType(DashboardSourceArtefactCompartmentEditPart.VISUAL_ID));
 			}
+			if (type == TraceEditorElementTypes.TraceLink_3002) {
+				return getChildBySemanticHint(TraceEditorVisualIDRegistry
+						.getType(DashboardTraceLinkCompartmentEditPart.VISUAL_ID));
+			}
 			if (type == TraceEditorElementTypes.Artefact_3004) {
 				return getChildBySemanticHint(TraceEditorVisualIDRegistry
 						.getType(DashboardTargetArtefactCompartmentEditPart.VISUAL_ID));
@@ -353,11 +359,11 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private RectangleFigure fFigureCentralRectangleCompartment;
+		private RectangleFigure fFigureCentralRectangleCompartmentTranformations;
 		/**
 		 * @generated
 		 */
-		private RectangleFigure fFigureCentralRectangle1Compartment;
+		private RectangleFigure fFigureCentralRectangleCompartmentTraceLinks;
 		/**
 		 * @generated
 		 */
@@ -373,7 +379,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		public DashboardFigure() {
 
 			GridLayout layoutThis = new GridLayout();
-			layoutThis.numColumns = 4;
+			layoutThis.numColumns = 3;
 			layoutThis.makeColumnsEqualWidth = false;
 			this.setLayoutManager(layoutThis);
 
@@ -450,7 +456,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			centralRectangle0.setForegroundColor(ColorConstants.gray);
 			centralRectangle0.setBackgroundColor(ColorConstants.white);
 			centralRectangle0.setPreferredSize(new Dimension(getMapMode()
-					.DPtoLP(350), getMapMode().DPtoLP(1000)));
+					.DPtoLP(700), getMapMode().DPtoLP(1000)));
 
 			this.add(centralRectangle0);
 
@@ -476,56 +482,30 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			centralRectangle0.add(centralRectangleTitle1,
 					constraintCentralRectangleTitle1);
 
-			fFigureCentralRectangleCompartment = new RectangleFigure();
+			RectangleFigure centralRectangleCompartment1 = new RectangleFigure();
 
-			fFigureCentralRectangleCompartment
+			centralRectangleCompartment1
 					.setBackgroundColor(ColorConstants.orange);
-			fFigureCentralRectangleCompartment.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(340), getMapMode().DPtoLP(960)));
+			centralRectangleCompartment1.setPreferredSize(new Dimension(
+					getMapMode().DPtoLP(700), getMapMode().DPtoLP(960)));
 
-			centralRectangle0.add(fFigureCentralRectangleCompartment);
+			centralRectangle0.add(centralRectangleCompartment1);
 
-			RoundedRectangle centralRectangle10 = new RoundedRectangle();
+			GridLayout layoutCentralRectangleCompartment1 = new GridLayout();
+			layoutCentralRectangleCompartment1.numColumns = 2;
+			layoutCentralRectangleCompartment1.makeColumnsEqualWidth = true;
+			centralRectangleCompartment1
+					.setLayoutManager(layoutCentralRectangleCompartment1);
 
-			centralRectangle10.setCornerDimensions(new Dimension(getMapMode()
-					.DPtoLP(8), getMapMode().DPtoLP(8)));
-			centralRectangle10.setForegroundColor(ColorConstants.gray);
-			centralRectangle10.setBackgroundColor(ColorConstants.white);
-			centralRectangle10.setPreferredSize(new Dimension(getMapMode()
-					.DPtoLP(350), getMapMode().DPtoLP(1000)));
+			fFigureCentralRectangleCompartmentTranformations = new RectangleFigure();
 
-			this.add(centralRectangle10);
+			centralRectangleCompartment1
+					.add(fFigureCentralRectangleCompartmentTranformations);
 
-			GridLayout layoutCentralRectangle10 = new GridLayout();
-			layoutCentralRectangle10.numColumns = 1;
-			layoutCentralRectangle10.makeColumnsEqualWidth = true;
-			centralRectangle10.setLayoutManager(layoutCentralRectangle10);
+			fFigureCentralRectangleCompartmentTraceLinks = new RectangleFigure();
 
-			WrappingLabel centralRectangle1Title1 = new WrappingLabel();
-
-			centralRectangle1Title1.setText("Trazas");
-
-			centralRectangle1Title1.setFont(CENTRALRECTANGLE1TITLE1_FONT);
-
-			GridData constraintCentralRectangle1Title1 = new GridData();
-			constraintCentralRectangle1Title1.verticalAlignment = GridData.CENTER;
-			constraintCentralRectangle1Title1.horizontalAlignment = GridData.CENTER;
-			constraintCentralRectangle1Title1.horizontalIndent = 0;
-			constraintCentralRectangle1Title1.horizontalSpan = 1;
-			constraintCentralRectangle1Title1.verticalSpan = 1;
-			constraintCentralRectangle1Title1.grabExcessHorizontalSpace = false;
-			constraintCentralRectangle1Title1.grabExcessVerticalSpace = false;
-			centralRectangle10.add(centralRectangle1Title1,
-					constraintCentralRectangle1Title1);
-
-			fFigureCentralRectangle1Compartment = new RectangleFigure();
-
-			fFigureCentralRectangle1Compartment
-					.setBackgroundColor(ColorConstants.orange);
-			fFigureCentralRectangle1Compartment.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(340), getMapMode().DPtoLP(960)));
-
-			centralRectangle10.add(fFigureCentralRectangle1Compartment);
+			centralRectangleCompartment1
+					.add(fFigureCentralRectangleCompartmentTraceLinks);
 
 			RoundedRectangle rightRectangle0 = new RoundedRectangle();
 
@@ -588,15 +568,15 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		public RectangleFigure getFigureCentralRectangleCompartment() {
-			return fFigureCentralRectangleCompartment;
+		public RectangleFigure getFigureCentralRectangleCompartmentTranformations() {
+			return fFigureCentralRectangleCompartmentTranformations;
 		}
 
 		/**
 		 * @generated
 		 */
-		public RectangleFigure getFigureCentralRectangle1Compartment() {
-			return fFigureCentralRectangle1Compartment;
+		public RectangleFigure getFigureCentralRectangleCompartmentTraceLinks() {
+			return fFigureCentralRectangleCompartmentTraceLinks;
 		}
 
 		/**
@@ -626,13 +606,6 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	static final Font CENTRALRECTANGLETITLE1_FONT = new Font(
-			Display.getCurrent(), Display.getDefault().getSystemFont()
-					.getFontData()[0].getName(), 12, SWT.BOLD);
-
-	/**
-	 * @generated
-	 */
-	static final Font CENTRALRECTANGLE1TITLE1_FONT = new Font(
 			Display.getCurrent(), Display.getDefault().getSystemFont()
 					.getFontData()[0].getName(), 12, SWT.BOLD);
 
