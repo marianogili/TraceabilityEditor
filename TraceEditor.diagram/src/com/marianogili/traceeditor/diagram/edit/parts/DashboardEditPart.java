@@ -456,7 +456,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			centralRectangle0.setForegroundColor(ColorConstants.gray);
 			centralRectangle0.setBackgroundColor(ColorConstants.white);
 			centralRectangle0.setPreferredSize(new Dimension(getMapMode()
-					.DPtoLP(700), getMapMode().DPtoLP(1000)));
+					.DPtoLP(500), getMapMode().DPtoLP(1000)));
 
 			this.add(centralRectangle0);
 
@@ -467,7 +467,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 
 			WrappingLabel centralRectangleTitle1 = new WrappingLabel();
 
-			centralRectangleTitle1.setText("Transformaciones");
+			centralRectangleTitle1.setText("Transformaciones y trazas");
 
 			centralRectangleTitle1.setFont(CENTRALRECTANGLETITLE1_FONT);
 
@@ -485,24 +485,44 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			RectangleFigure centralRectangleCompartment1 = new RectangleFigure();
 
 			centralRectangleCompartment1
+					.setForegroundColor(ColorConstants.gray);
+			centralRectangleCompartment1
 					.setBackgroundColor(ColorConstants.orange);
 			centralRectangleCompartment1.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(700), getMapMode().DPtoLP(960)));
+					getMapMode().DPtoLP(490), getMapMode().DPtoLP(960)));
 
 			centralRectangle0.add(centralRectangleCompartment1);
 
 			GridLayout layoutCentralRectangleCompartment1 = new GridLayout();
 			layoutCentralRectangleCompartment1.numColumns = 2;
 			layoutCentralRectangleCompartment1.makeColumnsEqualWidth = true;
+			layoutCentralRectangleCompartment1.horizontalSpacing = 0;
+			layoutCentralRectangleCompartment1.verticalSpacing = 0;
+			layoutCentralRectangleCompartment1.marginWidth = 0;
+			layoutCentralRectangleCompartment1.marginHeight = 0;
 			centralRectangleCompartment1
 					.setLayoutManager(layoutCentralRectangleCompartment1);
 
 			fFigureCentralRectangleCompartmentTranformations = new RectangleFigure();
 
+			fFigureCentralRectangleCompartmentTranformations.setOutline(false);
+			fFigureCentralRectangleCompartmentTranformations.setFill(false);
+			fFigureCentralRectangleCompartmentTranformations.setOpaque(false);
+			fFigureCentralRectangleCompartmentTranformations
+					.setPreferredSize(new Dimension(getMapMode().DPtoLP(295),
+							getMapMode().DPtoLP(960)));
+
 			centralRectangleCompartment1
 					.add(fFigureCentralRectangleCompartmentTranformations);
 
 			fFigureCentralRectangleCompartmentTraceLinks = new RectangleFigure();
+
+			fFigureCentralRectangleCompartmentTraceLinks.setOutline(false);
+			fFigureCentralRectangleCompartmentTraceLinks.setFill(false);
+			fFigureCentralRectangleCompartmentTraceLinks.setOpaque(false);
+			fFigureCentralRectangleCompartmentTraceLinks
+					.setPreferredSize(new Dimension(getMapMode().DPtoLP(195),
+							getMapMode().DPtoLP(960)));
 
 			centralRectangleCompartment1
 					.add(fFigureCentralRectangleCompartmentTraceLinks);

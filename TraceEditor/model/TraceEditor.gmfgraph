@@ -21,9 +21,9 @@
         <border
             xsi:type="gmfgraph:MarginBorder">
           <insets
-              top="5"
+              top="10"
               left="30"
-              bottom="5"
+              bottom="10"
               right="30"/>
         </border>
         <children
@@ -397,12 +397,12 @@
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
           <preferredSize
-              dx="700"
+              dx="500"
               dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
               name="CentralRectangleTitle"
-              text="Transformaciones">
+              text="Transformaciones y trazas">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"/>
             <font
@@ -415,19 +415,33 @@
               name="CentralRectangleCompartment">
             <layout
                 xsi:type="gmfgraph:GridLayout"
-                numColumns="2"/>
+                numColumns="2">
+              <margins/>
+              <spacing/>
+            </layout>
+            <foregroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="gray"/>
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
             <preferredSize
-                dx="700"
+                dx="490"
                 dy="960"/>
             <children
-                xsi:type="gmfgraph:Rectangle"
-                name="CentralRectangleCompartmentTranformations"/>
+                xsi:type="gmfgraph:InvisibleRectangle"
+                name="CentralRectangleCompartmentTranformations">
+              <preferredSize
+                  dx="295"
+                  dy="960"/>
+            </children>
             <children
-                xsi:type="gmfgraph:Rectangle"
-                name="CentralRectangleCompartmentTraceLinks"/>
+                xsi:type="gmfgraph:InvisibleRectangle"
+                name="CentralRectangleCompartmentTraceLinks">
+              <preferredSize
+                  dx="195"
+                  dy="960"/>
+            </children>
           </children>
         </children>
         <children
