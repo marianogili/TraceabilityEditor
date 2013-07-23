@@ -456,7 +456,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			centralRectangle0.setForegroundColor(ColorConstants.gray);
 			centralRectangle0.setBackgroundColor(ColorConstants.white);
 			centralRectangle0.setPreferredSize(new Dimension(getMapMode()
-					.DPtoLP(500), getMapMode().DPtoLP(1000)));
+					.DPtoLP(480), getMapMode().DPtoLP(1000)));
 
 			this.add(centralRectangle0);
 
@@ -489,13 +489,13 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			centralRectangleCompartment1
 					.setBackgroundColor(ColorConstants.orange);
 			centralRectangleCompartment1.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(490), getMapMode().DPtoLP(960)));
+					getMapMode().DPtoLP(470), getMapMode().DPtoLP(960)));
 
 			centralRectangle0.add(centralRectangleCompartment1);
 
 			GridLayout layoutCentralRectangleCompartment1 = new GridLayout();
 			layoutCentralRectangleCompartment1.numColumns = 2;
-			layoutCentralRectangleCompartment1.makeColumnsEqualWidth = true;
+			layoutCentralRectangleCompartment1.makeColumnsEqualWidth = false;
 			layoutCentralRectangleCompartment1.horizontalSpacing = 0;
 			layoutCentralRectangleCompartment1.verticalSpacing = 0;
 			layoutCentralRectangleCompartment1.marginWidth = 0;
@@ -509,7 +509,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			fFigureCentralRectangleCompartmentTranformations.setFill(false);
 			fFigureCentralRectangleCompartmentTranformations.setOpaque(false);
 			fFigureCentralRectangleCompartmentTranformations
-					.setPreferredSize(new Dimension(getMapMode().DPtoLP(295),
+					.setPreferredSize(new Dimension(getMapMode().DPtoLP(275),
 							getMapMode().DPtoLP(960)));
 
 			centralRectangleCompartment1

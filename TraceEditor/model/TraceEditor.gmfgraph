@@ -45,8 +45,15 @@
                 xsi:type="gmfgraph:GridLayoutData"/>
           </children>
           <children
-              xsi:type="gmfgraph:InvisibleRectangle"
-              name="TransformationRectangleCompartment"/>
+              xsi:type="gmfgraph:Rectangle"
+              name="TransformationRectangleCompartment">
+            <layout
+                xsi:type="gmfgraph:FlowLayout"
+                majorAlignment="CENTER"
+                minorAlignment="CENTER"
+                majorSpacing="0"
+                minorSpacing="0"/>
+          </children>
         </children>
       </actualFigure>
       <accessors
@@ -68,9 +75,9 @@
             xsi:type="gmfgraph:MarginBorder">
           <insets
               top="10"
-              left="10"
+              left="20"
               bottom="10"
-              right="10"/>
+              right="20"/>
         </border>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
@@ -103,7 +110,14 @@
               text="&lt;...>">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
-                verticalAlignment="END"/>
+                verticalAlignment="END">
+              <sizeHint
+                  dx="105"
+                  dy="20"/>
+            </layoutData>
+            <backgroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="yellow"/>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 style="BOLD"/>
@@ -397,7 +411,7 @@
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
           <preferredSize
-              dx="500"
+              dx="480"
               dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
@@ -415,7 +429,8 @@
               name="CentralRectangleCompartment">
             <layout
                 xsi:type="gmfgraph:GridLayout"
-                numColumns="2">
+                numColumns="2"
+                equalWidth="false">
               <margins/>
               <spacing/>
             </layout>
@@ -426,13 +441,13 @@
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
             <preferredSize
-                dx="490"
+                dx="470"
                 dy="960"/>
             <children
                 xsi:type="gmfgraph:InvisibleRectangle"
                 name="CentralRectangleCompartmentTranformations">
               <preferredSize
-                  dx="295"
+                  dx="275"
                   dy="960"/>
             </children>
             <children

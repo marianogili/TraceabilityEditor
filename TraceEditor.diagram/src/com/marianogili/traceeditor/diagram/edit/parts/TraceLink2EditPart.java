@@ -177,14 +177,14 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 			public PointList getPolygonPoints() {
 				PointList points = new PointList(5);
 				Rectangle anchRect = getHandleBounds();
-				points.addPoint(anchRect.x + 10, anchRect.y + 10); // A1
-				points.addPoint(anchRect.x + anchRect.width - 10,
+				points.addPoint(anchRect.x + 20, anchRect.y + 10); // A1
+				points.addPoint(anchRect.x + anchRect.width - 20,
 						anchRect.y + 10); // A2
-				points.addPoint(anchRect.x + anchRect.width - 10, anchRect.y
+				points.addPoint(anchRect.x + anchRect.width - 20, anchRect.y
 						+ anchRect.height - 10); // A3
-				points.addPoint(anchRect.x + 10, anchRect.y + anchRect.height
+				points.addPoint(anchRect.x + 20, anchRect.y + anchRect.height
 						- 10); // A4
-				points.addPoint(anchRect.x + 10, anchRect.y + 10); // A1
+				points.addPoint(anchRect.x + 20, anchRect.y + 10); // A1
 				return points;
 			}
 		};
@@ -346,8 +346,8 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 			this.setOpaque(false);
 			this.setBackgroundColor(ColorConstants.lightBlue);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(10),
-					getMapMode().DPtoLP(10), getMapMode().DPtoLP(10),
-					getMapMode().DPtoLP(10)));
+					getMapMode().DPtoLP(20), getMapMode().DPtoLP(10),
+					getMapMode().DPtoLP(20)));
 			createContents();
 		}
 
@@ -390,6 +390,8 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 			fFigureTraceLinkNameFigure = new WrappingLabel();
 
 			fFigureTraceLinkNameFigure.setText("<...>");
+			fFigureTraceLinkNameFigure
+					.setBackgroundColor(ColorConstants.yellow);
 
 			fFigureTraceLinkNameFigure.setFont(FFIGURETRACELINKNAMEFIGURE_FONT);
 
@@ -401,6 +403,8 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 			constraintFFigureTraceLinkNameFigure.verticalSpan = 1;
 			constraintFFigureTraceLinkNameFigure.grabExcessHorizontalSpace = false;
 			constraintFFigureTraceLinkNameFigure.grabExcessVerticalSpace = false;
+			constraintFFigureTraceLinkNameFigure.widthHint = 105;
+			constraintFFigureTraceLinkNameFigure.heightHint = 20;
 			traceLinkFigureInt0.add(fFigureTraceLinkNameFigure,
 					constraintFFigureTraceLinkNameFigure);
 

@@ -1,6 +1,7 @@
 package com.marianogili.traceeditor.diagram.edit.parts;
 
 import org.eclipse.draw2d.ColorConstants;
+import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
@@ -323,8 +324,8 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 			this.setOutline(false);
 			this.setFill(false);
 			this.setOpaque(false);
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(30), getMapMode().DPtoLP(5),
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(10),
+					getMapMode().DPtoLP(30), getMapMode().DPtoLP(10),
 					getMapMode().DPtoLP(30)));
 			createContents();
 		}
@@ -368,12 +369,23 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 
 			fFigureTransformationRectangleCompartment = new RectangleFigure();
 
-			fFigureTransformationRectangleCompartment.setOutline(false);
-			fFigureTransformationRectangleCompartment.setFill(false);
-			fFigureTransformationRectangleCompartment.setOpaque(false);
-
 			fFigureTransformationFigureInt
 					.add(fFigureTransformationRectangleCompartment);
+
+			FlowLayout layoutFFigureTransformationRectangleCompartment = new FlowLayout();
+			layoutFFigureTransformationRectangleCompartment
+					.setStretchMinorAxis(false);
+			layoutFFigureTransformationRectangleCompartment
+					.setMinorAlignment(FlowLayout.ALIGN_CENTER);
+
+			layoutFFigureTransformationRectangleCompartment
+					.setMajorAlignment(FlowLayout.ALIGN_CENTER);
+			layoutFFigureTransformationRectangleCompartment.setMajorSpacing(0);
+			layoutFFigureTransformationRectangleCompartment.setMinorSpacing(0);
+			layoutFFigureTransformationRectangleCompartment.setHorizontal(true);
+
+			fFigureTransformationRectangleCompartment
+					.setLayoutManager(layoutFFigureTransformationRectangleCompartment);
 
 		}
 
