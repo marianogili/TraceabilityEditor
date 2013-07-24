@@ -30,7 +30,10 @@
             xsi:type="gmfgraph:RoundedRectangle"
             name="TransformationFigureInt">
           <layout
-              xsi:type="gmfgraph:GridLayout"/>
+              xsi:type="gmfgraph:GridLayout">
+            <margins/>
+            <spacing/>
+          </layout>
           <foregroundColor
               xsi:type="gmfgraph:ConstantColor"
               value="black"/>
@@ -38,14 +41,44 @@
               xsi:type="gmfgraph:ConstantColor"
               value="lightGreen"/>
           <children
-              xsi:type="gmfgraph:Label"
-              name="TransformationNameFigure"
-              text="&lt;...>">
+              xsi:type="gmfgraph:InvisibleRectangle"
+              name="TransformationRectangleTitle">
             <layoutData
-                xsi:type="gmfgraph:GridLayoutData"/>
+                xsi:type="gmfgraph:GridLayoutData"
+                horizontalAlignment="BEGINNING"/>
+            <layout
+                xsi:type="gmfgraph:GridLayout"
+                numColumns="2"
+                equalWidth="false"/>
+            <children
+                xsi:type="gmfgraph:Label"
+                name="LabelTransformationName"
+                text="transformación:">
+              <layoutData
+                  xsi:type="gmfgraph:GridLayoutData"
+                  horizontalAlignment="BEGINNING"/>
+              <font
+                  xsi:type="gmfgraph:BasicFont"
+                  height="7"/>
+            </children>
+            <children
+                xsi:type="gmfgraph:Label"
+                name="TransformationNameFigure"
+                text="">
+              <layoutData
+                  xsi:type="gmfgraph:GridLayoutData"
+                  horizontalAlignment="BEGINNING">
+                <sizeHint
+                    dx="120"
+                    dy="20"/>
+              </layoutData>
+              <font
+                  xsi:type="gmfgraph:BasicFont"
+                  style="BOLD"/>
+            </children>
           </children>
           <children
-              xsi:type="gmfgraph:Rectangle"
+              xsi:type="gmfgraph:InvisibleRectangle"
               name="TransformationRectangleCompartment">
             <layout
                 xsi:type="gmfgraph:FlowLayout"
@@ -57,11 +90,13 @@
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0/@children.0"/>
-      <accessors
           figure="//@figures.0/@descriptors.0/@actualFigure/@children.0/@children.1"/>
       <accessors
           figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0/@children.0/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0/@children.0"/>
     </descriptors>
     <descriptors
         name="TraceLinkFigure">
@@ -115,9 +150,6 @@
                   dx="105"
                   dy="20"/>
             </layoutData>
-            <backgroundColor
-                xsi:type="gmfgraph:ConstantColor"
-                value="yellow"/>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 style="BOLD"/>
@@ -139,7 +171,11 @@
               name="TraceLinkTypeFigure">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
-                verticalAlignment="END"/>
+                verticalAlignment="END">
+              <sizeHint
+                  dx="105"
+                  dy="20"/>
+            </layoutData>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 faceName=""
@@ -343,7 +379,11 @@
               text=" ">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
-                verticalAlignment="END"/>
+                verticalAlignment="END">
+              <sizeHint
+                  dx="120"
+                  dy="20"/>
+            </layoutData>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 faceName=""
@@ -581,7 +621,7 @@
   <compartments
       name="TransformationCompartment"
       figure="TransformationFigure"
-      accessor="//@figures.0/@descriptors.0/@accessors.1">
+      accessor="//@figures.0/@descriptors.0/@accessors.0">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>
@@ -590,7 +630,7 @@
       name="TransformationName"
       figure="TransformationFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.0/@accessors.2"/>
   <labels
       name="TraceLinkName"
       figure="TraceLinkFigure"

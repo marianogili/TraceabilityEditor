@@ -1,11 +1,15 @@
 package com.marianogili.traceeditor.diagram.edit.parts;
 
+import java.util.Collections;
+import java.util.List;
+
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
+import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.RoundedRectangle;
 import org.eclipse.draw2d.Shape;
@@ -13,15 +17,21 @@ import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
+import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
+import org.eclipse.gef.handles.MoveHandle;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.core.edithelpers.CreateElementRequestAdapter;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderedShapeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IBorderItemEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.BorderItemSelectionEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.diagram.ui.figures.BorderItemLocator;
 import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewAndElementRequest;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
@@ -30,7 +40,10 @@ import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.widgets.Display;
 
 import com.marianogili.traceeditor.diagram.edit.policies.TransformationItemSemanticEditPolicy;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
@@ -307,15 +320,20 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTransformationNameFigure;
-		/**
-		 * @generated
-		 */
 		private RectangleFigure fFigureTransformationRectangleCompartment;
 		/**
 		 * @generated
 		 */
 		private RoundedRectangle fFigureTransformationFigureInt;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTransformationNameFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fFigureTransformationRectangleTitle;
 
 		/**
 		 * @generated
@@ -349,25 +367,80 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 			GridLayout layoutFFigureTransformationFigureInt = new GridLayout();
 			layoutFFigureTransformationFigureInt.numColumns = 1;
 			layoutFFigureTransformationFigureInt.makeColumnsEqualWidth = true;
+			layoutFFigureTransformationFigureInt.horizontalSpacing = 0;
+			layoutFFigureTransformationFigureInt.verticalSpacing = 0;
+			layoutFFigureTransformationFigureInt.marginWidth = 0;
+			layoutFFigureTransformationFigureInt.marginHeight = 0;
 			fFigureTransformationFigureInt
 					.setLayoutManager(layoutFFigureTransformationFigureInt);
 
+			fFigureTransformationRectangleTitle = new RectangleFigure();
+
+			fFigureTransformationRectangleTitle.setOutline(false);
+			fFigureTransformationRectangleTitle.setFill(false);
+			fFigureTransformationRectangleTitle.setOpaque(false);
+
+			GridData constraintFFigureTransformationRectangleTitle = new GridData();
+			constraintFFigureTransformationRectangleTitle.verticalAlignment = GridData.CENTER;
+			constraintFFigureTransformationRectangleTitle.horizontalAlignment = GridData.BEGINNING;
+			constraintFFigureTransformationRectangleTitle.horizontalIndent = 0;
+			constraintFFigureTransformationRectangleTitle.horizontalSpan = 1;
+			constraintFFigureTransformationRectangleTitle.verticalSpan = 1;
+			constraintFFigureTransformationRectangleTitle.grabExcessHorizontalSpace = false;
+			constraintFFigureTransformationRectangleTitle.grabExcessVerticalSpace = false;
+			fFigureTransformationFigureInt.add(
+					fFigureTransformationRectangleTitle,
+					constraintFFigureTransformationRectangleTitle);
+
+			GridLayout layoutFFigureTransformationRectangleTitle = new GridLayout();
+			layoutFFigureTransformationRectangleTitle.numColumns = 2;
+			layoutFFigureTransformationRectangleTitle.makeColumnsEqualWidth = false;
+			fFigureTransformationRectangleTitle
+					.setLayoutManager(layoutFFigureTransformationRectangleTitle);
+
+			WrappingLabel labelTransformationName2 = new WrappingLabel();
+
+			labelTransformationName2.setText("transformación:");
+
+			labelTransformationName2.setFont(LABELTRANSFORMATIONNAME2_FONT);
+
+			GridData constraintLabelTransformationName2 = new GridData();
+			constraintLabelTransformationName2.verticalAlignment = GridData.CENTER;
+			constraintLabelTransformationName2.horizontalAlignment = GridData.BEGINNING;
+			constraintLabelTransformationName2.horizontalIndent = 0;
+			constraintLabelTransformationName2.horizontalSpan = 1;
+			constraintLabelTransformationName2.verticalSpan = 1;
+			constraintLabelTransformationName2.grabExcessHorizontalSpace = false;
+			constraintLabelTransformationName2.grabExcessVerticalSpace = false;
+			fFigureTransformationRectangleTitle.add(labelTransformationName2,
+					constraintLabelTransformationName2);
+
 			fFigureTransformationNameFigure = new WrappingLabel();
 
-			fFigureTransformationNameFigure.setText("<...>");
+			fFigureTransformationNameFigure.setText("");
+
+			fFigureTransformationNameFigure
+					.setFont(FFIGURETRANSFORMATIONNAMEFIGURE_FONT);
 
 			GridData constraintFFigureTransformationNameFigure = new GridData();
 			constraintFFigureTransformationNameFigure.verticalAlignment = GridData.CENTER;
-			constraintFFigureTransformationNameFigure.horizontalAlignment = GridData.CENTER;
+			constraintFFigureTransformationNameFigure.horizontalAlignment = GridData.BEGINNING;
 			constraintFFigureTransformationNameFigure.horizontalIndent = 0;
 			constraintFFigureTransformationNameFigure.horizontalSpan = 1;
 			constraintFFigureTransformationNameFigure.verticalSpan = 1;
 			constraintFFigureTransformationNameFigure.grabExcessHorizontalSpace = false;
 			constraintFFigureTransformationNameFigure.grabExcessVerticalSpace = false;
-			fFigureTransformationFigureInt.add(fFigureTransformationNameFigure,
+			constraintFFigureTransformationNameFigure.widthHint = 120;
+			constraintFFigureTransformationNameFigure.heightHint = 20;
+			fFigureTransformationRectangleTitle.add(
+					fFigureTransformationNameFigure,
 					constraintFFigureTransformationNameFigure);
 
 			fFigureTransformationRectangleCompartment = new RectangleFigure();
+
+			fFigureTransformationRectangleCompartment.setOutline(false);
+			fFigureTransformationRectangleCompartment.setFill(false);
+			fFigureTransformationRectangleCompartment.setOpaque(false);
 
 			fFigureTransformationFigureInt
 					.add(fFigureTransformationRectangleCompartment);
@@ -392,13 +465,6 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureTransformationNameFigure() {
-			return fFigureTransformationNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
 		public RectangleFigure getFigureTransformationRectangleCompartment() {
 			return fFigureTransformationRectangleCompartment;
 		}
@@ -410,6 +476,34 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 			return fFigureTransformationFigureInt;
 		}
 
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTransformationNameFigure() {
+			return fFigureTransformationNameFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getFigureTransformationRectangleTitle() {
+			return fFigureTransformationRectangleTitle;
+		}
+
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Font LABELTRANSFORMATIONNAME2_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 7, SWT.NORMAL);
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGURETRANSFORMATIONNAMEFIGURE_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 9, SWT.BOLD);
 
 }

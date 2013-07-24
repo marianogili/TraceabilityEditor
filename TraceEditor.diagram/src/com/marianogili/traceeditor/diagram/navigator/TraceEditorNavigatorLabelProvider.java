@@ -94,33 +94,33 @@ public class TraceEditorNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (TraceEditorVisualIDRegistry.getVisualID(view)) {
-		case TraceEditorEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Diagram?http://traceeditor/1.0?TraceEditor", TraceEditorElementTypes.TraceEditor_1000); //$NON-NLS-1$
-		case DashboardEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://traceeditor/1.0?Dashboard", TraceEditorElementTypes.Dashboard_2001); //$NON-NLS-1$
-		case TraceLink2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://traceeditor/1.0?TraceLink", TraceEditorElementTypes.TraceLink_3005); //$NON-NLS-1$
-		case TraceLinkEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://traceeditor/1.0?TraceLink", TraceEditorElementTypes.TraceLink_3002); //$NON-NLS-1$
-		case Artefact2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://traceeditor/1.0?Artefact", TraceEditorElementTypes.Artefact_3004); //$NON-NLS-1$
-		case TraceLinkTargetsEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://traceeditor/1.0?TraceLink?targets", TraceEditorElementTypes.TraceLinkTargets_4002); //$NON-NLS-1$
-		case TransformationEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://traceeditor/1.0?Transformation", TraceEditorElementTypes.Transformation_3003); //$NON-NLS-1$
-		case ArtefactEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://traceeditor/1.0?Artefact", TraceEditorElementTypes.Artefact_3001); //$NON-NLS-1$
 		case TraceLinkSourcesEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://traceeditor/1.0?TraceLink?sources", TraceEditorElementTypes.TraceLinkSources_4001); //$NON-NLS-1$
+		case DashboardEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://traceeditor/1.0?Dashboard", TraceEditorElementTypes.Dashboard_2001); //$NON-NLS-1$
+		case ArtefactEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://traceeditor/1.0?Artefact", TraceEditorElementTypes.Artefact_3001); //$NON-NLS-1$
+		case TraceLink2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://traceeditor/1.0?TraceLink", TraceEditorElementTypes.TraceLink_3005); //$NON-NLS-1$
+		case TraceLinkTargetsEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://traceeditor/1.0?TraceLink?targets", TraceEditorElementTypes.TraceLinkTargets_4002); //$NON-NLS-1$
+		case Artefact2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://traceeditor/1.0?Artefact", TraceEditorElementTypes.Artefact_3004); //$NON-NLS-1$
+		case TraceLinkEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://traceeditor/1.0?TraceLink", TraceEditorElementTypes.TraceLink_3002); //$NON-NLS-1$
+		case TraceEditorEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Diagram?http://traceeditor/1.0?TraceEditor", TraceEditorElementTypes.TraceEditor_1000); //$NON-NLS-1$
+		case TransformationEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://traceeditor/1.0?Transformation", TraceEditorElementTypes.Transformation_3003); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -173,24 +173,24 @@ public class TraceEditorNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (TraceEditorVisualIDRegistry.getVisualID(view)) {
-		case TraceEditorEditPart.VISUAL_ID:
-			return getTraceEditor_1000Text(view);
-		case DashboardEditPart.VISUAL_ID:
-			return getDashboard_2001Text(view);
-		case TraceLink2EditPart.VISUAL_ID:
-			return getTraceLink_3005Text(view);
-		case TraceLinkEditPart.VISUAL_ID:
-			return getTraceLink_3002Text(view);
-		case Artefact2EditPart.VISUAL_ID:
-			return getArtefact_3004Text(view);
-		case TraceLinkTargetsEditPart.VISUAL_ID:
-			return getTraceLinkTargets_4002Text(view);
-		case TransformationEditPart.VISUAL_ID:
-			return getTransformation_3003Text(view);
-		case ArtefactEditPart.VISUAL_ID:
-			return getArtefact_3001Text(view);
 		case TraceLinkSourcesEditPart.VISUAL_ID:
 			return getTraceLinkSources_4001Text(view);
+		case DashboardEditPart.VISUAL_ID:
+			return getDashboard_2001Text(view);
+		case ArtefactEditPart.VISUAL_ID:
+			return getArtefact_3001Text(view);
+		case TraceLink2EditPart.VISUAL_ID:
+			return getTraceLink_3005Text(view);
+		case TraceLinkTargetsEditPart.VISUAL_ID:
+			return getTraceLinkTargets_4002Text(view);
+		case Artefact2EditPart.VISUAL_ID:
+			return getArtefact_3004Text(view);
+		case TraceLinkEditPart.VISUAL_ID:
+			return getTraceLink_3002Text(view);
+		case TraceEditorEditPart.VISUAL_ID:
+			return getTraceEditor_1000Text(view);
+		case TransformationEditPart.VISUAL_ID:
+			return getTransformation_3003Text(view);
 		}
 		return getUnknownElementText(view);
 	}

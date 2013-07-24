@@ -432,6 +432,8 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 			constraintFFigureTargetArtefactTypeFigure.verticalSpan = 1;
 			constraintFFigureTargetArtefactTypeFigure.grabExcessHorizontalSpace = false;
 			constraintFFigureTargetArtefactTypeFigure.grabExcessVerticalSpace = false;
+			constraintFFigureTargetArtefactTypeFigure.widthHint = 120;
+			constraintFFigureTargetArtefactTypeFigure.heightHint = 20;
 			targetArtefactFigureInt0.add(fFigureTargetArtefactTypeFigure,
 					constraintFFigureTargetArtefactTypeFigure);
 

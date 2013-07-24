@@ -402,8 +402,6 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 			fFigureTraceLinkNameFigure = new WrappingLabel();
 
 			fFigureTraceLinkNameFigure.setText("<...>");
-			fFigureTraceLinkNameFigure
-					.setBackgroundColor(ColorConstants.yellow);
 
 			fFigureTraceLinkNameFigure.setFont(FFIGURETRACELINKNAMEFIGURE_FONT);
 
@@ -451,6 +449,8 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 			constraintFFigureTraceLinkTypeFigure.verticalSpan = 1;
 			constraintFFigureTraceLinkTypeFigure.grabExcessHorizontalSpace = false;
 			constraintFFigureTraceLinkTypeFigure.grabExcessVerticalSpace = false;
+			constraintFFigureTraceLinkTypeFigure.widthHint = 105;
+			constraintFFigureTraceLinkTypeFigure.heightHint = 20;
 			traceLinkFigureInt0.add(fFigureTraceLinkTypeFigure,
 					constraintFFigureTraceLinkTypeFigure);
 
