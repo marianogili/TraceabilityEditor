@@ -150,6 +150,8 @@
       <accessors
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0/@children.1"/>
       <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.0/@children.3"/>
+      <accessors
           figure="//@figures.0/@descriptors.1/@actualFigure"/>
     </descriptors>
     <descriptors
@@ -219,7 +221,11 @@
               text=" ">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
-                verticalAlignment="END"/>
+                verticalAlignment="END">
+              <sizeHint
+                  dx="120"
+                  dy="20"/>
+            </layoutData>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 faceName=""
@@ -244,7 +250,11 @@
               text=" ">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
-                verticalAlignment="END"/>
+                verticalAlignment="END">
+              <sizeHint
+                  dx="120"
+                  dy="20"/>
+            </layoutData>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 faceName=""
@@ -304,7 +314,11 @@
               text=" ">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
-                verticalAlignment="END"/>
+                verticalAlignment="END">
+              <sizeHint
+                  dx="120"
+                  dy="20"/>
+            </layoutData>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 faceName=""
@@ -370,7 +384,7 @@
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
           <preferredSize
-              dx="300"
+              dx="250"
               dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
@@ -396,7 +410,7 @@
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
             <preferredSize
-                dx="290"
+                dx="240"
                 dy="960"/>
           </children>
         </children>
@@ -470,7 +484,7 @@
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
           <preferredSize
-              dx="300"
+              dx="250"
               dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
@@ -496,7 +510,7 @@
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
             <preferredSize
-                dx="290"
+                dx="240"
                 dy="960"/>
           </children>
         </children>
@@ -583,6 +597,16 @@
       elementIcon="false"
       accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels
+      name="TraceLinkType"
+      figure="TraceLinkFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <labels
+      name="SourceArtefactType"
+      figure="SourceArtefactFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+  <labels
       name="SourceArtefactName"
       figure="SourceArtefactFigure"
       elementIcon="false"
@@ -592,4 +616,9 @@
       figure="TargetArtefactFigure"
       elementIcon="false"
       accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels
+      name="TargetArtefactType"
+      figure="TargetArtefactFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.5/@accessors.1"/>
 </gmfgraph:Canvas>

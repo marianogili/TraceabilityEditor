@@ -33,6 +33,14 @@
             <editableFeatures
                 href="TraceEditor.ecore#//NamedElement/name"/>
           </labelMappings>
+          <labelMappings
+              xsi:type="gmfmap:ExpressionLabelMapping"
+              readOnly="true">
+            <diagramLabel
+                href="TraceEditor.gmfgraph#SourceArtefactType"/>
+            <viewExpression
+                body="if self.type.oclIsUndefined() then '&lt;&lt; sin tipo >>' else self.type.name endif"/>
+          </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
               href="TraceEditor.gmftool#//@palette/@tools.0/@tools.2"/>
@@ -55,6 +63,14 @@
                 href="TraceEditor.ecore#//NamedElement/name"/>
             <editableFeatures
                 href="TraceEditor.ecore#//NamedElement/name"/>
+          </labelMappings>
+          <labelMappings
+              xsi:type="gmfmap:ExpressionLabelMapping"
+              readOnly="true">
+            <diagramLabel
+                href="TraceEditor.gmfgraph#TraceLinkType"/>
+            <viewExpression
+                body="if self.type.oclIsUndefined() then '&lt;&lt; sin tipo >>' else self.type.name endif"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
@@ -112,6 +128,14 @@
                 href="TraceEditor.ecore#//NamedElement/name"/>
             <editableFeatures
                 href="TraceEditor.ecore#//NamedElement/name"/>
+          </labelMappings>
+          <labelMappings
+              xsi:type="gmfmap:ExpressionLabelMapping"
+              readOnly="true">
+            <diagramLabel
+                href="TraceEditor.gmfgraph#TargetArtefactType"/>
+            <viewExpression
+                body="if self.type.oclIsUndefined() then '&lt;&lt; sin tipo >>' else self.type.name endif"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"

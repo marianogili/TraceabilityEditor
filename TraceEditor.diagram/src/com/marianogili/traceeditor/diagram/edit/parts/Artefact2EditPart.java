@@ -129,6 +129,11 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 					.getFigureTargetArtefactNameFigure());
 			return true;
 		}
+		if (childEditPart instanceof WrappingLabel4EditPart) {
+			((WrappingLabel4EditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureTargetArtefactTypeFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -137,6 +142,9 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof ArtefactName2EditPart) {
+			return true;
+		}
+		if (childEditPart instanceof WrappingLabel4EditPart) {
 			return true;
 		}
 		return false;
@@ -386,6 +394,8 @@ public class Artefact2EditPart extends ShapeNodeEditPart {
 			constraintFFigureTargetArtefactNameFigure.verticalSpan = 1;
 			constraintFFigureTargetArtefactNameFigure.grabExcessHorizontalSpace = false;
 			constraintFFigureTargetArtefactNameFigure.grabExcessVerticalSpace = false;
+			constraintFFigureTargetArtefactNameFigure.widthHint = 120;
+			constraintFFigureTargetArtefactNameFigure.heightHint = 20;
 			targetArtefactFigureInt0.add(fFigureTargetArtefactNameFigure,
 					constraintFFigureTargetArtefactNameFigure);
 

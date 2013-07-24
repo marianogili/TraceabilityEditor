@@ -129,6 +129,11 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 					.getFigureTraceLinkNameFigure());
 			return true;
 		}
+		if (childEditPart instanceof WrappingLabel3EditPart) {
+			((WrappingLabel3EditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureTraceLinkTypeFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -137,6 +142,9 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof TraceLinkName2EditPart) {
+			return true;
+		}
+		if (childEditPart instanceof WrappingLabel3EditPart) {
 			return true;
 		}
 		return false;
@@ -335,6 +343,10 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureTraceLinkTypeFigure;
+		/**
+		 * @generated
+		 */
 		private RectangleFigure fFigureMarginTraceLink;
 
 		/**
@@ -425,22 +437,22 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 			traceLinkFigureInt0.add(labelTraceLinkType1,
 					constraintLabelTraceLinkType1);
 
-			WrappingLabel traceLinkTypeFigure1 = new WrappingLabel();
+			fFigureTraceLinkTypeFigure = new WrappingLabel();
 
-			traceLinkTypeFigure1.setText("");
+			fFigureTraceLinkTypeFigure.setText("");
 
-			traceLinkTypeFigure1.setFont(TRACELINKTYPEFIGURE1_FONT);
+			fFigureTraceLinkTypeFigure.setFont(FFIGURETRACELINKTYPEFIGURE_FONT);
 
-			GridData constraintTraceLinkTypeFigure1 = new GridData();
-			constraintTraceLinkTypeFigure1.verticalAlignment = GridData.END;
-			constraintTraceLinkTypeFigure1.horizontalAlignment = GridData.CENTER;
-			constraintTraceLinkTypeFigure1.horizontalIndent = 0;
-			constraintTraceLinkTypeFigure1.horizontalSpan = 1;
-			constraintTraceLinkTypeFigure1.verticalSpan = 1;
-			constraintTraceLinkTypeFigure1.grabExcessHorizontalSpace = false;
-			constraintTraceLinkTypeFigure1.grabExcessVerticalSpace = false;
-			traceLinkFigureInt0.add(traceLinkTypeFigure1,
-					constraintTraceLinkTypeFigure1);
+			GridData constraintFFigureTraceLinkTypeFigure = new GridData();
+			constraintFFigureTraceLinkTypeFigure.verticalAlignment = GridData.END;
+			constraintFFigureTraceLinkTypeFigure.horizontalAlignment = GridData.CENTER;
+			constraintFFigureTraceLinkTypeFigure.horizontalIndent = 0;
+			constraintFFigureTraceLinkTypeFigure.horizontalSpan = 1;
+			constraintFFigureTraceLinkTypeFigure.verticalSpan = 1;
+			constraintFFigureTraceLinkTypeFigure.grabExcessHorizontalSpace = false;
+			constraintFFigureTraceLinkTypeFigure.grabExcessVerticalSpace = false;
+			traceLinkFigureInt0.add(fFigureTraceLinkTypeFigure,
+					constraintFFigureTraceLinkTypeFigure);
 
 		}
 
@@ -449,6 +461,13 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureTraceLinkNameFigure() {
 			return fFigureTraceLinkNameFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTraceLinkTypeFigure() {
+			return fFigureTraceLinkTypeFigure;
 		}
 
 		/**
@@ -484,7 +503,7 @@ public class TraceLink2EditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Font TRACELINKTYPEFIGURE1_FONT = new Font(
+	static final Font FFIGURETRACELINKTYPEFIGURE_FONT = new Font(
 			Display.getCurrent(), Display.getDefault().getSystemFont()
 					.getFontData()[0].getName(), 9, SWT.BOLD);
 

@@ -34,11 +34,17 @@ public class TraceEditorEditPartFactory implements EditPartFactory {
 			case ArtefactNameEditPart.VISUAL_ID:
 				return new ArtefactNameEditPart(view);
 
+			case WrappingLabelEditPart.VISUAL_ID:
+				return new WrappingLabelEditPart(view);
+
 			case TraceLinkEditPart.VISUAL_ID:
 				return new TraceLinkEditPart(view);
 
 			case TraceLinkNameEditPart.VISUAL_ID:
 				return new TraceLinkNameEditPart(view);
+
+			case WrappingLabel2EditPart.VISUAL_ID:
+				return new WrappingLabel2EditPart(view);
 
 			case TransformationEditPart.VISUAL_ID:
 				return new TransformationEditPart(view);
@@ -52,11 +58,17 @@ public class TraceEditorEditPartFactory implements EditPartFactory {
 			case TraceLinkName2EditPart.VISUAL_ID:
 				return new TraceLinkName2EditPart(view);
 
+			case WrappingLabel3EditPart.VISUAL_ID:
+				return new WrappingLabel3EditPart(view);
+
 			case Artefact2EditPart.VISUAL_ID:
 				return new Artefact2EditPart(view);
 
 			case ArtefactName2EditPart.VISUAL_ID:
 				return new ArtefactName2EditPart(view);
+
+			case WrappingLabel4EditPart.VISUAL_ID:
+				return new WrappingLabel4EditPart(view);
 
 			case DashboardSourceArtefactCompartmentEditPart.VISUAL_ID:
 				return new DashboardSourceArtefactCompartmentEditPart(view);

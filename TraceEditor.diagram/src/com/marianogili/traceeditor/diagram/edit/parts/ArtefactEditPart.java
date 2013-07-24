@@ -129,6 +129,11 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 					.getFigureSourceArtefactNameFigure());
 			return true;
 		}
+		if (childEditPart instanceof WrappingLabelEditPart) {
+			((WrappingLabelEditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigureSourceArtefactTypeFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -137,6 +142,9 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof ArtefactNameEditPart) {
+			return true;
+		}
+		if (childEditPart instanceof WrappingLabelEditPart) {
 			return true;
 		}
 		return false;
@@ -388,6 +396,8 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 			constraintFFigureSourceArtefactNameFigure.verticalSpan = 1;
 			constraintFFigureSourceArtefactNameFigure.grabExcessHorizontalSpace = false;
 			constraintFFigureSourceArtefactNameFigure.grabExcessVerticalSpace = false;
+			constraintFFigureSourceArtefactNameFigure.widthHint = 120;
+			constraintFFigureSourceArtefactNameFigure.heightHint = 20;
 			fFigureSourceArtefactFigureInt.add(fFigureSourceArtefactNameFigure,
 					constraintFFigureSourceArtefactNameFigure);
 
@@ -424,6 +434,8 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 			constraintFFigureSourceArtefactTypeFigure.verticalSpan = 1;
 			constraintFFigureSourceArtefactTypeFigure.grabExcessHorizontalSpace = false;
 			constraintFFigureSourceArtefactTypeFigure.grabExcessVerticalSpace = false;
+			constraintFFigureSourceArtefactTypeFigure.widthHint = 120;
+			constraintFFigureSourceArtefactTypeFigure.heightHint = 20;
 			fFigureSourceArtefactFigureInt.add(fFigureSourceArtefactTypeFigure,
 					constraintFFigureSourceArtefactTypeFigure);
 

@@ -59,6 +59,10 @@ import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkTargetsEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationNameEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TransformationTransformationCompartmentEditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.WrappingLabel2EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.WrappingLabel3EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.WrappingLabel4EditPart;
+import com.marianogili.traceeditor.diagram.edit.parts.WrappingLabelEditPart;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
 
 /**
@@ -373,6 +377,9 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		Node label5001 = createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(ArtefactNameEditPart.VISUAL_ID));
+		Node label5006 = createLabel(node,
+				TraceEditorVisualIDRegistry
+						.getType(WrappingLabelEditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -417,6 +424,9 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		Node label5002 = createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(TraceLinkNameEditPart.VISUAL_ID));
+		Node label5007 = createLabel(node,
+				TraceEditorVisualIDRegistry
+						.getType(WrappingLabel2EditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -504,6 +514,9 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		Node label5005 = createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(TraceLinkName2EditPart.VISUAL_ID));
+		Node label5008 = createLabel(node,
+				TraceEditorVisualIDRegistry
+						.getType(WrappingLabel3EditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -548,6 +561,9 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 		Node label5004 = createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(ArtefactName2EditPart.VISUAL_ID));
+		Node label5009 = createLabel(node,
+				TraceEditorVisualIDRegistry
+						.getType(WrappingLabel4EditPart.VISUAL_ID));
 		return node;
 	}
 

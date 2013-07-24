@@ -21,6 +21,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 import com.marianogili.traceeditor.diagram.edit.policies.TraceEditorBaseItemSemanticEditPolicy;
+import com.marianogili.traceeditor.diagram.expressions.TraceEditorOCLFactory;
 import com.marianogili.traceeditor.diagram.providers.ElementInitializers;
 import com.marianogili.traceeditor.provider.TraceeditorItemProviderAdapterFactory;
 
@@ -68,6 +69,11 @@ public class TraceEditorDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
+	private TraceEditorOCLFactory oclFactory;
+
+	/**
+	 * @generated
+	 */
 	public TraceEditorDiagramEditorPlugin() {
 	}
 
@@ -90,6 +96,7 @@ public class TraceEditorDiagramEditorPlugin extends AbstractUIPlugin {
 		adapterFactory = null;
 		linkConstraints = null;
 		initializers = null;
+		oclFactory = null;
 		instance = null;
 		super.stop(context);
 	}
@@ -233,6 +240,20 @@ public class TraceEditorDiagramEditorPlugin extends AbstractUIPlugin {
 	 */
 	public void setElementInitializers(ElementInitializers i) {
 		this.initializers = i;
+	}
+
+	/**
+	 * @generated
+	 */
+	public TraceEditorOCLFactory getTraceEditorOCLFactory() {
+		return oclFactory;
+	}
+
+	/**
+	 * @generated
+	 */
+	public void setTraceEditorOCLFactory(TraceEditorOCLFactory f) {
+		this.oclFactory = f;
 	}
 
 	/**

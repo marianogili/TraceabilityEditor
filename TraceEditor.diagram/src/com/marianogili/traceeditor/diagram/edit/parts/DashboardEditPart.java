@@ -400,7 +400,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			leftRectangle0.setForegroundColor(ColorConstants.gray);
 			leftRectangle0.setBackgroundColor(ColorConstants.white);
 			leftRectangle0.setPreferredSize(new Dimension(getMapMode().DPtoLP(
-					300), getMapMode().DPtoLP(1000)));
+					250), getMapMode().DPtoLP(1000)));
 
 			this.add(leftRectangle0);
 
@@ -431,7 +431,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			fFigureLeftRectangleCompartment
 					.setBackgroundColor(ColorConstants.orange);
 			fFigureLeftRectangleCompartment.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(290), getMapMode().DPtoLP(960)));
+					getMapMode().DPtoLP(240), getMapMode().DPtoLP(960)));
 
 			leftRectangle0.add(fFigureLeftRectangleCompartment);
 
@@ -534,7 +534,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			rightRectangle0.setForegroundColor(ColorConstants.gray);
 			rightRectangle0.setBackgroundColor(ColorConstants.white);
 			rightRectangle0.setPreferredSize(new Dimension(getMapMode().DPtoLP(
-					300), getMapMode().DPtoLP(1000)));
+					250), getMapMode().DPtoLP(1000)));
 
 			this.add(rightRectangle0);
 
@@ -565,7 +565,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			fFigureRightRectangleCompartment
 					.setBackgroundColor(ColorConstants.orange);
 			fFigureRightRectangleCompartment.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(290), getMapMode().DPtoLP(960)));
+					getMapMode().DPtoLP(240), getMapMode().DPtoLP(960)));
 
 			rightRectangle0.add(fFigureRightRectangleCompartment);
 
