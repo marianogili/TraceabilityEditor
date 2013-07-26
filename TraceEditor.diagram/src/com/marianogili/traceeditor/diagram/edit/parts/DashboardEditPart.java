@@ -399,10 +399,16 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 					.DPtoLP(8), getMapMode().DPtoLP(8)));
 			leftRectangle0.setForegroundColor(ColorConstants.gray);
 			leftRectangle0.setBackgroundColor(ColorConstants.white);
-			leftRectangle0.setPreferredSize(new Dimension(getMapMode().DPtoLP(
-					250), getMapMode().DPtoLP(1000)));
 
-			this.add(leftRectangle0);
+			GridData constraintLeftRectangle0 = new GridData();
+			constraintLeftRectangle0.verticalAlignment = GridData.BEGINNING;
+			constraintLeftRectangle0.horizontalAlignment = GridData.CENTER;
+			constraintLeftRectangle0.horizontalIndent = 0;
+			constraintLeftRectangle0.horizontalSpan = 0;
+			constraintLeftRectangle0.verticalSpan = 0;
+			constraintLeftRectangle0.grabExcessHorizontalSpace = false;
+			constraintLeftRectangle0.grabExcessVerticalSpace = false;
+			this.add(leftRectangle0, constraintLeftRectangle0);
 
 			GridLayout layoutLeftRectangle0 = new GridLayout();
 			layoutLeftRectangle0.numColumns = 1;
@@ -430,8 +436,6 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 
 			fFigureLeftRectangleCompartment
 					.setBackgroundColor(ColorConstants.orange);
-			fFigureLeftRectangleCompartment.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(240), getMapMode().DPtoLP(960)));
 
 			leftRectangle0.add(fFigureLeftRectangleCompartment);
 
@@ -455,10 +459,16 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 					.DPtoLP(8), getMapMode().DPtoLP(8)));
 			centralRectangle0.setForegroundColor(ColorConstants.gray);
 			centralRectangle0.setBackgroundColor(ColorConstants.white);
-			centralRectangle0.setPreferredSize(new Dimension(getMapMode()
-					.DPtoLP(480), getMapMode().DPtoLP(1000)));
 
-			this.add(centralRectangle0);
+			GridData constraintCentralRectangle0 = new GridData();
+			constraintCentralRectangle0.verticalAlignment = GridData.BEGINNING;
+			constraintCentralRectangle0.horizontalAlignment = GridData.CENTER;
+			constraintCentralRectangle0.horizontalIndent = 0;
+			constraintCentralRectangle0.horizontalSpan = 0;
+			constraintCentralRectangle0.verticalSpan = 0;
+			constraintCentralRectangle0.grabExcessHorizontalSpace = false;
+			constraintCentralRectangle0.grabExcessVerticalSpace = false;
+			this.add(centralRectangle0, constraintCentralRectangle0);
 
 			GridLayout layoutCentralRectangle0 = new GridLayout();
 			layoutCentralRectangle0.numColumns = 1;
@@ -488,8 +498,6 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 					.setForegroundColor(ColorConstants.gray);
 			centralRectangleCompartment1
 					.setBackgroundColor(ColorConstants.orange);
-			centralRectangleCompartment1.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(470), getMapMode().DPtoLP(960)));
 
 			centralRectangle0.add(centralRectangleCompartment1);
 
@@ -508,24 +516,36 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			fFigureCentralRectangleCompartmentTranformations.setOutline(false);
 			fFigureCentralRectangleCompartmentTranformations.setFill(false);
 			fFigureCentralRectangleCompartmentTranformations.setOpaque(false);
-			fFigureCentralRectangleCompartmentTranformations
-					.setPreferredSize(new Dimension(getMapMode().DPtoLP(275),
-							getMapMode().DPtoLP(960)));
 
-			centralRectangleCompartment1
-					.add(fFigureCentralRectangleCompartmentTranformations);
+			GridData constraintFFigureCentralRectangleCompartmentTranformations = new GridData();
+			constraintFFigureCentralRectangleCompartmentTranformations.verticalAlignment = GridData.BEGINNING;
+			constraintFFigureCentralRectangleCompartmentTranformations.horizontalAlignment = GridData.CENTER;
+			constraintFFigureCentralRectangleCompartmentTranformations.horizontalIndent = 0;
+			constraintFFigureCentralRectangleCompartmentTranformations.horizontalSpan = 0;
+			constraintFFigureCentralRectangleCompartmentTranformations.verticalSpan = 0;
+			constraintFFigureCentralRectangleCompartmentTranformations.grabExcessHorizontalSpace = false;
+			constraintFFigureCentralRectangleCompartmentTranformations.grabExcessVerticalSpace = false;
+			centralRectangleCompartment1.add(
+					fFigureCentralRectangleCompartmentTranformations,
+					constraintFFigureCentralRectangleCompartmentTranformations);
 
 			fFigureCentralRectangleCompartmentTraceLinks = new RectangleFigure();
 
 			fFigureCentralRectangleCompartmentTraceLinks.setOutline(false);
 			fFigureCentralRectangleCompartmentTraceLinks.setFill(false);
 			fFigureCentralRectangleCompartmentTraceLinks.setOpaque(false);
-			fFigureCentralRectangleCompartmentTraceLinks
-					.setPreferredSize(new Dimension(getMapMode().DPtoLP(195),
-							getMapMode().DPtoLP(960)));
 
-			centralRectangleCompartment1
-					.add(fFigureCentralRectangleCompartmentTraceLinks);
+			GridData constraintFFigureCentralRectangleCompartmentTraceLinks = new GridData();
+			constraintFFigureCentralRectangleCompartmentTraceLinks.verticalAlignment = GridData.BEGINNING;
+			constraintFFigureCentralRectangleCompartmentTraceLinks.horizontalAlignment = GridData.CENTER;
+			constraintFFigureCentralRectangleCompartmentTraceLinks.horizontalIndent = 0;
+			constraintFFigureCentralRectangleCompartmentTraceLinks.horizontalSpan = 0;
+			constraintFFigureCentralRectangleCompartmentTraceLinks.verticalSpan = 0;
+			constraintFFigureCentralRectangleCompartmentTraceLinks.grabExcessHorizontalSpace = false;
+			constraintFFigureCentralRectangleCompartmentTraceLinks.grabExcessVerticalSpace = false;
+			centralRectangleCompartment1.add(
+					fFigureCentralRectangleCompartmentTraceLinks,
+					constraintFFigureCentralRectangleCompartmentTraceLinks);
 
 			RoundedRectangle rightRectangle0 = new RoundedRectangle();
 
@@ -533,10 +553,16 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 					.DPtoLP(8), getMapMode().DPtoLP(8)));
 			rightRectangle0.setForegroundColor(ColorConstants.gray);
 			rightRectangle0.setBackgroundColor(ColorConstants.white);
-			rightRectangle0.setPreferredSize(new Dimension(getMapMode().DPtoLP(
-					250), getMapMode().DPtoLP(1000)));
 
-			this.add(rightRectangle0);
+			GridData constraintRightRectangle0 = new GridData();
+			constraintRightRectangle0.verticalAlignment = GridData.BEGINNING;
+			constraintRightRectangle0.horizontalAlignment = GridData.CENTER;
+			constraintRightRectangle0.horizontalIndent = 0;
+			constraintRightRectangle0.horizontalSpan = 0;
+			constraintRightRectangle0.verticalSpan = 0;
+			constraintRightRectangle0.grabExcessHorizontalSpace = false;
+			constraintRightRectangle0.grabExcessVerticalSpace = false;
+			this.add(rightRectangle0, constraintRightRectangle0);
 
 			GridLayout layoutRightRectangle0 = new GridLayout();
 			layoutRightRectangle0.numColumns = 1;
@@ -564,8 +590,6 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 
 			fFigureRightRectangleCompartment
 					.setBackgroundColor(ColorConstants.orange);
-			fFigureRightRectangleCompartment.setPreferredSize(new Dimension(
-					getMapMode().DPtoLP(240), getMapMode().DPtoLP(960)));
 
 			rightRectangle0.add(fFigureRightRectangleCompartment);
 

@@ -416,6 +416,11 @@
         <children
             xsi:type="gmfgraph:RoundedRectangle"
             name="LeftRectangle">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              verticalAlignment="BEGINNING"
+              verticalSpan="0"
+              horizontalSpan="0"/>
           <layout
               xsi:type="gmfgraph:GridLayout"/>
           <foregroundColor
@@ -423,9 +428,6 @@
               value="gray"/>
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
-          <preferredSize
-              dx="250"
-              dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
               name="LeftRectangleTitle"
@@ -449,14 +451,16 @@
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
-            <preferredSize
-                dx="240"
-                dy="960"/>
           </children>
         </children>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
             name="CentralRectangle">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              verticalAlignment="BEGINNING"
+              verticalSpan="0"
+              horizontalSpan="0"/>
           <layout
               xsi:type="gmfgraph:GridLayout"/>
           <foregroundColor
@@ -464,9 +468,6 @@
               value="gray"/>
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
-          <preferredSize
-              dx="480"
-              dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
               name="CentralRectangleTitle"
@@ -494,28 +495,34 @@
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
-            <preferredSize
-                dx="470"
-                dy="960"/>
             <children
                 xsi:type="gmfgraph:InvisibleRectangle"
                 name="CentralRectangleCompartmentTranformations">
-              <preferredSize
-                  dx="275"
-                  dy="960"/>
+              <layoutData
+                  xsi:type="gmfgraph:GridLayoutData"
+                  verticalAlignment="BEGINNING"
+                  verticalSpan="0"
+                  horizontalSpan="0"/>
             </children>
             <children
                 xsi:type="gmfgraph:InvisibleRectangle"
                 name="CentralRectangleCompartmentTraceLinks">
-              <preferredSize
-                  dx="195"
-                  dy="960"/>
+              <layoutData
+                  xsi:type="gmfgraph:GridLayoutData"
+                  verticalAlignment="BEGINNING"
+                  verticalSpan="0"
+                  horizontalSpan="0"/>
             </children>
           </children>
         </children>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
             name="RightRectangle">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              verticalAlignment="BEGINNING"
+              verticalSpan="0"
+              horizontalSpan="0"/>
           <layout
               xsi:type="gmfgraph:GridLayout"/>
           <foregroundColor
@@ -523,9 +530,6 @@
               value="gray"/>
           <backgroundColor
               xsi:type="gmfgraph:ConstantColor"/>
-          <preferredSize
-              dx="250"
-              dy="1000"/>
           <children
               xsi:type="gmfgraph:Label"
               name="RightRectangleTitle"
@@ -549,9 +553,6 @@
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
-            <preferredSize
-                dx="240"
-                dy="960"/>
           </children>
         </children>
       </actualFigure>
