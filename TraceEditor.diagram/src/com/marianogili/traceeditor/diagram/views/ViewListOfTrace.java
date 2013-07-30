@@ -80,6 +80,7 @@ public class ViewListOfTrace extends ViewPart {
 	}
 	
 	private IPartListener partListener = new IPartListener() {
+		
 		public void partOpened(IWorkbenchPart part) {
 			if (!(part instanceof TraceEditorDiagramEditor))
 				return;
@@ -141,20 +142,17 @@ public class ViewListOfTrace extends ViewPart {
 
 		@Override
 		public void partActivated(IWorkbenchPart part) {
-			// TODO Auto-generated method stub
-			
+			this.partOpened(part);
 		}
 
 		@Override
 		public void partBroughtToTop(IWorkbenchPart part) {
-			// TODO Auto-generated method stub
-			
+			this.partOpened(part);
 		}
 
 		@Override
 		public void partDeactivated(IWorkbenchPart part) {
-			// TODO Auto-generated method stub
-			
+			this.partClosed(part);
 		}
 	};
 
@@ -171,7 +169,6 @@ public class ViewListOfTrace extends ViewPart {
 
 		this.armarTabla();
 		
-		// TODO: ver tema adapterFactory 
 		tableViewer.setContentProvider(new AdapterFactoryContentProvider(
 				adapterFactory) {
 			private void TraceLinksTreeToList (ArrayList<Object> elements, List<TraceLink> traceLinks, Transformation aTransformation) {
@@ -226,17 +223,6 @@ public class ViewListOfTrace extends ViewPart {
 				}
 				return new Object[0];
 			}
-
-//			public void notifyChanged(Notification notification) {
-//				switch (notification.getEventType()) {
-//				case Notification.ADD:
-//				case Notification.ADD_MANY:
-//					if (notification.getFeature() != TraceeditorPackage.eINSTANCE
-//							.getTransformation_TraceLinks())
-//						return;
-//				}
-//				super.notifyChanged(notification);
-//			}
 		});
 		
 		getSite().getWorkbenchWindow().getPartService().addPartListener(partListener);			
