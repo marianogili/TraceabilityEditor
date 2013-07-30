@@ -1,7 +1,6 @@
 package com.marianogili.traceeditor.diagram.edit.parts;
 
 import org.eclipse.draw2d.ColorConstants;
-import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
@@ -126,7 +125,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof DashboardSourceArtefactCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
-					.getFigureLeftRectangleCompartment();
+					.getFigureRectangleSourcesCompartment();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.add(((DashboardSourceArtefactCompartmentEditPart) childEditPart)
 					.getFigure());
@@ -142,7 +141,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		}
 		if (childEditPart instanceof DashboardTargetArtefactCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
-					.getFigureRightRectangleCompartment();
+					.getFigureRectangleTargetsCompartment();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.add(((DashboardTargetArtefactCompartmentEditPart) childEditPart)
 					.getFigure());
@@ -165,7 +164,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof DashboardSourceArtefactCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
-					.getFigureLeftRectangleCompartment();
+					.getFigureRectangleSourcesCompartment();
 			pane.remove(((DashboardSourceArtefactCompartmentEditPart) childEditPart)
 					.getFigure());
 			return true;
@@ -179,7 +178,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		}
 		if (childEditPart instanceof DashboardTargetArtefactCompartmentEditPart) {
 			IFigure pane = getPrimaryShape()
-					.getFigureRightRectangleCompartment();
+					.getFigureRectangleTargetsCompartment();
 			pane.remove(((DashboardTargetArtefactCompartmentEditPart) childEditPart)
 					.getFigure());
 			return true;
@@ -219,14 +218,14 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
 		if (editPart instanceof DashboardSourceArtefactCompartmentEditPart) {
-			return getPrimaryShape().getFigureLeftRectangleCompartment();
+			return getPrimaryShape().getFigureRectangleSourcesCompartment();
 		}
 		if (editPart instanceof DashboardTraceLinkCompartmentEditPart) {
 			return getPrimaryShape()
 					.getFigureCentralRectangleCompartmentTraceLinks();
 		}
 		if (editPart instanceof DashboardTargetArtefactCompartmentEditPart) {
-			return getPrimaryShape().getFigureRightRectangleCompartment();
+			return getPrimaryShape().getFigureRectangleTargetsCompartment();
 		}
 		if (editPart instanceof DashboardDashBoardTransformationCompartmentEditPart) {
 			return getPrimaryShape()
@@ -367,11 +366,11 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private RectangleFigure fFigureLeftRectangleCompartment;
+		private RectangleFigure fFigureRectangleSourcesCompartment;
 		/**
 		 * @generated
 		 */
-		private RectangleFigure fFigureRightRectangleCompartment;
+		private RectangleFigure fFigureRectangleTargetsCompartment;
 
 		/**
 		 * @generated
@@ -432,26 +431,58 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			leftRectangle0.add(leftRectangleTitle1,
 					constraintLeftRectangleTitle1);
 
-			fFigureLeftRectangleCompartment = new RectangleFigure();
+			RectangleFigure leftRectangleCompartment1 = new RectangleFigure();
 
-			fFigureLeftRectangleCompartment
-					.setBackgroundColor(ColorConstants.orange);
+			leftRectangleCompartment1.setBackgroundColor(ColorConstants.orange);
 
-			leftRectangle0.add(fFigureLeftRectangleCompartment);
+			GridData constraintLeftRectangleCompartment1 = new GridData();
+			constraintLeftRectangleCompartment1.verticalAlignment = GridData.BEGINNING;
+			constraintLeftRectangleCompartment1.horizontalAlignment = GridData.CENTER;
+			constraintLeftRectangleCompartment1.horizontalIndent = 0;
+			constraintLeftRectangleCompartment1.horizontalSpan = 0;
+			constraintLeftRectangleCompartment1.verticalSpan = 0;
+			constraintLeftRectangleCompartment1.grabExcessHorizontalSpace = false;
+			constraintLeftRectangleCompartment1.grabExcessVerticalSpace = false;
+			leftRectangle0.add(leftRectangleCompartment1,
+					constraintLeftRectangleCompartment1);
 
-			FlowLayout layoutFFigureLeftRectangleCompartment = new FlowLayout();
-			layoutFFigureLeftRectangleCompartment.setStretchMinorAxis(false);
-			layoutFFigureLeftRectangleCompartment
-					.setMinorAlignment(FlowLayout.ALIGN_CENTER);
+			GridLayout layoutLeftRectangleCompartment1 = new GridLayout();
+			layoutLeftRectangleCompartment1.numColumns = 1;
+			layoutLeftRectangleCompartment1.makeColumnsEqualWidth = true;
+			layoutLeftRectangleCompartment1.horizontalSpacing = 0;
+			layoutLeftRectangleCompartment1.verticalSpacing = 0;
+			layoutLeftRectangleCompartment1.marginWidth = 0;
+			layoutLeftRectangleCompartment1.marginHeight = 0;
+			leftRectangleCompartment1
+					.setLayoutManager(layoutLeftRectangleCompartment1);
 
-			layoutFFigureLeftRectangleCompartment
-					.setMajorAlignment(FlowLayout.ALIGN_CENTER);
-			layoutFFigureLeftRectangleCompartment.setMajorSpacing(0);
-			layoutFFigureLeftRectangleCompartment.setMinorSpacing(0);
-			layoutFFigureLeftRectangleCompartment.setHorizontal(true);
+			fFigureRectangleSourcesCompartment = new RectangleFigure();
 
-			fFigureLeftRectangleCompartment
-					.setLayoutManager(layoutFFigureLeftRectangleCompartment);
+			fFigureRectangleSourcesCompartment.setOutline(false);
+			fFigureRectangleSourcesCompartment.setFill(false);
+			fFigureRectangleSourcesCompartment.setOpaque(false);
+
+			GridData constraintFFigureRectangleSourcesCompartment = new GridData();
+			constraintFFigureRectangleSourcesCompartment.verticalAlignment = GridData.BEGINNING;
+			constraintFFigureRectangleSourcesCompartment.horizontalAlignment = GridData.CENTER;
+			constraintFFigureRectangleSourcesCompartment.horizontalIndent = 0;
+			constraintFFigureRectangleSourcesCompartment.horizontalSpan = 0;
+			constraintFFigureRectangleSourcesCompartment.verticalSpan = 0;
+			constraintFFigureRectangleSourcesCompartment.grabExcessHorizontalSpace = false;
+			constraintFFigureRectangleSourcesCompartment.grabExcessVerticalSpace = false;
+			leftRectangleCompartment1.add(fFigureRectangleSourcesCompartment,
+					constraintFFigureRectangleSourcesCompartment);
+
+			RectangleFigure tamaniominimo2 = new RectangleFigure();
+
+			tamaniominimo2.setOutline(false);
+			tamaniominimo2.setFill(false);
+			tamaniominimo2.setOpaque(false);
+			tamaniominimo2.setBackgroundColor(ColorConstants.yellow);
+			tamaniominimo2.setPreferredSize(new Dimension(getMapMode().DPtoLP(
+					240), getMapMode().DPtoLP(25)));
+
+			leftRectangleCompartment1.add(tamaniominimo2);
 
 			RoundedRectangle centralRectangle0 = new RoundedRectangle();
 
@@ -547,6 +578,28 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 					fFigureCentralRectangleCompartmentTraceLinks,
 					constraintFFigureCentralRectangleCompartmentTraceLinks);
 
+			RectangleFigure tamaniominimo212 = new RectangleFigure();
+
+			tamaniominimo212.setOutline(false);
+			tamaniominimo212.setFill(false);
+			tamaniominimo212.setOpaque(false);
+			tamaniominimo212.setBackgroundColor(ColorConstants.yellow);
+			tamaniominimo212.setPreferredSize(new Dimension(getMapMode()
+					.DPtoLP(265), getMapMode().DPtoLP(25)));
+
+			centralRectangleCompartment1.add(tamaniominimo212);
+
+			RectangleFigure tamaniominimo222 = new RectangleFigure();
+
+			tamaniominimo222.setOutline(false);
+			tamaniominimo222.setFill(false);
+			tamaniominimo222.setOpaque(false);
+			tamaniominimo222.setBackgroundColor(ColorConstants.yellow);
+			tamaniominimo222.setPreferredSize(new Dimension(getMapMode()
+					.DPtoLP(190), getMapMode().DPtoLP(25)));
+
+			centralRectangleCompartment1.add(tamaniominimo222);
+
 			RoundedRectangle rightRectangle0 = new RoundedRectangle();
 
 			rightRectangle0.setCornerDimensions(new Dimension(getMapMode()
@@ -586,26 +639,59 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			rightRectangle0.add(rightRectangleTitle1,
 					constraintRightRectangleTitle1);
 
-			fFigureRightRectangleCompartment = new RectangleFigure();
+			RectangleFigure rightRectangleCompartment1 = new RectangleFigure();
 
-			fFigureRightRectangleCompartment
+			rightRectangleCompartment1
 					.setBackgroundColor(ColorConstants.orange);
 
-			rightRectangle0.add(fFigureRightRectangleCompartment);
+			GridData constraintRightRectangleCompartment1 = new GridData();
+			constraintRightRectangleCompartment1.verticalAlignment = GridData.BEGINNING;
+			constraintRightRectangleCompartment1.horizontalAlignment = GridData.CENTER;
+			constraintRightRectangleCompartment1.horizontalIndent = 0;
+			constraintRightRectangleCompartment1.horizontalSpan = 0;
+			constraintRightRectangleCompartment1.verticalSpan = 0;
+			constraintRightRectangleCompartment1.grabExcessHorizontalSpace = false;
+			constraintRightRectangleCompartment1.grabExcessVerticalSpace = false;
+			rightRectangle0.add(rightRectangleCompartment1,
+					constraintRightRectangleCompartment1);
 
-			FlowLayout layoutFFigureRightRectangleCompartment = new FlowLayout();
-			layoutFFigureRightRectangleCompartment.setStretchMinorAxis(false);
-			layoutFFigureRightRectangleCompartment
-					.setMinorAlignment(FlowLayout.ALIGN_CENTER);
+			GridLayout layoutRightRectangleCompartment1 = new GridLayout();
+			layoutRightRectangleCompartment1.numColumns = 1;
+			layoutRightRectangleCompartment1.makeColumnsEqualWidth = true;
+			layoutRightRectangleCompartment1.horizontalSpacing = 0;
+			layoutRightRectangleCompartment1.verticalSpacing = 0;
+			layoutRightRectangleCompartment1.marginWidth = 0;
+			layoutRightRectangleCompartment1.marginHeight = 0;
+			rightRectangleCompartment1
+					.setLayoutManager(layoutRightRectangleCompartment1);
 
-			layoutFFigureRightRectangleCompartment
-					.setMajorAlignment(FlowLayout.ALIGN_CENTER);
-			layoutFFigureRightRectangleCompartment.setMajorSpacing(0);
-			layoutFFigureRightRectangleCompartment.setMinorSpacing(0);
-			layoutFFigureRightRectangleCompartment.setHorizontal(true);
+			fFigureRectangleTargetsCompartment = new RectangleFigure();
 
-			fFigureRightRectangleCompartment
-					.setLayoutManager(layoutFFigureRightRectangleCompartment);
+			fFigureRectangleTargetsCompartment.setOutline(false);
+			fFigureRectangleTargetsCompartment.setFill(false);
+			fFigureRectangleTargetsCompartment.setOpaque(false);
+
+			GridData constraintFFigureRectangleTargetsCompartment = new GridData();
+			constraintFFigureRectangleTargetsCompartment.verticalAlignment = GridData.BEGINNING;
+			constraintFFigureRectangleTargetsCompartment.horizontalAlignment = GridData.CENTER;
+			constraintFFigureRectangleTargetsCompartment.horizontalIndent = 0;
+			constraintFFigureRectangleTargetsCompartment.horizontalSpan = 0;
+			constraintFFigureRectangleTargetsCompartment.verticalSpan = 0;
+			constraintFFigureRectangleTargetsCompartment.grabExcessHorizontalSpace = false;
+			constraintFFigureRectangleTargetsCompartment.grabExcessVerticalSpace = false;
+			rightRectangleCompartment1.add(fFigureRectangleTargetsCompartment,
+					constraintFFigureRectangleTargetsCompartment);
+
+			RectangleFigure tamaniominimo32 = new RectangleFigure();
+
+			tamaniominimo32.setOutline(false);
+			tamaniominimo32.setFill(false);
+			tamaniominimo32.setOpaque(false);
+			tamaniominimo32.setBackgroundColor(ColorConstants.yellow);
+			tamaniominimo32.setPreferredSize(new Dimension(getMapMode().DPtoLP(
+					240), getMapMode().DPtoLP(25)));
+
+			rightRectangleCompartment1.add(tamaniominimo32);
 
 		}
 
@@ -626,15 +712,15 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		public RectangleFigure getFigureLeftRectangleCompartment() {
-			return fFigureLeftRectangleCompartment;
+		public RectangleFigure getFigureRectangleSourcesCompartment() {
+			return fFigureRectangleSourcesCompartment;
 		}
 
 		/**
 		 * @generated
 		 */
-		public RectangleFigure getFigureRightRectangleCompartment() {
-			return fFigureRightRectangleCompartment;
+		public RectangleFigure getFigureRectangleTargetsCompartment() {
+			return fFigureRectangleTargetsCompartment;
 		}
 
 	}

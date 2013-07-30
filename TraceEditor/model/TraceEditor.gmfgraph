@@ -442,15 +442,38 @@
           <children
               xsi:type="gmfgraph:Rectangle"
               name="LeftRectangleCompartment">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="BEGINNING"
+                verticalSpan="0"
+                horizontalSpan="0"/>
             <layout
-                xsi:type="gmfgraph:FlowLayout"
-                majorAlignment="CENTER"
-                minorAlignment="CENTER"
-                majorSpacing="0"
-                minorSpacing="0"/>
+                xsi:type="gmfgraph:GridLayout">
+              <margins/>
+              <spacing/>
+            </layout>
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
+            <children
+                xsi:type="gmfgraph:InvisibleRectangle"
+                name="RectangleSourcesCompartment">
+              <layoutData
+                  xsi:type="gmfgraph:GridLayoutData"
+                  verticalAlignment="BEGINNING"
+                  verticalSpan="0"
+                  horizontalSpan="0"/>
+            </children>
+            <children
+                xsi:type="gmfgraph:InvisibleRectangle"
+                name="Tamaniominimo">
+              <backgroundColor
+                  xsi:type="gmfgraph:ConstantColor"
+                  value="yellow"/>
+              <preferredSize
+                  dx="240"
+                  dy="25"/>
+            </children>
           </children>
         </children>
         <children
@@ -513,6 +536,26 @@
                   verticalSpan="0"
                   horizontalSpan="0"/>
             </children>
+            <children
+                xsi:type="gmfgraph:InvisibleRectangle"
+                name="Tamaniominimo21">
+              <backgroundColor
+                  xsi:type="gmfgraph:ConstantColor"
+                  value="yellow"/>
+              <preferredSize
+                  dx="265"
+                  dy="25"/>
+            </children>
+            <children
+                xsi:type="gmfgraph:InvisibleRectangle"
+                name="Tamaniominimo22">
+              <backgroundColor
+                  xsi:type="gmfgraph:ConstantColor"
+                  value="yellow"/>
+              <preferredSize
+                  dx="190"
+                  dy="25"/>
+            </children>
           </children>
         </children>
         <children
@@ -544,15 +587,38 @@
           <children
               xsi:type="gmfgraph:Rectangle"
               name="RightRectangleCompartment">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="BEGINNING"
+                verticalSpan="0"
+                horizontalSpan="0"/>
             <layout
-                xsi:type="gmfgraph:FlowLayout"
-                majorAlignment="CENTER"
-                minorAlignment="CENTER"
-                majorSpacing="0"
-                minorSpacing="0"/>
+                xsi:type="gmfgraph:GridLayout">
+              <margins/>
+              <spacing/>
+            </layout>
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
                 value="orange"/>
+            <children
+                xsi:type="gmfgraph:InvisibleRectangle"
+                name="RectangleTargetsCompartment">
+              <layoutData
+                  xsi:type="gmfgraph:GridLayoutData"
+                  verticalAlignment="BEGINNING"
+                  verticalSpan="0"
+                  horizontalSpan="0"/>
+            </children>
+            <children
+                xsi:type="gmfgraph:InvisibleRectangle"
+                name="Tamaniominimo3">
+              <backgroundColor
+                  xsi:type="gmfgraph:ConstantColor"
+                  value="yellow"/>
+              <preferredSize
+                  dx="240"
+                  dy="25"/>
+            </children>
           </children>
         </children>
       </actualFigure>
@@ -561,9 +627,9 @@
       <accessors
           figure="//@figures.0/@descriptors.6/@actualFigure/@children.1/@children.1/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.6/@actualFigure/@children.0/@children.1"/>
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.0/@children.1/@children.0"/>
       <accessors
-          figure="//@figures.0/@descriptors.6/@actualFigure/@children.2/@children.1"/>
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.2/@children.1/@children.0"/>
     </descriptors>
   </figures>
   <nodes
