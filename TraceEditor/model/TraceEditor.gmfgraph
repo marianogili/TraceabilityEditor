@@ -9,10 +9,12 @@
       name="Default">
     <figures
         xsi:type="gmfgraph:PolylineDecoration"
-        name="TraceLinkSourcesTargetDecoration"/>
+        name="TraceLinkSourcesTargetDecoration"
+        lineWidth="2"/>
     <figures
         xsi:type="gmfgraph:PolylineDecoration"
-        name="TraceLinkTargetsTargetDecoration"/>
+        name="TraceLinkTargetsTargetDecoration"
+        lineWidth="2"/>
     <descriptors
         name="TransformationFigure">
       <actualFigure
@@ -24,7 +26,7 @@
               top="10"
               left="30"
               bottom="10"
-              right="30"/>
+              right="10"/>
         </border>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
@@ -36,10 +38,12 @@
           </layout>
           <foregroundColor
               xsi:type="gmfgraph:ConstantColor"
-              value="black"/>
+              value="gray"/>
           <backgroundColor
-              xsi:type="gmfgraph:ConstantColor"
-              value="lightGreen"/>
+              xsi:type="gmfgraph:RGBColor"
+              red="105"
+              green="255"
+              blue="155"/>
           <children
               xsi:type="gmfgraph:InvisibleRectangle"
               name="TransformationRectangleTitle">
@@ -49,14 +53,23 @@
             <layout
                 xsi:type="gmfgraph:GridLayout"
                 numColumns="2"
-                equalWidth="false"/>
+                equalWidth="false">
+              <margins
+                  dx="5"
+                  dy="5"/>
+              <spacing
+                  dx="5"/>
+            </layout>
             <children
                 xsi:type="gmfgraph:Label"
                 name="LabelTransformationName"
-                text="transformación:">
+                text="TRANSFORMACIÓN:">
               <layoutData
                   xsi:type="gmfgraph:GridLayoutData"
                   horizontalAlignment="BEGINNING"/>
+              <foregroundColor
+                  xsi:type="gmfgraph:ConstantColor"
+                  value="darkGray"/>
               <font
                   xsi:type="gmfgraph:BasicFont"
                   height="7"/>
@@ -103,9 +116,6 @@
       <actualFigure
           xsi:type="gmfgraph:InvisibleRectangle"
           name="MarginTraceLink">
-        <backgroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="lightBlue"/>
         <border
             xsi:type="gmfgraph:MarginBorder">
           <insets
@@ -123,18 +133,23 @@
               equalWidth="false"/>
           <foregroundColor
               xsi:type="gmfgraph:ConstantColor"
-              value="black"/>
+              value="gray"/>
           <backgroundColor
-              xsi:type="gmfgraph:ConstantColor"
-              value="lightBlue"/>
+              xsi:type="gmfgraph:RGBColor"
+              red="105"
+              green="155"
+              blue="255"/>
           <children
               xsi:type="gmfgraph:Label"
               name="LabelTraceLinkName"
-              text="traza:">
+              text="TRAZA:">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
                 verticalAlignment="END"
                 horizontalAlignment="BEGINNING"/>
+            <foregroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="darkGray"/>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 height="7"/>
@@ -157,11 +172,14 @@
           <children
               xsi:type="gmfgraph:Label"
               name="LabelTraceLinkType"
-              text="tipo:">
+              text="TIPO:">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
                 verticalAlignment="END"
                 horizontalAlignment="BEGINNING"/>
+            <foregroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="darkGray"/>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 height="7"/>
@@ -195,10 +213,13 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="TraceLinkSourcesFigure"
+          lineWidth="2"
           targetDecoration="//@figures.0/@figures.0">
         <foregroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="blue"/>
+            xsi:type="gmfgraph:RGBColor"
+            red="56"
+            green="69"
+            blue="95"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -206,10 +227,14 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="TraceLinkTargetsFigure"
+          lineWidth="2"
+          lineKind="LINE_DASH"
           targetDecoration="//@figures.0/@figures.1">
         <foregroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="red"/>
+            xsi:type="gmfgraph:RGBColor"
+            red="56"
+            green="69"
+            blue="95"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -221,7 +246,7 @@
             xsi:type="gmfgraph:MarginBorder">
           <insets
               top="10"
-              left="30"
+              left="5"
               bottom="10"
               right="30"/>
         </border>
@@ -234,18 +259,23 @@
               equalWidth="false"/>
           <foregroundColor
               xsi:type="gmfgraph:ConstantColor"
-              value="black"/>
+              value="gray"/>
           <backgroundColor
-              xsi:type="gmfgraph:ConstantColor"
-              value="lightGreen"/>
+              xsi:type="gmfgraph:RGBColor"
+              red="255"
+              green="255"
+              blue="105"/>
           <children
               xsi:type="gmfgraph:Label"
               name="SourceArtefactLabelNameFigure"
-              text="nombre:">
+              text="NOMBRE:">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
                 verticalAlignment="END"
                 horizontalAlignment="BEGINNING"/>
+            <foregroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="darkGray"/>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 faceName=""
@@ -270,11 +300,14 @@
           <children
               xsi:type="gmfgraph:Label"
               name="SourceArtefactLabelTypeFigure"
-              text="tipo:">
+              text="TIPO:">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
                 verticalAlignment="END"
                 horizontalAlignment="BEGINNING"/>
+            <foregroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="darkGray"/>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 faceName=""
@@ -316,7 +349,7 @@
               top="10"
               left="30"
               bottom="10"
-              right="30"/>
+              right="5"/>
         </border>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
@@ -327,18 +360,23 @@
               equalWidth="false"/>
           <foregroundColor
               xsi:type="gmfgraph:ConstantColor"
-              value="black"/>
+              value="gray"/>
           <backgroundColor
-              xsi:type="gmfgraph:ConstantColor"
-              value="cyan"/>
+              xsi:type="gmfgraph:RGBColor"
+              red="255"
+              green="255"
+              blue="105"/>
           <children
               xsi:type="gmfgraph:Label"
               name="TargetArtefactLabelNameFigure"
-              text="nombre:">
+              text="NOMBRE:">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
                 verticalAlignment="END"
                 horizontalAlignment="BEGINNING"/>
+            <foregroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="darkGray"/>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 faceName=""
@@ -363,11 +401,14 @@
           <children
               xsi:type="gmfgraph:Label"
               name="TargetArtefactLabelTypeFigure"
-              text="tipo:">
+              text="TIPO:">
             <layoutData
                 xsi:type="gmfgraph:GridLayoutData"
                 verticalAlignment="END"
                 horizontalAlignment="BEGINNING"/>
+            <foregroundColor
+                xsi:type="gmfgraph:ConstantColor"
+                value="darkGray"/>
             <font
                 xsi:type="gmfgraph:BasicFont"
                 faceName=""
@@ -406,13 +447,17 @@
         <layout
             xsi:type="gmfgraph:GridLayout"
             numColumns="3"
-            equalWidth="false"/>
+            equalWidth="false">
+          <margins
+              dx="5"
+              dy="5"/>
+        </layout>
         <foregroundColor
             xsi:type="gmfgraph:ConstantColor"
-            value="black"/>
+            value="gray"/>
         <backgroundColor
             xsi:type="gmfgraph:ConstantColor"
-            value="lightGray"/>
+            value="gray"/>
         <children
             xsi:type="gmfgraph:RoundedRectangle"
             name="LeftRectangle">
@@ -454,7 +499,7 @@
             </layout>
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
-                value="orange"/>
+                value="lightGray"/>
             <children
                 xsi:type="gmfgraph:InvisibleRectangle"
                 name="RectangleSourcesCompartment">
@@ -517,7 +562,7 @@
                 value="gray"/>
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
-                value="orange"/>
+                value="lightGray"/>
             <children
                 xsi:type="gmfgraph:InvisibleRectangle"
                 name="CentralRectangleCompartmentTranformations">
@@ -599,7 +644,7 @@
             </layout>
             <backgroundColor
                 xsi:type="gmfgraph:ConstantColor"
-                value="orange"/>
+                value="lightGray"/>
             <children
                 xsi:type="gmfgraph:InvisibleRectangle"
                 name="RectangleTargetsCompartment">

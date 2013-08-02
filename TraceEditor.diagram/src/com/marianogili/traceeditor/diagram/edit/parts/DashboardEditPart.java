@@ -380,10 +380,12 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			GridLayout layoutThis = new GridLayout();
 			layoutThis.numColumns = 3;
 			layoutThis.makeColumnsEqualWidth = false;
+			layoutThis.marginWidth = 5;
+			layoutThis.marginHeight = 5;
 			this.setLayoutManager(layoutThis);
 
-			this.setForegroundColor(ColorConstants.black);
-			this.setBackgroundColor(ColorConstants.lightGray);
+			this.setForegroundColor(ColorConstants.gray);
+			this.setBackgroundColor(ColorConstants.gray);
 			createContents();
 		}
 
@@ -433,7 +435,8 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 
 			RectangleFigure leftRectangleCompartment1 = new RectangleFigure();
 
-			leftRectangleCompartment1.setBackgroundColor(ColorConstants.orange);
+			leftRectangleCompartment1
+					.setBackgroundColor(ColorConstants.lightGray);
 
 			GridData constraintLeftRectangleCompartment1 = new GridData();
 			constraintLeftRectangleCompartment1.verticalAlignment = GridData.BEGINNING;
@@ -528,7 +531,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			centralRectangleCompartment1
 					.setForegroundColor(ColorConstants.gray);
 			centralRectangleCompartment1
-					.setBackgroundColor(ColorConstants.orange);
+					.setBackgroundColor(ColorConstants.lightGray);
 
 			centralRectangle0.add(centralRectangleCompartment1);
 
@@ -642,7 +645,7 @@ public class DashboardEditPart extends ShapeNodeEditPart {
 			RectangleFigure rightRectangleCompartment1 = new RectangleFigure();
 
 			rightRectangleCompartment1
-					.setBackgroundColor(ColorConstants.orange);
+					.setBackgroundColor(ColorConstants.lightGray);
 
 			GridData constraintRightRectangleCompartment1 = new GridData();
 			constraintRightRectangleCompartment1.verticalAlignment = GridData.BEGINNING;

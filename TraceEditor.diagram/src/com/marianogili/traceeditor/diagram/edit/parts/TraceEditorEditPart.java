@@ -3,6 +3,8 @@ package com.marianogili.traceeditor.diagram.edit.parts;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.draw2d.ColorConstants;
+import org.eclipse.draw2d.IFigure;
 import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
@@ -37,6 +39,17 @@ public class TraceEditorEditPart extends DiagramEditPart {
 	 */
 	public TraceEditorEditPart(View view) {
 		super(view);
+	}
+
+	/* (non-Javadoc)
+	 * @see org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart#createFigure()
+	 */
+	@Override
+	protected IFigure createFigure() {
+		IFigure fig = super.createFigure();
+		fig.setBackgroundColor(ColorConstants.gray);
+		fig.setOpaque(true);
+		return fig;
 	}
 
 	/**

@@ -356,7 +356,6 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 			this.setOutline(false);
 			this.setFill(false);
 			this.setOpaque(false);
-			this.setBackgroundColor(ColorConstants.lightBlue);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(10),
 					getMapMode().DPtoLP(20), getMapMode().DPtoLP(10),
 					getMapMode().DPtoLP(20)));
@@ -372,8 +371,8 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 
 			traceLinkFigureInt0.setCornerDimensions(new Dimension(getMapMode()
 					.DPtoLP(8), getMapMode().DPtoLP(8)));
-			traceLinkFigureInt0.setForegroundColor(ColorConstants.black);
-			traceLinkFigureInt0.setBackgroundColor(ColorConstants.lightBlue);
+			traceLinkFigureInt0.setForegroundColor(ColorConstants.gray);
+			traceLinkFigureInt0.setBackgroundColor(TRACELINKFIGUREINT0_BACK);
 
 			this.add(traceLinkFigureInt0);
 
@@ -384,7 +383,8 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 
 			WrappingLabel labelTraceLinkName1 = new WrappingLabel();
 
-			labelTraceLinkName1.setText("traza:");
+			labelTraceLinkName1.setText("TRAZA:");
+			labelTraceLinkName1.setForegroundColor(ColorConstants.darkGray);
 
 			labelTraceLinkName1.setFont(LABELTRACELINKNAME1_FONT);
 
@@ -420,7 +420,8 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 
 			WrappingLabel labelTraceLinkType1 = new WrappingLabel();
 
-			labelTraceLinkType1.setText("tipo:");
+			labelTraceLinkType1.setText("TIPO:");
+			labelTraceLinkType1.setForegroundColor(ColorConstants.darkGray);
 
 			labelTraceLinkType1.setFont(LABELTRACELINKTYPE1_FONT);
 
@@ -478,6 +479,11 @@ public class TraceLinkEditPart extends ShapeNodeEditPart {
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Color TRACELINKFIGUREINT0_BACK = new Color(null, 105, 155, 255);
 
 	/**
 	 * @generated

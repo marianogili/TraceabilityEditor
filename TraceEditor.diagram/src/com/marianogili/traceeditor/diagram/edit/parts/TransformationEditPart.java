@@ -344,7 +344,7 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 			this.setOpaque(false);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(10),
 					getMapMode().DPtoLP(30), getMapMode().DPtoLP(10),
-					getMapMode().DPtoLP(30)));
+					getMapMode().DPtoLP(10)));
 			createContents();
 		}
 
@@ -358,9 +358,9 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 			fFigureTransformationFigureInt.setCornerDimensions(new Dimension(
 					getMapMode().DPtoLP(8), getMapMode().DPtoLP(8)));
 			fFigureTransformationFigureInt
-					.setForegroundColor(ColorConstants.black);
+					.setForegroundColor(ColorConstants.gray);
 			fFigureTransformationFigureInt
-					.setBackgroundColor(ColorConstants.lightGreen);
+					.setBackgroundColor(FFIGURETRANSFORMATIONFIGUREINT_BACK);
 
 			this.add(fFigureTransformationFigureInt);
 
@@ -395,12 +395,18 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 			GridLayout layoutFFigureTransformationRectangleTitle = new GridLayout();
 			layoutFFigureTransformationRectangleTitle.numColumns = 2;
 			layoutFFigureTransformationRectangleTitle.makeColumnsEqualWidth = false;
+			layoutFFigureTransformationRectangleTitle.horizontalSpacing = 5;
+			layoutFFigureTransformationRectangleTitle.verticalSpacing = 0;
+			layoutFFigureTransformationRectangleTitle.marginWidth = 5;
+			layoutFFigureTransformationRectangleTitle.marginHeight = 5;
 			fFigureTransformationRectangleTitle
 					.setLayoutManager(layoutFFigureTransformationRectangleTitle);
 
 			WrappingLabel labelTransformationName2 = new WrappingLabel();
 
-			labelTransformationName2.setText("transformación:");
+			labelTransformationName2.setText("TRANSFORMACIÓN:");
+			labelTransformationName2
+					.setForegroundColor(ColorConstants.darkGray);
 
 			labelTransformationName2.setFont(LABELTRANSFORMATIONNAME2_FONT);
 
@@ -491,6 +497,12 @@ public class TransformationEditPart extends ShapeNodeEditPart {
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Color FFIGURETRANSFORMATIONFIGUREINT_BACK = new Color(null,
+			105, 255, 155);
 
 	/**
 	 * @generated

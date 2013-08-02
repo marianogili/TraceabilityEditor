@@ -231,64 +231,25 @@ public class TraceEditorNavigatorContentProvider implements
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (TraceEditorVisualIDRegistry.getVisualID(view)) {
 
-		case ArtefactEditPart.VISUAL_ID: {
+		case TraceLink2EditPart.VISUAL_ID: {
 			LinkedList<TraceEditorAbstractNavigatorItem> result = new LinkedList<TraceEditorAbstractNavigatorItem>();
 			Node sv = (Node) view;
-			TraceEditorNavigatorGroup incominglinks = new TraceEditorNavigatorGroup(
-					Messages.NavigatorGroupName_Artefact_3001_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			TraceEditorNavigatorGroup outgoinglinks = new TraceEditorNavigatorGroup(
+					Messages.NavigatorGroupName_TraceLink_3005_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					TraceEditorVisualIDRegistry
 							.getType(TraceLinkSourcesEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					TraceEditorVisualIDRegistry
 							.getType(TraceLinkTargetsEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case TraceLinkSourcesEditPart.VISUAL_ID: {
-			LinkedList<TraceEditorAbstractNavigatorItem> result = new LinkedList<TraceEditorAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			TraceEditorNavigatorGroup target = new TraceEditorNavigatorGroup(
-					Messages.NavigatorGroupName_TraceLinkSources_4001_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			TraceEditorNavigatorGroup source = new TraceEditorNavigatorGroup(
-					Messages.NavigatorGroupName_TraceLinkSources_4001_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					TraceEditorVisualIDRegistry
-							.getType(ArtefactEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					TraceEditorVisualIDRegistry
-							.getType(Artefact2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					TraceEditorVisualIDRegistry
-							.getType(TraceLinkEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					TraceEditorVisualIDRegistry
-							.getType(TraceLink2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
 			}
 			return result.toArray();
 		}
@@ -316,41 +277,41 @@ public class TraceEditorNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case TransformationEditPart.VISUAL_ID: {
+		case TraceLinkTargetsEditPart.VISUAL_ID: {
 			LinkedList<TraceEditorAbstractNavigatorItem> result = new LinkedList<TraceEditorAbstractNavigatorItem>();
-			Node sv = (Node) view;
+			Edge sv = (Edge) view;
+			TraceEditorNavigatorGroup target = new TraceEditorNavigatorGroup(
+					Messages.NavigatorGroupName_TraceLinkTargets_4002_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			TraceEditorNavigatorGroup source = new TraceEditorNavigatorGroup(
+					Messages.NavigatorGroupName_TraceLinkTargets_4002_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					TraceEditorVisualIDRegistry
-							.getType(TransformationTransformationCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
+							.getType(ArtefactEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					TraceEditorVisualIDRegistry
+							.getType(Artefact2EditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					TraceEditorVisualIDRegistry
+							.getType(TraceLinkEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					TraceEditorVisualIDRegistry
 							.getType(TraceLink2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			return result.toArray();
-		}
-
-		case TraceLink2EditPart.VISUAL_ID: {
-			LinkedList<TraceEditorAbstractNavigatorItem> result = new LinkedList<TraceEditorAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			TraceEditorNavigatorGroup outgoinglinks = new TraceEditorNavigatorGroup(
-					Messages.NavigatorGroupName_TraceLink_3005_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					TraceEditorVisualIDRegistry
-							.getType(TraceLinkSourcesEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					TraceEditorVisualIDRegistry
-							.getType(TraceLinkTargetsEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
 			}
 			return result.toArray();
 		}
@@ -398,14 +359,14 @@ public class TraceEditorNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case TraceLinkTargetsEditPart.VISUAL_ID: {
+		case TraceLinkSourcesEditPart.VISUAL_ID: {
 			LinkedList<TraceEditorAbstractNavigatorItem> result = new LinkedList<TraceEditorAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			TraceEditorNavigatorGroup target = new TraceEditorNavigatorGroup(
-					Messages.NavigatorGroupName_TraceLinkTargets_4002_target,
+					Messages.NavigatorGroupName_TraceLinkSources_4001_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			TraceEditorNavigatorGroup source = new TraceEditorNavigatorGroup(
-					Messages.NavigatorGroupName_TraceLinkTargets_4002_source,
+					Messages.NavigatorGroupName_TraceLinkSources_4001_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -468,6 +429,45 @@ public class TraceEditorNavigatorContentProvider implements
 			Node sv = (Node) view;
 			TraceEditorNavigatorGroup incominglinks = new TraceEditorNavigatorGroup(
 					Messages.NavigatorGroupName_Artefact_3004_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					TraceEditorVisualIDRegistry
+							.getType(TraceLinkSourcesEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					TraceEditorVisualIDRegistry
+							.getType(TraceLinkTargetsEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case TransformationEditPart.VISUAL_ID: {
+			LinkedList<TraceEditorAbstractNavigatorItem> result = new LinkedList<TraceEditorAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					TraceEditorVisualIDRegistry
+							.getType(TransformationTransformationCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					TraceEditorVisualIDRegistry
+							.getType(TraceLink2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case ArtefactEditPart.VISUAL_ID: {
+			LinkedList<TraceEditorAbstractNavigatorItem> result = new LinkedList<TraceEditorAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			TraceEditorNavigatorGroup incominglinks = new TraceEditorNavigatorGroup(
+					Messages.NavigatorGroupName_Artefact_3001_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),

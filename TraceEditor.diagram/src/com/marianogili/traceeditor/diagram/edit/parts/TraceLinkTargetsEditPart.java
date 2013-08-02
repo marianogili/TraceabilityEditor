@@ -2,6 +2,7 @@ package com.marianogili.traceeditor.diagram.edit.parts;
 
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Connection;
+import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.PolylineDecoration;
 import org.eclipse.draw2d.RotatableDecoration;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
@@ -10,6 +11,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 
+import org.eclipse.swt.graphics.Color;
 import com.marianogili.traceeditor.diagram.edit.policies.TraceLinkTargetsItemSemanticEditPolicy;
 
 /**
@@ -68,7 +70,9 @@ public class TraceLinkTargetsEditPart extends ConnectionNodeEditPart implements
 		 * @generated
 		 */
 		public TraceLinkTargetsFigure() {
-			this.setForegroundColor(ColorConstants.red);
+			this.setLineWidth(2);
+			this.setLineStyle(Graphics.LINE_DASH);
+			this.setForegroundColor(THIS_FORE);
 
 			setTargetDecoration(createTargetDecoration());
 		}
@@ -78,9 +82,15 @@ public class TraceLinkTargetsEditPart extends ConnectionNodeEditPart implements
 		 */
 		private RotatableDecoration createTargetDecoration() {
 			PolylineDecoration df = new PolylineDecoration();
+			df.setLineWidth(2);
 			return df;
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Color THIS_FORE = new Color(null, 56, 69, 95);
 
 }

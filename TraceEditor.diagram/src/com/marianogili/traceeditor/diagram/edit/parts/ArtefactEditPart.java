@@ -336,7 +336,7 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 			this.setFill(false);
 			this.setOpaque(false);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(10),
-					getMapMode().DPtoLP(30), getMapMode().DPtoLP(10),
+					getMapMode().DPtoLP(5), getMapMode().DPtoLP(10),
 					getMapMode().DPtoLP(30)));
 			createContents();
 		}
@@ -351,9 +351,9 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 			fFigureSourceArtefactFigureInt.setCornerDimensions(new Dimension(
 					getMapMode().DPtoLP(8), getMapMode().DPtoLP(8)));
 			fFigureSourceArtefactFigureInt
-					.setForegroundColor(ColorConstants.black);
+					.setForegroundColor(ColorConstants.gray);
 			fFigureSourceArtefactFigureInt
-					.setBackgroundColor(ColorConstants.lightGreen);
+					.setBackgroundColor(FFIGURESOURCEARTEFACTFIGUREINT_BACK);
 
 			this.add(fFigureSourceArtefactFigureInt);
 
@@ -365,7 +365,9 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 
 			WrappingLabel sourceArtefactLabelNameFigure1 = new WrappingLabel();
 
-			sourceArtefactLabelNameFigure1.setText("nombre:");
+			sourceArtefactLabelNameFigure1.setText("NOMBRE:");
+			sourceArtefactLabelNameFigure1
+					.setForegroundColor(ColorConstants.darkGray);
 
 			sourceArtefactLabelNameFigure1
 					.setFont(SOURCEARTEFACTLABELNAMEFIGURE1_FONT);
@@ -403,7 +405,9 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 
 			WrappingLabel sourceArtefactLabelTypeFigure1 = new WrappingLabel();
 
-			sourceArtefactLabelTypeFigure1.setText("tipo:");
+			sourceArtefactLabelTypeFigure1.setText("TIPO:");
+			sourceArtefactLabelTypeFigure1
+					.setForegroundColor(ColorConstants.darkGray);
 
 			sourceArtefactLabelTypeFigure1
 					.setFont(SOURCEARTEFACTLABELTYPEFIGURE1_FONT);
@@ -463,6 +467,12 @@ public class ArtefactEditPart extends ShapeNodeEditPart {
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Color FFIGURESOURCEARTEFACTFIGUREINT_BACK = new Color(null,
+			255, 255, 105);
 
 	/**
 	 * @generated
