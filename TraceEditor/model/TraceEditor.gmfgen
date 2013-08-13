@@ -580,26 +580,6 @@
     </compartments>
     <palette>
       <groups
-          title="Transformaciones">
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Transformación"
-            description="Crear nueva Transformación"
-            genNodes="//@diagram/@childNodes.2"/>
-        <entries
-            xsi:type="gmfgen:Separator"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Artefacto origen"
-            description="Crear nuevo Artefacto origen"
-            genNodes="//@diagram/@childNodes.0"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Artefacto destino"
-            description="Crear nuevo Artefacto destino"
-            genNodes="//@diagram/@childNodes.4"/>
-      </groups>
-      <groups
           title="Trazas">
         <entries
             xsi:type="gmfgen:ToolEntry"
@@ -618,14 +598,6 @@
             title="Destino de la traza"
             description="Crear nuevo enlace al destino"
             genLinks="//@diagram/@links.1"/>
-      </groups>
-      <groups
-          title="Por sacar">
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Tablero"
-            description="Crear nuevo Tablero"
-            genNodes="//@diagram/@topLevelNodes.0"/>
       </groups>
     </palette>
     <preferencePages

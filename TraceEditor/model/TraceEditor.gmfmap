@@ -12,9 +12,6 @@
     <ownedChild>
       <domainMetaElement
           href="TraceEditor.ecore#//Dashboard"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="TraceEditor.gmftool#//@palette/@tools.2/@tools.0"/>
       <diagramNode
           href="TraceEditor.gmfgraph#Dashboard"/>
       <children
@@ -41,9 +38,6 @@
             <viewExpression
                 body="if self.type.oclIsUndefined() then '&lt;&lt; sin tipo >>' else self.type.name endif"/>
           </labelMappings>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
               href="TraceEditor.gmfgraph#SourceArtefact"/>
         </ownedChild>
@@ -74,7 +68,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="TraceEditor.gmftool#//@palette/@tools.1/@tools.0"/>
+              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.0"/>
           <diagramNode
               href="TraceEditor.gmfgraph#TraceLink"/>
         </ownedChild>
@@ -95,9 +89,6 @@
             <editableFeatures
                 href="TraceEditor.ecore#//NamedElement/name"/>
           </labelMappings>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.0"/>
           <diagramNode
               href="TraceEditor.gmfgraph#Transformation"/>
           <children
@@ -137,9 +128,6 @@
             <viewExpression
                 body="if self.type.oclIsUndefined() then '&lt;&lt; sin tipo >>' else self.type.name endif"/>
           </labelMappings>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="TraceEditor.gmftool#//@palette/@tools.0/@tools.3"/>
           <diagramNode
               href="TraceEditor.gmfgraph#TargetArtefact"/>
         </ownedChild>
@@ -169,7 +157,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="TraceEditor.gmftool#//@palette/@tools.1/@tools.2"/>
+        href="TraceEditor.gmftool#//@palette/@tools.0/@tools.2"/>
     <diagramLink
         href="TraceEditor.gmfgraph#TraceLinkSources"/>
     <linkMetaFeature
@@ -179,7 +167,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="TraceEditor.gmftool#//@palette/@tools.1/@tools.3"/>
+        href="TraceEditor.gmftool#//@palette/@tools.0/@tools.3"/>
     <diagramLink
         href="TraceEditor.gmfgraph#TraceLinkTargets"/>
     <linkMetaFeature

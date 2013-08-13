@@ -243,47 +243,7 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Transformaciones1Group_title;
-
-	/**
-	 * @generated
-	 */
-	public static String Trazas2Group_title;
-
-	/**
-	 * @generated
-	 */
-	public static String Porsacar3Group_title;
-
-	/**
-	 * @generated
-	 */
-	public static String Transformación1CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String Transformación1CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String Artefactoorigen3CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String Artefactoorigen3CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String Artefactodestino4CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String Artefactodestino4CreationTool_desc;
+	public static String Trazas1Group_title;
 
 	/**
 	 * @generated
@@ -314,16 +274,6 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String Destinodelatraza4CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String Tablero1CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String Tablero1CreationTool_desc;
 
 	/**
 	 * @generated

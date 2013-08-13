@@ -8,39 +8,6 @@
       title="traceeditorPalette">
     <tools
         xsi:type="gmftool:ToolGroup"
-        title="Transformaciones">
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Transformación"
-          description="Crear nueva Transformación">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:PaletteSeparator"/>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Artefacto origen"
-          description="Crear nuevo Artefacto origen">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Artefacto destino"
-          description="Crear nuevo Artefacto destino">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-    </tools>
-    <tools
-        xsi:type="gmftool:ToolGroup"
         title="Trazas">
       <tools
           xsi:type="gmftool:CreationTool"
@@ -66,19 +33,6 @@
           xsi:type="gmftool:CreationTool"
           title="Destino de la traza"
           description="Crear nuevo enlace al destino">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-    </tools>
-    <tools
-        xsi:type="gmftool:ToolGroup"
-        title="Por sacar">
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Tablero"
-          description="Crear nuevo Tablero">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
