@@ -96,34 +96,29 @@ public class ViewListOfTrace extends ViewPart {
 				}
 
 				@Override
-				public NotificationFilter getFilter() {
-					// TODO Auto-generated method stub
-					return null;
-				}
-
-				@Override
 				public Command transactionAboutToCommit(
 						ResourceSetChangeEvent event) throws RollbackException {
-					// TODO Auto-generated method stub
 					return null;
 				}
 
 				@Override
 				public boolean isAggregatePrecommitListener() {
-					// TODO Auto-generated method stub
 					return false;
 				}
 
 				@Override
 				public boolean isPrecommitOnly() {
-					// TODO Auto-generated method stub
 					return false;
 				}
 
 				@Override
 				public boolean isPostcommitOnly() {
-					// TODO Auto-generated method stub
 					return false;
+				}
+				
+				@Override
+				public NotificationFilter getFilter() {
+					return null;
 				}
 			});
 			
@@ -135,6 +130,11 @@ public class ViewListOfTrace extends ViewPart {
 		public void partClosed(IWorkbenchPart part) {
 			if (!(part instanceof TraceEditorDiagramEditor))
 				return;
+			
+			TraceEditorDiagramEditor editor = (TraceEditorDiagramEditor) part;
+			if (editingDomain != null && !editingDomain.equals(editor.getEditingDomain()))
+				return;
+			
 			editingDomain = null;
 			tableViewer.setInput(null);
 			tableViewer.refresh();
@@ -142,17 +142,22 @@ public class ViewListOfTrace extends ViewPart {
 
 		@Override
 		public void partActivated(IWorkbenchPart part) {
+			if (!(part instanceof TraceEditorDiagramEditor))
+				return;
+			TraceEditorDiagramEditor editor = (TraceEditorDiagramEditor) part;
+			
+			if (editingDomain != null && editingDomain.equals(editor.getEditingDomain()))
+				return;
+			
 			this.partOpened(part);
 		}
 
 		@Override
 		public void partBroughtToTop(IWorkbenchPart part) {
-			this.partOpened(part);
 		}
 
 		@Override
 		public void partDeactivated(IWorkbenchPart part) {
-			this.partClosed(part);
 		}
 	};
 
