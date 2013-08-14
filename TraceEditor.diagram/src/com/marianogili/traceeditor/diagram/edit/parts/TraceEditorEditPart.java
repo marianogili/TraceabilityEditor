@@ -64,7 +64,7 @@ public class TraceEditorEditPart extends DiagramEditPart {
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE,
 				new CreationEditPolicyWithCustomReparent(
 						TraceEditorVisualIDRegistry.TYPED_INSTANCE));
-		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.POPUPBAR_ROLE);
+		removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.POPUPBAR_ROLE);
 	}
 
 	/**
