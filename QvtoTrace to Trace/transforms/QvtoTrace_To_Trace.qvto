@@ -97,7 +97,7 @@ mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
  * (result) respectivamente.
  */
 mapping QvtoTrace::TraceRecord::traceRecord2TraceLink() : TraceEditor::TraceLink {
-	name := self.repr();
+	name := self.repr().toTraceLinkName();
 	_transformation := result.container().oclAsType(TraceEditor::Transformation);
 	sources := self._context._context[name="self"].map 
 		varParameterValue2Artefact("Source");
@@ -122,7 +122,7 @@ mapping QvtoTrace::VarParameterValue::varParameterValueSimple2Artefact(in prefix
 	when { self.value.collectionType = null } {
 		init {
 			result := object TraceEditor::Artefact {
-				name := self.value.repr();
+				name := self.value.repr().toArtefactName(prefix);
 				type := self.varParameterValueTypeArtefact(self.type.prefix(prefix));
 			}->asOrderedSet();
 		}
@@ -135,7 +135,7 @@ mapping QvtoTrace::VarParameterValue::varParameterValueCollection2Artefact(in pr
 			var typeName := self.type.substringAfter("(").substringBefore(")");
 			result := self.value.collection->collect(e | 
 				object TraceEditor::Artefact {
-					name := e.repr();
+					name := e.repr().toArtefactName(prefix);
 					type := self.varParameterValueTypeArtefact(typeName.prefix(prefix));
 			})->asOrderedSet();
 		}
@@ -152,12 +152,33 @@ helper String::prefix(in pre : String) : String {
 	return pre + "_" + self;
 }
 
+/*
+ * toArtefactName() define el formato del nombre de los artefactos 
+ * con el string parámetro pre como prefijo y luego tomando sólo 
+ * la parte del número identificador de lo retornado por la función repr().
+ */
+helper String::toArtefactName(in pre : String) : String {
+	var temp_name = self.substringAfter("org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@")
+		.substringBefore(" ("); 
+	return pre + "_" + temp_name;
+}
+
+/*
+ * toTraceLinkName() define el formato del nombre de las trazas tomando 
+ * sólo la parte del número identificador de lo retornado por la función 
+ * repr() y como prefijo "Trace_".
+ */
+helper String::toTraceLinkName() : String {
+	var temp_name = self.substringAfter("org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@");
+	return "Trace_" + temp_name;
+}
+
 ////////////////////////////////////////////////////////////////////////
 /////////////////////////////// Querys /////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 
 /*
- * varParameterValueConfiguration() retorna del modelo ya convertido que 
+ * varParameterValueTypeArtefact() retorna del modelo ya convertido que 
  * representa la configuración, el tipo del artefacto que conforma a
  * TypeArtefact identificado por el parámetro typeName.
  */
@@ -173,13 +194,17 @@ query QvtoTrace::VarParameterValue::varParameterValueTypeArtefact(in typeName : 
 /*
  * typesByName() retorna el conjunto de nombres de los distintos tipos de  
  * artefactos que se encuentran en el conjunto de trazas del modelo de 
- * entrada Trace.
+ * entrada Trace. Este conjunto es el tipo de los orígenes, obtenidos del
+ * contexto del modelo Trace, unión los tipos de los resultados, obtenidos
+ * de los resultados.
  */
 query QvtoTrace::Trace::typesByName() : OrderedSet(String) {
 	return self.traceRecords._context._context[name="self"].type
 		.prefix("Source")->asSet()->union(
 			self.traceRecords._result._result[name="result" and value.collectionType = null]
-				.type.prefix("Target")->asSet()
+				.type.prefix("Target")->asSet()->union(
+			self.traceRecords._result._result[name="result" and value.collectionType <> null]
+				.type.substringAfter("(").substringBefore(")").prefix("Target")->asSet())
 	)->asOrderedSet();
 }
 
