@@ -446,6 +446,8 @@
         <metaFeature
             href="TraceEditor.genmodel#//traceeditor/TraceLink/sources"/>
       </modelFacet>
+      <creationConstraints
+          targetEnd="//@expressionProviders/@providers.1/@expressions.0"/>
     </links>
     <links
         visualID="4002"
@@ -471,6 +473,8 @@
         <metaFeature
             href="TraceEditor.genmodel#//traceeditor/TraceLink/targets"/>
       </modelFacet>
+      <creationConstraints
+          targetEnd="//@expressionProviders/@providers.1/@expressions.1"/>
     </links>
     <compartments
         visualID="7001"
@@ -791,6 +795,15 @@
           body="if self.type.oclIsUndefined() then '&lt;&lt; sin tipo >>' else self.type.name endif"/>
       <expressions
           body="if self.type.oclIsUndefined() then '&lt;&lt; sin tipo >>' else self.type.name endif"/>
+    </providers>
+    <providers
+        xsi:type="gmfgen:GenJavaExpressionProvider">
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body=""/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body=""/>
     </providers>
   </expressionProviders>
   <labelParsers

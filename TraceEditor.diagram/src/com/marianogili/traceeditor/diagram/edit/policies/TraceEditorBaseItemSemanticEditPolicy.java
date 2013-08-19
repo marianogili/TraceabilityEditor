@@ -33,6 +33,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
 import com.marianogili.traceeditor.Artefact;
+import com.marianogili.traceeditor.Dashboard;
 import com.marianogili.traceeditor.TraceLink;
 import com.marianogili.traceeditor.diagram.part.TraceEditorDiagramEditorPlugin;
 import com.marianogili.traceeditor.diagram.part.TraceEditorVisualIDRegistry;
@@ -350,19 +351,37 @@ public class TraceEditorBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		}
 
 		/**
-		 * @generated
+		 * @generated NOT
 		 */
 		public boolean canExistTraceLinkSources_4001(TraceLink source,
 				Artefact target) {
-			return true;
+			try {
+				if (target == null)
+					return true;
+				return ((Dashboard) target.eContainer()).getSourceArtefacts()
+						.contains(target);
+			} catch (Exception e) {
+				TraceEditorDiagramEditorPlugin.getInstance().logError(
+						"Link constraint evaluation error", e); //$NON-NLS-1$
+				return false;
+			}
 		}
 
 		/**
-		 * @generated
+		 * @generated NOT
 		 */
 		public boolean canExistTraceLinkTargets_4002(TraceLink source,
 				Artefact target) {
-			return true;
+			try {
+				if (target == null)
+					return true;
+				return ((Dashboard) target.eContainer()).getTargetArtefacts()
+						.contains(target);
+			} catch (Exception e) {
+				TraceEditorDiagramEditorPlugin.getInstance().logError(
+						"Link constraint evaluation error", e); //$NON-NLS-1$
+				return false;
+			}
 		}
 	}
 

@@ -163,6 +163,11 @@
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="TraceEditor.ecore#//TraceLink/sources"/>
+    <creationConstraints>
+      <targetEnd
+          body=""
+          language="java"/>
+    </creationConstraints>
   </links>
   <links>
     <tool
@@ -173,6 +178,11 @@
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="TraceEditor.ecore#//TraceLink/targets"/>
+    <creationConstraints>
+      <targetEnd
+          body=""
+          language="java"/>
+    </creationConstraints>
   </links>
   <diagram>
     <diagramCanvas

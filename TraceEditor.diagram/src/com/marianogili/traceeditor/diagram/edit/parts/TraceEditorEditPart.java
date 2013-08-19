@@ -53,7 +53,7 @@ public class TraceEditorEditPart extends DiagramEditPart {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
