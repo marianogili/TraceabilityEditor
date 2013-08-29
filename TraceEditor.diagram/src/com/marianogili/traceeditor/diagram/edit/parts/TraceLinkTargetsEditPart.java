@@ -1,6 +1,5 @@
 package com.marianogili.traceeditor.diagram.edit.parts;
 
-import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Connection;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.PolylineDecoration;

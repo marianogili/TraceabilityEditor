@@ -26,7 +26,6 @@ import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.FontStyle;
-import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
@@ -375,10 +374,10 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5001 = createLabel(node,
+		createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(ArtefactNameEditPart.VISUAL_ID));
-		Node label5006 = createLabel(node,
+		createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(WrappingLabelEditPart.VISUAL_ID));
 		return node;
@@ -422,10 +421,10 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5002 = createLabel(node,
+		createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(TraceLinkNameEditPart.VISUAL_ID));
-		Node label5007 = createLabel(node,
+		createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(WrappingLabel2EditPart.VISUAL_ID));
 		return node;
@@ -463,7 +462,7 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5003 = createLabel(node,
+		createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(TransformationNameEditPart.VISUAL_ID));
 		createCompartment(
@@ -512,10 +511,10 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5005 = createLabel(node,
+		createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(TraceLinkName2EditPart.VISUAL_ID));
-		Node label5008 = createLabel(node,
+		createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(WrappingLabel3EditPart.VISUAL_ID));
 		return node;
@@ -559,10 +558,10 @@ public class TraceEditorViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5004 = createLabel(node,
+		createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(ArtefactName2EditPart.VISUAL_ID));
-		Node label5009 = createLabel(node,
+		createLabel(node,
 				TraceEditorVisualIDRegistry
 						.getType(WrappingLabel4EditPart.VISUAL_ID));
 		return node;

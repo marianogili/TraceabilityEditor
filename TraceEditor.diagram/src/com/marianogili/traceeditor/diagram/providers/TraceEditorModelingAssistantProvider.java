@@ -24,8 +24,6 @@ import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 import com.marianogili.traceeditor.diagram.edit.parts.Artefact2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.ArtefactEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.DashboardEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardSourceArtefactCompartmentEditPart;
-import com.marianogili.traceeditor.diagram.edit.parts.DashboardTraceLinkCompartmentEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceEditorEditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLink2EditPart;
 import com.marianogili.traceeditor.diagram.edit.parts.TraceLinkEditPart;
