@@ -596,11 +596,13 @@
             xsi:type="gmfgen:ToolEntry"
             title="Origen de la traza"
             description="Crear nuevo enlace al origen"
+            smallIconPath="/TraceEditor.edit/icons/full/obj16/EdgeSource.gif"
             genLinks="//@diagram/@links.0"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Destino de la traza"
             description="Crear nuevo enlace al destino"
+            smallIconPath="/TraceEditor.edit/icons/full/obj16/EdgeTarget.gif"
             genLinks="//@diagram/@links.1"/>
       </groups>
     </palette>

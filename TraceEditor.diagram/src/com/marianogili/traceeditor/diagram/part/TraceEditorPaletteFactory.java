@@ -70,8 +70,8 @@ public class TraceEditorPaletteFactory {
 				Collections
 						.singletonList(TraceEditorElementTypes.TraceLinkSources_4001));
 		entry.setId("createOrigendelatraza3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(TraceEditorElementTypes
-				.getImageDescriptor(TraceEditorElementTypes.TraceLinkSources_4001));
+		entry.setSmallIcon(TraceEditorDiagramEditorPlugin
+				.findImageDescriptor("/TraceEditor.edit/icons/full/obj16/EdgeSource.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -86,8 +86,8 @@ public class TraceEditorPaletteFactory {
 				Collections
 						.singletonList(TraceEditorElementTypes.TraceLinkTargets_4002));
 		entry.setId("createDestinodelatraza4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(TraceEditorElementTypes
-				.getImageDescriptor(TraceEditorElementTypes.TraceLinkTargets_4002));
+		entry.setSmallIcon(TraceEditorDiagramEditorPlugin
+				.findImageDescriptor("/TraceEditor.edit/icons/full/obj16/EdgeTarget.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

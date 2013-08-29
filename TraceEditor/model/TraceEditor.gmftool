@@ -25,18 +25,18 @@
           title="Origen de la traza"
           description="Crear nuevo enlace al origen">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/EdgeSource.gif"
+            bundle="TraceEditor.edit"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Destino de la traza"
           description="Crear nuevo enlace al destino">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/EdgeTarget.gif"
+            bundle="TraceEditor.edit"/>
       </tools>
     </tools>
   </palette>
