@@ -51,9 +51,7 @@ mapping QvtoTrace::Trace::trace2TraceEditor() : TraceEditor::TraceEditor {
  * que se encuentran en las trazas del modelo QvtoTrace::Trace.
  */
 mapping QvtoTrace::Trace::trace2Configuration() : TraceEditor::Configuration {
-	//TODO: crear tipos coherentes para las transformaciones QVT.
-	// Una opción puede ser definir el tipo implícito.
-	linkTypes := OrderedSet{};
+	linkTypes := self.linkTypes();
 	typeArtefacts := self.typesByName()->collect(n | 
 		object TraceEditor::TypeArtefact {
 			name := n;
@@ -91,13 +89,14 @@ mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
 /*
  * traceRecord2TraceLink() convierte una traza TraceRecord en su 
  * correspondiente de tipo TraceLink, el nombre (name) es la representación
- * en string de la traza origen, la transformación (_transformation) es
- * del resultado el artefacto que lo contiene, los artefactos origen y
- * destino (sources y targets) son el contexto (_context) y los resultados
- * (result) respectivamente.
+ * en string de la traza origen, el tipo de la traza es 'implícita',
+ * la transformación (_transformation) es del resultado el artefacto 
+ * que lo contiene, los artefactos origen y destino (sources y targets)
+ *  son el contexto (_context) y los resultados (result) respectivamente.
  */
 mapping QvtoTrace::TraceRecord::traceRecord2TraceLink() : TraceEditor::TraceLink {
 	name := self.repr().toTraceLinkName();
+	type := self.varParameterValueLinkType('Implicit');
 	_transformation := result.container().oclAsType(TraceEditor::Transformation);
 	sources := self._context._context[name="self"].map 
 		varParameterValue2Artefact("Source");
@@ -142,8 +141,57 @@ mapping QvtoTrace::VarParameterValue::varParameterValueCollection2Artefact(in pr
 }
 
 ////////////////////////////////////////////////////////////////////////
+////////////////////////////// Constructors ////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+constructor TraceEditor::LinkType::LinkType (aName : String, aParent : TraceEditor::LinkType) {
+	name := aName;
+	parent := aParent;
+}
+
+////////////////////////////////////////////////////////////////////////
 /////////////////////////////// Helpers ////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
+
+/*
+ * linkTypes() crea un conjunto de tipos de enlaces por defecto.
+ */
+helper QvtoTrace::Trace::linkTypes() : OrderedSet(TraceEditor::LinkType) {
+	
+	var Explicit := new TraceEditor::LinkType ('Explicit', null);
+	var Implicit := new TraceEditor::LinkType ('Implicit', null);
+	
+	var ModelModel := new TraceEditor::LinkType ('Model-Model', Explicit);
+	var ModelArtefact := new TraceEditor::LinkType ('Model-Artefact', Explicit);
+	var Query := new TraceEditor::LinkType ('Query', Implicit);
+	var M2M := new TraceEditor::LinkType ('M2M', Implicit);
+	var M2T := new TraceEditor::LinkType ('M2T', Implicit);
+	var Composition := new TraceEditor::LinkType ('Composition', Implicit);
+	var Update := new TraceEditor::LinkType ('Update', Implicit);
+	var Creation := new TraceEditor::LinkType ('Creation', Implicit);
+	var Delete := new TraceEditor::LinkType ('Delete', Implicit);
+	
+	var Static := new TraceEditor::LinkType ('Static', ModelModel);
+	var Dinamic := new TraceEditor::LinkType ('Dinamic', ModelModel);
+	var Satisfies := new TraceEditor::LinkType ('Satisfies', ModelArtefact);
+	var AllocatedTo := new TraceEditor::LinkType ('Allocated-To', ModelArtefact);
+	var Performs := new TraceEditor::LinkType ('Performs', ModelArtefact);
+	var Supports := new TraceEditor::LinkType ('Supports', ModelArtefact);
+	var Explains := new TraceEditor::LinkType ('Explains', ModelArtefact);
+	
+	var Dependency := new TraceEditor::LinkType ('Dependency', Static);
+	var ConsistentWith := new TraceEditor::LinkType ('ConsistentWith', Static);
+	var Calls := new TraceEditor::LinkType ('Calls', Dinamic);
+	var Generates := new TraceEditor::LinkType ('Generates', Dinamic);
+	var Notifies := new TraceEditor::LinkType ('Notifies', Dinamic);
+	
+	return OrderedSet {
+		Implicit, Explicit, ModelModel, ModelArtefact, Query, M2M, M2T, 
+		Composition, Update, Creation, Delete, Static, Dinamic, Satisfies, 
+		AllocatedTo, Performs, Supports, Explains, Dependency, 
+		ConsistentWith, Calls, Generates, Notifies
+	};
+}
 
 /*
  * prefix() agrega el string parámetro pre como prefijo.
@@ -189,6 +237,20 @@ query QvtoTrace::VarParameterValue::varParameterValueTypeArtefact(in typeName : 
 			QvtoTrace::Trace::trace2Configuration,
 			TraceEditor::Configuration
 	).typeArtefacts![name = typeName];
+}
+
+/*
+ * varParameterValueLinkType() retorna del modelo ya convertido que 
+ * representa la configuración, el tipo de traza que conforma a
+ * LinkType identificado por el parámetro typeName.
+ */
+query QvtoTrace::TraceRecord::varParameterValueLinkType(in typeName : String) 
+	: TraceEditor::LinkType {
+	return self.container().oclAsType(QvtoTrace::Trace)
+		.resolveoneIn(
+			QvtoTrace::Trace::trace2Configuration,
+			TraceEditor::Configuration
+	).linkTypes![name = typeName];
 }
 
 /*
