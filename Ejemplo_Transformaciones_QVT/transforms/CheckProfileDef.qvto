@@ -1,0 +1,52 @@
+
+modeltype UML uses 'http://www.eclipse.org/uml2/2.1.0/UML';
+
+/*
+ * This QVTO module does some tests with an UML profile. Use 
+ * it on a profile definition, for example "ProfileDef.uml", 
+ * you will get some infomration about the defined stereotypes.
+ * Using this module on a profiled UML model, for example 
+ * "ProfileTest.uml", does produce nothing.  
+ */
+transformation CheckProfileDef ( in src : UML, out dest : UML  ); 
+ 
+main()  
+{ 
+   src.objectsOfType(Stereotype)->someInfos(); 
+   src.objects()[Stereotype]->stereotype2stereotype(); 
+   src.objects()[Stereotype]->stereotype2class(); 
+   src.objects()[Class]->class2stereotype(); 
+} 
+
+-- Generates a stereoytpe in the target model for every source stereotype,
+-- if there is any. 
+query  Stereotype::someInfos() : Void 
+{  
+    log ( 'Stereotype     : ' + self.name ) ;  
+    log ( 'Qualified Name : ' + self.qualifiedName  ) ;
+    log ( 'Owner          : ', self.owner ) ;  
+    log ( 'Metaclasses    : ', self->getExtendedMetaclasses());
+}
+
+-- Generates a stereoytpe in the target model for every source stereotype,
+-- if there is any. 
+mapping in  Stereotype::stereotype2stereotype() : Stereotype 
+{  
+   init   {   log ( 'Stereotype2stereotype ' + self.name )   }  
+   name := self.name;
+}
+
+-- Generates a Class in the target model for every source stereotype,
+-- if there is any. 
+mapping in  Stereotype::stereotype2class() : Class 
+{  
+   init {  log ( 'Stereotype2Class ' + self.name ) }  
+   name := self.name;
+}
+
+-- Generates a Stereotype  in the target model for every source class
+mapping in  Class::class2stereotype() : Class 
+{  
+   init {  log ( 'Class2Stereotype ' + self.name ) }  
+   name := self.name;
+}

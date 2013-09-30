@@ -1,0 +1,75 @@
+
+modeltype UML uses 'http://www.eclipse.org/uml2/2.1.0/UML';
+
+/*
+ * This transformation on profiled UML models should check the model
+ * for some special stereotypes, for example a 'persistent' marked 
+ * class should be transformed into a bean class with special properties 
+ * and operations. 
+ */
+transformation CheckProfileTest ( in src : UML, out dest : UML  ); 
+ 
+main()  
+{ 
+   src.objects()[Class]->unmarkedClass(); 
+   src.objects()[Class]->markedClass(); 
+} 
+
+mapping Class::unmarkedClass() : Class 
+when { not self.isStereotyped() }
+{  
+	name := self.name;
+}
+
+-- generates a target component for every 'persistent' marked source class 
+mapping Class::markedClass() : Package  
+when { self.isStereotypedBy('persistent') }
+--when { self.ownIsStereotypedBy('persistent') } -- works as well
+{  
+	name := 'EB_'+self.name;
+	packagedElement += object Class { name := self.name; };
+	packagedElement += Sequence 
+	{
+	   object Interface { name := 'Home_' + self.name;},
+	   object Interface { name := 'Home_' + self.name;}
+	};
+}
+
+/*
+ * Pitily the standard QVT functions on stereotypes are not supported, 
+ *  so I need some queries concerning stereotypes for my own.
+ */ 
+ 
+-- any stereotype applied ?
+-- isStereotyped is QVT standard, yet not supported by QVTO  
+query Class::isStereotyped() : Boolean
+{ 
+   var stereotypes : Sequence (Stereotype) := null; 
+   stereotypes += self.getAppliedStereotypes();
+   return if ( stereotypes->isEmpty() ) then false else true  endif;
+} 
+
+-- Is stereotype, specified by name, applied to Class ?
+query Class::isStereotypedBy ( str : String ) : Boolean  
+{  
+   var st : Stereotype := null;
+   st := self.getAppliedStereotype( 'ProfileDef::' + str );  
+   return if ( self.isStereotypeApplied(st) ) then true else false endif;
+}
+
+-- yet another isStereotypedBy, my own one
+query Class::ownIsStereotypedBy ( str : String ) : Boolean  
+{  
+   var ost  : OrderedSet(Stereotype):= null;
+   ost += self.getAppliedStereotypes();
+/*
+   there are several possibilites, first:
+   var sst  : Set(Stereotype):= null;
+   sst += ost->select (  p  | p.name = str);
+   return if (not sst->isEmpty()) then true else false endif;
+*/
+   -- or second 
+   var stn : Set (String) := null;
+   stn += ost->select (  p  | p.name = str)->collect (p | p.name);
+   return if ( stn->includes(str)) then true else false endif;
+}

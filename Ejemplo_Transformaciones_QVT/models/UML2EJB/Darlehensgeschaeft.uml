@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="Darlehensgeschaeft">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="Wohnungsbaufinanzierung">
+    <packagedElement xmi:type="uml:Class" xmi:id="_vXFn8DQQEd2d-9acnKjAdQ" name="Immobilie" clientDependency="_arBRkDxgEd280-g4nUTgzg">
+      <ownedAttribute xmi:id="_4IjyQjSMEd2mnbunLTmcxQ" name="flur" visibility="public" type="_Bp5wODSOEd2mnbunLTmcxQ"/>
+      <ownedAttribute xmi:id="_5uCiUjSMEd2mnbunLTmcxQ" name="flurstueck" visibility="public" type="_Bp5wODSOEd2mnbunLTmcxQ"/>
+      <ownedAttribute xmi:id="_9hOgEjSMEd2mnbunLTmcxQ" name="grundbuch" visibility="public" type="_Bp5wODSOEd2mnbunLTmcxQ"/>
+      <ownedAttribute xmi:id="_O3sAIjSOEd2mnbunLTmcxQ" name="lage" type="_Hc7sEDxgEd280-g4nUTgzg"/>
+      <ownedOperation xmi:id="_fMmbIHWfEd2_isg8mj3vUA" name="getImmobilie">
+        <ownedParameter xmi:id="_mzIHoHWfEd2_isg8mj3vUA" type="_vXFn8DQQEd2d-9acnKjAdQ" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_vw3Z6DQQEd2d-9acnKjAdQ" name="Kunde" clientDependency="_Z3T8sDxgEd280-g4nUTgzg">
+      <ownedAttribute xmi:id="_AWbLkjSNEd2mnbunLTmcxQ" name="name" type="_Bp5wODSOEd2mnbunLTmcxQ"/>
+      <ownedAttribute xmi:id="_BH5EwjSNEd2mnbunLTmcxQ" name="vorname" type="_Bp5wODSOEd2mnbunLTmcxQ"/>
+      <ownedAttribute xmi:id="_B7mZojSNEd2mnbunLTmcxQ" name="alter" type="__R5-EDSNEd2mnbunLTmcxQ"/>
+      <ownedAttribute xmi:id="_CnQlwjSNEd2mnbunLTmcxQ" name="wohnort" type="_Hc7sEDxgEd280-g4nUTgzg"/>
+      <ownedOperation xmi:id="_tmsGIHWfEd2_isg8mj3vUA" name="getKunde">
+        <ownedParameter xmi:id="_vEtjUHWfEd2_isg8mj3vUA" type="_vw3Z6DQQEd2d-9acnKjAdQ" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3X_jWDQQEd2d-9acnKjAdQ" name="Darlehen">
+      <ownedAttribute xmi:id="_Ef9MwjSNEd2mnbunLTmcxQ" name="leistung" type="_C-Y24DSOEd2mnbunLTmcxQ"/>
+      <ownedAttribute xmi:id="_FSLT4jSNEd2mnbunLTmcxQ" name="zahlungsmodalitaet" type="__R5-EDSNEd2mnbunLTmcxQ"/>
+      <ownedAttribute xmi:id="_I8bYEjSNEd2mnbunLTmcxQ" name="nennbetrag" type="_C-Y24DSOEd2mnbunLTmcxQ"/>
+      <ownedAttribute xmi:id="_LGjtUjSNEd2mnbunLTmcxQ" name="zins" type="_C-Y24DSOEd2mnbunLTmcxQ"/>
+      <ownedAttribute xmi:id="_MGL-UjSNEd2mnbunLTmcxQ" name="beginn" type="_Bp5wODSOEd2mnbunLTmcxQ"/>
+      <ownedAttribute xmi:id="_NFgtUjSNEd2mnbunLTmcxQ" name="ende" type="_Bp5wODSOEd2mnbunLTmcxQ"/>
+      <ownedOperation xmi:id="_v3OlYHWfEd2_isg8mj3vUA" name="getDarlehen">
+        <ownedParameter xmi:id="_4OLpQHWfEd2_isg8mj3vUA" type="_3X_jWDQQEd2d-9acnKjAdQ" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ATAWiDQREd2d-9acnKjAdQ" name="Darlehenssicherheit" memberEnd="_ATAWiTQREd2d-9acnKjAdQ _ATAWjDQREd2d-9acnKjAdQ">
+      <ownedEnd xmi:id="_ATAWiTQREd2d-9acnKjAdQ" name="" type="_3X_jWDQQEd2d-9acnKjAdQ" isUnique="false" association="_ATAWiDQREd2d-9acnKjAdQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ATAWijQREd2d-9acnKjAdQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ATAWizQREd2d-9acnKjAdQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_ATAWjDQREd2d-9acnKjAdQ" name="" type="_vXFn8DQQEd2d-9acnKjAdQ" isUnique="false" association="_ATAWiDQREd2d-9acnKjAdQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ATAWjTQREd2d-9acnKjAdQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ATAWjjQREd2d-9acnKjAdQ"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_BT-ERjQREd2d-9acnKjAdQ" name="Darlehensgeschaeft" memberEnd="_BT-ERzQREd2d-9acnKjAdQ _BT-ESjQREd2d-9acnKjAdQ">
+      <ownedEnd xmi:id="_BT-ERzQREd2d-9acnKjAdQ" name="" type="_3X_jWDQQEd2d-9acnKjAdQ" isUnique="false" association="_BT-ERjQREd2d-9acnKjAdQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BT-ESDQREd2d-9acnKjAdQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BT-ESTQREd2d-9acnKjAdQ"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_BT-ESjQREd2d-9acnKjAdQ" name="" type="_vw3Z6DQQEd2d-9acnKjAdQ" isUnique="false" association="_BT-ERjQREd2d-9acnKjAdQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BT-ESzQREd2d-9acnKjAdQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BT-ETDQREd2d-9acnKjAdQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_QnzaSDSLEd2mnbunLTmcxQ" name="Hausbesitzer" memberEnd="_QnzaSTSLEd2mnbunLTmcxQ _QnzaTDSLEd2mnbunLTmcxQ">
+      <ownedEnd xmi:id="_QnzaSTSLEd2mnbunLTmcxQ" name="" type="_vXFn8DQQEd2d-9acnKjAdQ" isUnique="false" association="_QnzaSDSLEd2mnbunLTmcxQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QnzaSjSLEd2mnbunLTmcxQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QnzaSzSLEd2mnbunLTmcxQ"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_QnzaTDSLEd2mnbunLTmcxQ" name="" type="_vw3Z6DQQEd2d-9acnKjAdQ" isUnique="false" association="_QnzaSDSLEd2mnbunLTmcxQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QnzaTTSLEd2mnbunLTmcxQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QnzaTjSLEd2mnbunLTmcxQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Z3T8sDxgEd280-g4nUTgzg" supplier="_Hc7sEDxgEd280-g4nUTgzg" client="_vw3Z6DQQEd2d-9acnKjAdQ"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_arBRkDxgEd280-g4nUTgzg" supplier="_Hc7sEDxgEd280-g4nUTgzg" client="_vXFn8DQQEd2d-9acnKjAdQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_7RNZ4HQ1Ed2oNtQ5KsEc4Q" name="Datentypen">
+    <packagedElement xmi:type="uml:DataType" xmi:id="__R5-EDSNEd2mnbunLTmcxQ" name="Integer"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_C-Y24DSOEd2mnbunLTmcxQ" name="Double"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_Bp5wODSOEd2mnbunLTmcxQ" name="String"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_Hc7sEDxgEd280-g4nUTgzg" name="Adresse">
+      <ownedAttribute xmi:id="_IUp-QDxgEd280-g4nUTgzg" name="strasse" type="_Bp5wODSOEd2mnbunLTmcxQ" aggregation="composite"/>
+      <ownedAttribute xmi:id="_Ld0uoDxgEd280-g4nUTgzg" name="hausnummer" type="__R5-EDSNEd2mnbunLTmcxQ" aggregation="composite"/>
+      <ownedAttribute xmi:id="_MyA6YDxgEd280-g4nUTgzg" name="ort" type="_Bp5wODSOEd2mnbunLTmcxQ" aggregation="composite"/>
+      <ownedAttribute xmi:id="_Np5koDxgEd280-g4nUTgzg" name="postleitzahl" type="__R5-EDSNEd2mnbunLTmcxQ" aggregation="composite"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_Zi7acN7REdy7g67NfImzOw" name="Bank">
+  <packagedElement xmi:type="uml:Package" xmi:id="_263FsBe9Ed6_4oZ10yYqsw" name="Bank">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Zi7aeN7REdy7g67NfImzOw" name="Bank">
+      <ownedAttribute xmi:id="_Zi7adt7REdy7g67NfImzOw" name="Bank_tid" type="_Zi7act7REdy7g67NfImzOw"/>
+      <ownedAttribute xmi:id="_Zi7aet7REdy7g67NfImzOw" name="Bank_name" type="_Zi7adN7REdy7g67NfImzOw"/>
+      <ownedAttribute xmi:id="_Zi7afN7REdy7g67NfImzOw" name="Bank_address" type="_Zi7adN7REdy7g67NfImzOw"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_6xLP8Be9Ed6_4oZ10yYqsw" name="Kunde">
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZjEkYt7REdy7g67NfImzOw" name="Kunde">
+      <ownedAttribute xmi:id="_ZjEkYN7REdy7g67NfImzOw" name="Kunde_tid" type="_Zi7act7REdy7g67NfImzOw"/>
+      <ownedAttribute xmi:id="_ZjEkZN7REdy7g67NfImzOw" name="Kunde_name" type="_Zi7adN7REdy7g67NfImzOw"/>
+      <ownedAttribute xmi:id="_ZjEkZt7REdy7g67NfImzOw" name="Kunde_countid" type="_Zi7act7REdy7g67NfImzOw"/>
+      <ownedAttribute xmi:id="_ZjEkaN7REdy7g67NfImzOw" name="Kunde_homeaddress" type="_Zi7adN7REdy7g67NfImzOw"/>
+      <ownedAttribute xmi:id="_ZjEkat7REdy7g67NfImzOw" name="Kunde_officeaddress" type="_Zi7adN7REdy7g67NfImzOw"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_-b4AEBe9Ed6_4oZ10yYqsw" name="Adresse">
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZjEkbt7REdy7g67NfImzOw" name="Adresse">
+      <ownedAttribute xmi:id="_ZjEkbN7REdy7g67NfImzOw" name="Adresse_tid" type="_Zi7act7REdy7g67NfImzOw"/>
+      <ownedAttribute xmi:id="_ZjEkcN7REdy7g67NfImzOw" name="Adresse_street" type="_Zi7adN7REdy7g67NfImzOw"/>
+      <ownedAttribute xmi:id="_ZjEkct7REdy7g67NfImzOw" name="Adresse_number" type="_Zi7act7REdy7g67NfImzOw"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_AJZR0Be-Ed6_4oZ10yYqsw" name="Datentypen">
+    <packagedElement xmi:type="uml:DataType" xmi:id="_Zi7adN7REdy7g67NfImzOw" name="String"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_Zi7act7REdy7g67NfImzOw" name="int"/>
+  </packagedElement>
+</uml:Model>

@@ -925,25 +925,25 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
-          </collection>
-          <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
           </collection>
         </value>
       </result>
@@ -971,43 +971,43 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
-          </collection>
-          <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
-          </collection>
-          <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.8"/>
           </collection>
           <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
+          </collection>
+          <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.2"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
           </collection>
         </value>
       </result>
@@ -1121,25 +1121,25 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
-          </collection>
-          <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.7"/>
-          </collection>
-          <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.2"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.4"/>
           </collection>
           <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.7"/>
+          </collection>
+          <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.1"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.2"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
           </collection>
         </value>
       </result>
@@ -1401,28 +1401,28 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.7"/>
           </collection>
           <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.4"/>
+          </collection>
+          <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.1"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.4"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.2"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
-          </collection>
-          <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
-          </collection>
-          <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
           </collection>
         </value>
       </result>
@@ -1724,46 +1724,46 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
-          </collection>
-          <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
-          </collection>
-          <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
-          </collection>
-          <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
-          </collection>
-          <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
-          </collection>
-          <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.2"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.8"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.2"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
           </collection>
         </value>
       </result>
@@ -2109,19 +2109,19 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.2"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
           </collection>
         </value>
       </result>
@@ -2173,19 +2173,19 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
           </collection>
           <collection>
             <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.2"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
+            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
           </collection>
         </value>
       </result>

@@ -1,0 +1,175 @@
+
+/*
+ * This is the UML2EJB transformation as discussed in my QVT-O book. 
+ * It transforms platform independent class diagrams into platform
+ * dependent class diagrams that represent a model for J2EE architectures.   
+ */
+modeltype UML uses 'http://www.eclipse.org/uml2/2.1.0/UML';
+
+transformation UML2EJB ( in umlfk : UML, out umlejb : UML  ); 
+
+main() 
+{
+   umlfk.objectsOfType(Package)->map transformPackage();
+-- in shorthand version:
+-- umlfk[Package]->map transformPackage();
+}
+
+-- A package contains nested packages and package elements like 
+-- classes, datatypes, interfaces. 
+mapping Package::transformPackage() : Package 
+{
+   init { log ('transformPackage'); }	
+   name   := self.name;
+   nestedPackage += self.ownedElement[Package]->map transformPackage();
+   nestedPackage += self.ownedElement[Class]->map transformClasses();
+   packagedElement += self.ownedElement[DataType]->map transformDatatypes();
+   packagedElement += self.ownedElement[Interface]->map transformInterfaces();
+   packagedElement += self.ownedElement[Association]->map transformAssociations();
+}
+
+--------------------------------------------------------------------------
+
+-- The Classes are of the main interest. Any  business class will be transformed
+-- into a SessionBean-component, that resides in a package of its own.  
+mapping  in Class::transformClasses () : Package 
+{ 
+   init { log ('transformClasses'); }	
+   name := 'SB_' + self.name;
+   
+   -- this is the SessionBean class
+   packagedElement += object Class
+   {
+   	  name     := self.name;
+
+   	  -- its privated and been accessed via its interfaces
+      visibility := VisibilityKind::private;
+       
+      -- the business attributes and operations
+      ownedAttribute += self.ownedAttribute->map transformAttributes();
+      ownedOperation += self.ownedOperation->map transformOperations();
+
+      -- the getter- and setter-methods for the business attributes
+      -- The argument is used for the log message. If we don't want log messages, 
+      -- we don't need this argument.
+      ownedOperation += self.ownedAttribute->map getter('transformClasses');
+      ownedOperation += self.ownedAttribute->map setter('transformClasses');
+      
+      -- creating the SbessionBean operations
+      ownedOperation += getSbOperations();
+   };
+
+   -- inline creation of the home interface
+   packagedElement += object Interface
+   {
+   	  name := self.name + 'Home';
+      visibility := VisibilityKind::public; 
+      ownedOperation += getHomeMethods();
+   };
+
+   -- inline creation of the remote interface
+   packagedElement += object Interface
+   {
+   	  name := self.name + 'Remote';
+      visibility := VisibilityKind::public; 
+      
+      -- the getter and setter should be published as business methods 
+      ownedOperation += self.ownedAttribute->map getter('Remote');
+      ownedOperation += self.ownedAttribute->map setter('Remote');
+   };
+} 
+
+mapping in Property::getter(  fromwhere : String ) : Operation 
+{ 
+   init { log ('getter ' + fromwhere); }	
+   name       := 'get' + self.name.firstToUpper();
+   -- the return type of the getter is the type of the business attribute
+   -- type       := self.type;
+   visibility := VisibilityKind::public; 	
+} 
+
+mapping in Property::setter( fromwhere : String ) : Operation 
+{ 
+   init { log ('setter ' + fromwhere ); }	
+   name       := 'set' + self.name.firstToUpper();
+   visibility := VisibilityKind::public;
+
+   -- setter should have arguments, at least one for the value to be set
+   ownedParameter += object Parameter 
+   {
+      direction := ParameterDirectionKind::_in;
+      name      := 'p' + self.name.firstToUpper();
+      type      := self.type;
+   }
+} 
+
+-- specified session bean controle operations
+helper getSbOperations() : Sequence(Operation)
+{
+     return Sequence 
+     { 
+         object Operation { name := 'setSessionContext'; visibility := VisibilityKind::public; }, 
+         object Operation { name := 'ejbCreate';  visibility := VisibilityKind::public; },
+         object Operation { name := 'ejbPostCreate';  visibility := VisibilityKind::public; }, 
+         object Operation { name := 'ejbActivate';  visibility := VisibilityKind::public; },
+         object Operation { name := 'ejbPassivate';  visibility := VisibilityKind::public; }, 
+         object Operation { name := 'ejbRemove'; visibility := VisibilityKind::public;  }
+     };
+}
+
+-- publishing session bean controle operations
+helper getHomeMethods() : Sequence(Operation)
+{
+     return Sequence 
+     { 
+         object Operation { name := 'create' ;  visibility := VisibilityKind::public; },
+         object Operation { name := 'remove'; visibility := VisibilityKind::public;},
+         object Operation { name := 'getEJBMetaData'; visibility := VisibilityKind::public; },
+         object Operation { name := 'getHomeHandle'; visibility := VisibilityKind::public; }
+     };
+} 
+
+--------------------------------------------------------------------------
+
+-- datatypes and interfaces will be treated as they are
+mapping  in DataType::transformDatatypes () : DataType 
+{ 
+   name := self.name;
+   ownedAttribute += self.ownedAttribute->map transformAttributes();
+   ownedOperation += self.ownedOperation->map transformOperations();
+} 
+
+mapping  in Interface::transformInterfaces () : Interface 
+{ 
+   name := self.name;
+   ownedAttribute += self.ownedAttribute->map transformAttributes();
+   ownedOperation += self.ownedOperation->map transformOperations();
+} 
+
+-- there is not yet a special treatment of assiciations
+mapping  in Association::transformAssociations () : Association 
+{ 
+   name := self.name;
+} 
+
+--------------------------------------------------------------------------
+
+mapping in Property::transformAttributes() : Property 
+{ 
+   name := self.name;
+   type := self.type;
+   visibility := 
+   if (self._class.oclIsUndefined())
+   then  self.visibility
+   else   VisibilityKind::private
+   endif;
+} 
+
+mapping in Operation::transformOperations() : Operation
+{ 
+   name       := self.name;	
+   self.setType(self.type);
+   visibility := self.visibility; 	
+} 
+
+ 

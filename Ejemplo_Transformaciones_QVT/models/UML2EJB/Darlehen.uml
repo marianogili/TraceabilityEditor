@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="ModelDarlehen">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="Darlehen">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Cn8VwBbrEd6v-emKafzT6A" name="Konto">
+      <ownedAttribute xmi:id="_JP7WYBbrEd6v-emKafzT6A" name="tilgungssatz">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_MqZSIBbrEd6v-emKafzT6A" name="zahlungsmodalitaet">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PcTZEBbrEd6v-emKafzT6A" name="nennbetrag">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_SEcgABbrEd6v-emKafzT6A" name="zinssatz">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Wk-E4BbrEd6v-emKafzT6A" name="beginn">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Xahz4BbrEd6v-emKafzT6A" name="ende">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_D-Lv8BbrEd6v-emKafzT6A" name="Immobilie" clientDependency="_TdMl9BeLEd6ZMsjL8IpgSg">
+      <ownedAttribute xmi:id="_bMJEUBbrEd6v-emKafzT6A" name="lage" type="_5hvw0BbrEd6v-emKafzT6A"/>
+      <ownedAttribute xmi:id="_cqgfwBbrEd6v-emKafzT6A" name="grundbuch">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_d_QsMBbrEd6v-emKafzT6A" name="flur">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_e05TsBbrEd6v-emKafzT6A" name="flurstueck">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hGvagBbrEd6v-emKafzT6A" name="verkehrswert">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_kDgGkBbrEd6v-emKafzT6A" name="beleihungswert">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_E4_yYBbrEd6v-emKafzT6A" name="Person" clientDependency="_SXds9ReLEd6ZMsjL8IpgSg">
+      <ownedAttribute xmi:id="_tLLcwBbrEd6v-emKafzT6A" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uFBO0BbrEd6v-emKafzT6A" name="vorname">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vCWZwBbrEd6v-emKafzT6A" name="alter">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_wJPJUBbrEd6v-emKafzT6A" name="einkommen">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_xAPCwBbrEd6v-emKafzT6A" name="wohnort" type="_5hvw0BbrEd6v-emKafzT6A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_5hvw0BbrEd6v-emKafzT6A" name="Ort">
+      <ownedAttribute xmi:id="_8kZCcBbrEd6v-emKafzT6A" name="strasse">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_9e1RcBbrEd6v-emKafzT6A" name="hausnummer">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_-cGK8BbrEd6v-emKafzT6A" name="stadt">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="__CAUYBbrEd6v-emKafzT6A" name="postleitzahl">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Ccca-hbsEd6v-emKafzT6A" name="darlehenssicherheit" memberEnd="_Ccca-xbsEd6v-emKafzT6A _Ccca_hbsEd6v-emKafzT6A">
+      <ownedEnd xmi:id="_Ccca-xbsEd6v-emKafzT6A" name="immobilie" type="_D-Lv8BbrEd6v-emKafzT6A" association="_Ccca-hbsEd6v-emKafzT6A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ccca_BbsEd6v-emKafzT6A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ccca_RbsEd6v-emKafzT6A" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_Ccca_hbsEd6v-emKafzT6A" name="konto" type="_Cn8VwBbrEd6v-emKafzT6A" isUnique="false" association="_Ccca-hbsEd6v-emKafzT6A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ccca_xbsEd6v-emKafzT6A" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CcdCABbsEd6v-emKafzT6A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_IovlKhbsEd6v-emKafzT6A" name="darlehensnehmer" memberEnd="_IovlKxbsEd6v-emKafzT6A _IovlLhbsEd6v-emKafzT6A">
+      <ownedEnd xmi:id="_IovlKxbsEd6v-emKafzT6A" name="person" type="_E4_yYBbrEd6v-emKafzT6A" isUnique="false" association="_IovlKhbsEd6v-emKafzT6A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IovlLBbsEd6v-emKafzT6A" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IovlLRbsEd6v-emKafzT6A" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_IovlLhbsEd6v-emKafzT6A" name="konto" type="_Cn8VwBbrEd6v-emKafzT6A" association="_IovlKhbsEd6v-emKafzT6A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IovlLxbsEd6v-emKafzT6A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IovlMBbsEd6v-emKafzT6A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_MJuYkBbsEd6v-emKafzT6A" name="eigentuemer" memberEnd="_MJuYkRbsEd6v-emKafzT6A _MJuYlBbsEd6v-emKafzT6A">
+      <ownedEnd xmi:id="_MJuYkRbsEd6v-emKafzT6A" name="immobilie" type="_D-Lv8BbrEd6v-emKafzT6A" isUnique="false" association="_MJuYkBbsEd6v-emKafzT6A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MJuYkhbsEd6v-emKafzT6A" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MJuYkxbsEd6v-emKafzT6A" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_MJuYlBbsEd6v-emKafzT6A" name="person" type="_E4_yYBbrEd6v-emKafzT6A" isUnique="false" association="_MJuYkBbsEd6v-emKafzT6A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MJuYlRbsEd6v-emKafzT6A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MJuYlhbsEd6v-emKafzT6A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_SXds9ReLEd6ZMsjL8IpgSg" name="Wohnort" supplier="_5hvw0BbrEd6v-emKafzT6A" client="_E4_yYBbrEd6v-emKafzT6A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_TdMl9BeLEd6ZMsjL8IpgSg" name="Lage" supplier="_5hvw0BbrEd6v-emKafzT6A" client="_D-Lv8BbrEd6v-emKafzT6A"/>
+  </packagedElement>
+</uml:Model>
