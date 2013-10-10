@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<traceeditor:TraceEditor xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:traceeditor="http://traceeditor/1.0">
+  <dashboard>
+    <sourceArtefacts name="Source_790f6e6" type="//@configuration/@typeArtefacts.4"/>
+    <sourceArtefacts name="Source_727bb012" type="//@configuration/@typeArtefacts.4"/>
+    <sourceArtefacts name="Source_2f392793" type="//@configuration/@typeArtefacts.5"/>
+    <sourceArtefacts name="Source_1c2320e5" type="//@configuration/@typeArtefacts.5"/>
+    <sourceArtefacts name="Source_760e120d" type="//@configuration/@typeArtefacts.4"/>
+    <sourceArtefacts name="Source_3cfbe5d7" type="//@configuration/@typeArtefacts.7"/>
+    <sourceArtefacts name="Source_42320933" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_2c9d1b58" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_71db0e59" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_285f038b" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_455814d3" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_7981e696" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_75f6cd66" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_65f1a1d0" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_9c3db78" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_30db03a1" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_6289577a" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_6a398d4e" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_6e61181b" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_72ef995" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_444c877b" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_68aa7658" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_6aee4986" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_6d5366b5" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_3acc78a5" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_7b38a361" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_36fefc0e" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_16379007" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_5515d38d" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_322ace3" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_5c522025" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_2884928c" type="//@configuration/@typeArtefacts.4"/>
+    <sourceArtefacts name="Source_1ae9044a" type="//@configuration/@typeArtefacts.7"/>
+    <sourceArtefacts name="Source_4eacee0d" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_4b5916cf" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_785f9dab" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_aa13aca" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_1515c866" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_64ad5095" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_709d8795" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_32ad4bef" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_20bf7812" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_38f243d" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_32e5c260" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_46a9749" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_716cc546" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_1d7198cf" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_7c2c14cb" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_5484e0e6" type="//@configuration/@typeArtefacts.4"/>
+    <sourceArtefacts name="Source_2b52c7ab" type="//@configuration/@typeArtefacts.7"/>
+    <sourceArtefacts name="Source_7754284f" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_140d9071" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_7aa31cc9" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_40c7e8ab" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_e809696" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_476248f1" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_58176772" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_3855bb5b" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_68fda262" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_182d88db" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_588aaa7d" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_7fd4b6c9" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_1fb76b6d" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_70469176" type="//@configuration/@typeArtefacts.6"/>
+    <sourceArtefacts name="Source_38599338" type="//@configuration/@typeArtefacts.6"/>
+    <targetArtefacts name="Target_26e052b5" type="//@configuration/@typeArtefacts.0"/>
+    <targetArtefacts name="Target_2a6fe676" type="//@configuration/@typeArtefacts.0"/>
+    <targetArtefacts name="Target_32ddbda2" type="//@configuration/@typeArtefacts.3"/>
+    <targetArtefacts name="Target_45a75561" type="//@configuration/@typeArtefacts.3"/>
+    <targetArtefacts name="Target_49bb4861" type="//@configuration/@typeArtefacts.0"/>
+    <targetArtefacts name="Target_14f5a35b" type="//@configuration/@typeArtefacts.0"/>
+    <targetArtefacts name="Target_1087424c" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_7986fc77" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_6dd89c3d" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_33c145bd" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_5e247a6e" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_2e7a92a" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_1aa8c1a4" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_86b47f6" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_8b39f59" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_3c0409ae" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_2e0f13c7" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_175ead3a" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_4df4af96" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_5b449c4f" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_1c8b4920" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_229dd4d3" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_b1053f7" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_a781903" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_5f7ced56" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_8a1182c" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_26166050" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_59b64db7" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_3e893bda" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_4fbc4ba" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_3fab6caa" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_745e106a" type="//@configuration/@typeArtefacts.0"/>
+    <targetArtefacts name="Target_59bbf82a" type="//@configuration/@typeArtefacts.0"/>
+    <targetArtefacts name="Target_17f25757" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_28fc9d5d" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_88396fa" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_4f5c0df6" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_30f2c733" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_4536c876" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_6a629171" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_68cd1c8d" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_38cedb25" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_636cc8e8" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_7b47a43c" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_5639acdf" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_438701a3" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_25793b73" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_43ce695" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_176de5b6" type="//@configuration/@typeArtefacts.0"/>
+    <targetArtefacts name="Target_28cf9149" type="//@configuration/@typeArtefacts.0"/>
+    <targetArtefacts name="Target_1918150f" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_4497d658" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_183b47ff" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_7e60301d" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_c7817b2" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_ae70730" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_605a92f1" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_4aa2ff5c" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_394b7ef2" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_2e1f9c89" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_254e5797" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_75802690" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_b4cd64d" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_36cc67f3" type="//@configuration/@typeArtefacts.2"/>
+    <targetArtefacts name="Target_6fe7c9d3" type="//@configuration/@typeArtefacts.2"/>
+    <transformations name="transformPackage">
+      <traceLinks name="Trace_75c3c208" sources="//@dashboard/@sourceArtefacts.0" targets="//@dashboard/@targetArtefacts.0" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_6f7d79f" sources="//@dashboard/@sourceArtefacts.1" targets="//@dashboard/@targetArtefacts.1" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_34e17b3d" sources="//@dashboard/@sourceArtefacts.4" targets="//@dashboard/@targetArtefacts.4" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_33263895" sources="//@dashboard/@sourceArtefacts.31" targets="//@dashboard/@targetArtefacts.31" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_7d64700c" sources="//@dashboard/@sourceArtefacts.48" targets="//@dashboard/@targetArtefacts.48" type="//@configuration/@linkTypes.0"/>
+    </transformations>
+    <transformations name="transformDatatypes">
+      <traceLinks name="Trace_796d0b4b" sources="//@dashboard/@sourceArtefacts.2" targets="//@dashboard/@targetArtefacts.2" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_6600a734" sources="//@dashboard/@sourceArtefacts.3" targets="//@dashboard/@targetArtefacts.3" type="//@configuration/@linkTypes.0"/>
+    </transformations>
+    <transformations name="transformClasses">
+      <traceLinks name="Trace_3f61fcea" sources="//@dashboard/@sourceArtefacts.5" targets="//@dashboard/@targetArtefacts.5" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_124cd86f" sources="//@dashboard/@sourceArtefacts.32" targets="//@dashboard/@targetArtefacts.32" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_4cf86424" sources="//@dashboard/@sourceArtefacts.49" targets="//@dashboard/@targetArtefacts.49" type="//@configuration/@linkTypes.0"/>
+    </transformations>
+    <transformations name="transformAttributes">
+      <traceLinks name="Trace_3a238728" sources="//@dashboard/@sourceArtefacts.6" targets="//@dashboard/@targetArtefacts.6" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_727e70e9" sources="//@dashboard/@sourceArtefacts.7" targets="//@dashboard/@targetArtefacts.7" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_4b270bb8" sources="//@dashboard/@sourceArtefacts.8" targets="//@dashboard/@targetArtefacts.8" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_70728393" sources="//@dashboard/@sourceArtefacts.9" targets="//@dashboard/@targetArtefacts.9" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_6e1c6191" sources="//@dashboard/@sourceArtefacts.10" targets="//@dashboard/@targetArtefacts.10" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_731568cb" sources="//@dashboard/@sourceArtefacts.33" targets="//@dashboard/@targetArtefacts.33" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_2932274" sources="//@dashboard/@sourceArtefacts.34" targets="//@dashboard/@targetArtefacts.34" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_9baeefe" sources="//@dashboard/@sourceArtefacts.35" targets="//@dashboard/@targetArtefacts.35" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_47769ef6" sources="//@dashboard/@sourceArtefacts.50" targets="//@dashboard/@targetArtefacts.50" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_3cbe4d21" sources="//@dashboard/@sourceArtefacts.51" targets="//@dashboard/@targetArtefacts.51" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_71b9d0ae" sources="//@dashboard/@sourceArtefacts.52" targets="//@dashboard/@targetArtefacts.52" type="//@configuration/@linkTypes.0"/>
+    </transformations>
+    <transformations name="getter">
+      <traceLinks name="Trace_949af11" sources="//@dashboard/@sourceArtefacts.11" targets="//@dashboard/@targetArtefacts.11" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_448489da" sources="//@dashboard/@sourceArtefacts.12" targets="//@dashboard/@targetArtefacts.12" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_59766a5a" sources="//@dashboard/@sourceArtefacts.13" targets="//@dashboard/@targetArtefacts.13" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_6d406898" sources="//@dashboard/@sourceArtefacts.14" targets="//@dashboard/@targetArtefacts.14" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_1f930b31" sources="//@dashboard/@sourceArtefacts.15" targets="//@dashboard/@targetArtefacts.15" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_8785397" sources="//@dashboard/@sourceArtefacts.21" targets="//@dashboard/@targetArtefacts.21" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_13b7e2d9" sources="//@dashboard/@sourceArtefacts.22" targets="//@dashboard/@targetArtefacts.22" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_d8e1eac" sources="//@dashboard/@sourceArtefacts.23" targets="//@dashboard/@targetArtefacts.23" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_6d7fb527" sources="//@dashboard/@sourceArtefacts.24" targets="//@dashboard/@targetArtefacts.24" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_5b4e4b9a" sources="//@dashboard/@sourceArtefacts.25" targets="//@dashboard/@targetArtefacts.25" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_4fa06aaf" sources="//@dashboard/@sourceArtefacts.36" targets="//@dashboard/@targetArtefacts.36" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_2cbc3000" sources="//@dashboard/@sourceArtefacts.37" targets="//@dashboard/@targetArtefacts.37" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_76f366f1" sources="//@dashboard/@sourceArtefacts.38" targets="//@dashboard/@targetArtefacts.38" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_5b5b9ad" sources="//@dashboard/@sourceArtefacts.42" targets="//@dashboard/@targetArtefacts.42" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_5db10fc8" sources="//@dashboard/@sourceArtefacts.43" targets="//@dashboard/@targetArtefacts.43" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_13834386" sources="//@dashboard/@sourceArtefacts.44" targets="//@dashboard/@targetArtefacts.44" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_5e3389d6" sources="//@dashboard/@sourceArtefacts.53" targets="//@dashboard/@targetArtefacts.53" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_99e70eb" sources="//@dashboard/@sourceArtefacts.54" targets="//@dashboard/@targetArtefacts.54" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_107593c" sources="//@dashboard/@sourceArtefacts.55" targets="//@dashboard/@targetArtefacts.55" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_33483cc4" sources="//@dashboard/@sourceArtefacts.59" targets="//@dashboard/@targetArtefacts.59" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_4b8d8229" sources="//@dashboard/@sourceArtefacts.60" targets="//@dashboard/@targetArtefacts.60" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_375c787f" sources="//@dashboard/@sourceArtefacts.61" targets="//@dashboard/@targetArtefacts.61" type="//@configuration/@linkTypes.0"/>
+    </transformations>
+    <transformations name="setter">
+      <traceLinks name="Trace_6ec3ce28" sources="//@dashboard/@sourceArtefacts.16" targets="//@dashboard/@targetArtefacts.16" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_7913dce7" sources="//@dashboard/@sourceArtefacts.17" targets="//@dashboard/@targetArtefacts.17" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_70bffcb" sources="//@dashboard/@sourceArtefacts.18" targets="//@dashboard/@targetArtefacts.18" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_24c66c0a" sources="//@dashboard/@sourceArtefacts.19" targets="//@dashboard/@targetArtefacts.19" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_5edf1762" sources="//@dashboard/@sourceArtefacts.20" targets="//@dashboard/@targetArtefacts.20" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_71459a4a" sources="//@dashboard/@sourceArtefacts.26" targets="//@dashboard/@targetArtefacts.26" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_1094aa5f" sources="//@dashboard/@sourceArtefacts.27" targets="//@dashboard/@targetArtefacts.27" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_103d4b7a" sources="//@dashboard/@sourceArtefacts.28" targets="//@dashboard/@targetArtefacts.28" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_28263eea" sources="//@dashboard/@sourceArtefacts.29" targets="//@dashboard/@targetArtefacts.29" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_66ec893d" sources="//@dashboard/@sourceArtefacts.30" targets="//@dashboard/@targetArtefacts.30" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_65eb9539" sources="//@dashboard/@sourceArtefacts.39" targets="//@dashboard/@targetArtefacts.39" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_4d920575" sources="//@dashboard/@sourceArtefacts.40" targets="//@dashboard/@targetArtefacts.40" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_2da46c1c" sources="//@dashboard/@sourceArtefacts.41" targets="//@dashboard/@targetArtefacts.41" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_ec61c6c" sources="//@dashboard/@sourceArtefacts.45" targets="//@dashboard/@targetArtefacts.45" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_7073fe07" sources="//@dashboard/@sourceArtefacts.46" targets="//@dashboard/@targetArtefacts.46" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_4f2ab73e" sources="//@dashboard/@sourceArtefacts.47" targets="//@dashboard/@targetArtefacts.47" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_97372ab" sources="//@dashboard/@sourceArtefacts.56" targets="//@dashboard/@targetArtefacts.56" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_7a6d3d65" sources="//@dashboard/@sourceArtefacts.57" targets="//@dashboard/@targetArtefacts.57" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_19d9f0ae" sources="//@dashboard/@sourceArtefacts.58" targets="//@dashboard/@targetArtefacts.58" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_17eaf63e" sources="//@dashboard/@sourceArtefacts.62" targets="//@dashboard/@targetArtefacts.62" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_42cc6cb6" sources="//@dashboard/@sourceArtefacts.63" targets="//@dashboard/@targetArtefacts.63" type="//@configuration/@linkTypes.0"/>
+      <traceLinks name="Trace_7af542fc" sources="//@dashboard/@sourceArtefacts.64" targets="//@dashboard/@targetArtefacts.64" type="//@configuration/@linkTypes.0"/>
+    </transformations>
+  </dashboard>
+  <configuration>
+    <linkTypes name="Implicit"/>
+    <linkTypes name="Explicit"/>
+    <linkTypes name="Model-Model" parent="//@configuration/@linkTypes.1"/>
+    <linkTypes name="Model-Artefact" parent="//@configuration/@linkTypes.1"/>
+    <linkTypes name="Query" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="M2M" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="M2T" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="Composition" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="Update" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="Creation" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="Delete" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="Static" parent="//@configuration/@linkTypes.2"/>
+    <linkTypes name="Dinamic" parent="//@configuration/@linkTypes.2"/>
+    <linkTypes name="Satisfies" parent="//@configuration/@linkTypes.3"/>
+    <linkTypes name="Allocated-To" parent="//@configuration/@linkTypes.3"/>
+    <linkTypes name="Performs" parent="//@configuration/@linkTypes.3"/>
+    <linkTypes name="Supports" parent="//@configuration/@linkTypes.3"/>
+    <linkTypes name="Explains" parent="//@configuration/@linkTypes.3"/>
+    <linkTypes name="Dependency" parent="//@configuration/@linkTypes.11"/>
+    <linkTypes name="ConsistentWith" parent="//@configuration/@linkTypes.11"/>
+    <linkTypes name="Calls" parent="//@configuration/@linkTypes.12"/>
+    <linkTypes name="Generates" parent="//@configuration/@linkTypes.12"/>
+    <linkTypes name="Notifies" parent="//@configuration/@linkTypes.12"/>
+    <typeArtefacts name="Target_Package"/>
+    <typeArtefacts name="Target_Property"/>
+    <typeArtefacts name="Target_Operation"/>
+    <typeArtefacts name="Target_DataType"/>
+    <typeArtefacts name="Source_Package"/>
+    <typeArtefacts name="Source_DataType"/>
+    <typeArtefacts name="Source_Property"/>
+    <typeArtefacts name="Source_Class"/>
+  </configuration>
+</traceeditor:TraceEditor>

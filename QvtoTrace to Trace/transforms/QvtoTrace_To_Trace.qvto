@@ -12,7 +12,7 @@
 /*
  * Definición de los meta-modelos.
  */
-modeltype TraceEditor uses 'http://traceeditor/TraceEditor';
+modeltype TraceEditor uses 'http://traceeditor/1.0';
 modeltype QvtoTrace uses 'http:///www.eclipse.org/m2m/qvt/operational/trace.ecore';
 		
 /*

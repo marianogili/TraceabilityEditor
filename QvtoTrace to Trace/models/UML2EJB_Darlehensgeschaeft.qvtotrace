@@ -1,0 +1,2027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:Trace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http:///www.eclipse.org/m2m/qvt/operational/trace.ecore">
+  <traceRecords>
+    <mappingOperation name="transformPackage" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformPackage"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Package">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_qb8akM37EdqwVrslYOdUDA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Package">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZEDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformPackage" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformPackage"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Package">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_w8IxIM37EdqwVrslYOdUDA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Package">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZGjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformClasses" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformClasses"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Class">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_vXFn8DQQEd2d-9acnKjAdQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Package">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAcjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_4IjyQjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAdDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_5uCiUjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAdTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_9hOgEjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAdjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_O3sAIjSOEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAdzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformOperations" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformOperations"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_fMmbIHWfEd2_isg8mj3vUA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAeDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_4IjyQjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAeTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_5uCiUjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAejFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_9hOgEjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAezFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_O3sAIjSOEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAfDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_4IjyQjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAfTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_5uCiUjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAfzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_9hOgEjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAgTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_O3sAIjSOEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAgzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_4IjyQjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAkTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_5uCiUjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAkjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_9hOgEjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAkzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_O3sAIjSOEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAlDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_4IjyQjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAlTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_5uCiUjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAlzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_9hOgEjSMEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAmTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_O3sAIjSOEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAmzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformClasses" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformClasses"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Class">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_3X_jWDQQEd2d-9acnKjAdQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Package">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAOTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_Ef9MwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAOzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_FSLT4jSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAPDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_I8bYEjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAPTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_LGjtUjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAPjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_MGL-UjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAPzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_NFgtUjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAQDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformOperations" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformOperations"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_v3OlYHWfEd2_isg8mj3vUA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAQTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_Ef9MwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAQjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_FSLT4jSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAQzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_I8bYEjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWARDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_LGjtUjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWARTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_MGL-UjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWARjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_NFgtUjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWARzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_Ef9MwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWASDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_FSLT4jSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWASjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_I8bYEjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWATDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_LGjtUjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWATjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_MGL-UjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAUDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_NFgtUjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAUjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_Ef9MwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAYDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_FSLT4jSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAYTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_I8bYEjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAYjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_LGjtUjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAYzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_MGL-UjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAZDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_NFgtUjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAZTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_Ef9MwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAZjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_FSLT4jSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAaDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_I8bYEjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAajFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_LGjtUjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAbDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_MGL-UjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAbjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_NFgtUjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAcDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformClasses" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformClasses"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Class">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_vw3Z6DQQEd2d-9acnKjAdQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Package">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZGzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_AWbLkjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZHTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_BH5EwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZHjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_B7mZojSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZHzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_CnQlwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZIDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformOperations" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformOperations"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_tmsGIHWfEd2_isg8mj3vUA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZITFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_AWbLkjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZIjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_BH5EwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZIzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_B7mZojSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZJDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_CnQlwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZJTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_AWbLkjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZJjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_BH5EwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZKDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_B7mZojSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZKjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_CnQlwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="transformClasses"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZLDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_AWbLkjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWALTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_BH5EwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWALjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_B7mZojSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWALzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="getter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//getter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_CnQlwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAMDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_AWbLkjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAMTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_BH5EwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAMzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_B7mZojSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWANTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="setter" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//setter"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_CnQlwjSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="fromwhere" type="String">
+        <value primitiveValue="Remote"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWANzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAssociations" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAssociations"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Association">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_BT-ERjQREd2d-9acnKjAdQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Association">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAnjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAssociations" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAssociations"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Association">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_ATAWiDQREd2d-9acnKjAdQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Association">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAnTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAssociations" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAssociations"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Association">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_QnzaSDSLEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Association">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGWAnzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformPackage" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformPackage"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Package">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_7RNZ4HQ1Ed2oNtQ5KsEc4Q"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Package">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZETFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformDatatypes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformDatatypes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="DataType">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#__R5-EDSNEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="DataType">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZEzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformDatatypes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformDatatypes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="DataType">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_C-Y24DSOEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="DataType">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZFDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformDatatypes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformDatatypes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="DataType">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_Hc7sEDxgEd280-g4nUTgzg"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="DataType">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZFTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_IUp-QDxgEd280-g4nUTgzg"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZFjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_Ld0uoDxgEd280-g4nUTgzg"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZFzFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_MyA6YDxgEd280-g4nUTgzg"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZGDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformAttributes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformAttributes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_Np5koDxgEd280-g4nUTgzg"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Property">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZGTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="transformDatatypes" package="UML2EJB" module="UML2EJB">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/UML2EJB.qvtox#//transformDatatypes"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="DataType">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="DataType">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/UML2EJB/Darlehensgeschaeft.uml#_JGVZEjFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+</trace:Trace>

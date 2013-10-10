@@ -2,12 +2,12 @@
 <trace:Trace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http:///www.eclipse.org/m2m/qvt/operational/trace.ecore">
   <traceRecords>
     <mappingOperation name="model2RDBModel" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//model2RDBModel"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//model2RDBModel"/>
     </mappingOperation>
     <context>
       <context name="self" type="Model">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#/"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#/"/>
         </value>
       </context>
     </context>
@@ -15,19 +15,19 @@
     <result>
       <result kind="OUT" name="result" type="Model">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#/"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#/"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="package2schema" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//package2schema"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//package2schema"/>
     </mappingOperation>
     <context>
       <context name="self" type="Package">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
@@ -35,19 +35,19 @@
     <result>
       <result kind="OUT" name="result" type="Schema">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="persistentClass2table" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//persistentClass2table"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//persistentClass2table"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
@@ -55,156 +55,156 @@
     <result>
       <result kind="OUT" name="result" type="Table">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.1"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.1"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.4"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.4"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.3"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.3"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.4"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.4"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.2"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.5"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.5"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -212,19 +212,19 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.1"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.1"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.4"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.4"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.2"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.2"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
           </collection>
         </value>
       </result>
@@ -232,45 +232,45 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="enumerationAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//enumerationAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//enumerationAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.2"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="enumerationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -278,7 +278,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
           </collection>
         </value>
       </result>
@@ -286,201 +286,201 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="relationshipAttribute2foreignKey" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//relationshipAttribute2foreignKey"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//relationshipAttribute2foreignKey"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@attributes.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="ForeignKey">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@foreignKeys.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@foreignKeys.0"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.1"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.8"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.8"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.2"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.3"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.3"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.4"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.4"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.2"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1/@attributes.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -488,22 +488,22 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.8"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.8"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.2"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.2"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
           </collection>
         </value>
       </result>
@@ -511,19 +511,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="enumerationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -535,19 +535,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="relationshipAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -559,201 +559,201 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.1"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.2"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.3"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.3"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.4"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.4"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.5"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.5"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5/@attributes.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -761,25 +761,25 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
           </collection>
         </value>
       </result>
@@ -787,19 +787,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="enumerationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -811,19 +811,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="relationshipAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -835,19 +835,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="associationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -859,19 +859,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="dataType2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.5"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -879,25 +879,25 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
           </collection>
         </value>
       </result>
@@ -905,19 +905,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="associationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -925,25 +925,25 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
           </collection>
         </value>
       </result>
@@ -951,19 +951,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="dataType2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -971,43 +971,43 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.2"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.8"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.2"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.8"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
           </collection>
         </value>
       </result>
@@ -1015,12 +1015,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="dataType2primaryKeyColumns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//dataType2primaryKeyColumns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//dataType2primaryKeyColumns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </context>
     </context>
@@ -1033,7 +1033,7 @@
       </parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1041,7 +1041,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.7"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.7"/>
           </collection>
         </value>
       </result>
@@ -1049,19 +1049,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="relationshipAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1069,7 +1069,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.7"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.7"/>
           </collection>
         </value>
       </result>
@@ -1077,19 +1077,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="associationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1101,19 +1101,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="dataType2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1121,25 +1121,25 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.4"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.7"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.2"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.2"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.4"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.1"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.7"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.1"/>
           </collection>
         </value>
       </result>
@@ -1147,45 +1147,45 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6/@attributes.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6/@attributes.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1193,7 +1193,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
           </collection>
         </value>
       </result>
@@ -1201,19 +1201,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="enumerationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1225,19 +1225,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="relationshipAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1249,19 +1249,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="associationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1273,19 +1273,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="dataType2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1293,7 +1293,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
           </collection>
         </value>
       </result>
@@ -1301,19 +1301,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="generalizations2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//generalizations2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//generalizations2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetClass" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1325,19 +1325,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="class2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//class2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//class2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetClass" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1345,7 +1345,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
           </collection>
         </value>
       </result>
@@ -1353,19 +1353,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="generalizations2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//generalizations2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//generalizations2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetClass" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1373,7 +1373,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
           </collection>
         </value>
       </result>
@@ -1381,19 +1381,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="class2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//class2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//class2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetClass" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </parameters>
     </parameters>
@@ -1401,28 +1401,28 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.7"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.4"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.1"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.2"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.4"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.2"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.7"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.5"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.6"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.3"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@columns.1"/>
           </collection>
         </value>
       </result>
@@ -1430,12 +1430,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="class2primaryKey" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//class2primaryKey"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//class2primaryKey"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
@@ -1443,19 +1443,19 @@
     <result>
       <result kind="OUT" name="result" type="PrimaryKey">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@primaryKey"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.0/@primaryKey"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="persistentClass2table" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//persistentClass2table"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//persistentClass2table"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </context>
     </context>
@@ -1463,52 +1463,52 @@
     <result>
       <result kind="OUT" name="result" type="Table">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6/@attributes.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6/@attributes.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -1516,7 +1516,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
           </collection>
         </value>
       </result>
@@ -1524,19 +1524,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="enumerationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -1548,19 +1548,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="relationshipAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -1572,19 +1572,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="associationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -1596,19 +1596,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="dataType2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -1616,7 +1616,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
           </collection>
         </value>
       </result>
@@ -1624,19 +1624,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="generalizations2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//generalizations2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//generalizations2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetClass" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -1648,19 +1648,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="class2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//class2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//class2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.6"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetClass" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -1668,7 +1668,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
           </collection>
         </value>
       </result>
@@ -1676,19 +1676,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="generalizations2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//generalizations2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//generalizations2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetClass" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -1696,7 +1696,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
           </collection>
         </value>
       </result>
@@ -1704,19 +1704,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="class2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//class2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//class2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetClass" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </parameters>
     </parameters>
@@ -1724,46 +1724,46 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.2"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.5"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.11"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.2"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.9"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.8"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.1"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.13"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.6"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.8"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.3"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.7"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.4"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.10"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@columns.12"/>
           </collection>
         </value>
       </result>
@@ -1771,12 +1771,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="class2primaryKey" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//class2primaryKey"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//class2primaryKey"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </context>
     </context>
@@ -1784,19 +1784,19 @@
     <result>
       <result kind="OUT" name="result" type="PrimaryKey">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@primaryKey"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.1/@primaryKey"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="persistentClass2table" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//persistentClass2table"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//persistentClass2table"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </context>
     </context>
@@ -1804,104 +1804,104 @@
     <result>
       <result kind="OUT" name="result" type="Table">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2/@attributes.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2/@attributes.0"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.2"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2/@attributes.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2/@attributes.2"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2/@attributes.3"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2/@attributes.3"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="primitiveAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//primitiveAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
@@ -1909,13 +1909,13 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.2"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.2"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
           </collection>
         </value>
       </result>
@@ -1923,45 +1923,45 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="enumerationAttribute2column" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//enumerationAttribute2column"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//enumerationAttribute2column"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2/@attributes.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2/@attributes.1"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="TableColumn">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="enumerationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//enumerationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
@@ -1969,7 +1969,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
           </collection>
         </value>
       </result>
@@ -1977,38 +1977,38 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="relationshipAttribute2foreignKey" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//relationshipAttribute2foreignKey"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//relationshipAttribute2foreignKey"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2/@attributes.4"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2/@attributes.4"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
     <result>
       <result kind="OUT" name="result" type="ForeignKey">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@foreignKeys.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@foreignKeys.0"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="dataType2primaryKeyColumns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//dataType2primaryKeyColumns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//dataType2primaryKeyColumns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.1"/>
         </value>
       </context>
     </context>
@@ -2021,7 +2021,7 @@
       </parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
@@ -2029,7 +2029,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
           </collection>
         </value>
       </result>
@@ -2037,19 +2037,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="relationshipAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//relationshipAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
@@ -2057,7 +2057,7 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
           </collection>
         </value>
       </result>
@@ -2065,19 +2065,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="associationAttributes2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//associationAttributes2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
@@ -2089,19 +2089,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="dataType2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//dataType2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetType" type="DataType">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
@@ -2109,19 +2109,19 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.2"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.2"/>
           </collection>
         </value>
       </result>
@@ -2129,19 +2129,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="generalizations2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//generalizations2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//generalizations2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetClass" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
@@ -2153,19 +2153,19 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="class2columns" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//class2columns"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//class2columns"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </context>
     </context>
     <parameters>
       <parameters name="targetClass" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </parameters>
     </parameters>
@@ -2173,19 +2173,19 @@
       <result kind="OUT" name="result" type="OrderedSet(TableColumn)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.0"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.2"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.3"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.1"/>
           </collection>
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.4"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@columns.2"/>
           </collection>
         </value>
       </result>
@@ -2193,12 +2193,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="class2primaryKey" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//class2primaryKey"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//class2primaryKey"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.2"/>
         </value>
       </context>
     </context>
@@ -2206,19 +2206,19 @@
     <result>
       <result kind="OUT" name="result" type="PrimaryKey">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@primaryKey"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0/@elements.2/@primaryKey"/>
         </value>
       </result>
     </result>
   </traceRecords>
   <traceRecords>
     <mappingOperation name="package2schemas" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
     </mappingOperation>
     <context>
       <context name="self" type="Package">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
@@ -2227,7 +2227,7 @@
       <result kind="OUT" name="result" type="Sequence(Schema)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
           </collection>
         </value>
       </result>
@@ -2235,12 +2235,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="package2schemas" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
     </mappingOperation>
     <context>
       <context name="self" type="Package">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
@@ -2249,7 +2249,7 @@
       <result kind="OUT" name="result" type="Sequence(Schema)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
           </collection>
         </value>
       </result>
@@ -2257,12 +2257,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="package2schemas" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
     </mappingOperation>
     <context>
       <context name="self" type="Package">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
@@ -2271,7 +2271,7 @@
       <result kind="OUT" name="result" type="Sequence(Schema)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
           </collection>
         </value>
       </result>
@@ -2279,12 +2279,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="package2schemas" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
     </mappingOperation>
     <context>
       <context name="self" type="Package">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
@@ -2293,7 +2293,7 @@
       <result kind="OUT" name="result" type="Sequence(Schema)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
           </collection>
         </value>
       </result>
@@ -2301,12 +2301,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="package2schemas" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
     </mappingOperation>
     <context>
       <context name="self" type="Package">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
@@ -2315,7 +2315,7 @@
       <result kind="OUT" name="result" type="Sequence(Schema)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
           </collection>
         </value>
       </result>
@@ -2323,12 +2323,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="package2schemas" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
     </mappingOperation>
     <context>
       <context name="self" type="Package">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0/@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0/@ownedElements.0"/>
         </value>
       </context>
     </context>
@@ -2337,7 +2337,7 @@
       <result kind="OUT" name="result" type="Sequence(Schema)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
           </collection>
         </value>
       </result>
@@ -2345,12 +2345,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="package2schemas" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
     </mappingOperation>
     <context>
       <context name="self" type="Package">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.0"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.0"/>
         </value>
       </context>
     </context>
@@ -2359,7 +2359,7 @@
       <result kind="OUT" name="result" type="Sequence(Schema)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
           </collection>
         </value>
       </result>
@@ -2367,12 +2367,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="package2schemas" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
     </mappingOperation>
     <context>
       <context name="self" type="Package">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#//@ownedElements.1"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#//@ownedElements.1"/>
         </value>
       </context>
     </context>
@@ -2385,12 +2385,12 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="package2schemas" package="Simpleuml_To_Rdb" module="Simpleuml_To_Rdb">
-      <runtimeMappingOperation href="platform:/resource/SimpleUML%20to%20RDB/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/Simpleuml_To_Rdb.qvtox#//package2schemas"/>
     </mappingOperation>
     <context>
       <context name="self" type="Package">
         <value>
-          <modelElement href="platform:/resource/SimpleUML to RDB/pim.simpleuml#/"/>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/Simpleuml_To_Rdb/pim.simpleuml#/"/>
         </value>
       </context>
     </context>
@@ -2399,7 +2399,7 @@
       <result kind="OUT" name="result" type="Sequence(Schema)">
         <value collectionType="OclCollection">
           <collection>
-            <modelElement href="platform:/resource/SimpleUML to RDB/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
+            <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/Simpleuml_To_Rdb/Simpleuml_To_Rdb.rdb#//@schemas.0"/>
           </collection>
         </value>
       </result>

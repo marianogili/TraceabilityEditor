@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<traceeditor:TraceEditor xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:traceeditor="http://traceeditor/1.0">
+  <dashboard>
+    <sourceArtefacts name="Source_36878389" type="//@configuration/@typeArtefacts.1"/>
+    <sourceArtefacts name="Source_2acfb9c" type="//@configuration/@typeArtefacts.1"/>
+    <sourceArtefacts name="Source_5ba56598" type="//@configuration/@typeArtefacts.3"/>
+    <targetArtefacts name="Target_2a8c8ff4" type="//@configuration/@typeArtefacts.0"/>
+    <targetArtefacts name="Target_4a9c4fbf" type="//@configuration/@typeArtefacts.1"/>
+    <targetArtefacts name="Target_38d72384" type="//@configuration/@typeArtefacts.2"/>
+    <transformations name="stereotype2stereotype">
+      <traceLinks name="Trace_19545475" sources="//@dashboard/@sourceArtefacts.0" targets="//@dashboard/@targetArtefacts.0" type="//@configuration/@linkTypes.0"/>
+    </transformations>
+    <transformations name="stereotype2class">
+      <traceLinks name="Trace_6f74da50" sources="//@dashboard/@sourceArtefacts.1" targets="//@dashboard/@targetArtefacts.1" type="//@configuration/@linkTypes.0"/>
+    </transformations>
+    <transformations name="class2stereotype">
+      <traceLinks name="Trace_60a8f35a" sources="//@dashboard/@sourceArtefacts.2" targets="//@dashboard/@targetArtefacts.2 //@dashboard/@targetArtefacts.1 //@dashboard/@targetArtefacts.0" type="//@configuration/@linkTypes.0"/>
+    </transformations>
+  </dashboard>
+  <configuration>
+    <linkTypes name="Implicit"/>
+    <linkTypes name="Explicit"/>
+    <linkTypes name="Model-Model" parent="//@configuration/@linkTypes.1"/>
+    <linkTypes name="Model-Artefact" parent="//@configuration/@linkTypes.1"/>
+    <linkTypes name="Query" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="M2M" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="M2T" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="Composition" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="Update" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="Creation" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="Delete" parent="//@configuration/@linkTypes.0"/>
+    <linkTypes name="Static" parent="//@configuration/@linkTypes.2"/>
+    <linkTypes name="Dinamic" parent="//@configuration/@linkTypes.2"/>
+    <linkTypes name="Satisfies" parent="//@configuration/@linkTypes.3"/>
+    <linkTypes name="Allocated-To" parent="//@configuration/@linkTypes.3"/>
+    <linkTypes name="Performs" parent="//@configuration/@linkTypes.3"/>
+    <linkTypes name="Supports" parent="//@configuration/@linkTypes.3"/>
+    <linkTypes name="Explains" parent="//@configuration/@linkTypes.3"/>
+    <linkTypes name="Dependency" parent="//@configuration/@linkTypes.11"/>
+    <linkTypes name="ConsistentWith" parent="//@configuration/@linkTypes.11"/>
+    <linkTypes name="Calls" parent="//@configuration/@linkTypes.12"/>
+    <linkTypes name="Generates" parent="//@configuration/@linkTypes.12"/>
+    <linkTypes name="Notifies" parent="//@configuration/@linkTypes.12"/>
+    <typeArtefacts name="Target_Stereotype"/>
+    <typeArtefacts name="Source_Stereotype"/>
+    <typeArtefacts name="Target_Class"/>
+    <typeArtefacts name="Source_Class"/>
+  </configuration>
+</traceeditor:TraceEditor>

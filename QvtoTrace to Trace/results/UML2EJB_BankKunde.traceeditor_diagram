@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:traceeditor="http://traceeditor/1.0" xmi:id="_ERa3kDFrEeOJOK9V9SGOsg" type="TraceEditor" measurementUnit="Pixel">
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_ERa3kTFrEeOJOK9V9SGOsg"/>
+  <element xmi:type="traceeditor:TraceEditor" href="UML2EJB_BankKunde.traceeditor#/"/>
+</notation:Diagram>
