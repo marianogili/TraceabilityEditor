@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_3o9jQDFfEeOQOozJnHVNQQ" name="ModelDarlehen">
+  <packagedElement xmi:type="uml:Package" xmi:id="_3o9jQTFfEeOQOozJnHVNQQ" name="Darlehen">
+    <packagedElement xmi:type="uml:Package" xmi:id="_3o9jQjFfEeOQOozJnHVNQQ" name="SB_Immobilie">
+      <packagedElement xmi:type="uml:Class" xmi:id="_3o9jQzFfEeOQOozJnHVNQQ" name="Immobilie" visibility="private">
+        <ownedAttribute xmi:id="_3o9jRDFfEeOQOozJnHVNQQ" name="lage" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehen.uml#_5hvw0BbrEd6v-emKafzT6A"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o9jRTFfEeOQOozJnHVNQQ" name="grundbuch" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o9jRjFfEeOQOozJnHVNQQ" name="flur" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o9jRzFfEeOQOozJnHVNQQ" name="flurstueck" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o9jSDFfEeOQOozJnHVNQQ" name="verkehrswert" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o9jSTFfEeOQOozJnHVNQQ" name="beleihungswert" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_3o9jSjFfEeOQOozJnHVNQQ" name="getLage" visibility="public"/>
+        <ownedOperation xmi:id="_3o9jSzFfEeOQOozJnHVNQQ" name="getGrundbuch" visibility="public"/>
+        <ownedOperation xmi:id="_3o9jTDFfEeOQOozJnHVNQQ" name="getFlur" visibility="public"/>
+        <ownedOperation xmi:id="_3o9jTTFfEeOQOozJnHVNQQ" name="getFlurstueck" visibility="public"/>
+        <ownedOperation xmi:id="_3o9jTjFfEeOQOozJnHVNQQ" name="getVerkehrswert" visibility="public"/>
+        <ownedOperation xmi:id="_3o9jTzFfEeOQOozJnHVNQQ" name="getBeleihungswert" visibility="public"/>
+        <ownedOperation xmi:id="_3o9jUDFfEeOQOozJnHVNQQ" name="setLage" visibility="public">
+          <ownedParameter xmi:id="_3o9jUTFfEeOQOozJnHVNQQ" name="pLage">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehen.uml#_5hvw0BbrEd6v-emKafzT6A"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KUDFfEeOQOozJnHVNQQ" name="setGrundbuch" visibility="public">
+          <ownedParameter xmi:id="_3o-KUTFfEeOQOozJnHVNQQ" name="pGrundbuch">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KUjFfEeOQOozJnHVNQQ" name="setFlur" visibility="public">
+          <ownedParameter xmi:id="_3o-KUzFfEeOQOozJnHVNQQ" name="pFlur">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KVDFfEeOQOozJnHVNQQ" name="setFlurstueck" visibility="public">
+          <ownedParameter xmi:id="_3o-KVTFfEeOQOozJnHVNQQ" name="pFlurstueck">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KVjFfEeOQOozJnHVNQQ" name="setVerkehrswert" visibility="public">
+          <ownedParameter xmi:id="_3o-KVzFfEeOQOozJnHVNQQ" name="pVerkehrswert">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KWDFfEeOQOozJnHVNQQ" name="setBeleihungswert" visibility="public">
+          <ownedParameter xmi:id="_3o-KWTFfEeOQOozJnHVNQQ" name="pBeleihungswert">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KWjFfEeOQOozJnHVNQQ" name="setSessionContext" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KWzFfEeOQOozJnHVNQQ" name="ejbCreate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KXDFfEeOQOozJnHVNQQ" name="ejbPostCreate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KXTFfEeOQOozJnHVNQQ" name="ejbActivate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KXjFfEeOQOozJnHVNQQ" name="ejbPassivate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KXzFfEeOQOozJnHVNQQ" name="ejbRemove" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_3o-KYDFfEeOQOozJnHVNQQ" name="ImmobilieHome">
+        <ownedOperation xmi:id="_3o-KYTFfEeOQOozJnHVNQQ" name="create" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KYjFfEeOQOozJnHVNQQ" name="remove" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KYzFfEeOQOozJnHVNQQ" name="getEJBMetaData" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KZDFfEeOQOozJnHVNQQ" name="getHomeHandle" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_3o-KZTFfEeOQOozJnHVNQQ" name="ImmobilieRemote">
+        <ownedOperation xmi:id="_3o-KZjFfEeOQOozJnHVNQQ" name="getLage" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KZzFfEeOQOozJnHVNQQ" name="getGrundbuch" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KaDFfEeOQOozJnHVNQQ" name="getFlur" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KaTFfEeOQOozJnHVNQQ" name="getFlurstueck" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KajFfEeOQOozJnHVNQQ" name="getVerkehrswert" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KazFfEeOQOozJnHVNQQ" name="getBeleihungswert" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KbDFfEeOQOozJnHVNQQ" name="setLage" visibility="public">
+          <ownedParameter xmi:id="_3o-KbTFfEeOQOozJnHVNQQ" name="pLage">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehen.uml#_5hvw0BbrEd6v-emKafzT6A"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KbjFfEeOQOozJnHVNQQ" name="setGrundbuch" visibility="public">
+          <ownedParameter xmi:id="_3o-KbzFfEeOQOozJnHVNQQ" name="pGrundbuch">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KcDFfEeOQOozJnHVNQQ" name="setFlur" visibility="public">
+          <ownedParameter xmi:id="_3o-KcTFfEeOQOozJnHVNQQ" name="pFlur">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KcjFfEeOQOozJnHVNQQ" name="setFlurstueck" visibility="public">
+          <ownedParameter xmi:id="_3o-KczFfEeOQOozJnHVNQQ" name="pFlurstueck">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KdDFfEeOQOozJnHVNQQ" name="setVerkehrswert" visibility="public">
+          <ownedParameter xmi:id="_3o-KdTFfEeOQOozJnHVNQQ" name="pVerkehrswert">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KdjFfEeOQOozJnHVNQQ" name="setBeleihungswert" visibility="public">
+          <ownedParameter xmi:id="_3o-KdzFfEeOQOozJnHVNQQ" name="pBeleihungswert">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3o-KeDFfEeOQOozJnHVNQQ" name="SB_Person">
+      <packagedElement xmi:type="uml:Class" xmi:id="_3o-KeTFfEeOQOozJnHVNQQ" name="Person" visibility="private">
+        <ownedAttribute xmi:id="_3o-KejFfEeOQOozJnHVNQQ" name="name" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o-KezFfEeOQOozJnHVNQQ" name="vorname" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o-KfDFfEeOQOozJnHVNQQ" name="alter" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o-KfTFfEeOQOozJnHVNQQ" name="einkommen" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o-KfjFfEeOQOozJnHVNQQ" name="wohnort" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehen.uml#_5hvw0BbrEd6v-emKafzT6A"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_3o-KfzFfEeOQOozJnHVNQQ" name="getName" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KgDFfEeOQOozJnHVNQQ" name="getVorname" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KgTFfEeOQOozJnHVNQQ" name="getAlter" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KgjFfEeOQOozJnHVNQQ" name="getEinkommen" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KgzFfEeOQOozJnHVNQQ" name="getWohnort" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KhDFfEeOQOozJnHVNQQ" name="setName" visibility="public">
+          <ownedParameter xmi:id="_3o-KhTFfEeOQOozJnHVNQQ" name="pName">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KhjFfEeOQOozJnHVNQQ" name="setVorname" visibility="public">
+          <ownedParameter xmi:id="_3o-KhzFfEeOQOozJnHVNQQ" name="pVorname">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KiDFfEeOQOozJnHVNQQ" name="setAlter" visibility="public">
+          <ownedParameter xmi:id="_3o-KiTFfEeOQOozJnHVNQQ" name="pAlter">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KijFfEeOQOozJnHVNQQ" name="setEinkommen" visibility="public">
+          <ownedParameter xmi:id="_3o-KizFfEeOQOozJnHVNQQ" name="pEinkommen">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KjDFfEeOQOozJnHVNQQ" name="setWohnort" visibility="public">
+          <ownedParameter xmi:id="_3o-KjTFfEeOQOozJnHVNQQ" name="pWohnort">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehen.uml#_5hvw0BbrEd6v-emKafzT6A"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KjjFfEeOQOozJnHVNQQ" name="setSessionContext" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KjzFfEeOQOozJnHVNQQ" name="ejbCreate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KkDFfEeOQOozJnHVNQQ" name="ejbPostCreate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KkTFfEeOQOozJnHVNQQ" name="ejbActivate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KkjFfEeOQOozJnHVNQQ" name="ejbPassivate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KkzFfEeOQOozJnHVNQQ" name="ejbRemove" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_3o-KlDFfEeOQOozJnHVNQQ" name="PersonHome">
+        <ownedOperation xmi:id="_3o-KlTFfEeOQOozJnHVNQQ" name="create" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KljFfEeOQOozJnHVNQQ" name="remove" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KlzFfEeOQOozJnHVNQQ" name="getEJBMetaData" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KmDFfEeOQOozJnHVNQQ" name="getHomeHandle" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_3o-KmTFfEeOQOozJnHVNQQ" name="PersonRemote">
+        <ownedOperation xmi:id="_3o-KmjFfEeOQOozJnHVNQQ" name="getName" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KmzFfEeOQOozJnHVNQQ" name="getVorname" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KnDFfEeOQOozJnHVNQQ" name="getAlter" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KnTFfEeOQOozJnHVNQQ" name="getEinkommen" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KnjFfEeOQOozJnHVNQQ" name="getWohnort" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KnzFfEeOQOozJnHVNQQ" name="setName" visibility="public">
+          <ownedParameter xmi:id="_3o-KoDFfEeOQOozJnHVNQQ" name="pName">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KoTFfEeOQOozJnHVNQQ" name="setVorname" visibility="public">
+          <ownedParameter xmi:id="_3o-KojFfEeOQOozJnHVNQQ" name="pVorname">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KozFfEeOQOozJnHVNQQ" name="setAlter" visibility="public">
+          <ownedParameter xmi:id="_3o-KpDFfEeOQOozJnHVNQQ" name="pAlter">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KpTFfEeOQOozJnHVNQQ" name="setEinkommen" visibility="public">
+          <ownedParameter xmi:id="_3o-KpjFfEeOQOozJnHVNQQ" name="pEinkommen">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KpzFfEeOQOozJnHVNQQ" name="setWohnort" visibility="public">
+          <ownedParameter xmi:id="_3o-KqDFfEeOQOozJnHVNQQ" name="pWohnort">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehen.uml#_5hvw0BbrEd6v-emKafzT6A"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3o-KqTFfEeOQOozJnHVNQQ" name="SB_Konto">
+      <packagedElement xmi:type="uml:Class" xmi:id="_3o-KqjFfEeOQOozJnHVNQQ" name="Konto" visibility="private">
+        <ownedAttribute xmi:id="_3o-KqzFfEeOQOozJnHVNQQ" name="tilgungssatz" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o-KrDFfEeOQOozJnHVNQQ" name="zahlungsmodalitaet" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o-KrTFfEeOQOozJnHVNQQ" name="nennbetrag" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o-KrjFfEeOQOozJnHVNQQ" name="zinssatz" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o-KrzFfEeOQOozJnHVNQQ" name="beginn" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3o-KsDFfEeOQOozJnHVNQQ" name="ende" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_3o-KsTFfEeOQOozJnHVNQQ" name="getTilgungssatz" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KsjFfEeOQOozJnHVNQQ" name="getZahlungsmodalitaet" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KszFfEeOQOozJnHVNQQ" name="getNennbetrag" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KtDFfEeOQOozJnHVNQQ" name="getZinssatz" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KtTFfEeOQOozJnHVNQQ" name="getBeginn" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KtjFfEeOQOozJnHVNQQ" name="getEnde" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KtzFfEeOQOozJnHVNQQ" name="setTilgungssatz" visibility="public">
+          <ownedParameter xmi:id="_3o-KuDFfEeOQOozJnHVNQQ" name="pTilgungssatz">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KuTFfEeOQOozJnHVNQQ" name="setZahlungsmodalitaet" visibility="public">
+          <ownedParameter xmi:id="_3o-KujFfEeOQOozJnHVNQQ" name="pZahlungsmodalitaet">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KuzFfEeOQOozJnHVNQQ" name="setNennbetrag" visibility="public">
+          <ownedParameter xmi:id="_3o-KvDFfEeOQOozJnHVNQQ" name="pNennbetrag">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KvTFfEeOQOozJnHVNQQ" name="setZinssatz" visibility="public">
+          <ownedParameter xmi:id="_3o-KvjFfEeOQOozJnHVNQQ" name="pZinssatz">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KvzFfEeOQOozJnHVNQQ" name="setBeginn" visibility="public">
+          <ownedParameter xmi:id="_3o-KwDFfEeOQOozJnHVNQQ" name="pBeginn">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KwTFfEeOQOozJnHVNQQ" name="setEnde" visibility="public">
+          <ownedParameter xmi:id="_3o-KwjFfEeOQOozJnHVNQQ" name="pEnde">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-KwzFfEeOQOozJnHVNQQ" name="setSessionContext" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KxDFfEeOQOozJnHVNQQ" name="ejbCreate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KxTFfEeOQOozJnHVNQQ" name="ejbPostCreate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KxjFfEeOQOozJnHVNQQ" name="ejbActivate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KxzFfEeOQOozJnHVNQQ" name="ejbPassivate" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KyDFfEeOQOozJnHVNQQ" name="ejbRemove" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_3o-KyTFfEeOQOozJnHVNQQ" name="KontoHome">
+        <ownedOperation xmi:id="_3o-KyjFfEeOQOozJnHVNQQ" name="create" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KyzFfEeOQOozJnHVNQQ" name="remove" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KzDFfEeOQOozJnHVNQQ" name="getEJBMetaData" visibility="public"/>
+        <ownedOperation xmi:id="_3o-KzTFfEeOQOozJnHVNQQ" name="getHomeHandle" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_3o-KzjFfEeOQOozJnHVNQQ" name="KontoRemote">
+        <ownedOperation xmi:id="_3o-KzzFfEeOQOozJnHVNQQ" name="getTilgungssatz" visibility="public"/>
+        <ownedOperation xmi:id="_3o-K0DFfEeOQOozJnHVNQQ" name="getZahlungsmodalitaet" visibility="public"/>
+        <ownedOperation xmi:id="_3o-K0TFfEeOQOozJnHVNQQ" name="getNennbetrag" visibility="public"/>
+        <ownedOperation xmi:id="_3o-K0jFfEeOQOozJnHVNQQ" name="getZinssatz" visibility="public"/>
+        <ownedOperation xmi:id="_3o-K0zFfEeOQOozJnHVNQQ" name="getBeginn" visibility="public"/>
+        <ownedOperation xmi:id="_3o-K1DFfEeOQOozJnHVNQQ" name="getEnde" visibility="public"/>
+        <ownedOperation xmi:id="_3o-K1TFfEeOQOozJnHVNQQ" name="setTilgungssatz" visibility="public">
+          <ownedParameter xmi:id="_3o-K1jFfEeOQOozJnHVNQQ" name="pTilgungssatz">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-K1zFfEeOQOozJnHVNQQ" name="setZahlungsmodalitaet" visibility="public">
+          <ownedParameter xmi:id="_3o-K2DFfEeOQOozJnHVNQQ" name="pZahlungsmodalitaet">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-K2TFfEeOQOozJnHVNQQ" name="setNennbetrag" visibility="public">
+          <ownedParameter xmi:id="_3o-K2jFfEeOQOozJnHVNQQ" name="pNennbetrag">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-K2zFfEeOQOozJnHVNQQ" name="setZinssatz" visibility="public">
+          <ownedParameter xmi:id="_3o-K3DFfEeOQOozJnHVNQQ" name="pZinssatz">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-K3TFfEeOQOozJnHVNQQ" name="setBeginn" visibility="public">
+          <ownedParameter xmi:id="_3o-K3jFfEeOQOozJnHVNQQ" name="pBeginn">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_3o-K3zFfEeOQOozJnHVNQQ" name="setEnde" visibility="public">
+          <ownedParameter xmi:id="_3o-K4DFfEeOQOozJnHVNQQ" name="pEnde">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_3o-K4TFfEeOQOozJnHVNQQ" name="Ort">
+      <ownedAttribute xmi:id="_3o-K4jFfEeOQOozJnHVNQQ" name="strasse" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3o-K4zFfEeOQOozJnHVNQQ" name="hausnummer" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3o-K5DFfEeOQOozJnHVNQQ" name="stadt" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3o-K5TFfEeOQOozJnHVNQQ" name="postleitzahl" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3o-K5jFfEeOQOozJnHVNQQ" name="darlehensnehmer"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3o-K5zFfEeOQOozJnHVNQQ" name="darlehenssicherheit"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3o-K6DFfEeOQOozJnHVNQQ" name="eigentuemer"/>
+  </packagedElement>
+</uml:Package>

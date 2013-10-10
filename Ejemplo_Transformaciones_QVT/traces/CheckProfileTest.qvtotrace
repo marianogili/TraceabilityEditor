@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:Trace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http:///www.eclipse.org/m2m/qvt/operational/trace.ecore">
+  <traceRecords>
+    <mappingOperation name="unmarkedClass" package="CheckProfileTest" module="CheckProfileTest">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/CheckProfileTest.qvtox#//unmarkedClass"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Class">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/ProfileTest/ProfileTest.uml#_FdXmAApOEd62KvjvMLNnkw"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/ProfileTest/ProfileTest.uml#_nbCGoDFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="unmarkedClass" package="CheckProfileTest" module="CheckProfileTest">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/CheckProfileTest.qvtox#//unmarkedClass"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Class">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/ProfileTest/ProfileTest.uml#_nW1a2ApOEd62KvjvMLNnkw"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/ProfileTest/ProfileTest.uml#_nbCGoTFgEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+</trace:Trace>

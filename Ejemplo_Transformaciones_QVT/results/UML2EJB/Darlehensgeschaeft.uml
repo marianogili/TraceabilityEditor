@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_JGVZEDFgEeOQOozJnHVNQQ" name="Darlehensgeschaeft">
+  <packagedElement xmi:type="uml:Package" xmi:id="_JGVZETFgEeOQOozJnHVNQQ" name="Datentypen">
+    <packagedElement xmi:type="uml:DataType" xmi:id="_JGVZEjFgEeOQOozJnHVNQQ" name="String"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_JGVZEzFgEeOQOozJnHVNQQ" name="Integer"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_JGVZFDFgEeOQOozJnHVNQQ" name="Double"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_JGVZFTFgEeOQOozJnHVNQQ" name="Adresse">
+      <ownedAttribute xmi:id="_JGVZFjFgEeOQOozJnHVNQQ" name="strasse" visibility="public">
+        <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_JGVZFzFgEeOQOozJnHVNQQ" name="hausnummer" visibility="public">
+        <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#__R5-EDSNEd2mnbunLTmcxQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_JGVZGDFgEeOQOozJnHVNQQ" name="ort" visibility="public">
+        <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_JGVZGTFgEeOQOozJnHVNQQ" name="postleitzahl" visibility="public">
+        <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#__R5-EDSNEd2mnbunLTmcxQ"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_JGVZGjFgEeOQOozJnHVNQQ" name="Wohnungsbaufinanzierung">
+    <packagedElement xmi:type="uml:Package" xmi:id="_JGVZGzFgEeOQOozJnHVNQQ" name="SB_Kunde">
+      <packagedElement xmi:type="uml:Class" xmi:id="_JGVZHDFgEeOQOozJnHVNQQ" name="Kunde" visibility="private">
+        <ownedAttribute xmi:id="_JGVZHTFgEeOQOozJnHVNQQ" name="name" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JGVZHjFgEeOQOozJnHVNQQ" name="vorname" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JGVZHzFgEeOQOozJnHVNQQ" name="alter" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#__R5-EDSNEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JGVZIDFgEeOQOozJnHVNQQ" name="wohnort" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Hc7sEDxgEd280-g4nUTgzg"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_JGVZITFgEeOQOozJnHVNQQ" name="getKunde" visibility="public"/>
+        <ownedOperation xmi:id="_JGVZIjFgEeOQOozJnHVNQQ" name="getName" visibility="public"/>
+        <ownedOperation xmi:id="_JGVZIzFgEeOQOozJnHVNQQ" name="getVorname" visibility="public"/>
+        <ownedOperation xmi:id="_JGVZJDFgEeOQOozJnHVNQQ" name="getAlter" visibility="public"/>
+        <ownedOperation xmi:id="_JGVZJTFgEeOQOozJnHVNQQ" name="getWohnort" visibility="public"/>
+        <ownedOperation xmi:id="_JGVZJjFgEeOQOozJnHVNQQ" name="setName" visibility="public">
+          <ownedParameter xmi:id="_JGVZJzFgEeOQOozJnHVNQQ" name="pName">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGVZKDFgEeOQOozJnHVNQQ" name="setVorname" visibility="public">
+          <ownedParameter xmi:id="_JGVZKTFgEeOQOozJnHVNQQ" name="pVorname">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGVZKjFgEeOQOozJnHVNQQ" name="setAlter" visibility="public">
+          <ownedParameter xmi:id="_JGVZKzFgEeOQOozJnHVNQQ" name="pAlter">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#__R5-EDSNEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGVZLDFgEeOQOozJnHVNQQ" name="setWohnort" visibility="public">
+          <ownedParameter xmi:id="_JGWAIDFgEeOQOozJnHVNQQ" name="pWohnort">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Hc7sEDxgEd280-g4nUTgzg"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAITFgEeOQOozJnHVNQQ" name="setSessionContext" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAIjFgEeOQOozJnHVNQQ" name="ejbCreate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAIzFgEeOQOozJnHVNQQ" name="ejbPostCreate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAJDFgEeOQOozJnHVNQQ" name="ejbActivate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAJTFgEeOQOozJnHVNQQ" name="ejbPassivate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAJjFgEeOQOozJnHVNQQ" name="ejbRemove" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_JGWAJzFgEeOQOozJnHVNQQ" name="KundeHome">
+        <ownedOperation xmi:id="_JGWAKDFgEeOQOozJnHVNQQ" name="create" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAKTFgEeOQOozJnHVNQQ" name="remove" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAKjFgEeOQOozJnHVNQQ" name="getEJBMetaData" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAKzFgEeOQOozJnHVNQQ" name="getHomeHandle" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_JGWALDFgEeOQOozJnHVNQQ" name="KundeRemote">
+        <ownedOperation xmi:id="_JGWALTFgEeOQOozJnHVNQQ" name="getName" visibility="public"/>
+        <ownedOperation xmi:id="_JGWALjFgEeOQOozJnHVNQQ" name="getVorname" visibility="public"/>
+        <ownedOperation xmi:id="_JGWALzFgEeOQOozJnHVNQQ" name="getAlter" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAMDFgEeOQOozJnHVNQQ" name="getWohnort" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAMTFgEeOQOozJnHVNQQ" name="setName" visibility="public">
+          <ownedParameter xmi:id="_JGWAMjFgEeOQOozJnHVNQQ" name="pName">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAMzFgEeOQOozJnHVNQQ" name="setVorname" visibility="public">
+          <ownedParameter xmi:id="_JGWANDFgEeOQOozJnHVNQQ" name="pVorname">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWANTFgEeOQOozJnHVNQQ" name="setAlter" visibility="public">
+          <ownedParameter xmi:id="_JGWANjFgEeOQOozJnHVNQQ" name="pAlter">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#__R5-EDSNEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWANzFgEeOQOozJnHVNQQ" name="setWohnort" visibility="public">
+          <ownedParameter xmi:id="_JGWAODFgEeOQOozJnHVNQQ" name="pWohnort">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Hc7sEDxgEd280-g4nUTgzg"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_JGWAOTFgEeOQOozJnHVNQQ" name="SB_Darlehen">
+      <packagedElement xmi:type="uml:Class" xmi:id="_JGWAOjFgEeOQOozJnHVNQQ" name="Darlehen" visibility="private">
+        <ownedAttribute xmi:id="_JGWAOzFgEeOQOozJnHVNQQ" name="leistung" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_C-Y24DSOEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JGWAPDFgEeOQOozJnHVNQQ" name="zahlungsmodalitaet" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#__R5-EDSNEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JGWAPTFgEeOQOozJnHVNQQ" name="nennbetrag" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_C-Y24DSOEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JGWAPjFgEeOQOozJnHVNQQ" name="zins" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_C-Y24DSOEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JGWAPzFgEeOQOozJnHVNQQ" name="beginn" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JGWAQDFgEeOQOozJnHVNQQ" name="ende" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_JGWAQTFgEeOQOozJnHVNQQ" name="getDarlehen" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAQjFgEeOQOozJnHVNQQ" name="getLeistung" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAQzFgEeOQOozJnHVNQQ" name="getZahlungsmodalitaet" visibility="public"/>
+        <ownedOperation xmi:id="_JGWARDFgEeOQOozJnHVNQQ" name="getNennbetrag" visibility="public"/>
+        <ownedOperation xmi:id="_JGWARTFgEeOQOozJnHVNQQ" name="getZins" visibility="public"/>
+        <ownedOperation xmi:id="_JGWARjFgEeOQOozJnHVNQQ" name="getBeginn" visibility="public"/>
+        <ownedOperation xmi:id="_JGWARzFgEeOQOozJnHVNQQ" name="getEnde" visibility="public"/>
+        <ownedOperation xmi:id="_JGWASDFgEeOQOozJnHVNQQ" name="setLeistung" visibility="public">
+          <ownedParameter xmi:id="_JGWASTFgEeOQOozJnHVNQQ" name="pLeistung">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_C-Y24DSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWASjFgEeOQOozJnHVNQQ" name="setZahlungsmodalitaet" visibility="public">
+          <ownedParameter xmi:id="_JGWASzFgEeOQOozJnHVNQQ" name="pZahlungsmodalitaet">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#__R5-EDSNEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWATDFgEeOQOozJnHVNQQ" name="setNennbetrag" visibility="public">
+          <ownedParameter xmi:id="_JGWATTFgEeOQOozJnHVNQQ" name="pNennbetrag">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_C-Y24DSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWATjFgEeOQOozJnHVNQQ" name="setZins" visibility="public">
+          <ownedParameter xmi:id="_JGWATzFgEeOQOozJnHVNQQ" name="pZins">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_C-Y24DSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAUDFgEeOQOozJnHVNQQ" name="setBeginn" visibility="public">
+          <ownedParameter xmi:id="_JGWAUTFgEeOQOozJnHVNQQ" name="pBeginn">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAUjFgEeOQOozJnHVNQQ" name="setEnde" visibility="public">
+          <ownedParameter xmi:id="_JGWAUzFgEeOQOozJnHVNQQ" name="pEnde">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAVDFgEeOQOozJnHVNQQ" name="setSessionContext" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAVTFgEeOQOozJnHVNQQ" name="ejbCreate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAVjFgEeOQOozJnHVNQQ" name="ejbPostCreate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAVzFgEeOQOozJnHVNQQ" name="ejbActivate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAWDFgEeOQOozJnHVNQQ" name="ejbPassivate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAWTFgEeOQOozJnHVNQQ" name="ejbRemove" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_JGWAWjFgEeOQOozJnHVNQQ" name="DarlehenHome">
+        <ownedOperation xmi:id="_JGWAWzFgEeOQOozJnHVNQQ" name="create" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAXDFgEeOQOozJnHVNQQ" name="remove" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAXTFgEeOQOozJnHVNQQ" name="getEJBMetaData" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAXjFgEeOQOozJnHVNQQ" name="getHomeHandle" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_JGWAXzFgEeOQOozJnHVNQQ" name="DarlehenRemote">
+        <ownedOperation xmi:id="_JGWAYDFgEeOQOozJnHVNQQ" name="getLeistung" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAYTFgEeOQOozJnHVNQQ" name="getZahlungsmodalitaet" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAYjFgEeOQOozJnHVNQQ" name="getNennbetrag" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAYzFgEeOQOozJnHVNQQ" name="getZins" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAZDFgEeOQOozJnHVNQQ" name="getBeginn" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAZTFgEeOQOozJnHVNQQ" name="getEnde" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAZjFgEeOQOozJnHVNQQ" name="setLeistung" visibility="public">
+          <ownedParameter xmi:id="_JGWAZzFgEeOQOozJnHVNQQ" name="pLeistung">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_C-Y24DSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAaDFgEeOQOozJnHVNQQ" name="setZahlungsmodalitaet" visibility="public">
+          <ownedParameter xmi:id="_JGWAaTFgEeOQOozJnHVNQQ" name="pZahlungsmodalitaet">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#__R5-EDSNEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAajFgEeOQOozJnHVNQQ" name="setNennbetrag" visibility="public">
+          <ownedParameter xmi:id="_JGWAazFgEeOQOozJnHVNQQ" name="pNennbetrag">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_C-Y24DSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAbDFgEeOQOozJnHVNQQ" name="setZins" visibility="public">
+          <ownedParameter xmi:id="_JGWAbTFgEeOQOozJnHVNQQ" name="pZins">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_C-Y24DSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAbjFgEeOQOozJnHVNQQ" name="setBeginn" visibility="public">
+          <ownedParameter xmi:id="_JGWAbzFgEeOQOozJnHVNQQ" name="pBeginn">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAcDFgEeOQOozJnHVNQQ" name="setEnde" visibility="public">
+          <ownedParameter xmi:id="_JGWAcTFgEeOQOozJnHVNQQ" name="pEnde">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_JGWAcjFgEeOQOozJnHVNQQ" name="SB_Immobilie">
+      <packagedElement xmi:type="uml:Class" xmi:id="_JGWAczFgEeOQOozJnHVNQQ" name="Immobilie" visibility="private">
+        <ownedAttribute xmi:id="_JGWAdDFgEeOQOozJnHVNQQ" name="flur" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JGWAdTFgEeOQOozJnHVNQQ" name="flurstueck" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JGWAdjFgEeOQOozJnHVNQQ" name="grundbuch" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JGWAdzFgEeOQOozJnHVNQQ" name="lage" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Hc7sEDxgEd280-g4nUTgzg"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_JGWAeDFgEeOQOozJnHVNQQ" name="getImmobilie" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAeTFgEeOQOozJnHVNQQ" name="getFlur" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAejFgEeOQOozJnHVNQQ" name="getFlurstueck" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAezFgEeOQOozJnHVNQQ" name="getGrundbuch" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAfDFgEeOQOozJnHVNQQ" name="getLage" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAfTFgEeOQOozJnHVNQQ" name="setFlur" visibility="public">
+          <ownedParameter xmi:id="_JGWAfjFgEeOQOozJnHVNQQ" name="pFlur">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAfzFgEeOQOozJnHVNQQ" name="setFlurstueck" visibility="public">
+          <ownedParameter xmi:id="_JGWAgDFgEeOQOozJnHVNQQ" name="pFlurstueck">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAgTFgEeOQOozJnHVNQQ" name="setGrundbuch" visibility="public">
+          <ownedParameter xmi:id="_JGWAgjFgEeOQOozJnHVNQQ" name="pGrundbuch">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAgzFgEeOQOozJnHVNQQ" name="setLage" visibility="public">
+          <ownedParameter xmi:id="_JGWAhDFgEeOQOozJnHVNQQ" name="pLage">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Hc7sEDxgEd280-g4nUTgzg"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAhTFgEeOQOozJnHVNQQ" name="setSessionContext" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAhjFgEeOQOozJnHVNQQ" name="ejbCreate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAhzFgEeOQOozJnHVNQQ" name="ejbPostCreate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAiDFgEeOQOozJnHVNQQ" name="ejbActivate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAiTFgEeOQOozJnHVNQQ" name="ejbPassivate" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAijFgEeOQOozJnHVNQQ" name="ejbRemove" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_JGWAizFgEeOQOozJnHVNQQ" name="ImmobilieHome">
+        <ownedOperation xmi:id="_JGWAjDFgEeOQOozJnHVNQQ" name="create" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAjTFgEeOQOozJnHVNQQ" name="remove" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAjjFgEeOQOozJnHVNQQ" name="getEJBMetaData" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAjzFgEeOQOozJnHVNQQ" name="getHomeHandle" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_JGWAkDFgEeOQOozJnHVNQQ" name="ImmobilieRemote">
+        <ownedOperation xmi:id="_JGWAkTFgEeOQOozJnHVNQQ" name="getFlur" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAkjFgEeOQOozJnHVNQQ" name="getFlurstueck" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAkzFgEeOQOozJnHVNQQ" name="getGrundbuch" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAlDFgEeOQOozJnHVNQQ" name="getLage" visibility="public"/>
+        <ownedOperation xmi:id="_JGWAlTFgEeOQOozJnHVNQQ" name="setFlur" visibility="public">
+          <ownedParameter xmi:id="_JGWAljFgEeOQOozJnHVNQQ" name="pFlur">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAlzFgEeOQOozJnHVNQQ" name="setFlurstueck" visibility="public">
+          <ownedParameter xmi:id="_JGWAmDFgEeOQOozJnHVNQQ" name="pFlurstueck">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAmTFgEeOQOozJnHVNQQ" name="setGrundbuch" visibility="public">
+          <ownedParameter xmi:id="_JGWAmjFgEeOQOozJnHVNQQ" name="pGrundbuch">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Bp5wODSOEd2mnbunLTmcxQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_JGWAmzFgEeOQOozJnHVNQQ" name="setLage" visibility="public">
+          <ownedParameter xmi:id="_JGWAnDFgEeOQOozJnHVNQQ" name="pLage">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/Darlehensgeschaeft.uml#_Hc7sEDxgEd280-g4nUTgzg"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_JGWAnTFgEeOQOozJnHVNQQ" name="Darlehenssicherheit"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_JGWAnjFgEeOQOozJnHVNQQ" name="Darlehensgeschaeft"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_JGWAnzFgEeOQOozJnHVNQQ" name="Hausbesitzer"/>
+  </packagedElement>
+</uml:Package>

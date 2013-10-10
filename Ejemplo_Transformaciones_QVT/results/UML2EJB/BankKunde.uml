@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_VS1noDFfEeOQOozJnHVNQQ" name="Bank">
+  <packagedElement xmi:type="uml:Package" xmi:id="_VS1noTFfEeOQOozJnHVNQQ" name="Adresse">
+    <packagedElement xmi:type="uml:Package" xmi:id="_VS1nojFfEeOQOozJnHVNQQ" name="SB_Adresse">
+      <packagedElement xmi:type="uml:Class" xmi:id="_VS1nozFfEeOQOozJnHVNQQ" name="Adresse" visibility="private">
+        <ownedAttribute xmi:id="_VS1npDFfEeOQOozJnHVNQQ" name="Adresse_tid" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VS1npTFfEeOQOozJnHVNQQ" name="Adresse_street" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VS1npjFfEeOQOozJnHVNQQ" name="Adresse_number" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_VS1npzFfEeOQOozJnHVNQQ" name="getAdresse_tid" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nqDFfEeOQOozJnHVNQQ" name="getAdresse_street" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nqTFfEeOQOozJnHVNQQ" name="getAdresse_number" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nqjFfEeOQOozJnHVNQQ" name="setAdresse_tid" visibility="public">
+          <ownedParameter xmi:id="_VS1nqzFfEeOQOozJnHVNQQ" name="pAdresse_tid">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1nrDFfEeOQOozJnHVNQQ" name="setAdresse_street" visibility="public">
+          <ownedParameter xmi:id="_VS1nrTFfEeOQOozJnHVNQQ" name="pAdresse_street">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1nrjFfEeOQOozJnHVNQQ" name="setAdresse_number" visibility="public">
+          <ownedParameter xmi:id="_VS1nrzFfEeOQOozJnHVNQQ" name="pAdresse_number">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1nsDFfEeOQOozJnHVNQQ" name="setSessionContext" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nsTFfEeOQOozJnHVNQQ" name="ejbCreate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nsjFfEeOQOozJnHVNQQ" name="ejbPostCreate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nszFfEeOQOozJnHVNQQ" name="ejbActivate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1ntDFfEeOQOozJnHVNQQ" name="ejbPassivate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1ntTFfEeOQOozJnHVNQQ" name="ejbRemove" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_VS1ntjFfEeOQOozJnHVNQQ" name="AdresseHome">
+        <ownedOperation xmi:id="_VS1ntzFfEeOQOozJnHVNQQ" name="create" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nuDFfEeOQOozJnHVNQQ" name="remove" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nuTFfEeOQOozJnHVNQQ" name="getEJBMetaData" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nujFfEeOQOozJnHVNQQ" name="getHomeHandle" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_VS1nuzFfEeOQOozJnHVNQQ" name="AdresseRemote">
+        <ownedOperation xmi:id="_VS1nvDFfEeOQOozJnHVNQQ" name="getAdresse_tid" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nvTFfEeOQOozJnHVNQQ" name="getAdresse_street" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nvjFfEeOQOozJnHVNQQ" name="getAdresse_number" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nvzFfEeOQOozJnHVNQQ" name="setAdresse_tid" visibility="public">
+          <ownedParameter xmi:id="_VS1nwDFfEeOQOozJnHVNQQ" name="pAdresse_tid">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1nwTFfEeOQOozJnHVNQQ" name="setAdresse_street" visibility="public">
+          <ownedParameter xmi:id="_VS1nwjFfEeOQOozJnHVNQQ" name="pAdresse_street">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1nwzFfEeOQOozJnHVNQQ" name="setAdresse_number" visibility="public">
+          <ownedParameter xmi:id="_VS1nxDFfEeOQOozJnHVNQQ" name="pAdresse_number">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_VS1nxTFfEeOQOozJnHVNQQ" name="Bank">
+    <packagedElement xmi:type="uml:Package" xmi:id="_VS1nxjFfEeOQOozJnHVNQQ" name="SB_Bank">
+      <packagedElement xmi:type="uml:Class" xmi:id="_VS1nxzFfEeOQOozJnHVNQQ" name="Bank" visibility="private">
+        <ownedAttribute xmi:id="_VS1nyDFfEeOQOozJnHVNQQ" name="Bank_tid" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VS1nyTFfEeOQOozJnHVNQQ" name="Bank_name" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VS1nyjFfEeOQOozJnHVNQQ" name="Bank_address" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_VS1nyzFfEeOQOozJnHVNQQ" name="getBank_tid" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nzDFfEeOQOozJnHVNQQ" name="getBank_name" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nzTFfEeOQOozJnHVNQQ" name="getBank_address" visibility="public"/>
+        <ownedOperation xmi:id="_VS1nzjFfEeOQOozJnHVNQQ" name="setBank_tid" visibility="public">
+          <ownedParameter xmi:id="_VS1nzzFfEeOQOozJnHVNQQ" name="pBank_tid">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1n0DFfEeOQOozJnHVNQQ" name="setBank_name" visibility="public">
+          <ownedParameter xmi:id="_VS1n0TFfEeOQOozJnHVNQQ" name="pBank_name">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1n0jFfEeOQOozJnHVNQQ" name="setBank_address" visibility="public">
+          <ownedParameter xmi:id="_VS1n0zFfEeOQOozJnHVNQQ" name="pBank_address">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1n1DFfEeOQOozJnHVNQQ" name="setSessionContext" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n1TFfEeOQOozJnHVNQQ" name="ejbCreate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n1jFfEeOQOozJnHVNQQ" name="ejbPostCreate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n1zFfEeOQOozJnHVNQQ" name="ejbActivate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n2DFfEeOQOozJnHVNQQ" name="ejbPassivate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n2TFfEeOQOozJnHVNQQ" name="ejbRemove" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_VS1n2jFfEeOQOozJnHVNQQ" name="BankHome">
+        <ownedOperation xmi:id="_VS1n2zFfEeOQOozJnHVNQQ" name="create" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n3DFfEeOQOozJnHVNQQ" name="remove" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n3TFfEeOQOozJnHVNQQ" name="getEJBMetaData" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n3jFfEeOQOozJnHVNQQ" name="getHomeHandle" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_VS1n3zFfEeOQOozJnHVNQQ" name="BankRemote">
+        <ownedOperation xmi:id="_VS1n4DFfEeOQOozJnHVNQQ" name="getBank_tid" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n4TFfEeOQOozJnHVNQQ" name="getBank_name" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n4jFfEeOQOozJnHVNQQ" name="getBank_address" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n4zFfEeOQOozJnHVNQQ" name="setBank_tid" visibility="public">
+          <ownedParameter xmi:id="_VS1n5DFfEeOQOozJnHVNQQ" name="pBank_tid">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1n5TFfEeOQOozJnHVNQQ" name="setBank_name" visibility="public">
+          <ownedParameter xmi:id="_VS1n5jFfEeOQOozJnHVNQQ" name="pBank_name">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1n5zFfEeOQOozJnHVNQQ" name="setBank_address" visibility="public">
+          <ownedParameter xmi:id="_VS1n6DFfEeOQOozJnHVNQQ" name="pBank_address">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_VS1n6TFfEeOQOozJnHVNQQ" name="Kunde">
+    <packagedElement xmi:type="uml:Package" xmi:id="_VS1n6jFfEeOQOozJnHVNQQ" name="SB_Kunde">
+      <packagedElement xmi:type="uml:Class" xmi:id="_VS1n6zFfEeOQOozJnHVNQQ" name="Kunde" visibility="private">
+        <ownedAttribute xmi:id="_VS1n7DFfEeOQOozJnHVNQQ" name="Kunde_tid" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VS1n7TFfEeOQOozJnHVNQQ" name="Kunde_name" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VS1n7jFfEeOQOozJnHVNQQ" name="Kunde_countid" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VS1n7zFfEeOQOozJnHVNQQ" name="Kunde_homeaddress" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VS1n8DFfEeOQOozJnHVNQQ" name="Kunde_officeaddress" visibility="private">
+          <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_VS1n8TFfEeOQOozJnHVNQQ" name="getKunde_tid" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n8jFfEeOQOozJnHVNQQ" name="getKunde_name" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n8zFfEeOQOozJnHVNQQ" name="getKunde_countid" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n9DFfEeOQOozJnHVNQQ" name="getKunde_homeaddress" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n9TFfEeOQOozJnHVNQQ" name="getKunde_officeaddress" visibility="public"/>
+        <ownedOperation xmi:id="_VS1n9jFfEeOQOozJnHVNQQ" name="setKunde_tid" visibility="public">
+          <ownedParameter xmi:id="_VS1n9zFfEeOQOozJnHVNQQ" name="pKunde_tid">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1n-DFfEeOQOozJnHVNQQ" name="setKunde_name" visibility="public">
+          <ownedParameter xmi:id="_VS1n-TFfEeOQOozJnHVNQQ" name="pKunde_name">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1n-jFfEeOQOozJnHVNQQ" name="setKunde_countid" visibility="public">
+          <ownedParameter xmi:id="_VS1n-zFfEeOQOozJnHVNQQ" name="pKunde_countid">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1n_DFfEeOQOozJnHVNQQ" name="setKunde_homeaddress" visibility="public">
+          <ownedParameter xmi:id="_VS1n_TFfEeOQOozJnHVNQQ" name="pKunde_homeaddress">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1n_jFfEeOQOozJnHVNQQ" name="setKunde_officeaddress" visibility="public">
+          <ownedParameter xmi:id="_VS1n_zFfEeOQOozJnHVNQQ" name="pKunde_officeaddress">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1oADFfEeOQOozJnHVNQQ" name="setSessionContext" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oATFfEeOQOozJnHVNQQ" name="ejbCreate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oAjFfEeOQOozJnHVNQQ" name="ejbPostCreate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oAzFfEeOQOozJnHVNQQ" name="ejbActivate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oBDFfEeOQOozJnHVNQQ" name="ejbPassivate" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oBTFfEeOQOozJnHVNQQ" name="ejbRemove" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_VS1oBjFfEeOQOozJnHVNQQ" name="KundeHome">
+        <ownedOperation xmi:id="_VS1oBzFfEeOQOozJnHVNQQ" name="create" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oCDFfEeOQOozJnHVNQQ" name="remove" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oCTFfEeOQOozJnHVNQQ" name="getEJBMetaData" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oCjFfEeOQOozJnHVNQQ" name="getHomeHandle" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_VS1oCzFfEeOQOozJnHVNQQ" name="KundeRemote">
+        <ownedOperation xmi:id="_VS1oDDFfEeOQOozJnHVNQQ" name="getKunde_tid" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oDTFfEeOQOozJnHVNQQ" name="getKunde_name" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oDjFfEeOQOozJnHVNQQ" name="getKunde_countid" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oDzFfEeOQOozJnHVNQQ" name="getKunde_homeaddress" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oEDFfEeOQOozJnHVNQQ" name="getKunde_officeaddress" visibility="public"/>
+        <ownedOperation xmi:id="_VS1oETFfEeOQOozJnHVNQQ" name="setKunde_tid" visibility="public">
+          <ownedParameter xmi:id="_VS1oEjFfEeOQOozJnHVNQQ" name="pKunde_tid">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1oEzFfEeOQOozJnHVNQQ" name="setKunde_name" visibility="public">
+          <ownedParameter xmi:id="_VS1oFDFfEeOQOozJnHVNQQ" name="pKunde_name">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1oFTFfEeOQOozJnHVNQQ" name="setKunde_countid" visibility="public">
+          <ownedParameter xmi:id="_VS1oFjFfEeOQOozJnHVNQQ" name="pKunde_countid">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7act7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1oFzFfEeOQOozJnHVNQQ" name="setKunde_homeaddress" visibility="public">
+          <ownedParameter xmi:id="_VS1oGDFfEeOQOozJnHVNQQ" name="pKunde_homeaddress">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VS1oGTFfEeOQOozJnHVNQQ" name="setKunde_officeaddress" visibility="public">
+          <ownedParameter xmi:id="_VS1oGjFfEeOQOozJnHVNQQ" name="pKunde_officeaddress">
+            <type xmi:type="uml:DataType" href="../../models/UML2EJB/BankKunde.uml#_Zi7adN7REdy7g67NfImzOw"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_VS1oGzFfEeOQOozJnHVNQQ" name="Datentypen">
+    <packagedElement xmi:type="uml:DataType" xmi:id="_VS1oHDFfEeOQOozJnHVNQQ" name="int"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_VS1oHTFfEeOQOozJnHVNQQ" name="String"/>
+  </packagedElement>
+</uml:Package>

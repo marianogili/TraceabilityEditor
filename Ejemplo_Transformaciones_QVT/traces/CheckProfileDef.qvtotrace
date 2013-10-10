@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:Trace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http:///www.eclipse.org/m2m/qvt/operational/trace.ecore">
+  <traceRecords>
+    <mappingOperation name="stereotype2stereotype" package="CheckProfileDef" module="CheckProfileDef">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/CheckProfileDef.qvtox#//stereotype2stereotype"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Stereotype">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/ProfileDef/ProfileDef.uml#_SI22oApNEd62KvjvMLNnkw"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Stereotype">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/ProfileDef/ProfileDef.uml#_Fwvg0DFhEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="stereotype2class" package="CheckProfileDef" module="CheckProfileDef">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/CheckProfileDef.qvtox#//stereotype2class"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Stereotype">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/ProfileDef/ProfileDef.uml#_SI22oApNEd62KvjvMLNnkw"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/ProfileDef/ProfileDef.uml#_Fwvg0TFhEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="class2stereotype" package="CheckProfileDef" module="CheckProfileDef">
+      <runtimeMappingOperation href="platform:/resource/Ejemplo_Transformaciones_QVT/transforms/CheckProfileDef.qvtox#//class2stereotype"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Class">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/models/ProfileDef/ProfileDef.uml#_SI22oApNEd62KvjvMLNnkw"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="platform:/resource/Ejemplo_Transformaciones_QVT/results/ProfileDef/ProfileDef.uml#_Fwvg0jFhEeOQOozJnHVNQQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+</trace:Trace>
