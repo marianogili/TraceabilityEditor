@@ -18,12 +18,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeglossaries
 
-\newglossaryentry{hola}{name={hola},description={Esto es una prueba}}
+%\newglossaryentry{hola}{name={hola},description={Esto es una prueba}}
+\newglossaryentry{mde}{name={Ingeniería de Software Dirigida por Modelos o Model-Driven Engineering (MDE)},description={hola}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Siglas              %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newacronym{mde}{MDE}{Ingeniería de Software Dirigida por Modelos o Model-Driven Engineering}
+%\newacronym{mde}{MDE}{Ingeniería de Software Dirigida por Modelos o Model-Driven Engineering}
 \newacronym{mda}{MDA}{Arquitectura Dirigida por Modelos o Model-Driven Architecture}
 \newacronym{omg}{OMG}{Object Management Group}
 \newacronym{mdd}{MDD}{Desarrollo Dirigido por Modelos o Model-Driven Development}
@@ -77,11 +78,23 @@
 \chapter{Agradecimientos}
 
 
-En principio quiero agradecer a mis padres, \textbf{Ana María Bloga} y \textbf{Nestor Hugo Gili}, quienes nunca dudaron en brindarme el soporte necesario para afrontar esta carrera de grado. A mi mujer \textbf{María Jimena Reimundo}, por su incansable apoyo en estos últimos años que necesité para poder terminar la tesis al mismo tiempo que empezamos a contruir nuestro hermosa familia y hogar.
+A mis padres, \textbf{Ana María Bloga} y \textbf{Nestor Hugo Gili}, quienes nunca dudaron en brindarme el soporte necesario para afrontar esta carrera de grado. A mi mujer \textbf{María Jimena Reimundo}, por darme el apoyo y acompañamiento que necesité para poder terminar el trabajo de tesis al mismo tiempo que empezamos a construir nuestro hermosa familia y hogar.
 
-A la \textbf{Universidad Nacional de La Plata} y en particular a la \textbf{Facultad de Informática}, por la excelente formación que considero he obtenido, por haberme permitido por un tiempo disfrutar de la gratificante tarea de ser ayudante de cátedra y también por haberme brindado la posibilidad de realizar trabajos de investigación en distintos temas que me apasionaron.
+\bigskip
 
-A la profesora \textbf{Claudia Pons} por la excelente predisposición que recibí en cada consulta que le hice y su ayuda constante, en especial y sobre todo, por haberme introducido en el grupo de investigación del tema \textbf{Desarrollo Dirigido por Modelos} y su guía en la definición del tema de la presente tesis \textbf{Traceability}.
+A la \textbf{Universidad Nacional de La Plata} y en especial a la \textbf{Facultad de Informática}, por el excelente nivel educativo al que me dio acceso. A las cátedras de \textbf{Programación} y \textbf{Programación Funcional}, que me abrieron las puertas para poder desarrollar la gratificante tarea de ayudante y colaborador de cátedra respectívamente. Al laboratorio \textbf{LIFIA}, por haberme brindado la posibilidad de realizar trabajos de investigación y de asistir a cursos extracurriculares en los que adquirí conocimientos sobre diversos temas que me resultaron apasionantes.
+
+\bigskip
+
+A la profesora \textbf{Claudia Pons}, por haberme introducido en el grupo de investigación de \textbf{Desarrollo Dirigido por Modelos}, desde donde definimos el tema que se presentará a lo largo de este trabajo de tesis, y por  haber sido mi guía en el desarollo del mismo, demostrándome siempre su buena predisposición en cada consulta realizada.
+
+\bigskip
+
+A mi familia, amigos y compañeros de estudio y del trabajo, por su acompañamiento y empujón en este último tramo que tanto tiempo me llevó.
+
+\bigskip
+
+¡¡¡Muchas gracias a todos!!!
 
 %puede ser que \gls{hola}
 
@@ -92,11 +105,11 @@ A la profesora \textbf{Claudia Pons} por la excelente predisposición que recib�
 \chapter{Introducción}
 
 
-En la \gls{mde}, se define al modelo como principal artefacto que toma participación a lo largo de todas las tareas/procesos de la ingeniería de software – análisis, diseño, desarrollo, pruebas, mantenimiento, etc. Una implementación particular propuesta que sigue esta idea es la \gls{mda}, definida por el \gls{omg}, cuyo ciclo de proceso de desarrollo está basado enteramente en el uso de modelos formales y transformaciones que se realizan sobre dichos modelos. Una característica muy importante de todo proceso de \gls{mdd}, es lo que se conoce como “posibilidad de rastreo” (o de ahora en más en inglés traceability), que ayuda y toma parte en todo lo que respecta a las relaciones que existen entre cada uno de los artefactos productos del proceso de desarrollo.
+En la \gls{mde}, se define al modelo como artefacto principal que toma participación a lo largo de todas las tareas/procesos que conforman dicha ingeniería, ésto es, el análisis, el diseño, el desarrollo, las pruebas, el mantenimiento, etc. Una implementación particular propuesta que acompaña esta idea es la \gls{mda}, definida por el \gls{omg}, cuyo ciclo de proceso de desarrollo está basado enteramente en el uso de modelos formales y transformaciones que se realizan sobre dichos modelos. Una característica muy importante de todo proceso de \gls{mdd}, es lo que se conoce como \textit{\textbf{posibilidad de rastreo}} (o de ahora en más en inglés \textit{\textbf{traceability}}), que ayuda y toma parte en todo lo que respecta a las relaciones que existen entre cada uno de los artefactos productos del proceso de desarrollo.
 
 Cuando nos referimos al término artefacto, hablamos por ejemplo de un requerimiento de sistema, un componente de software, un caso de prueba, entre otros. El mantenimiento y la definición de las relaciones y dependencias que existen entre los artefactos no es una tarea fácil, el mismo ha sido un desafío desde principios de 1970.
 
-En el presente documento de tesis se abordará el tema de traceability, luego se presentará un análisis de los distintos problemas que aún se encuentran abiertos como así también un conjunto de soluciones encontradas a lo largo de la investigación. Finalmente, se elaborará un esquema de traceability con el fin de contribuir en la solución de alguno de los problemas nombrados.
+En el presente documento de tesis se abordará el tema de \textit{traceability}, luego se presentará un análisis de los distintos problemas que aún se encuentran abiertos como así también un conjunto de soluciones encontradas a lo largo de la investigación. Finalmente, se elaborará un \textit{\textbf{esquema de traceability}} con el fin de contribuir en la solución de alguno de los problemas nombrados.
 
 
 
@@ -104,9 +117,9 @@ En el presente documento de tesis se abordará el tema de traceability, luego se
 \chapter{Objetivos}
 
 
-El objetivo del trabajo de tesis propuesto comprende, por un lado, una introducción al tema de traceability conjunto con un análisis de los problemas que aún se encuentran abiertos en su ámbito en \gls{mde}, seguido de la elaboración de un esquema de traceability que contribuya en la solución de dichos problemas.
+El objetivo del trabajo de tesis propuesto comprende, por un lado, una introducción al tema de \textit{traceability} conjunto con un análisis de los problemas que aún se encuentran abiertos en el ámbito de \gls{mde}, seguido de la elaboración de un \textit{esquema de traceability} que contribuya en la solución de dichos problemas.
 
-También se diseñará e implementará una herramienta que pueda ser integrada a otra de desarrollo \gls{mde}, y asista al desarrollador automatizando el proceso de definición de trazas o links entre elementos de los modelos origen y destino. Esta solución proveerá un mapa de transformaciones que permitirá determinar la procedencia de cada ítem del modelo destino, y su correspondiente origen en el modelo fuente.
+También se diseñará e implementará una herramienta que pueda ser integrada a otra de desarrollo \gls{mde}, y asista al desarrollador automatizando el proceso de definición de \textit{\textbf{trazas}} (o de ahora en más en inglés \textit{\textbf{tracelinks}}) entre elementos de los modelos origen y destino. Esta solución proveerá un mapa de transformaciones que permitirá determinar la procedencia de cada ítem del modelo destino, y su correspondiente origen en el modelo fuente.
 
 
 \mainmatter
@@ -117,7 +130,7 @@ También se diseñará e implementará una herramienta que pueda ser integrada a
 
 \section{Introducción}
 
-Según el Glosario Estándar de Términos de la Ingeniería de Software del \gls{ieee} \cite{IEEE} la noción de traceability se define como: El grado o nivel en el cual una relación puede ser establecida entre dos o más productos del proceso de desarrollo, especialmente entre productos que tengan una relación de predecesor-sucesor o principal-secundario; por ejemplo el grado en el cual el requerimiento y el diseño de un componente de software se corresponden. La definición anterior fue dada por “the requirements management community”, para nosotros, que necesitamos un punto de vista maś cercano al contexto de \gls{mdd}, traceability es un término usado para describir cualquiera de las complejas relaciones lógicas que existen entre los distintos artefactos que se presentan en cualquier momento del ciclo de vida del desarrollo de software, el establecimiento de estas relaciones y/o el mantenimiento de las mismas.
+Según el Glosario Estándar de Términos de la Ingeniería de Software del \gls{ieee} \cite{IEEE} la idea de traceability se define como: El grado o nivel en el cual una relación puede ser establecida entre dos o más productos del proceso de desarrollo, especialmente entre productos que tengan una relación de predecesor-sucesor o principal-secundario; por ejemplo el grado en el cual el requerimiento y el diseño de un componente de software se corresponden. La definición anterior fue dada por “the requirements management community”, para nosotros, que necesitamos un punto de vista maś cercano al contexto de \gls{mdd}, traceability es un término usado para describir cualquiera de las complejas relaciones lógicas que existen entre los distintos artefactos que se presentan en cualquier momento del ciclo de vida del desarrollo de software, el establecimiento de estas relaciones y/o el mantenimiento de las mismas.
 
 Entre varios beneficios de traceability que enumeraremos mejor más adelante, podemos encontrar que ayuda a identificar las relaciones y dependencias que existen entre los artefactos de software. También traceability es crucial entre los requerimientos y su representación en los modelos para asegurar que el conjunto relevante de requerimientos fueron debidamente implementados en el código. Pero no solo traceability asegura la identificación de objetos y elementos relacionados, también puede facilitar el análisis de impactos de cambios durante el desarrollo de software.
 
