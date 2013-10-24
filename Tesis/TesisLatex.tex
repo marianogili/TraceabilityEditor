@@ -18,15 +18,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeglossaries
 
-%\newglossaryentry{hola}{name={hola},description={Esto es una prueba}}
-\newglossaryentry{mde}{name={Ingeniería de Software Dirigida por Modelos o Model-Driven Engineering (MDE)},description={hola}}
+\newglossaryentry{mde}{
+	name={Ingeniería de Software Dirigida por Modelos},
+	description={en inglés Model-Driven Engineering (MDE), es un paradigma de ingeniería de software en el cual los modelos juegan el rol principal en todas las actividades del ciclo de vida de la misma.}
+}
+
+\newglossaryentry{mda}{
+	name={Arquitectura Dirigida por Modelos}, 
+	description={en inglés Model-Driven Architecture (MDA), es una visión o propuesta particular definida por el \gls{omg} de \gls{mdd} que se basa en el uso de estándares de OMG.}
+}
+
+\newglossaryentry{omg}{
+	name={Object Management Group}, 
+	description={Consorcio internacional de la industrial informática sin fines de lucro y de membresía abierta responsable de la definición de varios estándares de modelado como \gls{uml}, \gls{mof} y \gls{mda}.}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Siglas              %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\newacronym{mde}{MDE}{Ingeniería de Software Dirigida por Modelos o Model-Driven Engineering}
-\newacronym{mda}{MDA}{Arquitectura Dirigida por Modelos o Model-Driven Architecture}
-\newacronym{omg}{OMG}{Object Management Group}
 \newacronym{mdd}{MDD}{Desarrollo Dirigido por Modelos o Model-Driven Development}
 \newacronym{ieee}{IEEE}{Institute of Electrical and Electronics Engineers}
 \newacronym{ide}{IDE}{Entornos de Desarrollo Integrados o Integrated Development Environment}
@@ -105,7 +114,7 @@ A mi familia, amigos y compañeros de estudio y del trabajo, por su acompañamie
 \chapter{Introducción}
 
 
-En la \gls{mde}, se define al modelo como artefacto principal que toma participación a lo largo de todas las tareas/procesos que conforman dicha ingeniería, ésto es, el análisis, el diseño, el desarrollo, las pruebas, el mantenimiento, etc. Una implementación particular propuesta que acompaña esta idea es la \gls{mda}, definida por el \gls{omg}, cuyo ciclo de proceso de desarrollo está basado enteramente en el uso de modelos formales y transformaciones que se realizan sobre dichos modelos. Una característica muy importante de todo proceso de \gls{mdd}, es lo que se conoce como \textit{\textbf{posibilidad de rastreo}} (o de ahora en más en inglés \textit{\textbf{traceability}}), que ayuda y toma parte en todo lo que respecta a las relaciones que existen entre cada uno de los artefactos productos del proceso de desarrollo.
+En la \gls{mde} o \textit{\textbf{MDE}}, se define al modelo como artefacto principal que toma participación a lo largo de todas las tareas/procesos que conforman dicha ingeniería, ésto es, el análisis, el diseño, el desarrollo, las pruebas, el mantenimiento, etc. Una implementación particular propuesta que acompaña esta idea es la \gls{mda}  o \textit{\textbf{MDA}}, definida por el \gls{omg}, cuyo ciclo de proceso de desarrollo está basado enteramente en el uso de modelos formales y transformaciones que se realizan sobre dichos modelos. Una característica muy importante de todo proceso de \gls{mdd}, es lo que se conoce como \textit{\textbf{posibilidad de rastreo}} (o de ahora en más en inglés \textit{\textbf{traceability}}), que ayuda y toma parte en todo lo que respecta a las relaciones que existen entre cada uno de los artefactos productos del proceso de desarrollo.
 
 Cuando nos referimos al término artefacto, hablamos por ejemplo de un requerimiento de sistema, un componente de software, un caso de prueba, entre otros. El mantenimiento y la definición de las relaciones y dependencias que existen entre los artefactos no es una tarea fácil, el mismo ha sido un desafío desde principios de 1970.
 
