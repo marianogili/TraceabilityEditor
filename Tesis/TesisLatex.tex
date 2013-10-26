@@ -198,35 +198,32 @@ En la ingeniería de software encontramos dos usos o semánticas principales que
 
 \begin{itemize}
 
-\item \textit{traceability} en la ingeniería de requerimientos: donde se guarda un requerimiento desde su definición hasta su implementación. En más detalle según \cite{GotelFinkelstein} se refiere a la habilidad de describir y seguir la vida de los requerimientos en ambas direcciones, hacia delante y hacia atrás (forward and backward \textit{traceability}). Desde los orígenes, pasando por el desarrollo y la especificación, hacia su posterior entrega y uso, y a través de todos los períodos de refinamiento e iteración de cualquiera de estas etapas.
+\item \textit{\textbf{traceability en la Ingeniería de Requerimientos}}: donde se guarda un requerimiento desde su definición hasta su implementación. En más detalle según \cite{GotelFinkelstein} se refiere a la habilidad de describir y seguir la vida de los requerimientos en ambas direcciones, hacia delante y hacia atrás (\textit{forward and backward traceability}). Desde los orígenes, pasando por el desarrollo y la especificación, hacia su posterior entrega y uso, y a través de todos los períodos de refinamiento e iteración de cualquiera de estas etapas.
 
-\item \textit{traceability} en el Desarrollo Dirigido por Modelos: donde se almacenan principalmente las relaciones existentes entre los artefactos producto de las transformaciones de modelos.
+\item \textit{\textbf{traceability en \glssymbol{mdd}}}: donde se almacenan principalmente las relaciones existentes entre los artefactos producto de las transformaciones de modelos.
 
 \end{itemize}
 
 \subsection{Beneficios}
 
-A continuación se listan un conjunto de actividades de diferentes dominios de la ingeniería en las cuales el uso de \textit{traceability} es muy beneficioso según \cite{BrcinaRiebisch} y \cite{GrammelVoigt}:
+A continuación se listan un conjunto de actividades que provienen de distintos dominios de la ingeniería, en las cuales el uso de \textit{traceability} es muy beneficioso según \cite{BrcinaRiebisch} y \cite{GrammelVoigt}.
 
-\begin{itemize}
+\paragraph{Análisis de Sistemas} Ayuda a entender la complejidad de un sistema, navegando a lo largo del modelo de enlaces resultantes de la ejecución de las distintas cadenas de transformación.
 
-\item En el Análisis de sistemas: nos ayuda a entender la complejidad de un sistema navegando a lo largo del modelo de enlaces obtenidos por la ejecución de las distintas cadenas de transformación.
+\paragraph{Análisis de Cobertura} Por ejemplo en el momento de ejecución de los casos de prueba, el uso de \textit{traceability} es crucial para la hora de determinar si todos los requerimientos fueron cubiertos, es decir tenidos en cuenta.
 
-\item En el Análisis de cobertura: por ejemplo en el momento de ejecución de los casos de prueba, el uso de \textit{traceability} es crucial para la hora de determinar si todos los requerimientos fueron cubiertos o tenidos en cuenta.
+\paragraph{Análisis de Impacto de Cambios} \textit{Traceability} nos ayuda a ver cómo los cambios en un modelo repercutirán en los modelos relacionados; también el uso de \textit{traceability} nos permite saber en cualquier momento el tipo de dependencia que existe entre las entidades relacionadas, lo cual ayuda a determinar la necesidad de un cambio.
 
- \item En el Análisis de impacto de cambios: \textit{traceability} nos ayuda a ver cómo los cambios en un modelo repercutirán en los otros modelos relacionados; también el uso de \textit{traceability} nos permite saber en cualquier momento el tipo de dependencia que existe entre las entidades relacionadas, lo cual ayuda a determinar la necesidad de un cambio.
+\paragraph{Análisis de Huérfanos} Nos permitirá encontrar fácilmente los elementos huérfanos de un modelo dado que serán los artefactos que no se encuentren enlazados a ningún \textit{tracelink}.
 
- \item En el Análisis de huérfanos: nos permitirá encontrar fácilmente los elementos huérfanos de un modelo dado que serán los artefactos que no se encuentren enlazados a ninguna traza.
+\paragraph{Comprensión del Software y la Ingeniería Inversa} Crucial cuando sea necesario identificar todas las entidades relacionadas a una en particular, entender el tipo de relación existente, identificar las abstracciones, es decir los patrones de diseño, estilos de arquitectura, etc.
 
- \item En la Comprensión del software y la ingeniería inversa: crucial cuando sea necesario identificar todas las entidades relacionadas a una en particular, entender el tipo de relación existente, identificar las abstracciones, es decir los patrones de diseño, estilos de arquitectura, principios.
+\paragraph{Análisis de Requerimiento} Por ejemplo para identificar el artefacto particular que demanda una propiedad específica; encontrar y resolver un conjunto de requerimientos que se contradicen, entre otros.
 
- \item En el análisis de requerimiento: por ejemplo para identificar el artefacto particular que demanda una propiedad específica; encontrar y resolver un conjunto de requerimientos que se contradicen.
+\paragraph{Apoyo en la toma de decisiones} Para justificar una decisión dado que nos facilita entender qué factores y metas influyen en la misma; también \textit{traceability} nos será muy útil en el análisis y evaluación en los momentos que se nos encontremos con distintas propuestas de solución.
 
- \item Apoyo en la toma de decisiones: para justificar una decisión dado que nos facilita entender qué factores y metas influyen en la misma; también \textit{traceability} nos será muy útil en los momentos que se nos presenten distintas propuestas de solución en su análisis y evaluación.
+\paragraph{Configuración del Sistema y Versionado} En este momento el uso de \textit{traceability} es beneficioso para identificar las restricciones entre los componentes, identificar los cambios necesarios para resolver una restricción, identificar las diferencias entre dos versiones distintas del mismo artefacto y su impacto en otros artefactos.
 
-\item En la Configuración del sistema y versionado: en este momento el uso de \textit{traceability} es beneficioso para identificar las restricciones entre los componentes, identificar los cambios necesarios para resolver una restricción, identificar las diferencias entre dos versiones distintas del mismo artefacto y su impacto en otros artefactos.
-
-\end{itemize}
 
 
 \subsection{Algunos inconvenientes}
