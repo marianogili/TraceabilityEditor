@@ -19,30 +19,72 @@
 \makeglossaries
 
 \newglossaryentry{mde}{
-	name={Ingeniería de Software Dirigida por Modelos},
-	description={en inglés Model-Driven Engineering (MDE), es un paradigma de ingeniería de software en el cual los modelos juegan el rol principal en todas las actividades del ciclo de vida de la misma.}
+	name={MDE - Ingeniería de Software Dirigida por Modelos},
+	text={Ingeniería de Software Dirigida por Modelos (\textit{MDE} de Model-Driven Engineering)},
+	symbol={MDE},
+	description={en inglés Model-Driven Engineering (MDE), es un paradigma de ingeniería de software en el cual los modelos juegan el rol principal en todas las actividades del ciclo de vida de la misma}
 }
 
 \newglossaryentry{mda}{
-	name={Arquitectura Dirigida por Modelos}, 
-	description={en inglés Model-Driven Architecture (MDA), es una visión o propuesta particular definida por el \gls{omg} de \gls{mdd} que se basa en el uso de estándares de OMG.}
+	name={MDA - Arquitectura Dirigida por Modelos}, 
+	text={Arquitectura Dirigida por Modelos (\textit{MDA} de Model-Driven Architecture)},
+	symbol={MDA},
+	description={en inglés Model-Driven Architecture (MDA), es una visión o propuesta particular definida por el \glssymbol{omg} de \glssymbol{mdd} que se basa en el uso de estándares de \glssymbol{omg}}
 }
 
 \newglossaryentry{omg}{
-	name={Object Management Group}, 
-	description={Consorcio internacional de la industrial informática sin fines de lucro y de membresía abierta responsable de la definición de varios estándares de modelado como \gls{uml}, \gls{mof} y \gls{mda}.}
+	name={OMG - Object Management Group}, 
+	text={Object Management Group (\textit{OMG})},
+	symbol={OMG},
+	description={Consorcio internacional de la industrial informática sin fines de lucro y de membresía abierta responsable de la definición de varios estándares de modelado como \gls{uml}, \gls{mof} y \glssymbol{mda}}
 }
+
+\newglossaryentry{mdd}{
+	name={MDD - Desarrollo Dirigido por Modelos}, 
+	text={Desarrollo Dirigido por Modelos (\textit{MDD} de Model-Driven Development)},
+	symbol={MDD},
+	description={en inglés Model-Driven Development (MDD), es un paradigma de desarrollo de software que utiliza modelos como artefactos principales del proceso de desarrollo. Por lo general, la implementación se genera o deriva automáticamente a partir de los modelos}
+}
+
+\newglossaryentry{gef}{
+	name={GEF - Graphical Editing Framework}, 
+	text={Graphical Editing Framework (\textit{GEF})},
+	symbol={GEF},
+	description={Es un framework Eclipse para el desarrollo de editores gráficos y vistas del Eclipse Workbench UI}
+}
+
+\newglossaryentry{jdt}{
+	name={JDT - Java Development Tool}, 
+	text={Java Development Tool (\textit{JDT})},
+	symbol={JDT},
+	description={Es un proyecto que proporciona herramientas tipo plug-ins de Eclipse que asisten en el desarrollo de aplicaciones Java. Incluye la creación de proyectos Java, una perspectiva para el Workbench Eclipse, así como también un conjunto de vistas, editores, asistentes, constructores y herramientas de refactorización y fusionado de código. Estas herramientas transforman a Eclipse en un \gls{ide}}
+}
+
+\newglossaryentry{mof}{
+	name={MOF - MetaObject Facility}, 
+	text={MetaObject Facility (\textit{MOF})},
+	symbol={MOF},
+	description={es un lenguaje estándar del \glssymbol{omg} para \glssymbol{mde}, en particular es un meta-meta lenguaje que permite definir meta-modelos en la capa M2, como por ejemplo el meta-modelo \gls{uml} que describe al lenguaje \gls{uml}. Como su nombre lo indica, MOF se basa en el paradigma Orientado a Objetos}
+}
+
+\newglossaryentry{ocl}{
+	name={OCL - Object Constraint Language}, 
+	text={Lenguaje de Restricciones para Objetos (\textit{OCL} de Object Constraint Language)},
+	symbol={OCL},
+	description={es un lenguaje declarativo para describir reglas
+que se aplican a meta-modelos \glssymbol{mof} y a los modelos \gls{uml}. Fue desarrollado por IBM y en la actualidad es parte del estándar \gls{uml}. OCL es un lenguaje de texto que permite definir restricciones y consultas sobre expresiones de objetos de cualquier modelo o meta-modelo \glssymbol{mof}. OCL es componente clave del estándar \glssymbol{omg} para la transformación de los modelos \gls{qvt}. Otros lenguajes de transformación de modelos
+como \gls{atl} también están construidos utilizando OCL}
+}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Siglas              %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newacronym{mdd}{MDD}{Desarrollo Dirigido por Modelos o Model-Driven Development}
 \newacronym{ieee}{IEEE}{Institute of Electrical and Electronics Engineers}
 \newacronym{ide}{IDE}{Entornos de Desarrollo Integrados o Integrated Development Environment}
 \newacronym{uml}{UML}{Unified Modeling Language}
-\newacronym{mof}{MOF}{MetaObject Facility}
 \newacronym{emf}{EMF}{Eclipse Modeling Framework}
-\newacronym{ocl}{OCL}{Object Constraint Language}
 \newacronym{evl}{EVL}{Epsilon Validation Language}
 \newacronym{teap}{TEAP}{Traceability Elicitation and Analysis Process}
 \newacronym{alm}{ALM}{Application Lifecycle Management}
@@ -54,15 +96,13 @@
 \newacronym{swt}{SWT}{Standard Widget Toolkit}
 \newacronym{xmi}{XMI}{XML Metadata Interchange}
 \newacronym{gui}{GUI}{Interfaz de Usuario Gráfica o Graphical User Interface}
-\newacronym{jdt}{JDT}{Java Development Tooling}
 \newacronym{gmf}{GMF}{Graphical Modeling Framework}
-\newacronym{gef}{GEF}{Graphical Editing Framework}
 \newacronym{spl}{SPL}{Línea de Producto de Software o Software Product Line}
 \newacronym{case}{CASE}{Computer Aided Software Engineering}
 \newacronym{qvt}{QVT}{Query/View/Transformation}
 \newacronym{dsl}{DSL}{Domain-Specific Language}
-\newacronym{atl}{ATL}{Atlas Transformation Language}
 \newacronym{mmt}{MMT}{Model-to-Model Transformation}
+\newacronym{atl}{ATL}{Atlas Transformation Language}
 
 
 
@@ -114,11 +154,11 @@ A mi familia, amigos y compañeros de estudio y del trabajo, por su acompañamie
 \chapter{Introducción}
 
 
-En la \gls{mde} o \textit{\textbf{MDE}}, se define al modelo como artefacto principal que toma participación a lo largo de todas las tareas/procesos que conforman dicha ingeniería, ésto es, el análisis, el diseño, el desarrollo, las pruebas, el mantenimiento, etc. Una implementación particular propuesta que acompaña esta idea es la \gls{mda}  o \textit{\textbf{MDA}}, definida por el \gls{omg}, cuyo ciclo de proceso de desarrollo está basado enteramente en el uso de modelos formales y transformaciones que se realizan sobre dichos modelos. Una característica muy importante de todo proceso de \gls{mdd}, es lo que se conoce como \textit{\textbf{posibilidad de rastreo}} (o de ahora en más en inglés \textit{\textbf{traceability}}), que ayuda y toma parte en todo lo que respecta a las relaciones que existen entre cada uno de los artefactos productos del proceso de desarrollo.
+En la \gls{mde}, se define al modelo como artefacto principal que toma participación a lo largo de todas las tareas/procesos que conforman dicha ingeniería, ésto es, el análisis, el diseño, el desarrollo, las pruebas, el mantenimiento, etc. Una implementación particular propuesta que acompaña esta idea es la \gls{mda}, definida por el \gls{omg}, cuyo ciclo de proceso de desarrollo está basado enteramente en el uso de modelos formales y transformaciones que se realizan sobre dichos modelos. Una característica muy importante de todo proceso de \gls{mdd}, es lo que se conoce como \textit{\textbf{posibilidad de rastreo}} (o de ahora en más en inglés \textit{\textbf{traceability}}), que ayuda y toma parte en todo lo que respecta a las relaciones que existen entre cada uno de los artefactos productos del proceso de desarrollo.
 
 Cuando nos referimos al término artefacto, hablamos por ejemplo de un requerimiento de sistema, un componente de software, un caso de prueba, entre otros. El mantenimiento y la definición de las relaciones y dependencias que existen entre los artefactos no es una tarea fácil, el mismo ha sido un desafío desde principios de 1970.
 
-En el presente documento de tesis se abordará el tema de \textit{traceability}, luego se presentará un análisis de los distintos problemas que aún se encuentran abiertos como así también un conjunto de soluciones encontradas a lo largo de la investigación. Finalmente, se elaborará un \textit{\textbf{esquema de traceability}} con el fin de contribuir en la solución de alguno de los problemas nombrados.
+En el presente documento de tesis se abordará el tema de \textit{\textbf{traceability}}, luego se presentará un análisis de los distintos problemas que aún se encuentran abiertos como así también un conjunto de soluciones encontradas a lo largo de la investigación. Finalmente, se elaborará un \textit{\textbf{esquema de traceability}} con el fin de contribuir en la solución de alguno de los problemas nombrados.
 
 
 
@@ -126,12 +166,13 @@ En el presente documento de tesis se abordará el tema de \textit{traceability},
 \chapter{Objetivos}
 
 
-El objetivo del trabajo de tesis propuesto comprende, por un lado, una introducción al tema de \textit{traceability} conjunto con un análisis de los problemas que aún se encuentran abiertos en el ámbito de \gls{mde}, seguido de la elaboración de un \textit{esquema de traceability} que contribuya en la solución de dichos problemas.
+El objetivo del trabajo de tesis comprende, por un lado, una introducción al tema de \textit{traceability} conjunto con un análisis de los problemas que aún se encuentran abiertos en el ámbito de \glssymbol{mde}, seguido de la elaboración de un \textit{esquema de traceability} que contribuya en la solución de dichos problemas.
 
-También se diseñará e implementará una herramienta que pueda ser integrada a otra de desarrollo \gls{mde}, y asista al desarrollador automatizando el proceso de definición de \textit{\textbf{trazas}} (o de ahora en más en inglés \textit{\textbf{tracelinks}}) entre elementos de los modelos origen y destino. Esta solución proveerá un mapa de transformaciones que permitirá determinar la procedencia de cada ítem del modelo destino, y su correspondiente origen en el modelo fuente.
+También se diseñará e implementará una herramienta que pueda ser integrada a otra de desarrollo \glssymbol{mde}, y asista al desarrollador automatizando el proceso de definición de \textit{\textbf{trazas}} (o de ahora en más en inglés \textit{\textbf{tracelinks}}) entre elementos de los modelos origen y destino. Esta solución proveerá un mapa de transformaciones que permitirá determinar la procedencia de cada ítem del modelo destino, y su correspondiente origen en el modelo fuente.
 
 
 \mainmatter
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Traceability %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1319,11 +1360,16 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \chapter{Conclusión}
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Glosario %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \printglossaries
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Bibliografía %%%%%
