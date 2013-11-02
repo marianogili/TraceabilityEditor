@@ -572,25 +572,27 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Solución %%%%%
+%%% Camino a la propuesta %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Caminando hacia la propuesta}
+\chapter{Camino a la propuesta}
 
-A continuación se presenta una pequeña introducción a un conjunto de temas que se tuvieron en cuenta a la hora de definir el esquema de \textit{traceability} propuesto que se presenta en el capítulo \ref{cap:Propuesta}.
+En el presente capítulo nos introducimos en un conjunto de temas importantes de la teoría de \textit{traceability}, primero hablaremos sobre dos formas distintas de \textit{\textbf{generación de tracelinks}}, luego nos sumergiremos en el tema de la \textit{\textbf{semántica de los links}} y la compleja tarea de la definición de \textit{\textbf{tipos de tracelinks}}, y por último veremos dos \textit{\textbf{estrategias de almacenamiento}} principales de la información de \textit{traceability}. Estos temas han sido muy importantes y relevantes a la hora de la definición del \textit{esquema de traceability} propuesto que se detalla en el siguiente capítulo \ref{cap:Propuesta}.
 
 \section{Generación de tracelinks}
 
-Uno de los desafíos presentados en \cite{GrammelVoigt} trata sobre cuál de los dos enfoques de generación de tracelinks que existen durante una transformación, implícita o explícita, es conveniente utilizar. En la generación implícita la transformación provee un soporte integral de \textit{traceability}, en cambio en la explícita, queda en manos del desarrollador codificar las reglas de \textit{traceability} como un modelo más de salida.
+Uno de los principales temas de \textit{traceability} refiere a los dos enfoques distintos de \textit{generación de tracelinks} que se pueden presentar o usar durante una transformación de modelos, estos son la generación \textit{\textbf{implícita}} y la generación \textit{\textbf{explícita}}. 
 
-A continuación se detallan las ventajas y desventajas de cada enfoque:
+La diferencia entre estas dos posibilidades radica en que, por un lado en la generación \textit{implícita} las transformaciones proveen un soporte integrado de \textit{traceability}, mientras que por el otro, en la generación \textit{explícita} es responsabilidad del desarrollador de la transformación de codificar explícitamente las reglas de \textit{traceability} que generarán esta información como un modelo más de salida.
 
-\subsection{Implícita}
+A continuación se detallan las ventajas y desventajas de cada enfoque según \cite{GrammelVoigt}:
+
+\subsection{Generación implícita}
 
 \paragraph{Ventajas}
 
 \begin{enumerate}
 
-\item La mayor ventaja de la generación de tracelinks implícita es que no es necesario ningún esfuerzo adicional para obtener los enlaces de tracelinks entre los modelos de entrada y salida, dado que son generados en paralelo automáticamente con el modelo actual de la transformación.
+\item La única y mayor ventaja de la generación \textit{implícita} es que no es necesario ningún esfuerzo adicional para obtener los \textit{tracelinks} que relacionan los modelos de entrada y salida, dado que son generados en paralelo y automáticamente con el modelo resultante de la ejecución de la transformación.
 
 \end{enumerate}
 
@@ -598,7 +600,7 @@ A continuación se detallan las ventajas y desventajas de cada enfoque:
 
 \begin{enumerate}
 
-\item El meta-modelo de \textit{traceability} es fijo: como la mayoría de los enfoques de transformación tienen diferentes meta-modelos, lograr estandarizar entre estos diferentes enfoques es muy complejo.
+\item El meta-modelo de \textit{traceability} tiene que ser necesariamente fijo, pero dada la infinidad de enfoques de transformaciones que dan lugar a diferentes definiciones de meta-modelos, lograr un estándar entre estos diferentes enfoques es muy complejo.
 
 \item Poca flexibilidad para controlar los datos de \textit{traceability}, ésto incluye:
 
