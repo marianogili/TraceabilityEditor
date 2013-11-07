@@ -342,7 +342,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \item Para efectivamente utilizar y entender las relaciones por debajo de \textit{traceability}, es necesario definir la semántica de los \textit{tracelinks}. Sin embargo, definir una formalidad para representar esta semántica no es una tarea fácil y puede llegar a quedar acotada a un dominio específico, cosa que no es conveniente.
 
-\item Es muy importante para mantener la consistencia en \textit{traceability}, conocer y establecer el nivel de granularidad de los elementos a ser enlazados. El problema es que no existe aún, un modelo claro de costo-beneficio que determine unívocamente cuál es el nivel de granularidad correcto \textit{\textbf{trace granularity}}.
+\item Es muy importante para mantener la consistencia en \textit{traceability}, conocer y establecer el nivel de granularidad (o de ahora en más en inglés \textit{\textbf{trace granularity}}) de los elementos a ser enlazados. El problema es que no existe aún, un modelo claro de costo-beneficio que determine unívocamente cuál es el nivel de \textit{trace granularity} correcto.
 
 \end{itemize}
 
@@ -590,31 +590,31 @@ A continuación se detallan las ventajas y desventajas de cada enfoque según \c
 
 \paragraph{Ventajas}
 
-\begin{enumerate}
+\begin{itemize}[label={\checkmark}]
 
 \item La única y mayor ventaja de la generación \textit{implícita} es que no es necesario ningún esfuerzo adicional para obtener los \textit{tracelinks} que relacionan los modelos de entrada y salida, dado que son generados en paralelo y automáticamente con el modelo resultante de la ejecución de la transformación.
 
-\end{enumerate}
+\end{itemize}
 
 \paragraph{Desventajas}
 
-\begin{enumerate}
+\begin{itemize}[label={$\times$}]
 
 \item El meta-modelo de \textit{traceability} tiene que ser necesariamente fijo, pero dada la infinidad de enfoques de transformaciones que dan lugar a diferentes definiciones de meta-modelos, lograr un estándar entre estos diferentes enfoques es muy complejo.
 
-\item Poca flexibilidad para controlar los datos de \textit{traceability}, ésto incluye:
+\item Dada la poca flexibilidad que se obtiene al hacer uso de un meta-modelo fijo, se presentan los siguientes inconvenientes:
 
-\begin{enumerate}
+\begin{itemize}
 
-\item El tipo de información guardada: cuando se trazan todos los elementos del modelo referenciado, el número de enlaces puede volverse incomprensible y por lo tanto menos útil. También al presentarse un modelo de transformación grande y complejo puede acarrear un problema en lo que respecta a rendimiento.
+\item[-] cuando se generan \textit{tracelinks} para todos los elementos del modelo referenciado, obtener una cantidad considerable puede volverse incomprensible y en consecuencia inútil. También, en el caso de transformaciones de modelos grandes y complejos, podemos encontrarnos con problemas de rendimiento.
 
-\item El nivel de granularidad de la información de \textit{traceability}: (esto es por ejemplo realizar tracelinks solo a nivel de archivo o bajar a nivel del contenido del mismo) esta configuración de los enlaces varía de un escenario de \textit{traceability} a otro.
+\item[-] la configuración del nivel de \textit{trace granularity} varía de un escenario de \textit{traceability} a otro.
 
-\item Contexto de la información: por ejemplo por necesidades de un cliente que presente motivos de seguridad, puede requerir que no toda la información de un modelo tiene permitido ser trazada.
+\item[-] Contexto de la información: por ejemplo por necesidades de un cliente que presente motivos de seguridad, puede requerir que no toda la información de un modelo tiene permitido ser trazada.
 
-\end{enumerate}
+\end{itemize}
 
-\end{enumerate}
+\end{itemize}
 
 
 \subsection{Explícita}
