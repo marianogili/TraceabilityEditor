@@ -78,6 +78,13 @@ que se aplican a meta-modelos \glssymbol{mof} y a los modelos \gls{uml}. Fue des
 como \gls{atl} también están construidos utilizando OCL}
 }
 
+\newglossaryentry{uml}{
+	name={UML - Unified Modeling Language}, 
+	text={Lenguaje Unificado de Modelado (\textit{UML} de Unified Modeling Language)},
+	symbol={UML},
+	description={es un lenguaje gráfico para visualizar, especificar, construir y documentar un sistema de software. Es el lenguaje de modelado de sistemas de software más conocido y utilizado en la actualidad y es también el estándar oficial, respaldado por el \glssymbol{omg}}
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -85,7 +92,6 @@ como \gls{atl} también están construidos utilizando OCL}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newacronym{ieee}{IEEE}{Institute of Electrical and Electronics Engineers}
 \newacronym{ide}{IDE}{Entornos de Desarrollo Integrados o Integrated Development Environment}
-\newacronym{uml}{UML}{Unified Modeling Language}
 \newacronym{emf}{EMF}{Eclipse Modeling Framework}
 \newacronym{evl}{EVL}{Epsilon Validation Language}
 \newacronym{teap}{TEAP}{Traceability Elicitation and Analysis Process}
@@ -170,7 +176,7 @@ En el presente documento de tesis se abordará el tema de \textit{\textbf{tracea
 
 El objetivo del trabajo de tesis comprende, por un lado, una introducción al tema de \textit{traceability} conjunto con un análisis de los problemas que aún se encuentran abiertos en el ámbito de \glssymbol{mde}, seguido de la elaboración de un \textit{esquema de traceability} que contribuya en la solución de dichos problemas.
 
-También se diseñará e implementará una herramienta que pueda ser integrada a otra de desarrollo \glssymbol{mde}, y asista al desarrollador automatizando el proceso de definición de \textit{\textbf{trazas}} (o de ahora en más en inglés \textit{\textbf{tracelinks}}) entre elementos de los modelos origen y destino. Esta solución proveerá un mapa de transformaciones que permitirá determinar la procedencia de cada ítem del modelo destino, y su correspondiente origen en el modelo fuente.
+También se diseñará e implementará una herramienta que pueda ser integrada a otra de desarrollo \glssymbol{mde}, y asista al desarrollador automatizando el proceso de definición de \textit{\textbf{trazas}} (o de ahora en más en inglés \textit{\textbf{tracelinks}} o \textit{\textbf{links}}) entre elementos de los modelos origen y destino. Esta solución proveerá un mapa de transformaciones que permitirá determinar la procedencia de cada ítem del modelo destino, y su correspondiente origen en el modelo fuente.
 
 
 \mainmatter
@@ -257,6 +263,7 @@ Más adelante en otro capítulo se presentará con más detalle los desafíos pr
 %%% Problemas y Desafíos %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Problemas y Desafíos}
+\label{cap:ProblemasDesafios}
 
 En este capítulo vamos a describir, por un lado, los principales problemas que se presentan en el ámbito de \textit{traceability}, y por otro, los grandes desafíos que surgen de ellos y, que aún hoy, todavía se encuentran abiertos. Todo organizado por grupos según el conjunto de aspectos definidos en \cite{Excellence}, donde por cada tema se listan los problemas asociados, y seguido, los desafíos en consecuencia.
 
@@ -335,6 +342,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 \end{itemize}
 
 \section{Semántica de los tracelinks}
+\label{sec:SemanticaTracelinks}
 
 \subsubsection{Problemas}
 
@@ -352,7 +360,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \item Definir meta-modelos para representar la información semántica de los \textit{tracelinks} y proveer ejemplos de instancias sobre distintos dominios específicos.
 
-\item Desarrollar técnicas y procesos para determinar el correcto nivel de granularidad de los \textit{tracelinks} de un proyecto.
+\item Desarrollar técnicas y procesos para determinar el correcto nivel de \textit{trace granularity} de un proyecto.
 
 \end{itemize}
 
@@ -578,6 +586,16 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 En el presente capítulo nos introducimos en un conjunto de temas importantes de la teoría de \textit{traceability}, primero hablaremos sobre dos formas distintas de \textit{\textbf{generación de tracelinks}}, luego nos sumergiremos en el tema de la \textit{\textbf{semántica de los links}} y la compleja tarea de la definición de \textit{\textbf{tipos de tracelinks}}, y por último veremos dos \textit{\textbf{estrategias de almacenamiento}} principales de la información de \textit{traceability}. Estos temas han sido muy importantes y relevantes a la hora de la definición del \textit{esquema de traceability} propuesto que se detalla en el siguiente capítulo \ref{cap:Propuesta}.
 
+
+\section{Tipos de tracelinks}
+
+Uno de los desafíos presentados en el capítulo \ref{cap:ProblemasDesafios} (sección \ref{sec:SemanticaTracelinks}) refiere a la definición semántica de los \textit{tracelinks}, tarea que nos permitirá entender y distinguir los distintos tipos de \textit{links} con lo que nos podemos llegar a encontrar. Por ejemplo, un \textit{link} que muestra la relación entre un requerimiento textual y un elemento de un diagrama de caso de uso \glssymbol{uml} tiene una semántica distinta que un \textit{tracelink} que determina una relación de refinamiento dentro de un modelo de clases también \glssymbol{uml}.
+
+Los tipos de \textit{tracelinks} por lo general son fuertemente dependientes al proyecto, por lo cual definir fijamente los tipos de enlaces semánticos tiene la consecuencia de menor flexibilidad para los enlaces que desee trazar el usuario, los cuales serán definidos por las necesidades del proyecto o la compañía.
+
+Es importante remarcar que la determinación de la semántica de un enlace es guiada por la razón del usuario sobre qué quiere realizar o representar con dicho enlace. No predefinir la semántica correctamente de un enlace puede resultar en fallas de razonamientos.
+
+
 \section{Generación de tracelinks}
 
 Uno de los principales temas de \textit{traceability} refiere a los dos enfoques distintos de \textit{generación de tracelinks} que se pueden presentar o usar durante una transformación de modelos, estos son la generación \textit{\textbf{implícita}} y la generación \textit{\textbf{explícita}}. 
@@ -585,6 +603,7 @@ Uno de los principales temas de \textit{traceability} refiere a los dos enfoques
 La diferencia entre estas dos posibilidades radica en que, por un lado en la generación \textit{implícita} las transformaciones proveen un soporte integrado de \textit{traceability}, mientras que por el otro, en la generación \textit{explícita} es responsabilidad del desarrollador de la transformación de codificar explícitamente las reglas de \textit{traceability} que generarán esta información como un modelo más de salida.
 
 A continuación se detallan las ventajas y desventajas de cada enfoque según \cite{GrammelVoigt}:
+
 
 \subsection{Generación implícita}
 
@@ -602,7 +621,7 @@ A continuación se detallan las ventajas y desventajas de cada enfoque según \c
 
 \item El meta-modelo de \textit{traceability} tiene que ser necesariamente fijo, pero dada la infinidad de enfoques de transformaciones que dan lugar a diferentes definiciones de meta-modelos, lograr un estándar entre estos diferentes enfoques es muy complejo.
 
-\item Dada la poca flexibilidad que se obtiene al hacer uso de un meta-modelo fijo, se presentan los siguientes inconvenientes:
+\item Dada la poca flexibilidad que se obtiene al hacer uso de un meta-modelo fijo, se presentan los siguientes inconvenientes a tener en cuenta:
 
 \begin{itemize}
 
@@ -610,40 +629,34 @@ A continuación se detallan las ventajas y desventajas de cada enfoque según \c
 
 \item[-] la configuración del nivel de \textit{trace granularity} varía de un escenario de \textit{traceability} a otro.
 
-\item[-] Contexto de la información: por ejemplo por necesidades de un cliente que presente motivos de seguridad, puede requerir que no toda la información de un modelo tiene permitido ser trazada.
+\item[-] un cliente, por ejemplo aduciendo motivos de seguridad, puede requerir que para cierta información de un modelo no se le generen \textit{tracelinks}.
 
 \end{itemize}
 
 \end{itemize}
-
 
 \subsection{Explícita}
 
 \paragraph{Ventajas}
 
-\begin{enumerate}
+\begin{itemize}[label={\checkmark}]
 
-\item Es posible lidiar con \textit{traceability} como un modelo regular de salida de la transformación e incorporar reglas de transformación adicionales para generarlo. La elección del meta-modelo es entonces completa del programador y no depende del motor de transformaciones. Por lo tanto, la granulación de los enlaces es adaptable.
+\item Es posible el tratamiento de \textit{traceability} como un modelo regular complementario al resultado de la transformación, que se puede obtener por la incorporación de reglas de transformación adicionales. Por lo cual, la elección del meta-modelo es responsabilidad completa del programador de la transformación y no depende del motor de transformaciones. 
 
-\end{enumerate}
+\item Dada la flexibilidad del meta-modelo, el nivel de \textit{trace granularity} de los \textit{tracelinks} es fácil de adaptar al dominio de la transformación.
+
+\end{itemize}
 
 \paragraph{Desventajas}
 
 \begin{enumerate}
 
-\item Se requiere un esfuerzo adicional para agregar reglas de transformación específicas para \textit{traceability}, que pueden en consecuencia contaminar la implementación.
+\item Se requiere de un esfuerzo adicional para definir las reglas de transformación específicas para \textit{traceability}, que en consecuencia contaminan la implementación.
 
-\item Como esta tarea es por lo general manual, es propensa a errores y consume mucho tiempo, más aun si pensamos que esta tarea se tiene que repetir para cada transformación que se realice.
+\item Como la definición de las reglas de \textit{traceability} es responsabilidad del programador, es propensa a errores y puede llegar a demandar mucho tiempo. Más aun, si pensamos que esta tarea se tiene que repetir para cada transformación que se requiera.
 
 \end{enumerate}
 
-\section{Tipos de enlaces}
-
-Otro de los desafíos refiere a la semántica de los enlaces, es necesario frecuentemente distinguir entre los distintos tipos de enlaces que se pueden presentar. Por ejemplo un enlace entre un requerimiento textual y un elemento de modelo, tiene una semántica distinta que una relación de refinamiento dentro de un modelo.
-
-Los tipos de enlaces requeridos por lo general son fuertemente dependientes al proyecto. Por lo cual definir fijamente los tipos de enlaces semánticos tiene la consecuencia de menor flexibilidad para los enlaces que desee trazar el usuario, los cuales serán definidos por las necesidades del proyecto o la compañía.
-
-Es importante remarcar que la determinación de la semántica de un enlace es guiada por la razón del usuario sobre qué quiere realizar o representar con dicho enlace. No predefinir la semántica correctamente de un enlace puede resultar en fallas de razonamientos.
 
 \section{Estrategias de almacenamiento}
 
