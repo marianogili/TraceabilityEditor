@@ -589,11 +589,62 @@ En el presente capítulo nos introducimos en un conjunto de temas importantes de
 
 \section{Tipos de tracelinks}
 
-Uno de los desafíos presentados en el capítulo \ref{cap:ProblemasDesafios} (sección \ref{sec:SemanticaTracelinks}) refiere a la definición  \textit{semántica de los tracelinks}, tarea que nos permitirá entender y distinguir los distintos  \textit{tipos de links} con lo que nos podemos llegar a encontrar. Es importante remarcar que la determinación de la semántica de un \textit{link} se encuentra guiada por la razón del usuario respecto de qué quiere realizar o representar con dicho \textit{link}. No predefinir la \textit{semántica de un tracelink} correctamente puede resultar en fallas de razonamientos.
+Uno de los desafíos presentados en el capítulo \ref{cap:ProblemasDesafios} (sección \ref{sec:SemanticaTracelinks}) se refiere a la definición  \textit{semántica de los tracelinks}, tarea que nos permite descubrir los distintos \textit{tipos de links} con lo que nos podemos llegar a encontrar, entender su significado y uso. Es importante remarcar que la determinación de la semántica de un \textit{link} se encuentra totalmente guiada por la razón del usuario respecto de qué quiere realizar o representar con dicho \textit{link}. No predefinir la \textit{semántica de un tracelink} correctamente, puede resultar en fallas de razonamientos y/o entendimientos. Por ejemplo, un \textit{link} que muestra la relación entre un requerimiento textual y un elemento de un diagrama de caso de uso \glssymbol{uml} tiene una semántica muy distinta a la de un \textit{tracelink} que determina una relación de refinamiento dentro de un modelo de clases también \glssymbol{uml}.
 
-Por ejemplo, un \textit{link} que muestra la relación entre un requerimiento textual y un elemento de un diagrama de caso de uso \glssymbol{uml} tiene una semántica muy distinta a la de un \textit{tracelink} que determina una relación de refinamiento dentro de un modelo de clases también \glssymbol{uml}.
+La definición del conjunto de \textit{tipos de tracelinks} por lo general es fuertemente dependiente al contexto de un proyecto, por lo cual definirlo de forma fija tendrá como consecuencia una pérdida de flexibilidad para los usuarios que deseen tipar los \textit{tracelinks} solamente de acuerdo a las necesidades del proyecto o la compañía. Aún así, conforme un proyecto de desarrollo crece, la administración de la información de \textit{traceability} que en consecuencia se va generando se vuelve extremadamente compleja, una jerarquía de clasificación de dicha información resultará esencial para poder entenderla y administrarla mejor. En \cite{PaigeOlsenKolovosZschalerPower} se encuentra una propuesta de \textit{clasificación genérica de traceability} conjunto con la descripción del proceso usado para su obtención al que llamaron \gls{teap} y que a continuación se explica en detalle.
 
-El conjunto de \textit{tipos de tracelinks} por lo general es fuertemente dependiente al contexto de un proyecto, por lo cual definirlo de forma fija tendrá como consecuencia una pérdida de flexibilidad para los usuarios que deseen definir los \textit{tracelinks} solamente de acuerdo a las necesidades del proyecto o la compañía.
+
+
+\subsection{Una clasificación genérica de traceability}
+\label{sec:ClasificacionTraceability}
+
+
+Esta propuesta comienza con una clasificación o meta-modelo de \textit{traceability} inicial, luego de forma iterativa e incremental esta clasificación se va refinando de acuerdo a las siguientes tareas: obtención, análisis y clasificación. En la obtención se identifica un \textit{tracelink} y sus relaciones. En el análisis, se abstraen las principales características del \textit{link} obtenido identificando las restricciones, sus relaciones y generalizaciones. Y por último, se define la clasificación a la que pertenece.
+
+El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el que se encuentran los siguientes conceptos fundamentales: \textit{\textbf{Artefact}}, \textit{\textbf{Tracelink}} y \textit{\textbf{Operation}}. \textit{Artefact} refiere tanto a artefactos \glssymbol{mde}, por ejemplo modelos específicos de dominio, como a no \glssymbol{mde}, por ejemplo hojas de cálculo. En \textit{Operation} se encierran las operaciones bien manuales como automáticas que determinan qué información de \textit{traceability} debe almacenarse. Por último \textit{Tracelink} da inicio con la clasificación de \textit{\textbf{tracelink implícito}} (\textit{\textbf{Implicit Link}}) por un lado, y \textit{\textbf{tracelink explícito}} (\textit{\textbf{Explicit Link}}) por el otro, en donde \textit{tracelink implícito} refiere a los \textit{links} que son creados y manipulados por la aplicación de las operaciones \glssymbol{mde}, y por su parte \textit{tracelink explícito} refiere a los \textit{links} que se encuentran concretamente ya representados en los modelos.
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.75]{./img/ExplicitImplicitTraceLinkClassification}
+\caption{Clasificación de traceability inicial}
+\label{fig:ClasifInicial}
+\end{figure}
+
+\subsubsection{Clasificación de tracelinks implícitos}
+
+
+En esta jerarquía que se muestra en el dibujo \ref{fig:LinksImplicitos} se encuentran representados el conjunto de operaciones \glssymbol{mde} principales: \textit{Consulta} (\textit{\textbf{Query Link}}), \textit{Transformación modelo a modelo} (\textit{\textbf{M2M Link}}), \textit{Transformación modelo a texto} (\textit{\textbf{M2T Link}}), \textit{Composición} (\textit{\textbf{Composition Link}}), \textit{Actualización} (\textit{\textbf{Update Link}}), \textit{Creación} (\textit{\textbf{Creation Link}}), \textit{Eliminación} (\textit{\textbf{Delete Link}}), entre otras.
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.55]{./img/ImplicitTraceLinks}
+\caption{Jerarquía de links implícitos}
+\label{fig:LinksImplicitos}
+\end{figure}
+
+
+\subsubsection{Clasificación de tracelinks explícitos}
+
+En un principio esta clasificación se encuentra dividida en dos grandes grupos representados por las siguientes clases básicas: \textit{Link modelo-modelo}, que representa por ejemplo las relaciones de dependencias \glssymbol{uml}, y \textit{Link modelo-artefacto}, conjunto al que pertenece por ejemplo el \textit{link} entre un modelo y un documento de texto que dicta un requerimiento. En el dibujo \ref{fig:LinksExplicitos} aparecen como \textit{\textbf{Model-Model Link}} y \textit{\textbf{Model-Artefact Link}} respectivamente.
+
+\textit{Model-Model Link} se encuentra a su vez subdividido en \textit{Link estático} (\textit{\textbf{Static Link}}) y \textit{Link dinámico} (\textit{\textbf{Dynamic Link}}). En el primero se representan relaciones estructurales que no cambian con el tiempo, en cambio en el segundo se representa información de los modelos que si puede llegar a variar.
+
+Los \textit{links estáticos} pueden ser, o \textit{Links consistentes} (\textit{\textbf{Consistent-With}}) donde dos modelos deben mantenerse de acuerdo o consistentes entre sí, o \textit{Links dependientes} (\textit{\textbf{Dependency}}) donde la estructura y/o la semántica de un modelo depende de otro. Por su parte, los \textit{Links dependientes} pueden ser: \textit{Link de subtipo} (\textit{\textbf{Is-A}}), \textit{Link de referencia}, \textit{link de subconjunto}, de \textit{importación} y \textit{exportación}, de \textit{uso}, de \textit{refinamiento} (\textit{\textbf{Refines}}), etcétera.
+
+Entre los \textit{links dinámicos} se incluyen los \textit{Links de llamadas} (\textit{\textbf{Calls}}) donde un modelo hace uso de métodos provistos por otro, los \textit{Links de notificación} (\textit{\textbf{Notifies}}) donde es necesario almacenar información que puede ser manejada automáticamente. También encontramos aquí las relaciones en tiempo de diseño como los \textit{Links de generación o construcción} (\textit{\textbf{Generates}}), que indican qué información de un modelo es usada para producir o deducir otro, y los \textit{Links de sincronización} (\textit{\textbf{Synchronized With}}), donde el comportamiento de un conjunto de modelos se realiza de forma sincronizada.
+
+El alcance de \textit{Model-Artefact Link} es muy amplio, por tal motivo es esta clasificación sólo se resumen un subconjunto de ejemplos, entre ellos: la relación \textit{satisface} (\textit{\textbf{Satisfies}}), que indica qué propiedad o requerimiento de un artefacto es satisfecha por un modelo; los \textit{Links de asignación} (\textit{\textbf{Allocated-To}}), usados cuando la información de un artefacto no modelo es asignada a un modelo específico que la representa; la relación de \textit{realización} (\textit{\textbf{Performs}}), que indica qué tarea descripta por un artefacto es llevada a cabo por el modelo; las relaciones \textit{explica} y \textit{respalda} (\textit{\textbf{Explains}} y \textit{\textbf{Supports}} respectivamente) que dictan qué modelo se encuentra explicado/respaldado por un artefacto no modelo.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.51]{./img/ExplicitTraceLinks}
+\caption{Jerarquía de links explícitos}
+\label{fig:LinksExplicitos}
+\end{figure}
+
+
 
 \section{Meta-modelos}
 
@@ -617,54 +668,6 @@ Mas allá de que un meta-modelo de \textit{traceability} definido utilizando una
 
 La combinación de un meta-modelo de \textit{traceability} fuertemente tipado conjunto con la verificación de restricciones inter-modelo restringe a los usuarios y a las herramientas a establecer y mantener sólo enlaces de tracelinks con sentido, que pueden ser automáticamente validadas para descubrir posibles omisiones e inconsistencias. Estas cuestiones pueden surgir, ya sea durante el establecimiento de las tracelinks o más tarde en el ciclo de vida de los modelos donde ya los enlaces de tracelinks ya han sido establecidos.
 
-\section{Una clasificación genérica de traceability}
-\label{sec:ClasificacionTraceability}
-
-Conforme un proyecto de desarrollo crece, la administración de la información de \textit{traceability} que en consecuencia se va generando se vuelve extremadamente compleja, una jerarquía de clasificación de dicha información resultará esencial para poder entenderla y administrarla mejor. En \cite{PaigeOlsenKolovosZschalerPower} se encuentra una propuesta de clasificación de \textit{traceability} conjunto con la descripción del proceso usado para su obtención al que llamaron \gls{teap}.
-
-Esta propuesta comienza con una clasificación o meta-modelo de \textit{traceability} inicial, luego de forma iterativa e incremental esta clasificación se va refinando siguiendo las siguientes tareas: obtención, análisis y clasificación. En la obtención se identifica un \textit{tracelink} y sus relaciones. En el análisis, se abstraen las principales características del enlace obtenido identificando las restricciones, sus relaciones y generalizaciones. Por último, se define la clasificación a la que pertenece.
-
-El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el que se encuentran los siguientes conceptos fundamentales: artefacts, trace links y operations. Artefact refiere tanto a artefactos \gls{mde} (por ejemplo modelos específicos de dominio) como a no \gls{mde} (por ejemplo hojas de cálculo), en Operation se encierran las operaciones bien manuales como automáticas que determinan qué información de \textit{traceability} debe almacenarse, y por último Trace Link engloba la clasificación que da inicio con la idea de \textit{traceability} implícita (Implicit Link) y explícita (Explicit Link). En este contexto, \textit{traceability} implícita refiere a los enlaces de tracelinks que son creados y manipulados por la aplicación de operaciones \gls{mde}, y por su parte explícita refiere a los enlaces que se encuentran concretamente ya representados en los modelos.
-
-
-\begin{figure}[hbtp]
-\centering
-\includegraphics[scale=0.75]{./img/ExplicitImplicitTraceLinkClassification}
-\caption{Clasificación de traceability inicial}
-\label{fig:ClasifInicial}
-\end{figure}
-
-\subsection{Clasificación de enlaces de tracelinks implícita}
-
-En la jerarquía de esta sección que se muestra en el dibujo \ref{fig:LinksImplicitos} se representan el conjunto de operaciones de \gls{mde} principales: consulta (Query Link), transformación (M2M Link), transformación modelo a texto (M2T Link), composición (Composition Link), actualización (Update Link), creación (Creation Link), eliminación (Delete Link), entre otras.
-
-
-\begin{figure}[hbtp]
-\centering
-\includegraphics[scale=0.55]{./img/ImplicitTraceLinks}
-\caption{Jerarquía de links implícitos}
-\label{fig:LinksImplicitos}
-\end{figure}
-
-
-\subsection{Clasificación de enlaces de tracelinks explícitos}
-
-En un principio esta clasificación se encuentra dividida en dos grandes grupos representados por las siguientes clases básicas: links modelo-modelo (por ejemplo las relaciones de dependencias \gls{uml}) y links modelo-artefacto (por ejemplo el enlace entre un modelo y un documento de texto que dicta un requerimiento), en el dibujo \ref{fig:LinksExplicitos} aparecen como Model-Model Link y Model-Artefact Link respectivamente.
-
-Model-Model Link se encuentra a su vez subdividido en links estáticos (Static Link) y dinámicos (Dynamic Link). Los primeros representan relaciones estructurales que no cambian con el tiempo, en cambio los segundos representan información de los modelos que si pueden llegar a variar.
-
-Los links estáticos pueden ser, o links consistentes (Consistent-With) donde dos modelos deben mantenerse de acuerdo o consistentes entre si, o links de dependencias (Dependency) donde la estructura y/o la semántica de un modelo depende de otro. Por su parte, los links de dependencia pueden ser: links de relación de subtipo (Is-A), links de referencias, links de subconjuntos, de importación y exportación, de uso, de refinamiento (Refines), etcétera.
-
-Entre los links dinámicos se incluyen los links de llamadas (Calls) donde un modelo hace uso de métodos provisto por otro, los links de notificación (Notifies) donde es necesario almacenar información que puede ser manejada automáticamente. También las relaciones en tiempo de diseño como los links de generación o construcción (Generates), que indican qué información de un modelo es usada para producir o deducir otro, y las relaciones de sincronización (Synchronized With), donde el comportamiento de un conjunto de modelos se realiza de forma sincronizada.
-
-El alcance de Model-Artefact Link es muy amplio, por tal motivo es esta clasificación solo se resumen un subconjunto de ejemplos, entre ellos: la relación satisface (Satisfies), que indica qué propiedad o requerimiento de un artefacto es satisfecha por un modelo; los links de asignación (Allocated-To), usados cuando la información de un artefacto no modelo es asignada a un modelo específico que la representa; la relación de realización (Performs), que indica qué tarea descripta por un artefacto es llevada a cabo por el modelo; las relaciones explica y respalda (Explains y Supports respectivamente) que dictan qué modelo se encuentra explicado/respaldado por un artefacto no modelo.
-
-\begin{figure}[hbtp]
-\centering
-\includegraphics[scale=0.51]{./img/ExplicitTraceLinks}
-\caption{Jerarquía de links explícitos}
-\label{fig:LinksExplicitos}
-\end{figure}
 
 
 
@@ -742,9 +745,9 @@ Es una estrategia sencilla y amigable, pero puede ser muy problemática por vari
 
 A todo lo anterior se suma el problema de la polución que se genera en el modelo con la información de \textit{traceability} que es ajena a su contexto o fin original, dicha polución puede lograr que el modelo se vuelva muy difícil de comprender y mantener.
 
-Por otro lado, en un entorno \gls{mde} es común que los modelos tengan sus propias representaciones y semánticas, lo cual puede volver más complejo diferenciar la información de \textit{traceability} de los objetos que representan el modelo del dominio.
+Por otro lado, en un entorno \glssymbol{mde} es común que los modelos tengan sus propias representaciones y semánticas, lo cual puede volver más complejo diferenciar la información de \textit{traceability} de los objetos que representan el modelo del dominio.
 
-Como resultado a los inconvenientes anteriores, el análisis automatizado de la información de \textit{traceability} se hace muy difícil. Los enfoques principales que hacen uso de esta estrategia utilizan construcciones de lenguajes específicas, por ejemplo determinados tipos de enlaces de \textit{traceability} están representados en los diagramas \gls{uml} mediante el uso de las estereotipos como <<refines>>.
+Como resultado a los inconvenientes anteriores, el análisis automatizado de la información de \textit{traceability} se hace muy difícil. Los enfoques principales que hacen uso de esta estrategia utilizan construcciones de lenguajes específicas, por ejemplo determinados tipos de enlaces de \textit{traceability} están representados en los diagramas \glssymbol{uml} mediante el uso de las estereotipos como <<refines>>.
 
 \subsection{Almacenamiento externo de los enlaces}
 
@@ -1030,7 +1033,7 @@ En la presente sección analizamos el framework \gls{gmf}, el mismo fue usado pa
 
 \subsection{El framework GMF}
 
-\gls{gmf} es un framework para la construcción de editores gráficos de modelado para la plataforma Eclipse, por ejemplo editores \gls{uml}, ECore, de procesos de negocios, diagramas de flujo, etc. Este framework está compuesto por un componente de generación (GMF Tooling) y un entorno de ejecución (GMF Runtime) que ayudan en el desarrollo de editores gráficos que se basan en \gls{emf} y \gls{gef}.
+\gls{gmf} es un framework para la construcción de editores gráficos de modelado para la plataforma Eclipse, por ejemplo editores \glssymbol{uml}, ECore, de procesos de negocios, diagramas de flujo, etc. Este framework está compuesto por un componente de generación (GMF Tooling) y un entorno de ejecución (GMF Runtime) que ayudan en el desarrollo de editores gráficos que se basan en \gls{emf} y \gls{gef}.
 
 \subparagraph{GMF Tooling} incluye por un lado editores para crear y/o modificar los modelos que describen los aspectos de notación, semántica y utilidad de un editor gráfico, y por otro, un generador que da como resultado la implementación del editor definido.
 
@@ -1096,7 +1099,7 @@ A continuación se da una introducción a la tecnología \gls{atl}, que no solo 
 
 \subsection{¿Qué es ATL?}
 
-En el campo de \gls{mde}, \gls{atl} nos ofrece un medio para especificar la forma de producir un conjunto de modelos resultados/destinos a partir de un conjunto de modelos fuentes.
+En el campo de \glssymbol{mde}, \gls{atl} nos ofrece un medio para especificar la forma de producir un conjunto de modelos resultados/destinos a partir de un conjunto de modelos fuentes.
 
 El lenguaje \gls{atl} es un híbrido de la programación declarativa e imperativa, dado que aunque el estilo declarativo es el más conveniente para la definición de las transformaciones, \gls{atl} también provee la posibilidad de construcciones imperativas con el fin de facilitar la especificación de algunos mapeos que en forma declarativa pueden llegar a resultar muy complejos de expresar.
 
@@ -1231,7 +1234,7 @@ El framework presentado en \cite{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmara
 Las principales funcionalidades ofrecidas por el framework son las siguientes:
 
 \begin{enumerate}
-\item Creación y mantenimiento de los enlaces de tracelinks de artefactos existentes (modelos \gls{uml}, código fuente, etc);
+\item Creación y mantenimiento de los enlaces de tracelinks de artefactos existentes (modelos \glssymbol{uml}, código fuente, etc);
 \item Almacenamiento de los enlaces de tracelinks mediante el uso de un repositorio;
 \item Búsqueda de enlaces de tracelinks específicos usando consultas de tracelinks predefinidas o personalizadas;
 \item Visualización flexible de los resultados de las consultas de tracelinks por medio de diferentes tipos de vistas, como vista de árbol, grafo, tabla, etc.
@@ -1249,7 +1252,7 @@ Las principales funcionalidades ofrecidas por el framework son las siguientes:
 Los elementos principales del meta-modelo son los siguientes:
 
 \begin{itemize}
-\item Un TraceableArtefact representa un artefacto que juega un rol en el ciclo del desarrollo. La granularidad del artefacto es arbitraria, puede ser un requerimiento, un diagrama \gls{uml}, un elemento de dicho diagrama, una clase o un método de dicha clase. El artefacto es identificado mediante la propiedad resourceId.
+\item Un TraceableArtefact representa un artefacto que juega un rol en el ciclo del desarrollo. La granularidad del artefacto es arbitraria, puede ser un requerimiento, un diagrama \glssymbol{uml}, un elemento de dicho diagrama, una clase o un método de dicha clase. El artefacto es identificado mediante la propiedad resourceId.
 \item Un TraceLink es la abstracción de una transición de un artefacto a otro.
 \item Cada TraceableArtefact tiene asignada una instancia de TraceableArtefactType, éstos se pueden encontrar agrupados de forma jerárquica.
  \item Análogo a los tipos de los artefactos los TraceLinks también tienen un tipo (TraceLinkType), teniendo en cuenta que la semántica de una relación entre dos artefactos puede variar.
@@ -1278,7 +1281,7 @@ Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido 
 
 \section{Integración de herramientas Case}
 
-En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que como resultado del conjunto de actividades que lo conforman, se van generando una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc). Estos artefactos, aunque en esencia se encuentran relacionados lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo \gls{uml}, etc), las relaciones lógicas nombradas se pierden, o mejor dicho no existen o pasan desapercibidas en la práctica. En otras palabras, nos presenta el problema de la imposibilidad de \textit{traceability} que encontramos entre la mayoría de las herramientas \gls{case} actuales.
+En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que como resultado del conjunto de actividades que lo conforman, se van generando una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc). Estos artefactos, aunque en esencia se encuentran relacionados lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo \glssymbol{uml}, etc), las relaciones lógicas nombradas se pierden, o mejor dicho no existen o pasan desapercibidas en la práctica. En otras palabras, nos presenta el problema de la imposibilidad de \textit{traceability} que encontramos entre la mayoría de las herramientas \gls{case} actuales.
 
 Como solución a este problema, se propone un ambiente de integración para las herramientas \gls{case} al que llamaron TiE - Tool Integration Environment, el cual basa su integración en la creación de enlaces de tracelinks entre los artefactos de las distintas herramientas.
 
