@@ -587,6 +587,32 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 En el presente capítulo nos introducimos en un conjunto de temas importantes de la teoría de \textit{traceability}, primero hablaremos sobre dos formas distintas de \textit{\textbf{generación de tracelinks}}, luego nos sumergiremos en el tema de la \textit{\textbf{semántica de los links}} y la compleja tarea de la definición de \textit{\textbf{tipos de tracelinks}}, y por último veremos dos \textit{\textbf{estrategias de almacenamiento}} principales de la información de \textit{traceability}. Estos temas han sido muy importantes y relevantes a la hora de la definición del \textit{esquema de traceability} propuesto que se detalla en el siguiente capítulo \ref{cap:Propuesta}.
 
 
+
+\section{Meta-modelos de traceability}
+
+Los modelos que determinan los enlaces de \textit{traceability} se encuentran definidos cada uno por un meta-modelo, éste puede ser clasificado como un “meta-modelo de \textit{traceability} de propósito general” o un “meta-modelo de \textit{traceability} de caso específico”.
+
+\subsection{Meta-modelo de propósito general}
+
+En este caso, nos encontramos con un meta-modelo genérico que permite la captura de las relaciones entre cualquier tipo de elementos de modelo. En este meta-modelo, un enlace de \textit{traceability} se puede conectar con cualquier número de elementos, de cualquier tipo y de cualquier modelo. Las principales ventajas de este tipo de meta-modelo de propósito general son la simplicidad y la uniformidad (dado que todos los modelos conforman el mismo meta-modelo) con lo cual se mejora la interoperabilidad de las herramientas con capacidades de importar, exportar y gestionar \textit{traceability} en un formato común.
+
+Por otro lado, como el meta-modelo de propósito general no capta casos específicos de enlaces de tracelinks fuertemente tipados, o sea con semántica y restricciones definidas rigurosamente, se abre la puerta a establecimientos de enlaces ilegítimos. Como por ejemplo en el caso que se quiera representar tracelinks entre un diagrama de clases y un modelo de base de datos relacional, sabemos que existen vínculos entre las clases del primer modelo y las tablas del segundo, un meta-modelo de \textit{traceability} genérico permite el establecimiento de enlaces ilegítimos tales como una clase relacionada con una columna.
+
+La provisión de mecanismos de extensión junto con el meta-modelo de propósito general es un método de uso frecuente para permitir un mejor apoyo para el caso de los requisitos específicos. Sin embargo, todavía carecen de la eficacia de los meta-modelos de casos específicos para capturar estos tipos de casos que requieren tal legitimidad entre la información y su semántica.
+
+\subsection{Meta-modelo de caso específico}
+
+En este caso, para cada escenario de \textit{traceability} se define un meta-modelo específico. Este meta-modelo de \textit{traceability} captura enlaces fuertemente tipados para casos específicos con una semántica bien definida, que pueden o no incluir restricciones de corrección. Debido a su naturaleza de tipado fuerte y las restricciones asociadas, restringe a los usuarios y las herramientas para que sólo puedan establecer enlaces legítimos. Por otro lado, la definición de un meta-modelo para cada caso específico requiere mucho esfuerzo en su construcción, así como herramientas que soporten, o mejor dicho, ofrezcan la posibilidad de aceptar diferentes meta-modelos de \textit{traceability}.
+
+Para ser fuertemente tipado el meta-modelo de \textit{traceability} necesita referir explícitamente a los tipos de elementos que se encuentran definidos en otros meta-modelos. Por ejemplo, consideremos que es necesario definir un meta-modelo de \textit{traceability} que permita el establecimiento de enlaces entre instancias de A (del meta-modelo MMa) e instancias de B (a partir de MMb), pero no entre dos instancias de A o dos de B. Para capturar tal meta-modelo, la tecnología de modelado que se use no debe tomar cada meta-modelo como un espacio cerrado, sino que por el contrario debe permitir referencias inter-meta-modelo. Un ejemplo de tecnología que soporta referencias inter-meta-modelo es el framework \gls{emf}.
+
+Mas allá de que un meta-modelo de \textit{traceability} definido utilizando una tecnología que permita referencias inter-meta-modelo puede brindar tipos seguros, encontramos frecuentemente otras restricciones que necesitan especificarse y que dicho meta-modelo no puede capturarlas. Por ejemplo, tomando como referencia el ejemplo anterior, podríamos precisar que cada instancia A de MMa sólo se puede vincular a no más de una instancia B de MMb. Para especificar tales restricciones, se requiere un lenguaje de especificación de restricciones que pueda expresar restricciones que abarquen elementos que pertenezcan a modelos definidos por diferentes meta-modelos. En la actualidad el \gls{ocl} carece de esta capacidad, ya que no proporciona las construcciones para la expresión de restricciones que atraviese modelos (cross-model). Ejemplos de lenguajes de restricción que soportan el establecimiento con tales restricciones incluyen el \gls{evl} y el XLinkit toolkit.
+
+La combinación de un meta-modelo de \textit{traceability} fuertemente tipado conjunto con la verificación de restricciones inter-modelo restringe a los usuarios y a las herramientas a establecer y mantener sólo enlaces de tracelinks con sentido, que pueden ser automáticamente validadas para descubrir posibles omisiones e inconsistencias. Estas cuestiones pueden surgir, ya sea durante el establecimiento de las tracelinks o más tarde en el ciclo de vida de los modelos donde ya los enlaces de tracelinks ya han sido establecidos.
+
+
+
+
 \section{Tipos de tracelinks}
 
 Uno de los desafíos presentados en el capítulo \ref{cap:ProblemasDesafios} (sección \ref{sec:SemanticaTracelinks}) se refiere a la definición  \textit{semántica de los tracelinks}, tarea que nos permite descubrir los distintos \textit{tipos de links} con lo que nos podemos llegar a encontrar, entender su significado y uso. Es importante remarcar que la determinación de la semántica de un \textit{link} se encuentra totalmente guiada por la razón del usuario respecto de qué quiere realizar o representar con dicho \textit{link}. No predefinir la \textit{semántica de un tracelink} correctamente, puede resultar en fallas de razonamientos y/o entendimientos. Por ejemplo, un \textit{link} que muestra la relación entre un requerimiento textual y un elemento de un diagrama de caso de uso \glssymbol{uml} tiene una semántica muy distinta a la de un \textit{tracelink} que determina una relación de refinamiento dentro de un modelo de clases también \glssymbol{uml}.
@@ -643,30 +669,6 @@ El alcance de \textit{Model-Artefact Link} es muy amplio, por tal motivo es esta
 \caption{Jerarquía de links explícitos}
 \label{fig:LinksExplicitos}
 \end{figure}
-
-
-
-\section{Meta-modelos}
-
-Los modelos que determinan los enlaces de \textit{traceability} se encuentran definidos cada uno por un meta-modelo, éste puede ser clasificado como un “meta-modelo de \textit{traceability} de propósito general” o un “meta-modelo de \textit{traceability} de caso específico”.
-
-\subsection{Meta-modelo de propósito general}
-
-En este caso, nos encontramos con un meta-modelo genérico que permite la captura de las relaciones entre cualquier tipo de elementos de modelo. En este meta-modelo, un enlace de \textit{traceability} se puede conectar con cualquier número de elementos, de cualquier tipo y de cualquier modelo. Las principales ventajas de este tipo de meta-modelo de propósito general son la simplicidad y la uniformidad (dado que todos los modelos conforman el mismo meta-modelo) con lo cual se mejora la interoperabilidad de las herramientas con capacidades de importar, exportar y gestionar \textit{traceability} en un formato común.
-
-Por otro lado, como el meta-modelo de propósito general no capta casos específicos de enlaces de tracelinks fuertemente tipados, o sea con semántica y restricciones definidas rigurosamente, se abre la puerta a establecimientos de enlaces ilegítimos. Como por ejemplo en el caso que se quiera representar tracelinks entre un diagrama de clases y un modelo de base de datos relacional, sabemos que existen vínculos entre las clases del primer modelo y las tablas del segundo, un meta-modelo de \textit{traceability} genérico permite el establecimiento de enlaces ilegítimos tales como una clase relacionada con una columna.
-
-La provisión de mecanismos de extensión junto con el meta-modelo de propósito general es un método de uso frecuente para permitir un mejor apoyo para el caso de los requisitos específicos. Sin embargo, todavía carecen de la eficacia de los meta-modelos de casos específicos para capturar estos tipos de casos que requieren tal legitimidad entre la información y su semántica.
-
-\subsection{Meta-modelo de caso específico}
-
-En este caso, para cada escenario de \textit{traceability} se define un meta-modelo específico. Este meta-modelo de \textit{traceability} captura enlaces fuertemente tipados para casos específicos con una semántica bien definida, que pueden o no incluir restricciones de corrección. Debido a su naturaleza de tipado fuerte y las restricciones asociadas, restringe a los usuarios y las herramientas para que sólo puedan establecer enlaces legítimos. Por otro lado, la definición de un meta-modelo para cada caso específico requiere mucho esfuerzo en su construcción, así como herramientas que soporten, o mejor dicho, ofrezcan la posibilidad de aceptar diferentes meta-modelos de \textit{traceability}.
-
-Para ser fuertemente tipado el meta-modelo de \textit{traceability} necesita referir explícitamente a los tipos de elementos que se encuentran definidos en otros meta-modelos. Por ejemplo, consideremos que es necesario definir un meta-modelo de \textit{traceability} que permita el establecimiento de enlaces entre instancias de A (del meta-modelo MMa) e instancias de B (a partir de MMb), pero no entre dos instancias de A o dos de B. Para capturar tal meta-modelo, la tecnología de modelado que se use no debe tomar cada meta-modelo como un espacio cerrado, sino que por el contrario debe permitir referencias inter-meta-modelo. Un ejemplo de tecnología que soporta referencias inter-meta-modelo es el framework \gls{emf}.
-
-Mas allá de que un meta-modelo de \textit{traceability} definido utilizando una tecnología que permita referencias inter-meta-modelo puede brindar tipos seguros, encontramos frecuentemente otras restricciones que necesitan especificarse y que dicho meta-modelo no puede capturarlas. Por ejemplo, tomando como referencia el ejemplo anterior, podríamos precisar que cada instancia A de MMa sólo se puede vincular a no más de una instancia B de MMb. Para especificar tales restricciones, se requiere un lenguaje de especificación de restricciones que pueda expresar restricciones que abarquen elementos que pertenezcan a modelos definidos por diferentes meta-modelos. En la actualidad el \gls{ocl} carece de esta capacidad, ya que no proporciona las construcciones para la expresión de restricciones que atraviese modelos (cross-model). Ejemplos de lenguajes de restricción que soportan el establecimiento con tales restricciones incluyen el \gls{evl} y el XLinkit toolkit.
-
-La combinación de un meta-modelo de \textit{traceability} fuertemente tipado conjunto con la verificación de restricciones inter-modelo restringe a los usuarios y a las herramientas a establecer y mantener sólo enlaces de tracelinks con sentido, que pueden ser automáticamente validadas para descubrir posibles omisiones e inconsistencias. Estas cuestiones pueden surgir, ya sea durante el establecimiento de las tracelinks o más tarde en el ciclo de vida de los modelos donde ya los enlaces de tracelinks ya han sido establecidos.
 
 
 
