@@ -766,32 +766,35 @@ Un requisito previo para el \textit{almacenamiento externo de los tracelinks}, e
 \chapter{Manos a la obra}
 \label{cap:Propuesta}
 
-En este capítulo se introduce, desarrolla y fundamenta el esquema de \textit{traceability} propuesto en la presente tesis.
+En este capítulo introducimos, desarrollamos y fundamentamos el \textit{esquema de
+traceability} propuesto en la presente tesis. Luego, haremos lo mismo con el prototipo de la herramienta desarrollada que acompaña y ejemplifica las ideas del esquema presentado. 
+La herramienta, desarrollada como un \textit{\textbf{plug-in}} del \glssymbol{ide} Eclipse, asiste en la generación de \textit{tracelinks} sobre transformaciones de modelos existentes, y luego, presenta un mapa en el que se muestran cómo se relacionan las transformaciones, los \textit{links} y los artefactos orígenes y resultados de la ejecución de las transformaciones.
 
 
-\section{Esquema de traceability}
+
+\section{El esquema de traceability}
 
 
 \subsection{Introducción}
 \label{sec:EsquemaPropIntro}
 
-La idea fundamental es lograr un meta-modelo bien simple en el que se capture solamente las ideas más relevantes de \textit{traceability} y se almacene la información mínima necesaria. Gracias a todo lo anterior, y solo así, logramos obtener el concepto deseable de independencia del modelo con respecto al dominio en el que se quiera utilizar la funcionalidad de \textit{traceability}. Concepto necesario para poder llegar a definir un esquema de propósito general que apunte principalmente a dar solución a los siguientes desafíos:
+La idea fundamental es lograr un meta-modelo bien simple en el que se capture solamente los conceptos más relevantes de \textit{traceability} y se almacene la información mínima necesaria. Gracias a todo lo anterior, y solo así, logramos obtener el concepto deseable de independencia del modelo con respecto al dominio en el que se quiera utilizar la funcionalidad de \textit{traceability}. Concepto necesario para poder llegar a definir un \textit{esquema de propósito general} (\ref{subsec:MetaModeloPropositoGeneral}) que apunte principalmente a dar solución a los siguientes desafíos:
 
 \begin{itemize}
 
-\item Lograr un esquema que represente todas las tracelinks independientemente de como fueron generadas, si de forma explícita o implícitas, su granularidad y semántica.
+\item Lograr un esquema que represente el conjunto de \textit{tracelinks} independientemente de cómo fueron generados, \textit{explícita} o \textit{implícitamente} (\ref{sec:GeneracionTracelinks}), su \textit{trace granularity} y/o semántica.
 
-\item Mantener la comunicación lo más simple posible, tanto la que existe entre los distintos usuarios en sus respectivos roles como la de los distintos tipos de herramientas que necesiten \textit{traceability}.
+\item Mantener la comunicación lo más simple posible, tanto sea la que se realiza entre los distintos usuarios con sus respectivos roles, como la de los distintos tipos de herramientas que necesiten aplicar \textit{traceability}.
 
-\item La adaptación de una herramienta tiene que ser una tarea sencilla, cualquiera sea cuando desee agregar la funcionalidad de \textit{traceability} mediante el uso de este esquema.
+\item Cuando se desee agregar la funcionalidad de \textit{traceability} mediante el uso de este esquema, la adaptación de la herramienta, cualquiera sea, tiene que ser una tarea sencilla.
 
-\item Aún dada la infinidad de artefactos que se pueden presentar, el esquema siempre tiene que ofrecer información semántica de los mismos, con el fin de facilitar la validación de enlaces legítimos.
+\item Aún dada la infinidad de artefactos que se pueden presentar, el esquema siempre tiene que ofrecer información semántica de los mismos, con el fin de facilitar la validación de los \textit{links} legítimos.
 
 \item Lograr identificar unívocamente cada artefacto sobre el que se desee realizar \textit{traceability}.
 
 \end{itemize}
 
-\section{El esquema de traceability}
+\section{El esquema propuesto}
 \label{sec:EsquemaTraceability}
 
 Con el fin de lograr respetar todas las consignas fundamentales listadas en \ref{sec:EsquemaPropIntro}, se definió una propuesta de un esquema de \textit{traceability} que se encuentra representado mediante un diagrama de clases que se puede observar en el dibujo \ref{fig:EsquenaPropuesto}.
