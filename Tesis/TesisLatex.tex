@@ -216,6 +216,8 @@ En la ingeniería de software encontramos dos usos o semánticas principales que
 
 A continuación se listan un conjunto de actividades que provienen de distintos dominios de la ingeniería, en las cuales el uso de \textit{traceability} es muy beneficioso según \cite{BrcinaRiebisch} y \cite{GrammelVoigt}.
 
+\subsubsection{}
+
 \paragraph{Análisis de Sistemas} Ayuda a entender la complejidad de un sistema, navegando a lo largo del modelo de enlaces resultantes de la ejecución de las distintas cadenas de transformación.
 
 \paragraph{Análisis de Cobertura} Por ejemplo en el momento de ejecución de los casos de prueba, el uso de \textit{traceability} es crucial para la hora de determinar si todos los requerimientos fueron cubiertos, es decir tenidos en cuenta.
@@ -231,6 +233,27 @@ A continuación se listan un conjunto de actividades que provienen de distintos 
 \paragraph{Apoyo en la toma de decisiones} Para justificar una decisión dado que nos facilita entender qué factores y metas influyen en la misma; también \textit{traceability} nos será muy útil en el análisis y evaluación en los momentos que se nos encontremos con distintas propuestas de solución.
 
 \paragraph{Configuración del Sistema y Versionado} En este momento el uso de \textit{traceability} es beneficioso para identificar las restricciones entre los componentes, identificar los cambios necesarios para resolver una restricción, identificar las diferencias entre dos versiones distintas del mismo artefacto y su impacto en otros artefactos.
+
+
+\subsubsection{}
+\cite{DSIS} The use of traceability information varies with the development phase. Typical development phases and use scenarios include:
+
+\paragraph{Planning} An example is decisions regarding the system development that will be
+used as rationale in the succeeding phases. A decision or agreement should be related to its origin, for example, a specific meeting or request from a stakeholder.
+
+\paragraph{Design} An architect may need to link a functional component specification to a requirement using “implements” or “satisfies” relationships, expressing dependency between two logical software components.
+
+\paragraph{Implementation} using model transformation and code generation there is a need to
+capture the relationships between source and target.
+
+\paragraph{Testing/deployment} Traceability information can be used to check that all requirements are “satisfied” by one or more artifacts in the system. A coverage analysis
+of requirements and “satisfied-by” relationships can be used.
+
+\paragraph{Maintenance} If one software component fails or not performs according to specification, a maintenance engineer can use traceability information to identify errors
+or bottlenecks.
+
+\paragraph{Upgrade/change} If a new feature should be added, or an existing feature changed,
+using an impact analysis service will provide useful information about the complexity of implementing the change or upgrade.
 
 
 
@@ -265,6 +288,14 @@ Más adelante en otro capítulo se presentará con más detalle los desafíos pr
 \chapter{Teoría de traceability}
 
 En el presente capítulo nos introducimos en un conjunto de temas importantes de la teoría de \textit{traceability}, las primeras dos secciones se refieren a la \textit{\textbf{semántica de traceability}}, introduciendo primero las dos distintos estrategias de \textit{\textbf{meta-modelos de traceability}} que existen, y luego, la compleja tarea de la definición de \textit{\textbf{tipos de tracelinks}}. En la sección siguiente, se presentan dos formas distintas de \textit{\textbf{generación de tracelinks}}, y en la última, las dos \textit{\textbf{estrategias de almacenamiento}} principales de la información de \textit{traceability} que se pueden seguir. Estos temas han sido muy importantes y relevantes a la hora de la definición del \textit{esquema de traceability} propuesto que se detalla en el capítulo \ref{cap:Propuesta}.
+
+
+
+
+\section{Granularity level} 
+Granularity level specifies the degree of detailing that the traces shall have. Granularity level is also an aspect that is closely related to the different stakeholder needs concerning traces use. Example granularity aspect types can be: Time, Confidence, Logical grouping and
+Aggregation level.
+
 
 
 
@@ -1458,6 +1489,7 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 
 \bibitem{DSDPM} C. Pons, R. Giandini y G. Pérez: Desarrollo de Software Dirigido por Modelos. Conceptos teóricos y su aplicación práctica. Facultad de Informática, Universidad Nacional de La Plata. Octubre de 2008.
 
+\bibitem{DSIS} Pierre F. Tiako: Designing Software-Intensive Systems, Methods and Principles. Langston University, USA. 2008.
 
 \end{thebibliography}
 
