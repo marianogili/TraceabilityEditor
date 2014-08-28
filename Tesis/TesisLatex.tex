@@ -292,9 +292,10 @@ En el presente capítulo nos introducimos en un conjunto de temas importantes de
 
 
 
-\section{Granularity level} 
-Granularity level specifies the degree of detailing that the traces shall have. Granularity level is also an aspect that is closely related to the different stakeholder needs concerning traces use. Example granularity aspect types can be: Time, Confidence, Logical grouping and
-Aggregation level.
+\section{Nivel de Granularidad}
+El término granularidad refiere al nivel/grado de detalle en el cual un \textit{tracelink} se genera y/o se registra, es una característica íntimamente relacionada con el uso que se quiera realizar con \textit{traceability}. Por ejemplo cuando se desee trabajar sobre diagramas de clases \glssymbol{uml}, se podrán generar \textit{tracelinks} a nivel de paquetes, de clases o de métodos. La granularidad de un \textit{tracelink} (o de ahora en más en inglés \textit{\textbf{trace granularity}}) es definido por la granularidad del artefacto origen y la granularidad del artefacto destino.
+
+Esta propiedad debe ser definida cuidadosamente para efectivamente dar un buen soporte en las tareas de \textit{traceability}, dado que es un factor que definirá la complejidad, y por tanto el esfuerzo, en el análsis y en la utilización del conjunto de los \textit{tracelinks} obtenidos.
 
 
 
@@ -305,7 +306,7 @@ Para llegar a la definición de cualquier propuesta de \textit{traceability} se 
 
 \subsection{Meta-modelo de propósito general}
 
-En este caso, nos encontramos con un meta-modelo genérico que permite la captura de \textit{links} entre cualquier tipo de elementos de modelo. Un \textit{tracelink} se puede conectar con cualquier número de elementos, de cualquier tipo y de cualquier modelo. Las principales ventajas de este tipo de meta-modelo son la simplicidad y la uniformidad (dado que todos los modelos conforman el mismo meta-modelo), con lo cual se mejora la interoperabilidad de las herramientas brindándole la capacidad de importar, exportar y gestionar información de \textit{traceability} en un formato común.
+En este caso, nos encontramos con un meta-modelo genérico que permite la \textit{\textbf{captura de tracelinks}} entre cualquier tipo de elementos de modelo. Un \textit{tracelink} se puede conectar con cualquier número de elementos, de cualquier tipo y de cualquier modelo. Las principales ventajas de este tipo de meta-modelo son la simplicidad y la uniformidad (dado que todos los modelos conforman el mismo meta-modelo), con lo cual se mejora la interoperabilidad de las herramientas brindándole la capacidad de importar, exportar y gestionar información de \textit{traceability} en un formato común.
 
 Por otro lado, como el \textit{meta-modelo de propósito general} no capta casos específicos de \textit{tracelinks} fuertemente tipados, es decir sin semántica y restricciones definidas rigurosamente, se abre la puerta a establecimientos de \textit{links} ilegítimos. Como por ejemplo, en el caso de \textit{tracelinks} entre un diagrama de clases y un modelo de base de datos relacional en donde existirán vínculos entre las clases del primer modelo y las tablas del segundo, un meta-modelo de \textit{traceability} genérico permitirá el establecimiento de \textit{links} ilegítimos entre una clase y una columna.
 
@@ -529,7 +530,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \begin{itemize}[label={$\times$}]
 
-\item La información precisa, coherente, completa y actualizada sobre \textit{traceability} es fundamental para diversos ámbitos y aplicaciones. Sin embargo, las técnicas actuales de \textit{\textbf{captura de tracelinks}} aún son realizadas de forma manual y por lo tanto son propensas a errores.
+\item La información precisa, coherente, completa y actualizada sobre \textit{traceability} es fundamental para diversos ámbitos y aplicaciones. Sin embargo, las técnicas actuales de \textit{captura de tracelinks} aún son realizadas de forma manual y por lo tanto son propensas a errores.
 
 \item Para que los \textit{tracelinks} sean útiles, éstos deben reflejar la dependencia actual entre los artefactos. Dado que el costo y esfuerzo para mantenerlos durante la evolución del sistema es inmenso, a menudo los \textit{tracelinks} pasan a encontrarse en un estado erróneo o incorrecto.
 
@@ -562,7 +563,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \item Para efectivamente utilizar y entender las relaciones por debajo de \textit{traceability}, es necesario definir la semántica de los \textit{tracelinks}. Sin embargo, definir una formalidad para representar esta semántica no es una tarea fácil y puede llegar a quedar acotada a un dominio específico, cosa que no es conveniente.
 
-\item Es muy importante para mantener la consistencia en \textit{traceability}, conocer y establecer el nivel de granularidad (o de ahora en más en inglés \textit{\textbf{trace granularity}}) de los elementos a ser enlazados. El problema es que no existe aún, un modelo claro de costo-beneficio que determine unívocamente cuál es el nivel de \textit{trace granularity} correcto.
+\item Es muy importante para mantener la consistencia en \textit{traceability}, conocer y establecer el nivel de \textit{trace granularity}. El problema es que no existe aún, un modelo claro de costo-beneficio que determine unívocamente cuál es el nivel correcto.
 
 \end{itemize}
 
