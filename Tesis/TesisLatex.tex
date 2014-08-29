@@ -198,9 +198,8 @@ La definición anterior fue dada por \textit{the requirements management communi
 \small \textit{\textbf{cualquiera de las complejas relaciones lógicas que existen entre los distintos artefactos que se presentan en cualquier momento del ciclo de vida del desarrollo de software, el establecimiento de estas relaciones y/o el mantenimiento de las mismas}}.
 \end{quote}
 
-Entre varios beneficios de \textit{traceability} que enumeraremos mejor más adelante, podemos encontrar que ayuda a identificar las relaciones y dependencias que existen entre los artefactos de software. También \textit{traceability} es crucial entre los requerimientos y su representación en los modelos para asegurar que el conjunto relevante de requerimientos fueron debidamente implementados en el código. Pero no solo \textit{traceability} asegura la identificación de objetos y elementos relacionados, también puede facilitar el análisis de impactos de cambios durante el desarrollo de software.
+Esta definición incluye a todos los productos creados durante el proceso de desarrollo, durante el proceso de despliegue o implantación, y también los creados a lo largo del mantenimiento. Además necesita que la información de \textit{traceability} sea accesible a lo largo de toda la vida del producto de software.
 
-Las relaciones de \textit{traceability} pueden ser definidas de forma automática, por ejemplo producto de una transformación de modelos, o de forma manual como el caso de una relación de implementación entre un requerimiento y un componente de software.
 
 En la ingeniería de software encontramos dos usos o semánticas principales que dependen del contexto de \textit{traceability}:
 
@@ -212,11 +211,42 @@ En la ingeniería de software encontramos dos usos o semánticas principales que
 
 \end{itemize}
 
+
+Las relaciones de \textit{traceability} pueden ser definidas de forma automática, por ejemplo producto de una transformación de modelos, o de forma manual como el caso de una relación de implementación entre un requerimiento y un componente de software.
+
+
+\cite{DSIS} The use of traceability information varies with the development phase. Typical development phases and use scenarios include:
+
+\begin{itemize}
+
+\item \textbf{\textit{Planning}}: An example is decisions regarding the system development that will be
+used as rationale in the succeeding phases. A decision or agreement should be related to its origin, for example, a specific meeting or request from a stakeholder.
+
+\item \textbf{\textit{Design}}: An architect may need to link a functional component specification to a requirement using “implements” or “satisfies” relationships, expressing dependency between two logical software components.
+
+\item \textbf{\textit{Implementation}}: using model transformation and code generation there is a need to capture the relationships between source and target.
+
+\item \textbf{\textit{Testing/deployment}}: Traceability information can be used to check that all requirements are “satisfied” by one or more artifacts in the system. A coverage analysis
+of requirements and “satisfied-by” relationships can be used.
+
+\item \textbf{\textit{Maintenance}}: If one software component fails or not performs according to specification, a maintenance engineer can use traceability information to identify errors
+or bottlenecks.
+
+\item \textbf{\textit{Upgrade/change}}: If a new feature should be added, or an existing feature changed, using an impact analysis service will provide useful information about the complexity of implementing the change or upgrade.
+
+\end{itemize}
+
+Entre varios beneficios de \textit{traceability} que enumeraremos mejor más adelante, podemos encontrar que ayuda a identificar las relaciones y dependencias que existen entre los artefactos de software. También \textit{traceability} es crucial entre los requerimientos y su representación en los modelos para asegurar que el conjunto relevante de requerimientos fueron debidamente implementados en el código. Pero no solo \textit{traceability} asegura la identificación de objetos y elementos relacionados, también puede facilitar el análisis de impactos de cambios durante el desarrollo de software.
+
+Por todo lo anterior, queda demostrado que una buena solución de \textit{traceability} que se encuentre provista de información actualizada será un servicio muy valioso tanto para jefes de proyectos, como para desarrolladores de software y/o consultores de mantenimiento.
+
+
+
+
 \subsection{Beneficios}
 
 A continuación se listan un conjunto de actividades que provienen de distintos dominios de la ingeniería, en las cuales el uso de \textit{traceability} es muy beneficioso según \cite{BrcinaRiebisch} y \cite{GrammelVoigt}.
 
-\subsubsection{}
 
 \paragraph{Análisis de Sistemas} Ayuda a entender la complejidad de un sistema, navegando a lo largo del modelo de enlaces resultantes de la ejecución de las distintas cadenas de transformación.
 
@@ -234,26 +264,6 @@ A continuación se listan un conjunto de actividades que provienen de distintos 
 
 \paragraph{Configuración del Sistema y Versionado} En este momento el uso de \textit{traceability} es beneficioso para identificar las restricciones entre los componentes, identificar los cambios necesarios para resolver una restricción, identificar las diferencias entre dos versiones distintas del mismo artefacto y su impacto en otros artefactos.
 
-
-\subsubsection{}
-\cite{DSIS} The use of traceability information varies with the development phase. Typical development phases and use scenarios include:
-
-\paragraph{Planning} An example is decisions regarding the system development that will be
-used as rationale in the succeeding phases. A decision or agreement should be related to its origin, for example, a specific meeting or request from a stakeholder.
-
-\paragraph{Design} An architect may need to link a functional component specification to a requirement using “implements” or “satisfies” relationships, expressing dependency between two logical software components.
-
-\paragraph{Implementation} using model transformation and code generation there is a need to
-capture the relationships between source and target.
-
-\paragraph{Testing/deployment} Traceability information can be used to check that all requirements are “satisfied” by one or more artifacts in the system. A coverage analysis
-of requirements and “satisfied-by” relationships can be used.
-
-\paragraph{Maintenance} If one software component fails or not performs according to specification, a maintenance engineer can use traceability information to identify errors
-or bottlenecks.
-
-\paragraph{Upgrade/change} If a new feature should be added, or an existing feature changed,
-using an impact analysis service will provide useful information about the complexity of implementing the change or upgrade.
 
 
 
