@@ -215,24 +215,24 @@ En la ingeniería de software encontramos dos usos o semánticas principales que
 Las relaciones de \textit{traceability} pueden ser definidas de forma automática, por ejemplo producto de una transformación de modelos, o de forma manual como el caso de una relación de implementación entre un requerimiento y un componente de software.
 
 
-\subsection{Uso de traceability}
-Según \cite{DSIS}, de acuerdo a las siguientes fases del desarrollo presenta ejemplos de cómo ayuda el uso de la información de \textit{traceability} en cada una:
-
-\begin{itemize}
-
-\item \textbf{\textit{Planeamiento}}: Un ejemplo son las decisiones sobre el desarrollo del sistema que serán utilizadas como fundamento en las fases siguientes. Una decisión o acuerdo estarán relacionadas con su origen, por ejemplo, una reunión específica o una solicitud de un interesado.
-
-\item \textbf{\textit{Diseño}}: Un arquitecto puede relacionar una especificación de un componente de software funcional con un requerimiento, denotando la dependencia que existe, mediante una relación de \textsf{implementa} o \textsf{satisface}.
-
-\item \textbf{\textit{Implementación}}: con las transformaciones de modelos se capturan las relaciones entre los artefactos origen y destinos.
-
-\item \textbf{\textit{Prueba/despliegue}}: La información de \textit{traceability} se puede usar para chequear que todos los requerimientos fueron \textsf{satisfechos} por uno o más artefactos en el sistema, un análisis de cobertura de requerimientos.
-
-\item \textbf{\textit{Mantenimiento}}: Un ingeniero puede usar la información de \textit{traceability} para identificar errores en el caso de que un componente de software falla o no funciona de acuerdo a su especificación.
-
-\item \textbf{\textit{Actualización/cambio}}: Si es necesaria una nueva funcionalidad/característica o un cambio, un análisis de impactos será excelente gracias a la información de \textit{traceability}.
-
-\end{itemize}
+%\subsection{Uso de traceability}
+%Según \cite{DSIS}, de acuerdo a las siguientes fases del desarrollo presenta ejemplos de cómo ayuda el uso de la información de \textit{traceability} en cada una:
+%
+%\begin{itemize}
+%
+%\item \textbf{\textit{Planeamiento}}: Un ejemplo son las decisiones sobre el desarrollo del sistema que serán utilizadas como fundamento en las fases siguientes. Una decisión o acuerdo estarán relacionadas con su origen, por ejemplo, una reunión específica o una solicitud de un interesado.
+%
+%\item \textbf{\textit{Diseño}}: Un arquitecto puede relacionar una especificación de un componente de software funcional con un requerimiento, denotando la dependencia que existe, mediante una relación de \textsf{implementa} o \textsf{satisface}.
+%
+%\item \textbf{\textit{Implementación}}: con las transformaciones de modelos se capturan las relaciones entre los artefactos origen y destinos.
+%
+%\item \textbf{\textit{Prueba/despliegue}}: La información de \textit{traceability} se puede usar para chequear que todos los requerimientos fueron \textsf{satisfechos} por uno o más artefactos en el sistema, un análisis de cobertura de requerimientos.
+%
+%\item \textbf{\textit{Mantenimiento}}: Un ingeniero puede usar la información de \textit{traceability} para identificar errores en el caso de que un componente de software falla o no funciona de acuerdo a su especificación.
+%
+%\item \textbf{\textit{Actualización/cambio}}: Si es necesaria una nueva funcionalidad/característica o un cambio, un análisis de impactos será excelente gracias a la información de \textit{traceability}.
+%
+%\end{itemize}
 
 Entre varios beneficios de \textit{traceability} que enumeraremos mejor más adelante, podemos encontrar que ayuda a identificar las relaciones y dependencias que existen entre los artefactos de software. También \textit{traceability} es crucial entre los requerimientos y su representación en los modelos para asegurar que el conjunto relevante de requerimientos fueron debidamente implementados en el código. Pero no solo \textit{traceability} asegura la identificación de objetos y elementos relacionados, también puede facilitar el análisis de impactos de cambios durante el desarrollo de software.
 
@@ -302,6 +302,8 @@ En el presente capítulo nos introducimos en un conjunto de temas importantes de
 
 
 \section{Nivel de Granularidad}
+\label{sec:NivelGranularidad}
+
 El término granularidad refiere al nivel/grado de detalle en el cual un \textit{tracelink} se genera y/o se registra, es una característica íntimamente relacionada con el uso que se quiera realizar con \textit{traceability}. Por ejemplo cuando se desee trabajar sobre diagramas de clases \glssymbol{uml}, se podrán generar \textit{tracelinks} a nivel de paquetes, de clases o de métodos. La granularidad de un \textit{tracelink} (o de ahora en más en inglés \textit{\textbf{trace granularity}}) es definido por la granularidad del artefacto origen y la granularidad del artefacto destino.
 
 Esta propiedad debe ser definida cuidadosamente para efectivamente dar un buen soporte en las tareas de \textit{traceability}, dado que es un factor que definirá la complejidad, y por tanto el esfuerzo, en el análsis y en la utilización del conjunto de los \textit{tracelinks} obtenidos.
@@ -314,6 +316,7 @@ Esta propiedad debe ser definida cuidadosamente para efectivamente dar un buen s
 Para llegar a la definición de cualquier propuesta de \textit{traceability} se necesita de un modelo en el cual se especifiquen los conceptos, las reglas y las relaciones que existen, por ejemplo entre los artefactos y los \textit{tracelinks}. Éste modelo de \textit{traceability} va a estar determinado por un meta-modelo, el cual puede llegar a ser clasificado como un \textit{\textbf{meta-modelo de traceability de propósito general}}, o como un \textit{\textbf{meta-modelo de traceability de caso específico}}, a continuación se explica cada uno.
 
 \subsection{Meta-modelo de propósito general}
+\label{subsec:MetaModeloPropositoGeneral}
 
 En este caso, nos encontramos con un meta-modelo genérico que permite la \textit{\textbf{captura de tracelinks}} entre cualquier tipo de elementos de modelo. Un \textit{tracelink} se puede conectar con cualquier número de elementos, de cualquier tipo y de cualquier modelo. Las principales ventajas de este tipo de meta-modelo son la simplicidad y la uniformidad (dado que todos los modelos conforman el mismo meta-modelo), con lo cual se mejora la interoperabilidad de las herramientas brindándole la capacidad de importar, exportar y gestionar información de \textit{traceability} en un formato común.
 
@@ -395,6 +398,7 @@ El alcance de \textit{Model-Artefact Link} es muy amplio, por tal motivo es esta
 
 
 \section{Generación de tracelinks}
+\label{sec:GeneracionTracelinks}
 
 Uno de los principales temas de \textit{traceability} refiere a los dos enfoques distintos de \textit{generación de tracelinks} que se pueden presentar o usar durante una transformación de modelos, estos son la generación \textit{\textbf{implícita}} y la generación \textit{\textbf{explícita}}. 
 
@@ -824,7 +828,7 @@ La idea fundamental es lograr un meta-modelo bien simple en el que se capture so
 
 \begin{itemize}
 
-\item Lograr un esquema que represente el conjunto de \textit{tracelinks} independientemente de cómo fueron generados, \textit{explícita} o \textit{implícitamente} (\ref{sec:GeneracionTracelinks}), su \textit{trace granularity} y/o semántica.
+\item Lograr un esquema que represente el conjunto de \textit{tracelinks} independientemente de cómo fueron generados, \textit{explícita} o \textit{implícitamente} (\ref{sec:GeneracionTracelinks}), su \textit{trace granularity} (\ref{sec:NivelGranularidad}) y/o semántica.
 
 \item Mantener la comunicación lo más simple posible, tanto sea la que se realiza entre los distintos usuarios con sus respectivos roles, como la de los distintos tipos de herramientas que necesiten aplicar \textit{traceability}.
 
@@ -841,7 +845,7 @@ La idea fundamental es lograr un meta-modelo bien simple en el que se capture so
 
 Con el fin de cumplir con las consignas fundamentales listadas antes en \ref{sec:EsquemaPropIntro}, se definió una propuesta de \textit{esquema de traceability} que se encuentra representado en el diagrama de clases del dibujo \ref{fig:EsquenaPropuesto}.
 
-Como se puede observar, el meta-modelo se puede dividir lógicamente en dos partes principales, la primordial, en la que se encuentran las abstracciones fundamentales de los elementos mínimos necesarios en cualquier herramienta que desee ofrecer \textit{traceability}, y una secundaria, que se engloba la configuración del esquema. Esta configuración permite ofrecer un meta-modelo flexible a cualquier escenario/dominio en el que se desee hacer uso de \textit{traceability}.
+Como se puede observar, el meta-modelo se puede dividir lógicamente en dos partes, la principal en la que se encuentran las abstracciones fundamentales de los elementos mínimos necesarios en cualquier herramienta que desee ofrecer \textit{traceability}, y una secundaria en la que se engloba la configuración del esquema. Esta configuración permite ofrecer un meta-modelo flexible a cualquier escenario/dominio en el que se desee hacer uso de \textit{traceability}.
 
 
 \begin{figure}[hbtp]
@@ -854,16 +858,16 @@ Como se puede observar, el meta-modelo se puede dividir lógicamente en dos part
 
 \subsubsection{Clases fundamentales}
 
-Entre los elementos fundamentales se encuentra la clase TraceLink, la cual representa una tracelink. Esta clase está compuesta por un nombre que sirve como identificador (name), un tipo con el cual se determina su semántica (type), una referencia de la transformación a la que pertenece la cual es optativa porque una tracelink puede o no ser producto de una transformación, y por último dos conjuntos de artefactos: el de los orígenes/fuentes (sources) y el de los objetivos/resultados (targets).
+Entre los elementos fundamentales se encuentra la clase \textsf{\textit{TraceLink}}, la cual representa un tracelink. Esta clase está compuesta por un nombre que sirve como identificador (\textsf{\textit{name}}), un tipo con el cual se determina su semántica (\textsf{\textit{type}}), una referencia de la transformación a la que pertenece la cual es optativa porque un tracelink puede o no ser producto de una transformación, y por último dos conjuntos de artefactos: el de los orígenes/fuentes (\textsf{\textit{sources}}) y el de los objetivos/resultados (\textsf{\textit{targets}}).
 
-Los artefactos se encuentran representados por la clase Artefact, cuya identificación también pasa por su nombre (name), su descripción también por un diccionario de clave-valor, y por último su semántica también puede ser definida por un tipo definido en la configuración.
+Los artefactos se encuentran representados por la clase \textsf{\textit{Artefact}}, cuya identificación también pasa por su nombre (\textsf{\textit{name}}), su descripción también por un diccionario de clave-valor, y por último su semántica también puede ser definida por un tipo definido en la configuración.
 
-Por último entre los elementos fundamentales, tenemos la clase Transformation que abstrae de las transformaciones un nombre para su identificación, una descripción vía un diccionario y la colección de TraceLinks que son producto de su ejecución.
+Por último entre los elementos fundamentales, tenemos la clase \textsf{\textit{Transformation}} que abstrae de las transformaciones un nombre para su identificación, una descripción vía un diccionario y la colección de \textit{\textsf{TraceLinks}} que son producto de su ejecución.
 
 
 \subsubsection{Configuración del esquema}
 
-Esta parte refleja la configuración necesaria para lograr un esquema adaptable a la infinidad de escenarios en los que puede aplicarse el mismo. Dicha configuración consiste en la definición de dos jerarquías, una que define la semántica de los artefactos que se van a tracear, y la otra para determinar la semántica de las tracelinks que pueden llegar a crearse. Ambas jerarquías están determinadas mediante las clases LinkType y TypeArtefact respectivamente, éstas comparten la siguiente estructura: un nombre (name) que las identifica, un texto que posibilita describirlas (description) y una relación (parent) que asocia una clasificación con su padre, gracias a dicha relación se logra la estructura jerárquica.
+Esta parte refleja la configuración necesaria para lograr un esquema adaptable a la infinidad de escenarios en los que puede aplicarse el mismo. Dicha configuración consiste en la definición de dos jerarquías, una que define la semántica de los artefactos que se van a \textit{\textbf{tracear}}, y la otra para determinar la semántica de las tracelinks que pueden llegar a crearse. Ambas jerarquías están determinadas mediante las clases \textsf{\textit{LinkType}} y \textsf{\textit{TypeArtefact}} respectivamente, éstas comparten la siguiente estructura: un nombre (\textsf{\textit{name}}) que las identifica, un texto que posibilita describirlas (\textsf{\textit{description}}) y una relación (\textsf{\textit{parent}}) que asocia una clasificación con su padre, gracias a dicha relación se logra la estructura jerárquica.
 
 Un ejemplo de una configuración de tipos de tracelinks puede ser la jerarquía propuesta en la sección \ref{sec:ClasificacionTraceability}, que se puede ver siguiendo los diagramas \ref{fig:ClasifInicial}, \ref{fig:LinksImplicitos} y \ref{fig:LinksExplicitos}.
 
@@ -874,9 +878,9 @@ A continuación se lista un conjunto de aspectos y/o funcionalidades que el esqu
 
 \begin{itemize}
 
-\item funcionalidad de versionado: que permita navegar por las tracelinks y refleje las modificaciones conjunto con las que se fueron realizando sobre los artefactos relacionados en el tiempo, a lo largo de la evolución de todas las tareas que forman parte de la ingeniería de un software.
+\item \textbf{\textit{funcionalidad de versionado}}: que permita navegar por los \textit{tracelinks} y refleje las modificaciones en el tiempo que se fueron realizando sobre los artefactos relacionados, a lo largo de la ejecución de todas las tareas que forman parte de la ingeniería de un software.
 
-\item métodos de detección o información de errores: que determine o informe cuando una tracelink es inválida.
+\item \textbf{\textit{métodos de detección o información de errores}}: que determine o informe cuándo un \textit{tracelink} es inválido.
 
 \end{itemize}
 
