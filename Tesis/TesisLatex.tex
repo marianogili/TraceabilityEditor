@@ -818,7 +818,7 @@ La herramienta, desarrollada como un \textit{\textbf{plug-in}} del \glssymbol{id
 
 
 
-\section{El esquema de traceability}
+\section{Requerimientos}
 
 
 \subsection{Introducción}
@@ -840,7 +840,7 @@ La idea fundamental es lograr un meta-modelo bien simple en el que se capture so
 
 \end{itemize}
 
-\section{El esquema propuesto}
+\section{El esquema de traceability propuesto}
 \label{sec:EsquemaTraceability}
 
 Con el fin de cumplir con las consignas fundamentales listadas antes en \ref{sec:EsquemaPropIntro}, se definió una propuesta de \textit{esquema de traceability} que se encuentra representado en el diagrama de clases del dibujo \ref{fig:EsquenaPropuesto}.
@@ -887,24 +887,29 @@ A continuación se lista un conjunto de aspectos y/o funcionalidades que el esqu
 
 \section{El prototipo}
 
-En la presente sección se explica y presenta el prototipo desarrollado  para presentar la idea de la herramienta de \textit{traceability} propuesta en la tesis.
+En la presente sección se explica y presenta el prototipo desarrollado que materializa la idea detrás del \textit{esquema de traceability} propuesto en la sección anterior \ref{sec:EsquemaTraceability}.
 
 
 \subsection{La herramienta}
 
-La idea es lograr una herramienta que dada la definición de una transformación en conjunto con sus modelos de entrada y modelos resultados de su ejecución, retorne y muestre el mapa de tracelinks que se generará implícitamente producto de la transformación definida. El modelo del mapa de tracelinks se encuentra definido según el esquema de \textit{traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}.
+La idea es lograr una herramienta que dada la definición de una transformación acompañada con el conjunto de modelos de entrada/origen y de resultado/destino, retorne y muestre de una forma amigable el mapa de \textit{tracelinks} que se generaron implícitamente productos de su ejecución. 
 
-El prototipo de la herramienta propuesta trabaja sobre transformaciones \gls{qvt}, pero en la sección 
+El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta se encuentra definido según el \textit{esquema de traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}. Por otro lado, el prototipo de la herramienta propuesta trabaja sólo sobre transformaciones \gls{qvt}, pero en la sección \ref{sec:ATLTtraceability} de más adelante se presentan algunas ideas de cómo implementar algo similar para transformaciones \gls{atl} por ejemplo.
+
+Para lograr el mapa de tracelinks, dada una definición de una transformación cualquiera \gls{qvt}, primero se ejecuta dicha transformación 
+
 
 
 \subsubsection{Arquitectura}
 
 
+El prototipo se encuentra definido por dos módulos
+
 
 \section{Traceability en ATL}
 \label{sec:ATLTtraceability}
 
-La información de \textit{traceability} forma parte del lenguaje \gls{atl}, ésta ayuda en la interacción de cada regla de transformación cuando necesita tomar la salida de alguna otra regla por medio del mecanismo interno de \textit{traceability} implícito. Sin embargo, actualmente \gls{atl} ofrece un acceso muy limitado a dicha información de \textit{traceability} sólo por medio del método resolveTemp(). Además, ésta información es eliminada ni bien la ejecución de la transformación termina. Dada las carencias enumeradas antes, para lograr obtener alguna información de \textit{traceability} en esta tecnología es necesario implementar de dicha funcionalidad.
+La información de \textit{traceability} forma parte del lenguaje \gls{atl}, ésta ayuda en la interacción de cada regla de transformación cuando necesita tomar la salida de alguna otra regla por medio del mecanismo interno de \textit{traceability} implícito. Sin embargo, actualmente \gls{atl} ofrece un acceso muy limitado a dicha información de \textit{traceability} sólo por medio del método \textsf{\textit{resolveTemp()}}. Además, ésta información es eliminada ni bien la ejecución de la transformación termina. Dada las carencias enumeradas antes, para lograr obtener alguna información de \textit{traceability} en esta tecnología es necesario implementar de dicha funcionalidad.
 
 Existen varias propuestas de implementación, una de ellas, la que se presenta en \cite{Jouault} en donde propone considerar tanto a los programas de transformación como a la información de \textit{traceability} como modelos, entonces mediante la definición de una nueva transformación modificar los programas para que generen la información de \textit{traceability} como una salida más al modelo resultado original. Con este enfoque, la generación de código de \textit{traceability} está claramente separada de la lógica de la transformación y la misma se puede agregar después de que un programa haya sido escrito. Por lo cual, es posible añadir el soporte para nuevos formatos o modificar la granularidad o rango de las tracelinks sin interferir con la lógica del programa.
 
