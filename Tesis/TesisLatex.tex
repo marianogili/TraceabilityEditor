@@ -896,7 +896,15 @@ La idea es lograr una herramienta que dada la definición de una transformación
 
 El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta se encuentra definido según el \textit{esquema de traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}. Por otro lado, el prototipo de la herramienta propuesta trabaja sólo sobre transformaciones \gls{qvt}, pero en la sección \ref{sec:ATLTtraceability} de más adelante se presentan algunas ideas de cómo implementar algo similar para transformaciones \gls{atl} por ejemplo.
 
-Para lograr el mapa de tracelinks, dada una definición de una transformación cualquiera \gls{qvt}, primero se ejecuta dicha transformación 
+Para lograr el mapa de tracelinks, dada una definición de una transformación cualquiera \gls{qvt}, primero se debe ejecutar dicha transformación con su modelo origen con el fin de obtener el modelo resultado. Como resultado de esta transformación, \gls{qvt} genera implícitamente información de \textit{tracelinks} en un modelo definido por el meta-modelo de \textit{tracelinks} de \gls{qvt} que se muestra en la imagen \ref{fig:QVTTraceModel}. Lo que sigue es tomar este modelo de \textit{tracelinks} y transformarlo al nuestro (visto el meta-modelo en la imagen \ref{fig:EsquenaPropuesto}), para ésto como parte del prototipo se incluye una definición de una transformación (\textsf{\textit{QvtoTrace\_To\_Trace}}) que realiza esta tarea.
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.75]{./img/QVTTraceModel}
+\caption{Modelo de tracelinks de QVT}
+\label{fig:QVTTraceModel}
+\end{figure}
 
 
 
