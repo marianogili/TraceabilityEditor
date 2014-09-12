@@ -8,7 +8,8 @@
 \usepackage{enumitem}
 \usepackage{amsfonts}
 \usepackage{appendix}
-%\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage{xcolor}
 
 \newcommand{\grad}{\hspace{-2mm}$\phantom{a}^{\circ}$}
 
@@ -1464,22 +1465,41 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 
 \chapter{Anexo I: Ejemplo de hoja técnica}
 
-Ésto es un anexo
+\lstdefinelanguage{QVT}{
+	morekeywords={
+% relations:  
+   checkonly, domain, enforce, extends, implementedby, import, key, overrides, primitive, query, relation, top, transformation, when, where
+% operational: 
+ Bag, Collection, Dict, OrderedSet, Sequence, Set, Tuple, abstract, access, and, any, assert, blackbox, break, case, class, collect, collectNested, collectOne, collectselect, collectselectOne, composes, compute, configuration, constructor, continue, datatype, default, derived, disjuncts, do, elif, else, end, endif, enum, except, exists, extends, exception, false, forAll, forEach, forOne, from, helper, if, implies, import , in, inherits, init, inout, intermediate, invresolve, invresolveIn, invresolveone, invresolveoneIn , isUnique, iterate, late, let, library, literal, log, main, map, mapping, merges, metamodel, modeltype, new, not, null, object, one, or, ordered, out, package, population, primitive, property, query, raise, readonly, references, refines, reject, resolve, resolveIn, resolveone, resolveoneIn, return, select, selectOne, sortedBy, static, switch, tag, then, transformation, true, try, typedef, unlimited, uses, var, when, where, while, with, xcollect , xmap, xor, xselect 
+ },
+ morecomment=[l]{//},
+ morecomment=[s]{/*}{*/},
+ morestring=[b]",
+ morestring=[d]',
+ keywordstyle=\bfseries\color{red},
+ commentstyle=\itshape\color{green},
+ identifierstyle=\color{black},
+ stringstyle=\color{blue}, 
+ tabsize=4}
+ 
 
-%\lstdefinelanguage{QVT}{
-%	morekeywords={
-%% relations:  
-%   checkonly, domain, enforce, extends, implementedby, import, key, overrides, primitive, query, relation, top, transformation, when, where
-%% operational: 
-% Bag, Collection, Dict, OrderedSet, Sequence, Set, Tuple, abstract, access, and, any, assert, blackbox, break, case, class, collect, collectNested, collectOne, collectselect, collectselectOne, composes, compute, configuration, constructor, continue, datatype, default, derived, disjuncts, do, elif, else, end, endif, enum, except, exists, extends, exception, false, forAll, forEach, forOne, from, helper, if, implies, import , in, inherits, init, inout, intermediate, invresolve, invresolveIn, invresolveone, invresolveoneIn , isUnique, iterate, late, let, library, literal, log, main, map, mapping, merges, metamodel, modeltype, new, not, null, object, one, or, ordered, out, package, population, primitive, property, query, raise, readonly, references, refines, reject, resolve, resolveIn, resolveone, resolveoneIn, return, select, selectOne, sortedBy, static, switch, tag, then, transformation, true, try, typedef, unlimited, uses, var, when, where, while, with, xcollect , xmap, xor, xselect 
-% },
-% keywordstyle=[2]{\textbf},
-% morecomment=[l]{--},
-% morestring=[b]{'},
-% tabsize=4}
-% 
-%\lstinline[language=QVT,breaklines=true,basicstyle=\listingsfontinline,mathescape,literate={\-}{}{0\discretionary{-}{}{}}]
-%
+\lstset{literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\EUR}}1 {£}{{\pounds}}1
+}
+
+\lstinputlisting[language=QVT,breaklines=false,mathescape,frame=single]{QvtoTrace_To_Trace.qvto}
+
+%\begin{lstlisting}[language=QVT]
 %/*
 % * La definición de la presente transformación QvtoTrace_To_Trace 
 % * forma parte del prototipo desarrollado para la tesis del alumno 
@@ -1501,6 +1521,8 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 % * Declaración de la transformación.
 % */
 %transformation QvtoTrace_To_Trace(in qvto : QvtoTrace, out TraceEditor);
+%
+%\end{lstlisting}
 %
 %/*
 % * Punto de entrada donde se inicia la transformación por los objectos 
@@ -1761,7 +1783,7 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 %	return self.traceRecords.mappingOperation.name->asOrderedSet();
 %}
 %
-%\end{lstlisting}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Glosario %%%%%
