@@ -1,195 +1,250 @@
 /*
- * La definición de la presente transformación QvtoTrace_To_Trace 
- * forma parte del prototipo desarrollado para la tesis del alumno 
- * Mariano Gabriel Gili. 
+ * La definición de la presente transformación 
+ * QvtoTrace_To_Trace forma parte del prototipo 
+ * desarrollado para la tesis del alumno Mariano Gabriel
+ * Gili. 
  *
- * Esta transformación toma como entrada las trazas generadas por
- * la tecnología QVT que conforman el meta-modelo Trace, y genera 
- * un modelo para el prototipo de edición de trazas que conforma 
- * el meta-modelo propuesto TraceEditor.
+ * Esta transformación toma como entrada las trazas generadas
+ * por la tecnología QVT que conforman el meta-modelo Trace, 
+ * y genera un modelo para el prototipo de edición de trazas 
+ * que conforma el meta-modelo propuesto TraceEditor.
  */
 
 /*
  * Definición de los meta-modelos.
  */
 modeltype TraceEditor uses 'http://traceeditor/1.0';
-modeltype QvtoTrace uses 'http:///www.eclipse.org/m2m/qvt/operational/trace.ecore';
+modeltype QvtoTrace uses 
+	'http:///www.eclipse.org/m2m/qvt/operational/trace.ecore';
 		
 /*
  * Declaración de la transformación.
  */
-transformation QvtoTrace_To_Trace(in qvto : QvtoTrace, out TraceEditor);
+transformation QvtoTrace_To_Trace(in qvto : QvtoTrace, 
+	out TraceEditor);
 
 /*
- * Punto de entrada donde se inicia la transformación por los objectos 
- * raiz de tipo Trace del modelo de entrada mediante la invocación del 
- * mapeo trace2TraceEditor().
+ * Punto de entrada donde se inicia la transformación por los
+ * objectos raiz de tipo Trace del modelo de entrada mediante
+ * la invocación del mapeo trace2TraceEditor().
  */
 main() {
-	qvto.rootObjects()[QvtoTrace::Trace]->map trace2TraceEditor();
+	qvto.rootObjects()[QvtoTrace::Trace]->map 
+		trace2TraceEditor();
 }
 
-////////////////////////////////////////////////////////////////////////
-/////////////////////////////// Mappings ///////////////////////////////
-////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+///////////////////// Mappings //////////////////////////////
+/////////////////////////////////////////////////////////////
 
 /*
- * trace2TraceEditor() toma una instancia de Trace y retorna una de 
- * TraceEditor.
- * Genera la configuración (_configuracion) mediante el mapeo 
- * trace2Configuration() y el dashboard mediante trace2Dashboard().
+ * trace2TraceEditor() toma una instancia de Trace y retorna 
+ * una de TraceEditor. Genera la configuración 
+ * (_configuracion) mediante el mapeo trace2Configuration() y
+ * el dashboard mediante trace2Dashboard().
  */
-mapping QvtoTrace::Trace::trace2TraceEditor() : TraceEditor::TraceEditor {
+mapping QvtoTrace::Trace::trace2TraceEditor() : 
+	TraceEditor::TraceEditor {
  	_configuration := self.map trace2Configuration();
  	dashboard :=  self.map trace2Dashboard();
 }
 
 /*
- * trace2Configuration() genera una configuración del editor TraceEditor
- * representada por el modelo de TraceEditor::Configuration en la que se
- * definen los tipos de las trazas y se obtienen los tipos de artefactos
- * que se encuentran en las trazas del modelo QvtoTrace::Trace.
+ * trace2Configuration() genera una configuración del editor 
+ * TraceEditor representada por el modelo de 
+ * TraceEditor::Configuration en la que se definen los tipos 
+ * de las trazas y se obtienen los tipos de artefactos que se
+ * encuentran en las trazas del modelo QvtoTrace::Trace.
  */
-mapping QvtoTrace::Trace::trace2Configuration() : TraceEditor::Configuration {
+mapping QvtoTrace::Trace::trace2Configuration() : 
+	TraceEditor::Configuration {
 	linkTypes := self.linkTypes();
 	typeArtefacts := self.typesByName()->collect(n | 
 		object TraceEditor::TypeArtefact {
 			name := n;
-			//TODO: solucionar prototipo de editores para que muestren la 
-			// descripción si la tiene e inicializarla con alguna información.
+			//TODO: solucionar prototipo de editores para que
+			// muestren la descripción si la tiene e 
+			// inicializarla con alguna información.
 			//description := "";
 	}); 
 }
 
 /*
- * trace2Dashboard() de las trazas del modelo de entrada QvtoTrace::Trace
- * obtiene el listado de transformaciones (transformations) y los 
- * listados de los artefactos origen y destino (sourceArtefacts y 
- * targetArtefacts respectivamente) mediante la inspección de las 
- * instancias TraceRecord de dicho modelo. Las trazas que representan
- * los enlaces explícitos (tracelinks) se inicializan como un conjunto 
- * vacío.
+ * trace2Dashboard() de las trazas del modelo de entrada 
+ * QvtoTrace::Trace obtiene el listado de transformaciones 
+ * (transformations) y los listados de los artefactos origen 
+ * y destino (sourceArtefacts y targetArtefacts 
+ * respectivamente) mediante la inspección de las instancias 
+ * TraceRecord de dicho modelo. Las trazas que representan 
+ * los enlaces explícitos (tracelinks) se inicializan como un
+ * conjunto vacío.
  */
-mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
-	transformations := self.transformationsByName()->collect(t | 
+mapping QvtoTrace::Trace::trace2Dashboard() : 
+	TraceEditor::Dashboard {
+	transformations := self.transformationsByName()->collect(
+		t | 
 		object TraceEditor::Transformation {
 			name := t;
-			traceLinks := self.traceRecords[mappingOperation.name=t]->
-				map traceRecord2TraceLink();
+			traceLinks := self.traceRecords
+				[mappingOperation.name=t]->	map 
+					traceRecord2TraceLink();
 	});
-	// dado que las trazas de QVT son todas producto de transformaciones,
-	// la colección traceLinks se inicializa vacía.
+	// dado que las trazas de QVT son todas producto de 
+	// transformaciones, la colección traceLinks se 
+	// inicializa vacía.
 	traceLinks := OrderedSet{};
-	sourceArtefacts := self.traceRecords._context._context[name="self"].map 
-		varParameterValue2Artefact("Source");
+	sourceArtefacts := self.traceRecords._context._context
+		[name="self"].map 
+			varParameterValue2Artefact("Source");
 	targetArtefacts := self.traceRecords._result._result.map 
 		varParameterValue2Artefact("Target");
 }
 
 /*
- * traceRecord2TraceLink() convierte una traza TraceRecord en su 
- * correspondiente de tipo TraceLink, el nombre (name) es la representación
- * en string de la traza origen, el tipo de la traza es 'implícita',
- * la transformación (_transformation) es del resultado el artefacto 
- * que lo contiene, los artefactos origen y destino (sources y targets)
- *  son el contexto (_context) y los resultados (result) respectivamente.
+ * traceRecord2TraceLink() convierte una traza TraceRecord en
+ * su correspondiente de tipo TraceLink, el nombre (name) es 
+ * la representación en string de la traza origen, el tipo de
+ * la traza es 'implícita',la transformación  
+ * (_transformation) es del resultado el artefacto que lo 
+ * contiene, los artefactos origen y destino (sources y 
+ * targets) son el contexto (_context) y los resultados 
+ * (result) respectivamente.
  */
-mapping QvtoTrace::TraceRecord::traceRecord2TraceLink() : TraceEditor::TraceLink {
+mapping QvtoTrace::TraceRecord::traceRecord2TraceLink() : 
+	TraceEditor::TraceLink {
 	name := self.repr().toTraceLinkName();
 	type := self.varParameterValueLinkType('Implicit');
-	_transformation := result.container().oclAsType(TraceEditor::Transformation);
+	_transformation := result.container().oclAsType(
+		TraceEditor::Transformation);
 	sources := self._context._context[name="self"].map 
 		varParameterValue2Artefact("Source");
-	targets := self._result._result->map varParameterValue2Artefact("Target")
-		->flatten(); 
+	targets := self._result._result->map 
+		varParameterValue2Artefact("Target")->flatten(); 
 }
 
 /*
- * varParameterValue2Artefact() transforma los parámetros VarParameterValue
- * de las trazas del modelo de entrada en artefactos de tipo Artefact,
- * deriva la transformación en varParameterValueSimple2Artefact() y 
- * varParameterValueCollection2Artefact() dependiendo de si el parámetro
- * representa un valor simple o una colección respectivamente. 
+ * varParameterValue2Artefact() transforma los parámetros 
+ * VarParameterValue de las trazas del modelo de entrada en 
+ * artefactos de tipo Artefact, deriva la transformación en 
+ * varParameterValueSimple2Artefact() y 
+ * varParameterValueCollection2Artefact() dependiendo de si 
+ * el parámetro representa un valor simple o una colección 
+ * respectivamente. 
  */
-mapping QvtoTrace::VarParameterValue::varParameterValue2Artefact(in prefix : String) 
+mapping QvtoTrace::VarParameterValue::
+	varParameterValue2Artefact(in prefix : String) 
 	: OrderedSet(TraceEditor::Artefact) 
-	disjuncts QvtoTrace::VarParameterValue::varParameterValueSimple2Artefact, 
-		QvtoTrace::VarParameterValue::varParameterValueCollection2Artefact {}
+	disjuncts QvtoTrace::VarParameterValue::
+		varParameterValueSimple2Artefact, 
+		QvtoTrace::VarParameterValue::
+			varParameterValueCollection2Artefact {}
 
-mapping QvtoTrace::VarParameterValue::varParameterValueSimple2Artefact(in prefix : String) 
+mapping QvtoTrace::VarParameterValue::
+	varParameterValueSimple2Artefact(in prefix : String) 
 	: OrderedSet(TraceEditor::Artefact) 
 	when { self.value.collectionType = null } {
 		init {
 			result := object TraceEditor::Artefact {
-				name := self.value.repr().toArtefactName(prefix);
-				type := self.varParameterValueTypeArtefact(self.type.prefix(prefix));
+				name := self.value.repr().toArtefactName(
+					prefix);
+				type := self.varParameterValueTypeArtefact(
+					self.type.prefix(prefix));
 			}->asOrderedSet();
 		}
 }
 
-mapping QvtoTrace::VarParameterValue::varParameterValueCollection2Artefact(in prefix : String) 
+mapping QvtoTrace::VarParameterValue::
+	varParameterValueCollection2Artefact(in prefix : String) 
 	: OrderedSet(TraceEditor::Artefact) 
 	when { self.value.collectionType <> null } {
 		init {
-			var typeName := self.type.substringAfter("(").substringBefore(")");
+			var typeName := self.type.substringAfter("(")
+				.substringBefore(")");
 			result := self.value.collection->collect(e | 
 				object TraceEditor::Artefact {
 					name := e.repr().toArtefactName(prefix);
-					type := self.varParameterValueTypeArtefact(typeName.prefix(prefix));
+					type := self
+						.varParameterValueTypeArtefact(
+							typeName.prefix(prefix));
 			})->asOrderedSet();
 		}
 }
 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////// Constructors ////////////////////////////
-////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////////////////////// Constructors ////////////////////////
+/////////////////////////////////////////////////////////////
 
-constructor TraceEditor::LinkType::LinkType (aName : String, aParent : TraceEditor::LinkType) {
+constructor TraceEditor::LinkType::LinkType (aName : String, 
+	aParent : TraceEditor::LinkType) {
 	name := aName;
 	parent := aParent;
 }
 
-////////////////////////////////////////////////////////////////////////
-/////////////////////////////// Helpers ////////////////////////////////
-////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+///////////////////////// Helpers ///////////////////////////
+/////////////////////////////////////////////////////////////
 
 /*
- * linkTypes() crea un conjunto de tipos de enlaces por defecto.
+ * linkTypes() crea un conjunto de tipos de enlaces por 
+ * defecto.
  */
-helper QvtoTrace::Trace::linkTypes() : OrderedSet(TraceEditor::LinkType) {
+helper QvtoTrace::Trace::linkTypes() : OrderedSet(
+	TraceEditor::LinkType) {
 	
-	var Explicit := new TraceEditor::LinkType ('Explicit', null);
-	var Implicit := new TraceEditor::LinkType ('Implicit', null);
+	var Explicit := new TraceEditor::LinkType ('Explicit', 
+		null);
+	var Implicit := new TraceEditor::LinkType ('Implicit', 
+		null);
 	
-	var ModelModel := new TraceEditor::LinkType ('Model-Model', Explicit);
-	var ModelArtefact := new TraceEditor::LinkType ('Model-Artefact', Explicit);
-	var Query := new TraceEditor::LinkType ('Query', Implicit);
+	var ModelModel := new TraceEditor::LinkType(
+		'Model-Model', Explicit);
+	var ModelArtefact := new TraceEditor::LinkType (
+		'Model-Artefact', Explicit);
+	var Query := new TraceEditor::LinkType ('Query', 
+		Implicit);
 	var M2M := new TraceEditor::LinkType ('M2M', Implicit);
 	var M2T := new TraceEditor::LinkType ('M2T', Implicit);
-	var Composition := new TraceEditor::LinkType ('Composition', Implicit);
-	var Update := new TraceEditor::LinkType ('Update', Implicit);
-	var Creation := new TraceEditor::LinkType ('Creation', Implicit);
-	var Delete := new TraceEditor::LinkType ('Delete', Implicit);
+	var Composition := new TraceEditor::LinkType (
+		'Composition', Implicit);
+	var Update := new TraceEditor::LinkType ('Update', 
+		Implicit);
+	var Creation := new TraceEditor::LinkType ('Creation', 
+		Implicit);
+	var Delete := new TraceEditor::LinkType ('Delete', 
+		Implicit);
 	
-	var Static := new TraceEditor::LinkType ('Static', ModelModel);
-	var Dinamic := new TraceEditor::LinkType ('Dinamic', ModelModel);
-	var Satisfies := new TraceEditor::LinkType ('Satisfies', ModelArtefact);
-	var AllocatedTo := new TraceEditor::LinkType ('Allocated-To', ModelArtefact);
-	var Performs := new TraceEditor::LinkType ('Performs', ModelArtefact);
-	var Supports := new TraceEditor::LinkType ('Supports', ModelArtefact);
-	var Explains := new TraceEditor::LinkType ('Explains', ModelArtefact);
+	var Static := new TraceEditor::LinkType ('Static', 
+		ModelModel);
+	var Dinamic := new TraceEditor::LinkType ('Dinamic', 
+		ModelModel);
+	var Satisfies := new TraceEditor::LinkType ('Satisfies', 
+		ModelArtefact);
+	var AllocatedTo := new TraceEditor::LinkType (
+		'Allocated-To', ModelArtefact);
+	var Performs := new TraceEditor::LinkType ('Performs', 
+		ModelArtefact);
+	var Supports := new TraceEditor::LinkType ('Supports', 
+		ModelArtefact);
+	var Explains := new TraceEditor::LinkType ('Explains', 
+		ModelArtefact);
 	
-	var Dependency := new TraceEditor::LinkType ('Dependency', Static);
-	var ConsistentWith := new TraceEditor::LinkType ('ConsistentWith', Static);
-	var Calls := new TraceEditor::LinkType ('Calls', Dinamic);
-	var Generates := new TraceEditor::LinkType ('Generates', Dinamic);
-	var Notifies := new TraceEditor::LinkType ('Notifies', Dinamic);
+	var Dependency := new TraceEditor::LinkType (
+		'Dependency', Static);
+	var ConsistentWith := new TraceEditor::LinkType (
+		'ConsistentWith', Static);
+	var Calls := new TraceEditor::LinkType ('Calls', 
+		Dinamic);
+	var Generates := new TraceEditor::LinkType ('Generates', 
+		Dinamic);
+	var Notifies := new TraceEditor::LinkType ('Notifies', 
+		Dinamic);
 	
 	return OrderedSet {
-		Implicit, Explicit, ModelModel, ModelArtefact, Query, M2M, M2T, 
-		Composition, Update, Creation, Delete, Static, Dinamic, Satisfies, 
-		AllocatedTo, Performs, Supports, Explains, Dependency, 
-		ConsistentWith, Calls, Generates, Notifies
+		Implicit, Explicit, ModelModel, ModelArtefact, Query,
+		M2M, M2T, Composition, Update, Creation, Delete, 
+		Static, Dinamic, Satisfies, AllocatedTo, Performs, 
+		Supports, Explains, Dependency,	ConsistentWith, 
+		Calls, Generates, Notifies
 	};
 }
 
@@ -201,50 +256,57 @@ helper String::prefix(in pre : String) : String {
 }
 
 /*
- * toArtefactName() define el formato del nombre de los artefactos 
- * con el string parámetro pre como prefijo y luego tomando sólo 
- * la parte del número identificador de lo retornado por la función repr().
+ * toArtefactName() define el formato del nombre de los 
+ * artefactos con el string parámetro pre como prefijo y 
+ * luego tomando sólo la parte del número identificador de lo
+ * retornado por la función repr().
  */
 helper String::toArtefactName(in pre : String) : String {
-	var temp_name = self.substringAfter("org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@")
+	var temp_name = self.substringAfter(
+		"org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@")
 		.substringBefore(" ("); 
 	return pre + "_" + temp_name;
 }
 
 /*
- * toTraceLinkName() define el formato del nombre de las trazas tomando 
- * sólo la parte del número identificador de lo retornado por la función 
- * repr() y como prefijo "Trace_".
+ * toTraceLinkName() define el formato del nombre de las 
+ * trazas tomando sólo la parte del número identificador de 
+ * lo retornado por la función repr() y como prefijo "Trace_"
  */
 helper String::toTraceLinkName() : String {
-	var temp_name = self.substringAfter("org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@");
+	var temp_name = self.substringAfter(
+		"org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@");
 	return "Trace_" + temp_name;
 }
 
-////////////////////////////////////////////////////////////////////////
-/////////////////////////////// Querys /////////////////////////////////
-////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+///////////////////////// Querys ////////////////////////////
+/////////////////////////////////////////////////////////////
 
 /*
- * varParameterValueTypeArtefact() retorna del modelo ya convertido que 
- * representa la configuración, el tipo del artefacto que conforma a
- * TypeArtefact identificado por el parámetro typeName.
+ * varParameterValueTypeArtefact() retorna del modelo ya 
+ * convertido que representa la configuración, el tipo del 
+ * artefacto que conforma a TypeArtefact identificado por el 
+ * parámetro typeName.
  */
-query QvtoTrace::VarParameterValue::varParameterValueTypeArtefact(in typeName : String) 
+query QvtoTrace::VarParameterValue::
+	varParameterValueTypeArtefact(in typeName : String) 
 	: TraceEditor::TypeArtefact {
-	return self.container().container().container().oclAsType(QvtoTrace::Trace)
-		.resolveoneIn(
+	return self.container().container().container()
+		.oclAsType(QvtoTrace::Trace).resolveoneIn(
 			QvtoTrace::Trace::trace2Configuration,
 			TraceEditor::Configuration
 	).typeArtefacts![name = typeName];
 }
 
 /*
- * varParameterValueLinkType() retorna del modelo ya convertido que 
- * representa la configuración, el tipo de traza que conforma a
- * LinkType identificado por el parámetro typeName.
+ * varParameterValueLinkType() retorna del modelo ya 
+ * convertido que representa la configuración, el tipo de 
+ * traza que conforma a LinkType identificado por el 
+ * parámetro typeName.
  */
-query QvtoTrace::TraceRecord::varParameterValueLinkType(in typeName : String) 
+query QvtoTrace::TraceRecord::varParameterValueLinkType(
+	in typeName : String) 
 	: TraceEditor::LinkType {
 	return self.container().oclAsType(QvtoTrace::Trace)
 		.resolveoneIn(
@@ -254,28 +316,35 @@ query QvtoTrace::TraceRecord::varParameterValueLinkType(in typeName : String)
 }
 
 /*
- * typesByName() retorna el conjunto de nombres de los distintos tipos de  
- * artefactos que se encuentran en el conjunto de trazas del modelo de 
- * entrada Trace. Este conjunto es el tipo de los orígenes, obtenidos del
- * contexto del modelo Trace, unión los tipos de los resultados, obtenidos
- * de los resultados.
+ * typesByName() retorna el conjunto de nombres de los 
+ * distintos tipos de artefactos que se encuentran en el 
+ * conjunto de trazas del modelo de entrada Trace. Este 
+ * conjunto es el tipo de los orígenes, obtenidos del
+ * contexto del modelo Trace, unión los tipos de los 
+ * resultados, obtenidos de los resultados.
  */
 query QvtoTrace::Trace::typesByName() : OrderedSet(String) {
-	return self.traceRecords._context._context[name="self"].type
-		.prefix("Source")->asSet()->union(
-			self.traceRecords._result._result[name="result" and value.collectionType = null]
-				.type.prefix("Target")->asSet()->union(
-			self.traceRecords._result._result[name="result" and value.collectionType <> null]
-				.type.substringAfter("(").substringBefore(")").prefix("Target")->asSet())
+	return self.traceRecords._context._context[name="self"]
+		.type.prefix("Source")->asSet()->union(
+			self.traceRecords._result._result[name="result" 
+				and value.collectionType = null].type.prefix(
+					"Target")->asSet()->union(
+						self.traceRecords._result._result[
+							name="result" and 
+							value.collectionType <> null]
+		.type.substringAfter("(").substringBefore(")")
+		.prefix("Target")->asSet())
 	)->asOrderedSet();
 }
 
 /*
- * transformationsByName() retorna el conjunto de nombres de las 
- * transformaciones del conjunto de trazas que se encuentran en el modelo
- * de entrada Trace.
+ * transformationsByName() retorna el conjunto de nombres de  
+ * las transformaciones del conjunto de trazas que se 
+ * encuentran en el modelo de entrada Trace.
  */
-query QvtoTrace::Trace::transformationsByName() : OrderedSet(String) {
-	return self.traceRecords.mappingOperation.name->asOrderedSet();
+query QvtoTrace::Trace::transformationsByName() : 
+	OrderedSet(String) {
+	return self.traceRecords.mappingOperation.name->
+		asOrderedSet();
 }
 

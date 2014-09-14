@@ -10,6 +10,7 @@
 \usepackage{appendix}
 \usepackage{listingsutf8}
 \usepackage{xcolor}
+\usepackage{framed}
 
 \newcommand{\grad}{\hspace{-2mm}$\phantom{a}^{\circ}$}
 
@@ -1463,7 +1464,10 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \addappheadtotoc
 \appendixpage
 
-\chapter{Anexo I: Ejemplo de hoja técnica}
+\chapter{I: QvtoTrace{\textunderscore}To{\textunderscore}Trace}
+
+A continuación la definición completa de la transformación \gls{qvt} \textsf{QvtoTrace\_To\_Trace} implementada para el prototipo desarrollado en la presente Tesis:
+
 
 \lstdefinelanguage{QVT}{
 	morekeywords={
@@ -1496,8 +1500,10 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
   {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
   {€}{{\EUR}}1 {£}{{\pounds}}1
 }
-
-\lstinputlisting[language=QVT,breaklines=false,mathescape,frame=single]{QvtoTrace_To_Trace.qvto}
+\begin{framed}
+\lstinputlisting[language=QVT,breaklines=false,mathescape,aboveskip=7mm,breaklines=true,
+basicstyle=\footnotesize]{QvtoTrace_To_Trace.qvto}
+\end{framed}
 
 %\begin{lstlisting}[language=QVT]
 %/*
