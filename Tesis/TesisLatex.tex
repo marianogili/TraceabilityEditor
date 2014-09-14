@@ -900,11 +900,31 @@ En la presente sección se explica y presenta el prototipo desarrollado que mate
 
 \subsection{La herramienta}
 
-La idea es lograr una herramienta que dada la definición de una transformación acompañada con el conjunto de modelos de entrada/origen y de resultado/destino, retorne y muestre de una forma amigable el mapa de \textit{tracelinks} que se generaron implícitamente productos de su ejecución. 
+La idea es lograr una herramienta que dada la definición de una transformación acompañada con el conjunto de modelos de entrada/origen y de resultado/destino, retorne y muestre de una forma amigable el mapa de \textit{tracelinks} que se generaron implícitamente productos de su ejecución. También, que permita la edición de dicho mapa dando la posibilidad de:
+\begin{itemize}
+\item crear, editar y eliminar \textit{tracelinks}
+\item editar artefactos de los modelos origen y destino
+\item editar transformaciones
+\end{itemize}
 
-El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta se encuentra definido según el \textit{esquema de traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}. Por otro lado, el prototipo de la herramienta propuesta trabaja sólo sobre transformaciones \gls{qvt}, pero en la sección \ref{sec:ATLTtraceability} de más adelante se presentan algunas ideas de cómo implementar algo similar para transformaciones \gls{atl} por ejemplo.
 
-Para lograr el mapa de tracelinks, dada una definición de una transformación cualquiera \gls{qvt}, primero se debe ejecutar dicha transformación con su modelo origen con el fin de obtener el modelo resultado. Como resultado de esta transformación, \gls{qvt} genera implícitamente información de \textit{tracelinks} en un modelo definido por el meta-modelo de \textit{tracelinks} de \gls{qvt} que se muestra en la imagen \ref{fig:QVTTraceModel}. Lo que sigue es tomar este modelo de \textit{tracelinks} y transformarlo al nuestro (visto el meta-modelo en la imagen \ref{fig:EsquenaPropuesto}), para ésto como parte del prototipo se incluye una definición de una transformación (\textsf{\textit{QvtoTrace\_To\_Trace}}) que realiza esta tarea.
+\subsubsection{Uso}
+
+A continuación se detalla cómo es la secuencia del uso de la herramienta para lograr lo explicado antes, la imagen \ref{fig:SecuenciaPrototipo} muestra el resumen de la idea.
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=.54]{./img/Secuencia_Prototipo}
+\caption{Secuencia del prototipo}
+\label{fig:SecuenciaPrototipo}
+\end{figure}
+
+
+Para lograr el mapa de \textit{tracelinks}, dada una definición de una transformación cualquiera \gls{qvt}, primero se debe ejecutar dicha transformación con su modelo origen con el fin de obtener el modelo resultado. Conjunto con el resultado de la transformación, \gls{qvt} genera implícitamente información de \textit{tracelinks} en un modelo definido por el meta-modelo que se muestra en la imagen \ref{fig:QVTTraceModel}. Luego, se transforma el modelo de \textit{tracelinks} de \gls{qvt} al modelo definido por la herramienta (visto en la imagen \ref{fig:EsquenaPropuesto}), para ésto como parte del prototipo se incluye una definición de una transformación que se llama \textsf{\textit{QvtoTrace\_To\_Trace}}.
+
+Y listo, ya podemos acceder al mapa de \textit{tracelinks} de la transformación que queríamos mediante la herramienta \textsf{\textit{TraceEditor}}, navegar sus relaciones y realizar las ediciones que se deseen.
+
 
 
 \begin{figure}[hbtp]
@@ -919,13 +939,41 @@ Para lograr el mapa de tracelinks, dada una definición de una transformación c
 \subsubsection{Arquitectura}
 
 
-El prototipo se encuentra definido por dos módulos
+El prototipo se encuentra definido por dos módulos: \textsf{\textit{QvtoTrace\_To\_Trace}} que convierte la información de trazas \gls{qvt} en un modelo definido por el meta-modelo que usa el otro módulo, \textsf{\textit{TraceEditor}} que es el editor gráfico y tabular de la información de \textit{traceability}.
+
+El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta se encuentra definido según el \textit{esquema de traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}. Por otro lado, el prototipo de la herramienta propuesta trabaja sólo sobre transformaciones \gls{qvt}, en la sección \ref{sec:ATLTtraceability} de más adelante se presentan algunas ideas de cómo implementar algo similar para transformaciones \gls{atl} por ejemplo.
 
 
-\section{Traceability en ATL}
+
+\subsubsection{Transformación QvtoTrace{\_}To{\_}Trace}
+
+Como ya se mencionó, esta tranformación toma como entrada un modelo de \textit{tracelinks} definido por el meta-modelo de la imagen \ref{fig:QVTTraceModel} y retorna un modelo basado en el esquema propuesto de \textit{traceability} (\ref{fig:EsquenaPropuesto}) llamado \textsf{\textit{TraceEditor}} como la herramienta que lo usa y que su definición se puede ver en la imagen \ref{fig:TraceEditorMetaModel}.
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=.58]{./img/TraceEditorMetaModel}
+\caption{Meta-modelo TraceEditor}
+\label{fig:TraceEditorMetaModel}
+\end{figure}
+
+
+\subsubsection{Editor gráfico y tabular TraceEditor}
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=.28]{./img/TraceEditorEjemplo}
+\caption{Editor gráfico y tabular TraceEditor}
+\label{fig:TraceEditorEjemplo}
+\end{figure}
+
+
+
+\subsection{Traceability en ATL}
 \label{sec:ATLTtraceability}
 
-La información de \textit{traceability} forma parte del lenguaje \gls{atl}, ésta ayuda en la interacción de cada regla de transformación cuando necesita tomar la salida de alguna otra regla por medio del mecanismo interno de \textit{traceability} implícito. Sin embargo, actualmente \gls{atl} ofrece un acceso muy limitado a dicha información de \textit{traceability} sólo por medio del método \textsf{\textit{resolveTemp()}}. Además, ésta información es eliminada ni bien la ejecución de la transformación termina. Dada las carencias enumeradas antes, para lograr obtener alguna información de \textit{traceability} en esta tecnología es necesario implementar de dicha funcionalidad.
+La información de \textit{traceability} forma parte del lenguaje \gls{atl}, ésta ayuda en la interacción de cada regla de transformación cuando necesita tomar la salida de alguna otra regla por medio del mecanismo interno de \textit{traceability} implícito. Sin embargo, actualmente \gls{atl} ofrece un acceso muy limitado a dicha información de \textit{traceability} sólo por medio del método \textsf{\textit{resolveTemp()}}. Además, ésta información es eliminada ni bien la ejecución de la transformación termina. Dada las carencias enumeradas antes, para lograr obtener alguna información de \textit{traceability} en esta tecnología es necesario implementar dicha funcionalidad.
 
 Existen varias propuestas de implementación, una de ellas, la que se presenta en \cite{Jouault} en donde propone considerar tanto a los programas de transformación como a la información de \textit{traceability} como modelos, entonces mediante la definición de una nueva transformación modificar los programas para que generen la información de \textit{traceability} como una salida más al modelo resultado original. Con este enfoque, la generación de código de \textit{traceability} está claramente separada de la lógica de la transformación y la misma se puede agregar después de que un programa haya sido escrito. Por lo cual, es posible añadir el soporte para nuevos formatos o modificar la granularidad o rango de las tracelinks sin interferir con la lógica del programa.
 
@@ -1464,7 +1512,7 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \addappheadtotoc
 \appendixpage
 
-\chapter{I: QvtoTrace{\textunderscore}To{\textunderscore}Trace}
+\chapter{QvtoTrace{\textunderscore}To{\textunderscore}Trace}
 
 A continuación la definición completa de la transformación \gls{qvt} \textsf{QvtoTrace\_To\_Trace} implementada para el prototipo desarrollado en la presente Tesis:
 
