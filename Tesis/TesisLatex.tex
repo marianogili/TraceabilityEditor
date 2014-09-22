@@ -958,7 +958,21 @@ Como ya se mencionó, esta tranformación toma como entrada un modelo de \textit
 \end{figure}
 
 
+La transformación se desarrolló con el lenguaje \gls{qvt} (en la sección \ref{sec:QVT} se detalla esta tecnología) y su definición completa se encuentra en el Anexo \ref{cap:QvtoTraceToTrace}, esta tranformación se encuentra bien documentada mediante comentarios a lo largo de todo el código.
+
+
+
 \subsubsection{Editor gráfico y tabular TraceEditor}
+
+Este editor gráfico y tabular se ejecuta como un plugin de Eclipse, permite presentarnos todo el mapa de \textit{tracelinks} que se genera producto de una transformación que se quiera analizar, así como realizar algunas modificaciones sobre dicho modelo. Nos permitirá identificar, por un lado, el listado de los artefactos orígenes de una transformación, y por otro, el de los destinos o resultados. El conjunto de \textit{tracelinks} agrupados por la transformación que los generó, y los artefactos orígenes y destinos que enlaza cada uno. De un artefacto y de un \textit{tracelink} muestra el nombre que lo identifica y su tipo, y de una transformación sólo el nombre.
+
+Está conformado por los siguientes componentes:
+
+\begin{itemize}
+\item Un editor gráfico
+\item Un editor tabular
+\item Una perspectiva 
+\end{itemize}
 
 
 \begin{figure}[hbtp]
@@ -967,6 +981,39 @@ Como ya se mencionó, esta tranformación toma como entrada un modelo de \textit
 \caption{Editor gráfico y tabular TraceEditor}
 \label{fig:TraceEditorEjemplo}
 \end{figure}
+
+
+\paragraph{El editor gráfico}
+
+Este editor que se puede observar en detalle en la imagen \ref{fig:TraceEditorGrafico}, se compone de un plano principal y una paleta de herramientas. El plano se presenta dividido en 3 zonas en las que se distribuyen los distintos componentes del modelo de \textit{tracelinks} generado:
+
+\begin{itemize}
+\item \textsf{\textit{Artefactos orígenes}}, 
+\item \textsf{\textit{Transformaciones y trazas}}
+\item \textsf{\textit{Artefactos destinos}} 
+\end{itemize} 
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=.28]{./img/TraceEditorGrafico}
+\caption{El editor gráfico}
+\label{fig:TraceEditorGrafico}
+\end{figure}
+
+
+\paragraph{El editor tabular}
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=.28]{./img/TraceEditorTabular}
+\caption{El editor tabular}
+\label{fig:TraceEditorTabular}
+\end{figure}
+
+
+\paragraph{La perspectiva}
 
 
 
@@ -1256,6 +1303,7 @@ Más información sobre la tecnología \gls{atl} se puede encontrar en la secci�
 
 
 \section{QVT}
+\label{sec:QVT}
 
 Por último en este capítulo dedicado a las tecnologías que forman parte de la presente tesis, se introduce el estándar para transformaciones especificado por la \gls{omg}, el lenguaje \gls{qvt}.
 
@@ -1513,6 +1561,7 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \appendixpage
 
 \chapter{QvtoTrace{\textunderscore}To{\textunderscore}Trace}
+\label{cap:QvtoTraceToTrace}
 
 A continuación la definición completa de la transformación \gls{qvt} \textsf{QvtoTrace\_To\_Trace} implementada para el prototipo desarrollado en la presente Tesis:
 
