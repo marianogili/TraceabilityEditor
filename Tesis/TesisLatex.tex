@@ -93,6 +93,13 @@ como \gls{atl} también están construidos utilizando OCL}
 	description={es un lenguaje gráfico para visualizar, especificar, construir y documentar un sistema de software. Es el lenguaje de modelado de sistemas de software más conocido y utilizado en la actualidad y es también el estándar oficial, respaldado por el \glssymbol{omg}}
 }
 
+\newglossaryentry{pde}{
+	name={PDE - Plug-in Development Environment},
+	text={Plug-in Development Environment (\textit{PDE})},
+	symbol={PDE},
+	description={es un ambiente de construcción de Plugins Eclipse confeccionado por un conjunto de herramientas para crear, desarrollar, probar, depurar, construir y desplegar plug-ins, fragmentos, características, sitios de actualización y otros productos Eclipse}
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -221,26 +228,6 @@ En la ingeniería de software encontramos dos usos o semánticas principales que
 
 
 Las relaciones de \textit{traceability} pueden ser definidas de forma automática, por ejemplo producto de una transformación de modelos, o de forma manual como el caso de una relación de implementación entre un requerimiento y un componente de software.
-
-
-%\subsection{Uso de traceability}
-%Según \cite{DSIS}, de acuerdo a las siguientes fases del desarrollo presenta ejemplos de cómo ayuda el uso de la información de \textit{traceability} en cada una:
-%
-%\begin{itemize}
-%
-%\item \textbf{\textit{Planeamiento}}: Un ejemplo son las decisiones sobre el desarrollo del sistema que serán utilizadas como fundamento en las fases siguientes. Una decisión o acuerdo estarán relacionadas con su origen, por ejemplo, una reunión específica o una solicitud de un interesado.
-%
-%\item \textbf{\textit{Diseño}}: Un arquitecto puede relacionar una especificación de un componente de software funcional con un requerimiento, denotando la dependencia que existe, mediante una relación de \textsf{implementa} o \textsf{satisface}.
-%
-%\item \textbf{\textit{Implementación}}: con las transformaciones de modelos se capturan las relaciones entre los artefactos origen y destinos.
-%
-%\item \textbf{\textit{Prueba/despliegue}}: La información de \textit{traceability} se puede usar para chequear que todos los requerimientos fueron \textsf{satisfechos} por uno o más artefactos en el sistema, un análisis de cobertura de requerimientos.
-%
-%\item \textbf{\textit{Mantenimiento}}: Un ingeniero puede usar la información de \textit{traceability} para identificar errores en el caso de que un componente de software falla o no funciona de acuerdo a su especificación.
-%
-%\item \textbf{\textit{Actualización/cambio}}: Si es necesaria una nueva funcionalidad/característica o un cambio, un análisis de impactos será excelente gracias a la información de \textit{traceability}.
-%
-%\end{itemize}
 
 Entre varios beneficios de \textit{traceability} que enumeraremos mejor más adelante, podemos encontrar que ayuda a identificar las relaciones y dependencias que existen entre los artefactos de software. También \textit{traceability} es crucial entre los requerimientos y su representación en los modelos para asegurar que el conjunto relevante de requerimientos fueron debidamente implementados en el código. Pero no solo \textit{traceability} asegura la identificación de objetos y elementos relacionados, también puede facilitar el análisis de impactos de cambios durante el desarrollo de software.
 
@@ -945,7 +932,7 @@ El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta
 
 
 
-\subsubsection{Transformación QvtoTrace{\_}To{\_}Trace}
+\subsection{Transformación QvtoTrace{\_}To{\_}Trace}
 
 Como ya se mencionó, esta tranformación toma como entrada un modelo de \textit{tracelinks} definido por el meta-modelo de la imagen \ref{fig:QVTTraceModel} y retorna un modelo basado en el esquema propuesto de \textit{traceability} (\ref{fig:EsquenaPropuesto}) llamado \textsf{\textit{TraceEditor}} como la herramienta que lo usa y que su definición se puede ver en la imagen \ref{fig:TraceEditorMetaModel}.
 
@@ -962,7 +949,7 @@ La transformación se desarrolló con el lenguaje \gls{qvt} (en la sección \ref
 
 
 
-\subsubsection{Editor gráfico y tabular TraceEditor}
+\subsection{Editor gráfico y tabular TraceEditor}
 
 Este editor gráfico y tabular se ejecuta como un plugin de Eclipse, permite presentarnos todo el mapa de \textit{tracelinks} que se genera producto de una transformación que se quiera analizar, así como realizar algunas modificaciones sobre dicho modelo. Nos permitirá identificar, por un lado, el listado de los artefactos orígenes de una transformación, y por otro, el de los destinos o resultados. El conjunto de \textit{tracelinks} agrupados por la transformación que los generó, y los artefactos orígenes y destinos que enlaza cada uno. De un artefacto y de un \textit{tracelink} muestra el nombre que lo identifica y su tipo, y de una transformación sólo el nombre.
 
@@ -971,7 +958,7 @@ Está conformado por los siguientes componentes:
 \begin{itemize}
 \item Un editor gráfico
 \item Un editor tabular
-\item Una perspectiva 
+\item La definición de una perspectiva 
 \end{itemize}
 
 
@@ -983,7 +970,7 @@ Está conformado por los siguientes componentes:
 \end{figure}
 
 
-\paragraph{El editor gráfico}
+\subsubsection{El editor gráfico}
 
 Este editor que se puede observar en detalle en la imagen \ref{fig:TraceEditorGrafico}, se compone de un plano principal y una paleta de herramientas. El plano se presenta dividido en 3 zonas en las que se distribuyen los distintos componentes del modelo de \textit{tracelinks} generado:
 
@@ -992,6 +979,9 @@ Este editor que se puede observar en detalle en la imagen \ref{fig:TraceEditorGr
 \item \textsf{\textit{Transformaciones y trazas}}
 \item \textsf{\textit{Artefactos destinos}} 
 \end{itemize} 
+
+Las transformaciones se muestran como cajas que contienen los \textit{tracelinks} que se generaron producto de ellas, y las trazas muestran sus relaciones con artefactos orígenes con una línea continua y con los artefactos destinos con una rayada.
+
 
 
 \begin{figure}[hbtp]
@@ -1002,8 +992,21 @@ Este editor que se puede observar en detalle en la imagen \ref{fig:TraceEditorGr
 \end{figure}
 
 
-\paragraph{El editor tabular}
+El editor permite:
 
+\begin{itemize}
+\item crear nuevas trazas personalizadas
+\item modificar los identificadores de las transformaciones
+\item modificar los identificadores de los \textit{tracelinks}
+\item definir nuevas y modificar las relaciones entre los \textit{tracelinks} y los artefactos
+\item eliminar u ocultar cualquier objeto (transformación, artefacto, relación) con el fin de mejorar un análisis, dado que por lo general los modelos generados por la ejecución de una transformación son muy extensos
+\end{itemize}
+
+
+El editor fue implementado mediante el framework \gls{gmf}, el cual ayuda en la construcción de editores gráficos para un modelo de datos definido. Una descripción con más detalle de esta tecnología se encuentra en la sección \ref{sec:GMF}.
+
+
+\subsubsection{El editor tabular}
 
 \begin{figure}[hbtp]
 \centering
@@ -1012,8 +1015,33 @@ Este editor que se puede observar en detalle en la imagen \ref{fig:TraceEditorGr
 \label{fig:TraceEditorTabular}
 \end{figure}
 
+Este editor muestra el mismo modelo de \textit{tracelinks} que se presenta en el editor gráfico que explicamos antes, pero en una lista ordenada tabulado de acuerdo a los siguiente campos:
 
-\paragraph{La perspectiva}
+\begin{itemize}
+\item \textsf{\textit{Transformación}}
+\item \textsf{\textit{Enlace/Traza}}
+\item \textsf{\textit{Tipo de enlace}}
+\item \textsf{\textit{Artefacto origen}}
+\item \textsf{\textit{Tipo del origen}}
+\item \textsf{\textit{Artefacto destino}}
+\item \textsf{\textit{Tipo del destino}}
+\end{itemize}
+
+
+Una visualización del editor se puede observar en la imagen \ref{fig:TraceEditorTabular}. Con el editor tabular se pueden realizar las siguientes acciones:
+
+\begin{itemize}
+\item renombrar una transformación
+\item renombrar un \textit{tracelink}
+\item renombrar un artefacto
+\item definir o cambiar el tipo de un \textit{tracelink}
+\item definir o cambiar el tipo de un artefacto
+\end{itemize}
+
+Este editor en conjunto con la perspectiva que se presenta más adelante, fueron desarrollados con las herramientas provistas por el \gls{pde} de Eclipse.
+
+
+\subsubsection{La perspectiva}
 
 
 
@@ -1195,6 +1223,7 @@ Más información sobre el framework \gls{emf} se puede obtener en \cite{EMF} y 
 
 
 \section{Graphical Modeling Framework}
+\label{sec:GMF}
 
 En la presente sección analizamos el framework \gls{gmf}, el mismo fue usado para el desarrollo de la parte gráfica del editor de tracelinks del prototipo.
 
@@ -1602,290 +1631,6 @@ A continuación la definición completa de la transformación \gls{qvt} \textsf{
 basicstyle=\footnotesize]{QvtoTrace_To_Trace.qvto}
 \end{framed}
 
-%\begin{lstlisting}[language=QVT]
-%/*
-% * La definición de la presente transformación QvtoTrace_To_Trace 
-% * forma parte del prototipo desarrollado para la tesis del alumno 
-% * Mariano Gabriel Gili. 
-% *
-% * Esta transformación toma como entrada las trazas generadas por
-% * la tecnología QVT que conforman el meta-modelo Trace, y genera 
-% * un modelo para el prototipo de edición de trazas que conforma 
-% * el meta-modelo propuesto TraceEditor.
-% */
-%
-%/*
-% * Definición de los meta-modelos.
-% */
-%modeltype TraceEditor uses 'http://traceeditor/1.0';
-%modeltype QvtoTrace uses 'http:///www.eclipse.org/m2m/qvt/operational/trace.ecore';
-%		
-%/*
-% * Declaración de la transformación.
-% */
-%transformation QvtoTrace_To_Trace(in qvto : QvtoTrace, out TraceEditor);
-%
-%\end{lstlisting}
-%
-%/*
-% * Punto de entrada donde se inicia la transformación por los objectos 
-% * raiz de tipo Trace del modelo de entrada mediante la invocación del 
-% * mapeo trace2TraceEditor().
-% */
-%main() {
-%	qvto.rootObjects()[QvtoTrace::Trace]->map trace2TraceEditor();
-%}
-%
-%////////////////////////////////////////////////////////////////////////
-%/////////////////////////////// Mappings ///////////////////////////////
-%////////////////////////////////////////////////////////////////////////
-%
-%/*
-% * trace2TraceEditor() toma una instancia de Trace y retorna una de 
-% * TraceEditor.
-% * Genera la configuración (_configuracion) mediante el mapeo 
-% * trace2Configuration() y el dashboard mediante trace2Dashboard().
-% */
-%mapping QvtoTrace::Trace::trace2TraceEditor() : TraceEditor::TraceEditor {
-% 	_configuration := self.map trace2Configuration();
-% 	dashboard :=  self.map trace2Dashboard();
-%}
-%
-%/*
-% * trace2Configuration() genera una configuración del editor TraceEditor
-% * representada por el modelo de TraceEditor::Configuration en la que se
-% * definen los tipos de las trazas y se obtienen los tipos de artefactos
-% * que se encuentran en las trazas del modelo QvtoTrace::Trace.
-% */
-%mapping QvtoTrace::Trace::trace2Configuration() : TraceEditor::Configuration {
-%	linkTypes := self.linkTypes();
-%	typeArtefacts := self.typesByName()->collect(n | 
-%		object TraceEditor::TypeArtefact {
-%			name := n;
-%			//TODO: solucionar prototipo de editores para que muestren la 
-%			// descripción si la tiene e inicializarla con alguna información.
-%			//description := "";
-%	}); 
-%}
-%
-%/*
-% * trace2Dashboard() de las trazas del modelo de entrada QvtoTrace::Trace
-% * obtiene el listado de transformaciones (transformations) y los 
-% * listados de los artefactos origen y destino (sourceArtefacts y 
-% * targetArtefacts respectivamente) mediante la inspección de las 
-% * instancias TraceRecord de dicho modelo. Las trazas que representan
-% * los enlaces explícitos (tracelinks) se inicializan como un conjunto 
-% * vacío.
-% */
-%mapping QvtoTrace::Trace::trace2Dashboard() : TraceEditor::Dashboard {
-%	transformations := self.transformationsByName()->collect(t | 
-%		object TraceEditor::Transformation {
-%			name := t;
-%			traceLinks := self.traceRecords[mappingOperation.name=t]->
-%				map traceRecord2TraceLink();
-%	});
-%	// dado que las trazas de QVT son todas producto de transformaciones,
-%	// la colección traceLinks se inicializa vacía.
-%	traceLinks := OrderedSet{};
-%	sourceArtefacts := self.traceRecords._context._context[name="self"].map 
-%		varParameterValue2Artefact("Source");
-%	targetArtefacts := self.traceRecords._result._result.map 
-%		varParameterValue2Artefact("Target");
-%}
-%
-%/*
-% * traceRecord2TraceLink() convierte una traza TraceRecord en su 
-% * correspondiente de tipo TraceLink, el nombre (name) es la representación
-% * en string de la traza origen, el tipo de la traza es 'implícita',
-% * la transformación (_transformation) es del resultado el artefacto 
-% * que lo contiene, los artefactos origen y destino (sources y targets)
-% *  son el contexto (_context) y los resultados (result) respectivamente.
-% */
-%mapping QvtoTrace::TraceRecord::traceRecord2TraceLink() : TraceEditor::TraceLink {
-%	name := self.repr().toTraceLinkName();
-%	type := self.varParameterValueLinkType('Implicit');
-%	_transformation := result.container().oclAsType(TraceEditor::Transformation);
-%	sources := self._context._context[name="self"].map 
-%		varParameterValue2Artefact("Source");
-%	targets := self._result._result->map varParameterValue2Artefact("Target")
-%		->flatten(); 
-%}
-%
-%/*
-% * varParameterValue2Artefact() transforma los parámetros VarParameterValue
-% * de las trazas del modelo de entrada en artefactos de tipo Artefact,
-% * deriva la transformación en varParameterValueSimple2Artefact() y 
-% * varParameterValueCollection2Artefact() dependiendo de si el parámetro
-% * representa un valor simple o una colección respectivamente. 
-% */
-%mapping QvtoTrace::VarParameterValue::varParameterValue2Artefact(in prefix : String) 
-%	: OrderedSet(TraceEditor::Artefact) 
-%	disjuncts QvtoTrace::VarParameterValue::varParameterValueSimple2Artefact, 
-%		QvtoTrace::VarParameterValue::varParameterValueCollection2Artefact {}
-%
-%mapping QvtoTrace::VarParameterValue::varParameterValueSimple2Artefact(in prefix : String) 
-%	: OrderedSet(TraceEditor::Artefact) 
-%	when { self.value.collectionType = null } {
-%		init {
-%			result := object TraceEditor::Artefact {
-%				name := self.value.repr().toArtefactName(prefix);
-%				type := self.varParameterValueTypeArtefact(self.type.prefix(prefix));
-%			}->asOrderedSet();
-%		}
-%}
-%
-%mapping QvtoTrace::VarParameterValue::varParameterValueCollection2Artefact(in prefix : String) 
-%	: OrderedSet(TraceEditor::Artefact) 
-%	when { self.value.collectionType <> null } {
-%		init {
-%			var typeName := self.type.substringAfter("(").substringBefore(")");
-%			result := self.value.collection->collect(e | 
-%				object TraceEditor::Artefact {
-%					name := e.repr().toArtefactName(prefix);
-%					type := self.varParameterValueTypeArtefact(typeName.prefix(prefix));
-%			})->asOrderedSet();
-%		}
-%}
-%
-%////////////////////////////////////////////////////////////////////////
-%////////////////////////////// Constructors ////////////////////////////
-%////////////////////////////////////////////////////////////////////////
-%
-%constructor TraceEditor::LinkType::LinkType (aName : String, aParent : TraceEditor::LinkType) {
-%	name := aName;
-%	parent := aParent;
-%}
-%
-%////////////////////////////////////////////////////////////////////////
-%/////////////////////////////// Helpers ////////////////////////////////
-%////////////////////////////////////////////////////////////////////////
-%
-%/*
-% * linkTypes() crea un conjunto de tipos de enlaces por defecto.
-% */
-%helper QvtoTrace::Trace::linkTypes() : OrderedSet(TraceEditor::LinkType) {
-%	
-%	var Explicit := new TraceEditor::LinkType ('Explicit', null);
-%	var Implicit := new TraceEditor::LinkType ('Implicit', null);
-%	
-%	var ModelModel := new TraceEditor::LinkType ('Model-Model', Explicit);
-%	var ModelArtefact := new TraceEditor::LinkType ('Model-Artefact', Explicit);
-%	var Query := new TraceEditor::LinkType ('Query', Implicit);
-%	var M2M := new TraceEditor::LinkType ('M2M', Implicit);
-%	var M2T := new TraceEditor::LinkType ('M2T', Implicit);
-%	var Composition := new TraceEditor::LinkType ('Composition', Implicit);
-%	var Update := new TraceEditor::LinkType ('Update', Implicit);
-%	var Creation := new TraceEditor::LinkType ('Creation', Implicit);
-%	var Delete := new TraceEditor::LinkType ('Delete', Implicit);
-%	
-%	var Static := new TraceEditor::LinkType ('Static', ModelModel);
-%	var Dinamic := new TraceEditor::LinkType ('Dinamic', ModelModel);
-%	var Satisfies := new TraceEditor::LinkType ('Satisfies', ModelArtefact);
-%	var AllocatedTo := new TraceEditor::LinkType ('Allocated-To', ModelArtefact);
-%	var Performs := new TraceEditor::LinkType ('Performs', ModelArtefact);
-%	var Supports := new TraceEditor::LinkType ('Supports', ModelArtefact);
-%	var Explains := new TraceEditor::LinkType ('Explains', ModelArtefact);
-%	
-%	var Dependency := new TraceEditor::LinkType ('Dependency', Static);
-%	var ConsistentWith := new TraceEditor::LinkType ('ConsistentWith', Static);
-%	var Calls := new TraceEditor::LinkType ('Calls', Dinamic);
-%	var Generates := new TraceEditor::LinkType ('Generates', Dinamic);
-%	var Notifies := new TraceEditor::LinkType ('Notifies', Dinamic);
-%	
-%	return OrderedSet {
-%		Implicit, Explicit, ModelModel, ModelArtefact, Query, M2M, M2T, 
-%		Composition, Update, Creation, Delete, Static, Dinamic, Satisfies, 
-%		AllocatedTo, Performs, Supports, Explains, Dependency, 
-%		ConsistentWith, Calls, Generates, Notifies
-%	};
-%}
-%
-%/*
-% * prefix() agrega el string parámetro pre como prefijo.
-% */
-%helper String::prefix(in pre : String) : String {
-%	return pre + "_" + self;
-%}
-%
-%/*
-% * toArtefactName() define el formato del nombre de los artefactos 
-% * con el string parámetro pre como prefijo y luego tomando sólo 
-% * la parte del número identificador de lo retornado por la función repr().
-% */
-%helper String::toArtefactName(in pre : String) : String {
-%	var temp_name = self.substringAfter("org.eclipse.m2m.internal.qvt.oml.trace.impl.EValueImpl@")
-%		.substringBefore(" ("); 
-%	return pre + "_" + temp_name;
-%}
-%
-%/*
-% * toTraceLinkName() define el formato del nombre de las trazas tomando 
-% * sólo la parte del número identificador de lo retornado por la función 
-% * repr() y como prefijo "Trace_".
-% */
-%helper String::toTraceLinkName() : String {
-%	var temp_name = self.substringAfter("org.eclipse.m2m.internal.qvt.oml.trace.impl.TraceRecordImpl@");
-%	return "Trace_" + temp_name;
-%}
-%
-%////////////////////////////////////////////////////////////////////////
-%/////////////////////////////// Querys /////////////////////////////////
-%////////////////////////////////////////////////////////////////////////
-%
-%/*
-% * varParameterValueTypeArtefact() retorna del modelo ya convertido que 
-% * representa la configuración, el tipo del artefacto que conforma a
-% * TypeArtefact identificado por el parámetro typeName.
-% */
-%query QvtoTrace::VarParameterValue::varParameterValueTypeArtefact(in typeName : String) 
-%	: TraceEditor::TypeArtefact {
-%	return self.container().container().container().oclAsType(QvtoTrace::Trace)
-%		.resolveoneIn(
-%			QvtoTrace::Trace::trace2Configuration,
-%			TraceEditor::Configuration
-%	).typeArtefacts![name = typeName];
-%}
-%
-%/*
-% * varParameterValueLinkType() retorna del modelo ya convertido que 
-% * representa la configuración, el tipo de traza que conforma a
-% * LinkType identificado por el parámetro typeName.
-% */
-%query QvtoTrace::TraceRecord::varParameterValueLinkType(in typeName : String) 
-%	: TraceEditor::LinkType {
-%	return self.container().oclAsType(QvtoTrace::Trace)
-%		.resolveoneIn(
-%			QvtoTrace::Trace::trace2Configuration,
-%			TraceEditor::Configuration
-%	).linkTypes![name = typeName];
-%}
-%
-%/*
-% * typesByName() retorna el conjunto de nombres de los distintos tipos de  
-% * artefactos que se encuentran en el conjunto de trazas del modelo de 
-% * entrada Trace. Este conjunto es el tipo de los orígenes, obtenidos del
-% * contexto del modelo Trace, unión los tipos de los resultados, obtenidos
-% * de los resultados.
-% */
-%query QvtoTrace::Trace::typesByName() : OrderedSet(String) {
-%	return self.traceRecords._context._context[name="self"].type
-%		.prefix("Source")->asSet()->union(
-%			self.traceRecords._result._result[name="result" and value.collectionType = null]
-%				.type.prefix("Target")->asSet()->union(
-%			self.traceRecords._result._result[name="result" and value.collectionType <> null]
-%				.type.substringAfter("(").substringBefore(")").prefix("Target")->asSet())
-%	)->asOrderedSet();
-%}
-%
-%/*
-% * transformationsByName() retorna el conjunto de nombres de las 
-% * transformaciones del conjunto de trazas que se encuentran en el modelo
-% * de entrada Trace.
-% */
-%query QvtoTrace::Trace::transformationsByName() : OrderedSet(String) {
-%	return self.traceRecords.mappingOperation.name->asOrderedSet();
-%}
-%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
