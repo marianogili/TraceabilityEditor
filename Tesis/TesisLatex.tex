@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{babel}
 \usepackage{amsmath}
-\usepackage[colorlinks]{hyperref}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 \usepackage{graphicx}
 \usepackage[acronym,toc,xindy]{glossaries}
 \usepackage{enumitem}
@@ -141,8 +141,14 @@ como \gls{atl} también están construidos utilizando OCL}
 %%% Índices %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \tableofcontents
-\listoffigures
+\addtocontents{toc}{~\hfill\textbf{Página}\par}
+\clearpage
 
+\renewcommand\listfigurename{Índice de imágenes}
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+\addtocontents{lof}{~\hfill\textbf{Página}\par}
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Agradecimientos %%%
@@ -1674,6 +1680,8 @@ basicstyle=\footnotesize]{QvtoTrace_To_Trace.qvto}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Bibliografía %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\addcontentsline{toc}{chapter}{Bibliografía}
 \bibliographystyle{acm}
 \begin{thebibliography}{99}
 
