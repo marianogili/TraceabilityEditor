@@ -1007,6 +1007,7 @@ El editor fue implementado mediante el framework \gls{gmf}, el cual ayuda en la 
 
 
 \subsubsection{El editor tabular}
+\label{subsubsec:EditorTabular}
 
 \begin{figure}[hbtp]
 \centering
@@ -1043,6 +1044,34 @@ Este editor en conjunto con la perspectiva que se presenta más adelante, fueron
 
 \subsubsection{La perspectiva}
 
+Como se describe en la subsección de la plataforma Eclipse \ref{subsec:PlatEclipse}, una perspectiva es una agrupación de vistas y editores que en su conjunto ayudan en una actividad completa. En este caso, la perspectiva propuesta para nuestro editor \textsf{TraceEditor} fue ofrecer una vista en la que se presentan los dos editores (el gráfico y el tabular) de forma simultánea dada la complejidad y el volumen de información que puede llegar a presentar un modelo de \textit{tracelinks} cualquiera.
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=.28]{./img/TraceEditorPerspectiva}
+\caption{Perspectiva del editor}
+\label{fig:TraceEditorPerspectiva}
+\end{figure}
+
+
+Para una explicación con más detalle, se presenta en la imagen \ref{fig:TraceEditorPerspectiva} el Workbench Eclipse dividido en cuatro zonas que definen la perspectiva desarrollada:
+
+
+\paragraph{Zona 1}
+En este sector se encuentra el \textsf{Project Explorer} o Explorador de Proyectos, que es una vista de Eclipse que presenta una visual jerárquica de los recursos (proyectos, carpetas y archivos) del Workspace cargados en el Workbench.
+
+
+\paragraph{Zona 2}
+Aquí se presenta la vista \textsf{Outline} de Eclipse, la cual se encarga de mostrar un resumen de la estructura de los elementos del editor activo/seleccionado. En el caso que el activo sea el editor gráfico, esta vista mostrará el gráfico completo del modelo de \textit{tracelinks} que se esté editando y permitirá navegarlo con un recuadro de selección que ofrece.
+
+
+\paragraph{Zona 3}
+Esta zona es el área de edición o editores, es el espacio del Workbench Eclipse asignada para que se muestren todos los editores Eclipse de cualquier tipo. Nuestro editor gráfico se abrirá aquí cuando seleccionemos en el \textsf{Project Explorer} un recurso de tipo diagrama \textsf{TraceEditor}.
+
+
+\paragraph{Zona 4}
+En esta área se presentan, en primer plano el editor tabular titulado \textsf{Lista de Trazas} ya presentado antes en esta misma subsección \ref{subsubsec:EditorTabular}. Y en segundo plano, la vista de propiedades de Eclipse (\textsf{Properties}) que nos permite ver todas las propiedades de cualquier elemento seleccionado en el editor que se encuentre activo.
 
 
 \subsection{Traceability en ATL}
