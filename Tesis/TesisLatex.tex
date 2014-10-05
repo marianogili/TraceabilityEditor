@@ -3,12 +3,15 @@
 \usepackage{babel,amsmath,graphicx,enumitem,amsfonts,appendix,listingsutf8,xcolor,framed,parskip,fancyhdr}
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 \usepackage[acronym,toc,xindy]{glossaries}
+\usepackage[undotted]{minitoc}
 
 \newcommand{\grad}{\hspace{-2mm}$\phantom{a}^{\circ}$}
 
 \renewcommand{\appendixname}{Anexos}
 \renewcommand{\appendixtocname}{Anexos}
 \renewcommand{\appendixpagename}{Anexos}
+
+%\renewcommand{\mtctitle}{}
 
 % Sangría
 \setlength{\parindent}{1.5em}
@@ -27,13 +30,13 @@
 
 % primera pagina de un capitulo
 \fancypagestyle{plain}{
-\fancyhead[L]{}
+\fancyhead[L]{Tesina de grado: Mecanismos de rastreo en MDD}
 \fancyhead[C]{}
-\fancyhead[R]{}
+\fancyhead[R]{Mariano Gabriel Gili}
 \fancyfoot[L]{}
 \fancyfoot[C]{}
 \fancyfoot[R]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.5pt}
 }
 
@@ -161,8 +164,10 @@ como \gls{atl} también están construidos utilizando OCL}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Índices %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\dominitoc 
 \tableofcontents
 \addtocontents{toc}{~\hfill\textbf{Página}\par}
+\mtcaddchapter
 \clearpage
 
 \renewcommand\listfigurename{Índice de imágenes}
@@ -221,7 +226,6 @@ Asimismo, diseñar e implementar una herramienta que pueda ser integrada a otra 
 
 
 \mainmatter
-
 % encabezados
 \lhead[]{CAPÍTULO \thechapter. \leftmark}
 
@@ -230,6 +234,13 @@ Asimismo, diseñar e implementar una herramienta que pueda ser integrada a otra 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Traceability}
 \markboth{Traceability}{}
+
+Hola
+
+\bigskip
+
+\minitoc 
+
 
 \pagebreak
 
@@ -319,14 +330,20 @@ Más adelante en el capítulo \ref{cap:ProblemasDesafios} se presentarán con m�
 
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Teoría de traceability %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Teoría de traceability}
 \markboth{Teoría de traceability}{}
 
+
 En el presente capítulo se aborda un conjunto de temas importantes de la teoría de \textit{traceability}, en la primera sección se explica el concepto de \textit{\textbf{nivel de granularidad}} de un \textit{tracelink}. Las siguientes dos secciones se refieren a la \textit{\textbf{semántica de traceability}}, introduciendo primero las dos distintas estrategias de \textit{\textbf{meta-modelos de traceability}} que existen, y luego, la compleja tarea de la definición de \textit{\textbf{tipos de tracelinks}}. En la sección siguiente, se presentan dos formas distintas de \textit{\textbf{generación de tracelinks}}, y en la última, las dos principales \textit{\textbf{estrategias de almacenamiento}}  de la información de \textit{traceability} que se pueden implementar. Estos temas han sido muy importantes y relevantes a la hora de definir el \textit{esquema de traceability} propuesto que se detalla en el capítulo \ref{cap:Propuesta}.
+
+
+\bigskip
+
+
+\minitoc 
 
 
 \pagebreak
@@ -524,6 +541,12 @@ Un requisito previo para el \textit{almacenamiento externo de los tracelinks}, e
 \markboth{Problemas y Desafíos}{}
 
 En este capítulo vamos a describir, por un lado, los principales problemas que se presentan en el ámbito de \textit{traceability} (organizados por tema según el criterio presentado en \cite{Excellence}), y por otro, los grandes desafíos que surgen a partir de ellos. Desafíos que aún hoy, se encuentran abiertos a la investigación y al debate.
+
+
+\bigskip
+
+
+\minitoc 
 
 
 \pagebreak
@@ -852,6 +875,12 @@ traceability} propuesto en la presente tesis. Luego, haremos lo mismo con el pro
 La herramienta, desarrollada como un \textit{\textbf{plug-in}} del \glssymbol{ide} Eclipse, asiste en la generación de \textit{tracelinks} sobre transformaciones de modelos existentes, y luego, presenta un mapa en el que se muestran cómo se relacionan las transformaciones, los \textit{links} y los artefactos orígenes y resultados de la ejecución de las transformaciones.
 
 
+\bigskip
+
+
+\minitoc 
+
+
 \pagebreak
 
 
@@ -1134,6 +1163,12 @@ Otras propuestas hacen uso del mecanismo de \textit{traceability} implícito de 
 \markboth{Descripción de tecnologías}{}
 
 En el presente capítulo se realiza una breve introducción sobre cada una de las tecnologías que fueron utilizadas para la implementación del prototipo que hace uso del esquema propuesto de \textit{traceability}.
+
+
+\bigskip
+
+
+\minitoc 
 
 
 \pagebreak
@@ -1467,9 +1502,15 @@ Para obtener más información introductoria consultar \cite{DSDPM}. Para más d
 %%% Trabajos relacionados %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Trabajos relacionados}
-\markboth{Trabajos relacionados}{}
+\markboth{Trabajos relacionados}{} 
 
 En este capítulo se realiza una breve introducción de un conjunto de trabajos que tienen alguna relación con el tema en cuestión de la presente tesis, encontrados a lo largo del aprendizaje y la investigación.
+
+
+\bigskip
+
+
+\minitoc 
 
 
 \pagebreak
