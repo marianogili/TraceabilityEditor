@@ -870,9 +870,8 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 \label{cap:Propuesta}
 \markboth{Manos a la obra}{}
 
-En este capítulo introducimos, desarrollamos y fundamentamos el \textit{esquema de
-traceability} propuesto en la presente tesis. Luego, haremos lo mismo con el prototipo de la herramienta desarrollada que acompaña y ejemplifica las ideas del esquema presentado. 
-La herramienta, desarrollada como un \textit{\textbf{plug-in}} del \glssymbol{ide} Eclipse, asiste en la generación de \textit{tracelinks} sobre transformaciones de modelos existentes, y luego, presenta un mapa en el que se muestran cómo se relacionan las transformaciones, los \textit{links} y los artefactos orígenes y resultados de la ejecución de las transformaciones.
+En este capítulo se introduce, desarrolla y fundamenta el \textit{esquema de
+traceability} propuesto en este trabajo de tesis. Del mismo modo se expone el prototipo de la herramienta construida que acompaña y ejemplifica las ideas del esquema presentado. Dicha herramienta, desarrollada como un \textit{\textbf{plug-in}} del \glssymbol{ide} Eclipse, asiste en la generación de \textit{tracelinks} sobre transformaciones de modelos existentes, y luego, presenta un mapa en el que se muestra la manera en que se relacionan las transformaciones, los \textit{links} y los artefactos orígenes y resultados de la ejecución de las transformaciones.
 
 
 \bigskip
@@ -890,7 +889,7 @@ La herramienta, desarrollada como un \textit{\textbf{plug-in}} del \glssymbol{id
 \subsection{Introducción}
 \label{sec:EsquemaPropIntro}
 
-La idea fundamental es lograr un meta-modelo bien simple en el que se capture solamente los conceptos más relevantes de \textit{traceability} y se almacene la información mínima necesaria. Gracias a todo lo anterior, y solo así, logramos obtener el concepto deseable de independencia del modelo con respecto al dominio en el que se quiera utilizar la funcionalidad de \textit{traceability}. Concepto necesario para poder llegar a definir un \textit{esquema de propósito general} (\ref{subsec:MetaModeloPropositoGeneral}) que apunte principalmente a dar solución a los siguientes desafíos:
+La idea fundamental es lograr un meta-modelo bien simple en el que se capturen solamente los conceptos más relevantes de \textit{traceability} y se almacene la información mínima necesaria. Gracias a todo lo anterior, y solo así, logramos obtener el concepto deseable de independencia del modelo con respecto al dominio en el que se quiera utilizar la funcionalidad de \textit{traceability}. Concepto necesario para poder llegar a definir un \textit{esquema de propósito general} (\ref{subsec:MetaModeloPropositoGeneral}) que apunte principalmente a dar solución a los siguientes desafíos:
 
 \begin{itemize}
 
@@ -909,7 +908,7 @@ La idea fundamental es lograr un meta-modelo bien simple en el que se capture so
 \section{El esquema de traceability propuesto}
 \label{sec:EsquemaTraceability}
 
-Con el fin de cumplir con las consignas fundamentales listadas antes en \ref{sec:EsquemaPropIntro}, se definió una propuesta de \textit{esquema de traceability} que se encuentra representado en el diagrama de clases del dibujo \ref{fig:EsquenaPropuesto}.
+Con el fin de cumplir con las consignas fundamentales listadas en \ref{sec:EsquemaPropIntro}, se definió una propuesta de \textit{esquema de traceability} que se encuentra representado en el diagrama de clases del dibujo \ref{fig:EsquenaPropuesto}.
 
 Como se puede observar, el meta-modelo se puede dividir lógicamente en dos partes, la principal en la que se encuentran las abstracciones fundamentales de los elementos mínimos necesarios en cualquier herramienta que desee ofrecer \textit{traceability}, y una secundaria en la que se engloba la configuración del esquema. Esta configuración permite ofrecer un meta-modelo flexible a cualquier escenario/dominio en el que se desee hacer uso de \textit{traceability}.
 
@@ -933,32 +932,32 @@ Por último entre los elementos fundamentales, tenemos la clase \textsf{\textit{
 
 \subsubsection{Configuración del esquema}
 
-Esta parte refleja la configuración necesaria para lograr un esquema adaptable a la infinidad de escenarios en los que puede aplicarse el mismo. Dicha configuración consiste en la definición de dos jerarquías, una que define la semántica de los artefactos que se van a \textit{\textbf{tracear}}, y la otra para determinar la semántica de las tracelinks que pueden llegar a crearse. Ambas jerarquías están determinadas mediante las clases \textsf{\textit{LinkType}} y \textsf{\textit{TypeArtefact}} respectivamente, éstas comparten la siguiente estructura: un nombre (\textsf{\textit{name}}) que las identifica, un texto que posibilita describirlas (\textsf{\textit{description}}) y una relación (\textsf{\textit{parent}}) que asocia una clasificación con su padre, gracias a dicha relación se logra la estructura jerárquica.
+Esta parte refleja la configuración necesaria para lograr un esquema adaptable a la infinidad de escenarios en los que puede aplicarse el mismo. Dicha configuración consiste en la definición de dos jerarquías, una en la que se define la semántica de los artefactos que se van a \textit{\textbf{tracear}}, y la otra para determinar la semántica de las tracelinks que pueden llegar a crearse. Ambas jerarquías están determinadas mediante las clases \textsf{\textit{LinkType}} y \textsf{\textit{TypeArtefact}} respectivamente, éstas comparten la siguiente estructura: un nombre (\textsf{\textit{name}}) que las identifica, un texto que posibilita describirlas (\textsf{\textit{description}}) y una relación (\textsf{\textit{parent}}) que asocia una clasificación con su padre, gracias a dicha relación se logra la estructura jerárquica.
 
 Un ejemplo de una configuración de tipos de tracelinks puede ser la jerarquía propuesta en la sección \ref{sec:ClasificacionTraceability}, que se puede ver siguiendo los diagramas \ref{fig:ClasifInicial}, \ref{fig:LinksImplicitos} y \ref{fig:LinksExplicitos}.
 
 
 \subsection{Lo que no ofrece}
 
-A continuación se lista un conjunto de aspectos y/o funcionalidades que el esquema propuesto actual no ofrece o tiene en cuenta:
+A continuación se lista un conjunto de aspectos y/o funcionalidades que el esquema propuesto actual no ofrece o no tiene en cuenta:
 
 \begin{itemize}
 
 \item \textbf{\textit{funcionalidad de versionado}}: que permita navegar por los \textit{tracelinks} y refleje las modificaciones en el tiempo que se fueron realizando sobre los artefactos relacionados, a lo largo de la ejecución de todas las tareas que forman parte de la ingeniería de un software.
 
-\item \textbf{\textit{métodos de detección o información de errores}}: que determine o informe cuándo un \textit{tracelink} es inválido.
+\item \textbf{\textit{métodos de detección o información de errores}}: que determinen o informen cuándo un \textit{tracelink} es inválido.
 
 \end{itemize}
 
 
 \section{El prototipo}
 
-En la presente sección se explica y presenta el prototipo desarrollado que materializa la idea detrás del \textit{esquema de traceability} propuesto en la sección anterior \ref{sec:EsquemaTraceability}.
+En la presente sección se explica y presenta el prototipo desarrollado que materializa la idea detrás del \textit{esquema de traceability} propuesto en la sección \ref{sec:EsquemaTraceability}.
 
 
 \subsection{La herramienta}
 
-La idea es lograr una herramienta que dada la definición de una transformación acompañada con el conjunto de modelos de entrada/origen y de resultado/destino, retorne y muestre de una forma amigable el mapa de \textit{tracelinks} que se generaron implícitamente productos de su ejecución. También, que permita la edición de dicho mapa dando la posibilidad de:
+La idea es lograr una herramienta que, dada la definición de una transformación acompañada con el conjunto de modelos de entrada/origen y de resultado/destino, retorne y muestre de una forma amigable el mapa de \textit{tracelinks} que se generaron implícitamente producto de su ejecución. También, que permita la edición de dicho mapa posibilitando:
 \begin{itemize}
 \item crear, editar y eliminar \textit{tracelinks}
 \item editar artefactos de los modelos origen y destino
@@ -968,7 +967,7 @@ La idea es lograr una herramienta que dada la definición de una transformación
 
 \subsubsection{Uso}
 
-A continuación se detalla cómo es la secuencia del uso de la herramienta para lograr lo explicado antes, la imagen \ref{fig:SecuenciaPrototipo} muestra el resumen de la idea.
+A continuación se detalla cómo es la secuencia del uso de la herramienta para lograr lo explicado anteriormente, la imagen \ref{fig:SecuenciaPrototipo} muestra el resumen de la idea.
 
 
 \begin{figure}[hbtp]
@@ -979,9 +978,9 @@ A continuación se detalla cómo es la secuencia del uso de la herramienta para 
 \end{figure}
 
 
-Para lograr el mapa de \textit{tracelinks}, dada una definición de una transformación cualquiera \gls{qvt}, primero se debe ejecutar dicha transformación con su modelo origen con el fin de obtener el modelo resultado. Conjunto con el resultado de la transformación, \gls{qvt} genera implícitamente información de \textit{tracelinks} en un modelo definido por el meta-modelo que se muestra en la imagen \ref{fig:QVTTraceModel}. Luego, se transforma el modelo de \textit{tracelinks} de \gls{qvt} al modelo definido por la herramienta (visto en la imagen \ref{fig:EsquenaPropuesto}), para ésto como parte del prototipo se incluye una definición de una transformación que se llama \textsf{\textit{QvtoTrace\_To\_Trace}}.
+Para lograr el mapa de \textit{tracelinks}, dada una definición de una transformación cualquiera \gls{qvt}, primero se debe ejecutar dicha transformación con su modelo origen, con el fin de obtener el modelo resultado. En conjunto con el resultado de la transformación, \gls{qvt} genera implícitamente información de \textit{tracelinks} en un modelo definido por el meta-modelo que se muestra en la imagen \ref{fig:QVTTraceModel}. Luego, se transforma el modelo de \textit{tracelinks} de \gls{qvt} al modelo definido por la herramienta (visto en la imagen \ref{fig:EsquenaPropuesto}), para lograr ésto, el prototipo incluye una definición de una transformación llamada \textsf{\textit{QvtoTrace\_To\_Trace}}.
 
-Y listo, ya podemos acceder al mapa de \textit{tracelinks} de la transformación que queríamos mediante la herramienta \textsf{\textit{TraceEditor}}, navegar sus relaciones y realizar las ediciones que se deseen.
+De esta manera, ya podemos acceder al mapa de \textit{tracelinks} de la transformación que queríamos mediante la herramienta \textsf{\textit{TraceEditor}}, navegar sus relaciones y realizar las ediciones que se deseen.
 
 
 
@@ -994,18 +993,18 @@ Y listo, ya podemos acceder al mapa de \textit{tracelinks} de la transformación
 
 
 
-\subsubsection{Arquitectura}
+\subsection{Arquitectura}
 
 
-El prototipo se encuentra definido por dos módulos: \textsf{\textit{QvtoTrace\_To\_Trace}} que convierte la información de trazas \gls{qvt} en un modelo definido por el meta-modelo que usa el otro módulo, \textsf{\textit{TraceEditor}} que es el editor gráfico y tabular de la información de \textit{traceability}.
+El prototipo se encuentra definido por dos módulos: \textsf{\textit{QvtoTrace\_To\_Trace}} que convierte la información de trazas \gls{qvt} en un modelo definido por el meta-modelo que usa el otro módulo, y \textsf{\textit{TraceEditor}} que es el editor gráfico y tabular de la información de \textit{traceability}.
 
-El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta se encuentra definido según el \textit{esquema de traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}. Por otro lado, el prototipo de la herramienta propuesta trabaja sólo sobre transformaciones \gls{qvt}, en la sección \ref{sec:ATLTtraceability} de más adelante se presentan algunas ideas de cómo implementar algo similar para transformaciones \gls{atl} por ejemplo.
+El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta se encuentra definido según el \textit{esquema de traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}. Por otro lado, el prototipo de la herramienta propuesta trabaja sólo sobre transformaciones \gls{qvt}, en el anexo \ref{cap:ATLTtraceability} se presentan algunas ideas de cómo implementar algo similar para transformaciones \gls{atl}.
 
 
 
 \subsection{Transformación QvtoTrace{\_}To{\_}Trace}
 
-Como ya se mencionó, esta tranformación toma como entrada un modelo de \textit{tracelinks} definido por el meta-modelo de la imagen \ref{fig:QVTTraceModel} y retorna un modelo basado en el esquema propuesto de \textit{traceability} (\ref{fig:EsquenaPropuesto}) llamado \textsf{\textit{TraceEditor}} como la herramienta que lo usa y que su definición se puede ver en la imagen \ref{fig:TraceEditorMetaModel}.
+Como ya se mencionó, esta tranformación toma como entrada un modelo de \textit{tracelinks} definido por el meta-modelo de la imagen \ref{fig:QVTTraceModel} y retorna un modelo basado en el esquema propuesto de \textit{traceability} (\ref{fig:EsquenaPropuesto}) llamado \textsf{\textit{TraceEditor}} como la herramienta que lo usa y cuya definición se puede ver en la imagen \ref{fig:TraceEditorMetaModel}.
 
 
 \begin{figure}[hbtp]
@@ -1016,13 +1015,13 @@ Como ya se mencionó, esta tranformación toma como entrada un modelo de \textit
 \end{figure}
 
 
-La transformación se desarrolló con el lenguaje \gls{qvt} (en la sección \ref{sec:QVT} se detalla esta tecnología) y su definición completa se encuentra en el Anexo \ref{cap:QvtoTraceToTrace}, esta tranformación se encuentra bien documentada mediante comentarios a lo largo de todo el código.
+La transformación se desarrolló con el lenguaje \gls{qvt} (en la sección \ref{sec:QVT} se detalla esta tecnología) y su definición completa se encuentra en el Anexo \ref{cap:QvtoTraceToTrace}. Esta transformación se encuentra documentada en detalle mediante comentarios incorporados en el código.
 
 
 
 \subsection{Editor gráfico y tabular TraceEditor}
 
-Este editor gráfico y tabular se ejecuta como un plugin de Eclipse, permite presentarnos todo el mapa de \textit{tracelinks} que se genera producto de una transformación que se quiera analizar, así como realizar algunas modificaciones sobre dicho modelo. Nos permitirá identificar, por un lado, el listado de los artefactos orígenes de una transformación, y por otro, el de los destinos o resultados. El conjunto de \textit{tracelinks} agrupados por la transformación que los generó, y los artefactos orígenes y destinos que enlaza cada uno. De un artefacto y de un \textit{tracelink} muestra el nombre que lo identifica y su tipo, y de una transformación sólo el nombre.
+Este editor gráfico y tabular se ejecuta como un plugin de Eclipse, permite presentar todo el mapa de \textit{tracelinks} que se genera producto de una transformación que se quiera analizar, así como realizar algunas modificaciones sobre dicho modelo. Permite identificar fácilmente, el listado de los artefactos orígenes de una transformación, el de los destinos o resultados, el conjunto de \textit{tracelinks} agrupados por la transformación que los generó, y los artefactos orígenes y destinos que enlaza cada \textit{tracelink}. De un artefacto y de un \textit{tracelink} muestra el nombre que lo identifica y su tipo, y de una transformación sólo el nombre.
 
 Está conformado por los siguientes componentes:
 
@@ -1051,7 +1050,7 @@ Este editor que se puede observar en detalle en la imagen \ref{fig:TraceEditorGr
 \item \textsf{\textit{Artefactos destinos}} 
 \end{itemize} 
 
-Las transformaciones se muestran como cajas que contienen los \textit{tracelinks} que se generaron producto de ellas, y las trazas muestran sus relaciones con artefactos orígenes con una línea continua y con los artefactos destinos con una rayada.
+Las transformaciones se muestran como cajas que contienen los \textit{tracelinks} que se generaron producto de ellas, y las trazas muestran sus relaciones con artefactos orígenes con una línea continua y con los artefactos destinos con una línea de trazos.
 
 
 
@@ -1066,11 +1065,11 @@ Las transformaciones se muestran como cajas que contienen los \textit{tracelinks
 El editor permite:
 
 \begin{itemize}
-\item crear nuevas trazas personalizadas
-\item modificar los identificadores de las transformaciones
-\item modificar los identificadores de los \textit{tracelinks}
-\item definir nuevas y modificar las relaciones entre los \textit{tracelinks} y los artefactos
-\item eliminar u ocultar cualquier objeto (transformación, artefacto, relación) con el fin de mejorar un análisis, dado que por lo general los modelos generados por la ejecución de una transformación son muy extensos
+\item Crear nuevas trazas personalizadas
+\item Modificar los identificadores de las transformaciones
+\item Modificar los identificadores de los \textit{tracelinks}
+\item Definir nuevas relaciones entre los \textit{tracelinks} y los artefactos, y modificar las existentes 
+\item Eliminar u ocultar cualquier objeto (transformación, artefacto, relación) con el fin de mejorar un análisis, dado que por lo general los modelos generados por la ejecución de una transformación son muy extensos
 \end{itemize}
 
 
@@ -1087,27 +1086,27 @@ El editor fue implementado mediante el framework \gls{gmf}, el cual ayuda en la 
 \label{fig:TraceEditorTabular}
 \end{figure}
 
-Este editor muestra el mismo modelo de \textit{tracelinks} que se presenta en el editor gráfico que explicamos antes, pero en una lista ordenada tabulado de acuerdo a los siguiente campos:
+Este editor muestra el mismo modelo de \textit{tracelinks} que se presenta en el editor gráfico que explicamos anteriormente, pero en una lista ordenada tabulado de acuerdo a los siguiente campos:
 
 \begin{itemize}
 \item \textsf{\textit{Transformación}}
 \item \textsf{\textit{Enlace/Traza}}
 \item \textsf{\textit{Tipo de enlace}}
 \item \textsf{\textit{Artefacto origen}}
-\item \textsf{\textit{Tipo del origen}}
+\item \textsf{\textit{Tipo del artefacto origen}}
 \item \textsf{\textit{Artefacto destino}}
-\item \textsf{\textit{Tipo del destino}}
+\item \textsf{\textit{Tipo del artefacto destino}}
 \end{itemize}
 
 
 Una visualización del editor se puede observar en la imagen \ref{fig:TraceEditorTabular}. Con el editor tabular se pueden realizar las siguientes acciones:
 
 \begin{itemize}
-\item renombrar una transformación
-\item renombrar un \textit{tracelink}
-\item renombrar un artefacto
-\item definir o cambiar el tipo de un \textit{tracelink}
-\item definir o cambiar el tipo de un artefacto
+\item Renombrar una transformación
+\item Renombrar un \textit{tracelink}
+\item Renombrar un artefacto
+\item Definir o cambiar el tipo de un \textit{tracelink}
+\item Definir o cambiar el tipo de un artefacto
 \end{itemize}
 
 Este editor en conjunto con la perspectiva que se presenta más adelante, fueron desarrollados con las herramientas provistas por el \gls{pde} de Eclipse.
@@ -1115,7 +1114,7 @@ Este editor en conjunto con la perspectiva que se presenta más adelante, fueron
 
 \subsubsection{La perspectiva}
 
-Como se describe en la subsección de la plataforma Eclipse \ref{subsec:PlatEclipse}, una perspectiva es una agrupación de vistas y editores que en su conjunto ayudan en una actividad completa. En este caso, la perspectiva propuesta para nuestro editor \textsf{TraceEditor} fue ofrecer una vista en la que se presentan los dos editores (el gráfico y el tabular) de forma simultánea dada la complejidad y el volumen de información que puede llegar a presentar un modelo de \textit{tracelinks} cualquiera.
+Como se describe en la subsección de la plataforma Eclipse \ref{subsec:PlatEclipse}, una perspectiva es una agrupación de vistas y editores que en su conjunto ayudan en una actividad completa. En este caso, la perspectiva propuesta para nuestro editor \textsf{TraceEditor} fue ofrecer una vista en la que se presentan los dos editores (el gráfico y el tabular) en forma simultánea dada la complejidad y el volumen de información que puede llegar a presentar un modelo de \textit{tracelinks} cualquiera.
 
 
 \begin{figure}[hbtp]
@@ -1142,17 +1141,8 @@ Esta zona es el área de edición o editores, es el espacio del Workbench Eclips
 
 
 \paragraph{Zona 4}
-En esta área se presentan, en primer plano el editor tabular titulado \textsf{Lista de Trazas} ya presentado antes en esta misma subsección \ref{subsubsec:EditorTabular}. Y en segundo plano, la vista de propiedades de Eclipse (\textsf{Properties}) que nos permite ver todas las propiedades de cualquier elemento seleccionado en el editor que se encuentre activo.
+En esta área se muestran, en primer plano el editor tabular titulado \textsf{Lista de Trazas}, presentado anteriormente en esta misma subsección \ref{subsubsec:EditorTabular}, y en segundo plano, la vista de propiedades de Eclipse (\textsf{Properties}) que nos permite ver todas las propiedades de cualquier elemento seleccionado en el editor que se encuentre activo.
 
-
-\subsection{Traceability en ATL}
-\label{sec:ATLTtraceability}
-
-La información de \textit{traceability} forma parte del lenguaje \gls{atl}, ésta ayuda en la interacción de cada regla de transformación cuando necesita tomar la salida de alguna otra regla por medio del mecanismo interno de \textit{traceability} implícito. Sin embargo, actualmente \gls{atl} ofrece un acceso muy limitado a dicha información de \textit{traceability} sólo por medio del método \textsf{\textit{resolveTemp()}}. Además, ésta información es eliminada ni bien la ejecución de la transformación termina. Dada las carencias enumeradas antes, para lograr obtener alguna información de \textit{traceability} en esta tecnología es necesario implementar dicha funcionalidad.
-
-Existen varias propuestas de implementación, una de ellas, la que se presenta en \cite{Jouault} en donde propone considerar tanto a los programas de transformación como a la información de \textit{traceability} como modelos, entonces mediante la definición de una nueva transformación modificar los programas para que generen la información de \textit{traceability} como una salida más al modelo resultado original. Con este enfoque, la generación de código de \textit{traceability} está claramente separada de la lógica de la transformación y la misma se puede agregar después de que un programa haya sido escrito. Por lo cual, es posible añadir el soporte para nuevos formatos o modificar la granularidad o rango de las tracelinks sin interferir con la lógica del programa.
-
-Otras propuestas hacen uso del mecanismo de \textit{traceability} implícito de \gls{atl}, como copiar toda la información de tracelinks durante la ejecución de la transformación, o directamente persistirla y dejarla accesible en un archivo aparte, pero para todas estas implementaciones se requiere de modificaciones del motor de ejecución de \gls{atl}.
 
 
 
@@ -1162,7 +1152,7 @@ Otras propuestas hacen uso del mecanismo de \textit{traceability} implícito de 
 \chapter{Descripción de tecnologías}
 \markboth{Descripción de tecnologías}{}
 
-En el presente capítulo se realiza una breve introducción sobre cada una de las tecnologías que fueron utilizadas para la implementación del prototipo que hace uso del esquema propuesto de \textit{traceability}.
+En este capítulo se realiza una breve introducción sobre cada una de las tecnologías que fueron utilizadas para la implementación del prototipo que hace uso del esquema propuesto de \textit{traceability}.
 
 
 \bigskip
@@ -1176,16 +1166,17 @@ En el presente capítulo se realiza una breve introducción sobre cada una de la
 
 \section{Eclipse}
 
-Empezamos con el proyecto base sobre el cual el prototipo va a funcionar/ejecutarse, en la presente sección daremos una introducción a Eclipse en la que se presenta el proyecto y se detalla en breve la plataforma con sus principales componentes y/o funcionalidades.
+
+En la presente sección se introduce al lector en el entorno Eclipse, proyecto base sobre el cual el prototipo va a funcionar y/o ejecutarse. Se describe el proyecto y se detalla brevemente la plataforma con sus principales componentes y/o funcionalidades.
 
 
 \subsection{El proyecto}
 
 Según se presenta en \cite{EMFADG, Eclipse} Eclipse es un proyecto de desarrollo de software de código abierto, cuyo propósito es proveer una plataforma de herramientas altamente integradas para la construcción, implementación y administración de software a lo largo de todo su ciclo de vida.
 
-El proyecto núcleo es un framework genérico para la integración de herramientas conjunto con un entorno de desarrollo Java que ya se incluye para usarlo. Otros proyectos extienden el framework núcleo para soportar distintos tipos de herramientas y ambientes de desarrollo específicos. Estos proyectos en Eclipse están implementados en Java y pueden ser ejecutados en muchos sistemas operativos.
+El proyecto núcleo es un framework genérico para la integración de herramientas en conjunto con un entorno de desarrollo Java que ya se incluye para usarlo. Otros proyectos extienden el framework núcleo para soportar distintos tipos de herramientas y ambientes de desarrollo específicos. Estos proyectos en Eclipse están implementados en Java y pueden ser ejecutados en muchos sistemas operativos.
 
-La comunidad Eclipse tiene más de 200 proyectos, los cuales pueden conceptualmente organizarse dentro de las siguientes 7 categorías:
+La comunidad Eclipse tiene más de 200 proyectos, los cuales pueden organizarse conceptualmente dentro de las siguientes 7 categorías:
 
 \begin{enumerate}
 
@@ -1211,12 +1202,12 @@ Eclipse hace uso de la \gls{epl}, dicha licencia comercial permite a las organiz
 \subsection{La plataforma Eclipse}
 \label{subsec:PlatEclipse}
 
-La plataforma Eclipse es un framework para la construcción de \glspl{ide}, el mismo ha sido descripto como ``un ambiente para cualquier cosa y nada en particular''. La plataforma define simplemente la estructura básica del \gls{ide}, luego mediante la definición de herramientas específicas que amplían y se conectan al framework terminan definiendo un \gls{ide} particular de forma colectiva.
+La plataforma Eclipse es un framework para la construcción de \glspl{ide}, el mismo ha sido descripto como ``un ambiente para cualquier cosa y nada en particular''. La plataforma propone simplemente la estructura básica del \gls{ide}, luego mediante la definición de herramientas específicas que amplían y se conectan al framework terminan especificando un \gls{ide} particular de forma colectiva.
 
 
 \subsubsection{Arquitectura de plugins}
 
-En Eclipse la unidad básica de funcionamiento, o sencillamente un componente, es llamado plugin-in. Tanto la plataforma misma de Eclipse como las herramientas que la extienden están compuestas por éstos plug-ins. Una herramienta sencilla puede consistir de un simple plug-in, pero las más complejas por lo general están divididas en varios de éstos.
+En Eclipse la unidad básica de funcionamiento, o sencillamente un componente, es llamado plug-in. Tanto la plataforma misma de Eclipse como las herramientas que la extienden están compuestas por éstos plug-ins. Una herramienta sencilla puede consistir en un simple plug-in, pero las más complejas por lo general están divididas en varios de éstos.
 
 Un plug-in incluye todo lo necesario para la ejecución del mismo, ésto puede ser: código Java, imágenes, textos, etc. También incluye un archivo manifiesto (plugin.xml), en el que se declaran las interconexiones con otros plug-ins.
 
@@ -1227,7 +1218,7 @@ Durante el arranque la plataforma Eclipse descubre todos los plug-ins disponible
 
 Las herramientas integradas en Eclipse trabajan con archivos y carpetas ordinarias, pero también disponen de una \gls{api} de alto nivel que define los siguientes componentes: recursos (resources), proyectos y un espacio de trabajo (workspace).
 
-\paragraph{Resource} Un recurso es la representación que da Eclipse de un archivo y/o una carpeta, a los que provee de capacidades adicionales como detectores de cambios (change listeners), marcadores como las listas por hacer (to-do list) y/o mensajes de errores, y un registro de historia de cambios.
+\paragraph{Resource} Un recurso es la forma en que Eclipse representa un archivo y/o una carpeta, a los que provee de capacidades adicionales como ser detectores de cambios (change listeners), marcadores como por ejemplo las listas por hacer (to-do list) y/o mensajes de errores, y un registro de historia de cambios.
 
 \paragraph{Project} Un proyecto es un recurso especial de tipo carpeta que es asignada por el usuario a una carpeta del sistema de archivos, es la que contiene todos los recursos del proyecto y la que define el tipo del mismo.
 
@@ -1247,47 +1238,47 @@ El Workbench es la ventana principal que se le presenta al usuario cuando ejecut
 
 \paragraph{Editores} Éstos permiten al usuario abrir, editar y guardar distintos tipos de objectos.
 
-\paragraph{Vistas} proveen información de algún objeto sobre el que el usuario se encuentra trabajando en el Workbench. Por ejemplo, una vista puede asistir un editor dando información sobre el documento que se está editando.
+\paragraph{Vistas} Proveen información de algún objeto sobre el que el usuario se encuentra trabajando en el Workbench. Por ejemplo, una vista puede asistir a un usuario editor dando información sobre el documento que se está editando.
 
 \paragraph{Perspectivas} Una perspectiva es sencillamente una agrupación de vistas y editores de manera que en su conjunto dan apoyo en una actividad completa.
 
 
 \subsection{Resumen y más información}
 
-Para cerrar y en resumen, la plataforma Eclipse proporciona un núcleo de elementos básicos y un conjunto de \glspl{api} genéricas, como el workspace y el workbench, y varios puntos de extensión a través del cual se pueden integrar nuevas funcionalidades. A través de estos puntos de extensión, las herramientas escritas como plug-ins independientes pueden extender la plataforma Eclipse.
+En conclusión, la plataforma Eclipse proporciona un núcleo de elementos básicos y un conjunto de \glspl{api} genéricas, como ser el workspace y el workbench, y varios puntos de extensión a través del cual se pueden integrar nuevas funcionalidades. A través de estos puntos de extensión, las herramientas escritas como plug-ins independientes pueden extender la plataforma Eclipse.
 
 Para obtener más información sobre el proyecto Eclipse ver \cite[\url{www.eclipse.org}]{Eclipse}, y para información técnica consultar \cite[Eclipse Platform Technical Overview]{EclipseTech}.
 
 
 \section{Eclipse Modeling Framework}
 
-A continuación proseguimos con una de las tecnologías del proyecto Eclipse usada para la implementación de una parte del prototipo, el framework \gls{emf} \cite{EMF}.
+A continuación se describe una de las tecnologías del proyecto Eclipse usada para la implementación de una parte del prototipo, el framework \gls{emf} \cite{EMF}.
 
 \subsection{El framework EMF}
 
 El \gls{emf} es un framework de modelado y generación de código para herramientas de construcción y otras aplicaciones basadas en un modelo de datos estructurados. A partir de una especificación de un modelo descrito en \gls{xmi}, \gls{emf} provee herramientas y un entorno de ejecución para producir un conjunto de clases Java para el modelo y un conjunto de clases adaptadoras que permiten la visualización y la edición de dicho modelo.
 
-\gls{emf} consiste de tres partes fundamentales:
+\gls{emf} se conforma de tres partes fundamentales:
 
 \paragraph{EMF}
 
-El framework \gls{emf} base incluye un meta-modelo (Ecore) para la descripción de modelos y soporte para un entorno de ejecución para dichos modelos que incluye las funcionalidades de notificación de cambios, persistencia por defecto vía serialización \gls{xmi} y una librería muy eficiente para la manipulación de objectos \gls{emf} genérica.
+El framework \gls{emf} base incluye un meta-modelo (Ecore) para la descripción de modelos y un entorno de ejecución para dichos modelos que incluye las funcionalidades de notificación de cambios, persistencia por defecto vía serialización \gls{xmi} y una librería muy eficiente para la manipulación de objectos \gls{emf} genérica.
 
 \paragraph{EMF.Edit}
 
-El framework EMF.Edit incluye clases genéricas reusables para la construcción de editores de modelos \gls{emf}. Este provee:
+El framework EMF.Edit incluye clases genéricas reusables para la construcción de editores de modelos \gls{emf}. Este ofrece:
 
 \begin{itemize}
 
-\item Clases proveedoras de contenido y etiquetas, acceso a propiedades orígenes y otras clases convenientes que permiten a los modelos \gls{emf} ser visualizados mediante entornos visuales estándares de escritorio (vía JFace) y/o hojas de propiedades.
+\item Clases proveedoras de contenido y etiquetas, acceso a propiedades orígenes y otras clases convenientes que permiten a los modelos \gls{emf} ser visualizados mediante entornos gráficos estándares de escritorio (vía JFace) y/o hojas de propiedades.
 
-\item Un framework de comandos que incluye un conjunto de clases que implementan comandos para la construcción de editores con soporte íntegro de deshacer y rehacer (undo/redo).
+\item Un framework de comandos que incluye un conjunto de clases que implementan dichos comandos para la construcción de editores con soporte íntegro de deshacer y rehacer (undo/redo).
 
 \end{itemize}
 
 \paragraph{EMF.Codegen}
 
-La funcionalidad de generación de código \gls{emf} es capaz de generar todo lo necesario para la construcción de un editor de un modelo \gls{emf} completo. Ésta incluye una \gls{gui} desde la cual las opciones de generación pueden ser especificadas y los generadores son invocados. Dicha funcionalidad de generación aprovecha el componente de Eclipse \gls{jdt}.
+La funcionalidad de generación de código \gls{emf} es capaz de producir todo lo necesario para la construcción de un editor de un modelo \gls{emf} completo. Ésta incluye una \gls{gui} desde la cual las opciones de construcción pueden ser especificadas y los generadores invocados. Dicha funcionalidad de generación aprovecha el componente de Eclipse \gls{jdt}.
 
 Tres niveles de generación de código son soportados:
 
@@ -1335,11 +1326,11 @@ Más información sobre el framework \gls{emf} se puede obtener en \cite{EMF} y 
 \section{Graphical Modeling Framework}
 \label{sec:GMF}
 
-En la presente sección analizamos el framework \gls{gmf}, el mismo fue usado para el desarrollo de la parte gráfica del editor de tracelinks del prototipo.
+En la presente sección se analiza el framework \gls{gmf}, el mismo fue usado para el desarrollo de la parte gráfica del editor de tracelinks del prototipo.
 
 \subsection{El framework GMF}
 
-\gls{gmf} es un framework para la construcción de editores gráficos de modelado para la plataforma Eclipse, por ejemplo editores \glssymbol{uml}, ECore, de procesos de negocios, diagramas de flujo, etc. Este framework está compuesto por un componente de generación (GMF Tooling) y un entorno de ejecución (GMF Runtime) que ayudan en el desarrollo de editores gráficos que se basan en \gls{emf} y \gls{gef}.
+\gls{gmf} es un framework para la construcción de editores gráficos de modelado para la plataforma Eclipse, por ejemplo editores \glssymbol{uml}, ECore, de procesos de negocios, diagramas de flujo, etc. Este framework está conformado por un componente de generación (GMF Tooling) y un entorno de ejecución (GMF Runtime) que ayudan en el desarrollo de editores gráficos que se basan en \gls{emf} y \gls{gef}.
 
 \subparagraph{GMF Tooling} incluye por un lado editores para crear y/o modificar los modelos que describen los aspectos de notación, semántica y utilidad de un editor gráfico, y por otro, un generador que da como resultado la implementación del editor definido.
 
@@ -1360,11 +1351,11 @@ En el diagrama de componentes que podemos ver en la figura \ref{fig:GMFArquitect
 
 \subsection{Modelos y flujo de trabajo}
 
-En el diagrama \ref{fig:GMFWorkflow} se encuentran los principales componentes y modelos usados durante el desarrollo de un editor gráfico mediante el framework \gls{gmf}. Entre ellos se encuentra el concepto de \textbf{modelo de definición gráfica}, el cual contiene toda la información relacionada con los elementos gráficos que formarán parte del editor (figuras, nodos, enlaces, etc), pero que no tiene ninguna conexión directa o es dependiente con ninguno de los componentes del modelo de dominio para el cual ofrecerá la representación y/o edición. También tenemos el \textbf{modelo de definición de herramientas} que es opcional y usado para el diseño de la paleta, el menú y las barras de herramientas.
+En el diagrama \ref{fig:GMFWorkflow} se encuentran los principales componentes y modelos usados durante el desarrollo de un editor gráfico mediante el framework \gls{gmf}. Entre ellos se encuentra el concepto de \textbf{modelo de definición gráfica}, el cual contiene toda la información relacionada con los elementos gráficos que formarán parte del editor (figuras, nodos, enlaces, etc), pero que no tiene ninguna conexión directa o no es dependiente de ninguno de los componentes del modelo de dominio para el cual ofrecerá la representación y/o edición. También tenemos el \textbf{modelo de definición de herramientas} que es opcional y usado para el diseño de la paleta, el menú y las barras de herramientas.
 
 Tanto la definición gráfica como la de las herramientas pueden funcionar para modelos variados de dominios, éste es uno de los objetivos de \gls{gmf}, lograr que estas definiciones sean reusables para distintos dominios que se puedan presentar. Lo anterior se logra gracias al uso de un \textbf{modelo de asignación o mapeo}, que se encuentra separado y vincula las definiciones gráficas y las herramientas con los correspondientes modelos de dominios seleccionados.
 
-Una vez fueron definidas los mapeos o asignaciones, \gls{gmf} dispone de un \textbf{modelo de generación} el cual posibilita la definición de los detalles para la implementación de la siguiente y última fase, la generación del editor.
+Una vez que los mapeos o asignaciones son definidos, \gls{gmf} dispone de un \textbf{modelo de generación} el cual posibilita la definición de los detalles para la implementación de la siguiente y última fase, la generación del editor.
 
 
 \begin{figure}[hbtp]
@@ -1388,7 +1379,7 @@ Una vez fueron definidas los mapeos o asignaciones, \gls{gmf} dispone de un \tex
 
 \item Generación del editor gráfico.
 
-\item Mejorar el editor gráfico por medio de la edición del código del plug-in generado.
+\item Mejora del editor gráfico por medio de la edición del código del plug-in generado.
 
 \end{enumerate}
 
@@ -1400,7 +1391,7 @@ Más información sobre el framework \gls{gmf} se puede obtener en \cite{GMP}, \
 
 \section{Atlas Transformation Language}
 
-A continuación se da una introducción a la tecnología \gls{atl}, que no solo refiere a un lenguaje de transformación de modelos como su nombre puede confundir, sino que además trata de un conjunto de herramientas de desarrollo construidas para ser ejecutadas sobre la Plataforma Eclipse (introducida en \ref{subsec:PlatEclipse}).
+A continuación se introduce a la tecnología \gls{atl}, que no solo refiere a un lenguaje de transformación de modelos como su nombre puede confundir, sino que además trata de un conjunto de herramientas de desarrollo construidas para ser ejecutadas sobre la Plataforma Eclipse (introducida en \ref{subsec:PlatEclipse}).
 
 
 \subsection{¿Qué es ATL?}
@@ -1415,7 +1406,7 @@ Por otro lado, el \gls{ide} \gls{atl} provee un conjunto de herramientas estánd
 
 \subsection{Conceptos de ATL}
 
-Un modelo fuente se transforma en un modelo destino gracias a la definición de una transformación escrita en \gls{atl}, la cual también es un modelo. Los modelos fuente, destino y la definición de la transformación, cada uno conforman a sus respectivos meta-modelos y, a su vez, todos los meta-modelos se ajustan a \gls{mof} o Ecore. Esta relación se puede observar en la imagen \ref{ATL-concepts}.
+Un modelo fuente se transforma en un modelo destino gracias a la definición de una transformación escrita en \gls{atl}, la cual a su vez es un modelo en sí mismo. Los modelos fuente, destino y la definición de la transformación, conforman sus respectivos meta-modelos y, a su vez, todos los meta-modelos se ajustan a \gls{mof} o Ecore. Esta relación se puede observar en la imagen \ref{ATL-concepts}.
 
 Una transformación \gls{atl} es unidireccional, o sea que trabaja sobre un modelo fuente de solo lectura y produce un modelo destino de solo escritura. Durante la ejecución de una transformación, el modelo fuente puede ser navegado pero no cambiado, en cambio el modelo destino no puede ser navegado.
 
@@ -1444,12 +1435,12 @@ Más información sobre la tecnología \gls{atl} se puede encontrar en la secci�
 \section{QVT}
 \label{sec:QVT}
 
-Por último en este capítulo dedicado a las tecnologías que forman parte de la presente tesis, se introduce el estándar para transformaciones especificado por la \gls{omg}, el lenguaje \gls{qvt}.
+Finalizando este capítulo dedicado a las tecnologías que forman parte del trabajo de tesis, se introduce al lenguaje estándar para transformaciones especificado por la \gls{omg}, el lenguaje \gls{qvt}.
 
 
 \subsection{Introducción a QVT}
 
-\gls{qvt} como ya se dijo antes es el estándar de \gls{omg} para la definición de transformaciones. La especificación de \gls{qvt} es híbrida, como en el caso de \gls{atl}, relacional (o declarativa) y operacional (o imperativa). Comprende tres diferentes lenguajes \gls{mmt}: dos lenguajes declarativos llamados Relations y Core, y un tercer lenguaje, de naturaleza imperativa, llamado Operational Mappings. Puede observarse la relación de los meta-modelos de cada uno de los lenguajes en la figura \ref{QVTmetamodelos}. 
+\gls{qvt}, como ya se mencionó antes, es el estándar de \gls{omg} para la definición de transformaciones. La especificación de \gls{qvt} es híbrida, como en el caso de \gls{atl}, relacional (o declarativa) y operacional (o imperativa). Comprende tres diferentes lenguajes \gls{mmt}: dos lenguajes declarativos llamados Relations y Core, y un tercer lenguaje, de naturaleza imperativa, llamado Operational Mappings. Puede observarse la relación de los meta-modelos de cada uno de los lenguajes en la figura \ref{QVTmetamodelos}. 
 
 La naturaleza híbrida de este estándar fue introducida para abarcar distintos tipos de usuarios con diferentes necesidades, requisitos y hábitos.
 
@@ -1482,13 +1473,12 @@ Es un lenguaje pequeño con un soporte de pattern matching acotado. Tiene \texti
 
 \paragraph{Operational Mappings}
 
-Este lenguaje se especificó como una forma estándar para proveer implementaciones imperativas de transformaciones unidireccionales. También como el lenguaje Relations, dispone de creación de tracelinks implícita sobre el mismo modelo de tracelinks.
+Este lenguaje se especificó como una forma estándar para proveer implementaciones imperativas de transformaciones unidireccionales. Al igual que el lenguaje Relations, dispone de creación de tracelinks implícita sobre el mismo modelo de tracelinks.
 
 
 \paragraph{Implementaciones Black-box}
 
-Estas implementaciones de caja negra, permite escribir transformaciones en otro lenguaje distinto a \gls{qvt}. Una implementación de este tipo no tiene
-relación explicita con el lenguaje Relations, aunque una caja negra podría implementar una Relation, la misma debe ser responsable de mantener las tracelinks entre los elementos relacionados.
+Estas implementaciones de caja negra, permiten escribir transformaciones en otro lenguaje distinto a \gls{qvt}. Una implementación de este tipo no tiene relación explicita con el lenguaje Relations. Aunque una caja negra podría implementar una Relation, la misma debe ser responsable de mantener las \textit{tracelinks} entre los elementos relacionados.
 
 
 \subsection{Más información}
@@ -1504,7 +1494,7 @@ Para obtener más información introductoria consultar \cite{DSDPM}. Para más d
 \chapter{Trabajos relacionados}
 \markboth{Trabajos relacionados}{} 
 
-En este capítulo se realiza una breve introducción de un conjunto de trabajos que tienen alguna relación con el tema en cuestión de la presente tesis, encontrados a lo largo del aprendizaje y la investigación.
+En este capítulo se realiza una breve introducción de un conjunto de trabajos que tienen relación con el tema que se desarrolla en la presente tesis, trabajos que encontré durante el proceso de aprendizaje e investigación.
 
 
 \bigskip
@@ -1547,7 +1537,7 @@ El fundamento del diseño del meta-modelo de tracelinks anidado propuesto es par
 
 \section{Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line (SPL)}
 
-El framework presentado en \cite{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmaralAraujo} provee una plataforma abierta y flexible para crear enlaces de tracelinks entre distintos artefactos del desarrollo de una \gls{spl}. Pero, dado que el diseño del framework es genérico, éste también puede aplicarse o usarse en otras áreas del desarrollo \gls{spl}. El mismo ha sido diseñado e implementado basado en el uso de técnicas dirigidas por modelos. El meta-modelo de \textit{traceability} descripto en el dibujo \ref{fig:SPLMeta-modelo} permite definir distintos tipos de enlaces de tracelinks entre los artefactos.
+El framework presentado en \cite{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmaralAraujo} provee una plataforma abierta y flexible para crear enlaces de tracelinks entre distintos artefactos del desarrollo de una \gls{spl}. Pero, dado que el diseño del framework es genérico, éste también puede aplicarse o usarse en otras áreas del desarrollo \gls{spl}. El mismo ha sido diseñado e implementado basándose en el uso de técnicas dirigidas por modelos. El meta-modelo de \textit{traceability} descripto en el dibujo \ref{fig:SPLMeta-modelo} permite definir distintos tipos de enlaces de tracelinks entre los artefactos.
 
 Las principales funcionalidades ofrecidas por el framework son las siguientes:
 
@@ -1580,7 +1570,7 @@ Los elementos principales del meta-modelo son los siguientes:
 
 \subsection{Arquitectura}
 
-Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido definida en término de cuatro módulos principales. Cada uno de los cuales implementa una de las funcionalidades principales del framework, se detallan a continuación:
+Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido definida principalmente en término de cuatro módulos. Cada uno de los cuales implementa una de las funcionalidades más importantes del framework. Dichos módulos se detallan a continuación:
 
 \begin{figure}[hbtp]
 \centering
@@ -1599,13 +1589,13 @@ Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido 
 
 \section{Integración de herramientas Case}
 
-En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que como resultado del conjunto de actividades que lo conforman, se van generando una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc). Estos artefactos, aunque en esencia se encuentran relacionados lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo \glssymbol{uml}, etc), las relaciones lógicas nombradas se pierden, o mejor dicho no existen o pasan desapercibidas en la práctica. En otras palabras, nos presenta el problema de la imposibilidad de \textit{traceability} que encontramos entre la mayoría de las herramientas \gls{case} actuales.
+En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que como resultado del conjunto de actividades que lo conforman, se genera una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc). Estos artefactos, aunque en esencia se encuentran relacionados lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo \glssymbol{uml}, etc), las relaciones lógicas nombradas se pierden, o mejor dicho no existen o pasan desapercibidas en la práctica. En otras palabras, se nos presenta el problema de la imposibilidad de \textit{traceability} que encontramos en la mayoría de las herramientas \gls{case} actuales.
 
 Como solución a este problema, se propone un ambiente de integración para las herramientas \gls{case} al que llamaron TiE - Tool Integration Environment, el cual basa su integración en la creación de enlaces de tracelinks entre los artefactos de las distintas herramientas.
 
 \section{Framework genérico de extracción de datos de traceability}
 
-En \cite{GrammelKastenholz} proponen un framework genérico de \textit{traceability} que toma como entrada una transformación de modelo y le aumenta arbitrariamente su funcionalidad con un mecanismo de \textit{traceability}. En el dibujo \ref{fig:GenericoArquitectura} se muestra un panorama de alto nivel de la arquitectura propuesta. Ésta se basa en una interfase genérica que provee un punto de conexión para cualquier motor de transformación de modelos, mediante una \gls{api} que se ofrece al ingeniero que conecta su motor de transformación con el motor de \textit{traceability} (oAW connector, \gls{qvt} connector). Como resultado el motor de transformación incluye la funcionalidad de \textit{traceability}. El modelo de datos que usa el framework es el lenguaje específico de dominio para \textit{traceability} al que llaman Trace-DSL.
+En \cite{GrammelKastenholz} se propone un framework genérico de \textit{traceability} que toma como entrada una transformación de modelo y le aumenta arbitrariamente su funcionalidad con un mecanismo de \textit{traceability}. En el dibujo \ref{fig:GenericoArquitectura} se muestra un panorama de alto nivel de la arquitectura propuesta. Ésta se basa en una interfase genérica que provee un punto de conexión para cualquier motor de transformación de modelos, mediante una \gls{api} que se ofrece al ingeniero que conecta su motor de transformación con el motor de \textit{traceability} (oAW connector, \gls{qvt} connector). Como resultado el motor de transformación incluye la funcionalidad de \textit{traceability}. El modelo de datos que usa el framework es el lenguaje específico de dominio para \textit{traceability} que se denomina Trace-DSL.
 
 \begin{figure}[hbtp]
 \centering
@@ -1615,7 +1605,7 @@ En \cite{GrammelKastenholz} proponen un framework genérico de \textit{traceabil
 \end{figure}
 
 
-Trace-DSL que se detalla en el dibujo \ref{fig:DSLTrace}, tiene como elemento raíz TraceModel. Artefact representa cualquier producto traceable generado durante el proceso de desarrollo, esto puede ser un requerimiento o una clase o un componente, como el método que pertenece a una clase. Todo artefacto es identificado unívocamente mediante un identificador único universal (UUID). TraceLink es una abstracción de una transición de un artefacto a otro dirigida por la relación desde-hacia entre artefactos origen y destino. TraceLink puede ser de uno de las siguientes cuatro instancias: CreateTraceLink, QueryTraceLink, UpdateTraceLink y DeleteTraceLink.
+Trace-DSL que se detalla en el dibujo \ref{fig:DSLTrace}, tiene como elemento raíz TraceModel. Artefact representa cualquier producto traceable generado durante el proceso de desarrollo, esto puede ser un requerimiento, una clase o un componente, como por ejemplo el método de una clase. Todo artefacto es identificado unívocamente mediante un identificador universal (UUID). TraceLink es una abstracción de una transición de un artefacto a otro dirigida por la relación desde-hacia entre artefactos origen y destino. TraceLink puede ser de una de las siguientes cuatro instancias: CreateTraceLink, QueryTraceLink, UpdateTraceLink y DeleteTraceLink.
 
 
 \begin{figure}[hbtp]
@@ -1641,11 +1631,11 @@ La configuración necesaria para hacer uso del framework implica:
 \item Configurar la granularidad (Granularity) y el alcance (Scope)
 \end{enumerate}
 
-La configuración de la granularidad consiste en la especificación de qué tipos (definidos por las facetas) de artefactos y enlaces serán trazados para un escenario de \textit{traceability} particular. En cambio la configuración del alcance implica restringir los datos de \textit{traceability} a una combinación específica de valores. En otras palabras la primera solo chequea la existencia de facetas, mientras que la segunda adicionalmente examina las propiedades especificas de las facetas. Por ejemplo en el caso de TextFileFacet, puede ser necesario trazar solo archivos de textos con cierto nombre.
+La configuración de la granularidad consiste en la especificación de qué tipos (definidos por las facetas) de artefactos y enlaces serán trazados para un escenario de \textit{traceability} particular. En cambio la configuración del alcance implica restringir los datos de \textit{traceability} a una combinación específica de valores. En otras palabras la primera solo chequea la existencia de facetas, mientras que la segunda adicionalmente examina las propiedades especificas de las mismas. Por ejemplo en el caso de TextFileFacet, puede ser necesario trazar solo archivos de textos con cierto nombre.
 
 \section{Traceability local y global}
 
-En la propuesta presentada en \cite{GlitiaEtienDumoulin} usan la idea de separación del proceso de \textit{traceability} en los siguientes niveles, \textit{traceability} en lo pequeño y \textit{traceability} en lo grande refiriéndose a los mismos como \textit{traceability} local y \textit{traceability} global respectivamente.
+En la propuesta presentada en \cite{GlitiaEtienDumoulin} se emplea la idea de separación del proceso de \textit{traceability} en los siguientes niveles: \textit{traceability} en lo pequeño y \textit{traceability} en lo grande refiriéndose a los mismos como \textit{traceability} local y \textit{traceability} global respectivamente.
 
 \subsection{Meta-modelo de Traceability Local}
 
@@ -1658,9 +1648,9 @@ Este meta-modelo toma las tracelinks de la entrada y la salida de una única tra
 \label{fig:LocalTraceMetamodel}
 \end{figure}
 
-El meta-modelo de tracelinks local contiene dos conceptos principales Link y ElementRef en donde se expresa que uno o más elementos orígenes son enlazados a uno o más elementos objetivos. ElementRef es una clase abstracta que representa elementos que pueden ser traceados: instancias de clases o valores de propiedades. Los valores de las propiedades son traceados usando PrimitivePropertyRef el cual apunta a la instancia contenedora de la propiedad y tiene el nombre de la misma. Este tratamiento especial para los tipos primitivos de Java se debe a que no existen instancias de ellos en el modelo. Por otro lado las propiedades que son tipadas mediante una clase normal, son traceadas mediante ClassRef.
+El meta-modelo de tracelinks local contiene dos conceptos principales, Link y ElementRef, los cuales expresan según su definición que uno o más elementos orígenes son enlazados a uno o más elementos objetivos. ElementRef es una clase abstracta que representa elementos que pueden ser traceados: instancias de clases o valores de propiedades. Los valores de las propiedades son traceados usando PrimitivePropertyRef el cual apunta a la instancia contenedora de la propiedad y tiene el nombre de la misma. Este tratamiento especial para los tipos primitivos de Java se debe a que no existen instancias de ellos en el modelo. Por otro lado las propiedades que son tipadas mediante una clase normal, son traceadas mediante ClassRef.
 
-Para almacenar la información sobre las reglas de transformación aplicadas así como el caso particular de las cajas negras, se hace uso de los conceptos RuleRef y BlackBoxRef. En ambos casos, dado que pueden dar como resultado de su ejecución varios enlaces, se define la relación como uno a varios entre RuleRef y Link. RuleRef y BlackBoxRef son opcionales, en el caso de la primera solo se usa para realizar una depuración de las transformaciones, y la segunda si nos encontramos en la situación en la que ciertas partes del sistema no pueden ser pública su implementación.
+Para almacenar la información sobre las reglas de transformación aplicadas así como el caso particular de las cajas negras, se hace uso de los conceptos RuleRef y BlackBoxRef. En ambos casos, dado que pueden dar como resultado de su ejecución varios enlaces, se define la relación como uno a varios entre RuleRef y Link. RuleRef y BlackBoxRef son opcionales, en el caso de la primera solo se usa para realizar una depuración de las transformaciones, y la segunda si nos encontramos en la situación en la que ciertas partes del sistema no puede ser pública su implementación.
 
 ElementRef tiene una referencia al objeto real de los modelos origen y destinos. Como estos modelos están implementados mediante \gls{emf}, la referencia EMFObject es un EObject del meta-modelo Ecore. La clase LocalTraces representa la raiz del modelo de tracelinks local y tiene un RuleContainer que se usa como contenedor de las reglas y dos ElementContainer usados para agrupar los ElementRef origen y destino respectivamente. Separar los elemento orígenes y destinos permite reducir los costos de búsquedas de elementos de entrada o salida.
 
@@ -1675,13 +1665,13 @@ Este meta-modelo enlaza tracelinks locales de acuerdo a la cadena que define la 
 \label{fig:GlobalTraceMetamodel}
 \end{figure}
 
-Este meta-modelo se engloban todas las tracelinks locales, los modelos de una cadena de transformación y la forma en que éstos se encuentran enlazados mediante TraceModel y LocalModel. Los modelos pueden ser compartidos entre distintas transformaciones, es decir uno puede ser producto de una transformación y también ser consumido por otra transformación.
+En este meta-modelo se engloban todas las tracelinks locales, los modelos de una cadena de transformación y la forma en que éstos se encuentran enlazados mediante TraceModel y LocalModel. Los modelos pueden ser compartidos entre distintas transformaciones, es decir uno puede ser producto de una transformación y también ser consumido por otra transformación.
 
 Introducir este nivel global de tracelinks permite la navegación entre los modelos transformados y sus modelos de tracelinks locales, dando una mejor separación de lo que es en verdad la compleja información de \textit{traceability}, lo que permite además una mejor flexibilidad para la creación de las tracelinks y la explotación de las mismas. No utilizar esta idea de tracelinks globales tiene como consecuencia disponer de todas las tracelinks en un único modelo de toda una cadena de transformación, lo cual desencadenaría en el colapso para la creación y la consulta de dicho modelo.
 
 \subsection{¿Cómo trabaja el framework?}
 
-Una de los principales objetivos de recolectar las tracelinks es dar luego la posibilidad a un usuario de inspeccionarlas realizando distintas consultas, una puede ser por ejemplo obtener los elementos relacionados a uno seleccionado. Este meta-modelo permite desde el modelo de tracelinks global navegar hacia los modelos de tracelinks locales y/o hacia a los modelos envueltos en cada una de las transformaciones. También desde el modelo de tracelinks local se puede navegar entre los elementos del modelo parte de la transformación.
+Uno de los principales objetivos de recolectar las tracelinks es dar luego la posibilidad a un usuario de inspeccionarlas realizando distintas consultas, una de ellas puede ser por ejemplo obtener los elementos relacionados a uno seleccionado. Este meta-modelo permite desde el modelo de tracelinks global navegar hacia los modelos de tracelinks locales y/o hacia a los modelos envueltos en cada una de las transformaciones. También desde el modelo de tracelinks local se puede navegar entre los elementos del modelo parte de la transformación.
 
 En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un modelo de tracelinks locales y globales producto de una cadena de transformación. En el ejemplo se representan los enlaces (Link) entre los elementos sin tener en cuenta las instancias de RuleRef para no sobrecargarlo.
 
@@ -1712,6 +1702,18 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \clearpage
 \addappheadtotoc
 \appendixpage
+
+\chapter{Traceability en ATL}
+\label{cap:ATLTtraceability}
+
+La información de \textit{traceability} forma parte del lenguaje \gls{atl}, ésta ayuda en la interacción de cada regla de transformación cuando necesita tomar la salida de alguna otra regla por medio del mecanismo interno de \textit{traceability} implícito. Sin embargo, actualmente \gls{atl} ofrece un acceso muy limitado a dicha información de \textit{traceability} sólo por medio del método \textsf{\textit{resolveTemp()}}. Además, ésta información es eliminada ni bien la ejecución de la transformación termina. Dada las carencias enumeradas anteriormente, para lograr obtener alguna información de \textit{traceability} en esta tecnología es necesario implementar dicha funcionalidad.
+
+Existen varias propuestas de implementación, una de ellas, la que se presenta en \cite{Jouault} en donde se propone considerar como modelos tanto a los programas de transformación como a la información de \textit{traceability}, entonces mediante la definición de una nueva transformación modificar los programas para que generen la información de \textit{traceability} como una salida más al modelo resultado original. Con este enfoque, la generación de código de \textit{traceability} está claramente separada de la lógica de la transformación y la misma se puede agregar después de que un programa haya sido escrito. Por lo cual, es posible añadir el soporte para nuevos formatos o modificar la granularidad o rango de las tracelinks sin interferir con la lógica del programa.
+
+Otras propuestas hacen uso del mecanismo de \textit{traceability} implícito de \gls{atl}, copiando toda la información de tracelinks durante la ejecución de la transformación, o directamente persistiéndola y dejándola accesible en un archivo aparte, pero para todas estas implementaciones se requiere de modificaciones del motor de ejecución de \gls{atl}.
+
+
+
 
 \chapter{QvtoTrace{\textunderscore}To{\textunderscore}Trace}
 \label{cap:QvtoTraceToTrace}
