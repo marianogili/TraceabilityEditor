@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt,oneside,spanish]{book}
 \usepackage[utf8]{inputenc}
-\usepackage{babel,amsmath,graphicx,enumitem,amsfonts,appendix,listingsutf8,xcolor,framed}
+\usepackage{babel,amsmath,graphicx,enumitem,amsfonts,appendix,listingsutf8,xcolor,framed,parskip,fancyhdr}
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 \usepackage[acronym,toc,xindy]{glossaries}
 
@@ -9,6 +9,35 @@
 \renewcommand{\appendixname}{Anexos}
 \renewcommand{\appendixtocname}{Anexos}
 \renewcommand{\appendixpagename}{Anexos}
+
+% Sangría
+\setlength{\parindent}{1.5em}
+
+% encabezados
+\lhead[]{\leftmark}
+\chead[]{}
+\rhead[]{}
+\renewcommand{\headrulewidth}{0.5pt}
+
+% pie de pagina
+\lfoot[]{}
+\cfoot[]{}
+\rfoot[]{\thepage}
+\renewcommand{\footrulewidth}{0.5pt}
+
+% primera pagina de un capitulo
+\fancypagestyle{plain}{
+\fancyhead[L]{}
+\fancyhead[C]{}
+\fancyhead[R]{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.5pt}
+}
+
+\pagestyle{fancy}
 
 
 \author{Mariano Gabriel Gili}
@@ -166,7 +195,6 @@ A mi familia, amigos y compañeros de estudio y del trabajo, por su acompañamie
 
 ¡¡¡Muchas gracias a todos!!!
 
-%puede ser que \gls{hola}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -194,10 +222,16 @@ Asimismo, diseñar e implementar una herramienta que pueda ser integrada a otra 
 
 \mainmatter
 
+% encabezados
+\lhead[]{CAPÍTULO \thechapter. \leftmark}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Traceability %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Traceability}
+\markboth{Traceability}{}
+
+\pagebreak
 
 \section{Introducción}
 
@@ -290,10 +324,12 @@ Más adelante en el capítulo \ref{cap:ProblemasDesafios} se presentarán con m�
 %%% Teoría de traceability %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Teoría de traceability}
+\markboth{Teoría de traceability}{}
 
 En el presente capítulo se aborda un conjunto de temas importantes de la teoría de \textit{traceability}, en la primera sección se explica el concepto de \textit{\textbf{nivel de granularidad}} de un \textit{tracelink}. Las siguientes dos secciones se refieren a la \textit{\textbf{semántica de traceability}}, introduciendo primero las dos distintas estrategias de \textit{\textbf{meta-modelos de traceability}} que existen, y luego, la compleja tarea de la definición de \textit{\textbf{tipos de tracelinks}}. En la sección siguiente, se presentan dos formas distintas de \textit{\textbf{generación de tracelinks}}, y en la última, las dos principales \textit{\textbf{estrategias de almacenamiento}}  de la información de \textit{traceability} que se pueden implementar. Estos temas han sido muy importantes y relevantes a la hora de definir el \textit{esquema de traceability} propuesto que se detalla en el capítulo \ref{cap:Propuesta}.
 
 
+\pagebreak
 
 
 \section{Nivel de Granularidad}
@@ -485,8 +521,13 @@ Un requisito previo para el \textit{almacenamiento externo de los tracelinks}, e
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Problemas y Desafíos}
 \label{cap:ProblemasDesafios}
+\markboth{Problemas y Desafíos}{}
 
-En este capítulo vamos a describir, por un lado, los principales problemas que se presentan en el ámbito de \textit{traceability}, y por otro, los grandes desafíos que surgen de ellos y, que aún hoy, todavía se encuentran abiertos. Todo organizado por grupos según el conjunto de aspectos definidos en \cite{Excellence}, donde por cada tema se listan los problemas asociados, y seguido, los desafíos en consecuencia.
+En este capítulo vamos a describir, por un lado, los principales problemas que se presentan en el ámbito de \textit{traceability} (organizados por tema según el criterio presentado en \cite{Excellence}), y por otro, los grandes desafíos que surgen a partir de ellos. Desafíos que aún hoy, se encuentran abiertos a la investigación y al debate.
+
+
+\pagebreak
+
 
 \section{Conocimiento de traceability}
 
@@ -494,7 +535,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \begin{itemize}[label={$\times$}]
 
-\item Existe poco consenso respecto a cuáles son las mejores técnicas y métodos para la aplicación de \textit{traceability}, pocas anotaciones y documentación sobre las mejores prácticas, sumado a una falta de recursos que provean una buena base de conocimiento.
+\item Existe poco consenso respecto a cuáles son las mejores técnicas y métodos para la aplicación de \textit{traceability}, escasas anotaciones y documentación sobre las mejores prácticas, sumado a una falta de recursos que provean una buena base de conocimiento.
 
 \item Las definiciones semánticas no coinciden y las terminologías son dispares, todo ésto crea barreras de comunicación.
 
@@ -504,7 +545,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \begin{itemize}[label={\checkmark}]
 
-\item Crear una base de conocimiento en la que se vuelquen las mejores prácticas de \textit{traceability}, una terminología estándar y mucha información adicional, como por ejemplo casos de estudio.
+\item Crear una base de conocimiento en la que se vuelquen las mejores prácticas de \textit{traceability}, una terminología estándar y suficiente información adicional, como por ejemplo casos de estudio.
 
 \end{itemize}
 
@@ -513,9 +554,9 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 \subsubsection{Problemas}
 
 \begin{itemize}[label={$\times$}]
-\item Muy poca gente es competente en la tarea de definición de \textit{tracelinks} y, por otro lado, existen disponibles pocos programas educativos que enseñen dicha tarea.
+\item Se halla muy poca gente competente en la tarea de definición de \textit{tracelinks}, paralelamente es escasa la disponibilidad de programas educativos que enseñen dicha tarea.
 
-\item Existen pocos programas de certificación, y de ellos, pocos incluyen componentes de \textit{traceability}.
+\item Existen pocos programas de certificación, de los cuales pocos incluyen componentes de \textit{traceability}.
 
 \item No hay definido un conjunto de estrategias estándar de \textit{traceability}.
 
@@ -524,11 +565,11 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 \subsubsection{Desafíos}
 
 \begin{itemize}[label={\checkmark}]
-\item Identificar las áreas de conocimientos y las estrategias principales asociadas a \textit{traceability}.
+\item Identificar las áreas de conocimiento y las estrategias principales asociadas a \textit{traceability}.
 
 \item Desarrollar buenos componentes educativos para la puesta en práctica de \textit{traceability}.
 
-\item Desarrollar materiales pedagógicos efectivos para educar con énfasis en la importancia y administración de los costos-beneficios que conllevan la implementación de \textit{traceability}.
+\item Desarrollar materiales pedagógicos efectivos para educar poniendo énfasis  en la importancia y evaluación de los costos-beneficios que conllevan la implementación de \textit{traceability}.
 
 \end{itemize}
 
@@ -544,7 +585,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \item Las herramientas actuales de administración de requerimientos incluyen características como \textit{suspect tracelinks} para ayudar a los analistas a administrar y entender la evolución de los \textit{tracelinks}, pero en la mayoría de los proyectos complejos, el número de enlaces marcados como \textit{suspect tracelinks} se vuelven rápidamente excesivos, minimizándose drásticamente la utilidad de tal característica.
  
-\item Los \textit{tracelinks} tienen que evolucionar de forma sincrónica con los artefactos que se encuentran relacionados, sin embargo los sistemas actuales de gestión de cambios y la semántica de los enlaces no son lo suficientemente sofisticados como para acompañar tal evolución.
+\item Los \textit{tracelinks} tienen que evolucionar de forma sincrónica con los artefactos a los que se encuentran relacionados, sin embargo los sistemas actuales de gestión de cambios y la semántica de los enlaces no son lo suficientemente sofisticados como para acompañar tal evolución.
 
 \end{itemize}
 
@@ -643,11 +684,9 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \begin{itemize}[label={$\times$}]
 
-\item En un escenario de \textit{traceability} completo, los \textit{tracelinks} son creados entre artefactos que se encuentran en un nivel bajo de abstracción, lo que puede ser deseable para propósitos de comprensión, sin embargo este nivel tan bajo no es por lo general práctico y efectivo en costo.
+\item En un escenario de \textit{traceability} completo, los \textit{tracelinks} son creados entre artefactos que se encuentran en un nivel bajo de abstracción, lo que puede ser deseable para propósitos de comprensión, sin embargo este nivel tan bajo no es por lo general práctico ni efectivo en términos de costo.
 
-%\item Se carece de un modelo de costo-beneficio que ayude en el análisis para las distintas necesidades que surgen con la implementación y uso de \textit{traceability}, sobre varios proyectos y los diferentes enlaces potenciales dentro de un proyecto.
-
-\item Se carece de un modelo de costo-beneficio que ayude en el análisis que sea necesario realizarse sobre un proyecto cualquiera que implemente y/o use \textit{traceability}, por ejemplo, que guíe en el tratamiento y selección de un conjunto de \textit{tracelinks} potenciales que puedan surgir de un proyecto.
+\item Se carece de un modelo de costo-beneficio que ayude en el análisis que sea necesario realizarse sobre un proyecto cualquiera que implemente y/o use \textit{traceability}, que guíe, por ejemplo, en el tratamiento y selección de un conjunto de \textit{tracelinks} potenciales que puedan surgir de un proyecto.
 
 \end{itemize}
 
@@ -697,7 +736,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \item \textit{Traceability} no se incluye frecuentemente como una parte integral del ciclo de vida del desarrollo.
 
-\item \textit{Traceability} automático provee una alternativa eficiente en comparación a la metodología manual, pero la práctica ha mostrado que algunos conjuntos de datos son difíciles en el momento de procesar los \textit{tracelinks} usando métodos automáticos, ésto se debe a las inconsistencias en terminología y estándares, la carencia de estructuras, los formatos heterogéneos, etc.
+\item \textit{Traceability} automático provee una alternativa eficiente en comparación a la metodología manual, sin embargo la práctica ha mostrado que algunos conjuntos de datos  son difíciles de procesar en la obtención de \textit{tracelinks}, ésto se debe a las inconsistencias en terminología y estándares, la carencia de estructuras, los formatos heterogéneos, etc.
 
 \end{itemize}
 
@@ -707,7 +746,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \item Construir modelos de proceso que definan el ciclo de vida completo de \textit{traceability}.
 
-\item Desarrollar técnicas que permitan evaluar la posibilidad/capacidad que tiene un conjunto de datos dado de soportar los métodos automáticos de \textit{traceability}.
+\item Desarrollar técnicas que permitan evaluar la posibilidad/capacidad que tiene un determinado conjunto de datos de soportar los métodos automáticos de \textit{traceability}.
  
 \end{itemize}
 
@@ -744,7 +783,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \begin{itemize}[label={$\times$}]
 
-\item Los estudios empíricos se necesitan para demostrar la eficacia de los métodos de \textit{traceability} y así, facilitar el trabajo colaborativo y evolutivo entre los investigadores y profesionales. Sin embargo, no se dispone de diseños comunes de experimentación, metodologías, ni \textit{cotas de referencia} (o de ahora en adelante en inglés \textit{benchmarks}) para poder realizar dichos estudios.
+\item Los estudios empíricos se necesitan para demostrar la eficacia de los métodos de \textit{traceability} y así, facilitar el trabajo colaborativo y evolutivo entre los investigadores y profesionales. Sin embargo, no se dispone de diseños comunes de experimentación, metodologías, ni \textit{cotas de referencia} (de ahora en adelante en inglés \textit{benchmarks}) para poder realizar dichos estudios.
 
 \item Los \textit{benchmarks}, métodos y métricas propuestas actuales no han sido validadas a través de estudios o pruebas empíricas.
 
@@ -752,7 +791,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \item No existen \textit{benchmarks} que ayuden en la comparación de métodos y técnicas ya definidas y desarrolladas de \textit{traceability}.
 
-\item La detección de errores en los \textit{tracelinks} determina la eficacia del producto y el proceso, sin embargo los modelos de detección de errores actuales son primitivos e inválidos.
+\item La detección de errores en los \textit{tracelinks} determina la eficacia del producto y del proceso, sin embargo los modelos de detección de errores actuales son primitivos e inválidos.
 
 \end{itemize}
 
@@ -792,7 +831,7 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 
 \item Identificar los casos de estudio exitosos y darlos a conocer con el fin de demostrar la eficacia de rentabilidad y técnica que ofrecen las metodologías de \textit{traceability} en el ámbito industrial.
 
-\item Identificar los usuarios de \textit{traceability} y definir sus necesidades en términos de calidad, ciclo de vida, comunicación, etc.
+\item Identificar a los usuarios de \textit{traceability} y definir sus necesidades en términos de calidad, ciclo de vida, comunicación, etc.
 
 \item Incorporar las herramientas de \textit{traceability} que se encuentren a la vanguardia en los \glspl{ide} más comunes (como Eclipse) y en las herramientas de administración de requerimientos industriales.
 
@@ -806,11 +845,14 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Manos a la obra}
 \label{cap:Propuesta}
+\markboth{Manos a la obra}{}
 
 En este capítulo introducimos, desarrollamos y fundamentamos el \textit{esquema de
 traceability} propuesto en la presente tesis. Luego, haremos lo mismo con el prototipo de la herramienta desarrollada que acompaña y ejemplifica las ideas del esquema presentado. 
 La herramienta, desarrollada como un \textit{\textbf{plug-in}} del \glssymbol{ide} Eclipse, asiste en la generación de \textit{tracelinks} sobre transformaciones de modelos existentes, y luego, presenta un mapa en el que se muestran cómo se relacionan las transformaciones, los \textit{links} y los artefactos orígenes y resultados de la ejecución de las transformaciones.
 
+
+\pagebreak
 
 
 \section{Requerimientos}
@@ -1089,8 +1131,12 @@ Otras propuestas hacen uso del mecanismo de \textit{traceability} implícito de 
 %%% tecnologías %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Descripción de tecnologías}
+\markboth{Descripción de tecnologías}{}
 
 En el presente capítulo se realiza una breve introducción sobre cada una de las tecnologías que fueron utilizadas para la implementación del prototipo que hace uso del esquema propuesto de \textit{traceability}.
+
+
+\pagebreak
 
 
 \section{Eclipse}
@@ -1421,8 +1467,13 @@ Para obtener más información introductoria consultar \cite{DSDPM}. Para más d
 %%% Trabajos relacionados %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Trabajos relacionados}
+\markboth{Trabajos relacionados}{}
 
 En este capítulo se realiza una breve introducción de un conjunto de trabajos que tienen alguna relación con el tema en cuestión de la presente tesis, encontrados a lo largo del aprendizaje y la investigación.
+
+
+\pagebreak
+
 
 \section{Un motor de traceability de transformación de modelos en la Ingeniería de Software}
 
@@ -1603,6 +1654,9 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 
 \backmatter
 
+% encabezados
+\lhead[]{\leftmark}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Conclusión %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1620,6 +1674,7 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 
 \chapter{QvtoTrace{\textunderscore}To{\textunderscore}Trace}
 \label{cap:QvtoTraceToTrace}
+\markboth{QvtoTrace{\textunderscore}To{\textunderscore}Trace}{}
 
 A continuación la definición completa de la transformación \gls{qvt} \textsf{QvtoTrace\_To\_Trace} implementada para el prototipo desarrollado en la presente Tesis:
 
