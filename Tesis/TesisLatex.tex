@@ -5,6 +5,9 @@
 \usepackage[acronym,toc,xindy]{glossaries}
 \usepackage[undotted]{minitoc}
 
+\addtolength{\textwidth}{.5cm}
+\addtolength{\textheight}{1cm}
+
 \newcommand{\grad}{\hspace{-2mm}$\phantom{a}^{\circ}$}
 
 \renewcommand{\appendixname}{Anexos}
@@ -404,7 +407,7 @@ El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el 
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=0.75]{./img/ExplicitImplicitTraceLinkClassification}
+\includegraphics[scale=1.05]{./img/ExplicitImplicitTraceLinkClassification}
 \caption{Clasificación de traceability inicial}
 \label{fig:ClasifInicial}
 \end{figure}
@@ -417,7 +420,7 @@ En esta jerarquía que se muestra en el dibujo \ref{fig:LinksImplicitos} se encu
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=0.55]{./img/ImplicitTraceLinks}
+\includegraphics[scale=0.56]{./img/ImplicitTraceLinks}
 \caption{Jerarquía de links implícitos}
 \label{fig:LinksImplicitos}
 \end{figure}
@@ -437,7 +440,7 @@ El alcance de \textit{Model-Artefact Link} es muy amplio, por tal motivo en esta
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=0.51]{./img/ExplicitTraceLinks}
+\includegraphics[scale=0.52]{./img/ExplicitTraceLinks}
 \caption{Jerarquía de links explícitos}
 \label{fig:LinksExplicitos}
 \end{figure}
@@ -915,7 +918,7 @@ Como se puede observar, el meta-modelo se puede dividir lógicamente en dos part
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=0.75]{./img/Esquema}
+\includegraphics[scale=0.76]{./img/Esquema}
 \caption{Esquema de traceability propuesto}
 \label{fig:EsquenaPropuesto}
 \end{figure}
@@ -972,7 +975,7 @@ A continuación se detalla cómo es la secuencia del uso de la herramienta para 
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.54]{./img/Secuencia_Prototipo}
+\includegraphics[scale=.56]{./img/Secuencia_Prototipo}
 \caption{Secuencia del prototipo}
 \label{fig:SecuenciaPrototipo}
 \end{figure}
@@ -986,7 +989,7 @@ De esta manera, ya podemos acceder al mapa de \textit{tracelinks} de la transfor
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=0.75]{./img/QVTTraceModel}
+\includegraphics[scale=0.78]{./img/QVTTraceModel}
 \caption{Modelo de tracelinks de QVT}
 \label{fig:QVTTraceModel}
 \end{figure}
@@ -1009,7 +1012,7 @@ Como ya se mencionó, esta tranformación toma como entrada un modelo de \textit
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.58]{./img/TraceEditorMetaModel}
+\includegraphics[scale=.61]{./img/TraceEditorMetaModel}
 \caption{Meta-modelo TraceEditor}
 \label{fig:TraceEditorMetaModel}
 \end{figure}
@@ -1034,7 +1037,7 @@ Está conformado por los siguientes componentes:
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.28]{./img/TraceEditorEjemplo}
+\includegraphics[scale=.29]{./img/TraceEditorEjemplo}
 \caption{Editor gráfico y tabular TraceEditor}
 \label{fig:TraceEditorEjemplo}
 \end{figure}
@@ -1056,7 +1059,7 @@ Las transformaciones se muestran como cajas que contienen los \textit{tracelinks
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.28]{./img/TraceEditorGrafico}
+\includegraphics[scale=.29]{./img/TraceEditorGrafico}
 \caption{El editor gráfico}
 \label{fig:TraceEditorGrafico}
 \end{figure}
@@ -1081,7 +1084,7 @@ El editor fue implementado mediante el framework \gls{gmf}, el cual ayuda en la 
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.28]{./img/TraceEditorTabular}
+\includegraphics[scale=.29]{./img/TraceEditorTabular}
 \caption{El editor tabular}
 \label{fig:TraceEditorTabular}
 \end{figure}
@@ -1119,7 +1122,7 @@ Como se describe en la subsección de la plataforma Eclipse \ref{subsec:PlatEcli
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.28]{./img/TraceEditorPerspectiva}
+\includegraphics[scale=.29]{./img/TraceEditorPerspectiva}
 \caption{Perspectiva del editor}
 \label{fig:TraceEditorPerspectiva}
 \end{figure}
@@ -1231,7 +1234,7 @@ El Workbench es la ventana principal que se le presenta al usuario cuando ejecut
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=0.3]{./img/EclipseWorkbench}
+\includegraphics[scale=0.31]{./img/EclipseWorkbench}
 \caption{Elcipse Workbench}
 \label{fig:EclipseWorkbench}
 \end{figure}
@@ -1360,7 +1363,7 @@ Una vez que los mapeos o asignaciones son definidos, \gls{gmf} dispone de un \te
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.65]{./img/GMFWorkflow}
+\includegraphics[scale=.67]{./img/GMFWorkflow}
 \caption{Flujo de trabajo de GMF}
 \label{fig:GMFWorkflow}
 \end{figure}
@@ -1406,7 +1409,7 @@ Por otro lado, el \gls{ide} \gls{atl} provee un conjunto de herramientas estánd
 
 \subsection{Conceptos de ATL}
 
-Un modelo fuente se transforma en un modelo destino gracias a la definición de una transformación escrita en \gls{atl}, la cual a su vez es un modelo en sí mismo. Los modelos fuente, destino y la definición de la transformación, conforman sus respectivos meta-modelos y, a su vez, todos los meta-modelos se ajustan a \gls{mof} o Ecore. Esta relación se puede observar en la imagen \ref{ATL-concepts}.
+Un modelo fuente se transforma en un modelo destino gracias a la definición de una transformación escrita en \gls{atl}, la cual a su vez es un modelo en sí mismo. Los modelos fuente, destino y la definición de la transformación, conforman sus respectivos meta-modelos y, a su vez, todos los meta-modelos se ajustan a \gls{mof} o Ecore. Esta relación se puede observar en la imagen \ref{fig:ATL-concepts}.
 
 Una transformación \gls{atl} es unidireccional, o sea que trabaja sobre un modelo fuente de solo lectura y produce un modelo destino de solo escritura. Durante la ejecución de una transformación, el modelo fuente puede ser navegado pero no cambiado, en cambio el modelo destino no puede ser navegado.
 
@@ -1414,7 +1417,7 @@ Una transformación \gls{atl} es unidireccional, o sea que trabaja sobre un mode
 \centering
 \includegraphics[scale=.65]{./img/ATL-concepts}
 \caption{Modelos, transformaciones y sus meta-modelos}
-\label{ATL-concepts}
+\label{fig:ATL-concepts}
 \end{figure}
 
 
@@ -1440,7 +1443,7 @@ Finalizando este capítulo dedicado a las tecnologías que forman parte del trab
 
 \subsection{Introducción a QVT}
 
-\gls{qvt}, como ya se mencionó antes, es el estándar de \gls{omg} para la definición de transformaciones. La especificación de \gls{qvt} es híbrida, como en el caso de \gls{atl}, relacional (o declarativa) y operacional (o imperativa). Comprende tres diferentes lenguajes \gls{mmt}: dos lenguajes declarativos llamados Relations y Core, y un tercer lenguaje, de naturaleza imperativa, llamado Operational Mappings. Puede observarse la relación de los meta-modelos de cada uno de los lenguajes en la figura \ref{QVTmetamodelos}. 
+\gls{qvt}, como ya se mencionó antes, es el estándar de \gls{omg} para la definición de transformaciones. La especificación de \gls{qvt} es híbrida, como en el caso de \gls{atl}, relacional (o declarativa) y operacional (o imperativa). Comprende tres diferentes lenguajes \gls{mmt}: dos lenguajes declarativos llamados Relations y Core, y un tercer lenguaje, de naturaleza imperativa, llamado Operational Mappings. Puede observarse la relación de los meta-modelos de cada uno de los lenguajes en la figura \ref{fig:QVTmetamodelos}. 
 
 La naturaleza híbrida de este estándar fue introducida para abarcar distintos tipos de usuarios con diferentes necesidades, requisitos y hábitos.
 
@@ -1449,7 +1452,7 @@ La naturaleza híbrida de este estándar fue introducida para abarcar distintos 
 \centering
 \includegraphics[scale=.65]{./img/metamodelosQVT}
 \caption{Relación entre los meta-modelos QVT}
-\label{QVTmetamodelos}
+\label{fig:QVTmetamodelos}
 \end{figure}
 
 
@@ -1519,7 +1522,7 @@ En \cite{AmarLeblancCoulette} se describe un motor de \textit{traceability} al q
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=0.5]{./img/ETraceTool_Arquitectura}
+\includegraphics[scale=0.55]{./img/ETraceTool_Arquitectura}
 \caption{Arquitectura de la herramienta ETraceTool}
 \label{fig:ArqETraceTool}
 \end{figure}
@@ -1550,7 +1553,7 @@ Las principales funcionalidades ofrecidas por el framework son las siguientes:
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.6]{./img/Traceability_Metamodel}
+\includegraphics[scale=.62]{./img/Traceability_Metamodel}
 \caption{Meta-modelo de traceability}
 \label{fig:SPLMeta-modelo}
 \end{figure}
@@ -1610,7 +1613,7 @@ Trace-DSL que se detalla en el dibujo \ref{fig:DSLTrace}, tiene como elemento ra
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.8]{./img/Trace-DSL}
+\includegraphics[scale=.93]{./img/Trace-DSL}
 \caption{Lenguaje específico de dominio para traceability}
 \label{fig:DSLTrace}
 \end{figure}
@@ -1643,7 +1646,7 @@ Este meta-modelo toma las tracelinks de la entrada y la salida de una única tra
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.55]{./img/LocalTraceMetamodel}
+\includegraphics[scale=.58]{./img/LocalTraceMetamodel}
 \caption{Meta-modelo de tracelinks Local}
 \label{fig:LocalTraceMetamodel}
 \end{figure}
@@ -1660,7 +1663,7 @@ Este meta-modelo enlaza tracelinks locales de acuerdo a la cadena que define la 
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.6]{./img/GlobalTraceMetamodel}
+\includegraphics[scale=.62]{./img/GlobalTraceMetamodel}
 \caption{Meta-modelo de tracelinks Global}
 \label{fig:GlobalTraceMetamodel}
 \end{figure}
@@ -1677,7 +1680,7 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=.45]{./img/EjemploLocalGlobalMetamodel}
+\includegraphics[scale=.46]{./img/EjemploLocalGlobalMetamodel}
 \caption{Ejemplo de un modelo de tracelinks local y global}
 \label{fig:EjemploLocalGlobalMetamodel}
 \end{figure}
