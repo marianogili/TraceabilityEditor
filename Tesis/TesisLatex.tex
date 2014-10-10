@@ -1,9 +1,10 @@
 \documentclass[a4paper,12pt,oneside,spanish]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{babel,amsmath,graphicx,enumitem,amsfonts,appendix,listingsutf8,xcolor,framed,parskip,fancyhdr}
-\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
 \usepackage[acronym,toc,xindy]{glossaries}
 \usepackage[undotted]{minitoc}
+\usepackage{pdfpages}
 
 \addtolength{\textwidth}{.5cm}
 \addtolength{\textheight}{1cm}
@@ -161,7 +162,11 @@ como \gls{atl} también están construidos utilizando OCL}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Título %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\maketitle
+\begin{titlepage}
+
+\includepdf[pages={1}]{img/caratula.pdf}
+
+\end{titlepage}
 
 \frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -215,7 +220,7 @@ En la \gls{mde}, se define al modelo como artefacto principal que toma participa
 
 Cuando nos referimos al término artefacto, hablamos por ejemplo de un requerimiento de sistema, un componente de software, un caso de prueba, entre otros. El mantenimiento y la definición de las relaciones y dependencias que existen entre los artefactos no es una tarea fácil, constituyendo un desafío desde principios de 1970.
 
-En el presente documento de tesis se abordará el tema de \textit{\textbf{traceability}}, presentando un análisis de los distintos problemas que aún se encuentran abiertos a la investigación y al debate, como así también un conjunto de soluciones propuestas que encontré a lo largo de mi investigación. Finalmente, se expone un \textit{\textbf{esquema de traceability}} con el fin de aportar un avance en el desarrollo de este tema.
+En el presente documento de tesis se aborda el tema de \textit{traceability}, presentando un análisis de los distintos problemas que aún se encuentran abiertos a la investigación y al debate, como así también un conjunto de soluciones propuestas que encontré a lo largo de mi investigación. Finalmente, se expone un \textit{\textbf{esquema de traceability}} con el fin de aportar un avance en el desarrollo de este tema.
 
 
 
@@ -238,12 +243,13 @@ Asimismo, diseñar e implementar una herramienta que pueda ser integrada a otra 
 \chapter{Traceability}
 \markboth{Traceability}{}
 
-Hola
+\begin{quotation}
+En este primer capítulo, a modo de introducción se define el concepto de \textit{traceability} y se exponen, por un lado los beneficios de su aplicación, y por otro los inconvenientes que supone su implementación.
+\end{quotation}
 
 \bigskip
 
 \minitoc 
-
 
 \pagebreak
 
@@ -254,7 +260,7 @@ Según el Glosario Estándar de Términos de la Ingeniería de Software del \gls
 \small \textit{El grado o nivel en el cual una relación puede ser establecida entre dos o más productos del proceso de desarrollo, especialmente entre productos que tengan una relación de predecesor-sucesor o principal-secundario; por ejemplo el grado en el cual el requerimiento y el diseño de un componente de software se corresponden}.
 \end{quote}
 
-La definición anterior es utilizada principalmente por \textit{the requirements management community}. Nosotros, quienes necesitamos un punto de vista más cercano al contexto de \glssymbol{mdd}, usamos el término \textit{traceability} para describir 
+La definición anterior es utilizada principalmente por \textit{The Requirements Management Community}. Nosotros, quienes necesitamos un punto de vista más cercano al contexto de \glssymbol{mdd}, usamos el término \textit{traceability} para describir 
 \begin{quote}
 \small \textit{\textbf{cualquiera de las complejas relaciones lógicas que existen entre los distintos artefactos que se presentan en cualquier momento del ciclo de vida del desarrollo de software, el establecimiento de estas relaciones y/o el mantenimiento de las mismas}}.
 \end{quote}
@@ -288,7 +294,7 @@ A continuación se listan un conjunto de actividades que provienen de distintos 
 
 \begin{itemize}
 
-\item \textit{\textbf{Análisis de Sistemas}} Ayuda a entender la complejidad de un sistema, navegando el modelo de \textit{tracelinks} resultantes de la ejecución de las distintas cadenas de transformación.
+\item \textit{\textbf{Análisis de Sistemas}} Ayuda a entender la complejidad de un sistema, navegando el modelo de \textit{tracelinks} resultante de la ejecución de las distintas cadenas de transformación.
 
 \item \textit{\textbf{Análisis de Cobertura}} Por ejemplo en el momento de ejecución de los casos de prueba, el uso de \textit{traceability} es crucial a la hora de determinar si todos los requerimientos fueron cubiertos, es decir tenidos en cuenta.
 
@@ -319,7 +325,7 @@ Más allá de las numerosas ventajas que el uso de \textit{traceability} ha demo
 
 \item La \textit{\textbf{falta de heurísticas}} que determinen qué información de los \textit{links} deben ser grabados.
 
-\item Las discrepancias entre los distintos \textit{\textbf{roles}} que ejercen los usuarios de la información de \textit{traceability}, por ejemplo entre quienes crean los enlaces y quienes los interpretan.
+\item Las discrepancias entre los distintos \textit{\textbf{roles}} que ejercen los usuarios de la información de \textit{traceability}, por ejemplo entre quienes crean los \textit{tracelinks} y quienes los interpretan.
 
 \item La carencia de \textit{\textbf{soporte adecuado de las herramientas}}.
 
@@ -340,7 +346,11 @@ Más adelante en el capítulo \ref{cap:ProblemasDesafios} se presentarán con m�
 \markboth{Teoría de traceability}{}
 
 
+\begin{quotation}
+
 En el presente capítulo se aborda un conjunto de temas importantes de la teoría de \textit{traceability}, en la primera sección se explica el concepto de \textit{\textbf{nivel de granularidad}} de un \textit{tracelink}. Las siguientes dos secciones se refieren a la \textit{\textbf{semántica de traceability}}, introduciendo primero las dos distintas estrategias de \textit{\textbf{meta-modelos de traceability}} que existen, y luego, la compleja tarea de la definición de \textit{\textbf{tipos de tracelinks}}. En la sección siguiente, se presentan dos formas distintas de \textit{\textbf{generación de tracelinks}}, y en la última, las dos principales \textit{\textbf{estrategias de almacenamiento}}  de la información de \textit{traceability} que se pueden implementar. Estos temas han sido muy importantes y relevantes a la hora de definir el \textit{esquema de traceability} propuesto que se detalla en el capítulo \ref{cap:Propuesta}.
+
+\end{quotation}
 
 
 \bigskip
@@ -402,7 +412,7 @@ La definición del conjunto de \textit{tipos de tracelinks} por lo general es fu
 
 Esta propuesta comienza con una clasificación o meta-modelo de \textit{traceability} inicial, luego de forma iterativa e incremental esta clasificación se va refinando de acuerdo a las siguientes tareas: obtención, análisis y clasificación. En la obtención se identifica un \textit{tracelink} y sus relaciones. En el análisis, se abstraen las principales características del \textit{link} obtenido identificando las restricciones, sus relaciones y generalizaciones. Y por último, se define la clasificación a la que pertenece.
 
-El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el que se encuentran los siguientes conceptos fundamentales: \textit{\textbf{Artefact}}, \textit{\textbf{Tracelink}} y \textit{\textbf{Operation}}. \textit{Artefact} refiere tanto a artefactos \glssymbol{mde}, por ejemplo modelos específicos de dominio, como a no \glssymbol{mde}, por ejemplo hojas de cálculo. En \textit{Operation} se encierran las operaciones tanto manuales como automáticas que determinan qué información de \textit{traceability} debe almacenarse. Por último \textit{Tracelink} da inicio con la clasificación de \textit{\textbf{tracelink implícito}} (\textit{\textbf{Implicit Link}}) por un lado, y \textit{\textbf{tracelink explícito}} (\textit{\textbf{Explicit Link}}) por el otro, en donde \textit{tracelink implícito} refiere a los \textit{links} que son creados y manipulados por la aplicación de las operaciones \glssymbol{mde}, y por su parte \textit{tracelink explícito} refiere a los \textit{links} que se encuentran concretamente ya representados en los modelos.
+El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el que se encuentran los siguientes conceptos fundamentales: \textsf{Artefact}, \textsf{Tracelink} y \textsf{Operation}. \textsf{Artefact} refiere tanto a artefactos \glssymbol{mde}, por ejemplo modelos específicos de dominio, como a no \glssymbol{mde}, por ejemplo hojas de cálculo. En \textsf{Operation} se encierran las operaciones tanto manuales como automáticas que determinan qué información de \textit{traceability} debe almacenarse. Por último \textsf{Tracelink} da inicio con la clasificación de \textit{\textbf{tracelink implícito}} (\textsf{Implicit Link}) por un lado, y \textit{\textbf{tracelink explícito}} (\textsf{Explicit Link}) por el otro, en donde \textit{tracelink implícito} refiere a los \textit{links} que son creados y manipulados por la aplicación de las operaciones \glssymbol{mde}, y por su parte \textit{tracelink explícito} refiere a los \textit{links} que se encuentran concretamente ya representados en los modelos.
 
 
 \begin{figure}[hbtp]
@@ -415,7 +425,7 @@ El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el 
 \subsubsection{Clasificación de tracelinks implícitos}
 
 
-En esta jerarquía que se muestra en el dibujo \ref{fig:LinksImplicitos} se encuentran representados el conjunto de operaciones \glssymbol{mde} principales: \textit{Consulta} (\textit{\textbf{Query Link}}), \textit{Transformación modelo a modelo} (\textit{\textbf{M2M Link}}), \textit{Transformación modelo a texto} (\textit{\textbf{M2T Link}}), \textit{Composición} (\textit{\textbf{Composition Link}}), \textit{Actualización} (\textit{\textbf{Update Link}}), \textit{Creación} (\textit{\textbf{Creation Link}}), \textit{Eliminación} (\textit{\textbf{Delete Link}}), entre otras.
+En esta jerarquía que se muestra en el dibujo \ref{fig:LinksImplicitos} se encuentran representados el conjunto de operaciones \glssymbol{mde} principales: \textit{Consulta} (\textsf{Query Link}), \textit{Transformación modelo a modelo} (\textsf{M2M Link}), \textit{Transformación modelo a texto} (\textsf{M2T Link}), \textit{Composición} (\textsf{Composition Link}), \textit{Actualización} (\textsf{Update Link}), \textit{Creación} (\textsf{Creation Link}), \textit{Eliminación} (\textsf{Delete Link}), entre otras.
 
 
 \begin{figure}[hbtp]
@@ -428,15 +438,15 @@ En esta jerarquía que se muestra en el dibujo \ref{fig:LinksImplicitos} se encu
 
 \subsubsection{Clasificación de tracelinks explícitos}
 
-En un principio esta clasificación se encuentra dividida en dos grandes grupos representados por las siguientes clases básicas: \textit{Link modelo-modelo}, que representa por ejemplo las relaciones de dependencias \glssymbol{uml}, y \textit{Link modelo-artefacto}, conjunto al que pertenece por ejemplo el \textit{link} entre un modelo y un documento de texto que dicta un requerimiento. En el dibujo \ref{fig:LinksExplicitos} aparecen como \textit{\textbf{Model-Model Link}} y \textit{\textbf{Model-Artefact Link}} respectivamente.
+En un principio esta clasificación se encuentra dividida en dos grandes grupos representados por las siguientes clases básicas: \textit{Link modelo-modelo}, que representa por ejemplo las relaciones de dependencias \glssymbol{uml}, y \textit{Link modelo-artefacto}, conjunto al que pertenece por ejemplo el \textit{link} entre un modelo y un documento de texto que dicta un requerimiento. En el dibujo \ref{fig:LinksExplicitos} aparecen como \textsf{Model-Model Link} y \textsf{Model-Artefact Link} respectivamente.
 
-\textit{Model-Model Link} se encuentra a su vez subdividido en \textit{Link estático} (\textit{\textbf{Static Link}}) y \textit{Link dinámico} (\textit{\textbf{Dynamic Link}}). En el primero se representan relaciones estructurales que no cambian con el tiempo, en cambio en el segundo se representa información de los modelos que si puede llegar a variar.
+\textsf{Model-Model Link} se encuentra a su vez subdividido en \textit{Link estático} (\textsf{Static Link}) y \textit{Link dinámico} (\textsf{Dynamic Link}). En el primero se representan relaciones estructurales que no cambian con el tiempo, en cambio en el segundo se representa información de los modelos que si puede llegar a variar.
 
-Los \textit{links estáticos} pueden ser, o \textit{Links consistentes} (\textit{\textbf{Consistent-With}}) donde dos modelos deben mantenerse de acuerdo o consistentes entre sí, o \textit{Links dependientes} (\textit{\textbf{Dependency}}) donde la estructura y/o la semántica de un modelo depende de otro. Por su parte, los \textit{Links dependientes} pueden ser: \textit{Link de subtipo} (\textit{\textbf{Is-A}}), \textit{Link de referencia}, \textit{link de subconjunto}, de \textit{importación} y \textit{exportación}, de \textit{uso}, de \textit{refinamiento} (\textit{\textbf{Refines}}), etcétera.
+Los \textit{links estáticos} pueden ser, o \textit{Links consistentes} (\textsf{Consistent-With}) donde dos modelos deben mantenerse de acuerdo o consistentes entre sí, o \textit{Links dependientes} (\textsf{Dependency}) donde la estructura y/o la semántica de un modelo depende de otro. Por su parte, los \textit{Links dependientes} pueden ser: \textit{Link de subtipo} (\textsf{Is-A}), \textit{Link de referencia}, \textit{link de subconjunto}, de \textit{importación} y \textit{exportación}, de \textit{uso}, de \textit{refinamiento} (\textsf{Refines}), etcétera.
 
-Entre los \textit{links dinámicos} se incluyen los \textit{Links de llamadas} (\textit{\textbf{Calls}}) donde un modelo hace uso de métodos provistos por otro y los \textit{Links de notificación} (\textit{\textbf{Notifies}}) donde es necesario almacenar información que puede ser manejada automáticamente. También encontramos aquí las relaciones en tiempo de diseño como los \textit{Links de generación o construcción} (\textit{\textbf{Generates}}), que indican qué información de un modelo es usada para producir o deducir otro, y los \textit{Links de sincronización} (\textit{\textbf{Synchronized With}}), donde el comportamiento de un conjunto de modelos se realiza de forma sincronizada.
+Entre los \textit{links dinámicos} se incluyen los \textit{Links de llamadas} (\textsf{Calls}) donde un modelo hace uso de métodos provistos por otro y los \textit{Links de notificación} (\textsf{Notifies}) donde es necesario almacenar información que puede ser manejada automáticamente. También encontramos aquí las relaciones en tiempo de diseño como los \textit{Links de generación o construcción} (\textsf{Generates}), que indican qué información de un modelo es usada para producir o deducir otro, y los \textit{Links de sincronización} (\textsf{Synchronized With}), donde el comportamiento de un conjunto de modelos se realiza de forma sincronizada.
 
-El alcance de \textit{Model-Artefact Link} es muy amplio, por tal motivo en esta clasificación sólo se resumen un subconjunto de ejemplos, entre ellos: la relación \textit{satisface} (\textit{\textbf{Satisfies}}), que indica qué propiedad o requerimiento de un artefacto es satisfecha por un modelo; los \textit{Links de asignación} (\textit{\textbf{Allocated-To}}), usados cuando la información de un artefacto no modelo es asignada a un modelo específico que la representa; la relación de \textit{realización} (\textit{\textbf{Performs}}), que indica qué tarea descripta por un artefacto es llevada a cabo por el modelo; las relaciones \textit{explica} y \textit{respalda} (\textit{\textbf{Explains}} y \textit{\textbf{Supports}}) que dictan qué modelo se encuentra explicado y respaldado respectivamente por un artefacto no modelo.
+El alcance de \textsf{Model-Artefact Link} es muy amplio, por tal motivo en esta clasificación sólo se resumen un subconjunto de ejemplos, entre ellos: la relación \textit{satisface} (\textsf{Satisfies}), que indica qué propiedad o requerimiento de un artefacto es satisfecha por un modelo; los \textit{Links de asignación} (\textsf{Allocated-To}), usados cuando la información de un artefacto no modelo es asignada a un modelo específico que la representa; la relación de \textit{realización} (\textsf{Performs}), que indica qué tarea descripta por un artefacto es llevada a cabo por el modelo; las relaciones \textit{explica} y \textit{respalda} (\textsf{Explains} y \textsf{Supports}) que dictan qué modelo se encuentra explicado y respaldado respectivamente por un artefacto no modelo.
 
 \begin{figure}[hbtp]
 \centering
@@ -543,7 +553,9 @@ Un requisito previo para el \textit{almacenamiento externo de los tracelinks}, e
 \label{cap:ProblemasDesafios}
 \markboth{Problemas y Desafíos}{}
 
-En este capítulo vamos a describir, por un lado, los principales problemas que se presentan en el ámbito de \textit{traceability} (organizados por tema según el criterio presentado en \cite{Excellence}), y por otro, los grandes desafíos que surgen a partir de ellos. Desafíos que aún hoy, se encuentran abiertos a la investigación y al debate.
+\begin{quotation}
+En este capítulo se describe, por un lado, los principales problemas que se presentan en el ámbito de \textit{traceability} (organizados por tema según el criterio presentado en \cite{Excellence}), y por otro, los grandes desafíos que surgen a partir de ellos. Desafíos que aún hoy, se encuentran abiertos a la investigación y al debate.
+\end{quotation}
 
 
 \bigskip
@@ -873,8 +885,10 @@ En este capítulo vamos a describir, por un lado, los principales problemas que 
 \label{cap:Propuesta}
 \markboth{Manos a la obra}{}
 
+\begin{quotation}
 En este capítulo se introduce, desarrolla y fundamenta el \textit{esquema de
 traceability} propuesto en este trabajo de tesis. Del mismo modo se expone el prototipo de la herramienta construida que acompaña y ejemplifica las ideas del esquema presentado. Dicha herramienta, desarrollada como un \textit{\textbf{plug-in}} del \glssymbol{ide} Eclipse, asiste en la generación de \textit{tracelinks} sobre transformaciones de modelos existentes, y luego, presenta un mapa en el que se muestra la manera en que se relacionan las transformaciones, los \textit{links} y los artefactos orígenes y resultados de la ejecución de las transformaciones.
+\end{quotation}
 
 
 \bigskip
@@ -1155,7 +1169,9 @@ En esta área se muestran, en primer plano el editor tabular titulado \textsf{Li
 \chapter{Descripción de tecnologías}
 \markboth{Descripción de tecnologías}{}
 
+\begin{quotation}
 En este capítulo se realiza una breve introducción sobre cada una de las tecnologías que fueron utilizadas para la implementación del prototipo que hace uso del esquema propuesto de \textit{traceability}.
+\end{quotation}
 
 
 \bigskip
@@ -1497,7 +1513,9 @@ Para obtener más información introductoria consultar \cite{DSDPM}. Para más d
 \chapter{Trabajos relacionados}
 \markboth{Trabajos relacionados}{} 
 
+\begin{quotation}
 En este capítulo se realiza una breve introducción de un conjunto de trabajos que tienen relación con el tema que se desarrolla en la presente tesis, trabajos que encontré durante el proceso de aprendizaje e investigación.
+\end{quotation}
 
 
 \bigskip
@@ -1722,7 +1740,7 @@ Otras propuestas hacen uso del mecanismo de \textit{traceability} implícito de 
 \label{cap:QvtoTraceToTrace}
 \markboth{QvtoTrace{\textunderscore}To{\textunderscore}Trace}{}
 
-A continuación la definición completa de la transformación \gls{qvt} \textsf{QvtoTrace\_To\_Trace} implementada para el prototipo desarrollado en la presente Tesis:
+A continuación se expone la definición completa de la transformación \gls{qvt} \textsf{QvtoTrace\_To\_Trace} implementada en el prototipo que se desarrolló en la presente Tesis:
 
 
 \lstdefinelanguage{QVT}{
