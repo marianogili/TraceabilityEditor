@@ -940,7 +940,7 @@ Como se puede observar, el meta-modelo se puede dividir lógicamente en dos part
 
 \subsubsection{Clases fundamentales}
 
-Entre los elementos fundamentales se encuentra la clase \textsf{TraceLink}, la cual representa un tracelink. Esta clase está compuesta por un nombre que sirve como identificador (\textsf{name}), un tipo con el cual se determina su semántica (\textsf{type}), una referencia de la transformación a la que pertenece (\textsf{transformation}) la cual es optativa porque un tracelink puede o no ser producto de una transformación, y por último dos conjuntos de artefactos: el de los orígenes/fuentes (\textsf{sources}) y el de los objetivos/resultados (\textsf{targets}).
+Entre los elementos fundamentales se encuentra la clase \textsf{TraceLink}, la cual representa un \textit{tracelink}. Esta clase está compuesta por un nombre que sirve como identificador (\textsf{name}), un tipo con el cual se determina su semántica (\textsf{type}), una referencia de la transformación a la que pertenece (\textsf{transformation}) la cual es optativa porque un \textit{tracelink} puede o no ser producto de una transformación, y por último dos conjuntos de artefactos: el de los orígenes/fuentes (\textsf{sources}) y el de los objetivos/resultados (\textsf{targets}).
 
 Los artefactos se encuentran representados por la clase \textsf{Artefact}, cuya identificación también pasa por su nombre (\textsf{name}), su descripción también por un diccionario de clave-valor, y por último su semántica también puede ser definida por un tipo definido en la configuración.
 
@@ -1017,7 +1017,7 @@ De esta manera, ya podemos acceder al mapa de \textit{tracelinks} de la transfor
 \subsection{Arquitectura}
 
 
-El prototipo se encuentra definido por dos módulos: \textsf{QvtoTrace\_To\_Trace} que convierte la información de trazas \gls{qvt} en un modelo definido por el meta-modelo que usa el otro módulo, y \textsf{TraceEditor} que es el editor gráfico y tabular de la información de \textit{traceability}.
+El prototipo se encuentra definido por dos módulos: \textsf{QvtoTrace\_To\_Trace} que convierte la información de \textit{trazas} \gls{qvt} en un modelo definido por el meta-modelo que usa el otro módulo, y \textsf{TraceEditor} que es el editor gráfico y tabular de la información de \textit{traceability}.
 
 El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta se encuentra definido según el \textit{esquema de traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}. Por otro lado, el prototipo de la herramienta propuesta trabaja sólo sobre transformaciones \gls{qvt}, en el anexo \ref{cap:ATLTtraceability} se presentan algunas ideas de cómo implementar algo similar para transformaciones \gls{atl}.
 
@@ -1071,7 +1071,7 @@ Este editor que se puede observar en detalle en la imagen \ref{fig:TraceEditorGr
 \item \textsf{\textit{Artefactos destinos}} 
 \end{itemize} 
 
-Las transformaciones se muestran como cajas que contienen los \textit{tracelinks} que se generaron producto de ellas, y las trazas muestran sus relaciones con artefactos orígenes con una línea continua y con los artefactos destinos con una línea de trazos.
+Las transformaciones se muestran como cajas que contienen los \textit{tracelinks} que se generaron producto de ellas, y las \textit{trazas} muestran sus relaciones con artefactos orígenes con una línea continua y con los artefactos destinos con una línea de trazos.
 
 
 
@@ -1086,7 +1086,7 @@ Las transformaciones se muestran como cajas que contienen los \textit{tracelinks
 El editor permite:
 
 \begin{itemize}
-\item Crear nuevas trazas personalizadas
+\item Crear nuevas \textit{trazas} personalizadas
 \item Modificar los identificadores de las transformaciones
 \item Modificar los identificadores de los \textit{tracelinks}
 \item Definir nuevas relaciones entre los \textit{tracelinks} y los artefactos, y modificar las existentes 
@@ -1551,13 +1551,13 @@ En este capítulo se realiza una breve introducción de un conjunto de trabajos 
 
 \section{Un motor de traceability de transformación de modelos en la Ingeniería de Software}
 
-En \cite{AmarLeblancCoulette} se describe un motor de \textit{traceability} al que llamaron ETraceTool, que funciona como un plug-in de \textsf{Eclipse} programado mediante el paradigma orientado a aspectos con el fin de mantener aislada la generación de las tracelinks del código que pertenece a la transformación. El mismo trabaja sobre transformaciones escritas en \textsf{Java} usando la \gls{api} \gls{emf} \cite{EMF}. A continuación se listan sus principales características:
+En \cite{AmarLeblancCoulette} se describe un motor de \textit{traceability} al que llamaron \textsf{ETraceTool}, que funciona como un plug-in de \textsf{Eclipse} programado mediante el paradigma orientado a aspectos con el fin de mantener aislada la generación de los \textit{tracelinks} del código que pertenece a la transformación. El mismo trabaja sobre transformaciones escritas en \textsf{Java} usando la \gls{api} \gls{emf} \cite{EMF}. A continuación se listan sus principales características:
 
 \begin{itemize}
-\item El código de generación de tracelinks no es intrusivo en el código de la transformación;
-\item La generación de tracelinks tiene que ser activada explícitamente por el diseñador de la transformación;
-\item Los modelos de las tracelinks se encuentran aislados de los modelos origen y destino que forman parte de la transformación;
-\item Los modelos de las tracelinks pueden ser usados a diferentes niveles de granularidad.
+\item El código de generación de \textit{tracelinks} no es intrusivo en el código de la transformación;
+\item La generación de \textit{tracelinks} tiene que ser activada explícitamente por el diseñador de la transformación;
+\item Los modelos de los \textit{tracelinks} se encuentran aislados de los modelos origen y destino que forman parte de la transformación;
+\item Los modelos de los \textit{tracelinks} pueden ser usados a diferentes \textit{niveles de granularidad}.
 \end{itemize}
 
 \begin{figure}[hbtp]
@@ -1567,7 +1567,7 @@ En \cite{AmarLeblancCoulette} se describe un motor de \textit{traceability} al q
 \label{fig:ArqETraceTool}
 \end{figure}
 
-La arquitectura se puede apreciar en el dibujo \ref{fig:ArqETraceTool} y se explica de la siguiente manera, durante la transformación el plug-in captura un conjunto de eventos previamente identificados y clasificados gracias a la programación orientada a aspectos, luego el Aspect Tracer genera un modelo de tracelinks que conforma al meta-modelo de tracelinks anidado que se muestra en el dibujo \ref{fig:ETraceToolMeta-modelo}. Al final, el modelo de tracelinks generado puede ser serializado en un archivo \gls{xmi} o transformado a cualquier otro lenguaje mediante una transformación modelo-texto.
+La arquitectura se puede apreciar en el dibujo \ref{fig:ArqETraceTool} y se explica de la siguiente manera, durante la transformación el plug-in captura un conjunto de eventos previamente identificados y clasificados gracias a la programación orientada a aspectos, luego el \textsf{Aspect Tracer} genera un modelo de \textit{tracelinks} que conforma al \textit{meta-modelo de tracelinks} anidado que se muestra en el dibujo \ref{fig:ETraceToolMeta-modelo}. Al final, el modelo de \textit{tracelinks} generado puede ser serializado en un archivo \gls{xmi} o transformado a cualquier otro lenguaje mediante una transformación modelo-texto.
 
 \begin{figure}[hbtp]
 \centering
@@ -1576,19 +1576,19 @@ La arquitectura se puede apreciar en el dibujo \ref{fig:ArqETraceTool} y se expl
 \label{fig:ETraceToolMeta-modelo}
 \end{figure}
 
-El fundamento del diseño del meta-modelo de tracelinks anidado propuesto es para el caso en el que se presente una operación de transformación que llama o hace uso de otra transformación. En este caso el enlace compuesto permite separar las operaciones de bajo nivel (creación, eliminación, etc) de las operaciones de alto nivel (como una operación de refactorización).
+El fundamento del diseño del \textit{meta-modelo de tracelinks} anidado propuesto es para el caso en el que se presente una operación de transformación que llama o hace uso de otra transformación. En este caso el enlace compuesto permite separar las operaciones de bajo nivel (creación, eliminación, etc) de las operaciones de alto nivel (como una operación de refactorización).
 
 \section{Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line (SPL)}
 
-El framework presentado en \cite{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmaralAraujo} provee una plataforma abierta y flexible para crear enlaces de tracelinks entre distintos artefactos del desarrollo de una \gls{spl}. Pero, dado que el diseño del framework es genérico, éste también puede aplicarse o usarse en otras áreas del desarrollo \gls{spl}. El mismo ha sido diseñado e implementado basándose en el uso de técnicas dirigidas por modelos. El meta-modelo de \textit{traceability} descripto en el dibujo \ref{fig:SPLMeta-modelo} permite definir distintos tipos de enlaces de tracelinks entre los artefactos.
+El framework presentado en \cite{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmaralAraujo} provee una plataforma abierta y flexible para crear enlaces de \textit{tracelinks} entre distintos artefactos del desarrollo de una \gls{spl}. Pero, dado que el diseño del framework es genérico, éste también puede aplicarse o usarse en otras áreas del desarrollo \gls{spl}. El mismo ha sido diseñado e implementado basándose en el uso de técnicas dirigidas por modelos. El \textit{meta-modelo de traceability} descripto en el dibujo \ref{fig:SPLMeta-modelo} permite definir distintos tipos de enlaces de \textit{tracelinks} entre los artefactos.
 
 Las principales funcionalidades ofrecidas por el framework son las siguientes:
 
 \begin{enumerate}
-\item Creación y mantenimiento de los enlaces de tracelinks de artefactos existentes (modelos \glssymbol{uml}, código fuente, etc);
-\item Almacenamiento de los enlaces de tracelinks mediante el uso de un repositorio;
-\item Búsqueda de enlaces de tracelinks específicos usando consultas de tracelinks predefinidas o personalizadas;
-\item Visualización flexible de los resultados de las consultas de tracelinks por medio de diferentes tipos de vistas, como vista de árbol, grafo, tabla, etc.
+\item Creación y mantenimiento de los enlaces de \textit{tracelinks} de artefactos existentes (modelos \glssymbol{uml}, código fuente, etc);
+\item Almacenamiento de los enlaces de \textit{tracelinks} mediante el uso de un repositorio;
+\item Búsqueda de enlaces de \textit{tracelinks} específicos usando consultas predefinidas o personalizadas;
+\item Visualización flexible de los resultados de las consultas de \textit{tracelinks} por medio de diferentes tipos de vistas, como vista de árbol, grafo, tabla, etc.
 \end{enumerate}
 
 \begin{figure}[hbtp]
@@ -1603,12 +1603,12 @@ Las principales funcionalidades ofrecidas por el framework son las siguientes:
 Los elementos principales del meta-modelo son los siguientes:
 
 \begin{itemize}
-\item Un TraceableArtefact representa un artefacto que juega un rol en el ciclo del desarrollo. La granularidad del artefacto es arbitraria, puede ser un requerimiento, un diagrama \glssymbol{uml}, un elemento de dicho diagrama, una clase o un método de dicha clase. El artefacto es identificado mediante la propiedad resourceId.
-\item Un TraceLink es la abstracción de una transición de un artefacto a otro.
-\item Cada TraceableArtefact tiene asignada una instancia de TraceableArtefactType, éstos se pueden encontrar agrupados de forma jerárquica.
- \item Análogo a los tipos de los artefactos los TraceLinks también tienen un tipo (TraceLinkType), teniendo en cuenta que la semántica de una relación entre dos artefactos puede variar.
-\item Información adicional de artefactos y enlaces puede ser modelada mediante un contexto, el cual se encuentra representado por la clase TraceContext.
-\item Las restricciones que determinan el conjunto de artefactos válidos, sobre los cuales los tipos de enlaces también son válidos se encuentran modeladas mediante los elementos ScopeArea y Scope.
+\item Un \textsf{TraceableArtefact} representa un artefacto que juega un rol en el ciclo del desarrollo. La \textit{granularidad} del artefacto es arbitraria, puede ser un requerimiento, un diagrama \glssymbol{uml}, un elemento de dicho diagrama, una clase o un método de dicha clase. El artefacto es identificado mediante la propiedad \textsf{resourceId}.
+\item Un \textsf{TraceLink} es la abstracción de una transición de un artefacto a otro.
+\item Cada \textsf{TraceableArtefact} tiene asignada una instancia de \textsf{TraceableArtefactType}, éstos se pueden encontrar agrupados de forma jerárquica.
+ \item Análogo a los tipos de los artefactos los \textsf{TraceLinks} también tienen un tipo (\textsf{TraceLinkType}), teniendo en cuenta que la semántica de una relación entre dos artefactos puede variar.
+\item Información adicional de artefactos y enlaces puede ser modelada mediante un contexto, el cual se encuentra representado por la clase \textsf{TraceContext}.
+\item Las restricciones que determinan el conjunto de artefactos válidos, sobre los cuales los tipos de enlaces también son válidos se encuentran modeladas mediante los elementos \textsf{ScopeArea} y \textsf{Scope}.
 \end{itemize}
 
 \subsection{Arquitectura}
@@ -1623,10 +1623,10 @@ Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido 
 \end{figure}
 
 \begin{enumerate}
-\item Trace Register: este módulo provee mecanismos para crear y mantener (actualizar, eliminar y buscar) los enlaces de tracelinks;
-\item Trace Storage: define los mecanismos de almacenamiento para persistir dichos enlaces;
-\item Trace Query: este modulo permite crear y ejecutar consultas para buscar enlaces de tracelinks específicos que se encuentran previamente almacenados;
-\item Trace View: usado específicamente para la representación visual de los enlaces resultados de una consulta realizada.
+\item \textbf{Trace Register}: este módulo provee mecanismos para crear y mantener (actualizar, eliminar y buscar) los \textit{tracelinks};
+\item \textbf{Trace Storage}: define los mecanismos de almacenamiento para persistir dichos enlaces;
+\item \textbf{Trace Query}: este modulo permite crear y ejecutar consultas para buscar \textit{tracelinks} específicos que se encuentran previamente almacenados;
+\item \textbf{Trace View}: usado específicamente para la representación visual de los enlaces resultados de una consulta realizada.
 \end{enumerate}
 
 
@@ -1634,11 +1634,11 @@ Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido 
 
 En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que como resultado del conjunto de actividades que lo conforman, se genera una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc). Estos artefactos, aunque en esencia se encuentran relacionados lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo \glssymbol{uml}, etc), las relaciones lógicas nombradas se pierden, o mejor dicho no existen o pasan desapercibidas en la práctica. En otras palabras, se nos presenta el problema de la imposibilidad de \textit{traceability} que encontramos en la mayoría de las herramientas \gls{case} actuales.
 
-Como solución a este problema, se propone un ambiente de integración para las herramientas \gls{case} al que llamaron TiE - Tool Integration Environment, el cual basa su integración en la creación de enlaces de tracelinks entre los artefactos de las distintas herramientas.
+Como solución a este problema, se propone un ambiente de integración para las herramientas \gls{case} al que llamaron \textsf{TiE} - Tool Integration Environment, el cual basa su integración en la creación de \textit{tracelinks} entre los artefactos de las distintas herramientas.
 
 \section{Framework genérico de extracción de datos de traceability}
 
-En \cite{GrammelKastenholz} se propone un framework genérico de \textit{traceability} que toma como entrada una transformación de modelo y le aumenta arbitrariamente su funcionalidad con un mecanismo de \textit{traceability}. En el dibujo \ref{fig:GenericoArquitectura} se muestra un panorama de alto nivel de la arquitectura propuesta. Ésta se basa en una interfase genérica que provee un punto de conexión para cualquier motor de transformación de modelos, mediante una \gls{api} que se ofrece al ingeniero que conecta su motor de transformación con el motor de \textit{traceability} (oAW connector, \gls{qvt} connector). Como resultado el motor de transformación incluye la funcionalidad de \textit{traceability}. El modelo de datos que usa el framework es el lenguaje específico de dominio para \textit{traceability} que se denomina Trace-DSL.
+En \cite{GrammelKastenholz} se propone un framework genérico de \textit{traceability} que toma como entrada una transformación de modelo y le aumenta arbitrariamente su funcionalidad con un mecanismo de \textit{traceability}. En el dibujo \ref{fig:GenericoArquitectura} se muestra un panorama de alto nivel de la arquitectura propuesta. Ésta se basa en una interfase genérica que provee un punto de conexión para cualquier motor de transformación de modelos, mediante una \gls{api} que se ofrece al ingeniero que conecta su motor de transformación con el motor de \textit{traceability} (\textsf{oAW connector}, \textsf{QVT connector}). Como resultado el motor de transformación incluye la funcionalidad de \textit{traceability}. El modelo de datos que usa el framework es el lenguaje específico de dominio para \textit{traceability} que se denomina \textsf{Trace-DSL}.
 
 \begin{figure}[hbtp]
 \centering
@@ -1648,7 +1648,7 @@ En \cite{GrammelKastenholz} se propone un framework genérico de \textit{traceab
 \end{figure}
 
 
-Trace-DSL que se detalla en el dibujo \ref{fig:DSLTrace}, tiene como elemento raíz TraceModel. Artefact representa cualquier producto traceable generado durante el proceso de desarrollo, esto puede ser un requerimiento, una clase o un componente, como por ejemplo el método de una clase. Todo artefacto es identificado unívocamente mediante un identificador universal (UUID). TraceLink es una abstracción de una transición de un artefacto a otro dirigida por la relación desde-hacia entre artefactos origen y destino. TraceLink puede ser de una de las siguientes cuatro instancias: CreateTraceLink, QueryTraceLink, UpdateTraceLink y DeleteTraceLink.
+\textsf{Trace-DSL} que se detalla en el dibujo \ref{fig:DSLTrace}, tiene como elemento raíz \textsf{TraceModel}. \textsf{Artefact} representa cualquier producto \textit{traceable} generado durante el proceso de desarrollo, esto puede ser un requerimiento, una clase o un componente, como por ejemplo el método de una clase. Todo artefacto es identificado unívocamente mediante un identificador universal (\textsf{UUID}). \textsf{TraceLink} es una abstracción de una transición de un artefacto a otro dirigida por la relación desde-hacia entre artefactos origen y destino. \textsf{TraceLink} puede ser de una de las siguientes cuatro instancias: \textsf{CreateTraceLink}, \textsf{QueryTraceLink}, \textsf{UpdateTraceLink} y \textsf{DeleteTraceLink}.
 
 
 \begin{figure}[hbtp]
@@ -1658,7 +1658,7 @@ Trace-DSL que se detalla en el dibujo \ref{fig:DSLTrace}, tiene como elemento ra
 \label{fig:DSLTrace}
 \end{figure}
 
-Para la asignación de tipos a los artefactos y a los enlaces se usa el concepto de faceta, donde Trace-DSL asigna un conjunto de facetas (Facet) a cada uno de los mismos. Un ejemplo de faceta se da en el dibujo \ref{fig:FacetaCodigoFuente}. Además de lograr una solución simple al tipado de artefactos y enlaces, se obtiene un mecanismo fácilmente extensible y configurable al contexto donde se necesite aplicar \textit{traceability}.
+Para la asignación de tipos a los artefactos y a los enlaces se usa el concepto de faceta, donde \textsf{Trace-DSL} asigna un conjunto de facetas (\textsf{Facet}) a cada uno de los mismos. Un ejemplo de faceta se da en el dibujo \ref{fig:FacetaCodigoFuente}. Además de lograr una solución simple al tipado de artefactos y enlaces, se obtiene un mecanismo fácilmente extensible y configurable al contexto donde se necesite aplicar \textit{traceability}.
 
 \begin{figure}[hbtp]
 \centering
@@ -1671,18 +1671,18 @@ La configuración necesaria para hacer uso del framework implica:
 
 \begin{enumerate}
 \item Seleccionar las facetas requeridas para el escenario
-\item Configurar la granularidad (Granularity) y el alcance (Scope)
+\item Configurar la \textit{granularidad} (\textsf{Granularity}) y el alcance (\textsf{Scope})
 \end{enumerate}
 
-La configuración de la granularidad consiste en la especificación de qué tipos (definidos por las facetas) de artefactos y enlaces serán trazados para un escenario de \textit{traceability} particular. En cambio la configuración del alcance implica restringir los datos de \textit{traceability} a una combinación específica de valores. En otras palabras la primera solo chequea la existencia de facetas, mientras que la segunda adicionalmente examina las propiedades especificas de las mismas. Por ejemplo en el caso de TextFileFacet, puede ser necesario trazar solo archivos de textos con cierto nombre.
+La configuración de la \textit{granularidad} consiste en la especificación de qué tipos (definidos por las facetas) de artefactos y enlaces serán \textit{traceados} para un escenario de \textit{traceability} particular. En cambio la configuración del alcance implica restringir los datos de \textit{traceability} a una combinación específica de valores. En otras palabras la primera solo chequea la existencia de facetas, mientras que la segunda adicionalmente examina las propiedades especificas de las mismas. Por ejemplo en el caso de \textsf{TextFileFacet}, puede ser necesario \textit{tracear} solo archivos de textos con cierto nombre.
 
 \section{Traceability local y global}
 
-En la propuesta presentada en \cite{GlitiaEtienDumoulin} se emplea la idea de separación del proceso de \textit{traceability} en los siguientes niveles: \textit{traceability} en lo pequeño y \textit{traceability} en lo grande refiriéndose a los mismos como \textit{traceability} local y \textit{traceability} global respectivamente.
+En la propuesta presentada en \cite{GlitiaEtienDumoulin} se emplea la idea de separación del proceso de \textit{traceability} en los siguientes niveles: \textit{traceability} en lo pequeño y \textit{traceability} en lo grande refiriéndose a los mismos como \textit{\textbf{traceability local}} y \textit{\textbf{traceability global}} respectivamente.
 
 \subsection{Meta-modelo de Traceability Local}
 
-Este meta-modelo toma las tracelinks de la entrada y la salida de una única transformación. El meta-modelo está basado en el meta-modelo de tracelinks presentado en \cite{Jouault} y se muestra en el dibujo \ref{fig:LocalTraceMetamodel}.
+Este meta-modelo toma los \textit{tracelinks} de la entrada y la salida de una única transformación. El meta-modelo está basado en el \textit{meta-modelo de tracelinks} presentado en \cite{Jouault} y se muestra en el dibujo \ref{fig:LocalTraceMetamodel}.
 
 \begin{figure}[hbtp]
 \centering
@@ -1691,15 +1691,15 @@ Este meta-modelo toma las tracelinks de la entrada y la salida de una única tra
 \label{fig:LocalTraceMetamodel}
 \end{figure}
 
-El meta-modelo de tracelinks local contiene dos conceptos principales, Link y ElementRef, los cuales expresan según su definición que uno o más elementos orígenes son enlazados a uno o más elementos objetivos. ElementRef es una clase abstracta que representa elementos que pueden ser traceados: instancias de clases o valores de propiedades. Los valores de las propiedades son traceados usando PrimitivePropertyRef el cual apunta a la instancia contenedora de la propiedad y tiene el nombre de la misma. Este tratamiento especial para los tipos primitivos de \textsf{Java} se debe a que no existen instancias de ellos en el modelo. Por otro lado las propiedades que son tipadas mediante una clase normal, son traceadas mediante ClassRef.
+El \textit{meta-modelo de tracelinks local} contiene dos conceptos principales, \textsf{Link} y \textsf{ElementRef}, los cuales expresan según su definición que uno o más elementos orígenes son enlazados a uno o más elementos objetivos. \textsf{ElementRef} es una clase abstracta que representa elementos que pueden ser \textit{traceados}: instancias de clases o valores de propiedades. Los valores de las propiedades son \textit{traceados} usando \textsf{PrimitivePropertyRef} el cual apunta a la instancia contenedora de la propiedad y tiene el nombre de la misma. Este tratamiento especial para los tipos primitivos de \textsf{Java} se debe a que no existen instancias de ellos en el modelo. Por otro lado las propiedades que son tipadas mediante una clase normal, son traceadas mediante \textsf{ClassRef}.
 
-Para almacenar la información sobre las reglas de transformación aplicadas así como el caso particular de las cajas negras, se hace uso de los conceptos RuleRef y BlackBoxRef. En ambos casos, dado que pueden dar como resultado de su ejecución varios enlaces, se define la relación como uno a varios entre RuleRef y Link. RuleRef y BlackBoxRef son opcionales, en el caso de la primera solo se usa para realizar una depuración de las transformaciones, y la segunda si nos encontramos en la situación en la que ciertas partes del sistema no puede ser pública su implementación.
+Para almacenar la información sobre las reglas de transformación aplicadas así como el caso particular de las cajas negras, se hace uso de los conceptos \textsf{RuleRef} y \textsf{BlackBoxRef}. En ambos casos, dado que pueden dar como resultado de su ejecución varios enlaces, se define la relación como uno a varios entre \textsf{RuleRef} y \textsf{Link}. \textsf{RuleRef} y \textsf{BlackBoxRef} son opcionales, en el caso de la primera solo se usa para realizar una depuración de las transformaciones, y la segunda si nos encontramos en la situación en la que ciertas partes del sistema no puede ser pública su implementación.
 
-ElementRef tiene una referencia al objeto real de los modelos origen y destinos. Como estos modelos están implementados mediante \gls{emf}, la referencia EMFObject es un EObject del meta-modelo \textsf{Ecore}. La clase LocalTraces representa la raiz del modelo de tracelinks local y tiene un RuleContainer que se usa como contenedor de las reglas y dos ElementContainer usados para agrupar los ElementRef origen y destino respectivamente. Separar los elemento orígenes y destinos permite reducir los costos de búsquedas de elementos de entrada o salida.
+\textsf{ElementRef} tiene una referencia al objeto real de los modelos origen y destinos. Como estos modelos están implementados mediante \gls{emf}, la referencia \textsf{EMFObject} es un \textsf{EObject} del meta-modelo \textsf{Ecore}. La clase \textsf{LocalTraces} representa la raiz del modelo de \textit{tracelinks local} y tiene un \textsf{RuleContainer} que se usa como contenedor de las reglas y dos \textsf{ElementContainer} usados para agrupar los \textsf{ElementRef} origen y destino respectivamente. Separar los elemento orígenes y destinos permite reducir los costos de búsquedas de elementos de entrada o salida.
 
 \subsection{Meta-modelo de Traceability Global}
 
-Este meta-modelo enlaza tracelinks locales de acuerdo a la cadena que define la transformación. Un modelo de tracelinks global es el punto de entrada principal en el cual todas los modelos de tracelinks locales se encuentran, y describe qué modelo origen/objetivo de una transformación es el modelo objetivo/origen de la siguiente/previa transformación. En el dibujo \ref{fig:GlobalTraceMetamodel} se puede observar el meta-modelo.
+Este meta-modelo enlaza \textit{tracelinks} locales de acuerdo a la cadena que define la transformación. Un modelo de \textit{tracelinks global} es el punto de entrada principal en el cual todas los modelos de \textit{tracelinks} locales se encuentran, y describe qué modelo origen/objetivo de una transformación es el modelo objetivo/origen de la siguiente/previa transformación. En el dibujo \ref{fig:GlobalTraceMetamodel} se puede observar el meta-modelo.
 
 \begin{figure}[hbtp]
 \centering
@@ -1708,15 +1708,15 @@ Este meta-modelo enlaza tracelinks locales de acuerdo a la cadena que define la 
 \label{fig:GlobalTraceMetamodel}
 \end{figure}
 
-En este meta-modelo se engloban todas las tracelinks locales, los modelos de una cadena de transformación y la forma en que éstos se encuentran enlazados mediante TraceModel y LocalModel. Los modelos pueden ser compartidos entre distintas transformaciones, es decir uno puede ser producto de una transformación y también ser consumido por otra transformación.
+En este meta-modelo se engloban todas las \textit{tracelinks} locales, los modelos de una cadena de transformación y la forma en que éstos se encuentran enlazados mediante \textsf{TraceModel} y \textsf{LocalModel}. Los modelos pueden ser compartidos entre distintas transformaciones, es decir uno puede ser producto de una transformación y también ser consumido por otra transformación.
 
-Introducir este nivel global de tracelinks permite la navegación entre los modelos transformados y sus modelos de tracelinks locales, dando una mejor separación de lo que es en verdad la compleja información de \textit{traceability}, lo que permite además una mejor flexibilidad para la creación de las tracelinks y la explotación de las mismas. No utilizar esta idea de tracelinks globales tiene como consecuencia disponer de todas las tracelinks en un único modelo de toda una cadena de transformación, lo cual desencadenaría en el colapso para la creación y la consulta de dicho modelo.
+Introducir este nivel global de \textit{tracelinks} permite la navegación entre los modelos transformados y sus modelos de \textit{tracelinks} locales, dando una mejor separación de lo que es en verdad la compleja información de \textit{traceability}, lo que permite además una mejor flexibilidad para la creación de las \textit{tracelinks} y la explotación de las mismas. No utilizar esta idea de \textit{tracelinks} globales tiene como consecuencia disponer de todas las \textit{tracelinks} en un único modelo de toda una cadena de transformación, lo cual desencadenaría en el colapso para la creación y la consulta de dicho modelo.
 
 \subsection{¿Cómo trabaja el framework?}
 
-Uno de los principales objetivos de recolectar las tracelinks es dar luego la posibilidad a un usuario de inspeccionarlas realizando distintas consultas, una de ellas puede ser por ejemplo obtener los elementos relacionados a uno seleccionado. Este meta-modelo permite desde el modelo de tracelinks global navegar hacia los modelos de tracelinks locales y/o hacia a los modelos envueltos en cada una de las transformaciones. También desde el modelo de tracelinks local se puede navegar entre los elementos del modelo parte de la transformación.
+Uno de los principales objetivos de recolectar los \textit{tracelinks} es dar luego la posibilidad a un usuario de inspeccionarlas realizando distintas consultas, una de ellas puede ser por ejemplo obtener los elementos relacionados a uno seleccionado. Este meta-modelo permite desde el modelo de \textit{tracelinks global} navegar hacia los modelos de \textit{tracelinks locales} y/o hacia a los modelos envueltos en cada una de las transformaciones. También desde el modelo de \textit{tracelinks local} se puede navegar entre los elementos del modelo parte de la transformación.
 
-En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un modelo de tracelinks locales y globales producto de una cadena de transformación. En el ejemplo se representan los enlaces (Link) entre los elementos sin tener en cuenta las instancias de RuleRef para no sobrecargarlo.
+En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un modelo de \textit{tracelinks locales y globales} producto de una cadena de transformación. En el ejemplo se representan los enlaces (\textsf{Link}) entre los elementos sin tener en cuenta las instancias de \textsf{RuleRef} para no sobrecargarlo.
 
 \begin{figure}[hbtp]
 \centering
@@ -1749,11 +1749,11 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \chapter{Traceability en ATL}
 \label{cap:ATLTtraceability}
 
-La información de \textit{traceability} forma parte del lenguaje \gls{atl}, ésta ayuda en la interacción de cada regla de transformación cuando necesita tomar la salida de alguna otra regla por medio del mecanismo interno de \textit{traceability} implícito. Sin embargo, actualmente \gls{atl} ofrece un acceso muy limitado a dicha información de \textit{traceability} sólo por medio del método \textsf{\textit{resolveTemp()}}. Además, ésta información es eliminada ni bien la ejecución de la transformación termina. Dada las carencias enumeradas anteriormente, para lograr obtener alguna información de \textit{traceability} en esta tecnología es necesario implementar dicha funcionalidad.
+La información de \textit{traceability} forma parte del lenguaje \gls{atl}, ésta ayuda en la interacción de cada regla de transformación cuando necesita tomar la salida de alguna otra regla por medio del mecanismo interno de \textit{traceability} implícito. Sin embargo, actualmente \gls{atl} ofrece un acceso muy limitado a dicha información de \textit{traceability} sólo por medio del método \textsf{resolveTemp()}. Además, ésta información es eliminada ni bien la ejecución de la transformación termina. Dada las carencias enumeradas anteriormente, para lograr obtener alguna información de \textit{traceability} en esta tecnología es necesario implementar dicha funcionalidad.
 
-Existen varias propuestas de implementación, una de ellas, la que se presenta en \cite{Jouault} en donde se propone considerar como modelos tanto a los programas de transformación como a la información de \textit{traceability}, entonces mediante la definición de una nueva transformación modificar los programas para que generen la información de \textit{traceability} como una salida más al modelo resultado original. Con este enfoque, la generación de código de \textit{traceability} está claramente separada de la lógica de la transformación y la misma se puede agregar después de que un programa haya sido escrito. Por lo cual, es posible añadir el soporte para nuevos formatos o modificar la granularidad o rango de las tracelinks sin interferir con la lógica del programa.
+Existen varias propuestas de implementación, una de ellas, la que se presenta en \cite{Jouault} en donde se propone considerar como modelos tanto a los programas de transformación como a la información de \textit{traceability}, entonces mediante la definición de una nueva transformación modificar los programas para que generen la información de \textit{traceability} como una salida más al modelo resultado original. Con este enfoque, la generación de código de \textit{traceability} está claramente separada de la lógica de la transformación y la misma se puede agregar después de que un programa haya sido escrito. Por lo cual, es posible añadir el soporte para nuevos formatos o modificar la \textit{granularidad} o rango de las \textit{tracelinks} sin interferir con la lógica del programa.
 
-Otras propuestas hacen uso del mecanismo de \textit{traceability} implícito de \gls{atl}, copiando toda la información de tracelinks durante la ejecución de la transformación, o directamente persistiéndola y dejándola accesible en un archivo aparte, pero para todas estas implementaciones se requiere de modificaciones del motor de ejecución de \gls{atl}.
+Otras propuestas hacen uso del mecanismo de \textit{traceability} implícito de \gls{atl}, copiando toda la información de \textit{tracelinks} durante la ejecución de la transformación, o directamente persistiéndola y dejándola accesible en un archivo aparte, pero para todas estas implementaciones se requiere de modificaciones del motor de ejecución de \gls{atl}.
 
 
 
