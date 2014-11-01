@@ -15,6 +15,7 @@
 \renewcommand{\appendixtocname}{Anexos}
 \renewcommand{\appendixpagename}{Anexos}
 
+
 %\renewcommand{\mtctitle}{}
 
 % Sangría
@@ -954,17 +955,6 @@ Esta parte refleja la configuración necesaria para lograr un esquema adaptable 
 Un ejemplo de una configuración de \textit{tipos de tracelinks} puede ser la jerarquía propuesta en la sección \ref{sec:ClasificacionTraceability}, que se puede ver siguiendo los diagramas \ref{fig:ClasifInicial}, \ref{fig:LinksImplicitos} y \ref{fig:LinksExplicitos}.
 
 
-\subsection{Lo que no ofrece}
-
-A continuación se lista un conjunto de aspectos y/o funcionalidades que el esquema propuesto actual no ofrece o no tiene en cuenta:
-
-\begin{itemize}
-
-\item \textbf{\textit{funcionalidad de versionado}}: que permita navegar por los \textit{tracelinks} y refleje las modificaciones en el tiempo que se fueron realizando sobre los artefactos relacionados, a lo largo de la ejecución de todas las tareas que forman parte de la ingeniería de un software.
-
-\item \textbf{\textit{métodos de detección o información de errores}}: que determinen o informen cuándo un \textit{tracelink} es inválido.
-
-\end{itemize}
 
 
 \section{El prototipo}
@@ -1019,7 +1009,7 @@ De esta manera, ya podemos acceder al mapa de \textit{tracelinks} de la transfor
 
 El prototipo se encuentra definido por dos módulos: \textsf{QvtoTrace\_To\_Trace} que convierte la información de \textit{trazas} \gls{qvt} en un modelo definido por el meta-modelo que usa el otro módulo, y \textsf{TraceEditor} que es el editor gráfico y tabular de la información de \textit{traceability}.
 
-El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta se encuentra definido según el \textit{esquema de traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}. Por otro lado, el prototipo de la herramienta propuesta trabaja sólo sobre transformaciones \gls{qvt}, en el anexo \ref{cap:ATLTtraceability} se presentan algunas ideas de cómo implementar algo similar para transformaciones \gls{atl}.
+El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta se encuentra definido según el \textit{esquema de traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}. Por otro lado, el prototipo de la herramienta propuesta trabaja sólo sobre transformaciones \gls{qvt}, en la sección de trabajos futuros \ref{cap:ATLTtraceability} se presentan algunas ideas de cómo implementar algo similar para transformaciones \gls{atl}.
 
 
 
@@ -1536,7 +1526,7 @@ Para obtener más información introductoria consultar \cite{DSDPM}. Para más d
 \markboth{Trabajos relacionados}{} 
 
 \begin{quotation}
-En este capítulo se realiza una breve introducción de un conjunto de trabajos que tienen relación con el tema que se desarrolla en la presente tesis, trabajos que encontré durante el proceso de aprendizaje e investigación.
+En este capítulo se realiza una breve introducción de un conjunto de trabajos que tienen relación con el tema que se desarrolla en la presente tesis, trabajos que encontré durante el proceso de aprendizaje e investigación. Al final, en la última sección se encuentra un análisis que explica en qué se diferencia y/o qué agrega o intenta agregar la propuesta de la presente tesis con dichos trabajos.
 \end{quotation}
 
 
@@ -1549,7 +1539,8 @@ En este capítulo se realiza una breve introducción de un conjunto de trabajos 
 \pagebreak
 
 
-\section{Un motor de traceability de transformación de modelos en la Ingeniería de Software}
+\section{ETraceTool}
+\label{sec:ETraceTool}
 
 En \cite{AmarLeblancCoulette} se describe un motor de \textit{traceability} al que llamaron \textsf{ETraceTool}, que funciona como un \textit{plug-in} de \textsf{Eclipse} programado mediante el paradigma orientado a aspectos con el fin de mantener aislada la \textit{generación de los tracelinks} del código que pertenece a la transformación. El mismo trabaja sobre transformaciones escritas en \textsf{Java} usando la \gls{api} \gls{emf} \cite{EMF}. A continuación se listan sus principales características:
 
@@ -1726,6 +1717,19 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \end{figure}
 
 
+
+\section{Análisis final}
+
+
+\subsection*{ETraceTool}
+
+El motor \textsf{ETraceTool} visto en \ref{sec:ETraceTool} trabaja sólo sobre transformaciones escritas en \textsf{Java}, en cambio el prototipo implementado en esta tesis lo hace sobre transformaciones \gls{qvt}. Más aún, la arquitectura propuesta en la que se basa el prototipo, permite anexar nuevos módulos para que el mismo trabaje con cualquier tecnología y/o metodología de transformaciones de modelos, dado que el editor \textsl{TraceEditor} es un módulo independiente al que genera el modelo de entrada que usa.
+
+Por otro lado, el \textit{meta-modelo de tracelinks} que usa \textsf{ETraceTool} fue pensado para modelar \textit{tracelinks} anidados, cosa que no se tuvo en cuenta en el esquema de la presente tesis con el fin de no sacrificar la simplicidad del modelo buscada.
+
+
+
+
 \backmatter
 
 % encabezados
@@ -1737,16 +1741,34 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 \chapter{Conclusión}
 
 
+\addcontentsline{toc}{section}{Trabajos futuros}
+\section*{Trabajos futuros}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Anexos %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\appendix
-\clearpage
-\addappheadtotoc
-\appendixpage
+\begin{itemize}
 
-\chapter{Traceability en ATL}
+\item Mejorar el esquema de Traceability propuesto para ofrecer además una funcionalidad de versionado.
+
+\item Definir e implementar una solución para que la herramienta también trabaje sobre transformaciones ATL.
+
+\item Ofrecer en la herramienta TraceEditor mejores opciones de filtrado o vistas parciales para facilitar la navegación sobre modelos de tracelinks grandes y también por ejemplo en el análisis de cambios mostrando que artefactos se verían afectados si se modificaran un conjunto seleccionado.
+\end{itemize}
+
+
+\subsection*{Lo que no ofrece}
+
+A continuación se lista un conjunto de aspectos y/o funcionalidades que el esquema propuesto actual no ofrece o no tiene en cuenta:
+
+\begin{itemize}
+
+\item \textbf{\textit{funcionalidad de versionado}}: que permita navegar por los \textit{tracelinks} y refleje las modificaciones en el tiempo que se fueron realizando sobre los artefactos relacionados, a lo largo de la ejecución de todas las tareas que forman parte de la ingeniería de un software.
+
+\item \textbf{\textit{métodos de detección o información de errores}}: que determinen o informen cuándo un \textit{tracelink} es inválido.
+
+\end{itemize}
+
+
+\addcontentsline{toc}{subsection}{Traceability en ATL}
+\subsection*{Traceability en ATL}
 \label{cap:ATLTtraceability}
 
 La información de \textit{traceability} forma parte del lenguaje \gls{atl}, ésta ayuda en la interacción de cada regla de transformación cuando necesita tomar la salida de alguna otra regla por medio del mecanismo interno de \textit{traceability implícito}. Sin embargo, actualmente \gls{atl} ofrece un acceso muy limitado a dicha información de \textit{traceability} sólo por medio del método \textsf{resolveTemp()}. Además, ésta información es eliminada ni bien la ejecución de la transformación termina. Dada las carencias enumeradas anteriormente, para lograr obtener alguna información de \textit{traceability} en esta tecnología es necesario implementar dicha funcionalidad.
@@ -1755,6 +1777,14 @@ Existen varias propuestas de implementación, una de ellas, la que se presenta e
 
 Otras propuestas hacen uso del mecanismo de \textit{traceability implícito} de \gls{atl}, copiando toda la información de \textit{tracelinks} durante la ejecución de la transformación, o directamente persistiéndola y dejándola accesible en un archivo aparte, pero para todas estas implementaciones se requiere de modificaciones del motor de ejecución de \gls{atl}.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Anexos %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\clearpage
+\addappheadtotoc
+\appendixpage
 
 
 
