@@ -1628,6 +1628,7 @@ En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proces
 Como solución a este problema, se propone un ambiente de integración para las herramientas \gls{case} al que llamaron \textsf{TiE} - Tool Integration Environment, el cual basa su integración en la creación de \textit{tracelinks} entre los artefactos de las distintas herramientas.
 
 \section{Framework genérico de extracción de datos de traceability}
+\label{sec:Trace-DSL}
 
 En \cite{GrammelKastenholz} se propone un framework genérico de \textit{traceability} que toma como entrada una transformación de modelo y le aumenta arbitrariamente su funcionalidad con un mecanismo de \textit{traceability}. En el dibujo \ref{fig:GenericoArquitectura} se muestra un panorama de alto nivel de la arquitectura propuesta. Ésta se basa en una interfase genérica que provee un punto de conexión para cualquier motor de transformación de modelos, mediante una \gls{api} que se ofrece al ingeniero que conecta su motor de transformación con el motor de \textit{traceability} (\textsf{oAW connector}, \textsf{QVT connector}). Como resultado el motor de transformación incluye la funcionalidad de \textit{traceability}. El modelo de datos que usa el framework es el lenguaje específico de dominio para \textit{traceability} que se denomina \textsf{Trace-DSL}.
 
@@ -1689,6 +1690,7 @@ Para almacenar la información sobre las reglas de transformación aplicadas as�
 \textsf{ElementRef} tiene una referencia al objeto real de los modelos origen y destinos. Como estos modelos están implementados mediante \gls{emf}, la referencia \textsf{EMFObject} es un \textsf{EObject} del meta-modelo \textsf{Ecore}. La clase \textsf{LocalTraces} representa la raiz del modelo de \textit{tracelinks local} y tiene un \textsf{RuleContainer} que se usa como contenedor de las reglas y dos \textsf{ElementContainer} usados para agrupar los \textsf{ElementRef} origen y destino respectivamente. Separar los elemento orígenes y destinos permite reducir los costos de búsquedas de elementos de entrada o salida.
 
 \subsection{Meta-modelo de Traceability Global}
+\label{subsec:TraceabilityGlobal}
 
 Este meta-modelo enlaza \textit{tracelinks} locales de acuerdo a la cadena que define la transformación. Un modelo de \textit{tracelinks global} es el punto de entrada principal en el cual todas los modelos de \textit{tracelinks} locales se encuentran, y describe qué modelo origen/objetivo de una transformación es el modelo objetivo/origen de la siguiente/previa transformación. En el dibujo \ref{fig:GlobalTraceMetamodel} se puede observar el meta-modelo.
 
@@ -1727,6 +1729,25 @@ El motor \textsf{ETraceTool} visto en \ref{sec:ETraceTool} trabaja sólo sobre t
 
 Por otro lado, el \textit{meta-modelo de tracelinks} que usa \textsf{ETraceTool} fue pensado para modelar \textit{tracelinks} anidados, cosa que no se tuvo en cuenta en el esquema de la presente tesis con el fin de no sacrificar la simplicidad del modelo buscada.
 
+
+\subsection*{Framework de Traceability para el desarrollo de SPL}
+
+Este framework trabaja sobre un \textit{meta-modelo de tracelinks} que no tiene en cuenta las transformaciones de modelo que se usa en el paradigma de \glssymbol{mdd}, dado que el mismo fue pensado para el uso sobre familias de software independientemente de la metodología de desarrollo que utilizaron en cada una de ellas, posiblemente mediante la definición de un contexto especial se pueda lograr plasmar dicha información para el caso del paradigma \glssymbol{mdd}.
+
+
+\subsection*{TiE}
+
+El esquema propuesto en la tesis sirve para la implementación de servicios de \textit{traceability} que el ambiente de integración de herramientas \gls{case}, llamado \textsf{TiE} y presentado en \cite{KlarRoseSchurr}, desea implementar en futuras versiones.
+
+
+\subsection*{Trace-DSL}
+
+El meta-modelo que usa el framework presentado en la sección \ref{sec:Trace-DSL} al que llamaron \textsl{Trace-DSL} se diferencia del realizado en el presente trabajo principalmente en la configuración que necesitan. En el primero, se debe configurar la información de \textit{trace granularity}, el alcance y el conjunto de tipos de los artefactos y los \textit{tracelinks}. En cambio en el segundo, sólo se debe configurar el conjunto de tipos.
+
+
+\subsection*{Traceability local y global}
+
+El \textit{meta-modelo de tracelinks} local (imagen \ref{fig:LocalTraceMetamodel}) es muy similar al de la presente tesis, pero no tuvo en cuenta el tipado de los \textit{links} y los artefactos. La idea de \textit{traceability global} visto en \ref{subsec:TraceabilityGlobal} es muy conveniente para organizar mucho mejor la información compleja que se genera producto de la ejecución de una cadena de transformación, queda como para definir en una implementación futura.
 
 
 
