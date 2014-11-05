@@ -1,7 +1,7 @@
-\documentclass[a4paper,12pt,oneside,spanish]{book}
+\documentclass[a4paper,12pt,oneside,spanish,openright]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{babel,amsmath,graphicx,enumitem,amsfonts,appendix,listingsutf8,xcolor,framed,parskip,fancyhdr}
-\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+\usepackage[colorlinks=true,linkcolor=black, urlcolor=black, citecolor=black]{hyperref}
 \usepackage[acronym,toc,xindy]{glossaries}
 \usepackage[undotted]{minitoc}
 \usepackage{pdfpages}
@@ -22,13 +22,13 @@
 \setlength{\parindent}{1.5em}
 
 % encabezados
-\lhead[]{\leftmark}
+\lhead[\leftmark]{}
 \chead[]{}
-\rhead[]{}
+\rhead[]{\leftmark}
 \renewcommand{\headrulewidth}{0.5pt}
 
 % pie de pagina
-\lfoot[]{}
+\lfoot[\thepage]{}
 \cfoot[]{}
 \rfoot[]{\thepage}
 \renewcommand{\footrulewidth}{0.5pt}
@@ -170,6 +170,7 @@ como \gls{atl} también están construidos utilizando OCL}
 \end{titlepage}
 
 \frontmatter
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Índices %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -177,13 +178,13 @@ como \gls{atl} también están construidos utilizando OCL}
 \tableofcontents
 \addtocontents{toc}{~\hfill\textbf{Página}\par}
 \mtcaddchapter
-\clearpage
+\cleardoublepage %\clearpage %for openright
 
 \renewcommand\listfigurename{Índice de imágenes}
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 \addtocontents{lof}{~\hfill\textbf{Página}\par}
-\clearpage
+\cleardoublepage %\clearpage %for openright
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Agradecimientos %%%
@@ -1738,7 +1739,7 @@ Este framework trabaja sobre un \textit{meta-modelo de tracelinks} que no tiene 
 
 \subsection*{TiE}
 
-El esquema propuesto en la tesis sirve para la implementación de servicios de \textit{traceability} que el ambiente de integración de herramientas \gls{case}, llamado \textsf{TiE} y presentado en \cite{KlarRoseSchurr}, desea implementar en futuras versiones.
+El esquema propuesto en la tesis sirve para la implementación de servicios de \textit{traceability} que en el ambiente de integración de herramientas \gls{case}, llamado \textsf{TiE} y presentado en \cite{KlarRoseSchurr}, se desea implementar en futuras versiones.
 
 
 \subsection*{Trace-DSL}
@@ -1750,7 +1751,7 @@ El meta-modelo que usa el framework presentado en la sección \ref{sec:Trace-DSL
 
 El \textit{meta-modelo de tracelinks} local (imagen \ref{fig:LocalTraceMetamodel}) es muy similar al de la presente tesis, pero no tuvo en cuenta el tipado de los \textit{links} y los artefactos. 
 
-La idea de \textit{traceability global} visto en \ref{subsec:TraceabilityGlobal} es muy conveniente para organizar mucho mejor la información compleja que se genera producto de la ejecución de una cadena de transformaciones. Este concepto no se aplica aún en el esquema propuesto de esta tesis, quedando su definición pendiente para una futura implementación.
+La idea de \textit{traceability global} vista en \ref{subsec:TraceabilityGlobal} resulta muy conveniente si se desea organizar eficientemente la compleja información que se genera producto de la ejecución de una cadena de transformaciones. Este concepto no se aplica aún en el esquema propuesto en esta tesis, quedando su definición pendiente para una futura implementación.
 
 
 
@@ -1764,14 +1765,13 @@ La idea de \textit{traceability global} visto en \ref{subsec:TraceabilityGlobal}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Conclusión}
 
-Se ha visto en el presente trabajo de tesis que \textit{traceability} es una característica muy importante en el ámbito de \glssymbol{mdd}, también se enumeraron los problemas que aún están presentes y se encuentran en debate, y los desafíos que surgen de ellos. Para estos problemas y desafíos se han propuesto una gran cantidad soluciones con una amplia variedad de metodologías e implementaciones distintas, en esta tesis sólo se han mostrado un subconjunto de muchas que fueron encontradas durante el proceso de aprendizaje e investigación del tema.
+Se ha visto en el presente trabajo de tesis que \textit{traceability} es una característica muy importante en el ámbito de \glssymbol{mdd}, de igual modo se han enumerado los problemas que aún se encuentran vigentes y en debate, como así también los desafíos que surgen a partir de ellos. Frente a dichos problemas y desafíos se han propuesto una gran cantidad soluciones con una amplia variedad de metodologías e implementaciones distintas, en esta tesis sólo se ha expuesto un subconjunto de entre aquellas que fueron halladas durante el proceso de investigación y estudio del tema.
 
-Esta tesis propone un \textit{esquema de traceability} que se basa en la definición de un \textit{meta-modelo de tracelinks} bien simple y acotado, que denota los conceptos más relevantes y mínimos necesarios para lograr capturar las relaciones que existen entre los artefactos de cualquier modelo de cualquier dominio que se puede presentar en un proceso de desarrollo dirigido por modelos, es decir un \textit{esquema de propósito general}.
+En este trabajo de tesis se ha propuesto un \textit{esquema de traceability} basado en la definición de un \textit{meta-modelo de tracelinks} sencillo y acotado, que denota los conceptos más relevantes que se necesitan mínimamente para lograr capturar las relaciones que existen entre los artefactos de cualquier modelo y/o dominio que se pueden presentar en un proceso de desarrollo dirigido por modelos, es decir un \textit{esquema de propósito general}.
 
-Basado en este esquema, se implementó un prototipo de una herramienta que trabaja en el entorno \textsf{Eclipse} que permite, por un lado, obtener los \textit{tracelinks} generados por una transformación, y por otro, mostrar estos \textit{links} y permitir analizarlos y modificarlos.
+Basado en este esquema, se ha implementado un prototipo de una herramienta que trabaja en el entorno \textsf{Eclipse} que permite, por un lado, obtener los \textit{tracelinks} generados por una transformación, y por otro, mostrar estos \textit{links} posibilitando su análisis y modificación.
 
-Todo proceso de desarrollo debería hacer uso de una metodología de \textit{traceability}, que muestre de forma precisa la relación existente entre todos los artefactos que surgen y forman parte del mismo, y durante el ciclo de vida completo del software. Como se ha visto en los capítulos iniciales del presente trabajo, la información que se obtenga de un servicio que trabaje con \textit{traceability} es muy valioso y hará más difícil que un proyecto falle.
-
+Todo proceso de desarrollo debería hacer uso, durante el ciclo de vida completo del software, de una metodología de \textit{traceability} que muestre de forma precisa la relación existente entre todos los artefactos que surgen y forman parte del mismo. Como se ha visto en los capítulos iniciales del presente trabajo, la información que se obtenga de un buen y actualizado servicio de \textit{traceability} es muy valiosa, ya que al disponer de ella en un proyecto será más difícil que el mismo tienda al fracaso.
 
 
 
@@ -1805,7 +1805,7 @@ A continuación se lista un conjunto de aspectos y/o funcionalidades que el esqu
 
 La información de \textit{traceability} forma parte del lenguaje \gls{atl}, ésta ayuda en la interacción de cada regla de transformación cuando necesita tomar la salida de alguna otra regla por medio del mecanismo interno de \textit{traceability implícito}. Sin embargo, actualmente \gls{atl} ofrece un acceso muy limitado a dicha información de \textit{traceability} sólo por medio del método \textsf{resolveTemp()}. Además, ésta información es eliminada ni bien la ejecución de la transformación termina. Dada las carencias enumeradas anteriormente, para lograr obtener alguna información de \textit{traceability} en esta tecnología es necesario implementar dicha funcionalidad.
 
-Existen varias propuestas de implementación, una de ellas, la que se presenta en \cite{Jouault} en donde se propone considerar como modelos tanto a los programas de transformación como a la información de \textit{traceability}, entonces mediante la definición de una nueva transformación modificar los programas para que generen la información de \textit{traceability} como una salida más al modelo resultado original. Con este enfoque, la generación de código de \textit{traceability} está claramente separada de la lógica de la transformación y la misma se puede agregar después de que un programa haya sido escrito. Por lo cual, es posible añadir el soporte para nuevos formatos o modificar la granularidad o rango de las \textit{tracelinks} sin interferir con la lógica del programa.
+Existen varias propuestas de implementación, una de ellas, la que se presenta en \cite{Jouault} en donde se plantea la idea de considerar como modelos tanto a los programas de transformación como a la información de \textit{traceability}, entonces mediante la definición de una nueva transformación modificar los programas para que generen la información de \textit{traceability} como una salida más al modelo resultado original. Con este enfoque, la generación de código de \textit{traceability} está claramente separada de la lógica de la transformación y la misma se puede agregar después de que un programa haya sido escrito. Por lo cual, es posible añadir el soporte para nuevos formatos o modificar la granularidad o rango de las \textit{tracelinks} sin interferir con la lógica del programa.
 
 Otras propuestas hacen uso del mecanismo de \textit{traceability implícito} de \gls{atl}, copiando toda la información de \textit{tracelinks} durante la ejecución de la transformación, o directamente persistiéndola y dejándola accesible en un archivo aparte, pero para todas estas implementaciones se requiere de modificaciones del motor de ejecución de \gls{atl}.
 
@@ -1815,13 +1815,13 @@ Otras propuestas hacen uso del mecanismo de \textit{traceability implícito} de 
 
 \begin{itemize}
 
-\item Mejorar el \textit{esquema de traceability} propuesto para ofrecer además: la funcionalidad de versionado, los métodos de detección e información de errores y la organización de los \textit{tracelinks} según la ejecución de una cadena de transformación vistos en \textbf{Lo que el esquema no ofrece}.
+\item Mejorar el \textit{esquema de traceability} propuesto para ofrecer además: la funcionalidad de versionado, los métodos de detección e información de errores y la organización de los \textit{tracelinks} según la ejecución de una cadena de transformaciones vista en la sección \textbf{Lo que el esquema no ofrece}.
 
 \item Definir e implementar una solución para que la herramienta también trabaje sobre transformaciones \gls{atl}, tomando como referencia los ejemplos vistos antes en \textbf{Traceability en ATL}.
 
-\item Ofrecer en la herramienta \textsf{TraceEditor} mejores opciones de filtrado o vistas parciales, con el fin de facilitar la navegación sobre modelos de \textit{tracelinks} grandes y también, por ejemplo en el proceso de análisis de cambios, mostrando qué artefactos se verían afectados si se modificaran un conjunto seleccionado.
+\item Ofrecer en la herramienta \textsf{TraceEditor} mejores opciones de filtrado o vistas parciales, con el fin de facilitar la navegación sobre modelos de \textit{tracelinks} extensos, como así también, por ejemplo en el proceso de análisis de cambios, para mostrar qué artefactos se verían afectados si se modificara un conjunto seleccionado.
 
-\item Mejorar la identificación semántica de un artefacto en la herramienta \textsf{TraceEditor}, con el fin de que sea más fácil para una persona reconocer fácilmente cada uno de los artefactos.
+\item Mejorar la identificación semántica de un artefacto en la herramienta \textsf{TraceEditor}, con el fin de facilitar a una persona su reconocimiento.
 
 \end{itemize}
 
@@ -1897,7 +1897,7 @@ basicstyle=\footnotesize]{QvtoTrace_To_Trace.qvto}
 \clearpage
 \addcontentsline{toc}{chapter}{Bibliografía}
 \bibliographystyle{acm}
-\begin{thebibliography}{99}
+\begin{thebibliography}{26}
 
 
 \bibitem{IEEE} IEEE Standard Glossary of Software Engineering Terminology. Number Std 610.12-1990, IEEE (1990).
