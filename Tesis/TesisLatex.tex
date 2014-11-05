@@ -1009,7 +1009,7 @@ De esta manera, ya podemos acceder al mapa de \textit{tracelinks} de la transfor
 
 El prototipo se encuentra definido por dos módulos: \textsf{QvtoTrace\_To\_Trace} que convierte la información de \textit{trazas} \gls{qvt} en un modelo definido por el meta-modelo que usa el otro módulo, y \textsf{TraceEditor} que es el editor gráfico y tabular de la información de \textit{traceability}.
 
-El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta se encuentra definido según el \textit{esquema de traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}. Por otro lado, el prototipo de la herramienta propuesta trabaja sólo sobre transformaciones \gls{qvt}, en la sección de trabajos futuros \ref{cap:ATLTtraceability} se presentan algunas ideas de cómo implementar algo similar para transformaciones \gls{atl}.
+El modelo del mapa de \textit{tracelinks} (o meta-modelo) que usa la herramienta se encuentra definido según el \textit{esquema de traceability} propuesto y presentado en \ref{sec:EsquemaTraceability}. Por otro lado, el prototipo de la herramienta propuesta trabaja sólo sobre transformaciones \gls{qvt}, en el capítulo de \textbf{Trabajos futuros} \ref{cap:ATLTtraceability} se presentan algunas ideas de cómo implementar algo similar para transformaciones \gls{atl}.
 
 
 
@@ -1669,6 +1669,7 @@ La configuración necesaria para hacer uso del framework implica:
 La configuración de la granularidad consiste en la especificación de qué tipos (definidos por las facetas) de artefactos y enlaces serán \textit{traceados} para un escenario de \textit{traceability} particular. En cambio la configuración del alcance implica restringir los datos de \textit{traceability} a una combinación específica de valores. En otras palabras la primera solo chequea la existencia de facetas, mientras que la segunda adicionalmente examina las propiedades especificas de las mismas. Por ejemplo en el caso de \textsf{TextFileFacet}, puede ser necesario \textit{tracear} solo archivos de textos con cierto nombre.
 
 \section{Traceability local y global}
+\label{sec:TraceabilityLocalGlobal}
 
 En la propuesta presentada en \cite{GlitiaEtienDumoulin} se emplea la idea de separación del proceso de \textit{traceability} en los siguientes niveles: \textit{traceability} en lo pequeño y \textit{traceability} en lo grande refiriéndose a los mismos como \textit{\textbf{traceability local}} y \textit{\textbf{traceability global}} respectivamente.
 
@@ -1720,12 +1721,12 @@ En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un m
 
 
 
-\section{Análisis final}
+\section{Análisis de los trabajos relacionados}
 
 
 \subsection*{ETraceTool}
 
-El motor \textsf{ETraceTool} visto en \ref{sec:ETraceTool} trabaja sólo sobre transformaciones escritas en \textsf{Java}, en cambio el prototipo implementado en esta tesis lo hace sobre transformaciones \gls{qvt}. Más aún, la arquitectura propuesta en la que se basa el prototipo, permite anexar nuevos módulos para que el mismo trabaje con cualquier tecnología y/o metodología de transformaciones de modelos, dado que el editor \textsl{TraceEditor} es un módulo independiente al que genera el modelo de entrada que usa.
+El motor \textsf{ETraceTool} visto en \ref{sec:ETraceTool} trabaja sólo sobre transformaciones escritas en \textsf{Java}, en cambio el prototipo implementado en esta tesis lo hace sobre transformaciones \gls{qvt}. Más aún, la arquitectura propuesta en la que se basa el prototipo, permite anexar nuevos módulos para que el mismo trabaje con cualquier tecnología y/o metodología de transformaciones de modelos, dado que el editor \textsf{TraceEditor} es un módulo independiente al que genera el modelo de entrada que usa.
 
 Por otro lado, el \textit{meta-modelo de tracelinks} que usa \textsf{ETraceTool} fue pensado para modelar \textit{tracelinks} anidados, cosa que no se tuvo en cuenta en el esquema de la presente tesis con el fin de no sacrificar la simplicidad del modelo buscada.
 
@@ -1742,7 +1743,7 @@ El esquema propuesto en la tesis sirve para la implementación de servicios de \
 
 \subsection*{Trace-DSL}
 
-El meta-modelo que usa el framework presentado en la sección \ref{sec:Trace-DSL} al que llamaron \textsl{Trace-DSL} se diferencia del realizado en el presente trabajo principalmente en la configuración que necesitan. En el primero, se debe configurar la información de \textit{trace granularity}, el alcance y el conjunto de tipos de los artefactos y los \textit{tracelinks}. En cambio en el segundo, sólo se debe configurar el conjunto de tipos.
+El meta-modelo que usa el framework presentado en la sección \ref{sec:Trace-DSL} al que llamaron \textsf{Trace-DSL} se diferencia del realizado en el presente trabajo principalmente en la configuración que necesitan. En el primero, se debe configurar la información de \textit{trace granularity}, el alcance y el conjunto de tipos de los artefactos y los \textit{tracelinks}. En cambio en el segundo, sólo se debe configurar el conjunto de tipos.
 
 
 \subsection*{Traceability local y global}
@@ -1762,33 +1763,31 @@ El \textit{meta-modelo de tracelinks} local (imagen \ref{fig:LocalTraceMetamodel
 \chapter{Conclusión}
 
 
-\addcontentsline{toc}{section}{Trabajos futuros}
-\section*{Trabajos futuros}
+
+
+\chapter{Trabajos futuros}
+
+\addcontentsline{toc}{section}{Lo que el esquema no ofrece}
+\section*{Lo que el esquema no ofrece}
+
+A continuación se lista un conjunto de aspectos y/o funcionalidades que el esquema propuesto en la sección \ref{sec:EsquemaTraceability} no ofrece o no tiene en cuenta:
+
 
 \begin{itemize}
 
-\item Mejorar el esquema de Traceability propuesto para ofrecer además una funcionalidad de versionado.
+\item \textbf{Funcionalidad de versionado}: que permita navegar por los \textit{tracelinks} y refleje las modificaciones en el tiempo que se fueron realizando sobre los artefactos relacionados, a lo largo de la ejecución de todas las tareas que forman parte de la ingeniería de un software.
 
-\item Definir e implementar una solución para que la herramienta también trabaje sobre transformaciones ATL.
+\item \textbf{Métodos de detección o información de errores}: que determinen o informen cuándo un \textit{tracelink} es inválido.
 
-\item Ofrecer en la herramienta TraceEditor mejores opciones de filtrado o vistas parciales para facilitar la navegación sobre modelos de tracelinks grandes y también por ejemplo en el análisis de cambios mostrando que artefactos se verían afectados si se modificaran un conjunto seleccionado.
-\end{itemize}
-
-
-\subsection*{Lo que no ofrece}
-
-A continuación se lista un conjunto de aspectos y/o funcionalidades que el esquema propuesto actual no ofrece o no tiene en cuenta:
-
-\begin{itemize}
-
-\item \textbf{\textit{funcionalidad de versionado}}: que permita navegar por los \textit{tracelinks} y refleje las modificaciones en el tiempo que se fueron realizando sobre los artefactos relacionados, a lo largo de la ejecución de todas las tareas que forman parte de la ingeniería de un software.
-
-\item \textbf{\textit{métodos de detección o información de errores}}: que determinen o informen cuándo un \textit{tracelink} es inválido.
+\item \textbf{Grafo de tracelinks para cadenas de transformación}: una idea similar a lo visto en el capítulo de \textbf{Trabajos relacionados} en la sección \ref{sec:TraceabilityLocalGlobal}.
 
 \end{itemize}
 
 
-\addcontentsline{toc}{subsection}{Traceability en ATL}
+\addcontentsline{toc}{section}{Mejoras para el prototipo}
+\section*{Mejoras para el prototipo}
+
+
 \subsection*{Traceability en ATL}
 \label{cap:ATLTtraceability}
 
@@ -1797,6 +1796,20 @@ La información de \textit{traceability} forma parte del lenguaje \gls{atl}, és
 Existen varias propuestas de implementación, una de ellas, la que se presenta en \cite{Jouault} en donde se propone considerar como modelos tanto a los programas de transformación como a la información de \textit{traceability}, entonces mediante la definición de una nueva transformación modificar los programas para que generen la información de \textit{traceability} como una salida más al modelo resultado original. Con este enfoque, la generación de código de \textit{traceability} está claramente separada de la lógica de la transformación y la misma se puede agregar después de que un programa haya sido escrito. Por lo cual, es posible añadir el soporte para nuevos formatos o modificar la granularidad o rango de las \textit{tracelinks} sin interferir con la lógica del programa.
 
 Otras propuestas hacen uso del mecanismo de \textit{traceability implícito} de \gls{atl}, copiando toda la información de \textit{tracelinks} durante la ejecución de la transformación, o directamente persistiéndola y dejándola accesible en un archivo aparte, pero para todas estas implementaciones se requiere de modificaciones del motor de ejecución de \gls{atl}.
+
+
+\addcontentsline{toc}{section}{Para el futuro}
+\section*{Para el futuro}
+
+\begin{itemize}
+
+\item Mejorar el \textit{esquema de traceability} propuesto para ofrecer además la funcionalidad de versionado, los métodos de detección e información de errores y la organización de los \textit{tracelinks} según ejecución de cadenas de transformación.
+
+\item Definir e implementar una solución para que la herramienta también trabaje sobre transformaciones \gls{atl}, tomando como referencia los ejemplos vistos antes en \ref{cap:ATLTtraceability}.
+
+\item Ofrecer en la herramienta \textsf{TraceEditor} mejores opciones de filtrado o vistas parciales, con el fin de facilitar la navegación sobre modelos de \textit{tracelinks} grandes y también, por ejemplo en el proceso de análisis de cambios, mostrando qué artefactos se verían afectados si se modificaran un conjunto seleccionado.
+\end{itemize}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
