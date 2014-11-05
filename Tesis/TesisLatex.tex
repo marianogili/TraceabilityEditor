@@ -1764,11 +1764,13 @@ La idea de \textit{traceability global} visto en \ref{subsec:TraceabilityGlobal}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Conclusión}
 
-Hemos visto en el presente trabajo de tesis que \textit{Traceability} es una característica muy importante en el ámbito de \glssymbol{mdd}, también enumeramos los problemas que aún están presentes y se encuentran en debate, y los desafíos que surgen de ellos. Para estos problemas y desafíos se han propuesto una gran cantidad soluciones con una amplia variedad de metodologías e implementaciones distintas, en esta tesis sólo se han enumerado un subconjunto de muchas encontradas durante el proceso de aprendizaje e investigación.
+Se ha visto en el presente trabajo de tesis que \textit{traceability} es una característica muy importante en el ámbito de \glssymbol{mdd}, también se enumeraron los problemas que aún están presentes y se encuentran en debate, y los desafíos que surgen de ellos. Para estos problemas y desafíos se han propuesto una gran cantidad soluciones con una amplia variedad de metodologías e implementaciones distintas, en esta tesis sólo se mostrado un subconjunto de muchas que fueron encontradas durante el proceso de aprendizaje e investigación del tema.
 
 Esta tesis propone un \textit{esquema de traceability} que se basa en la definición de un \textit{meta-modelo de tracelinks} bien simple y acotado, que denota los conceptos más relevantes y mínimos necesarios para lograr capturar las relaciones que existen entre los artefactos de cualquier modelo de cualquier dominio que se puede presentar en un proceso de desarrollo dirigido por modelos, es decir un \textit{esquema de propósito general}.
 
-Basado en este esquema, se implementó un prototipo de una herramienta
+Basado en este esquema, se implementó un prototipo de una herramienta que trabaja en el entorno \textsf{Eclipse} que permite, por un lado, obtener los \textit{tracelinks} generados por una transformación, y por otro, mostrar estos \textit{links} y permitir analizarlos y modificarlos.
+
+Todo proceso de desarrollo debería hacer uso de una metodología de \textit{traceability}, que muestre de forma precisa la relación existente entre todos los artefactos que surgen y forman parte del mismo, y durante el ciclo de vida completo del software. Como se ha visto en los capítulos iniciales del presente trabajo, la información que se obtenga de un servicio que trabaje con \textit{traceability} es muy valioso y hará más difícil que un proyecto falle.
 
 
 
@@ -1818,6 +1820,9 @@ Otras propuestas hacen uso del mecanismo de \textit{traceability implícito} de 
 \item Definir e implementar una solución para que la herramienta también trabaje sobre transformaciones \gls{atl}, tomando como referencia los ejemplos vistos antes en \textbf{Traceability en ATL}.
 
 \item Ofrecer en la herramienta \textsf{TraceEditor} mejores opciones de filtrado o vistas parciales, con el fin de facilitar la navegación sobre modelos de \textit{tracelinks} grandes y también, por ejemplo en el proceso de análisis de cambios, mostrando qué artefactos se verían afectados si se modificaran un conjunto seleccionado.
+
+\item Mejorar la identificación semántica de un artefacto en la herramienta \textsf{TraceEditor}, con el fin de que sea más fácil para una persona reconocer fácilmente cada uno de los artefactos.
+
 \end{itemize}
 
 
