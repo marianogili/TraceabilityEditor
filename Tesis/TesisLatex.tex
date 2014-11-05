@@ -219,9 +219,9 @@ A mi familia, amigos y compañeros de estudio y del trabajo, por su acompañamie
 
 En la \gls{mde}, se define al modelo como artefacto principal que toma participación a lo largo de todas las tareas o procesos que conforman dicha ingeniería, ésto es, el análisis, el diseño, el desarrollo, las pruebas, el mantenimiento, etc. Una implementación particular propuesta por el \gls{omg} que acompaña esta idea es la \gls{mda}, cuyo ciclo de proceso de desarrollo está basado enteramente en el uso de modelos formales y transformaciones que se realizan sobre dichos modelos. Una característica muy importante de todo proceso de \gls{mdd}, es lo que se conoce como \textit{\textbf{posibilidad de rastreo}} (de ahora en más en inglés \textit{\textbf{traceability}}), que ayuda y toma parte en todo lo que respecta a las relaciones que existen entre cada uno de los artefactos productos del proceso de desarrollo.
 
-Cuando nos referimos al término artefacto, hablamos por ejemplo de un requerimiento de sistema, un componente de software, un caso de prueba, entre otros. El mantenimiento y la definición de las relaciones y dependencias que existen entre los artefactos no es una tarea fácil, constituyendo un desafío desde principios de 1970.
+El término artefacto hace referencia a un requerimiento de sistema, un componente de software, un caso de prueba, entre otros. El mantenimiento y la definición de las relaciones y dependencias que existen entre los artefactos no es una tarea fácil, constituyendo un desafío desde principios de 1970.
 
-En el presente documento de tesis se aborda el tema de \textit{traceability}, presentando un análisis de los distintos problemas que aún se encuentran abiertos a la investigación y al debate, como así también un conjunto de soluciones propuestas que encontré a lo largo de mi investigación. Finalmente, se expone un \textit{\textbf{esquema de traceability}} con el fin de aportar un avance en el desarrollo de este tema.
+En el presente documento de tesis se aborda el tema de \textit{traceability}, presentando un análisis de los distintos problemas que aún se encuentran abiertos a la investigación y al debate, como así también un conjunto de soluciones propuestas que fueron encontradas a lo largo de la investigación. Finalmente, se expone un \textit{\textbf{esquema de traceability}} con el fin de aportar un avance en el desarrollo de este tema.
 
 
 
@@ -261,15 +261,15 @@ Según el Glosario Estándar de Términos de la Ingeniería de Software del \gls
 \small \textit{El grado o nivel en el cual una relación puede ser establecida entre dos o más productos del proceso de desarrollo, especialmente entre productos que tengan una relación de predecesor-sucesor o principal-secundario; por ejemplo el grado en el cual el requerimiento y el diseño de un componente de software se corresponden}.
 \end{quote}
 
-La definición anterior es utilizada principalmente por \textit{The Requirements Management Community}. Nosotros, quienes necesitamos un punto de vista más cercano al contexto de \glssymbol{mdd}, usamos el término \textit{traceability} para describir 
+La definición anterior es utilizada principalmente por \textit{The Requirements Management Community}. En cambio, desde un punto de vista más cercano al contexto de \glssymbol{mdd}, se utiliza al término \textit{traceability} para describir 
 \begin{quote}
 \small \textit{\textbf{cualquiera de las complejas relaciones lógicas que existen entre los distintos artefactos que se presentan en cualquier momento del ciclo de vida del desarrollo de software, el establecimiento de estas relaciones y/o el mantenimiento de las mismas}}.
 \end{quote}
 
-Esta definición incluye a todos los productos creados durante el proceso de desarrollo, de despliegue o implantación, y también los creados a lo largo del mantenimiento. Además necesita que la información de \textit{traceability} sea accesible a lo largo de toda la vida del producto de software.
+Esta definición incluye a todos los productos creados durante el proceso de desarrollo, de despliegue o implantación, y también los creados a lo largo del mantenimiento. Además se necesita que la información de \textit{traceability} sea accesible a lo largo de toda la vida del producto de software.
 
 
-En la ingeniería de software encontramos dos usos o semánticas principales que dependen del contexto de \textit{traceability}:
+En la ingeniería de software se emplean dos usos o semánticas principales que dependen del contexto de \textit{traceability}:
 
 \begin{itemize}
 
@@ -299,7 +299,7 @@ A continuación se listan un conjunto de actividades que provienen de distintos 
 
 \item \textit{\textbf{Análisis de Cobertura}} Por ejemplo en el momento de ejecución de los casos de prueba, el uso de \textit{traceability} es crucial a la hora de determinar si todos los requerimientos fueron cubiertos, es decir tenidos en cuenta.
 
-\item \textit{\textbf{Análisis de Impacto de Cambios}} \textit{Traceability} nos ayuda a ver cómo los cambios en un modelo repercutirán en los modelos relacionados; también el uso de \textit{traceability} nos permite saber en cualquier momento el tipo de dependencia que existe entre las entidades relacionadas, lo cual ayuda a determinar la necesidad de un cambio.
+\item \textit{\textbf{Análisis de Impacto de Cambios}} \textit{Traceability} permite ver la manera en que los cambios en un modelo repercutirán en los modelos relacionados; también, saber en cualquier momento el tipo de dependencia que existe entre las entidades relacionadas, lo cual ayuda a determinar la necesidad de un cambio.
 
 \item \textit{\textbf{Análisis de Huérfanos}} Permite encontrar fácilmente los elementos huérfanos de un modelo, pues serán aquellos artefactos que no se encuentren relacionados a ningún \textit{tracelink}.
 
@@ -307,7 +307,7 @@ A continuación se listan un conjunto de actividades que provienen de distintos 
 
 \item \textit{\textbf{Análisis de Requerimiento}} \textit{Traceability} por ejemplo ayuda a identificar el artefacto particular que demanda una propiedad específica; como así también a encontrar y resolver un conjunto de requerimientos contradictorios, entre otros.
 
-\item \textit{\textbf{Apoyo en la toma de decisiones}} Para justificar una decisión dado que nos facilita el entendimiento de los factores y metas que influyen en la misma; también \textit{traceability} nos será muy útil en el análisis y evaluación de distintas propuestas de solución que se nos puedan presentar.
+\item \textit{\textbf{Apoyo en la toma de decisiones}} Para justificar una decisión dado que facilita el entendimiento de los factores y metas que influyen en la misma; también \textit{traceability} resulta muy útil en el análisis y evaluación de distintas propuestas de solución que se puedan presentar.
 
 \item \textit{\textbf{Configuración del Sistema y Versionado}} El uso de \textit{traceability} es beneficioso para identificar: las restricciones entre los componentes, los cambios necesarios para resolver una restricción, las diferencias entre dos versiones distintas de un mismo artefacto y el impacto que estas diferencias tendrán sobre otros artefactos.
 
@@ -380,7 +380,7 @@ Para llegar a la definición de cualquier propuesta de \textit{traceability} se 
 \subsection{Meta-modelo de propósito general}
 \label{subsec:MetaModeloPropositoGeneral}
 
-En este caso, nos encontramos con un meta-modelo genérico que permite la \textit{\textbf{captura de tracelinks}} entre cualquier tipo de elementos de un determinado modelo. Un \textit{tracelink} se puede conectar con cualquier número de elementos, de cualquier tipo y de cualquier modelo. Las principales ventajas de este tipo de meta-modelo son la simplicidad y la uniformidad (dado que todos los modelos conforman el mismo meta-modelo), con lo cual se mejora la interoperabilidad de las herramientas otorgándoles la capacidad de importar, exportar y gestionar información de \textit{traceability} en un formato común.
+En este caso, se cuenta con un meta-modelo genérico que permite la \textit{\textbf{captura de tracelinks}} entre cualquier tipo de elementos de un determinado modelo. Un \textit{tracelink} se puede conectar con cualquier número de elementos, de cualquier tipo y de cualquier modelo. Las principales ventajas de este tipo de meta-modelo son la simplicidad y la uniformidad (dado que todos los modelos conforman el mismo meta-modelo), con lo cual se mejora la interoperabilidad de las herramientas otorgándoles la capacidad de importar, exportar y gestionar información de \textit{traceability} en un formato común.
 
 Por otro lado, como el \textit{meta-modelo de propósito general} no capta casos específicos de \textit{tracelinks} fuertemente tipados, es decir sin semántica y restricciones definidas rigurosamente, se abre la puerta a establecimientos de \textit{links} ilegítimos. Como por ejemplo, en el caso de \textit{tracelinks} entre un diagrama de clases y un modelo de base de datos relacional en donde existirán vínculos entre las clases del primer modelo y las tablas del segundo, un \textit{meta-modelo de traceability} genérico permitirá el establecimiento de \textit{links} ilegítimos entre una clase y una columna.
 
@@ -390,9 +390,9 @@ Para permitir un mejor soporte para el caso de los requisitos específicos, es u
 
 En este caso, para cada escenario de \textit{traceability} se define un meta-modelo específico. Este \textit{meta-modelo de traceability} captura \textit{links} fuertemente tipados para casos específicos con una semántica bien definida, que pueden o no incluir restricciones de corrección. Debido a su naturaleza de tipado fuerte y a las restricciones asociadas, limita a los usuarios y a las herramientas para que sólo puedan establecer \textit{links} legítimos. Por otro lado, la definición de un meta-modelo para cada caso específico requiere de mucho esfuerzo en su construcción, así como el uso de herramientas que soporten, o mejor dicho, ofrezcan la posibilidad de aceptar diferentes meta-modelos de \textit{traceability}.
 
-Para ser fuertemente tipado el \textit{meta-modelo de traceability} necesita referir explícitamente a los tipos de elementos que se encuentran definidos en otros meta-modelos. Por ejemplo, consideremos que es necesario definir un \textit{meta-modelo de traceability} que permita el establecimiento de enlaces entre instancias de \textsf{A} (del meta-modelo \textsf{MMa}) e instancias de \textsf{B} (a partir de \textsf{MMb}), pero no entre dos instancias de \textsf{A} o dos de \textsf{B}. Para lograr tal meta-modelo, la tecnología de modelado que se use no debe tomar cada meta-modelo como un espacio cerrado, sino que por el contrario debe permitir referencias \textit{inter-meta-modelo}. Un ejemplo de tecnología que soporta referencias \textit{inter-meta-modelo} es el framework \gls{emf}.
+Para ser fuertemente tipado el \textit{meta-modelo de traceability} necesita referir explícitamente a los tipos de elementos que se encuentran definidos en otros meta-modelos. Por ejemplo, en el caso que sea necesario definir un \textit{meta-modelo de traceability} que permita el establecimiento de enlaces entre instancias de \textsf{A} (del meta-modelo \textsf{MMa}) e instancias de \textsf{B} (a partir de \textsf{MMb}), pero no entre dos instancias de \textsf{A} o dos de \textsf{B}. Para lograr tal meta-modelo, la tecnología de modelado que se use no debe tomar cada meta-modelo como un espacio cerrado, sino que por el contrario debe permitir referencias \textit{inter-meta-modelo}. Un ejemplo de tecnología que soporta referencias \textit{inter-meta-modelo} es el framework \gls{emf}.
 
-Mas allá de que un \textit{meta-modelo de traceability} (que fue definido utilizando una tecnología que permite referencias \textit{inter-meta-modelo}) puede brindar tipos seguros, encontramos frecuentemente otras restricciones que necesitan especificarse y que dicho meta-modelo no puede capturarlas. Por ejemplo, tomando como referencia el ejemplo anterior, podríamos precisar que cada instancia \textsf{A} de \textsf{MMa} sólo se puede vincular a no más de una instancia \textsf{B} de \textsf{MMb}. Para especificar tales restricciones, se requiere un lenguaje de especificación que pueda expresar restricciones que abarquen elementos que pertenezcan a modelos definidos por diferentes meta-modelos. En la actualidad el \gls{ocl} carece de esta capacidad, ya que no proporciona las construcciones para expresiones que atraviesen modelos (\textit{cross-model}). Ejemplos de lenguajes que soportan el establecimiento con tales restricciones incluyen el \gls{evl} y el XLinkit toolkit.
+Mas allá de que un \textit{meta-modelo de traceability} (que fue definido utilizando una tecnología que permite referencias \textit{inter-meta-modelo}) puede brindar tipos seguros, se encuentran frecuentemente otras restricciones que necesitan especificarse y que dicho meta-modelo no puede capturarlas. Por ejemplo, tomando como referencia el ejemplo anterior, podríamos precisar que cada instancia \textsf{A} de \textsf{MMa} sólo se puede vincular a no más de una instancia \textsf{B} de \textsf{MMb}. Para especificar tales restricciones, se requiere un lenguaje de especificación que pueda expresar restricciones que abarquen elementos que pertenezcan a modelos definidos por diferentes meta-modelos. En la actualidad el \gls{ocl} carece de esta capacidad, ya que no proporciona las construcciones para expresiones que atraviesen modelos (\textit{cross-model}). Ejemplos de lenguajes que soportan el establecimiento con tales restricciones incluyen el \gls{evl} y el XLinkit toolkit.
 
 La combinación de un \textit{meta-modelo de traceability} fuertemente tipado en conjunto con la verificación de restricciones \textit{inter-modelo} restringe a los usuarios y a las herramientas a establecer y mantener sólo \textit{tracelinks} con sentido, los cuales pueden ser automáticamente validados para descubrir posibles omisiones e inconsistencias. Estas cuestiones pueden realizarse ya sea durante el establecimiento de los \textit{tracelinks}, o más tarde, durante el ciclo de vida de los modelos donde ya los \textit{tracelinks} han sido establecidos.
 
@@ -401,7 +401,7 @@ La combinación de un \textit{meta-modelo de traceability} fuertemente tipado en
 
 \section{Tipos de tracelinks}
 
-Uno de los desafíos presentados en el capítulo \ref{cap:ProblemasDesafios} (sección \ref{sec:SemanticaTracelinks}) se refiere a la definición  \textit{semántica de los tracelinks}, tarea que nos permite descubrir los distintos \textit{tipos de links} con los que nos podemos llegar a encontrar, entender su significado y uso. Es importante remarcar que la determinación de la semántica de un \textit{link} se encuentra totalmente guiada por la razón del usuario respecto de qué quiere realizar o representar con dicho \textit{link}. No predefinir la \textit{semántica de un tracelink} correctamente, puede resultar en fallas de razonamientos y/o entendimientos. Por ejemplo, un \textit{link} que muestra la relación entre un requerimiento textual y un elemento de un diagrama de caso de uso \glssymbol{uml} tiene una semántica muy distinta a la de un \textit{tracelink} que determina una relación de refinamiento dentro de un modelo de clases también \glssymbol{uml}.
+Uno de los desafíos presentados en el capítulo \ref{cap:ProblemasDesafios} (sección \ref{sec:SemanticaTracelinks}) se refiere a la definición  \textit{semántica de los tracelinks}, tarea que permite descubrir los distintos \textit{tipos de links} que se pueden presentar, entender su significado y uso. Es importante remarcar que la determinación de la semántica de un \textit{link} se encuentra totalmente guiada por la razón del usuario respecto de qué quiere realizar o representar con dicho \textit{link}. No predefinir la \textit{semántica de un tracelink} correctamente, puede resultar en fallas de razonamientos y/o entendimientos. Por ejemplo, un \textit{link} que muestra la relación entre un requerimiento textual y un elemento de un diagrama de caso de uso \glssymbol{uml} tiene una semántica muy distinta a la de un \textit{tracelink} que determina una relación de refinamiento dentro de un modelo de clases también \glssymbol{uml}.
 
 La definición del conjunto de \textit{tipos de tracelinks} por lo general es fuertemente dependiente del contexto de un proyecto, por lo cual definirlo de forma fija tendrá como consecuencia una pérdida de flexibilidad para los usuarios que deseen tipar los \textit{tracelinks} solamente de acuerdo a las necesidades del proyecto o la compañía. Aún así, conforme un proyecto de desarrollo crece, la administración de la información de \textit{traceability} que en consecuencia se va generando se vuelve extremadamente compleja, una jerarquía de clasificación de dicha información resultará esencial para poder entenderla y administrarla mejor. En \cite{PaigeOlsenKolovosZschalerPower} se encuentra una propuesta de \textit{clasificación genérica de traceability} en conjunto con la descripción del proceso usado para su obtención al que llamaron \gls{teap} y que a continuación se explica en detalle.
 
@@ -445,7 +445,7 @@ En un principio esta clasificación se encuentra dividida en dos grandes grupos 
 
 Los \textit{links estáticos} pueden ser, o \textit{Links consistentes} (\textsf{Consistent-With}) donde dos modelos deben mantenerse de acuerdo o consistentes entre sí, o \textit{Links dependientes} (\textsf{Dependency}) donde la estructura y/o la semántica de un modelo depende de otro. Por su parte, los \textit{Links dependientes} pueden ser: \textit{Link de subtipo} (\textsf{Is-A}), \textit{Link de referencia}, \textit{link de subconjunto}, de \textit{importación} y \textit{exportación}, de \textit{uso}, de \textit{refinamiento} (\textsf{Refines}), etcétera.
 
-Entre los \textit{links dinámicos} se incluyen los \textit{Links de llamadas} (\textsf{Calls}) donde un modelo hace uso de métodos provistos por otro y los \textit{Links de notificación} (\textsf{Notifies}) donde es necesario almacenar información que puede ser manejada automáticamente. También encontramos aquí las relaciones en tiempo de diseño como los \textit{Links de generación o construcción} (\textsf{Generates}), que indican qué información de un modelo es usada para producir o deducir otro, y los \textit{Links de sincronización} (\textsf{Synchronized With}), donde el comportamiento de un conjunto de modelos se realiza de forma sincronizada.
+Entre los \textit{links dinámicos} se incluyen los \textit{Links de llamadas} (\textsf{Calls}) donde un modelo hace uso de métodos provistos por otro y los \textit{Links de notificación} (\textsf{Notifies}) donde es necesario almacenar información que puede ser manejada automáticamente. También se encuentran aquí las relaciones en tiempo de diseño como los \textit{Links de generación o construcción} (\textsf{Generates}), que indican qué información de un modelo es usada para producir o deducir otro, y los \textit{Links de sincronización} (\textsf{Synchronized With}), donde el comportamiento de un conjunto de modelos se realiza de forma sincronizada.
 
 El alcance de \textsf{Model-Artefact Link} es muy amplio, por tal motivo en esta clasificación sólo se resumen un subconjunto de ejemplos, entre ellos: la relación \textit{satisface} (\textsf{Satisfies}), que indica qué propiedad o requerimiento de un artefacto es satisfecha por un modelo; los \textit{Links de asignación} (\textsf{Allocated-To}), usados cuando la información de un artefacto no modelo es asignada a un modelo específico que la representa; la relación de \textit{realización} (\textsf{Performs}), que indica qué tarea descripta por un artefacto es llevada a cabo por el modelo; las relaciones \textit{explica} y \textit{respalda} (\textsf{Explains} y \textsf{Supports}) que dictan qué modelo se encuentra explicado y respaldado respectivamente por un artefacto no modelo.
 
@@ -517,7 +517,7 @@ A continuación se detallan las ventajas y desventajas de cada enfoque según \c
 
 \item Se requiere de un esfuerzo adicional para definir las reglas de transformación específicas para \textit{traceability}, que en consecuencia contaminan la implementación.
 
-\item Como la definición de las reglas de \textit{traceability} es responsabilidad del programador, es propensa a errores y puede llegar a demandar mucho tiempo. Más aun si pensamos que esta tarea se tiene que repetir para cada transformación que se requiera.
+\item Como la definición de las reglas de \textit{traceability} es responsabilidad del programador, es propensa a errores y puede llegar a demandar mucho tiempo. Más aun si se tiene en cuenta que esta tarea se debe repetir para cada transformación que se requiera.
 
 \end{itemize}
 
@@ -555,7 +555,7 @@ Un requisito previo para el \textit{almacenamiento externo de los tracelinks}, e
 \markboth{Problemas y Desafíos}{}
 
 \begin{quotation}
-En este capítulo se describe, por un lado, los principales problemas que se presentan en el ámbito de \textit{traceability} (organizados por tema según el criterio presentado en \cite{Excellence}), y por otro, los grandes desafíos que surgen a partir de ellos. Desafíos que aún hoy, se encuentran abiertos a la investigación y al debate.
+En este capítulo se describen, por un lado, los principales problemas que se presentan en el ámbito de \textit{traceability} (organizados por tema según el criterio presentado en \cite{Excellence}), y por otro, los grandes desafíos que surgen a partir de ellos. Desafíos que aún hoy, se encuentran abiertos a la investigación y al debate.
 \end{quotation}
 
 
@@ -854,7 +854,7 @@ En este capítulo se describe, por un lado, los principales problemas que se pre
 
 \begin{itemize}[label={$\times$}]
 
-\item Uno de los objetivo de la investigación de \textit{traceability} es lograr transferir soluciones eficaces a la industria. Sin embargo, en la realidad en la industria son reacios a probar técnicas nuevas donde la eficacia aún no fue demostrada.
+\item Uno de los objetivos de la investigación de \textit{traceability} es lograr transferir soluciones eficaces a la industria. Sin embargo, en la realidad en la industria son reacios a probar técnicas nuevas donde la eficacia aún no fue demostrada.
 
 \item La carencia de diálogo entre los investigadores y los profesionales limita, por un lado a los investigadores a acceder a un conjunto de datos reales para testear nuevas técnicas, y por otro, inhibe la retroalimentación de la industria hacia los investigadores.
 
@@ -907,7 +907,7 @@ traceability} propuesto en este trabajo de tesis. Del mismo modo se expone el pr
 \subsection{Introducción}
 \label{sec:EsquemaPropIntro}
 
-La idea fundamental es lograr un meta-modelo bien simple en el que se capturen solamente los conceptos más relevantes de \textit{traceability} y se almacene la información mínima necesaria. Gracias a todo lo anterior, y solo así, logramos obtener el concepto deseable de independencia del modelo con respecto al dominio en el que se quiera utilizar la funcionalidad de \textit{traceability}. Concepto necesario para poder llegar a definir un \textit{esquema de propósito general} (\ref{subsec:MetaModeloPropositoGeneral}) que apunte principalmente a dar solución a los siguientes desafíos:
+La idea fundamental es lograr un meta-modelo bien simple en el que se capturen solamente los conceptos más relevantes de \textit{traceability} y se almacene la información mínima necesaria. Solo así, se logrará obtener el concepto deseable de independencia del modelo con respecto al dominio en el que se quiera utilizar la funcionalidad de \textit{traceability}. Concepto necesario para poder llegar a definir un \textit{esquema de propósito general} (\ref{subsec:MetaModeloPropositoGeneral}) que apunte principalmente a dar solución a los siguientes desafíos:
 
 \begin{itemize}
 
@@ -1097,7 +1097,7 @@ El editor fue implementado mediante el framework \gls{gmf}, el cual ayuda en la 
 \label{fig:TraceEditorTabular}
 \end{figure}
 
-Este editor muestra el mismo modelo de \textit{tracelinks} que se presenta en el editor gráfico que explicamos anteriormente, pero en una lista ordenada tabulado de acuerdo a los siguiente campos:
+Este editor muestra el mismo modelo de \textit{tracelinks} que se presenta en el editor gráfico que fue explicado anteriormente, pero en una lista ordenada tabulado de acuerdo a los siguiente campos:
 
 \begin{itemize}
 \item \textsf{\textit{Transformación}}
@@ -1125,7 +1125,7 @@ Este editor en conjunto con la perspectiva que se presenta más adelante, fueron
 
 \subsubsection{La perspectiva}
 
-Como se describe en la subsección de la plataforma \textsf{Eclipse} \ref{subsec:PlatEclipse}, una perspectiva es una agrupación de vistas y editores que en su conjunto ayudan en una actividad completa. En este caso, la perspectiva propuesta para nuestro editor \textsf{TraceEditor} fue ofrecer una vista en la que se presentan los dos editores (el gráfico y el tabular) en forma simultánea dada la complejidad y el volumen de información que puede llegar a presentar un modelo de \textit{tracelinks} cualquiera.
+Como se describe en la subsección de la plataforma \textsf{Eclipse} \ref{subsec:PlatEclipse}, una perspectiva es una agrupación de vistas y editores que en su conjunto ayudan en una actividad completa. En este caso, la perspectiva propuesta para el editor \textsf{TraceEditor} fue ofrecer una vista en la que se presentan los dos editores (el gráfico y el tabular) en forma simultánea dada la complejidad y el volumen de información que puede llegar a presentar un modelo de \textit{tracelinks} cualquiera.
 
 
 \begin{figure}[hbtp]
@@ -1148,11 +1148,11 @@ Aquí se presenta la vista \textsf{Outline} de \textsf{Eclipse}, la cual se enca
 
 
 \paragraph{Zona 3}
-Esta zona es el área de edición o editores, es el espacio del Workbench \textsf{Eclipse} asignada para que se muestren todos los editores \textsf{Eclipse} de cualquier tipo. Nuestro editor gráfico se abrirá aquí cuando seleccionemos en el \textsf{Project Explorer} un recurso de tipo diagrama \textsf{TraceEditor}.
+Esta zona es el área de edición o editores, es el espacio del Workbench \textsf{Eclipse} asignada para que se muestren todos los editores \textsf{Eclipse} de cualquier tipo. El editor gráfico se abrirá aquí cuando seleccionemos en el \textsf{Project Explorer} un recurso de tipo diagrama \textsf{TraceEditor}.
 
 
 \paragraph{Zona 4}
-En esta área se muestran, en primer plano el editor tabular titulado \textsf{Lista de Trazas}, presentado anteriormente en esta misma subsección \ref{subsubsec:EditorTabular}, y en segundo plano, la vista de propiedades de \textsf{Eclipse} (\textsf{Properties}) que nos permite ver todas las propiedades de cualquier elemento seleccionado en el editor que se encuentre activo.
+En esta área se muestran, en primer plano el editor tabular titulado \textsf{Lista de Trazas}, presentado anteriormente en esta misma subsección \ref{subsubsec:EditorTabular}, y en segundo plano, la vista de propiedades de \textsf{Eclipse} (\textsf{Properties}) que permite ver todas las propiedades de cualquier elemento seleccionado en el editor que se encuentre activo.
 
 
 
@@ -1258,7 +1258,7 @@ El \textit{Workbench} es la ventana principal que se le presenta al usuario cuan
 
 \subsection{Resumen y más información}
 
-En conclusión, la plataforma \textsf{Eclipse} proporciona un núcleo de elementos básicos y un conjunto de \glspl{api} genéricas, como ser el \textit{workspace} y el \textit{workbench}, y varios puntos de extensión a través del cual se pueden integrar nuevas funcionalidades. A través de estos puntos de extensión, las herramientas escritas como \textit{plug-ins} independientes pueden extender la plataforma \textsf{Eclipse}.
+En conclusión, la plataforma \textsf{Eclipse} proporciona un núcleo de elementos básicos y un conjunto de \glspl{api} genéricas, como ser el \textit{workspace} y el \textit{workbench}, y varios puntos de extensión a través de los cuales se pueden integrar nuevas funcionalidades. A través de estos puntos de extensión, las herramientas escritas como \textit{plug-ins} independientes pueden extender la plataforma \textsf{Eclipse}.
 
 Para obtener más información sobre el proyecto \textsf{Eclipse} ver \cite[\url{www.eclipse.org}]{Eclipse}, y para información técnica consultar \cite[Eclipse Platform Technical Overview]{EclipseTech}.
 
@@ -1379,7 +1379,7 @@ En el diagrama de componentes que podemos ver en la figura \ref{fig:GMFArquitect
 
 \subsection{Modelos y flujo de trabajo}
 
-En el diagrama \ref{fig:GMFWorkflow} se encuentran los principales componentes y modelos usados durante el desarrollo de un editor gráfico mediante el framework \gls{gmf}. Entre ellos se encuentra el concepto de \textbf{modelo de definición gráfica}, el cual contiene toda la información relacionada con los elementos gráficos que formarán parte del editor (figuras, nodos, enlaces, etc), pero que no tiene ninguna conexión directa o no es dependiente de ninguno de los componentes del modelo de dominio para el cual ofrecerá la representación y/o edición. También tenemos el \textbf{modelo de definición de herramientas} que es opcional y usado para el diseño de la paleta, el menú y las barras de herramientas.
+En el diagrama \ref{fig:GMFWorkflow} se encuentran los principales componentes y modelos usados durante el desarrollo de un editor gráfico mediante el framework \gls{gmf}. Entre ellos se encuentra el concepto de \textbf{modelo de definición gráfica}, el cual contiene toda la información relacionada con los elementos gráficos que formarán parte del editor (figuras, nodos, enlaces, etc), pero que no tiene ninguna conexión directa o no es dependiente de ninguno de los componentes del modelo de dominio para el cual ofrecerá la representación y/o edición. También se dispone del \textbf{modelo de definición de herramientas} que es opcional y usado para el diseño de la paleta, el menú y las barras de herramientas.
 
 Tanto la definición gráfica como la de las herramientas pueden funcionar para modelos variados de dominios, éste es uno de los objetivos de \gls{gmf}, lograr que estas definiciones sean reusables para distintos dominios que se puedan presentar. Lo anterior se logra gracias al uso de un \textbf{modelo de asignación o mapeo}, que se encuentra separado y vincula las definiciones gráficas y las herramientas con los correspondientes modelos de dominios seleccionados.
 
@@ -1426,7 +1426,7 @@ A continuación se introduce a la tecnología \gls{atl}, que no solo refiere a u
 
 \subsection{¿Qué es ATL?}
 
-En el campo de \glssymbol{mde}, \gls{atl} nos ofrece un medio para especificar la forma de producir un conjunto de modelos resultados/destinos a partir de un conjunto de modelos fuentes.
+En el campo de \glssymbol{mde}, \gls{atl} ofrece un medio para especificar la forma de producir un conjunto de modelos resultados/destinos a partir de un conjunto de modelos fuentes.
 
 El lenguaje \gls{atl} es un híbrido de la programación declarativa e imperativa, dado que aunque el estilo declarativo es el más conveniente para la definición de las transformaciones, \gls{atl} también provee la posibilidad de construcciones imperativas con el fin de facilitar la especificación de algunos mapeos que en forma declarativa pueden llegar a resultar muy complejos de expresar.
 
@@ -1454,7 +1454,7 @@ En este lenguaje de transformaciones modelo a modelo o \gls{mmt}, las operacione
 
 Además de módulos, este lenguaje permite crear programas que transforman modelos en tipos de datos primitivos (como booleanos, enteros o cadenas), lo cual se logra mediante la especificación de unidades llamadas \gls{atl} queries.
 
-Por último \gls{atl} ofrece la posibilidad de desarrollar librerías independientes que pueden ser importadas a lo largo de diferentes tipos de unidades \glspl{atl}. Ésto nos da una forma conveniente de factorizar el código que va a ser usado por muchas unidades \gls{atl}.
+Por último \gls{atl} ofrece la posibilidad de desarrollar librerías independientes que pueden ser importadas a lo largo de diferentes tipos de unidades \glspl{atl}. Ésto brinda una forma conveniente de factorizar el código que va a ser usado por muchas unidades \gls{atl}.
 
 
 \subsection{Más información}
@@ -1526,7 +1526,7 @@ Para obtener más información introductoria consultar \cite{DSDPM}. Para más d
 \markboth{Trabajos relacionados}{} 
 
 \begin{quotation}
-En este capítulo se realiza una breve introducción de un conjunto de trabajos que tienen relación con el tema que se desarrolla en la presente tesis, trabajos que encontré durante el proceso de aprendizaje e investigación. Al final, en la última sección se encuentra un análisis que explica en qué se diferencia y/o qué agrega o intenta agregar la propuesta de la presente tesis con dichos trabajos.
+En este capítulo se realiza una breve introducción de un conjunto de trabajos que tienen relación con el tema que se desarrolla en la presente tesis, trabajos que fueron encontrados durante el proceso de aprendizaje e investigación. Al final, en la última sección se encuentra un análisis que explica en qué se diferencia y/o qué agrega o intenta agregar la propuesta de la presente tesis con dichos trabajos.
 \end{quotation}
 
 
@@ -1623,9 +1623,9 @@ Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido 
 
 \section{Integración de herramientas Case}
 
-En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que como resultado del conjunto de actividades que lo conforman, se genera una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc). Estos artefactos, aunque en esencia se encuentran relacionados lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo \glssymbol{uml}, etc), las relaciones lógicas nombradas se pierden, o mejor dicho no existen o pasan desapercibidas en la práctica. En otras palabras, se nos presenta el problema de la imposibilidad de \textit{traceability} que encontramos en la mayoría de las herramientas \gls{case} actuales.
+En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que como resultado del conjunto de actividades que lo conforman, se genera una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc). Estos artefactos, aunque en esencia se encuentran relacionados lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo \glssymbol{uml}, etc), las relaciones lógicas nombradas se pierden, o mejor dicho no existen o pasan desapercibidas en la práctica. En otras palabras, se presenta el problema de la imposibilidad de \textit{traceability} que encontramos en la mayoría de las herramientas \gls{case} actuales.
 
-Como solución a este problema, se propone un ambiente de integración para las herramientas \gls{case} al que llamaron \textsf{TiE} - Tool Integration Environment, el cual basa su integración en la creación de \textit{tracelinks} entre los artefactos de las distintas herramientas.
+Como solución a este problema, se propone un ambiente de integración para las herramientas \gls{case} conocido como \textsf{TiE} - Tool Integration Environment, el cual basa su integración en la creación de \textit{tracelinks} entre los artefactos de las distintas herramientas.
 
 \section{Framework genérico de extracción de datos de traceability}
 \label{sec:Trace-DSL}
@@ -1686,7 +1686,7 @@ Este meta-modelo toma los \textit{tracelinks} de la entrada y la salida de una �
 
 El \textit{meta-modelo de tracelinks local} contiene dos conceptos principales, \textsf{Link} y \textsf{ElementRef}, los cuales expresan según su definición que uno o más elementos orígenes son enlazados a uno o más elementos objetivos. \textsf{ElementRef} es una clase abstracta que representa elementos que pueden ser \textit{traceados}: instancias de clases o valores de propiedades. Los valores de las propiedades son \textit{traceados} usando \textsf{PrimitivePropertyRef} el cual apunta a la instancia contenedora de la propiedad y tiene el nombre de la misma. Este tratamiento especial para los tipos primitivos de \textsf{Java} se debe a que no existen instancias de ellos en el modelo. Por otro lado las propiedades que son tipadas mediante una clase normal, son traceadas mediante \textsf{ClassRef}.
 
-Para almacenar la información sobre las reglas de transformación aplicadas así como el caso particular de las cajas negras, se hace uso de los conceptos \textsf{RuleRef} y \textsf{BlackBoxRef}. En ambos casos, dado que pueden dar como resultado de su ejecución varios enlaces, se define la relación como uno a varios entre \textsf{RuleRef} y \textsf{Link}. \textsf{RuleRef} y \textsf{BlackBoxRef} son opcionales, en el caso de la primera solo se usa para realizar una depuración de las transformaciones, y la segunda si nos encontramos en la situación en la que ciertas partes del sistema no puede ser pública su implementación.
+Para almacenar la información sobre las reglas de transformación aplicadas así como el caso particular de las cajas negras, se hace uso de los conceptos \textsf{RuleRef} y \textsf{BlackBoxRef}. En ambos casos, dado que pueden dar como resultado de su ejecución varios enlaces, se define la relación como uno a varios entre \textsf{RuleRef} y \textsf{Link}. \textsf{RuleRef} y \textsf{BlackBoxRef} son opcionales, en el caso de la primera sólo se usa para realizar una depuración de las transformaciones, y la segunda si se presenta la situación en la que ciertas partes del sistema no puede ser pública su implementación.
 
 \textsf{ElementRef} tiene una referencia al objeto real de los modelos origen y destinos. Como estos modelos están implementados mediante \gls{emf}, la referencia \textsf{EMFObject} es un \textsf{EObject} del meta-modelo \textsf{Ecore}. La clase \textsf{LocalTraces} representa la raiz del modelo de \textit{tracelinks local} y tiene un \textsf{RuleContainer} que se usa como contenedor de las reglas y dos \textsf{ElementContainer} usados para agrupar los \textsf{ElementRef} origen y destino respectivamente. Separar los elemento orígenes y destinos permite reducir los costos de búsquedas de elementos de entrada o salida.
 
@@ -1748,7 +1748,9 @@ El meta-modelo que usa el framework presentado en la sección \ref{sec:Trace-DSL
 
 \subsection*{Traceability local y global}
 
-El \textit{meta-modelo de tracelinks} local (imagen \ref{fig:LocalTraceMetamodel}) es muy similar al de la presente tesis, pero no tuvo en cuenta el tipado de los \textit{links} y los artefactos. La idea de \textit{traceability global} visto en \ref{subsec:TraceabilityGlobal} es muy conveniente para organizar mucho mejor la información compleja que se genera producto de la ejecución de una cadena de transformación, queda como para definir en una implementación futura.
+El \textit{meta-modelo de tracelinks} local (imagen \ref{fig:LocalTraceMetamodel}) es muy similar al de la presente tesis, pero no tuvo en cuenta el tipado de los \textit{links} y los artefactos. 
+
+La idea de \textit{traceability global} visto en \ref{subsec:TraceabilityGlobal} es muy conveniente para organizar mucho mejor la información compleja que se genera producto de la ejecución de una cadena de transformaciones. Este concepto no se aplica aún en el esquema propuesto de esta tesis, quedando su definición pendiente para una futura implementación.
 
 
 
@@ -1761,6 +1763,13 @@ El \textit{meta-modelo de tracelinks} local (imagen \ref{fig:LocalTraceMetamodel
 %%% Conclusión %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Conclusión}
+
+Hemos visto en el presente trabajo de tesis que \textit{Traceability} es una característica muy importante en el ámbito de \glssymbol{mdd}, también enumeramos los problemas que aún están presentes y se encuentran en debate, y los desafíos que surgen de ellos. Para estos problemas y desafíos se han propuesto una gran cantidad soluciones con una amplia variedad de metodologías e implementaciones distintas, en esta tesis sólo se han enumerado un subconjunto de muchas encontradas durante el proceso de aprendizaje e investigación.
+
+Esta tesis propone un \textit{esquema de traceability} que se basa en la definición de un \textit{meta-modelo de tracelinks} bien simple y acotado, que denota los conceptos más relevantes y mínimos necesarios para lograr capturar las relaciones que existen entre los artefactos de cualquier modelo de cualquier dominio que se puede presentar en un proceso de desarrollo dirigido por modelos, es decir un \textit{esquema de propósito general}.
+
+Basado en este esquema, se implementó un prototipo de una herramienta
+
 
 
 
