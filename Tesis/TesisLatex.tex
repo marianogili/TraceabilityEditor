@@ -1,6 +1,7 @@
-\documentclass[a4paper,12pt,oneside,spanish,openright]{book}
+\documentclass[a4paper,12pt,twoside,spanish,openright]{book}
 \usepackage[utf8]{inputenc}
-\usepackage{babel,amsmath,graphicx,enumitem,amsfonts,appendix,listingsutf8,xcolor,framed,parskip,fancyhdr}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{babel,amsmath,graphicx,enumitem,amsfonts,appendix,listingsutf8,framed,parskip,fancyhdr}
 \usepackage[colorlinks=true,linkcolor=black, urlcolor=black, citecolor=black]{hyperref}
 \usepackage[acronym,toc,xindy]{glossaries}
 \usepackage[undotted]{minitoc}
@@ -22,15 +23,15 @@
 \setlength{\parindent}{1.5em}
 
 % encabezados
-\lhead[\leftmark]{}
+\lhead[]{}
 \chead[]{}
-\rhead[]{\leftmark}
+\rhead[]{}
 \renewcommand{\headrulewidth}{0.5pt}
 
 % pie de pagina
-\lfoot[\thepage]{}
+\lfoot[]{}
 \cfoot[]{}
-\rfoot[]{\thepage}
+\rfoot[]{}
 \renewcommand{\footrulewidth}{0.5pt}
 
 % primera pagina de un capitulo
@@ -75,7 +76,7 @@
 	name={OMG - Object Management Group}, 
 	text={Object Management Group (\textit{OMG})},
 	symbol={OMG},
-	description={Consorcio internacional de la industrial informática sin fines de lucro y de membresía abierta responsable de la definición de varios estándares de modelado como \gls{uml}, \gls{mof} y \glssymbol{mda}}
+	description={Consorcio internacional de la industria informática sin fines de lucro y de membresía abierta responsable de la definición de varios estándares de modelado como \gls{uml}, \gls{mof} y \glssymbol{mda}}
 }
 
 \newglossaryentry{mdd}{
@@ -171,6 +172,11 @@ como \gls{atl} también están construidos utilizando OCL}
 
 \frontmatter
 
+% pie de pagina
+\lfoot[\thepage]{}
+\cfoot[]{}
+\rfoot[]{\thepage}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Índices %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -237,7 +243,8 @@ Asimismo, diseñar e implementar una herramienta que pueda ser integrada a otra 
 
 \mainmatter
 % encabezados
-\lhead[]{CAPÍTULO \thechapter. \leftmark}
+\lhead[CAPÍTULO \thechapter. \leftmark]{}
+\rhead[]{CAPÍTULO \thechapter. \leftmark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Traceability %%%
@@ -253,7 +260,7 @@ En este primer capítulo, a modo de introducción se define el concepto de \text
 
 \minitoc 
 
-\pagebreak
+\clearpage
 
 \section{Introducción}
 
@@ -361,7 +368,7 @@ En el presente capítulo se aborda un conjunto de temas importantes de la teorí
 \minitoc 
 
 
-\pagebreak
+\clearpage
 
 
 \section{Nivel de Granularidad}
@@ -566,7 +573,7 @@ En este capítulo se describen, por un lado, los principales problemas que se pr
 \minitoc 
 
 
-\pagebreak
+\clearpage
 
 
 \section{Conocimiento de traceability}
@@ -899,7 +906,7 @@ traceability} propuesto en este trabajo de tesis. Del mismo modo se expone el pr
 \minitoc 
 
 
-\pagebreak
+\clearpage
 
 
 \section{Requerimientos}
@@ -1175,7 +1182,7 @@ En este capítulo se realiza una breve introducción sobre cada una de las tecno
 \minitoc 
 
 
-\pagebreak
+\clearpage
 
 
 \section{Eclipse}
@@ -1537,7 +1544,7 @@ En este capítulo se realiza una breve introducción de un conjunto de trabajos 
 \minitoc 
 
 
-\pagebreak
+\clearpage
 
 
 \section{ETraceTool}
@@ -1758,7 +1765,10 @@ La idea de \textit{traceability global} vista en \ref{subsec:TraceabilityGlobal}
 \backmatter
 
 % encabezados
-\lhead[]{\leftmark}
+%\lhead[]{\leftmark}
+% encabezados
+\lhead[]{}
+\rhead[]{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Conclusión %%%%%
@@ -1773,8 +1783,12 @@ Basado en este esquema, se ha implementado un prototipo de una herramienta que t
 
 Todo proceso de desarrollo debería hacer uso, durante el ciclo de vida completo del software, de una metodología de \textit{traceability} que muestre de forma precisa la relación existente entre todos los artefactos que surgen y forman parte del mismo. Como se ha visto en los capítulos iniciales del presente trabajo, la información que se obtenga de un buen y actualizado servicio de \textit{traceability} es muy valiosa, ya que al disponer de ella en un proyecto será más difícil que el mismo tienda al fracaso.
 
+\cleardoublepage
 
 
+% encabezados
+\lhead[Trabajos futuros]{}
+\rhead[]{Trabajos futuros}
 
 \chapter{Trabajos futuros}
 
@@ -1831,11 +1845,13 @@ Otras propuestas hacen uso del mecanismo de \textit{traceability implícito} de 
 %%% Anexos %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
-\clearpage
+\cleardoublepage
 \addappheadtotoc
 \appendixpage
 
-
+% encabezados
+\lhead[Anexos. Transformación QvtoTrace\_To\_Trace]{}
+\rhead[]{Anexos. Transformación QvtoTrace\_To\_Trace}
 
 \chapter{QvtoTrace{\textunderscore}To{\textunderscore}Trace}
 \label{cap:QvtoTraceToTrace}
@@ -1856,7 +1872,7 @@ A continuación se expone la definición completa de la transformación \gls{qvt
  morestring=[b]",
  morestring=[d]',
  keywordstyle=\bfseries\color{red},
- commentstyle=\itshape\color{green},
+ commentstyle=\bfseries\itshape\color{OliveGreen},
  identifierstyle=\color{black},
  stringstyle=\color{blue}, 
  tabsize=4}
@@ -1885,7 +1901,9 @@ basicstyle=\footnotesize]{QvtoTrace_To_Trace.qvto}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Glosario %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% encabezados
+\lhead[Glosario y Siglas]{}
+\rhead[]{Glosario y Siglas}
 \printglossaries
 
 
@@ -1894,7 +1912,12 @@ basicstyle=\footnotesize]{QvtoTrace_To_Trace.qvto}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Bibliografía %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
+\cleardoublepage
+
+% encabezados
+\lhead[Bibliografía]{}
+\rhead[]{Bibliografía}
+
 \addcontentsline{toc}{chapter}{Bibliografía}
 \bibliographystyle{acm}
 \begin{thebibliography}{26}
