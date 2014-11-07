@@ -421,12 +421,12 @@ La definición del conjunto de \textit{tipos de tracelinks} por lo general es fu
 
 Esta propuesta comienza con una clasificación o \textit{meta-modelo de traceability} inicial, luego de forma iterativa e incremental esta clasificación se va refinando de acuerdo a las siguientes tareas: obtención, análisis y clasificación. En la obtención se identifica un \textit{tracelink} y sus relaciones. En el análisis, se abstraen las principales características del \textit{link} obtenido identificando las restricciones, sus relaciones y generalizaciones. Y por último, se define la clasificación a la que pertenece.
 
-El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el que se encuentran los siguientes conceptos fundamentales: \textsf{Artefact}, \textsf{Tracelink} y \textsf{Operation}. \textsf{Artefact} refiere tanto a artefactos \glssymbol{mde}, por ejemplo modelos específicos de dominio, como a no \glssymbol{mde}, por ejemplo hojas de cálculo. En \textsf{Operation} se encierran las operaciones tanto manuales como automáticas que determinan qué información de \textit{traceability} debe almacenarse. Por último \textsf{Tracelink} da inicio con la clasificación de \textit{\textbf{tracelink implícito}} (\textsf{Implicit Link}) por un lado, y \textit{\textbf{tracelink explícito}} (\textsf{Explicit Link}) por el otro, en donde \textit{tracelink implícito} refiere a los \textit{links} que son creados y manipulados por la aplicación de las operaciones \glssymbol{mde}, y por su parte \textit{tracelink explícito} refiere a los \textit{links} que se encuentran concretamente ya representados en los modelos.
+El meta-modelo inicial se puede ver en la imagen \ref{fig:ClasifInicial}, en el que se encuentran los siguientes conceptos fundamentales: \textsf{Artefact}, \textsf{Tracelink} y \textsf{Operation}. \textsf{Artefact} refiere tanto a artefactos \glssymbol{mde}, por ejemplo modelos específicos de dominio, como a no \glssymbol{mde}, por ejemplo hojas de cálculo. En \textsf{Operation} se encierran las operaciones tanto manuales como automáticas que determinan qué información de \textit{traceability} debe almacenarse. Por último \textsf{Tracelink} da inicio con la clasificación de \textit{\textbf{tracelink implícito}} (\textsf{Implicit Link}) por un lado, y \textit{\textbf{tracelink explícito}} (\textsf{Explicit Link}) por el otro, en donde \textit{tracelink implícito} refiere a los \textit{links} que son creados y manipulados por la aplicación de las operaciones \glssymbol{mde}, y por su parte \textit{tracelink explícito} refiere a los \textit{links} que se encuentran concretamente ya representados en los modelos.
 
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[scale=1.05]{./img/ExplicitImplicitTraceLinkClassification}
+\includegraphics[scale=.7]{./img/ExplicitImplicitTraceLinkClassification}
 \caption{Clasificación de traceability inicial}
 \label{fig:ClasifInicial}
 \end{figure}
@@ -434,7 +434,7 @@ El meta-modelo inicial se puede ver en el dibujo \ref{fig:ClasifInicial}, en el 
 \subsubsection{Clasificación de tracelinks implícitos}
 
 
-En esta jerarquía que se muestra en el dibujo \ref{fig:LinksImplicitos} se encuentran representados el conjunto de operaciones \glssymbol{mde} principales: \textit{Consulta} (\textsf{Query Link}), \textit{Transformación modelo a modelo} (\textsf{M2M Link}), \textit{Transformación modelo a texto} (\textsf{M2T Link}), \textit{Composición} (\textsf{Composition Link}), \textit{Actualización} (\textsf{Update Link}), \textit{Creación} (\textsf{Creation Link}), \textit{Eliminación} (\textsf{Delete Link}), entre otras.
+En esta jerarquía que se muestra en la imagen \ref{fig:LinksImplicitos} se encuentran representados el conjunto de operaciones \glssymbol{mde} principales: \textit{Consulta} (\textsf{Query Link}), \textit{Transformación modelo a modelo} (\textsf{M2M Link}), \textit{Transformación modelo a texto} (\textsf{M2T Link}), \textit{Composición} (\textsf{Composition Link}), \textit{Actualización} (\textsf{Update Link}), \textit{Creación} (\textsf{Creation Link}), \textit{Eliminación} (\textsf{Delete Link}), entre otras.
 
 
 \begin{figure}[hbtp]
@@ -447,7 +447,7 @@ En esta jerarquía que se muestra en el dibujo \ref{fig:LinksImplicitos} se encu
 
 \subsubsection{Clasificación de tracelinks explícitos}
 
-En un principio esta clasificación se encuentra dividida en dos grandes grupos representados por las siguientes clases básicas: \textit{Link modelo-modelo}, que representa por ejemplo las relaciones de dependencias \glssymbol{uml}, y \textit{Link modelo-artefacto}, conjunto al que pertenece por ejemplo el \textit{link} entre un modelo y un documento de texto que dicta un requerimiento. En el dibujo \ref{fig:LinksExplicitos} aparecen como \textsf{Model-Model Link} y \textsf{Model-Artefact Link} respectivamente.
+En un principio esta clasificación se encuentra dividida en dos grandes grupos representados por las siguientes clases básicas: \textit{Link modelo-modelo}, que representa por ejemplo las relaciones de dependencias \glssymbol{uml}, y \textit{Link modelo-artefacto}, conjunto al que pertenece por ejemplo el \textit{link} entre un modelo y un documento de texto que dicta un requerimiento. En la imagen \ref{fig:LinksExplicitos} aparecen como \textsf{Model-Model Link} y \textsf{Model-Artefact Link} respectivamente.
 
 \textsf{Model-Model Link} se encuentra a su vez subdividido en \textit{Link estático} (\textsf{Static Link}) y \textit{Link dinámico} (\textsf{Dynamic Link}). En el primero se representan relaciones estructurales que no cambian con el tiempo, en cambio en el segundo se representa información de los modelos que si puede llegar a variar.
 
@@ -1374,7 +1374,7 @@ En la presente sección se analiza el framework \gls{gmf}, el mismo fue usado pa
 
 \subsection{Arquitectura}
 
-En el diagrama de componentes que podemos ver en la figura \ref{fig:GMFArquitectura} se muestran las dependencias existentes entre el editor gráfico generado, el entorno \textsf{GMF Runtime}, \gls{emf}, \gls{gef} y la plataforma \textsf{Eclipse}. Como se puede ver, el editor gráfico \gls{gmf} depende del componente \textsf{GMF Runtime}, y a su vez hace uso directo de \gls{emf}, \gls{gef} y la plataforma \textsf{Eclipse}.
+En el diagrama de componentes que podemos ver en la imagen \ref{fig:GMFArquitectura} se muestran las dependencias existentes entre el editor gráfico generado, el entorno \textsf{GMF Runtime}, \gls{emf}, \gls{gef} y la plataforma \textsf{Eclipse}. Como se puede ver, el editor gráfico \gls{gmf} depende del componente \textsf{GMF Runtime}, y a su vez hace uso directo de \gls{emf}, \gls{gef} y la plataforma \textsf{Eclipse}.
 
 
 \begin{figure}[hbtp]
@@ -1478,7 +1478,7 @@ Finalizando este capítulo dedicado a las tecnologías que forman parte del trab
 
 \subsection{Introducción a QVT}
 
-\gls{qvt}, como ya se mencionó antes, es el estándar de \gls{omg} para la definición de transformaciones. La especificación de \gls{qvt} es híbrida, como en el caso de \gls{atl}, relacional (o declarativa) y operacional (o imperativa). Comprende tres diferentes lenguajes \gls{mmt}: dos lenguajes declarativos llamados \textsf{Relations} y \textsf{Core}, y un tercer lenguaje, de naturaleza imperativa, llamado \textsf{Operational Mappings}. Puede observarse la relación de los meta-modelos de cada uno de los lenguajes en la figura \ref{fig:QVTmetamodelos}. 
+\gls{qvt}, como ya se mencionó antes, es el estándar de \gls{omg} para la definición de transformaciones. La especificación de \gls{qvt} es híbrida, como en el caso de \gls{atl}, relacional (o declarativa) y operacional (o imperativa). Comprende tres diferentes lenguajes \gls{mmt}: dos lenguajes declarativos llamados \textsf{Relations} y \textsf{Core}, y un tercer lenguaje, de naturaleza imperativa, llamado \textsf{Operational Mappings}. Puede observarse la relación de los meta-modelos de cada uno de los lenguajes en la imagen \ref{fig:QVTmetamodelos}. 
 
 La naturaleza híbrida de este estándar fue introducida para abarcar distintos tipos de usuarios con diferentes necesidades, requisitos y hábitos.
 
@@ -1566,7 +1566,7 @@ En \cite{AmarLeblancCoulette} se describe un motor de \textit{traceability} al q
 \label{fig:ArqETraceTool}
 \end{figure}
 
-La arquitectura se puede apreciar en el dibujo \ref{fig:ArqETraceTool} y se explica de la siguiente manera, durante la transformación el \textit{plug-in} captura un conjunto de eventos previamente identificados y clasificados gracias a la programación orientada a aspectos, luego el \textsf{Aspect Tracer} genera un modelo de \textit{tracelinks} que conforma al \textit{meta-modelo de tracelinks} anidado que se muestra en el dibujo \ref{fig:ETraceToolMeta-modelo}. Al final, el modelo de \textit{tracelinks} generado puede ser serializado en un archivo \gls{xmi} o transformado a cualquier otro lenguaje mediante una transformación modelo-texto.
+La arquitectura se puede apreciar en la imagen \ref{fig:ArqETraceTool} y se explica de la siguiente manera, durante la transformación el \textit{plug-in} captura un conjunto de eventos previamente identificados y clasificados gracias a la programación orientada a aspectos, luego el \textsf{Aspect Tracer} genera un modelo de \textit{tracelinks} que conforma al \textit{meta-modelo de tracelinks} anidado que se muestra en la imagen \ref{fig:ETraceToolMeta-modelo}. Al final, el modelo de \textit{tracelinks} generado puede ser serializado en un archivo \gls{xmi} o transformado a cualquier otro lenguaje mediante una transformación modelo-texto.
 
 \begin{figure}[hbtp]
 \centering
@@ -1577,9 +1577,9 @@ La arquitectura se puede apreciar en el dibujo \ref{fig:ArqETraceTool} y se expl
 
 El fundamento del diseño del \textit{meta-modelo de tracelinks} anidado propuesto es para el caso en el que se presente una operación de transformación que llama o hace uso de otra transformación. En este caso el enlace compuesto permite separar las operaciones de bajo nivel (creación, eliminación, etc) de las operaciones de alto nivel (como una operación de refactorización).
 
-\section{Un Framework de Traceability dirigido por modelos para el desarrollo de Software Product Line (SPL)}
+\section{Framework de Traceability para el desarrollo de SPL}
 
-El framework presentado en \cite{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmaralAraujo} provee una plataforma abierta y flexible para crear enlaces de \textit{tracelinks} entre distintos artefactos del desarrollo de una \gls{spl}. Pero, dado que el diseño del framework es genérico, éste también puede aplicarse o usarse en otras áreas del desarrollo \gls{spl}. El mismo ha sido diseñado e implementado basándose en el uso de técnicas dirigidas por modelos. El \textit{meta-modelo de traceability} descripto en el dibujo \ref{fig:SPLMeta-modelo} permite definir distintos tipos de enlaces de \textit{tracelinks} entre los artefactos.
+El framework presentado en \cite{SousaKuleszaRummlerAnquetilMitschkeMoreiraAmaralAraujo} provee una plataforma abierta y flexible para crear enlaces de \textit{tracelinks} entre distintos artefactos del desarrollo de una \gls{spl}. Pero, dado que el diseño del framework es genérico, éste también puede aplicarse o usarse en otras áreas del desarrollo \gls{spl}. El mismo ha sido diseñado e implementado basándose en el uso de técnicas dirigidas por modelos. El \textit{meta-modelo de traceability} descripto en la imagen \ref{fig:SPLMeta-modelo} permite definir distintos tipos de enlaces de \textit{tracelinks} entre los artefactos.
 
 Las principales funcionalidades ofrecidas por el framework son las siguientes:
 
@@ -1612,7 +1612,7 @@ Los elementos principales del meta-modelo son los siguientes:
 
 \subsection{Arquitectura}
 
-Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido definida principalmente en término de cuatro módulos. Cada uno de los cuales implementa una de las funcionalidades más importantes del framework. Dichos módulos se detallan a continuación:
+Como se muestra en la imagen \ref{fig:SPLArquitectura}, la arquitectura ha sido definida principalmente en término de cuatro módulos. Cada uno de los cuales implementa una de las funcionalidades más importantes del framework. Dichos módulos se detallan a continuación:
 
 \begin{figure}[hbtp]
 \centering
@@ -1629,16 +1629,16 @@ Como se muestra en el dibujo \ref{fig:SPLArquitectura}, la arquitectura ha sido 
 \end{enumerate}
 
 
-\section{Integración de herramientas Case}
+\section{TiE - Integración de herramientas Case}
 
 En \cite{KlarRoseSchurr} se presenta el problema real que sufre cualquier proceso de desarrollo actual, en el que como resultado del conjunto de actividades que lo conforman, se genera una variedad muy amplia de artefactos de software (documentos de textos, hojas de cálculo, resultado de pruebas, modelos, gráficos, etc). Estos artefactos, aunque en esencia se encuentran relacionados lógicamente, al ser creados y manipulados por herramientas muy distintas que no fueron pensadas para interactuar (editores de textos, editores de modelo \glssymbol{uml}, etc), las relaciones lógicas nombradas se pierden, o mejor dicho no existen o pasan desapercibidas en la práctica. En otras palabras, se presenta el problema de la imposibilidad de \textit{traceability} que encontramos en la mayoría de las herramientas \gls{case} actuales.
 
 Como solución a este problema, se propone un ambiente de integración para las herramientas \gls{case} conocido como \textsf{TiE} - Tool Integration Environment, el cual basa su integración en la creación de \textit{tracelinks} entre los artefactos de las distintas herramientas.
 
-\section{Framework genérico de extracción de datos de traceability}
+\section{Trace-DSL}
 \label{sec:Trace-DSL}
 
-En \cite{GrammelKastenholz} se propone un framework genérico de \textit{traceability} que toma como entrada una transformación de modelo y le aumenta arbitrariamente su funcionalidad con un mecanismo de \textit{traceability}. En el dibujo \ref{fig:GenericoArquitectura} se muestra un panorama de alto nivel de la arquitectura propuesta. Ésta se basa en una interfase genérica que provee un punto de conexión para cualquier motor de transformación de modelos, mediante una \gls{api} que se ofrece al ingeniero que conecta su motor de transformación con el motor de \textit{traceability} (\textsf{oAW connector}, \textsf{QVT connector}). Como resultado el motor de transformación incluye la funcionalidad de \textit{traceability}. El modelo de datos que usa el framework es el lenguaje específico de dominio para \textit{traceability} que se denomina \textsf{Trace-DSL}.
+En \cite{GrammelKastenholz} se propone un framework genérico de \textit{traceability} que toma como entrada una transformación de modelo y le aumenta arbitrariamente su funcionalidad con un mecanismo de \textit{traceability}. En la imagen \ref{fig:GenericoArquitectura} se muestra un panorama de alto nivel de la arquitectura propuesta. Ésta se basa en una interfase genérica que provee un punto de conexión para cualquier motor de transformación de modelos, mediante una \gls{api} que se ofrece al ingeniero que conecta su motor de transformación con el motor de \textit{traceability} (\textsf{oAW connector}, \textsf{QVT connector}). Como resultado el motor de transformación incluye la funcionalidad de \textit{traceability}. El modelo de datos que usa el framework es el lenguaje específico de dominio para \textit{traceability} que se denomina \textsf{Trace-DSL}.
 
 \begin{figure}[hbtp]
 \centering
@@ -1648,7 +1648,7 @@ En \cite{GrammelKastenholz} se propone un framework genérico de \textit{traceab
 \end{figure}
 
 
-\textsf{Trace-DSL} que se detalla en el dibujo \ref{fig:DSLTrace}, tiene como elemento raíz \textsf{TraceModel}. \textsf{Artefact} representa cualquier producto \textit{traceable} generado durante el proceso de desarrollo, esto puede ser un requerimiento, una clase o un componente, como por ejemplo el método de una clase. Todo artefacto es identificado unívocamente mediante un identificador universal (\textsf{UUID}). \textsf{TraceLink} es una abstracción de una transición de un artefacto a otro dirigida por la relación desde-hacia entre artefactos origen y destino. \textsf{TraceLink} puede ser de una de las siguientes cuatro instancias: \textsf{CreateTraceLink}, \textsf{QueryTraceLink}, \textsf{UpdateTraceLink} y \textsf{DeleteTraceLink}.
+\textsf{Trace-DSL} que se detalla en la imagen \ref{fig:DSLTrace}, tiene como elemento raíz \mbox{\textsf{TraceModel}}. \textsf{Artefact} representa cualquier producto \textit{traceable} generado durante el proceso de desarrollo, esto puede ser un requerimiento, una clase o un componente, como por ejemplo el método de una clase. Todo artefacto es identificado unívocamente mediante un identificador universal (\textsf{UUID}). \textsf{TraceLink} es una abstracción de una transición de un artefacto a otro dirigida por la relación desde-hacia entre artefactos origen y destino. \textsf{TraceLink} puede ser de una de las siguientes cuatro instancias: \textsf{CreateTraceLink}, \textsf{QueryTraceLink}, \textsf{UpdateTraceLink} y \textsf{DeleteTraceLink}.
 
 
 \begin{figure}[hbtp]
@@ -1658,7 +1658,7 @@ En \cite{GrammelKastenholz} se propone un framework genérico de \textit{traceab
 \label{fig:DSLTrace}
 \end{figure}
 
-Para la asignación de tipos a los artefactos y a los enlaces se usa el concepto de faceta, donde \textsf{Trace-DSL} asigna un conjunto de facetas (\textsf{Facet}) a cada uno de los mismos. Un ejemplo de faceta se da en el dibujo \ref{fig:FacetaCodigoFuente}. Además de lograr una solución simple al tipado de artefactos y enlaces, se obtiene un mecanismo fácilmente extensible y configurable al contexto donde se necesite aplicar \textit{traceability}.
+Para la asignación de tipos a los artefactos y a los enlaces se usa el concepto de faceta, donde \textsf{Trace-DSL} asigna un conjunto de facetas (\textsf{Facet}) a cada uno de los mismos. Un ejemplo de faceta se da en la imagen \ref{fig:FacetaCodigoFuente}. Además de lograr una solución simple al tipado de artefactos y enlaces, se obtiene un mecanismo fácilmente extensible y configurable al contexto donde se necesite aplicar \textit{traceability}.
 
 \begin{figure}[hbtp]
 \centering
@@ -1683,7 +1683,7 @@ En la propuesta presentada en \cite{GlitiaEtienDumoulin} se emplea la idea de se
 
 \subsection{Meta-modelo de Traceability Local}
 
-Este meta-modelo toma los \textit{tracelinks} de la entrada y la salida de una única transformación. El meta-modelo está basado en el \textit{meta-modelo de tracelinks} presentado en \cite{Jouault} y se muestra en el dibujo \ref{fig:LocalTraceMetamodel}.
+Este meta-modelo toma los \textit{tracelinks} de la entrada y la salida de una única transformación. El meta-modelo está basado en el \textit{meta-modelo de tracelinks} presentado en \cite{Jouault} y se muestra en la imagen \ref{fig:LocalTraceMetamodel}.
 
 \begin{figure}[hbtp]
 \centering
@@ -1701,7 +1701,7 @@ Para almacenar la información sobre las reglas de transformación aplicadas as�
 \subsection{Meta-modelo de Traceability Global}
 \label{subsec:TraceabilityGlobal}
 
-Este meta-modelo enlaza \textit{tracelinks} locales de acuerdo a la cadena que define la transformación. Un modelo de \textit{tracelinks global} es el punto de entrada principal en el cual todas los modelos de \textit{tracelinks} locales se encuentran, y describe qué modelo origen/objetivo de una transformación es el modelo objetivo/origen de la siguiente/previa transformación. En el dibujo \ref{fig:GlobalTraceMetamodel} se puede observar el meta-modelo.
+Este meta-modelo enlaza \textit{tracelinks} locales de acuerdo a la cadena que define la transformación. Un modelo de \textit{tracelinks global} es el punto de entrada principal en el cual todas los modelos de \textit{tracelinks} locales se encuentran, y describe qué modelo origen/objetivo de una transformación es el modelo objetivo/origen de la siguiente/previa transformación. En la imagen \ref{fig:GlobalTraceMetamodel} se puede observar el meta-modelo.
 
 \begin{figure}[hbtp]
 \centering
@@ -1718,7 +1718,7 @@ Introducir este nivel global de \textit{tracelinks} permite la navegación entre
 
 Uno de los principales objetivos de recolectar los \textit{tracelinks} es dar luego la posibilidad a un usuario de inspeccionarlas realizando distintas consultas, una de ellas puede ser por ejemplo obtener los elementos relacionados a uno seleccionado. Este meta-modelo permite desde el modelo de \textit{tracelinks global} navegar hacia los modelos de \textit{tracelinks locales} y/o hacia a los modelos envueltos en cada una de las transformaciones. También desde el modelo de \textit{tracelinks local} se puede navegar entre los elementos del modelo parte de la transformación.
 
-En el dibujo \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un modelo de \textit{tracelinks locales y globales} producto de una cadena de transformación. En el ejemplo se representan los enlaces (\textsf{Link}) entre los elementos sin tener en cuenta las instancias de \textsf{RuleRef} para no sobrecargarlo.
+En la imagen \ref{fig:EjemploLocalGlobalMetamodel} se muestra un ejemplo de un modelo de \textit{tracelinks locales y globales} producto de una cadena de transformación. En el ejemplo se representan los enlaces (\textsf{Link}) entre los elementos sin tener en cuenta las instancias de \textsf{RuleRef} para no sobrecargarlo.
 
 \begin{figure}[hbtp]
 \centering
@@ -1835,7 +1835,7 @@ Otras propuestas hacen uso del mecanismo de \textit{traceability implícito} de 
 
 \item Ofrecer en la herramienta \textsf{TraceEditor} mejores opciones de filtrado o vistas parciales, con el fin de facilitar la navegación sobre modelos de \textit{tracelinks} extensos, como así también, por ejemplo en el proceso de análisis de cambios, para mostrar qué artefactos se verían afectados si se modificara un conjunto seleccionado.
 
-\item Mejorar la identificación semántica de un artefacto en la herramienta \textsf{TraceEditor}, con el fin de facilitar a una persona su reconocimiento.
+\item Mejorar la identificación semántica de un artefacto en la herramienta \mbox{\textsf{TraceEditor}}, con el fin de facilitar a una persona su reconocimiento.
 
 \end{itemize}
 
@@ -1853,7 +1853,7 @@ Otras propuestas hacen uso del mecanismo de \textit{traceability implícito} de 
 \lhead[Anexos. Transformación QvtoTrace\_To\_Trace]{}
 \rhead[]{Anexos. Transformación QvtoTrace\_To\_Trace}
 
-\chapter{QvtoTrace{\textunderscore}To{\textunderscore}Trace}
+\chapter{Definición de la transformación: QvtoTrace{\textunderscore}To{\textunderscore}Trace}
 \label{cap:QvtoTraceToTrace}
 \markboth{QvtoTrace{\textunderscore}To{\textunderscore}Trace}{}
 
